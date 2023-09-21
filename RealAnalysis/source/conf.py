@@ -3,20 +3,17 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import sys
-from pathlib import Path
-
+import pydata_sphinx_theme
+import sphinx_book_theme
 import sphinx_rtd_theme
 import sphinx_theme
-import sphinx_book_theme
-import pydata_sphinx_theme
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'CAU-RealAnalysis'
-copyright = '2023, WEN Hao'
-author = 'WEN Hao'
+project = "CAU-RealAnalysis"
+copyright = "2023, WEN Hao"
+author = "WEN Hao"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -75,10 +72,10 @@ proof_theorem_types = {
     "remark": "注记",  # new
 }
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
-language = 'zh'
+language = "zh"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -122,7 +119,7 @@ elif _theme_name == "pydata_sphinx_theme":
 else:  # builtin themes: alabaster, etc.
     html_theme = _theme_name
 
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 master_doc = "index"
 
@@ -136,4 +133,3 @@ linkcheck_ignore = [
 def setup(app):
     app.add_css_file("css/custom.css")
     app.add_css_file("css/proof.css")
-
