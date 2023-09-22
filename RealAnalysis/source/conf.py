@@ -69,7 +69,8 @@ proof_theorem_types = {
     "observation": "观察",
     "proof": "证明",
     "property": "性质",
-    "remark": "注记",  # new
+    "remark": "注记",
+    "solution": "解",
 }
 
 templates_path = ["_templates"]
