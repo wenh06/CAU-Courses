@@ -52,14 +52,14 @@
 
         1 = \lim\limits_{x \to 0} x \left( \dfrac{1}{x} - 1 \right) \le \lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] \le \lim\limits_{x \to 0} x \cdot \dfrac{1}{x} = 1
 
-§1.6 函数的连续型与连续函数的运算补充问题
+§1.6 函数的连续性与连续函数的运算补充问题
 --------------------------------------------
 
 Riemann 函数定义为
 
 .. math::
 
-    f(x) = \begin{cases}
+    R(x) = \begin{cases}
         0, & x \text{ 为无理数} \\
         \dfrac{1}{q}, & x = \dfrac{p}{q} \text{ 为有理数, 且 } p, q \text{ 互素, } q > 0
     \end{cases}
@@ -68,4 +68,35 @@ Riemann 函数定义为
 
 .. proof:proof::
 
-    待写
+    首先来证明 Riemann 函数在所有无理数点处连续。任取无理数 :math:`x_0 \in \mathbb{R} \setminus \mathbb{Q}`, 同时任取 :math:`1 > \varepsilon > 0`.
+    对于 :math:`\varepsilon`, 取正整数 :math:`0 < q_0 \in \mathbb{N}^+`, 使得 :math:`\dfrac{1}{q_0} < \varepsilon`. 我们知道以下集合
+
+    .. math::
+
+        A := \left\{ a \in \mathbb{Q} \ :\ a = \dfrac{p}{q}, p, q \text{ 互素, } 0 < q \le q_0, ([x_0] - 1) q \le p \le ([x_0] + 2) q \right\} \subset [[x_0] - 1, [x_0] + 2]
+
+    是有限集，元素个数至多为 :math:`3 + \cdots + 3q_0 = 2 q_0 (q_0 + 1) / 3`, 其中 :math:`[ \cdot ]` 表示取整. 那么我们可以找到一个 :math:`\delta > 0`,
+    使得存在无理数 :math:`x_0` 的邻域 :math:`U(x_0, \delta)` (可以不妨设这个邻域包含于区间 :math:`[[x_0] - 1, [x_0] + 2]`),
+    使得 :math:`U(x_0, \delta) \cap A = \emptyset`. 那么对于 :math:`\forall x \in U(x_0, \delta)`,有
+
+    .. math::
+
+        \lvert R(x) - 0 \rvert = R(x) < \dfrac{1}{q_0} < \varepsilon,
+
+    这是因为在这个领域内使得 :math:`R(x) \ge \dfrac{1}{q_0}` 的(有理)数 :math:`x` 都必须属于集合 :math:`A`. 那么 :math:`\lim\limits_{x \to x_0} R(x) = 0 = R(x_0)`.
+    由于 :math:`x_0` 是任意的，所以 Riemann 函数 :math:`R(x)` 在所有无理数点处连续。
+
+    然后来证明 Riemann 函数在所有有理数点处间断。任取有理数 :math:`x_0 = \dfrac{p_0}{q_0} \in \mathbb{Q}`, 取 :math:`\varepsilon = \dfrac{1}{2 q_0}`, 那么
+    对于任意的 :math:`\delta > 0`, 总存在无理数 :math:`x_1 \in U(x_0, \delta)`, 这时有 :math:`R(x_1) = 0`, 从而有
+
+    .. math::
+
+        \lvert R(x_1) - R(x_0) \rvert = \dfrac{1}{q_0} > \varepsilon
+
+    这说明了 Riemann 函数 :math:`R(x)` 当自变量 :math:`x` 趋于有理点 :math:`x_0` 时，函数值 :math:`R(x)` 不可能以这点的函数值 :math:`R(x_0)` 为极限，
+    从而知 Riemann 函数在所有有理数点处间断。
+
+    需要进一步注意的是，Riemann 函数在任何一个无理数的任何一个开邻域，也就是包含这个无理数的开区间都不连续，因为这个开区间里面一定有有理数，黎曼函数在这些点处是不连续的。
+    因此 Riemann 函数是满足如下性质的特殊函数
+
+        函数在一点连续，但在这点任何一个开邻域内都不连续。
