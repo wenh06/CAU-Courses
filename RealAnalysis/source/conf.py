@@ -46,10 +46,10 @@ extensions = [
 # bibtex_bibliography_header = ".. rubric:: 参考文献"
 # bibtex_footbibliography_header = bibtex_bibliography_header
 
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-}
+# intersphinx_mapping = {
+#     "python": ("https://docs.python.org/3", None),
+#     "numpy": ("https://numpy.org/doc/stable/", None),
+# }
 
 html_context = {
     "display_github": True,  # Integrate GitHub
