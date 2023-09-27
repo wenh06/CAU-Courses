@@ -72,14 +72,19 @@ Riemann 函数定义为
     对于 :math:`\varepsilon`, 取正整数 :math:`0 < q_0 \in \mathbb{N}^+`, 使得 :math:`\dfrac{1}{q_0} < \varepsilon`. 我们知道以下集合
 
     .. math::
+        :label: riemann-nbhd
 
-        A := \left\{ a \in \mathbb{Q} \ :\ a = \dfrac{p}{q}, p, q \text{ 互素, } 0 < q \le q_0, ([x_0] - 1) q \le p \le ([x_0] + 2) q \right\} \subset [[x_0] - 1, [x_0] + 2]
+        \begin{aligned}
+        A(x_0, q_0) & := \left\{ a \in \mathbb{Q} \ :\ a = \dfrac{p}{q}, p, q \text{ 互素, } 0 < q \le q_0, ([x_0] - 1) q \le p \le ([x_0] + 2) q \right\} \\
+        & \subset [[x_0] - 1, [x_0] + 2]
+        \end{aligned}
 
     是有限集，元素个数至多为 :math:`3 + \cdots + 3q_0 = 2 q_0 (q_0 + 1) / 3`, 其中 :math:`[ \cdot ]` 表示取整. 那么我们可以找到一个 :math:`\delta > 0`,
     使得存在无理数 :math:`x_0` 的邻域 :math:`U(x_0, \delta)` (可以不妨设这个邻域包含于区间 :math:`[[x_0] - 1, [x_0] + 2]`),
-    使得 :math:`U(x_0, \delta) \cap A = \emptyset`. 那么对于 :math:`\forall x \in U(x_0, \delta)`,有
+    使得 :math:`U(x_0, \delta) \cap A(x_0, q_0) = \emptyset`. 那么对于 :math:`\forall x \in U(x_0, \delta)`,有
 
     .. math::
+        :label: riemann-neq
 
         \lvert R(x) - 0 \rvert = R(x) < \dfrac{1}{q_0} < \varepsilon,
 
@@ -94,7 +99,9 @@ Riemann 函数定义为
         \lvert R(x_1) - R(x_0) \rvert = \dfrac{1}{q_0} > \varepsilon
 
     这说明了 Riemann 函数 :math:`R(x)` 当自变量 :math:`x` 趋于有理点 :math:`x_0` 时，函数值 :math:`R(x)` 不可能以这点的函数值 :math:`R(x_0)` 为极限，
-    从而知 Riemann 函数在所有有理数点处间断。
+    从而知 Riemann 函数在所有有理数点处间断。进一步考察去心邻域 :math:`\mathring{U}(x_0, \delta) = U(x_0, \delta) \setminus \{ x_0 \}`,
+    他与集合 :math:`A(x_0, q_0)` (对有理数也可以依 :eq:`riemann-nbhd` 类似定义) 的交集也是空集，不等式 :eq:`riemann-neq` 仍然成立，因此 Riemann 函数在所有有理数点的极限仍然是0，
+    由此可知 Riemann 函数在所有有理数点处的间断点类型都是第一类的可去间断点。
 
     需要进一步注意的是，Riemann 函数在任何一个无理数的任何一个开邻域，也就是包含这个无理数的开区间都不连续，因为这个开区间里面一定有有理数，黎曼函数在这些点处是不连续的。
     因此 Riemann 函数是满足如下性质的特殊函数

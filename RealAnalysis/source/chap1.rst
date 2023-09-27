@@ -185,17 +185,173 @@
 §2 映射·集的对等·可列集
 ------------------------------
 
-待写
+8. 设 :math:`A = \{0, 1\}`, 试证一切排列
+
+.. math::
+
+    (a_1, a_2, \cdots, a_n, \cdots): \quad a_n \in A, n \in \mathbb{N}
+
+所成之集的势为 :math:`\aleph`.
+
+.. proof:proof::
+
+    令集合 :math:`B = \{ (a_1, a_2, \cdots, a_n, \cdots): \ a_n \in A, n \in \mathbb{N} \}`, 以及集合
+    :math:`B_0 = \{ (a_1, a_2, \cdots, a_n, \cdots) \in B: \ \exists n \in \mathbb{N}, s.t. \forall k \ge n, a_k = 1 \}`,
+    并考虑映射
+
+    .. math::
+
+        f: B \setminus B_0 \to \mathbb{N}, \quad (a_1, a_2, \cdots, a_n, \cdots) \mapsto \sum_{n=1}^{\infty} a_n 2^n.
+
+    以上映射给出了集合 :math:`B \setminus B_0` 与区间 :math:`[0, 1]` 之间的一一对应，而 :math:`B_0` 是可列集，所以集合 :math:`B = (B \setminus B_0) \cup B_0`
+    也与区间 :math:`[0, 1]` 对等，从而它的势为 :math:`\aleph`.
+
+9. 问下列各集能否与自然数集或区间 :math:`[0, 1]` 构成一一对应：
+
+(1). 以有理数为端点的区间集；
+
+(2). 闭正方形 :math:`[0, 1; 0, 1]`.
+
+如果可能，试作出对应方法。
+
+.. proof:solution::
+
+    (1). 以有理数为端点的（开）区间集为 :math:`A = \left\{ (a, b) : \ a < b, a, b \in \mathbb{Q} \right\}`. 首先，:math:`A` 是 :math:`\mathbb{Q}^2` 的子集；
+    另一方面，可以通过单射 :math:`\mathbb{Q} \to A: \ a \mapsto (a, a + 1)` 将 :math:`\mathbb{Q}` 视为 :math:`A` 的子集，从而集合 :math:`A` 是可列的。
+    令 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`, 那么 :math:`A` 到自然数集 :math:`\mathbb{N}` 的一一对应为
+
+    .. math::
+
+        xxx
+
+10. 证明整系数多项式全体是可列的。
+
+.. proof:proof::
+
+    对于整系数多项式全体 :math:`\mathbb{Z}[X]` 有分解
+
+    .. math::
+
+        \mathbb{Z}[X] = \bigcup_{n=0}^{\infty} \mathbb{Z}_n[X], \quad \mathbb{Z}_n[X] = \{ f \in \mathbb{Z}[X]: \ \deg f = n \} \cong \mathbb{Z}^{n} \times \mathbb{Z}^{\ast},
+
+    其中 :math:`\mathbb{Z}^{\ast} = \mathbb{Z} \setminus \{ 0 \}` (最高次项系数不为 :math:`0`). 由于 :math:`\mathbb{Z}^{n} \times \mathbb{Z}^{\ast}` 是可列集，
+    所以 :math:`\mathbb{Z}_n[X]` 是可列集，从而 :math:`\mathbb{Z}[X]` 是可列集。
+
+15. 设给定映射 :math:`f: X \to Y`. 试证对 :math:`Y` 中的任意集族 :math:`\{ B_{\alpha} \}_{\alpha \in I}` 有
+
+.. math::
+
+    \begin{gather*}
+    f^{-1} \left( \bigcup_{\alpha \in I} B_{\alpha} \right) = \bigcup_{\alpha \in I} f^{-1} (B_{\alpha}), \quad
+    f^{-1} \left( \bigcap_{\alpha \in I} B_{\alpha} \right) \subset \bigcap_{\alpha \in I} f^{-1} (B_{\alpha}), \\
+    f^{-1} (\mathcal{C} B) = \mathcal{C} f^{-1} (B).
+    \end{gather*}
+
+.. proof:proof::
+
+    任取 :math:`x \in f^{-1} \left( \bigcup\limits_{\alpha \in I} B_{\alpha} \right)`, 那么有 :math:`f(x) \in \bigcup\limits_{\alpha \in I} B_{\alpha}`,
+    这意味着存在 :math:`\alpha \in I`, 使得 :math:`f(x) \in B_{\alpha}`, 从而有 :math:`x \in f^{-1} (B_{\alpha})`, 于是有
+    :math:`x \in \bigcup\limits_{\alpha \in I} f^{-1} (B_{\alpha})`. 反过来，任取 :math:`x \in \bigcup\limits_{\alpha \in I} f^{-1} (B_{\alpha})`,
+    那么存在 :math:`\alpha \in I`, 使得 :math:`x \in f^{-1} (B_{\alpha})`, 于是有 :math:`f(x) \in B_{\alpha}`, 从而有
+    :math:`f(x) \in \bigcup\limits_{\alpha \in I} B_{\alpha}`, 于是有 :math:`x \in f^{-1} \left( \bigcup\limits_{\alpha \in I} B_{\alpha} \right)`.
+    综上所述，有 :math:`f^{-1} \left( \bigcup\limits_{\alpha \in I} B_{\alpha} \right) = \bigcup\limits_{\alpha \in I} f^{-1} (B_{\alpha})`.
+
+    任取 :math:`x \in f^{-1} \left( \bigcap\limits_{\alpha \in I} B_{\alpha} \right)`, 那么有 :math:`f(x) \in \bigcap\limits_{\alpha \in I} B_{\alpha}`,
+    这意味着对任意 :math:`\alpha \in I`, 都有 :math:`f(x) \in B_{\alpha}`, 从而有 :math:`x \in f^{-1} (B_{\alpha})`, 于是有
+    :math:`x \in \bigcap\limits_{\alpha \in I} f^{-1} (B_{\alpha})`. 反过来，任取 :math:`x \in \bigcap\limits_{\alpha \in I} f^{-1} (B_{\alpha})`,
+    那么对任意 :math:`\alpha \in I`, 都有 :math:`x \in f^{-1} (B_{\alpha})`, 于是有 :math:`f(x) \in B_{\alpha}`, 从而有
+    :math:`f(x) \in \bigcap\limits_{\alpha \in I} B_{\alpha}`, 于是有 :math:`x \in f^{-1} \left( \bigcap\limits_{\alpha \in I} B_{\alpha} \right)`.
+
+    若 :math:`f^{-1} (\mathcal{C} B) = \emptyset`, 即 :math:`\forall x \in X, f(x) \not\in \mathcal{C} B`, 那么有 :math:`\forall x \in X, f(x) \in B`,
+    这意味着 :math:`f^{-1} (B) = X`, 于是有 :math:`\mathcal{C} f^{-1} (B) = \emptyset`. 若 :math:`f^{-1} (\mathcal{C} B) \neq \emptyset`,
+    任取 :math:`x \in f^{-1} (\mathcal{C} B)`, 那么有 :math:`f(x) \in \mathcal{C} B`, 于是有 :math:`f(x) \not\in B`, 从而有
+    :math:`x \not\in f^{-1} (B)`, 于是有 :math:`x \in \mathcal{C} f^{-1} (B)`. 反过来，任取 :math:`x \in \mathcal{C} f^{-1} (B)`,
+    那么有 :math:`x \not\in f^{-1} (B)`, 于是有 :math:`f(x) \not\in B`, 从而有 :math:`f(x) \in \mathcal{C} B`, 于是有
+    :math:`x \in f^{-1} (\mathcal{C} B)`. 综上所述，有 :math:`f^{-1} (\mathcal{C} B) = \mathcal{C} f^{-1} (B)`.
 
 §3 一维开集、闭集及其性质
 ------------------------------
 
-待写
+16. 证明任何点集的内点全体是开集。
+
+.. proof:proof::
+
+    令 :math:`\mathring{E} = \{ x \in E : \ x \text{ 为 } E \text{ 的内点} \}` 表示点集 :math:`E` 的内点全体。任取 :math:`x \in \mathring{E}`,
+    由于 :math:`x` 为 :math:`E` 的内点，所以存在 :math:`\varepsilon > 0`, 使得 :math:`x` 的邻域 :math:`U(x, \varepsilon) \subset E`.
+    考虑 :math:`U(x, \varepsilon / 3)`, 那么 :math:`\forall \tilde{x} \in U(x, \varepsilon / 3)`, 都有
+
+    .. math::
+
+        U(\tilde{x}, \varepsilon / 3) \subset \subset U(x, \varepsilon) \subset E,
+
+    从而 :math:`\tilde{x}` 也是 :math:`E` 的内点，即 :math:`\tilde{x} \in \mathring{E}`. 由于 :math:`\tilde{x}` 是任意取自 :math:`U(x, \varepsilon / 3)` 的，
+    所以 :math:`U(x, \varepsilon / 3) \subset \mathring{E}`, 于是有 :math:`\mathring{E}` 是开集。
+
+17. 设 :math:`f(x)` 是定义在 :math:`\mathbb{R}^1` 上只取整数值的函数，试证它的连续点集为开集，不连续点集为闭集。
+
+.. proof:proof::
+
+    任取 :math:`f` 的连续点 :math:`x_0`, 那么对 :math:`\varepsilon = \dfrac{1}{3}`, 存在 :math:`\delta > 0`, 使得 :math:`\forall x \in U(x_0, \delta)`,
+    都有 :math:`\lvert f(x) - f(x_0) \rvert < \dfrac{1}{3}`. 由于 :math:`f` 只取整数值，此时必须有 :math:`f(x) = f(x_0)`. 考察集合 :math:`U(x_0, \delta / 3)`,
+    任取 :math:`\tilde{x} \in U(x_0, \delta / 3)`, 有 :math:`U(\tilde{x}, \delta / 3) \subset \subset U(x_0, \delta)`, 从而有 :math:`f(\tilde{x}) = f(x_0)`,
+    故 :math:`\tilde{x}` 也是 :math:`f` 的连续点。这就证明了集合 :math:`U(x_0, \delta / 3)` 包含于 :math:`f` 的连续点集中，从而 :math:`x_0` 是其内点。
+    由于 :math:`x_0` 是任意取自 :math:`f` 的连续点集的，所以 :math:`f` 的连续点集是开集。
+
+    :math:`f` 的连续点集的补集为 :math:`f` 的不连续点集，我们已经证明了前者是开集，所以后者是闭集。
+
+.. _ex-1-18:
+
+18. 设点集列 :math:`\{ E_k \}` 是有限区间 :math:`[a, b]` 中的渐缩列： :math:`E_1 \supset E_2 \supset \cdots \supset E_k \supset \cdots`,
+且每个 :math:`E_k` 均为非空闭集，试证交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k` 非空。
+
+.. proof:proof::
+
+    用反证法证明。取基本集为 :math:`\mathbb{R}`. 假设交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k = \emptyset`, 那么考虑集族
+    :math:`\{ \mathcal{C} E_k \}`, 这是闭区间 :math:`[a, b]` 的开覆盖，由于 :math:`[a, b]` 是紧集，所以存在有限子覆盖
+    :math:`\{ \mathcal{C} E_{k_i} \}_{i=1}^{N}`, 即
+    :math:`[a, b] \subset \bigcup\limits_{i=1}^{N} (\mathcal{C} E_{k_i}) = \mathcal{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)`,
+    此时必须有 :math:`\bigcap\limits_{i=1}^{N} E_{k_i} = \emptyset`, 否则其作为 :math:`[a, b]` 的子集非空，就不可能有
+    :math:`[a, b] \subset \mathcal{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)` 成立。于是有
+
+    .. math::
+
+        E_{k_N} = \bigcap_{i=1}^{N} E_{k_i} = \emptyset,
+
+    这与题设矛盾。所以交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k` 非空。
+
+19. 设点集列 :math:`\{ E_k \}` 如 :ref:`上题<ex-1-18>`, :math:`f` 为 :math:`[a, b]` 上连续函数，
+证明 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) = \bigcap\limits_{k=1}^{\infty} f(E_k)`.
+
+.. proof:proof::
+
+    待写
+
+21. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上实函数，映任一开集为开集，问它是否连续？又连续映射是否映开集为开集？
+
+.. proof:solution::
+
+    待写
 
 §4 开集的构造
 ------------------------------
 
-待写
+23. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}^n` 中的闭集，其中之一有界，试证存在两点 :math:`a_1 \in F_1, a_2 \in F_2` 使 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
+
+.. proof:proof::
+
+    待写
+
+24. 设 :math:`G_1, G_2` 为 :math:`\mathbb{R}^1` 中的开集，且 :math:`G_1 \subset G_2`. 试证 :math:`G_1` 的每个构成区间含于 :math:`G_2` 的某个构成区间之中。
+
+.. proof:proof::
+
+    待写
+
+26. 设 :math:`E` 为康托三分集的补集中构成区间的中点所成的集，求 :math:`E'`.
+
+.. proof:proof::
+
+    待写
 
 \*§5 集的势·序集
 ------------------------------
