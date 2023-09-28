@@ -121,6 +121,7 @@ else:  # builtin themes: alabaster, etc.
     html_theme = _theme_name
 
 html_static_path = ["_static"]
+html_title = "CAU Real Analysis"
 
 master_doc = "index"
 
