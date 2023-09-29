@@ -79,7 +79,7 @@
     比较式 :eq:`1-5-left` 与式 :eq:`1-5-right`, 若要使等式成立，必须有 :math:`(A \cap (\mathcal{C} B \cup C)) \cup C = A \cap (\mathcal{C} B \cup C)`,
     这要求 :math:`C \subset A \cap (\mathcal{C} B \cup C)`. 因为 :math:`C \subset \mathcal{C} B \cup C` 是显然的，故上式等价于 :math:`C \subset A`.
 
-    (6). 不成立。因为集合 :math:`A` 是左边 :math:`A \cup (B \setminus C)` 的一个子集，但如果 :math:`A \cap C \neq \emptyset`的话，
+    (6). 不成立。因为集合 :math:`A` 是左边 :math:`A \cup (B \setminus C)` 的一个子集，但如果 :math:`A \cap C \neq \emptyset` 的话，
     集合 :math:`A` 不是右边 :math:`(A \cup B) \setminus C` 的子集。
 
 3. 设给出集 :math:`E` 与任一集族 :math:`A_{\alpha}, \alpha \in I`, 问关系式
@@ -112,7 +112,7 @@
 
 .. proof:proof::
 
-    (1). :math:`A = B \Longleftrightarrow A \setminus B = \emptyset \land B \setminus A = \emptyset \Longleftrightarrow A \triangle B = \emptyset`.
+    (1). :math:`A = B \Longleftrightarrow A \setminus B = \emptyset \land B \setminus A = \emptyset \Longleftrightarrow A \triangle B = (A \setminus B) \cup (B \setminus A) = \emptyset`.
 
     (2). 容易知道，对任意两个集合 :math:`A, B`, 总有 :math:`A \cup (B \setminus A) = A \cup B`, 于是有
 
@@ -175,11 +175,13 @@
     这就证明了 :math:`x \in \bigcup\limits_{k=n}^{\infty} E_n` 对任意 :math:`k \in \mathbb{N}` 成立。那么有 :math:`\mathbb{Q} \subset \varlimsup\limits_{n} E_n`.
     综上所述，有 :math:`\varlimsup\limits_{n} E_n = \mathbb{Q}`.
 
-    注：我们通常可将 :math:`E_n` 简写为 :math:`\dfrac{1}{n} \mathbb{Z}`, 那么这题的结论可以用数学符号更简洁地表达为
+    .. note::
 
-    .. math::
+        我们通常可将 :math:`E_n` 简写为 :math:`\dfrac{1}{n} \mathbb{Z}`, 那么这题的结论可以用数学符号更简洁地表达为
 
-        \varliminf\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Z}, \quad \varlimsup\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Q}.
+        .. math::
+
+            \varliminf\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Z}, \quad \varlimsup\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Q}.
 
 
 §2 映射·集的对等·可列集
@@ -239,9 +241,10 @@
         r_2 & \quad \{ 0 \}, \mathcal{H}_{21}, \mathcal{H}_{22}, \dots, \mathcal{H}_{2k}, \dots
         \end{align*}
 
-    其中 :math:`\mathcal{H}_{1k}` 表示 :math:`\mathbb{Q}` 中高度为 :math:`k` 的元素全体；:math:`\mathcal{H}_{2k}` 表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体。
-    在每一个 :math:`\mathcal{H}_{1k}` 以及 :math:`\mathcal{H}_{2k}` 中，将元素按其作为有理数的大小排序。这样，我们就给出了 :math:`\mathbb{Q} \times \mathbb{Q}^+`
-    到 :math:`\mathbb{N} \times \mathbb{N}` 的一一对应 :math:`(r_1, r_2): \mathbb{Q} \times \mathbb{Q}^+ \to \mathbb{N} \times \mathbb{N}`.
+    对于 :math:`k \in \mathbb{N}`, :math:`\mathcal{H}_{1k}` 表示 :math:`\mathbb{Q}` 中高度为 :math:`k` 的元素全体；:math:`\mathcal{H}_{2k}`
+    表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体。在每一个 :math:`\mathcal{H}_{1k}` 以及 :math:`\mathcal{H}_{2k}` 中，将元素按其作为有理数的大小排序。
+    这样，我们就给出了 :math:`\mathbb{Q} \times \mathbb{Q}^+` 到 :math:`\mathbb{N} \times \mathbb{N}` 的一一对应
+    :math:`(r_1, r_2): \mathbb{Q} \times \mathbb{Q}^+ \to \mathbb{N} \times \mathbb{N}`.
 
     类似地，可以通过如下的排序方式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
 
@@ -326,15 +329,9 @@
 .. proof:proof::
 
     令 :math:`\mathring{E} = \{ x \in E : \ x \text{ 为 } E \text{ 的内点} \}` 表示点集 :math:`E` 的内点全体。任取 :math:`x \in \mathring{E}`,
-    由于 :math:`x` 为 :math:`E` 的内点，所以存在 :math:`\varepsilon > 0`, 使得 :math:`x` 的邻域 :math:`U(x, \varepsilon) \subset E`.
-    考虑 :math:`U(x, \varepsilon / 3)`, 那么 :math:`\forall \tilde{x} \in U(x, \varepsilon / 3)`, 都有
-
-    .. math::
-
-        U(\tilde{x}, \varepsilon / 3) \subset U(x, \varepsilon) \subset E,
-
-    从而 :math:`\tilde{x}` 也是 :math:`E` 的内点，即 :math:`\tilde{x} \in \mathring{E}`. 由于 :math:`\tilde{x}` 是任意取自 :math:`U(x, \varepsilon / 3)` 的，
-    所以 :math:`U(x, \varepsilon / 3) \subset \mathring{E}`, 于是有 :math:`\mathring{E}` 是开集。
+    由于 :math:`x` 为 :math:`E` 的内点，所以存在 :math:`x` 的邻域 :math:`U \subset E`. 任取 :math:`y \in U`, 那么 :math:`U` 也是 :math:`y` 的邻域，
+    故 :math:`y` 也是 :math:`E` 的内点，从而有 :math:`y \in \mathring{E}`, 于是有 :math:`U \subset \mathring{E}`, 这就证明了 :math:`x` 是 :math:`\mathring{E}` 的内点。
+    由于 :math:`x` 是任意取自 :math:`\mathring{E}` 的，所以 :math:`\mathring{E}` 是开集。
 
 17. 设 :math:`f(x)` 是定义在 :math:`\mathbb{R}^1` 上只取整数值的函数，试证它的连续点集为开集，不连续点集为闭集。
 
@@ -383,7 +380,7 @@
     从而存在收敛子列 :math:`\{ x_{k_i} \}`, 令 :math:`\lim\limits_{i \to \infty} x_{k_i} = x_0 \in [a, b]`. 由于 :math:`f` 在 :math:`[a, b]` 上连续，
     所以有 :math:`\lim\limits_{i \to \infty} f(x_{k_i}) = f(x_0)`, 于是有 :math:`y = f(x_0)`. 可以断言 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`,
     如若不然，那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`x_0 \not\in E_{k_0}`, 那么 :math:`x_0 \in \mathcal{C} E_{k_0}`.
-    而:math:`\mathcal{C} E_{k_0}` 是一个开集，所以存在 :math:`\varepsilon > 0`, 使得 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0}`,
+    而 :math:`\mathcal{C} E_{k_0}` 是一个开集，所以存在 :math:`\varepsilon > 0`, 使得 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0}`,
     那么对任意 :math:`k \ge k_0`, 都有 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0} \subset \mathcal{C} E_k`, 于是有
     :math:`\lvert x_k - x_0 \rvert >= \varepsilon`, 这与 :math:`\{ x_k \}` 收敛到 :math:`x_0` 矛盾。所以有 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`.
     于是 :math:`y = f(x_0) \in f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`.
