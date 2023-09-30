@@ -13,6 +13,7 @@
    :caption: 目录:
 
    chap1
+   chap2
 
 
 Indices and tables
