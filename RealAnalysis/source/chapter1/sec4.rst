@@ -32,6 +32,8 @@
     由之前第一点的结论，它是一致连续的，从而在有界闭集 :math:`F_1` 上取到最小值，即存在 :math:`a_1 \in F_1`, 使得 :math:`\rho(a_1, F_2) = \rho(F_1, F_2)`.
     又由于 :math:`F_2` 是非空闭集，根据第二点结论，存在 :math:`a_2 \in F_2`, 使得 :math:`\rho(a_1, F_2) = \rho(a_1, a_2)`. 于是有 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
 
+.. _ex-1-24:
+
 24. 设 :math:`G_1, G_2` 为 :math:`\mathbb{R}^1` 中的开集，且 :math:`G_1 \subset G_2`. 试证 :math:`G_1` 的每个构成区间含于 :math:`G_2` 的某个构成区间之中。
 
 .. proof:proof::
@@ -53,6 +55,7 @@
     根据康托三分集的构造过程，有如下的区间列：
 
     .. math::
+        :label: cantor-set-chap1-sec4-ex26
 
         \begin{align*}
         F_1 & = F_{11} \cup F_{12} = \left[ 0, \dfrac{1}{3} \right] \cup \left[ \dfrac{2}{3}, 1 \right], \\

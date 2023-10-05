@@ -89,9 +89,83 @@
         g: \mathbb{R} \to \mathbb{R}, \quad x \mapsto f([x]).
 
     任取 :math:`\mathbb{R}` 中开集 :math:`U`. 对值域 :math:`\mathbb{R}` 中的任意元素 :math:`y`, 令它在商集 :math:`\mathcal{C}` 中的双射 :math:`f` 下的原像为
-    :math:`C \in \mathcal{C}`, 即 :math:`y = f(C)`. 由于每一个 :math:`C` 的形式都如 :eq:`ex-1-21-eq-1` 所示，所以满足 :math:`g(x) = y` 的 :math:`x`
+    :math:`C \in \mathcal{C}`, 即 :math:`y = f(C)`. 由于每一个 :math:`C` 的形式都如式 :eq:`ex-1-21-eq-1` 所示，所以满足 :math:`g(x) = y` 的 :math:`x`
     在 :math:`\mathbb{R}` 中稠密（包含 :math:`C` 作为陪集的每一个元素），故与开集 :math:`U` 相交非空，从而有 :math:`y \in g(U)`.
     由于 :math:`y` 是任意取自 :math:`\mathbb{R}` 的元素，所以 :math:`g(U) = \mathbb{R}`, 这就证明了 :math:`g` 将任一开集映为开集 :math:`\mathbb{R}`,
     同时这也说明了 :math:`g` 在任何一点都不连续。
 
     连续映射不一定将开集映为开集。反例为 :math:`f(x) = x^2`，它将开区间 :math:`(-1, 1)` 映左闭右开区间 :math:`[0, 1)`.
+
+    .. note::
+
+        开映射不连续的其他例子 (来自作业):
+
+        和教材一致，记 Cantor 三分集为 :math:`P_0`, 其补集 (在区间 :math:`[0, 1]` 内的补集) 记为 :math:`G_0`,
+        其构造过程产生的区间记号如下：
+
+        .. math::
+            :label: cantor-set-chap1-sec3-ex21
+
+            \begin{align*}
+            F_1 & = F_{11} \cup F_{12} = \left[ 0, \dfrac{1}{3} \right] \cup \left[ \dfrac{2}{3}, 1 \right], \\
+            I_1 & = I_{11} = \left( \dfrac{1}{3}, \dfrac{2}{3} \right), \\
+            F_2 & = F_{21} \cup F_{22} \cup F_{23} \cup F_{24} = \left[ 0, \dfrac{1}{9} \right] \cup
+                    \left[ \dfrac{2}{9}, \dfrac{1}{3} \right] \cup \left[ \dfrac{2}{3}, \dfrac{7}{9} \right]
+                    \cup \left[ \dfrac{8}{9}, 1 \right], \\
+            I_2 & = I_{21} \cup I_{22} = \left( \dfrac{1}{9}, \dfrac{2}{9} \right) \cup \left( \dfrac{7}{9}, \dfrac{8}{9} \right), \\
+            & \vdots \\
+            F_n & = F_{n1} \cup F_{n2} \cup \cdots \cup F_{n2^{n}}, \\
+            I_n & = I_{n1} \cup I_{n2} \cup \cdots \cup I_{n2^{n-1}}, \\
+            & \vdots \\
+            G_0 & = \bigcup_{n=1}^{\infty} I_n, \\
+            P_0 & = \mathcal{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(Cantor 三分集)}. \\
+            \end{align*}
+
+        对于任意 :math:`m \in \mathbb{Z}^*`, 考虑集合
+
+        .. math::
+
+            G_m & := m + G_0 = \left\{ m + x : x \in G_0 \right\}, \\
+            G & := \bigcup_{m \in \mathbb{Z}} G_m, \\
+            P & := \mathcal{C} G = \mathbb{R} \setminus G.
+
+        容易看出，
+
+        .. math::
+
+            I_{nk}^{(m)} := \left\{ m + x : x \in I_{nk} \right\}, m \in \mathbb{Z}, n \in \mathbb{N}, k = 1, 2, \cdots, 2^{n-1},
+
+        两两不相交，是 :math:`G` 的构成区间。将这些区间重新排列，得到新的开区间列 :math:`\{ J_t = (\alpha_t, \beta_t) \}_{t \in \mathbb{N}}`.
+        定义映射 :math:`f: \mathbb{R} \to \mathbb{R}` 如下：
+
+        .. math::
+            :label: ex-1-21-eq-2
+
+            f(x) = \begin{cases}
+            \tan \left( \dfrac{1}{2} - \dfrac{\beta_t - x}{\beta_t - \alpha_t} \right) \pi, & x \in J_t, \\
+            0, & x \not\in G.
+            \end{cases}
+
+        那么 :math:`f` 在集合 :math:`P` 任何一点 :math:`x` 都不连续：不妨设 :math:`x \in P_0`, 对任意的 :math:`\delta > 0`,
+        取 :math:`n_0 \in \mathbb{N}` 使得 :math:`2 \cdot \left(\dfrac{1}{3} \right)^{n_0} < \delta` 成立.
+        由于 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 所以 :math:`x \in F_{n_0}`, 那么存在 :math:`k, 1 \le k \le 2^{n_0}`,
+        使得 :math:`x \in F_{n_0k}`. 闭区间 :math:`F_{n_0k}` 的长度为 :math:`\left(\dfrac{1}{3} \right)^{n_0}`,
+        所以 :math:`F_{n_0k} \subset U(x, \delta)`. 那么根据 Cantor 三分集的构造，闭区间 :math:`F_{n_0k}` 的中间 1/3 开区间，
+        记为 :math:`I`, 是 :math:`G` 的构成区间，同时包含于 :math:`U(x, \delta)`. 取 :math:`I` 中的一点 :math:`y`,
+        使得 :math:`f(y) > 1`, 那么 :math:`\lvert f(y) - f(x) \rvert > 1`, 从而 :math:`f` 在 :math:`x` 处不连续。
+
+        任取 :math:`\mathbb{R}` 中开集 :math:`U`, 若 :math:`U \cap P \neq \emptyset`, 那么从上面的证明过程可以看出 :math:`f(U) = \mathbb{R}`.
+        若 :math:`U \cap P = \emptyset`, 那么 :math:`U \subset G`. 令 :math:`U` 的构成区间为 :math:`\{ U_s \}_{s \in S}`,
+        那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中（见本章 :ref:`第24题<ex-1-24>`）。 由于
+
+        .. math::
+
+            f \left( \bigcup_{s \in S} U_s \right) = \bigcup_{s \in S} f(U_s)
+
+        对一般的函数以及集合的并都是成立的，而 :math:`f` 在每个 :math:`J_t` 上都是开映射，所以
+        :math:`f(U) = f(\bigcup\limits_{s \in S} U_s) = \bigcup\limits_{s \in S} f(U_s)` 是开集。
+        于是，我们就证明了 :math:`f` 是开映射。
+
+        需要注意的是，将 :math:`f` 的定义式 :eq:`ex-1-21-eq-2` 中的
+        :math:`\tan \left( \dfrac{1}{2} - \dfrac{\beta_t - x}{\beta_t - \alpha_t} \pi \right)`
+        替换为任意的非平凡的开映射（例如单调连续函数），都可以得到开映射不连续的例子。
