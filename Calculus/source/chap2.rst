@@ -132,10 +132,69 @@
 
         y' = \dfrac{2 (\sec x \tan x) \cdot (1 + x^2) - 2 \sec x \cdot 2x}{(1 + x^2)^2} = 2 \sec x \left( \dfrac{(1 + x^2) \tan x - 2x}{(1 + x^2)^2} \right)
 
+2. 求函数在给定点的导数
+
+(1). :math:`y = \sin x + \cos x`, 求 :math:`y'|_{x = \frac{\pi}{4}`;
+
+(3). :math:`y = \dfrac{x + \sqrt{x}}{1 + \sqrt{x}}`,  求 :math:`y'|_{x = 1}`;
+
+(5). 设 :math:`\varphi(x)` 是连续函数， :math:`f(x) = (1 - x^2) \varphi(x)`, 求 :math:`f'(1)`.
+
+.. proof:solution::
+
+    (1). :math:`y' = \cos x - \sin x`, 所以 :math:`y'|_{x = \frac{\pi}{4}} = \cos \frac{\pi}{4} - \sin \frac{\pi}{4} = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} = 0`.
+
+    (3). :math:`y' = \left( \dfrac{\sqrt{x} (1 + \sqrt{x})}{1 + \sqrt{x}} \right)' = \left( \sqrt{x} \right)' = \dfrac{1}{2 \sqrt{x}}`, 所以 :math:`y'|_{x = 1} = \dfrac{1}{2}`.
+
+    (5). 由于 :math:`\varphi` 只是连续函数，不知道是否可导，所以需要用定义求 :math:`f(x) = (1 - x^2) \varphi(x)` 的导数
+
+    .. math::
+
+        f'(x) & = \lim_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\
+              & = \lim_{\Delta x \to 0} \dfrac{(1 - (x + \Delta x)^2) \varphi(x + \Delta x) - (1 - x^2) \varphi(x)}{\Delta x} \\
+              & = \lim_{\Delta x \to 0} \dfrac{(1 - x^2 - 2x \Delta x - \Delta x^2) \varphi(x + \Delta x) - (1 - x^2) \varphi(x)}{\Delta x} \\
+              & = \lim_{\Delta x \to 0} \dfrac{(1 - x^2) \varphi(x + \Delta x) - (1 - x^2) \varphi(x) - 2x \Delta x \varphi(x + \Delta x) - \Delta x^2 \varphi(x + \Delta x)}{\Delta x} \\
+              & = \lim_{\Delta x \to 0} \dfrac{(1 - x^2) (\varphi(x + \Delta x) - \varphi(x))}{\Delta x} - \lim_{\Delta x \to 0} 2x \varphi(x + \Delta x) - \lim_{\Delta x \to 0} \Delta x \varphi(x + \Delta x) \\
+              & = \lim_{\Delta x \to 0} \dfrac{(1 - x^2) (\varphi(x + \Delta x) - \varphi(x))}{\Delta x} - 2x \varphi(x) - 0 \\
+
+    上式代 :math:`x = 1` 有 :math:`f'(1) = \lim\limits_{\Delta x \to 0} 0 - 2 \cdot 1 \cdot \varphi(1) = -2 \varphi(1)`.
+
+3. 求曲线 :math:`y = x - \dfrac{1}{x}` 在与坐标轴交点处的切线方程和法线方程.
+
+.. proof:solution::
+
+    先求曲线与坐标轴交点。由于曲线在 :math:`x = 0` 处无定义，即与 :math:`y` 轴无交点，所以只需求 :math:`x` 轴交点。曲线与 :math:`x` 轴交点为 :math:`x - \dfrac{1}{x} = 0`,
+    解得 :math:`x = \pm 1`, 所以曲线与坐标轴交点为 :math:`(-1, 0)` 和 :math:`(1, 0)`.
+
+    曲线 :math:`y = x - \dfrac{1}{x}` 的导函数为 :math:`y' = 1 + \dfrac{1}{x^2}`, 所以在点 :math:`(-1, 0)` 处切线斜率，即该点处的导数值为 :math:`y'|_{x=-1} = 1 + \dfrac{1}{(-1)^2} = 2`，
+    所以切线方程为 :math:`y - 0 = 2 (x + 1)`, 即 :math:`y = 2x + 2`; 法线的斜率为 :math:`-\dfrac{1}{2}`, 所以法线方程为 :math:`y - 0 = -\dfrac{1}{2} (x + 1)`, 即 :math:`y = -\dfrac{1}{2} x - \dfrac{1}{2}`. 类似可求得曲线在点 :math:`(1, 0)` 处的切线方程为 :math:`y = 2x - 2`, 法线方程为 :math:`y = -\dfrac{1}{2} x + \dfrac{1}{2}`.
+
+4. 求下列函数的导数：
+
+(2). :math:`y = \sin x^5`; (4). :math:`y = e^{\cos 2x}`;
+
+(6). :math:`y = \sin (nx) \sin^n x`; (8). :math:`y = \arctan \dfrac{1 + x}{1 - x}`.
+
+.. proof:solution::
+
+    (2). :math:`y' = \cos x^5 \cdot 5x^4`.
+
+    (4). :math:`y' = e^{\cos 2x} \cdot (-\sin 2x) \cdot 2 = -2 e^{\cos 2x} \sin 2x`.
+
+    (6).
+
+    .. math::
+
+        y' & = n \cos (nx) \sin^n x + \sin (nx) \cdot n \sin^{n-1} x \cdot \cos x \\
+           & = n \sin^{n-1} x (\cos (nx) \sin x + \sin (nx) \cos x) \\
+           & = n \sin^{n-1} x \sin (nx + x).
+
+    (8). :math:`y' = \dfrac{1}{1 + \left( \dfrac{1 + x}{1 - x} \right)^2} \cdot \dfrac{(1 - x) + (1 + x)}{(1 - x)^2} = \dfrac{2}{(1 - x)^2 + (1 + x)^2} = \dfrac{1}{1 + x^2}`.
+
 §2.3 高阶导数
 --------------------------------
 
-待写
+1. 求下列函数的二阶导数：
 
 §2.4 隐函数与参数方程所确定的函数的导数
 ------------------------------------------

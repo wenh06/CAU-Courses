@@ -163,7 +163,7 @@
             f \left( \bigcup_{s \in S} U_s \right) = \bigcup_{s \in S} f(U_s)
 
         对一般的函数以及集合的并都是成立的，而 :math:`f` 在每个 :math:`J_t` 上都是开映射，所以
-        :math:`f(U) = f(\bigcup\limits_{s \in S} U_s) = \bigcup\limits_{s \in S} f(U_s)` 是开集。
+        :math:`f(U) = f \left( \bigcup\limits_{s \in S} U_s \right) = \bigcup\limits_{s \in S} f(U_s)` 是开集。
         于是，我们就证明了 :math:`f` 是开映射。
 
         需要注意的是，将 :math:`f` 的定义式 :eq:`ex-1-21-eq-2` 中的
