@@ -272,7 +272,7 @@
 
     .. math::
 
-        y^{(n + 1)} & = \dfrac{d \left( n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x}) \right)}{dx} \\
+        y^{(n + 1)} & = \dfrac{d \left( n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x}) \right)}{\mathrm{d} x} \\
         & = n(e^x + (-1)^{n} e^{-x}) + (e^x + (-1)^n e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
         & = (n + 1)(e^x + (-1)^{n} e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
         & = (n + 1)(e^x + (-1)^{(n + 1) - 1} e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x})
@@ -286,12 +286,77 @@
 §2.4 隐函数与参数方程所确定的函数的导数
 ------------------------------------------
 
-待写
+1. 求下列隐函数所确定的函数的导数：
+
+(1). :math:`x^3 + y^3 - 3xy = 0`;
+
+(3). :math:`e^{x + y} - xy = 1`;
+
+(5). :math:`y = \tan (x + y)`.
+
+.. proof:solution::
+
+    (1). 方程两边对 :math:`x` 求导有 :math:`3 x^2 + 3 y^2 y' - 3 (x y' + y) = 0`, 所以 :math:`y' = \dfrac{y - x^2}{y^2 - x}`.
+
+    (3). 方程两边对 :math:`x` 求导有 :math:`e^{x + y} (1 + y') - y - xy' = 0`, 所以 :math:`y' = \dfrac{y - e^{x + y}}{e^{x + y} - x} = \dfrac{y - xy - 1}{1 + xy -x}`.
+
+    (5). 方程两边对 :math:`x` 求导有 :math:`y' = \dfrac{1}{\cos^2 (x + y)} (1 + y')`, 所以 :math:`y' = \dfrac{1}{\cos^2 (x + y) - 1} = -\dfrac{1}{\sin^2 (x + y)}`.
+
+3. :math:`y = 1 + x e^y`, 求 :math:`y'|_{x = 0}, y''|_{x = 0}`.
+
+.. proof:solution::
+
+    首先将 :math:`x = 0` 代入方程 :math:`y = 1 + x e^y` 得 :math:`y|_{x = 0} = 1`.
+
+    方程 :math:`y = 1 + x e^y` 两边对 :math:`x` 求导有 :math:`y' = e^y + x e^y y'`, 所以 :math:`y' = \dfrac{e^y}{1 - x e^y}`. 所以 :math:`y'|_{x = 0} = e^{1} = e`.
+
+    :math:`y' = \dfrac{e^y}{1 - x e^y} = \dfrac{e^y}{2 - y}` 两边对 :math:`x` 求二阶导有
+
+    .. math::
+
+        y'' & = \dfrac{e^y y' (2 - y) - e^y (-y')}{(2 - y)^2} = \dfrac{e^y y' (2 - y) + e^y y'}{(2 - y)^2} \\
+            & = \dfrac{3 e^y y' - y y' e^y}{(2 - y)^2}
+
+    将 :math:`y|_{x = 0} = 1` 和 :math:`y'|_{x = 0} = e` 代入上式得 :math:`y''|_{x = 0} = \dfrac{3 e^2 - e^2}{(1 - 0)^2} = 2 e^2`.
+
+6. 设参数方程为 :math:`\begin{cases} x = e^t \sin t \\ y = e^t \cos t \end{cases}`,
+
+(1). 求曲线在 :math:`t = \dfrac{\pi}{3}` 处的切线方程和法线方程;
+
+(2). 验证函数满足关系式 :math:`\dfrac{d^2 y}{\mathrm{d} x^2} (x + y)^2 = 2 \left( x \dfrac{\mathrm{d} y}{\mathrm{d} x} - y \right)`.
+
+.. proof:solution::
+
+    (1). :math:`\dfrac{\mathrm{d} y}{\mathrm{d} x} = \left. \left( \dfrac{\mathrm{d} y}{\mathrm{d} t} \right) \right/ \left( \dfrac{\mathrm{d} x}{\mathrm{d} t} \right) = \dfrac{e^t \cos t - e^t \sin t}{e^t \sin t + e^t \cos t} = \dfrac{\cos t - \sin t}{\sin t + \cos t}`.
+    曲线在 :math:`t = \dfrac{\pi}{3}` 处的切线斜率为 :math:`\left. \dfrac{\mathrm{d} y}{\mathrm{d} x} \right|_{t = \dfrac{\pi}{3}} = \dfrac{\dfrac{1}{2} - \dfrac{\sqrt{3}}{2}}{\dfrac{\sqrt{3}}{2} + \dfrac{1}{2}} = \sqrt{3} - 2`.
+    曲线在 :math:`t = \dfrac{\pi}{3}` 处过点 :math:`(e^{\frac{\pi}{3}} \sin \frac{\pi}{3}, e^{\frac{\pi}{3}} \cos \frac{\pi}{3})`,
+    所以切线方程为 :math:`y - e^{\frac{\pi}{3}} \cos \frac{\pi}{3} = (\sqrt{3} - 2) (x - e^{\frac{\pi}{3}} \sin \frac{\pi}{3})`,
+    即 :math:`y = (\sqrt{3} - 2) x + e^{\frac{\pi}{3}} (\sqrt{3} - 1)`.
+
+    法线斜率为 :math:`-\dfrac{1}{\sqrt{3} - 2}`, 所以法线方程为 :math:`y - e^{\frac{\pi}{3}} \cos \frac{\pi}{3} = -\dfrac{1}{\sqrt{3} - 2} (x - e^{\frac{\pi}{3}} \sin \frac{\pi}{3})`,
+    即 :math:`y = (2 + \sqrt{3}) x - e^{\frac{\pi}{3}} (1 + \sqrt{3})`.
+
+    (2). 由于 :math:`\dfrac{\mathrm{d} y}{\mathrm{d} x} = \dfrac{\cos t - \sin t}{\cos t + \sin t}`, 所以
+
+    .. math::
+
+        \dfrac{d^2 y}{\mathrm{d} x^2} & = \dfrac{\dfrac{d}{\mathrm{d} t} \left( \dfrac{\mathrm{d} y}{\mathrm{d} x} \right)}{\dfrac{\mathrm{d} x}{\mathrm{d} t}} = \dfrac{\dfrac{d}{\mathrm{d} t} \left( \dfrac{\cos t - \sin t}{\cos t + \sin t} \right)}{e^t \sin t + e^t \cos t} \\
+        & = \dfrac{\left( \dfrac{-(\cos t + \sin t) \cdot (\cos t + \sin t) - (\cos t - \sin t) \cdot (\cos t - \sin t)}{(\cos t + \sin t)^2} \right)}{e^t \sin t + e^t \cos t} \\
+        & = \dfrac{-2}{e^t (\sin t + \cos t)^3}.
+
+    所以
+
+    .. math::
+
+        \dfrac{d^2 y}{\mathrm{d} x^2} (x + y)^2 & = \dfrac{-2}{e^t (\sin t + \cos t)^3} \cdot (e^t \sin t + e^t \cos t)^2 = - \dfrac{2 e^t}{\sin t + \cos t} \\
+        2 \left( x \dfrac{\mathrm{d} y}{\mathrm{d} x} - y \right) & = 2 \left( e^t \sin t \cdot \dfrac{\cos t - \sin t}{\cos t + \sin t} - e^t \cos t \right) = - \dfrac{2 e^t}{\sin t + \cos t}
+
+    于是有 :math:`\dfrac{d^2 y}{\mathrm{d} x^2} (x + y)^2 = 2 \left( x \dfrac{\mathrm{d} y}{\mathrm{d} x} - y \right)`.
 
 §2.5 函数的微分
 --------------------------------
 
-待写
+1. 已知 :math:`y = x^2 + 1`, 计算在 :math:`x = 1` 点处当 :math:`\Delta x = 0.1` 和 :math:`0.01` 时的 :math:`\Delta y` 和 :math:`\mathrm{d} y`.
 
 §2.6 微分中值定理
 --------------------------------
