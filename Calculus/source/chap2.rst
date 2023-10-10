@@ -196,6 +196,93 @@
 
 1. 求下列函数的二阶导数：
 
+(2). :math:`y = \ln (x + \sqrt{x^2 + 4})`;
+
+(4). :math:`y = \ln (x^2 + 1)`;
+
+(6). :math:`y = \sin 2x`.
+
+.. proof:solution::
+
+    (2).
+
+    .. math::
+
+        y' & = \dfrac{1}{x + \sqrt{x^2 + 4}} \cdot (1 + \dfrac{1}{2 \sqrt{x^2 + 4}} \cdot 2x) = \dfrac{1}{x + \sqrt{x^2 + 4}} \cdot \dfrac{x + \sqrt{x^2 + 4}}{\sqrt{x^2 + 4}} = \dfrac{1}{\sqrt{x^2 + 4}} \\
+        y'' & = -\dfrac{1}{2} (x^2 + 4)^{-3/2} \cdot 2x = -\dfrac{x}{(x^2 + 4)^{3/2}}
+
+    (4).
+
+    .. math::
+
+        y' & = \dfrac{2x}{x^2 + 1} \\
+        y'' & = \dfrac{2(x^2 + 1) - 2x \cdot 2x}{(x^2 + 1)^2} = \dfrac{2(1 - x^2)}{(x^2 + 1)^2}
+
+    (6).
+
+    .. math::
+
+        y' & = 2 \cos 2x \\
+        y'' & = -4 \sin 2x
+
+2. 若 :math:`f(x)` 的二阶导数存在，求下列函数 :math:`y` 的二阶导数 :math:`\dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2}`:
+
+(2). :math:`y = \ln f(x)`.
+
+.. proof:solution::
+
+    .. math::
+
+        y' & = \dfrac{1}{f(x)} \cdot f'(x) \\
+        y'' & = \dfrac{1}{f(x)} \cdot f''(x) - \dfrac{1}{f^2(x)} \cdot (f'(x))^2 = \dfrac{f''(x) f(x) - (f'(x))^2}{f^2(x)}
+
+3. 验证函数关系式：
+
+(2). :math:`y = \dfrac{x - 3}{x - 4}` 满足关系式 :math:`2y'^2 = (y - 1) y''`.
+
+.. proof:proof::
+
+    .. math::
+
+        y' & = \dfrac{(x - 4) - (x - 3)}{(x - 4)^2} = -\dfrac{1}{(x - 4)^2} \\
+        y'' & = 2(x - 4)^{-3} = \dfrac{2}{(x - 4)^3}
+
+    所以
+
+    .. math::
+
+        2y'^2 & = 2 \cdot \dfrac{1}{(x - 4)^4} = \dfrac{2}{(x - 4)^4} \\
+        (y - 1) y'' & = \dfrac{(x - 3) - (x - 4)}{x - 4} \cdot \dfrac{2}{(x - 4)^3} = \dfrac{2}{(x - 4)^4}
+
+    所以 :math:`2y'^2 = (y - 1) y''`.
+
+4. 求下列函数的高阶导数：
+
+(2). :math:`y = x (e^{x} + e^{-x})`, 求 :math:`y^{(99)}`.
+
+.. proof:solution::
+
+    .. math::
+
+        y' & = e^x + e^{-x} + x (e^x - e^{-x}) \\
+        y'' & = e^x - e^{-x} + e^x - e^{-x} + x (e^x + e^{-x}) = 2(e^x - e^{-x}) + x (e^x + e^{-x}) \\
+        y^{(3)} & = 2(e^x + e^{-x}) + e^x + e^{-x} + x (e^x - e^{-x}) = 3(e^x + e^{-x}) + x (e^x - e^{-x})
+
+    所以可以猜测 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`, 用数学归纳法证明：
+
+    .. math::
+
+        y^{(n + 1)} & = \dfrac{d \left( n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x}) \right)}{dx} \\
+        & = n(e^x + (-1)^{n} e^{-x}) + (e^x + (-1)^n e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
+        & = (n + 1)(e^x + (-1)^{n} e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
+        & = (n + 1)(e^x + (-1)^{(n + 1) - 1} e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x})
+
+    所以 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`. 令 :math:`n = 99` 有
+
+    .. math::
+
+        y^{(99)} = 99(e^x + (-1)^{98} e^{-x}) + x (e^x + (-1)^{99} e^{-x}) = 99(e^x + e^{-x}) + x (e^x - e^{-x}).
+
 §2.4 隐函数与参数方程所确定的函数的导数
 ------------------------------------------
 
