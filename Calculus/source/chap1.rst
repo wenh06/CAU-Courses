@@ -408,7 +408,7 @@
         由于 :math:`\sin x` 在 :math:`\left[ \dfrac{\pi}{2}, \pi \right]` 上是单调递减的，所以 :math:`f(x) = x - 2 \sin x` 在 :math:`\left[ \dfrac{\pi}{2}, \pi \right]`
         上是单调递增的，那么 :math:`f(x)` 在 :math:`\left( \dfrac{\pi}{2}, \pi \right)` 内的零点就是唯一的。
 
-补充问题
+补充内容
 =============
 
 §1.2 函数的极限
