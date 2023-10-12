@@ -358,10 +358,111 @@
 
 1. 已知 :math:`y = x^2 + 1`, 计算在 :math:`x = 1` 点处当 :math:`\Delta x = 0.1` 和 :math:`0.01` 时的 :math:`\Delta y` 和 :math:`\mathrm{d} y`.
 
+.. proof:solution::
+
+    函数 :math:`y = x^2 + 1` 的微分为 :math:`\mathrm{d} y = 2x \mathrm{d} x`, 所以当 :math:`x = 1` 时 :math:`\mathrm{d} y = 2 \mathrm{d} x`.
+
+    当 :math:`\Delta x = 0.1` 时， :math:`\Delta y = f(1 + 0.1) - f(1) = 2.21 - 2 = 0.21, \mathrm{d} y = 2 \cdot 0.1 = 0.2`.
+
+    当 :math:`\Delta x = 0.01` 时， :math:`\Delta y = f(1 + 0.01) - f(1) = 2.0201 - 2 = 0.0201, \mathrm{d} y = 2 \cdot 0.01 = 0.02`.
+
+2. 求下列函数的微分：
+
+(1). :math:`y = x^2 + \sqrt{x}`;
+
+(3). :math:`y = e^{x^2 + x}`;
+
+(5). :math:`y = \ln (1 + x^2)`;
+
+(7). :math:`y = \arctan \dfrac{1 - x}{1 + x}`;
+
+(9). :math:`x^3 + y^3 -3x^2y - 3y^2x = 4a^2`.
+
+.. proof:solution::
+
+    (1). :math:`\mathrm{d} y = 2x \mathrm{d} x + \dfrac{1}{2 \sqrt{x}} \mathrm{d} x = (2x + \dfrac{1}{2 \sqrt{x}}) \mathrm{d} x`.
+
+    (3). :math:`\mathrm{d} y = (2x + 1) e^{x^2 + x} \mathrm{d} x`.
+
+    (5). :math:`\mathrm{d} y = \dfrac{2x}{1 + x^2} \mathrm{d} x`.
+
+    (7). :math:`\left( \arctan\dfrac{1 - x}{1 + x} \right)' = \dfrac{1}{1 + \left( \dfrac{1 - x}{1 + x} \right)^2} \cdot \dfrac{-(1 + x) - (1 - x)}{(1 + x)^2} = \dfrac{-1}{1 + x^2}`,
+    所以 :math:`\mathrm{d} y = \dfrac{1}{1 + x^2} \mathrm{d} x`.
+
+    (9). 对等式两边求微分有 :math:`3x^2 \mathrm{d} x + 3y^2 \mathrm{d} y - 6xy \mathrm{d} x - 3x^2 \mathrm{d} y - 6xy \mathrm{d} y - 3y^2 \mathrm{d} x = 0`,
+    所以 :math:`(y^2 - 2xy - x^2) \mathrm{d} y = (2xy - x^2 + y^2) \mathrm{d} x`, 即有 :math:`\mathrm{d} y = \dfrac{y^2 + 2xy - x^2}{y^2 - 2xy + x^2} \mathrm{d} x`.
+
+3. 将适当的函数填入括号中，使得下列等式成立：
+
+(2). :math:`\mathrm{d} (\quad) = \dfrac{1}{x^2} \mathrm{d} x`;
+
+(4). :math:`\mathrm{d} (\quad) = e^{-2x} \mathrm{d} x`;
+
+(6). :math:`\mathrm{d} (\quad) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
+
+.. proof:solution::
+
+    (2). 由于 :math:`\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{x} \right) = \dfrac{1}{x^2} \mathrm{d} x`.
+
+    (4). 由于 :math:`\left( -\dfrac{1}{2} e^{-2x} \right)' = e^{-2x}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{2} e^{-2x} \right) = e^{-2x} \mathrm{d} x`.
+
+    (6). 由于 :math:`\left( \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`, 所以 :math:`\mathrm{d} \left( \arctan^2 x \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
+
+    .. note::
+
+        一般地，可以把 :math:`\mathrm{d} x` 变形，将整个表示式变成基本初等函数的微分。例如第 (6) 题：
+
+        .. math::
+
+            \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \arctan x \cdot \dfrac{1}{x^2 + 1} \mathrm{d} x \\
+            & = \arctan x \cdot \mathrm{d} (\arctan x) \\
+            & = \mathrm{d} (\arctan^2 x)
+
+4. 求下列近似值：
+
+(2). :math:`e^{1.01}`.
+
+.. proof:solution::
+
+    由于 :math:`e^x` 在 :math:`x = 1` 处的导数为 :math:`e^x`, 在 :math:`x = 1` 附近有 :math:`e^{x + \Delta x} \approx e^x + e^x \cdot \Delta x`,
+    那么 :math:`e^{1.01} \approx e^1 + e^1 \cdot 0.01 \approx 2.71828 + 2.71828 \cdot 0.01 = 2.74546`.
+
+5. 当 :math:`x` 很小时，证明近似公式：
+
+(2). :math:`\ln (1 + \sin x) \approx x`.
+
+.. proof:solution::
+
+    由于 :math:`\ln (1 + \sin x)` 在 :math:`x = 0` 处的值为 :math:`0`, 导数为 :math:`\left.\dfrac{\cos x}{1 + \sin x}\right|_{x = 0} = 1`,
+    所以在 :math:`x = 0` 附近有 :math:`\ln (1 + \sin x) \approx 0 + 1 \cdot x = x`.
+
+7. 已知单摆的运动规律为 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}`, 其中 :math:`y` 是运动周期，:math:`g` 为重力加速度，:math:`x` 为摆长。如果摆长增加 :math:`1\%`, 单摆的运动周期约增加多少？
+
+.. proof:solution::
+
+    单摆运动周期 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}` 关于摆长 :math:`x` 的导数为 :math:`\dfrac{\pi}{\sqrt{g x}}`, 那么当摆长增加 :math:`1\%` 时，单摆的运动周期增加约
+    :math:`\dfrac{\pi}{\sqrt{g x}} \cdot 0.01 x = \pi \sqrt{\dfrac{x}{g}} \cdot 0.01 = \dfrac{y}{2} \cdot 0.01 = y \cdot 0.005`, 所以单摆的运动周期约 :math:`0.5\%`.
+
 §2.6 微分中值定理
 --------------------------------
 
-待写
+1. 验证函数 :math:`f(x) = x \sqrt{1 - x^2}` 在 :math:`[-1, 1]` 满足罗尔定理。
+
+3. 设 :math:`f(x)` 在 :math:`[a, b]` 连续可微，在 :math:`(a, b)` 二阶可微，且 :math:`f(a) = f(b) = f'(a) = 0`, 证明 :math:`f''(x) = 0` 在 :math:`(a, b)` 内至少有一个根。
+
+4. 已知 :math:`c_0 + \dfrac{c_1}{2} + \cdots + \dfrac{c_n}{n + 1} = 0`, 证明 :math:`p(x) = c_0 + c_1 x + \cdots + c_n x^n = 0` 至少有一正实根。
+
+6. 求证 :math:`\arcsin x + \arccos x \equiv \dfrac{\pi}{2} (\lvert x \rvert \le 1)`.
+
+7. 证明：当 :math:`a > b > 0` 时， :math:`\dfrac{a - b}{a} < \ln \dfrac{a}{b} < \dfrac{a - b}{b}`.
+
+9. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，且有 :math:`f(a) = f(b) = 0`. 利用 :math:`g(x) = e^{-x} f(x)` 证明存在 :math:`\xi \in (a, b)` 使得 :math:`f(\xi) - f'(\xi) = 0`.
+
+10. 求证：设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续，在 :math:`(a, b)` 内可导，则存在 :math:`\xi \in (a, b)` 使得
+
+.. math::
+
+    f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
 
 §2.7 洛必达法则
 --------------------------------
