@@ -15,6 +15,17 @@
    chap1
    chap2
 
+.. toctree::
+   :maxdepth: 2
+   :caption: 随堂测验:
+
+   exams/chap1
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 随堂测验答案解析:
+
+   exams/chap1-sol
 
 Indices and tables
 ==================
