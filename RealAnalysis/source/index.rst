@@ -15,6 +15,12 @@
    chap1
    chap2
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Further Reading:
+
+   suppl/chap1
+
 
 Indices and tables
 ==================
