@@ -1,6 +1,8 @@
 # assign "project_dir" as the parent directory of this script
 
-project_dir="$(dirname "$(dirname "$(readlink -fm "$0")")")"
+project_dir="$(dirname "$(readlink -fm "$0")")"
+
+echo "Project directory: $project_dir"
 
 # iterate over folders in "project_dir" that contains a "make.sh" file
 
