@@ -17,7 +17,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Further Reading:
+   :caption: 补充材料:
 
    suppl/chap1
 
