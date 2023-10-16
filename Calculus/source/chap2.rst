@@ -443,20 +443,73 @@
     单摆运动周期 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}` 关于摆长 :math:`x` 的导数为 :math:`\dfrac{\pi}{\sqrt{g x}}`, 那么当摆长增加 :math:`1\%` 时，单摆的运动周期增加约
     :math:`\dfrac{\pi}{\sqrt{g x}} \cdot 0.01 x = \pi \sqrt{\dfrac{x}{g}} \cdot 0.01 = \dfrac{y}{2} \cdot 0.01 = y \cdot 0.005`, 所以单摆的运动周期约 :math:`0.5\%`.
 
+    另解：直接利用弹性函数，当 :math:`x` 增加 :math:`1\%` 时， :math:`y` 增加比例为
+
+    .. math::
+
+        y'\dfrac{x}{y}\% = \left( \dfrac{\pi}{\sqrt{g x}} \cdot \dfrac{x}{2\pi \sqrt{\dfrac{x}{g}}} \right)\% = \dfrac{1}{2} \% = 0.5\%.
+
 §2.6 微分中值定理
 --------------------------------
 
 1. 验证函数 :math:`f(x) = x \sqrt{1 - x^2}` 在 :math:`[-1, 1]` 满足罗尔定理。
 
+.. proof:solution::
+
+    (1). :math:`f(x) = x \sqrt{1 - x^2}` 是初等函数，在定义区间 :math:`[-1, 1]` 上连续。
+
+    (2). :math:`f'(x) = \sqrt{1 - x^2} - \dfrac{x^2}{\sqrt{1 - x^2}}`, 其在开区间 :math:`(-1, 1)` 内有定义，所以 :math:`f(x)` 在开区间 :math:`(-1, 1)` 内可导。
+
+    (3). :math:`f(-1) = f(1) = 0`.
+
 3. 设 :math:`f(x)` 在 :math:`[a, b]` 连续可微，在 :math:`(a, b)` 二阶可微，且 :math:`f(a) = f(b) = f'(a) = 0`, 证明 :math:`f''(x) = 0` 在 :math:`(a, b)` 内至少有一个根。
+
+.. proof:proof::
+
+    由于 :math:`f(a) = f(b) = 0`, 所以根据罗尔定理，存在 :math:`\xi \in (a, b)` 使得 :math:`f'(\xi) = 0`.
+
+    考察函数 :math:`f'(x)`, 它在闭区间 :math:`[a, \xi]` 上连续，在开区间 :math:`(a, \xi)` 内可导，且 :math:`f'(a) = f'(\xi) = 0`, 所以根据罗尔定理，
+    存在 :math:`\eta \in (a, \xi)` 使得 :math:`f''(\eta) = 0`.
+
+    注意：这题用了两次罗尔定理。
 
 4. 已知 :math:`c_0 + \dfrac{c_1}{2} + \cdots + \dfrac{c_n}{n + 1} = 0`, 证明 :math:`p(x) = c_0 + c_1 x + \cdots + c_n x^n = 0` 至少有一正实根。
 
+.. proof:proof::
+
+    考察函数 :math:`f(x) = c_0 x + \dfrac{c_1}{2} x^2 + \cdots + \dfrac{c_n}{n + 1} x^{n + 1}`, 它是一个多项式，因此在闭区间 :math:`[0, 1]` 上连续，在开区间 :math:`(0, 1)` 内可导，
+    而且 :math:`f(0) = f(1) = 0`, 所以根据罗尔定理，存在 :math:`\xi \in (0, 1)` 使得 :math:`0 = f'(\xi) = c_0 + c_1 \xi + \cdots + c_n \xi^n`, 即 :math:`p(\xi) = 0`.
+    因此， :math:`p(x)` 至少有一正实根 :math:`\xi`.
+
 6. 求证 :math:`\arcsin x + \arccos x \equiv \dfrac{\pi}{2} (\lvert x \rvert \le 1)`.
+
+.. proof:proof::
+
+    考虑函数 :math:`f(x) = \arcsin x + \arccos x, \lvert x \rvert \le 1`. 它的导数为 :math:`f'(x) = \dfrac{1}{\sqrt{1 - x^2}} - \dfrac{1}{\sqrt{1 - x^2}} = 0`,
+    所以 :math:`f(x)` 在闭区间 :math:`[-1, 1]` 上是常数函数。易知 :math:`f(0) = \dfrac{\pi}{2}`, 所以 :math:`f(x) \equiv \dfrac{\pi}{2}`.
 
 7. 证明：当 :math:`a > b > 0` 时， :math:`\dfrac{a - b}{a} < \ln \dfrac{a}{b} < \dfrac{a - b}{b}`.
 
+.. proof:proof::
+
+    考虑函数 :math:`f(x) = \ln x, x > 0`. 它的导数为 :math:`f'(x) = \dfrac{1}{x}`. 对 函数 :math:`f(x)` 在区间 :math:`[b, a]` 上应用拉格朗日中值定理，存在 :math:`\xi \in (b, a)` 使得
+
+    .. math::
+
+        \ln a - \ln b = \dfrac{1}{\xi} (a - b).
+
+    所以
+
+    .. math::
+
+        \dfrac{a - b}{a} = \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = a} < \ln \dfrac{a}{b} < \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = b} = \dfrac{a - b}{b}.
+
 9. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，且有 :math:`f(a) = f(b) = 0`. 利用 :math:`g(x) = e^{-x} f(x)` 证明存在 :math:`\xi \in (a, b)` 使得 :math:`f(\xi) - f'(\xi) = 0`.
+
+.. proof:proof::
+
+    由于函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，那么函数 :math:`g(x) = e^{-x} f(x)` 也在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，
+    而且 :math:`g(a) = g(b) = 0`. 根据罗尔定理，存在 :math:`\xi \in (a, b)` 使得 :math:`g'(\xi) = e^{-\xi}(f'(\xi) - f(\xi)) = 0`, 即有 :math:`f(\xi) - f'(\xi) = 0`.
 
 10. 求证：设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续，在 :math:`(a, b)` 内可导，则存在 :math:`\xi \in (a, b)` 使得
 
@@ -464,10 +517,53 @@
 
     f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
 
+.. proof:proof::
+
+    考虑函数 :math:`g(u) = f(e^{u})`. 由于 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续，在 :math:`(a, b)` 内可导，那么函数 :math:`g(u)` 在 :math:`[\ln a, \ln b]` 上连续，
+    在 :math:`(\ln a, \ln b)` 内可导。那么根据拉格朗日中值定理，存在 :math:`\eta \in (\ln a, \ln b)` 使得
+
+    .. math::
+
+        \dfrac{g(\ln b) - g(\ln a)}{\ln b - \ln a} = g'(\eta) = f'(e^{\eta}) e^{\eta}.
+
+    令 :math:`\xi = e^{\eta}`, 那么 :math:`\xi \in (a, b)`, 且
+
+    .. math::
+
+        f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
+
 §2.7 洛必达法则
 --------------------------------
 
-待写
+1. 应用洛必达法则求下列 :math:`\dfrac{0}{0}` 或 :math:`\dfrac{\infty}{\infty}` 型未定式的极限：
+
+(2). :math:`\lim\limits_{x \to 0} \dfrac{1 - \cos x^2}{x^3 \sin x}`;
+
+(4). :math:`\lim\limits_{x \to 0} \dfrac{\tan x - x}{x - \sin x}`;
+
+(6). :math:`\lim\limits_{x \to 0} \dfrac{e^{-2x} - e^{-5x}}{x}`;
+
+(8). :math:`\lim\limits_{x \to \frac{\pi}{6}} \dfrac{1 - 2\sin x}{\cos 3x}`;
+
+(10). :math:`\lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} ~~ (a, b > 0)`;
+
+(12). :math:`\lim\limits_{x \to 0^+} \dfrac{\ln x}{\cot x}`.
+
+2. 应用洛必达法则求下列极限：
+
+(1). :math:`\lim\limits_{x \to \pi} (\pi - x) \tan \dfrac{x}{2}`;
+
+(3). :math:`\lim\limits_{x \to 0^+} \sin x \ln x`;
+
+(5). :math:`\lim\limits_{x \to 1} \left(\dfrac{1}{\ln x} - \dfrac{1}{x - 1} \right)`;
+
+(7). :math:`\lim\limits_{x \to +\infty} \left( \sqrt[3]{x^3 + 3x^2} - \sqrt{x^2 - 2x} \right)`.
+
+(9). :math:`\lim\limits_{x \to 1} x^{\frac{1}{1-x}}`;
+
+(11). :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x`.
+
+3. 求 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 极限，并验证计算时不能应用洛必达法则。
 
 §2.8 泰勒公式
 --------------------------------
