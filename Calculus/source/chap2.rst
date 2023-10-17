@@ -549,6 +549,56 @@
 
 (12). :math:`\lim\limits_{x \to 0^+} \dfrac{\ln x}{\cot x}`.
 
+.. proof:solution::
+
+    (2).
+
+    .. math::
+
+        \lim\limits_{x \to 0} \dfrac{1 - \cos x^2}{x^3 \sin x} & = \lim\limits_{x \to 0} \dfrac{2x \sin x^2}{3x^2 \sin x + x^3 \cos x} = \lim\limits_{x \to 0} \dfrac{2 \sin x^2}{3x \sin x + x^2 \cos x} \\
+        & = \lim\limits_{x \to 0} \dfrac{4x \cos x^2}{3 \sin x + 3 x \cos x + 2x \cos x - x^2 \sin x} \\
+        & = \lim\limits_{x \to 0} \dfrac{4 \cos x^2}{3 + 5 \cos x - x \sin x} \\
+        & = \dfrac{4}{8} = \dfrac{1}{2}.
+
+    (4).
+
+    .. math::
+
+        \lim\limits_{x \to 0} \dfrac{\tan x - x}{x - \sin x} & = \lim\limits_{x \to 0} \dfrac{\sec^2 x - 1}{1 - \cos x} = \lim\limits_{x \to 0} \dfrac{ 2 \sec x \cdot (\sec x \tan x)}{\sin x} \\
+        & = \lim\limits_{x \to 0} \dfrac{ 2 \sec^2 x}{\cos x} = \dfrac{2}{1} = 2.
+
+    (6).
+
+    .. math::
+
+        \lim\limits_{x \to 0} \dfrac{e^{-2x} - e^{-5x}}{x} = \lim\limits_{x \to 0} \dfrac{-2e^{-2x} + 5e^{-5x}}{1} = -2 + 5 = 3.
+
+    (8).
+
+    .. math::
+
+        \lim\limits_{x \to \frac{\pi}{6}} \dfrac{1 - 2\sin x}{\cos 3x} = \lim\limits_{x \to \frac{\pi}{6}} \dfrac{2\cos x}{3\sin 3x} = \dfrac{\sqrt{3}}{3}.
+
+    (10). 若 :math:`b > 0` 为正整数，那么
+
+    .. math::
+
+        \lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} & = \lim\limits_{x \to +\infty} \dfrac{bx^{b-1}}{ae^{ax}} = \cdots \\
+        & = \lim\limits_{x \to +\infty} \dfrac{b!}{a^b e^{ax}} = 0.
+
+    若 :math:`b > 0` 不是正整数，那么
+
+    .. math::
+
+        \lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} & = \lim\limits_{x \to +\infty} \dfrac{b x^{b-1}}{a e^{ax}} = \cdots \\
+        & = \lim\limits_{x \to +\infty} \dfrac{b(b-1)\cdots(b-[b])}{a^{[b]} e^{ax} x^{[b]+1-b}} = 0.
+
+    (12).
+
+    .. math::
+
+        \lim\limits_{x \to 0^+} \dfrac{\ln x}{\cot x} = \lim\limits_{x \to 0^+} \dfrac{\dfrac{1}{x}}{-\csc^2 x} = \lim\limits_{x \to 0^+} -x \sin^2 x = 0.
+
 2. 应用洛必达法则求下列极限：
 
 (1). :math:`\lim\limits_{x \to \pi} (\pi - x) \tan \dfrac{x}{2}`;
@@ -563,7 +613,75 @@
 
 (11). :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x`.
 
+.. proof:solution::
+
+    (1).
+
+    .. math::
+
+        \lim\limits_{x \to \pi} (\pi - x) \tan \dfrac{x}{2} & = \lim\limits_{x \to \pi} \dfrac{(\pi - x) \sin \dfrac{x}{2}}{\cos \dfrac{x}{2}} \\
+        & = \lim\limits_{x \to \pi} \dfrac{-\sin \dfrac{x}{2} + (\pi - x) \cdot \dfrac{1}{2} \cos \dfrac{x}{2}}{-\dfrac{1}{2}\sin \dfrac{x}{2}} \\
+        & = \dfrac{-1}{-\dfrac{1}{2}} = 2
+
+    (3).
+
+    .. math::
+
+        \lim\limits_{x \to 0^+} \sin x \ln x & = \lim\limits_{x \to 0^+} \dfrac{\ln x}{\csc x} = \lim\limits_{x \to 0^+} \dfrac{\dfrac{1}{x}}{-\csc x \cot x} \\
+        & = - \lim\limits_{x \to 0^+} \dfrac{\sin^2 x}{x \cos x} = - \lim\limits_{x \to 0^+} \dfrac{2 \sin x \cos x}{\cos x - x \sin x} \\
+        & = 0
+
+    (5).
+
+    .. math::
+
+        \lim\limits_{x \to 1} \left(\dfrac{1}{\ln x} - \dfrac{1}{x - 1} \right) & = \lim\limits_{x \to 1} \dfrac{x - \ln x - 1}{(x - 1) \ln x} = \lim\limits_{x \to 1} \dfrac{1 - \dfrac{1}{x}}{\ln x + \dfrac{x - 1}{x}} \\
+        & = \lim\limits_{x \to 1} \dfrac{x - 1}{x \ln x + x - 1} = \lim\limits_{x \to 1} \dfrac{1}{\ln x + 2} \\
+        & = \dfrac{1}{2}
+
+    (7).
+
+    .. math::
+
+        \lim\limits_{x \to +\infty} \left( \sqrt[3]{x^3 + 3x^2} - \sqrt{x^2 - 2x} \right) & = \lim\limits_{x \to +\infty} x \left( \sqrt[3]{1 + 3\dfrac{1}{x}} - \sqrt{1 - 2\dfrac{1}{x}} \right) \\
+        & = \lim\limits_{x \to 0^+} \dfrac{\sqrt[3]{1 + 3x} - \sqrt{1 - 2x}}{x} \\
+        & = \lim\limits_{x \to 0^+} \dfrac{(1 + 3x)^{-\frac{2}{3}} + (1 - 2x)^{-\frac{1}{2}}}{1} \\
+        & = 1 + 1 = 2
+
+    (9). 因为
+
+    .. math::
+
+        \lim\limits_{x \to 1} \dfrac{1}{1-x} \cdot \ln x = \lim\limits_{x \to 1} \frac{\dfrac{1}{x}}{-1} = -1,
+
+    所以 :math:`\lim\limits_{x \to 1} x^{\frac{1}{1-x}} = e^{-1}`.
+
+    (11). 因为
+
+    .. math::
+
+        \lim\limits_{x \to 0^+} x \cdot \left( \ln \dfrac{1}{x} \right) = \lim\limits_{x \to +\infty} \dfrac{\ln x}{x} = \lim\limits_{x \to +\infty} \dfrac{\dfrac{1}{x}}{1} = 0,
+
+    所以 :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x = 1`.
+
 3. 求 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 极限，并验证计算时不能应用洛必达法则。
+
+.. proof:solution::
+
+    :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = \lim\limits_{x \to 0} \dfrac{x}{\sin x} \cdot \left( x \sin \dfrac{1}{x} \right)`.
+    由于 :math:`\lim\limits_{x \to 0} \dfrac{x}{\sin x} = 1`, :math:`\lim\limits_{x \to 0} x \sin \dfrac{1}{x} = 0`, 所以有
+
+    .. math::
+
+        \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = 0.
+
+    如果使用洛必达法则，这是 :math:`\dfrac{0}{0}` 型未定式，那么有
+
+    .. math::
+
+        \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = \lim\limits_{x \to 0} \dfrac{2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}}{\cos x}.
+
+    上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限（当 :math:`x \to 0`）不存在，所以不能使用洛必达法则。
 
 §2.8 泰勒公式
 --------------------------------
