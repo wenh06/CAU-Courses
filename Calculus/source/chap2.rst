@@ -686,12 +686,83 @@
 §2.8 泰勒公式
 --------------------------------
 
-待写
+1. 求函数 :math:`f(x) = \dfrac{1}{3 - x}` 在指定点 :math:`x_0 = 2` 的泰勒展开式。
+
+.. proof:solution::
+
+    函数 :math:`f(x) = \dfrac{1}{3 - x} = -(x - 3)^{-1}` 的 :math:`k` 阶导函数为 :math:`f^{(k)}(x) = k! (x - 3)^{-k-1} = \dfrac{k!}{(3 - x)^{k+1}}`.
+    将 :math:`x_0 = 2` 代入有
+
+    .. math::
+
+        f^{(k)}(x_0) = - (-1)^k k! (2 - 3)^{-k-1} = k!,
+
+    所以在点 :math:`x_0 = 2` 处函数 :math:`f(x) = \dfrac{1}{3 - x}` 的 :math:`n` 阶泰勒展开式为
+
+    .. math::
+
+        f(x) = \sum\limits_{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!} (x - x_0)^k + R_n = \sum\limits_{k=0}^{k} (x - 2)^n + R_n,
+
+    其中 :math:`R_n = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1} = \dfrac{(n+1)!}{(3 - \xi)^{n+2}} (x - 2)^{n+1}` 为拉格朗日余项，
+    :math:`\xi` 介于 :math:`x_0` 和 :math:`x` 之间。
+
+2. 将下面函数的麦克劳林展开式写出来：
+
+(1). :math:`f(x) = e^{x^2}`;
+
+(2). :math:`f(x) = \sin^2 x`;
+
+(3). :math:`f(x) = \dfrac{x}{1 + x - 2x^2}`.
+
+.. proof:solution::
+
+    (1). 因为函数 :math:`g(x) = e^x` 的泰勒展开前 :math:`n` 项和为
+
+    .. math::
+
+        1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \cdots + \dfrac{x^n}{n!}
+
+    所以函数 :math:`f(x) = e^{x^2}` 的麦克劳林展开式为
+
+    .. math::
+
+        e^{x^2} = 1 + x^2 + \dfrac{x^4}{2!} + \dfrac{x^6}{3!} + \cdots + \dfrac{x^{2n}}{n!} + f^{(n+1)}(\theta x) \dfrac{x^{n+1}}{(n+1)!},
+
+    (2). 因为函数 :math:`f(x) = \sin^2 x = \dfrac{1 - \cos 2x}{2}` 的 :math:`k` 阶导函数为 :math:`f^{(k)}(x) = -2^{k-1} \cos (2x + \dfrac{k\pi}{2})`,
+    所以 :math:`f(x)` 的麦克劳林展开式为
+
+    .. math::
+
+        \sin^2 x & = \dfrac{1}{2} - \dfrac{1}{2} \cos 2x \\
+        & = \dfrac{1}{2} - \dfrac{1}{2} \left( 1 - \dfrac{(2x)^2}{2!} + \dfrac{(2x)^4}{4!} - \cdots + (-1)^n \dfrac{(2x)^{2n}}{(2n)!} \right) + f^{(2n+1)}(\theta x) \dfrac{(2x)^{2n+2}}{(2n+2)!} \\
+        & = x^2 - \dfrac{x^4}{3} + \cdots + (-1)^{n+1} \dfrac{x^{2n}}{(2n+1)!} + f^{(n+1)}(\theta x) \dfrac{x^{n+1}}{(n+1)!},
+
+    (3). 因为函数 :math:`f(x) = \dfrac{x}{1 + x - 2x^2} = \dfrac{1}{3} \cdot \dfrac{3x}{(1 + 2x)(1 - x)} = \dfrac{1}{3} \cdot \dfrac{1}{1 - x} - \dfrac{1}{3} \cdot \dfrac{2}{1 + 2x}`,
+    又有
+
+    .. math::
+
+        \dfrac{1}{1 - x} & = 1 + x + x^2 + x^3 + \cdots + x^n + \cdots \\
+        \dfrac{1}{1 + 2x} & = 1 - 2x + 4x^2 - 8x^3 + \cdots + (-2)^{n} x^n + \cdots
+
+    所以 :math:`f(x)` 的麦克劳林展开式为
+
+    .. math::
+
+        f(x) & = \dfrac{1}{3} \cdot \dfrac{1}{1 - x} - \dfrac{1}{3} \cdot \dfrac{2}{1 + 2x} \\
+        & = \dfrac{1}{3} \left( 1 + x + x^2 + \cdots + x^n + \cdots \right) - \dfrac{1}{3} \left( 1 - 2x + 4x^2 \cdots + (-2)^{n} x^n + \cdots \right) + R_n \\
+        & = x - x^2 + \cdots + \dfrac{1 - (-2)^{n}}{3} x^n + \cdots + R_n,
+
+    其中 :math:`R_n = \dfrac{f^{(n+1)}(\theta x)}{(n+1)!} x^{n+1}`.
 
 §2.9 函数的单调性与曲线的凹凸性
 --------------------------------
 
-待写
+1. 确定下列函数的单调区间：
+
+(2). :math:`y = \sqrt{2x - x^2}`;
+
+(4). :math:`y = x^n e^{-x} \quad (n > 0, x \ge 0)`.
 
 §2.10 函数的极值与最大值最小值
 --------------------------------
