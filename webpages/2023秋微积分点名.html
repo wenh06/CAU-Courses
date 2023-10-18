@@ -1,5 +1,3 @@
-<!-- FILEPATH: /home/wenh06/Jupyter/wenhao/workspace/CAU-Courses/RealAnalysis/source/chapter2/sec4.rst -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +12,7 @@
 <body>
     <canvas id="canvas" width="600" height="400"></canvas>
 
-    <p></p><button id="button" style='height:20px;width:40px'>Start</button></p>
+    <p><button id="button" style='position:absolute; left:180px; height:60px; width:120px; font-size:40px'>开始</button></p>
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
@@ -41,10 +39,9 @@
 
         function startRolling() {
             isRolling = true;
-            intervalId = setInterval(rollNames, 30);
-            // change the text of the button from Start to Stop
-            document.getElementById('button').innerHTML = 'Stop';
-
+            intervalId = setInterval(rollNames, 40);
+            // change the text of the button from 开始 to 结束
+            document.getElementById('button').innerHTML = '结束';
         }
 
         function stopRolling() {
@@ -53,12 +50,12 @@
             
             // draw the final name
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.font = '80px Arial';
+            ctx.font = '70px Arial';
             ctx.fillStyle = 'red';
-            let center_x = canvas.width / 4;
+            let center_x = canvas.width / 5;
             let center_y = canvas.height / 2;
             ctx.fillText(names[name_idx], center_x, center_y);
-            document.getElementById('button').innerHTML = 'Start';
+            document.getElementById('button').innerHTML = '开始';
         }
 
         document.getElementById('button').addEventListener('click', function() {
