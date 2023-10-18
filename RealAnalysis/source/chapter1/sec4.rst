@@ -39,7 +39,7 @@
 .. proof:proof::
 
     任取 :math:`G_1` 的一个构成区间 :math:`I_1 = (a_1, b_1)`, 那么有 :math:`I_1 \subset G_1 \subset G_2`. 任取 :math:`x_0 \in I_1`,
-    令它在 :math:`G_2` 中的构成区间为 :math:`I_2 = (a_2, b_2)`. 那么由构成区间的构造
+    令它包含于 :math:`G_2` 中的构成区间 :math:`I_2 = (a_2, b_2)`. 那么由构成区间的构造有
 
     .. math::
 

@@ -79,8 +79,8 @@
 
     不妨把 :math:`\Phi` 延拓到 :math:`\mathbb{R}` 上，其中 :math:`\Phi(x) = 0` 当 :math:`x < 0`, :math:`\Phi(x) = 1` 当 :math:`x > 1`.
     在第二章中，我们已经证明了 Cantor 三分集 :math:`P_0` 是一个零测集，也就是说对于 :math:`\delta`, 总存在开集 :math:`G`, 使得 :math:`m(G) < \delta`,
-    且 :math:`P_0 \subset G`. 令 :math:`G` 的结构表示为 :math:`G = \bigcup\limits_{i} I_i`, 其中 :math:`I_i = (a_i, b_i)` 是互不相交的开区间，
-    满足 :math:`a_1 < b_1 < a_2 < b_2 < \cdots`. 又由于 :math:`P_0` 是有界闭集，那么可以从它的开覆盖 :math:`G` 中选出有限个开区间
+    且 :math:`P_0 \subset G`. 令 :math:`G` 的结构表示为 :math:`G = \bigcup\limits_{i} I_i`, 其中 :math:`I_i = (a_i, b_i)` 是互不相交的开区间。
+    又由于 :math:`P_0` 是有界闭集，那么可以从它的开覆盖 :math:`G` 中选出有限个开区间
     :math:`I_1, \dots, I_n`, 使得 :math:`P_0 \subset \bigcup\limits_{i=1}^{n} I_i`. 那么有
 
     .. math::
@@ -102,7 +102,7 @@
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) & = -\Phi(a_1) + (\Phi(b_1) - \Phi(a_2)) + \cdots + (\Phi(b_{n-1}) - \Phi(a_n)) + \Phi(b_n) \\
         & = \Phi(b_n) - \Phi(a_0)
 
-    由于 :math:`\{I_i = (a_i, b_i)\}_{i = 1, \dots, n}` 覆盖了 :math:`P_0`, 且 :math:`a_1 < b_1 < a_2 < b_2 < \cdots < a_n < b_n`,
+    由于 :math:`\{I_i = (a_i, b_i)\}_{i = 1, \dots, n}` 覆盖了 :math:`P_0`, 不妨设 :math:`a_1 < b_1 < a_2 < b_2 < \cdots < a_n < b_n`,
     因此 :math:`a_0 < 0, b_n > 1`, 从而有 :math:`\Phi(a_0) = 0, \Phi(b_n) = 1`. 于是有
 
     .. math::
