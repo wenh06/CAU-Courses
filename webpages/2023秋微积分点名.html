@@ -1,0 +1,73 @@
+<!-- FILEPATH: /home/wenh06/Jupyter/wenhao/workspace/CAU-Courses/RealAnalysis/source/chapter2/sec4.rst -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>点名</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+
+    <p></p><button id="button" style='height:20px;width:40px'>Start</button></p>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const names = ['俞钦凯', '张子初', '张芮涵', '张洪菲', '赵宸章', '冯启航', '孙瑛宏', '代梓君', '黄韵石', '王一', '刘曼茜', '张墨涵', '黄紫云', '江海滨', '林家永', '孙艺璟', '李泽华', '毛思淇', '廖若卿', '蔡慧怡', '廖传愉', '覃贝雨', '王佳林', '张雪梅', '陈文锋', '周文涛', '陈伶', '黄靖家', '宋柱威', '阿合丽·努尔赛力克', '万小雅', '武琳雅', '于婧怡', '杨子健', '程坤', '宋逸文', '陈卓霏', '虞可歆', '邵星喻', '管凌馨', '朱晓悦', '陈楠', '赖美菲', '刘文德', '戴启翔', '付葭昳', '张舜语', '陈吉思', '朱珠', '古松源', '孟鑫婷', '王翊棵', '张钰翎', '陶润萱', '丁伟豪', '李晓梦', '高铨', '宁煜婷', '吴祯', '陈思睿', '毕淑妍', '蔡润怡', '仝蕙荧', '殷昱含', '武玉瀚', '奇茜格', '孟子涵', '李佳悦', '陈泽乾', '孙莹', '张梦雅', '罗雨扬', '谢凌云', '张敏浩', '陶嘉', '李昕冉', '陈国兵', '杨跃', '陈壕贤', '王艺霖', '刘圃含', '易钰佳', '蒲思佳', '刘意轩', '陈思衡', '普琼扎西', '赵睿宁', '杜欣儒', '付和青', '韩月', '陈仪萌', '刘依格', '倪杨', '于亦菲', '李一鸣', '王巨超', '肖九容', '吴佩谣', '唐垟', '高宇阳', '李可轩', '周小骞', '倪舒晗', '姚桂鑫', '李浩冉', '张镨', '肖梦怡', '言宗恩', '龚石榕', '唐威武', '刘付冬晓', '高玮晗', '覃粒芷', '何汪雪', '李子胥', '尼玛顿珠', '潘雨诺', '张清天', '高烨', '马可', '安雨欣', '古天梦', '弓悦', '代金秀', '李媛媛', '徐子涵', '柏芸', '傅佳瑶', '李梦楠', '初安冉', '王高升', '李晓宇', '裴若希', '李罗章', '余齐健', '王一舟', '王浩颖', '考赛尔·赛麦提', '张叙'];
+
+        let isRolling = false;
+        let intervalId;
+        let name_idx = Math.floor(Math.random() * names.length);
+
+        function rollNames() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = '50px Arial';
+            ctx.fillStyle = 'black';
+
+            // randomly pick a name and draw it on the center of the canvas
+
+            name_idx = Math.floor(Math.random() * names.length);
+            let center_x = canvas.width / 4;
+            let center_y = canvas.height / 2;
+            ctx.fillText(names[name_idx], center_x, center_y);
+        }
+
+        function startRolling() {
+            isRolling = true;
+            intervalId = setInterval(rollNames, 30);
+            // change the text of the button from Start to Stop
+            document.getElementById('button').innerHTML = 'Stop';
+
+        }
+
+        function stopRolling() {
+            isRolling = false;
+            clearInterval(intervalId);
+            
+            // draw the final name
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = '80px Arial';
+            ctx.fillStyle = 'red';
+            let center_x = canvas.width / 4;
+            let center_y = canvas.height / 2;
+            ctx.fillText(names[name_idx], center_x, center_y);
+            document.getElementById('button').innerHTML = 'Start';
+        }
+
+        document.getElementById('button').addEventListener('click', function() {
+            if (isRolling) {
+                stopRolling();
+            } else {
+                startRolling();
+            }
+        });
+    </script>
+</body>
+</html>
