@@ -144,6 +144,8 @@
     综上所述，对任意 :math:`x \in A \triangle B`, 总有 :math:`x \in (A \triangle C) \cup (C \triangle B)`,
     从而有 :math:`A \triangle B \subset (A \triangle C) \cup (C \triangle B)`.
 
+.. _ex-1-6:
+
 6. 设 :math:`E_n = \left\{ m / n : m \in \mathbb{Z} \right\}, n \in \mathbb{N}`, 证明 :math:`\varliminf\limits_{n} E_n = \mathbb{Z}`,
 :math:`\varlimsup\limits_{n} E_n = \mathbb{Q}`. 这里的 **上限集、下限集** 分别定义为
 :math:`\varliminf\limits_{n} E_n = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`, 以及

@@ -65,6 +65,8 @@
 
     综上所述，有 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) = \bigcap\limits_{k=1}^{\infty} f(E_k)`.
 
+.. _ex-1-20:
+
 21. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上实函数，映任一开集为开集，问它是否连续？又连续映射是否映开集为开集？
 
 .. proof:solution::
