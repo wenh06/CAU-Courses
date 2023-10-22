@@ -16,7 +16,7 @@ def load_table():
     table = pd.read_excel(path)
     table = table.set_index("学生用户名")
     password_table = pd.read_csv("/home/wenh06/Jupyter/wenhao/resources/2023秋微积分查询密码-加密.csv")[["学生用户名", "密码"]]
-    password_table["密码"] = password_table["密码"].apply(lambda p: eval(p))
+    password_table["密码"] = password_table["密码"].apply(lambda p: eval(p))  # string of bytes to bytes
     table = table.join(password_table.set_index("学生用户名"))
     table = table.fillna(-1)
     for col in table.columns:
@@ -46,10 +46,10 @@ def consult():
     except ValueError:
         st.error("学号必须为数字")
         return
-    if int(student_id) not in table.index or int(student_id) != magic_student_id:
+    if int(student_id) not in table.index and int(student_id) != magic_student_id:
         st.error("学号不存在")
         return
-    if name not in table["学生姓名"].values or name != magic_name:
+    if name not in table["学生姓名"].values and name != magic_name:
         st.error("姓名不存在")
         return
 
@@ -59,7 +59,9 @@ def consult():
 
     if int(student_id) == magic_student_id and name == magic_name and bcrypt.checkpw(password.encode("utf-8"), magic_password):
         # show the whole table
-        st.table(table)
+        st.table(table[[c for c in table.columns if c not in ["密码", "所属分组"]]])
+        if -1 in table.values:
+            st.write("注：-1 表示未参加随堂测验")
         return
 
     row = table[(table.index == int(student_id)) & (table["学生姓名"] == name)]
@@ -77,7 +79,7 @@ def consult():
     st.table(row)
     # check if -1 in the row cells
     if -1 in row.values:
-        st.write("-1 表示未参加随堂测验")
+        st.write("注：-1 表示未参加随堂测验")
 
 
 # add a button to call function consult
