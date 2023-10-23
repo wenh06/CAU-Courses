@@ -58,16 +58,23 @@
 
         m^* (E \cap A) + m^* (E \cap A) = m E + m^* A.
 
+    当 :math:`E` 不可测时，我们只能根据内测度以及外测度的半可加性得到
+
+    .. math::
+
+        m^* (E \cap A) + m^* (E \cap A) \le m^* E + m^* A, \\
+        m_* (E \cap A) + m_* (E \cap A) \ge m_* E + m_* A.
+
 13. 设 :math:`G` 是开集， :math:`E` 是零测度集，试证 :math:`\overline{G} = \overline{G \setminus E}`.
 
 .. proof:proof::
 
-    由于 :math:`C \supset G \setminus E`，所以 :math:`\overline{G} \supset \overline{G \setminus E}`. 假设这是一个真包含关系，
+    由于 :math:`G \supset G \setminus E`，所以 :math:`\overline{G} \supset \overline{G \setminus E}`. 假设这是一个真包含关系，
     那么存在 :math:`x \in \mathbb{R}` 以及 :math:`x` 的去心邻域 :math:`\mathring{U} (x)`，使得
 
     .. math::
 
-        \mathring{U} (x) \cap G \neq \emptyset` \\
+        \mathring{U} (x) \cap G \neq \emptyset \\
         \mathring{U} (x) \cap (G \setminus E) = \emptyset.
 
     由于 :math:`G` 是开集，所以 :math:`\mathring{U} (x) \cap G` 也是开集。任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
@@ -81,7 +88,25 @@
 
 .. proof:proof::
 
-    待写
+    仿照 :ref:`第一章第21题<ex-1-21>` 中的构造，也是本章第四节定理 4.1 中的构造，定义区间 :math:`[0, 1)` 上的一个等价关系为
+
+    .. math::
+
+        x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in [0, 1),
+
+    并从 :math:`[0, 1) / \sim` 的每个等价类中取一个元素，构成集合 :math:`E`, 那么由本章第四节定理 4.1 知 :math:`E` 是一个不可测集，
+    从而有 :math:`m^* E > 0`, 否则它就是零测集，从而可测。令
+
+    .. math::
+
+        E_n = E + r_n \mod 1 = \{ x + r_n \mod 1 : x \in E \},
+
+    :math:`n \in \mathbb{N}, \mathbb{Q} = \{r_n\}_{n \in \mathbb{N}}`, 那么 :math:`E_n` 互不相交，
+    且 :math:`\bigcup\limits_{n=1}^\infty E_n = [0, 1)`, 从而有
+
+    .. math::
+
+        m^* \left( \bigcup_{n=1}^\infty E_n \right) = m^* [0, 1) = 1 < \sum_{n=1}^\infty m^* (E_n) = +\infty.
 
 17. 试举例说明，存在可测集列 :math:`\{E_n \subset (a, b)\}_{n \in \mathbb{N}}`，使极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在，但 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
 
@@ -110,24 +135,34 @@
 
 .. proof:proof::
 
-    待写
+    令 :math:`A = \bigcap\limits_{k=1}^n A_k`, 假设 :math:`m A = 0`, 令基本集 :math:`X = [0, 1]`, 那么有
+
+    .. math::
+
+        1 & = m \left( [0, 1] \setminus A \right) = m \left( [0, 1] \cap \mathcal{C} A \right) \\
+        & = m \left( [0, 1] \cap \mathcal{C} \left( \bigcap\limits_{k=1}^n A_k \right) \right) = m \left( [0, 1] \cap \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \right) \\
+        & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathcal{C} A_k \right) \right) = m \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \\
+        & \le \sum \limits_{k=1}^n m \mathcal{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
+        & = n - \sum \limits_{k=1}^n m A_k < 1,
+
+    矛盾，所以 :math:`m A = m \left( \bigcap\limits_{k=1}^n A_k \right) > 0`.
 
 20. 试作一闭集 :math:`F \subset [0, 1]`，使 :math:`F` 中不含任何开区间，而 :math:`m F = 1/2`.
 
 .. proof:solution::
 
     按如下方法修改 Cantor 三分集的构造：第一次去掉中间的开区间，长度为 :math:`0 < a \le 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间，
-    长度为 :math:`a^2`; :math:`\dots`; 第 :math:`n` 次去掉剩下 :math:`2^{n-1}` 个闭区间中间的开区间，长度为 :math:`a^n`.
+    长度为 :math:`a^2`; 依此构造，第 :math:`n` 次去掉剩下 :math:`2^{n-1}` 个闭区间中间的开区间，长度为 :math:`a^n`.
     这样，被去掉的开区间的总长度为
 
     .. math::
 
-        \sum\limits_{n=1}^\infty 2^{n-1} a^n = \df{a}{1 - 2a}.
+        \sum\limits_{n=1}^\infty 2^{n-1} a^n = \dfrac{a}{1 - 2a}.
 
     以上就是从 :math:`[0, 1]` 中挖去的开集的测度。那么得到的闭集的测度为
 
     .. math::
 
-        1 - \df{a}{1 - 2a} = \df{1 - 3a}{1 - 2a}.
+        1 - \dfrac{a}{1 - 2a} = \dfrac{1 - 3a}{1 - 2a},
 
-    当 :math:`a = 1/4` 时，闭集的测度为 :math:`1/2`，且不含任何开区间。
+    且不含任何开区间。当 :math:`a = 1/4` 时，闭集的测度为 :math:`1/2`.

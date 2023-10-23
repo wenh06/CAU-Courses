@@ -5,7 +5,7 @@
 
 .. proof:proof::
 
-    设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`，其中 :math:`E_n` 是零测度集。由于 :math:`0 \le m_* E \le m^* E`, 所以要证明:math:`E` 是零测度集，
+    设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`，其中 :math:`E_n` 是零测度集。由于 :math:`0 \le m_* E \le m^* E`, 所以要证明 :math:`E` 是零测度集，
     只要证明 :math:`E` 的外测度为零即可。根据外测度的性质，有
 
     .. math::

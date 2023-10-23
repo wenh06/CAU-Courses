@@ -65,7 +65,7 @@
 
     综上所述，有 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) = \bigcap\limits_{k=1}^{\infty} f(E_k)`.
 
-.. _ex-1-20:
+.. _ex-1-21:
 
 21. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上实函数，映任一开集为开集，问它是否连续？又连续映射是否映开集为开集？
 
@@ -75,26 +75,28 @@
 
     .. math::
 
-        x \sim y \Leftrightarrow x - y \in \mathbb{Q}, \quad x, y \in \mathbb{R},
+        x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in \mathbb{R},
 
-    并令 :math:`\mathcal{C} = \mathbb{R} / \sim` 表示商集，其中的元素记为
+    并令 :math:`\mathcal{E} = \mathbb{R} / \sim` 表示商集，其中的元素记为
 
     .. math::
         :label: ex-1-21-eq-1
 
         [x] = \{ y \in \mathbb{R} : \ y \sim x \} = x + \mathbb{Q}
 
-    :math:`x` 为代表元。可以验证，集合 :math:`\mathcal{C}` 与 :math:`\mathbb{R}` 对等， 那么可以做双射 :math:`f: \mathcal{C} \to \mathbb{R}`. 定义
+    :math:`x` 为代表元。可以验证，集合 :math:`\mathcal{E}` 与 :math:`\mathbb{R}` 对等， 那么可以做双射 :math:`f: \mathcal{E} \to \mathbb{R}`. 定义
 
     .. math::
 
         g: \mathbb{R} \to \mathbb{R}, \quad x \mapsto f([x]).
 
-    任取 :math:`\mathbb{R}` 中开集 :math:`U`. 对值域 :math:`\mathbb{R}` 中的任意元素 :math:`y`, 令它在商集 :math:`\mathcal{C}` 中的双射 :math:`f` 下的原像为
-    :math:`C \in \mathcal{C}`, 即 :math:`y = f(C)`. 由于每一个 :math:`C` 的形式都如式 :eq:`ex-1-21-eq-1` 所示，所以满足 :math:`g(x) = y` 的 :math:`x`
+    任取 :math:`\mathbb{R}` 中开集 :math:`U`. 对值域 :math:`\mathbb{R}` 中的任意元素 :math:`y`, 令它在商集 :math:`\mathcal{E}` 中的双射 :math:`f` 下的原像为
+    :math:`C \in \mathcal{E}`, 即 :math:`y = f(C)`. 由于每一个 :math:`C` 的形式都如式 :eq:`ex-1-21-eq-1` 所示，所以满足 :math:`g(x) = y` 的 :math:`x`
     在 :math:`\mathbb{R}` 中稠密（包含 :math:`C` 作为陪集的每一个元素），故与开集 :math:`U` 相交非空，从而有 :math:`y \in g(U)`.
     由于 :math:`y` 是任意取自 :math:`\mathbb{R}` 的元素，所以 :math:`g(U) = \mathbb{R}`, 这就证明了 :math:`g` 将任一开集映为开集 :math:`\mathbb{R}`,
     同时这也说明了 :math:`g` 在任何一点都不连续。
+
+    以上函数的构造依赖于选择公理。类似的构造方法之后还会用到，例如构造不可测集。
 
     连续映射不一定将开集映为开集。反例为 :math:`f(x) = x^2`，它将开区间 :math:`(-1, 1)` 映左闭右开区间 :math:`[0, 1)`.
 
