@@ -726,7 +726,7 @@
 
     .. math::
 
-        e^{x^2} = 1 + x^2 + \dfrac{x^4}{2!} + \dfrac{x^6}{3!} + \cdots + \dfrac{x^{2n}}{n!} + f^{(n+1)}(\theta x) \dfrac{x^{n+1}}{(n+1)!},
+        e^{x^2} = 1 + x^2 + \dfrac{x^4}{2!} + \dfrac{x^6}{3!} + \cdots + \dfrac{x^{2n}}{n!} + o(x^{2n}).
 
     (2). 因为函数 :math:`f(x) = \sin^2 x = \dfrac{1 - \cos 2x}{2}` 的 :math:`k` 阶导函数为 :math:`f^{(k)}(x) = -2^{k-1} \cos (2x + \dfrac{k\pi}{2})`,
     所以 :math:`f(x)` 的麦克劳林展开式为
@@ -734,26 +734,24 @@
     .. math::
 
         \sin^2 x & = \dfrac{1}{2} - \dfrac{1}{2} \cos 2x \\
-        & = \dfrac{1}{2} - \dfrac{1}{2} \left( 1 - \dfrac{(2x)^2}{2!} + \dfrac{(2x)^4}{4!} - \cdots + (-1)^n \dfrac{(2x)^{2n}}{(2n)!} \right) + f^{(2n+1)}(\theta x) \dfrac{(2x)^{2n+2}}{(2n+2)!} \\
-        & = x^2 - \dfrac{x^4}{3} + \cdots + (-1)^{n+1} \dfrac{x^{2n}}{(2n+1)!} + f^{(n+1)}(\theta x) \dfrac{x^{n+1}}{(n+1)!},
+        & = \dfrac{1}{2} - \dfrac{1}{2} \left( 1 - \dfrac{(2x)^2}{2!} + \dfrac{(2x)^4}{4!} - \cdots + (-1)^n \dfrac{(2x)^{2n}}{(2n)!} \right) + o(x^{2n}) \\
+        & = x^2 - \dfrac{x^4}{3} + \cdots + (-1)^{n+1} \dfrac{x^{2n}}{(2n+1)!} + o(x^{2n}).
 
     (3). 因为函数 :math:`f(x) = \dfrac{x}{1 + x - 2x^2} = \dfrac{1}{3} \cdot \dfrac{3x}{(1 + 2x)(1 - x)} = \dfrac{1}{3} \cdot \dfrac{1}{1 - x} - \dfrac{1}{3} \cdot \dfrac{2}{1 + 2x}`,
     又有
 
     .. math::
 
-        \dfrac{1}{1 - x} & = 1 + x + x^2 + x^3 + \cdots + x^n + \cdots \\
-        \dfrac{1}{1 + 2x} & = 1 - 2x + 4x^2 - 8x^3 + \cdots + (-2)^{n} x^n + \cdots
+        \dfrac{1}{1 - x} & = 1 + x + x^2 + x^3 + \cdots + x^n + o(x^n) \\
+        \dfrac{1}{1 + 2x} & = 1 - 2x + 4x^2 - 8x^3 + \cdots + (-2)^{n} x^n + o(x^n),
 
     所以 :math:`f(x)` 的麦克劳林展开式为
 
     .. math::
 
         f(x) & = \dfrac{1}{3} \cdot \dfrac{1}{1 - x} - \dfrac{1}{3} \cdot \dfrac{2}{1 + 2x} \\
-        & = \dfrac{1}{3} \left( 1 + x + x^2 + \cdots + x^n + \cdots \right) - \dfrac{1}{3} \left( 1 - 2x + 4x^2 \cdots + (-2)^{n} x^n + \cdots \right) + R_n \\
-        & = x - x^2 + \cdots + \dfrac{1 - (-2)^{n}}{3} x^n + \cdots + R_n,
-
-    其中 :math:`R_n = \dfrac{f^{(n+1)}(\theta x)}{(n+1)!} x^{n+1}`.
+        & = \dfrac{1}{3} \left( 1 + x + x^2 + \cdots + x^n \right) - \dfrac{1}{3} \left( 1 - 2x + 4x^2 \cdots + (-2)^{n} x^n \right) + o(x^n) \\
+        & = x - x^2 + \cdots + \dfrac{1 - (-2)^{n}}{3} x^n + o(x^n).
 
 §2.9 函数的单调性与曲线的凹凸性
 --------------------------------
@@ -764,15 +762,121 @@
 
 (4). :math:`y = x^n e^{-x} \quad (n > 0, x \ge 0)`.
 
+.. proof:solution::
+
+    (2). :math:`y = \sqrt{2x - x^2}` 的定义域为 :math:`[0, 2]`, 导函数为 :math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}}`. 令 :math:`y' = 0` 解得 :math:`x = 1`.
+    当 :math:`0 \le x \le 1` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} > 0`, 所以 :math:`y` 在 :math:`[0, 1]` 上单调递增；
+    当 :math:`1 \le x \le 2` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} < 0`, 所以 :math:`y` 在 :math:`[1, 2]` 上单调递减.
+
+    (4). :math:`y = x^n e^{-x} \quad (n > 0, x \ge 0)` 的导函数为 :math:`y' = x^{n-1} e^{-x} (n - x)`. 令 :math:`y' = 0` 解得 :math:`x = n`.
+    当 :math:`0 \le x \le n` 时，:math:`y' = x^{n-1} e^{-x} (n - x) > 0`, 所以 :math:`y` 在 :math:`[0, n]` 上单调递增；
+    当 :math:`n \le x` 时，:math:`y' = x^{n-1} e^{-x} (n - x) < 0`, 所以 :math:`y` 在 :math:`[n, +\infty)` 上单调递减.
+
+2. 应用函数的单调性证明下列不等式：
+
+(1). :math:`2 \sqrt{x} > 3 - \dfrac{1}{x}, \quad x > 1`;
+
+(3). :math:`\dfrac{2}{\pi} x < \sin x < x, \quad 0 < x < \dfrac{\pi}{2}`.
+
+.. proof:proof::
+
+    (1). 令 :math:`f(x) = 2 \sqrt{x} - (3 - \dfrac{1}{x})`, 那么当 :math:`x \ge 1`时有 :math:`f'(x) = \dfrac{1}{\sqrt{x}} + \dfrac{1}{x^2} > 0`,
+    所以 :math:`f(x)` 在 :math:`[1, +\infty)` 上单调递增, 故 :math:`f(x) > f(1) = 0` 对一切 :math:`x > 1` 成立.
+
+    (3). 令 :math:`f(x) = \sin x - \dfrac{2}{\pi} x`, 那么 :math:`f(x)` 的导函数为 :math:`f'(x) = \cos x - \dfrac{2}{\pi}`. 令 :math:`f'(x) = 0`,
+    解得 :math:`x = \arccos \dfrac{2}{\pi}`. 在区间 :math:`[0, \arccos \dfrac{2}{\pi})` 上有 :math:`f'(x) > 0`,
+    所以 :math:`f(x)` 在 :math:`[0, \arccos \dfrac{2}{\pi}]` 上单调递增，从而有 :math:`f(x) > f(0) = 0` 对一切 :math:`0 < x \le \arccos \dfrac{2}{\pi}` 成立。
+    在区间 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2})` 上有 :math:`f'(x) < 0`, 所以 :math:`f(x)` 在 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2}]` 上单调递减，
+    从而有 :math:`f(x) > f(\dfrac{\pi}{2}) = 0` 对一切 :math:`\arccos \dfrac{2}{\pi} \le x < \dfrac{\pi}{2}` 成立。
+    于是 :math:`f(x) > 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立。
+
+    另一方面，令 :math:`g(x) = x - \sin x`, 那么 :math:`g(x)` 的导函数为 :math:`g'(x) = 1 - \cos x`. 在区间 :math:`(0, \dfrac{\pi}{2})` 上恒有 :math:`g'(x) > 0`,
+    所以 :math:`g(x)` 在 :math:`(0, \dfrac{\pi}{2})` 上单调递增，从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立。
+
+    综上所述， :math:`\dfrac{2}{\pi} x < \sin x < x, \quad 0 < x < \dfrac{\pi}{2}` 成立.
+
+3. 确定下列函数确定曲线的凹凸区间与拐点：
+
+(3). :math:`y = (x^2 + 2x - 1) e^{-x}`.
+
+.. proof:solution::
+
+    :math:`y = (x^2 + 2x - 1) e^{-x}` 的定义域为 :math:`(-\infty, +\infty)`, 导函数以及二阶导函数分别为
+
+    .. math::
+
+        y' & = (2x + 2) e^{-x} - (x^2 + 2x - 1) e^{-x} = (3 - x^2) e^{-x} \\
+        y'' & = (-2x) e^{-x} - (3 - x^2) e^{-x} = (x^2 - 2x - 3) e^{-x}.
+
+    令 :math:`y'' = 0` 解得 :math:`x = -1, x = 3`, 相应函数值分别为 :math:`y(-1) = -2e, y(3) = 14e^{-3}`. 当 :math:`-\infty < x < -1` 时，:math:`y'' > 0`,
+    所以曲线 在 :math:`(-\infty, -1)` 上凹；当 :math:`-1 < x < 3` 时，:math:`y'' < 0`, 所以曲线 在 :math:`(-1, 3)` 上凸；当 :math:`3 < x < +\infty` 时，
+    :math:`y'' > 0`, 所以曲线 在 :math:`(3, +\infty)` 上凹. 相应地，拐点为 :math:`(-1, -2e), (3, 14e^{-3})`.
+
+4. 求参数 :math:`h > 0`, 使曲线 :math:`y = \dfrac{h}{\pi} e^{-h^2x^2}` 在 :math:`x = \pm \sigma` (:math:`\sigma > 0` 为给定的常数) 处有拐点.
+
+.. proof:solution::
+
+    函数 :math:`y = \dfrac{h}{\sqrt{\pi}} e^{-h^2x^2}` 的二阶导函数为 :math:`y'' = \dfrac{2h^3(2h^2x^2 - 1)}{\sqrt{\pi}} e^{-h^2x^2}`.
+    令 :math:`y'' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{2} h}`. 在 :math:`x \in (-\infty, -\dfrac{1}{\sqrt{2} h})` 时，:math:`y'' > 0`,
+    曲线 在 :math:`(-\infty, -\dfrac{1}{\sqrt{2} h})` 上凹；在 :math:`x \in (-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 时，:math:`y'' < 0`,
+    曲线 在 :math:`(-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 上凸；在 :math:`x \in (\dfrac{1}{\sqrt{2} h}, +\infty)` 时，:math:`y'' > 0`,
+    曲线 在 :math:`(\dfrac{1}{\sqrt{2} h}, +\infty)` 上凹. 因此，当 :math:`h = \dfrac{1}{\sqrt{2} \sigma}` 时，曲线在 :math:`x = \pm \sigma` 处有拐点.
+
+5. 证明：若 :math:`f(x)` 二阶可导，且 :math:`f''(x) > 0, f(0) = 0`, 则 :math:`F(x) = \dfrac{f(x)}{x}` 在 :math:`(0, +\infty)` 上单调递增.
+
+.. proof:proof::
+
+    函数 :math:`F(x) = \dfrac{f(x)}{x}` 的导函数为 :math:`F'(x) = \dfrac{f'(x) x - f(x)}{x^2}`. 令 :math:`g(x) = f'(x) x - f(x)`, 那么
+
+    .. math::
+
+        g'(x) = f''(x) x + f'(x) - f'(x) = f''(x) x > 0,
+
+    所以 :math:`g(x)` 在 :math:`(0, +\infty)` 上单调递增，从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`x > 0` 成立。因此 :math:`F'(x) > 0` 对一切 :math:`x > 0` 成立，
+    即知 :math:`F(x)` 在 :math:`(0, +\infty)` 上单调递增。
+
+
 §2.10 函数的极值与最大值最小值
 --------------------------------
 
-待写
+1. 求下列函数的极值：
+
+(1). :math:`y = 2x^3 - 3x^2 - 12x + 20`;
+
+(3). :math:`y = 1 - (1 - x)^{\frac{2}{3}}`;
+
+(5). :math:`y = x - \ln x`.
+
+2. 设 :math:`f(x) = a \ln x + bx^2 + x` 在 :math:`x_1 = 1, x_2 = 2` 处有极值，求 :math:`a, b` 的值，并确定是取得极大值还是极小值.
+
+3. 设 :math:`f(x)` 为区间 :math:`I` 上的凹函数，证明：若 :math:`x_0 \in I` 为 :math:`f(x)` 的极小值点，则 :math:`x_0` 为 :math:`f(x)` 在 :math:`I` 上的最小值点.
+
+4. 求下列函数在指定区间上的最大值最小值：
+
+(3). :math:`y = \sqrt{x} \ln x, \quad (0, +\infty)`.
+
+7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \ge 0` 的矩形的最大面积.
 
 §2.11 函数作图
 --------------------------------
 
-待写
+1. 求下列曲线的渐近线：
+
+(1). :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}`;
+
+(2). :math:`y = \sqrt{4x^2 + 4x - 1}`;
+
+(3). :math:`y = x + \ln x`;
+
+(4). :math:`y = \dfrac{e^x + x^2}{e^x + 2x}`.
+
+2. 讨论函数性质并作图：
+
+(1). :math:`y = x^3 - x`;
+
+(2). :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}`;
+
+(3). :math:`y = x e^x`.
 
 补充内容
 =================
@@ -802,3 +906,8 @@
 
     于是当 :math:`n = k + 1` 时， :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立。根据数学归纳法原理，
     对于任意的 :math:`n \in \mathbb{N}`, :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立。
+
+§2.7 洛必达法则
+--------------------------------
+
+:math:`\dfrac{\infty}{\infty}` 型未定式的洛必达法则证明：
