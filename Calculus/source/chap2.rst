@@ -847,15 +847,72 @@
 
 (5). :math:`y = x - \ln x`.
 
+.. proof:solution::
+
+    (1). 函数 :math:`y = 2x^3 - 3x^2 - 12x + 20` 的导函数为 :math:`y' = 6x^2 - 6x - 12`. 令 :math:`y' = 0` 解得 :math:`x = -1, x = 2`.
+    函数 :math:`y = 2x^3 - 3x^2 - 12x + 20` 的二阶导函数为 :math:`y'' = 12x - 6`. 当 :math:`x = -1` 时， :math:`y'' = -18 < 0`, 所以 :math:`x = -1` 为极大值点，
+    相应的极大值为 :math:`y(-1) = 27`; 当 :math:`x = 2` 时， :math:`y'' = 18 > 0`, 所以 :math:`x = 2` 为极小值点，相应的极小值为 :math:`y(2) = 0`.
+
+    (3). 函数 :math:`y = 1 - (1 - x)^{\frac{2}{3}}` 的导函数为 :math:`y' = \dfrac{2}{3} (1 - x)^{-\frac{1}{3}}`, 其在 :math:`x_0 = 1` 处不存在。
+    在不可导点 :math:`x_0 = 1` 的左侧 (即 :math:`x \in (-\infty, 1)`) 有 :math:`y' > 0`; 在右侧 (即 :math:`x \in (1, +\infty)`) 有 :math:`y' < 0`.
+    于是 :math:`x_0 = 1` 为极大值点，相应的极大值为 :math:`y(1) = 1`.
+
+    (5). 函数 :math:`y = x - \ln x` 的导函数为 :math:`y' = 1 - \dfrac{1}{x}, x > 0`, 令 :math:`y' = 0` 解得 :math:`x = 1`.
+    函数 :math:`y = x - \ln x` 的二阶导函数为 :math:`y'' = \dfrac{1}{x^2}`. 当 :math:`x = 1` 时， :math:`y'' = 1 > 0`, 所以 :math:`x = 1` 为极小值点，
+    相应的极小值为 :math:`y(1) = 1`.
+
 2. 设 :math:`f(x) = a \ln x + bx^2 + x` 在 :math:`x_1 = 1, x_2 = 2` 处有极值，求 :math:`a, b` 的值，并确定是取得极大值还是极小值.
 
-3. 设 :math:`f(x)` 为区间 :math:`I` 上的凹函数，证明：若 :math:`x_0 \in I` 为 :math:`f(x)` 的极小值点，则 :math:`x_0` 为 :math:`f(x)` 在 :math:`I` 上的最小值点.
+.. proof:solution::
+
+    函数 :math:`f(x) = a \ln x + bx^2 + x` 的定义域为 :math:`(0, +\infty)`, 导函数为 :math:`f'(x) = \dfrac{a}{x} + 2bx + 1, x > 0`.
+    因为 :math:`x_1 = 1, x_2 = 2` 是函数 :math:`f(x)` 的极值点，所以有 :math:`f'(x_1) = f'(x_2) = 0`, 即
+
+    .. math::
+
+        a + 2b + 1 = 0 \\
+        \dfrac{a}{2} + 4b + 1 = 0
+
+    解得 :math:`a = -\dfrac{2}{3}, b = -\dfrac{1}{6}`.那么函数 :math:`f(x) = -\dfrac{2}{3} \ln x - \dfrac{1}{6} x^2 + x`,
+    其二阶导函数为 :math:`f''(x) = \dfrac{2}{3x^2} - \dfrac{1}{3}`. 因为 :math:`f''(x_1) = \dfrac{1}{3} > 0`, 所以 :math:`x_1 = 1` 为极小值点，
+    相应的极小值为 :math:`f(1) = \dfrac{5}{6}`; :math:`f''(x_2) = -\dfrac{1}{6} < 0`, 所以 :math:`x_2 = 2` 为极大值点，
+    相应的极大值为 :math:`f(2) = \dfrac{4 - 2 \ln 2}{3}`.
+
+3. 设 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的，证明：若 :math:`x_0 \in I` 为 :math:`f(x)` 的极小值点，则 :math:`x_0` 为 :math:`f(x)` 在 :math:`I` 上的最小值点.
+
+.. proof:proof::
+
+    由于函数 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的，所以在区间 :math:`I` 上任取两点 :math:`x, y` 有
+
+    .. math::
+
+        \lambda f(x) + (1 - \lambda) f(y) \ge f(\lambda x + (1 - \lambda) y), \quad \lambda \in [0, 1].
+
+    特别地，取 :math:`y = x_0, t = \frac{1}{2}`, 那么有
+
+    .. math::
+
+        f(x) \ge 2 f \left( \dfrac{x + x_0}{2} \right) - f(x_0) \ge 2 f(x_0) - f(x_0) = f(x_0).
 
 4. 求下列函数在指定区间上的最大值最小值：
 
 (3). :math:`y = \sqrt{x} \ln x, \quad (0, +\infty)`.
 
+.. proof:solution::
+
+    函数 :math:`y = \sqrt{x} \ln x` 的导函数为 :math:`y' = \dfrac{1}{2 \sqrt{x}} \ln x + \dfrac{1}{\sqrt{x}}, x > 0`.
+    令 :math:`y' = 0` 解得 :math:`x = e^{-2}`. 函数 :math:`y = \sqrt{x} \ln x` 的二阶导函数为
+    :math:`y'' = -\dfrac{\ln x}{4x\sqrt{x}} + \dfrac{1}{2x\sqrt{x}} - \dfrac{1}{2x\sqrt{x}} = -\dfrac{\ln x}{4x\sqrt{x}}`.
+    因为 :math:`y''(e^{-2}) = \dfrac{1}{2e^{-3}} > 0`, 所以 :math:`x = e^{-2}` 为极小值点，
+    相应的极小值为 :math:`y(e^{-2}) = -\dfrac{1}{2e}`. 这是唯一的极值点，所以也是最小值点.
+
 7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \ge 0` 的矩形的最大面积.
+
+.. proof:solution::
+
+    设矩形在第一象限的顶点为 :math:`(x, y) = (3\cos t, 4\sin t), t \in (0, \dfrac{\pi}{2})`,
+    那么矩形的面积为 :math:`S = 24 \sin t \cos t = 12 \sin 2t`. 容易看出 :math:`S` 在 :math:`t = \dfrac{\pi}{4}`,
+    即 :math:`(x, y) = (\dfrac{3}{\sqrt{2}}, \dfrac{4}{\sqrt{2}})` 处取得最大值 :math:`S = 6`.
 
 §2.11 函数作图
 --------------------------------
