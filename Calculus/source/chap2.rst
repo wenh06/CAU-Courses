@@ -706,6 +706,21 @@
     其中 :math:`R_n = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1} = \dfrac{(n+1)!}{(3 - \xi)^{n+2}} (x - 2)^{n+1}` 为拉格朗日余项，
     :math:`\xi` 介于 :math:`x_0` 和 :math:`x` 之间。
 
+    另解：
+
+    由于 :math:`f(x) = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)}`, 所以可以利用 :math:`\dfrac{1}{1 - t}` 在 :math:`t = 0` 附近的泰勒展开式
+
+    .. math::
+
+        \dfrac{1}{1 - t} = 1 + t + t^2 + \cdots + t^n + o(t^n),
+
+    通过间接法求得 :math:`f(x)` 带佩亚诺型余项的泰勒展开式为
+
+    .. math::
+
+        f(x) & = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)} \\
+        & = 1 + (x - 2) + (x - 2)^2 + \cdots + (x - 2)^n + o((x - 2)^n).
+
 2. 将下面函数的麦克劳林展开式写出来：
 
 (1). :math:`f(x) = e^{x^2}`;
@@ -809,8 +824,8 @@
         y'' & = (-2x) e^{-x} - (3 - x^2) e^{-x} = (x^2 - 2x - 3) e^{-x}.
 
     令 :math:`y'' = 0` 解得 :math:`x = -1, x = 3`, 相应函数值分别为 :math:`y(-1) = -2e, y(3) = 14e^{-3}`. 当 :math:`-\infty < x < -1` 时，:math:`y'' > 0`,
-    所以曲线 在 :math:`(-\infty, -1)` 上凹；当 :math:`-1 < x < 3` 时，:math:`y'' < 0`, 所以曲线 在 :math:`(-1, 3)` 上凸；当 :math:`3 < x < +\infty` 时，
-    :math:`y'' > 0`, 所以曲线 在 :math:`(3, +\infty)` 上凹. 相应地，拐点为 :math:`(-1, -2e), (3, 14e^{-3})`.
+    所以曲线 在 :math:`(-\infty, -1)` 上是凹的；当 :math:`-1 < x < 3` 时，:math:`y'' < 0`, 所以曲线 在 :math:`(-1, 3)` 上是凸的；当 :math:`3 < x < +\infty` 时，
+    :math:`y'' > 0`, 所以曲线 在 :math:`(3, +\infty)` 上是凹的. 相应地，拐点为 :math:`(-1, -2e), (3, 14e^{-3})`.
 
 4. 求参数 :math:`h > 0`, 使曲线 :math:`y = \dfrac{h}{\pi} e^{-h^2x^2}` 在 :math:`x = \pm \sigma` (:math:`\sigma > 0` 为给定的常数) 处有拐点.
 
@@ -818,9 +833,9 @@
 
     函数 :math:`y = \dfrac{h}{\sqrt{\pi}} e^{-h^2x^2}` 的二阶导函数为 :math:`y'' = \dfrac{2h^3(2h^2x^2 - 1)}{\sqrt{\pi}} e^{-h^2x^2}`.
     令 :math:`y'' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{2} h}`. 在 :math:`x \in (-\infty, -\dfrac{1}{\sqrt{2} h})` 时，:math:`y'' > 0`,
-    曲线 在 :math:`(-\infty, -\dfrac{1}{\sqrt{2} h})` 上凹；在 :math:`x \in (-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 时，:math:`y'' < 0`,
-    曲线 在 :math:`(-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 上凸；在 :math:`x \in (\dfrac{1}{\sqrt{2} h}, +\infty)` 时，:math:`y'' > 0`,
-    曲线 在 :math:`(\dfrac{1}{\sqrt{2} h}, +\infty)` 上凹. 因此，当 :math:`h = \dfrac{1}{\sqrt{2} \sigma}` 时，曲线在 :math:`x = \pm \sigma` 处有拐点.
+    曲线 在 :math:`(-\infty, -\dfrac{1}{\sqrt{2} h})` 上是凹的；在 :math:`x \in (-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 时，:math:`y'' < 0`,
+    曲线 在 :math:`(-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 上是凸的；在 :math:`x \in (\dfrac{1}{\sqrt{2} h}, +\infty)` 时，:math:`y'' > 0`,
+    曲线 在 :math:`(\dfrac{1}{\sqrt{2} h}, +\infty)` 上是凹的. 因此，当 :math:`h = \dfrac{1}{\sqrt{2} \sigma}` 时，曲线在 :math:`x = \pm \sigma` 处有拐点.
 
 5. 证明：若 :math:`f(x)` 二阶可导，且 :math:`f''(x) > 0, f(0) = 0`, 则 :math:`F(x) = \dfrac{f(x)}{x}` 在 :math:`(0, +\infty)` 上单调递增.
 
@@ -927,6 +942,108 @@
 
 (4). :math:`y = \dfrac{e^x + x^2}{e^x + 2x}`.
 
+.. proof:solution::
+
+    (1). 斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to \infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{2x^3 - 3}{(x - 2)^2 x} = 2,
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to \infty} (y - kx) = \lim\limits_{x \to \infty} \dfrac{2x^3 - 3}{(x - 2)^2} - 2x \\
+        & = \lim\limits_{x \to \infty} \dfrac{2x^3 - 3 - 2x^3 + 8x^2 - 8x}{(x - 2)^2} = 8,
+
+    所以 :math:`y = 2x + 8` 为 :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}` 的斜渐近线.
+
+    (2). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况。当 :math:`x \to +\infty` 时，有斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{\sqrt{4x^2 + 4x - 1}}{x} = \lim\limits_{x \to +\infty} \sqrt{4 + \dfrac{4}{x} - \dfrac{1}{x^2}} = 2,
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} \sqrt{4x^2 + 4x - 1} - 2x \\
+        & = \lim\limits_{x \to +\infty} \dfrac{4x^2 + 4x - 1 - 4x^2}{\sqrt{4x^2 + 4x - 1} + 2x} = \lim\limits_{x \to +\infty} \dfrac{4 - \frac{1}{x}}{\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} + 2} \\
+        & = 1.
+
+    当 :math:`x \to -\infty` 时，有斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to -\infty} \dfrac{y}{x} = \lim\limits_{x \to -\infty} \dfrac{\sqrt{4x^2 + 4x - 1}}{x} = \lim\limits_{x \to -\infty} - \sqrt{4 + \dfrac{4}{x} - \dfrac{1}{x^2}} = -2,
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to -\infty} (y - kx) = \lim\limits_{x \to -\infty} \sqrt{4x^2 + 4x - 1} + 2x \\
+        & = \lim\limits_{x \to -\infty} \dfrac{4x^2 + 4x - 1 + 4x^2}{\sqrt{4x^2 + 4x - 1} - 2x} = \lim\limits_{x \to -\infty} \dfrac{4 + \frac{4}{x}}{-\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} - 2} \\
+        & = -1.
+
+    所以 :math:`y = \sqrt{4x^2 + 4x - 1}` 的斜渐近线有两条，分别为 :math:`y = 2x + 1` 和 :math:`y = -2x - 1`.
+
+    (3). 由于 :math:`\lim\limits_{x \to 0^+} \ln x = -\infty`, 所以 :math:`y = x + \ln x` 的垂直渐近线为 :math:`x = 0`. 假设 :math:`y = x + \ln x` 有斜渐近线，那么斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{x + \ln x}{x} = \lim\limits_{x \to +\infty} \left( 1 + \dfrac{\ln x}{x} \right) = 1,
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} (x + \ln x - x) \\
+        & = \lim\limits_{x \to +\infty} \ln x = +\infty,
+
+    所以 :math:`y = x + \ln x` 没有斜渐近线.
+
+    (4). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况。当 :math:`x \to -\infty` 时，有斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to -\infty} \dfrac{y}{x} = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2}{xe^x + 2x^2} = \lim\limits_{x \to -\infty} \dfrac{1 + \frac{e^x}{x^2}}{2 + \frac{e^x}{x}} = \dfrac{1}{2},
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to -\infty} (y - kx) = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2}{e^x + 2x} - \dfrac{1}{2} x \\
+        & = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2 - \frac{1}{2} x (e^x + 2x)}{e^x + 2x} \\
+        & = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2 - \frac{1}{2} x e^x - x^2}{e^x + 2x} \\
+        & = \lim\limits_{x \to -\infty} \dfrac{e^x - \frac{1}{2} x e^x}{e^x + 2x} \\
+        & = 0,
+
+    当 :math:`x \to +\infty` 时，有斜率
+
+    .. math::
+
+        k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{e^x + x^2}{xe^x + 2x^2} = \lim\limits_{x \to +\infty} \dfrac{\frac{1}{x} + \frac{x}{e^x}}{1 + \frac{2x}{e^x}} = 0,
+
+    截距
+
+    .. math::
+
+        b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} \dfrac{e^x + x^2}{e^x + 2x} \\
+        & = \lim\limits_{x \to +\infty} \dfrac{1 + \frac{x^2}{e^x}}{1 + \frac{2x}{e^x}} \\
+        & = 1,
+
+    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的斜渐近线有两条，分别为 :math:`y = \dfrac{1}{2} x` 和 :math:`y = 1`.
+
+    此外，令 :math:`x_0` 为 :math:`e^x + 2x = 0` 的解，那么
+
+    .. math::
+
+        \lim\limits_{x \to x_0} \dfrac{e^x + x^2}{e^x + 2x} = \infty,
+
+    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的垂直渐近线为 :math:`x = x_0`.
+
 2. 讨论函数性质并作图：
 
 (1). :math:`y = x^3 - x`;
@@ -934,6 +1051,67 @@
 (2). :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}`;
 
 (3). :math:`y = x e^x`.
+
+.. proof:solution::
+
+    (1). 函数 :math:`y = x^3 - x` 的导函数为 :math:`y' = 3x^2 - 1`, 令 :math:`y' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{3}}`.
+    函数 :math:`y = x^3 - x` 的二阶导函数为 :math:`y'' = 6x`. 当 :math:`x = -\dfrac{1}{\sqrt{3}}` 时， :math:`y'' = -2\sqrt{3} < 0`,
+    所以 :math:`x = -\dfrac{1}{\sqrt{3}}` 为极大值点，相应的极大值为 :math:`y(-\dfrac{1}{\sqrt{3}}) = \dfrac{2}{3\sqrt{3}}`;
+    当 :math:`x = \dfrac{1}{\sqrt{3}}` 时， :math:`y'' = 2\sqrt{3} > 0`, 所以 :math:`x = \dfrac{1}{\sqrt{3}}` 为极小值点，
+    相应的极小值为 :math:`y(\dfrac{1}{\sqrt{3}}) = -\dfrac{2}{3\sqrt{3}}`.
+
+    在区间 :math:`(-\infty, -\dfrac{1}{\sqrt{3}})` 上有 :math:`y' > 0`, 所以曲线在 :math:`(-\infty, -\dfrac{1}{\sqrt{3}})` 上单调递增；
+    在区间 :math:`(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}})` 上有 :math:`y' < 0`, 所以曲线在 :math:`(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}})` 上单调递减；
+    在区间 :math:`(\dfrac{1}{\sqrt{3}}, +\infty)` 上有 :math:`y' > 0`, 所以曲线在 :math:`(\dfrac{1}{\sqrt{3}}, +\infty)` 上单调递增.
+
+    令 :math:`y'' = 0` 解得 :math:`x = 0`, 相应的函数值为 :math:`y(0) = 0`. 当 :math:`x < 0` 时， :math:`y'' < 0`, 曲线在 :math:`(-\infty, 0)` 上是凸的；
+    当 :math:`x > 0` 时， :math:`y'' > 0`, 曲线在 :math:`(0, +\infty)` 上是凹的. 因此 :math:`x = 0` 为拐点.
+
+    .. tikz:: 函数 :math:`y = x^3 - x` 的图像
+        :align: center
+        :xscale: 50
+
+        \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
+        \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$y$};
+        \draw[domain=-1.5:1.5, smooth, variable=\x, blue] plot ({\x}, {\x*\x*\x - \x});
+
+    (2). 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的导函数为 :math:`y' = -\dfrac{1}{\sqrt{2\pi}} x e^{-\frac{x^2}{2}}`,
+    令 :math:`y' = 0` 解得 :math:`x = 0`. 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的二阶导函数为
+    :math:`y'' = \dfrac{1}{\sqrt{2\pi}} (x^2 - 1) e^{-\frac{x^2}{2}}`. 当 :math:`x = 0` 时， :math:`y'' = -\dfrac{1}{\sqrt{2\pi}} < 0`,
+    所以 :math:`x = 0` 为极大值点，相应的极大值为 :math:`y(0) = \dfrac{1}{\sqrt{2\pi}}`.
+
+    在区间 :math:`(-\infty, 0)` 上有 :math:`y' > 0`, 所以曲线在 :math:`(-\infty, 0)` 上单调递增；在区间 :math:`(0, +\infty)` 上有 :math:`y' < 0`,
+    所以曲线在 :math:`(0, +\infty)` 上单调递减.
+
+    令 :math:`y'' = 0` 解得 :math:`x = \pm 1`. 当 :math:`x < -1` 时， :math:`y'' > 0`, 曲线在 :math:`(-\infty, -1)` 上是凹的；
+    当 :math:`-1 < x < 1` 时， :math:`y'' < 0`, 曲线在 :math:`(-1, 1)` 上是凸的；当 :math:`x > 1` 时， :math:`y'' > 0`, 曲线在 :math:`(1, +\infty)` 上是凹的.
+    因此 :math:`x = \pm 1` 为拐点.
+
+    .. tikz:: 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的图像
+        :align: center
+        :xscale: 50
+
+        \draw[->] (-2.3, 0) -- (2.3, 0) node[right] {$x$};
+        \draw[->] (0, -0.5) -- (0, 0.8) node[above] {$y$};
+        \draw[domain=-2:2, smooth, variable=\x, blue] plot ({\x}, {1/sqrt(2*pi) * exp(-\x*\x/2)});
+
+    (3). 函数 :math:`y = x e^x` 的导函数为 :math:`y' = (x + 1) e^x`, 令 :math:`y' = 0` 解得 :math:`x = -1`.
+    函数 :math:`y = x e^x` 的二阶导函数为 :math:`y'' = (x + 2) e^x`. 当 :math:`x = -1` 时， :math:`y'' = e^{-1} > 0`,
+    所以 :math:`x = -1` 为极小值点，相应的极小值为 :math:`y(-1) = -\dfrac{1}{e}`.
+
+    在区间 :math:`(-\infty, -1)` 上有 :math:`y' < 0`, 所以曲线在 :math:`(-\infty, -1)` 上单调递减；在区间 :math:`(-1, +\infty)` 上有 :math:`y' > 0`,
+    所以曲线在 :math:`(-1, +\infty)` 上单调递增.
+
+    令 :math:`y'' = 0` 解得 :math:`x = -2`. 当 :math:`x < -2` 时， :math:`y'' < 0`, 曲线在 :math:`(-\infty, -2)` 上是凸的；
+    当 :math:`x > -2` 时， :math:`y'' > 0`, 曲线在 :math:`(-2, +\infty)` 上是凹的. 因此 :math:`x = -2` 为拐点.
+
+    .. tikz:: 函数 :math:`y = x e^x` 的图像
+        :align: center
+        :xscale: 50
+
+        \draw[->] (-3.3, 0) -- (1, 0) node[right] {$x$};
+        \draw[->] (0, -1) -- (0, 2) node[above] {$y$};
+        \draw[domain=-3:0.7, smooth, variable=\x, blue] plot ({\x}, {\x * exp(\x)});
 
 补充内容
 =================
