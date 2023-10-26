@@ -95,7 +95,7 @@
 
     .. math::
 
-        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\xi}\right) e^\xi.
+        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
 
     考虑函数 :math:`f(x) = x e^{\frac{1}{x}}`, 则 :math:`f'(x) = e^{\frac{1}{x}} \left(1 - \dfrac{1}{x}\right)`, 由拉格朗日中值定理可得，
     存在 :math:`\tau \in \left( \dfrac{1}{b}, \dfrac{1}{a} \right)`, 使得
@@ -108,7 +108,13 @@
 
     .. math::
 
-        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\tau}\right) e^{\frac{1}{\tau}} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\xi}\right) e^\xi.
+        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\tau}\right) e^{\frac{1}{\tau}} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
+
+    上式两边同时乘以 :math:`ab` 即可得到题目要证明的结论：
+
+    .. math::
+
+        a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
 5. 求函数 :math:`y = x^{1/x}, x > 0` 的极大值.
 
