@@ -80,6 +80,51 @@
     由于 :math:`G` 是开集，所以 :math:`\mathring{U} (x) \cap G` 也是开集。任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
     那么有 :math:`(a, b) \subset E`，这与 :math:`E` 是零测度集矛盾，所以 :math:`\overline{G} = \overline{G \setminus E}`.
 
+14. 设 :math:`E_1 \subset E_2 \subset \cdots \subset E_n \subset \cdots`，试证
+:math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) = \lim\limits_{n \to \infty} m^* E_n`.
+
+.. proof:proof::
+
+    令 :math:`S = \bigcup\limits_{n=1}^\infty E_n`, 那么有 :math:`E_n \subset S`. 那么由外测度的单调性有
+
+    .. math::
+
+        m^* E_n \le  m^* S.
+
+    令 :math:`n \to \infty` 即有
+
+    .. math::
+
+        \lim\limits_{n \to \infty} m^* E_n \le m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
+
+    另一方面，由外测度的正则性，即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
+    使得 :math:`m A_n = m^* E_n`, 令
+
+    .. math::
+
+        C_n = \bigcap\limits_{k=n}^{+\infty} A_k, \quad n \in \mathbb{N}.
+
+    那么 :math:`C_n` 也是 :math:`G_{\delta}`-集，从而可测，而且 :math:`\{C_n\}` 构成（可测集的）渐张列，那么有
+
+    .. math::
+
+        m \left( \bigcup\limits_{n=1}^\infty C_n \right) = \lim\limits_{n \to \infty} m C_n.
+
+    又由于有包含关系 :math:`E_n \subset C_n \subset A_n`, 以及 :math:`m A_n = m^* E_n`, 所以有
+
+    .. math::
+
+        m A_n = m C_n = m^* E_n, \quad n \in \mathbb{N},
+
+    而且进一步有不等式
+
+    .. math::
+
+        m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) \le m \left( \bigcup\limits_{n=1}^\infty C_n \right) = \lim\limits_{n \to \infty} m C_n = \lim\limits_{n \to \infty} m^* E_n.
+
+    综上所述，有 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) = \lim\limits_{n \to \infty} m^* E_n`.
+
+
 15. 给出互不相交的集列 :math:`\{E_n\}_{n \in \mathbb{N}}`，满足
 
 .. math::
