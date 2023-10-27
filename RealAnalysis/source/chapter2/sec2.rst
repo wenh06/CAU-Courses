@@ -55,3 +55,21 @@
 .. math::
 
     m^* \left( \bigcup_{k=1}^n E_k \right) = \sum_{k=1}^n m^* E_k
+
+.. proof:proof::
+
+    记 :math:`E = \bigcup\limits_{k=1}^n E_k`. 由于 :math:`E_k \subset A_k, k = 1, 2, \cdots, n`, 且 :math:`A_k` 互不相交，所以
+
+    .. math::
+
+        E \cap A_k = E_k, \quad E \cap \mathcal{C} A_k = \bigcup\limits_{j \neq k} E_j, \quad k = 1, 2, \cdots, n
+
+    由于 :math:`A_1, A_2, \cdots, A_n` 是可测集，根据可测集的 Carahtéodory 条件，有
+
+    .. math::
+
+        m^* E & = m^* (E \cap A_1) + m^* (E \cap \mathcal{C} A_1) \\
+        & = m^* E_1 + m^* \left( \bigcup\limits_{k=2}^n E_k \right) \\
+        & = m^* E_1 + m^* E_2 + m^* \left( \bigcup\limits_{k=3}^n E_k \right) \\
+        & \quad \vdots \\
+        & = \sum_{k=1}^n m^* E_k
