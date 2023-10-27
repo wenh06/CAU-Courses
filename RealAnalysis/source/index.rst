@@ -23,6 +23,7 @@
    :caption: 补充材料:
 
    suppl/chap1
+   suppl/chap2
 
 
 Indices and tables
