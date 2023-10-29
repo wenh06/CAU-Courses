@@ -944,7 +944,9 @@
 
 .. proof:solution::
 
-    (1). 斜率
+    (1). 由于 :math:`\lim\limits_{x \to 2} \dfrac{2x^3 - 3}{(x - 2)^2} = +\infty`, 所以 :math:`x = 2` 为 :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}` 的垂直渐近线.
+
+    接下来求斜渐近线。斜率
 
     .. math::
 
