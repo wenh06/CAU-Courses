@@ -402,11 +402,13 @@
 
 .. proof:solution::
 
-    (2). 由于 :math:`\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{x} \right) = \dfrac{1}{x^2} \mathrm{d} x`.
+    (2). 由于 :math:`\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{x} + C \right) = \dfrac{1}{x^2} \mathrm{d} x`.
 
-    (4). 由于 :math:`\left( -\dfrac{1}{2} e^{-2x} \right)' = e^{-2x}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{2} e^{-2x} \right) = e^{-2x} \mathrm{d} x`.
+    (4). 由于 :math:`\left( -\dfrac{1}{2} e^{-2x} \right)' = e^{-2x}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{2} e^{-2x} + C \right) = e^{-2x} \mathrm{d} x`.
 
-    (6). 由于 :math:`\left( \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`, 所以 :math:`\mathrm{d} \left( \arctan^2 x \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
+    (6). 由于 :math:`\left( \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`, 所以 :math:`\mathrm{d} \left( \arctan^2 x + C \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
+
+    以上的 :math:`C` 为常数。
 
     .. note::
 
@@ -416,7 +418,7 @@
 
             \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \arctan x \cdot \dfrac{1}{x^2 + 1} \mathrm{d} x \\
             & = \arctan x \cdot \mathrm{d} (\arctan x) \\
-            & = \mathrm{d} (\arctan^2 x)
+            & = \mathrm{d} (\arctan^2 x + C)
 
 4. 求下列近似值：
 
@@ -1036,7 +1038,7 @@
         & = \lim\limits_{x \to +\infty} \dfrac{1 + \frac{x^2}{e^x}}{1 + \frac{2x}{e^x}} \\
         & = 1,
 
-    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的斜渐近线有两条，分别为 :math:`y = \dfrac{1}{2} x` 和 :math:`y = 1`.
+    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的斜渐近线有两条，分别为 :math:`y = \dfrac{1}{2} x` 和 :math:`y = 1` (水平渐近线).
 
     此外，令 :math:`x_0` 为 :math:`e^x + 2x = 0` 的解，那么
 
