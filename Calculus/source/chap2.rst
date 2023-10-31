@@ -56,7 +56,7 @@
 
 .. proof:solution::
 
-    首先， :math:`f(x)` 在 :math:`x = 0` 处连续，因为 :math:`\lim_{x \to 0} f(x) = \lim_{x \to 0} x^2 \cos \dfrac{1}{x} = 0 = f(0)`.
+    首先， :math:`f(x)` 在 :math:`x = 0` 处连续，因为 :math:`\lim\limits_{x \to 0} f(x) = \lim\limits_{x \to 0} x^2 \cos \dfrac{1}{x} = 0 = f(0)`.
     接下来考虑 :math:`f(x)` 在 :math:`x = 0` 处的左右导数是否相等：
 
     .. math::
