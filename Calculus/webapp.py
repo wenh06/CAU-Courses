@@ -1,3 +1,4 @@
+from datetime import datetime
 from pathlib import Path
 
 import bcrypt
@@ -98,6 +99,19 @@ st.button("查询", on_click=consult)
 if "is_admin" not in st.session_state:
     st.session_state["is_admin"] = 0
 
+# workaround for password attempt limit
+# st.session_state destroyed after refresh page (new session)
+# TODO: use streamlit_authenticator instead
+MAX_RETRIES = 3
+if "remain_retries" not in st.session_state:
+    st.session_state["remain_retries"] = MAX_RETRIES
+PW_ERR_CD = 10  # seconds
+if "cooldown" not in st.session_state:
+    st.session_state["cooldown"] = {
+        "status": 0,  # 0: not in cooldown, 1: in cooldown
+        "time": datetime.now().timestamp(),
+    }
+
 st.sidebar.markdown("**管理员功能**")
 
 if not st.session_state.is_admin:
@@ -105,12 +119,36 @@ if not st.session_state.is_admin:
     admin_login_button = st.sidebar.button("管理员登录", help="管理员登录")
 
     if admin_login_button:
-        if bcrypt.checkpw(admin_password.encode("utf-8"), magic_password):
-            st.sidebar.success("登录成功")
-            st.session_state.is_admin = 1
-            st.rerun()
+        if st.session_state.cooldown["status"]:
+            time_remaining = PW_ERR_CD - int(datetime.now().timestamp() - st.session_state.cooldown["time"])
+            if time_remaining <= 0:
+                st.session_state.cooldown = {
+                    "status": 0,  # 0: not in cooldown, 1: in cooldown
+                    "time": datetime.now().timestamp(),
+                }
+                st.session_state.remain_retries = MAX_RETRIES
+            else:
+                st.sidebar.error(f"请等待 {time_remaining} 秒后再尝试")
         else:
-            st.sidebar.error("密码错误")
+            if bcrypt.checkpw(admin_password.encode("utf-8"), magic_password):
+                st.sidebar.success("登录成功")
+                st.session_state.is_admin = 1
+                st.session_state.cooldown = {
+                    "status": 0,  # 0: not in cooldown, 1: in cooldown
+                    "time": datetime.now().timestamp(),
+                }
+                st.session_state.remain_retries = MAX_RETRIES
+                st.rerun()
+            elif st.session_state.remain_retries > 0:
+                st.sidebar.error(f"密码错误，剩余尝试次数 {st.session_state.remain_retries}")
+                st.session_state.remain_retries -= 1
+            else:  # st.session_state.remain_retries == 0
+                st.sidebar.error(f"达到最大尝试次数，{PW_ERR_CD} 秒后再试")
+                st.session_state.cooldown = {
+                    "status": 1,  # 0: not in cooldown, 1: in cooldown
+                    "time": datetime.now().timestamp(),
+                }
+                st.session_state.remain_retries = MAX_RETRIES
 
 # if bcrypt.checkpw(st.session_state["admin_password"].encode("utf-8"), magic_password):
 if st.session_state.is_admin:
