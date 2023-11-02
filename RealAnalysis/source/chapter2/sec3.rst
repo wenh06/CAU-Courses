@@ -163,7 +163,7 @@
 
         E_n = \left\{ m / n : m \in \mathbb{Z} \right\} \cap (a, b), n \in \mathbb{N},
 
-    那么每个 :math:`E_n` 都是有限集，从而 :math:`m E_n = 0`，于是极限 :math:`\lim_{n \to \infty} m E_n` 存在，值为 :math:`0`，但是
+    那么每个 :math:`E_n` 都是有限集，从而 :math:`m E_n = 0`，于是极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在，值为 :math:`0`，但是
 
     .. math::
 
