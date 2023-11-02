@@ -264,6 +264,76 @@
 §3.2 定积分
 ---------------------
 
+2. 设 :math:`x` 轴上有一根细棒，位于 :math:`x = a` 到 :math:`x = b` 的区间上，这棒在 :math:`x` 处的线密度为 :math:`\rho(x)`,
+试用定积分表示这细棒的质量.
+
+.. proof:solution::
+
+    设细棒的质量为 :math:`m`, 则有
+
+    .. math::
+
+        m = \int_a^b \rho(x) \mathrm{d} x.
+
+3. 利用定积分的几何意义，给出下列定积分的值：
+
+(1). :math:`\displaystyle \int_a^b x \mathrm{d} x`;
+
+(3). :math:`\displaystyle \int_{-\pi}^{\pi} \sin x \mathrm{d} x`;
+
+(5). :math:`\displaystyle \int_0^4 (2 - x) \mathrm{d} x`.
+
+.. proof:solution::
+
+    (1). 假设 :math:`a < b`.
+
+    定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示 :math:`x` 从 :math:`a` 到 :math:`b` 曲线 :math:`y = x` 与 :math:`x` 轴之间（带正负号）的面积。
+    当 :math:`a, b` 同号时，这是一个底边长 :math:`|a|, |b|`, 高为 :math:`|a - b|` 的梯形，面积为 :math:`\dfrac{|a| + |b|}{2} |a - b|`.
+    当 :math:`a, b > 0` 时，面积为正的，当 :math:`a, b < 0` 时，面积为负的。值为 :math:`\dfrac{b^2 - a^2}{2}`.
+
+    当 :math:`a \le 0 \le b`, 定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示两个三角形的面积之差 (包括等于 :math:`0` 时退化的情况).
+    这是两个等腰直角三角形，直角边长分别为 :math:`-a, b`, 面积之差为 :math:`\dfrac{b^2 - a^2}{2}`.
+
+    (3). :math:`\sin x` 在 :math:`(-\pi, 0)` 取值为负， :math:`(0, \pi)` 取值为正，因此定积分 :math:`\displaystyle \int_{-\pi}^{\pi} \sin x \mathrm{d} x`
+    表示 这两部分曲线与 :math:`x` 轴围成（带正负号）的面积之和。正两部分面积正好绝对值相等，符号相反，因此定积分的值为 :math:`0`.
+
+    (5). :math:`\displaystyle \int_0^4 (2 - x) \mathrm{d} x` 表示 :math:`x` 从 :math:`0` 到 :math:`4` 曲线 :math:`y = 2 - x` 与 :math:`x` 轴之间（带正负号）的面积。
+    :math:`x` 从 :math:`0` 到 :math:`2` 时， :math:`y = 2 - x` 在 :math:`x` 轴上方，面积为正， :math:`x` 从 :math:`2` 到 :math:`4` 时，
+    :math:`y = 2 - x` 在 :math:`x` 轴下方，面积为负。这两部分面积绝对值相等，符号相反，因此定积分的值为 :math:`0`.
+
+4. 利用定积分的性质，比较下列各组积分值的大小：
+
+(2). :math:`\displaystyle \int_0^1 e^x \mathrm{d} x` 与 :math:`\displaystyle \int_0^1 (1 + x) \mathrm{d} x`.
+
+.. proof:solution::
+
+    由于在区间 :math:`(0, 1)` 上有不等式 :math:`e^x > 1 + x`, 因此有 :math:`\displaystyle \int_0^1 e^x \mathrm{d} x > \int_0^1 (1 + x) \mathrm{d} x`.
+
+5. 证明下列不等式：
+
+(2). :math:`\displaystyle 2 e^{-\frac{1}{4}} < \int_0^2 e^{x^2 - x} \mathrm{d} x < 2 e^2`.
+
+.. proof:proof::
+
+    由于 :math:`e^{x^2 - x} = e^{\left( x - \frac{1}{2} \right)^2 - \frac{1}{4}}` 在区间 :math:`[0, 2]` 上的最小值为 :math:`e^{-\frac{1}{4}}`,
+    最大值为 :math:`e^2`, 因此有
+
+    .. math::
+
+        2 e^{-\frac{1}{4}} = \int_0^2 e^{-\frac{1}{4}} \mathrm{d} x < \int_0^2 e^{x^2 - x} \mathrm{d} x < \int_0^2 e^2 \mathrm{d} x = 2 e^2.
+
+6. 设函数 :math:`f(x)` 在区间 :math:`[1, 3]` 上的平均值为 :math:`6`, 求定积分 :math:`\displaystyle \int_1^3 f(x) \mathrm{d} x`.
+
+.. proof:solution::
+
+    函数 :math:`f(x)` 在区间 :math:`[1, 3]` 上的平均值为 :math:`6`, 也就是说有
+
+    .. math::
+
+        \dfrac{\int_1^3 f(x) \mathrm{d} x}{3 - 1} = 6,
+
+    从而有 :math:`\displaystyle \int_1^3 f(x) \mathrm{d} x = 12`.
+
 §3.3 定积分的计算
 ---------------------
 
