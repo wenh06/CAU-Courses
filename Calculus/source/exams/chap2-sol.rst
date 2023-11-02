@@ -9,7 +9,7 @@
 
     .. math::
 
-        f'(x) = \dfrac{1}{2\sqrt{x + \sqrt{x + \sqrt{x}}}} \cdot \left(1 + \dfrac{1}{2\sqrt{x + \sqrt{x}}}\right) \cdot \left(1 + \dfrac{1}{2\sqrt{x}}\right)
+        f'(x) = \dfrac{1}{2\sqrt{x + \sqrt{x + \sqrt{x}}}} \cdot \left(1 + \dfrac{1}{2\sqrt{x + \sqrt{x}}} \cdot \left(1 + \dfrac{1}{2\sqrt{x}}\right)\right)
 
 2. 设函数 :math:`f(x)` 可微且函数值大于 :math:`0`. 令 :math:`g(x) = \ln f(\sin^2 x)`, 求函数 :math:`g(x)` 的微分.
 
@@ -116,6 +116,27 @@
 
         a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
+    .. note::
+
+        另一种方法：令 :math:`f(x) = \dfrac{e^x}{x}, g(x) = \dfrac{1}{x}`, 那么有
+
+        .. math::
+
+            f'(x) = \dfrac{e^x}{x^2} \left(x - 1\right), \quad g'(x) = - \dfrac{1}{x^2}.
+
+        :math:`f(x), g(x)` 在闭区间 :math:`[a, b]` 上连续，且在开区间 :math:`(a, b)` 上可导，且 :math:`g(x) = \dfrac{1}{x}` 在闭区间 :math:`[a, b]` 上恒不为零，
+        那么根据柯西中值定理可知，存在 :math:`\xi \in (a, b)`, 使得
+
+        .. math::
+
+            \dfrac{f(b) - f(a)}{g(b) - g(a)} = \dfrac{f'(\xi)}{g'(\xi)},
+
+        代入 :math:`f'(x), g'(x)` 的表达式可得
+
+        .. math::
+
+            \dfrac{e^b - e^a}{b - a} = \left.\dfrac{e^\xi}{\xi^2} \left(\xi - 1\right)  \middle/ \left(- \dfrac{1}{\xi^2}\right) \right. = \left(1 - \xi\right) e^\xi.
+
 5. 求函数 :math:`y = x^{1/x}, x > 0` 的极大值.
 
 .. proof:solution::
@@ -126,14 +147,14 @@
 
         \ln y = \dfrac{\ln x}{x}.
 
-    令 :math:`f(x) = \dfrac{\ln x}{x}`, 则 :math:`f'(x) = \dfrac{1 - \ln x}{x^2}`, 由 :math:`f'(x) = 0` 可得 :math:`x = e`, 由于
+    令 :math:`f(x) = \dfrac{\ln x}{x}`, 则 :math:`f'(x) = \dfrac{1 - \ln x}{x^2}`. 令 :math:`f'(x) = 0` 解得 :math:`x = e`.
+    由于 :math:`f''(x) = \dfrac{2 \ln x - 3}{x^3}`, 可得
 
     .. math::
 
-        f''(x) = \dfrac{2 \ln x - 3}{x^3},
+        f''(e) = \dfrac{2 \ln e - 3}{e^3} = - \dfrac{1}{e^3} < 0.
 
-    所以 :math:`x = e` 是极大值点. 由于 :math:`f(1) = 0`, :math:`f(e) = \dfrac{1}{e}`, 所以 :math:`x = e` 是极大值点，
-    且 :math:`y = e^{1 / e}` 是极大值.
+    所以 :math:`x = e` 是极大值点， :math:`y = e^{1 / e}` 是相应的极大值.
 
     .. note::
 
