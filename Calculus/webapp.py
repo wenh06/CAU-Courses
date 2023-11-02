@@ -34,7 +34,7 @@ table = load_table()
 
 st.title("2023秋微积分查询随堂测验成绩")
 
-name = st.text_input("姓名", help="请输入姓名", key="name")
+# name = st.text_input("姓名", help="请输入姓名", key="name")
 student_id = st.text_input("学号", help="请输入学号", key="student_id")
 
 password = st.text_input("密码", help="请输入密码", key="password", type="password")
@@ -45,8 +45,11 @@ magic_password = b"$2b$12$uWlKeOBuUFoLLFSyt0qZ2.rpbjk1dbWHG/AT3qT9heTEwa4hiPgWG"
 
 
 def consult():
-    if name == "" or student_id == "":
-        st.error("姓名和学号不能为空")
+    # if name == "" or student_id == "":
+    #     st.error("姓名和学号不能为空")
+    #     return
+    if student_id == "":
+        st.error("学号不能为空")
         return
     try:
         int(student_id)
@@ -56,25 +59,26 @@ def consult():
     if int(student_id) not in table.index and int(student_id) != magic_student_id:
         st.error("学号不存在")
         return
-    if name not in table["学生姓名"].values and name != magic_name:
-        st.error("姓名不存在")
-        return
+    # if name not in table["学生姓名"].values and name != magic_name:
+    #     st.error("姓名不存在")
+    #     return
 
     if password == "":
         st.error("密码不能为空")
         return
 
-    if int(student_id) == magic_student_id and name == magic_name and bcrypt.checkpw(password.encode("utf-8"), magic_password):
-        # show the whole table
-        st.table(table[[c for c in table.columns if c not in ["密码", "所属分组"]]])
-        if -1 in table.values:
-            st.write("注：-1 表示未参加随堂测验")
-        return
+    # if int(student_id) == magic_student_id and name == magic_name and bcrypt.checkpw(password.encode("utf-8"), magic_password):
+    #     # show the whole table
+    #     st.table(table[[c for c in table.columns if c not in ["密码", "所属分组"]]])
+    #     if -1 in table.values:
+    #         st.write("注：-1 表示未参加随堂测验")
+    #     return
 
-    row = table[(table.index == int(student_id)) & (table["学生姓名"] == name)]
-    if len(row) != 1:
-        st.error("学号和姓名不匹配")
-        return
+    # row = table[(table.index == int(student_id)) & (table["学生姓名"] == name)]
+    # if len(row) != 1:
+    #     st.error("学号和姓名不匹配")
+    #     return
+    row = table[table.index == int(student_id)]
 
     # if password != row["密码"].values[0]:
     if not bcrypt.checkpw(password.encode("utf-8"), row["密码"].values[0]):
@@ -91,7 +95,12 @@ def consult():
 
 # add a button to call function consult
 
-st.button("查询", on_click=consult)
+# st.button("查询", on_click=consult)
+
+consult_button = st.button("查询", help="查询成绩")
+
+if consult_button:
+    consult()
 
 
 # sidebar for admin
