@@ -337,6 +337,25 @@
 §3.3 定积分的计算
 ---------------------
 
+1. 计算下列各题：
+
+(2). 设 :math:`\displaystyle f(x) = \int_0^x e^{-t^2} \mathrm{d} t`, 求 :math:`f''(1)`;
+
+(4). 求 :math:`\displaystyle \dfrac{\mathrm{d}}{\mathrm{d} x} \int_{x^2}^{x^3} \dfrac{1}{\sqrt{1 + u^4}} \mathrm{d} u`;
+
+(6). 求极限 :math:`\displaystyle \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{\int_x^0 \ln (1 + t^2) \mathrm{d} t}`.
+
+2. 设 :math:`y = f(x)` 是由方程 :math:`\displaystyle x^2 y = \int_0^y \sqrt{1 + t^2} \mathrm{d} t` 所确定的隐函数，
+试求 :math:`y = f(x)` 的微分 :math:`\mathrm{d} y`.
+
+3. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，令
+
+.. math::
+
+    F(x) = \dfrac{1}{x - a} \int_a^x f(t) \mathrm{d} t \quad (a < x \le b),
+
+试证明在区间 :math:`(a, b]` 上恒有 :math:`F'(x) \ge 0`.
+
 §3.4 定积分的应用
 ---------------------
 
