@@ -345,8 +345,45 @@
 
 (6). 求极限 :math:`\displaystyle \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{\int_x^0 \ln (1 + t^2) \mathrm{d} t}`.
 
+.. proof:solution::
+
+    (1). :math:`f'(x) = e^{-x^2}`, :math:`f''(x) = -2x e^{-x^2}`, 因此 :math:`f''(1) = -2e^{-1}`.
+
+    (3). :math:`\displaystyle \dfrac{\mathrm{d}}{\mathrm{d} x} \int_{x^2}^{x^3} \dfrac{1}{\sqrt{1 + u^4}} \mathrm{d} u = \dfrac{1}{\sqrt{1 + x^{12}}} \cdot 3x^2 - \dfrac{1}{\sqrt{1 + x^8}} \cdot 2x = \dfrac{3x^2}{\sqrt{1 + x^{12}}} - \dfrac{2x}{\sqrt{1 + x^8}}`.
+
+    (5).
+
+    .. math::
+
+        \displaystyle \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{\int_x^0 \ln (1 + t^2) \mathrm{d} t} & = \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{-\int_0^x \ln (1 + t^2) \mathrm{d} t} = -\lim_{x \to 0} \dfrac{x(x + \sin x)}{\ln (1 + x^2)} \\
+        & = -\lim_{x \to 0} \dfrac{2x + x \cos x + \sin x}{\frac{2x}{1 + x^2}} \\
+        & = -\lim_{x \to 0} (1 + x^2) \dfrac{2x + x \cos x + \sin x}{2x} \\
+        & = -2.
+
+    .. note::
+
+        一般地，如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
+
+        .. math::
+
+            f'(x) = g(\psi(x)) \psi'(x) - g(\varphi(x)) \varphi'(x).
+
 2. 设 :math:`y = f(x)` 是由方程 :math:`\displaystyle x^2 y = \int_0^y \sqrt{1 + t^2} \mathrm{d} t` 所确定的隐函数，
 试求 :math:`y = f(x)` 的微分 :math:`\mathrm{d} y`.
+
+.. proof:solution::
+
+    对方程两边求微分，有
+
+    .. math::
+
+        2x y \mathrm{d} x + x^2 \mathrm{d} y = \sqrt{1 + y^2} \mathrm{d} y,
+
+    移项之后有
+
+    .. math::
+
+        \mathrm{d} y = \dfrac{2x y}{\sqrt{1 + y^2} - x^2} \mathrm{d} x.
 
 3. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，令
 
@@ -355,6 +392,136 @@
     F(x) = \dfrac{1}{x - a} \int_a^x f(t) \mathrm{d} t \quad (a < x \le b),
 
 试证明在区间 :math:`(a, b]` 上恒有 :math:`F'(x) \ge 0`.
+
+.. proof:proof::
+
+    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，所以有
+
+    .. math::
+
+        F'(x) = \dfrac{1}{x - a} \cdot f(x) - \dfrac{1}{(x - a)^2} \int_a^x f(t) \mathrm{d} t.
+
+    进一步由积分中值定理，存在 :math:`\xi \in (a, x)` 使得 :math:`\displaystyle \int_a^x f(t) \mathrm{d} t = f(\xi) (x - a)`, 因此有
+
+    .. math::
+
+        F'(x) = \dfrac{1}{x - a} \cdot f(x) - \dfrac{f(\xi) (x - a)}{(x - a)^2} = \dfrac{1}{x - a} \cdot \left( f(x) - f(\xi) \right).
+
+    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，因此有 :math:`f(x) \ge f(\xi)`, 从而有 :math:`F'(x) \ge 0`.
+
+4. 计算下列定积分：
+
+(1). :math:`\displaystyle \int_0^4 (2 - \sqrt{x})^2 \mathrm{d} x`;
+
+(3). :math:`\displaystyle \int_0^1 \dfrac{1}{\sqrt{4-u^2}} \mathrm{d} u`;
+
+(5). 设 :math:`\displaystyle f(x) = \begin{cases} \frac{x}{2} + 1, & 0 \le x \le 2 \\ x, & 2 < x \le 3 \end{cases}`, 求 :math:`\displaystyle \int_0^3 f(x) \mathrm{d} x`.
+
+(7). :math:`\displaystyle \int_0^2 (2 - x)^2 (2 + x) \mathrm{d} x`;
+
+(9). :math:`\displaystyle \int_0^{\pi} (1 - \sin^3 \varphi) \mathrm{d} \varphi`.
+
+.. proof:solution::
+
+    (1). 令 :math:`t = \sqrt{x}`, 那么 :math:`x = t^2, \mathrm{d} x = 2t \mathrm{d} t`, 从而有
+
+    .. math::
+
+        \int_0^4 (2 - \sqrt{x})^2 \mathrm{d} x & = \int_0^2 (2 - t)^2 \cdot 2t \mathrm{d} t = 2 \int_0^2 (4 - 4t + t^2) t \mathrm{d} t \\
+        & = 2 \int_0^2 (4t - 4t^2 + t^3) \mathrm{d} t = 2 \left. \left[ 2t^2 - \dfrac{4}{3} t^3 + \dfrac{1}{4} t^4 \right] \right|_0^2 \\
+        & = 2 \left( 8 - \dfrac{32}{3} + 4 \right) = \dfrac{8}{3}.
+
+    (3). 令 :math:`u = 2 \sin \varphi`, 那么 :math:`\mathrm{d} u = 2 \cos \varphi \mathrm{d} \varphi`, 从而有
+
+    .. math::
+
+        \int_0^1 \dfrac{1}{\sqrt{4-u^2}} \mathrm{d} u & = \int_0^{\frac{\pi}{6}} \dfrac{1}{\sqrt{4 - 4 \sin^2 \varphi}} \cdot 2 \cos \varphi \mathrm{d} \varphi \\
+        & = \int_0^{\frac{\pi}{6}} \dfrac{1}{\sqrt{4 \cos^2 \varphi}} \cdot 2 \cos \varphi \mathrm{d} \varphi = \int_0^{\frac{\pi}{6}} \dfrac{1}{2 \cos \varphi} \cdot 2 \cos \varphi \mathrm{d} \varphi \\
+        & = \int_0^{\frac{\pi}{6}} \mathrm{d} \varphi = \dfrac{\pi}{6}.
+
+    (5). 根据定积分对积分区间的可加性，有
+
+    .. math::
+
+        \int_0^3 f(x) \mathrm{d} x & = \int_0^2 f(x) \mathrm{d} x + \int_2^3 f(x) \mathrm{d} x = \int_0^2 \left( \dfrac{x}{2} + 1 \right) \mathrm{d} x + \int_2^3 x \mathrm{d} x \\
+        & = \left. \left( \dfrac{x^2}{4} + x \right) \right|_0^2 + \left. \dfrac{x^2}{2} \right|_2^3 = 3 + \dfrac{9}{2} - 2 = \dfrac{11}{2}.
+
+    (7).
+
+    .. math::
+
+        \int_0^2 (2 - x)^2 (2 + x) \mathrm{d} x & = \int_2^0 x^2 (4 - x) \mathrm{d} (2-x) = \int_0^2 x^2 (4 - x) \mathrm{d} x \\
+        & = \int_0^2 (4x^2 - x^3) \mathrm{d} x = \left. \left( \dfrac{4}{3} x^3 - \dfrac{1}{4} x^4 \right) \right|_0^2 = \dfrac{32}{3} - 4 = \dfrac{20}{3}.
+
+    (9). 由于 :math:`\sin^3 \varphi = \dfrac{3}{4} \sin \varphi - \dfrac{1}{4} \sin 3\varphi`, 因此有
+
+    .. math::
+
+        \int_0^{\pi} (1 - \sin^3 \varphi) \mathrm{d} \varphi & = \int_0^{\pi} \left( 1 - \dfrac{3}{4} \sin \varphi + \dfrac{1}{4} \sin 3\varphi \right) \mathrm{d} \varphi \\
+        & = \left. \left( \varphi + \dfrac{3}{4} \cos \varphi - \dfrac{1}{12} \cos 3\varphi \right) \right|_0^{\pi} \\
+        & = \pi - \dfrac{3}{4} + \dfrac{1}{12} - (0 + \dfrac{3}{4} - \dfrac{1}{12}) \\
+        & = \pi - \dfrac{4}{3}.
+
+5. 计算下列定积分：
+
+(2). :math:`\displaystyle \int_0^{\pi} \dfrac{\sin x}{1 + \cos^2 x} \mathrm{d} x`;
+
+(4). :math:`\displaystyle \int_0^1 x^2 \sqrt{1 - x^2} \mathrm{d} x`;
+
+(6). :math:`\displaystyle \int_1^2 \dfrac{\sqrt{x^2 - 1}}{x} \mathrm{d} x`;
+
+(8). :math:`\displaystyle \int_{-1}^1 \dfrac{x}{\sqrt{5 - 4x}} \mathrm{d} x`.
+
+.. proof:solution::
+
+    待写
+
+6. 计算下列定积分：
+
+(1). :math:`\displaystyle \int_0^1 x \ln(1 + x) \mathrm{d} x`;
+
+(3). :math:`\displaystyle \int_0^{\sqrt{3}} \ln \left( x + \sqrt{1 + x^2} \right) \mathrm{d} x`;
+
+(5). :math:`\displaystyle \int_0^{\frac{\sqrt{2}}{2}} \arccos x \mathrm{d} x`;
+
+(7). :math:`\displaystyle \int_{-1}^1 \dfrac{x^2 \sin^5 x + 1}{1 + x^2} \mathrm{d} x`.
+
+.. proof:solution::
+
+    待写
+
+7. 设 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，证明 :math:`\displaystyle \int_a^b f(x) \mathrm{d} x = \int_a^b f(a + b - x) \mathrm{d} x`.
+
+.. proof:proof::
+
+    令 :math:`t = a + b - x`, 那么 :math:`x = a + b - t, \mathrm{d} t = -\mathrm{d} x`, 从而有
+
+    .. math::
+
+        \int_a^b f(a + b - x) \mathrm{d} x & = -\int_{a + b - a}^{a + b - b} f(t) \mathrm{d} t \\
+        & = -\int_b^a f(t) \mathrm{d} t = \int_a^b f(t) \mathrm{d} t \\
+        & = \int_a^b f(x) \mathrm{d} x.
+
+8. 设 :math:`a > 0`, 试证明： :math:`\displaystyle \int_0^a x^3 f(x^2) \mathrm{d} x = \dfrac{1}{2} \int_0^{a^2} x f(x) \mathrm{d} x`.
+
+.. proof:proof::
+
+    :math:`\displaystyle \int_0^a x^3 f(x^2) \mathrm{d} x = \dfrac{1}{2} \int_0^a x^2 f(x^2) \mathrm{d} (x^2) = \dfrac{1}{2} \int_0^{a^2} x f(x) \mathrm{d} x`.
+
+9. 证明： :math:`\displaystyle \int_0^{\pi} \sin^n x \mathrm{d} x = 2 \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x`.
+
+.. proof:proof::
+
+    .. math::
+
+        \int_0^{\pi} \sin^n x \mathrm{d} x & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_{\frac{\pi}{2}}^{\pi} \sin^n x \mathrm{d} x \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin^n (x + \frac{\pi}{2}) \mathrm{d} (x + \frac{\pi}{2}) \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \cos x^n \mathrm{d} x \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{-\frac{\pi}{2}} \cos^n (-x) \mathrm{d} (-x) \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_{-\frac{\pi}{2}}^0 \cos^n (x) \mathrm{d} x \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \cos^n (x - \frac{\pi}{2}) \mathrm{d} (x - \frac{\pi}{2}) \\
+        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x \\
+        & = 2 \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x.
 
 §3.4 定积分的应用
 ---------------------

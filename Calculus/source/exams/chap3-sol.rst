@@ -10,7 +10,7 @@
         \int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \int \arctan x \mathrm{d} (\arctan x) \\
         & = \dfrac{1}{2} \arctan^2 x + C.
 
-2. 求极限 :math:`\displaystyle \lim\limits_{n \to \infty} \int\limits_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x`.
+2. 求极限 :math:`\displaystyle \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x`.
 
 .. proof:solution::
 
@@ -24,13 +24,13 @@
 
     .. math::
 
-        0 \le \lim\limits_{n \to \infty} \int\limits_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x & \le \lim\limits_{n \to \infty} \int\limits_0^1 x^n \mathrm{d} x \\
+        0 \le \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x & \le \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
         & = \lim\limits_{n \to \infty} \dfrac{1}{n + 1} \\
         & = 0.
 
-    由夹逼定理知原极限 :math:`\displaystyle \lim\limits_{n \to \infty} \int\limits_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x = 0`.
+    由夹逼定理知原极限 :math:`\displaystyle \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x = 0`.
 
-3. 求函数 :math:`\displaystyle f(x) = \int\limits_1^{x^3} e^{t^2} \mathrm{d} t` 的导数.
+3. 求函数 :math:`\displaystyle f(x) = \int_1^{x^3} e^{t^2} \mathrm{d} t` 的导数.
 
 .. proof:solution::
 
@@ -39,21 +39,21 @@
     .. math::
 
         f'(x) & = \lim\limits_{h \to 0} \dfrac{f(x + h) - f(x)}{h} \\
-        & = \lim\limits_{h \to 0} \dfrac{1}{h} \int\limits_1^{(x + h)^3} e^{t^2} \mathrm{d} t - \lim\limits_{h \to 0} \dfrac{1}{h} \int\limits_1^{x^3} e^{t^2} \mathrm{d} t \\
-        & = \lim\limits_{h \to 0} \int\limits_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
+        & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{(x + h)^3} e^{t^2} \mathrm{d} t - \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{x^3} e^{t^2} \mathrm{d} t \\
+        & = \lim\limits_{h \to 0} \int_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
 
     那么由积分第一中值定理有
 
     .. math::
 
-        f'(x) & = \lim\limits_{h \to 0} \int\limits_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
-        & = \lim\limits_{h \to 0} e^{\xi^2} \int\limits_{x^3}^{(x + h)^3} \mathrm{d} t \\
+        f'(x) & = \lim\limits_{h \to 0} \int_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
+        & = \lim\limits_{h \to 0} e^{\xi^2} \int_{x^3}^{(x + h)^3} \mathrm{d} t \\
         & = \lim\limits_{h \to 0} e^{\xi^2} \cdot 3h(x + h)^2 \\
         & = 3x^2 e^{x^6}.
 
     .. note::
 
-        一般地，如果 :math:`f(x) = \int\limits_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
+        一般地，如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
 
         .. math::
 
@@ -68,11 +68,11 @@
 
     .. math::
 
-        S & = \int\limits_0^1 (\sqrt{x} - x^2) \mathrm{d} x \\
+        S & = \int_0^1 (\sqrt{x} - x^2) \mathrm{d} x \\
         & = \left.\left( \dfrac{2}{3} x^{\frac{3}{2}} - \dfrac{1}{3} x^3 \right) \right|_0^1 \\
         & = \dfrac{2}{3} - \dfrac{1}{3} = \dfrac{1}{3}.
 
-5. 证明 :math:`\displaystyle \int\limits_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}` 与 :math:`a` 无关.
+5. 证明 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}` 与 :math:`a` 无关.
 
 提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
 
@@ -84,16 +84,16 @@
 
         0 \le \dfrac{1}{(1 + x^2)(1 + x^a)} \le \dfrac{1}{1 + x^2},
 
-    而 :math:`\displaystyle \int\limits_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛。那么有
+    而 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛。那么有
 
     .. math::
 
-        \int\limits_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} & = \int\limits_0^1 \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int\limits_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
-        & = \int\limits_{+\infty}^1 \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int\limits_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
-        & = -\int\limits_1^{+\infty} \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int\limits_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
-        & = \int\limits_1^{+\infty} \dfrac{x^a \mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int\limits_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
-        & = \int\limits_1^{+\infty} \dfrac{(1 + x^a) \mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
-        & = \int\limits_1^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} \\
+        \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} & = \int_0^1 \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        & = \int_{+\infty}^1 \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        & = -\int_1^{+\infty} \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        & = \int_1^{+\infty} \dfrac{x^a \mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        & = \int_1^{+\infty} \dfrac{(1 + x^a) \mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        & = \int_1^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} \\
         & = \dfrac{\pi}{2} - \arctan 1 \\
         & = \dfrac{\pi}{4}.
 
