@@ -474,7 +474,56 @@
 
 .. proof:solution::
 
-    待写
+    (2).
+
+    .. math::
+
+        \int_0^{\pi} \dfrac{\sin x}{1 + \cos^2 x} \mathrm{d} x & = - \int_0^{\pi} \dfrac{\mathrm{d} \cos x}{1 + \cos^2 x} = - \left. \arctan \cos x \right|_0^{\pi} \\
+        & = - \left( \arctan (-1) - \arctan 1 \right) = - \left( -\dfrac{\pi}{4} - \dfrac{\pi}{4} \right) = \dfrac{\pi}{2}.
+
+    (4).
+
+    .. math::
+
+        \int_0^1 x^2 \sqrt{1 - x^2} \mathrm{d} x & = \dfrac{1}{2} \int_0^1 \sqrt{x^2 (1 - x^2)} \mathrm{d} x^2 = \dfrac{1}{2} \int_0^1 \sqrt{x (1 - x)} \mathrm{d} x \\
+        & = \dfrac{1}{2} \int_0^1 \sqrt{\dfrac{1}{4} - \left( x - \dfrac{1}{2} \right)^2} \mathrm{d} \left( x - \dfrac{1}{2} \right) \\
+        & = \dfrac{1}{8} \int_0^1 \sqrt{1 - \left( 2x - 1 \right)^2} \mathrm{d} \left( 2x - 1 \right) \\
+        & = \dfrac{1}{8} \int_{-1}^1 \sqrt{1 - x^2} \mathrm{d} x \\
+        & = \dfrac{1}{4} \int_{0}^1 \sqrt{1 - x^2} \mathrm{d} x \\
+        & = \dfrac{1}{4} \int_{0}^{\frac{\pi}{2}} \sqrt{1 - \sin^2 \varphi} \mathrm{d} \sin \varphi \\
+        & = \dfrac{1}{4} \int_{0}^{\frac{\pi}{2}} \cos^2 \varphi \mathrm{d} \varphi \\
+        & = \dfrac{1}{4} \int_{0}^{\frac{\pi}{2}} \dfrac{1 + \cos 2\varphi}{2} \mathrm{d} \varphi \\
+        & = \dfrac{1}{8} \left. \left( \varphi + \dfrac{1}{2} \sin 2\varphi \right) \right|_0^{\frac{\pi}{2}} \\
+        & = \dfrac{\pi}{16}.
+
+    另解：令 :math:`x = \sin t`, 积分区域变为 :math:`[0, \frac{\pi}{2}]`, 从而有
+
+    .. math::
+
+        \int_0^1 x^2 \sqrt{1 - x^2} \mathrm{d} x & = \int_0^{\frac{\pi}{2}} \sin^2 t \cos t \mathrm{d} \sin t = \int_0^{\frac{\pi}{2}} \sin^2 t \cos^2 t \mathrm{d} t \\
+        & = \dfrac{1}{4} \int_0^{\frac{\pi}{2}} \sin^2 2t \mathrm{d} t \\
+        & = \dfrac{1}{4} \int_0^{\frac{\pi}{2}} \dfrac{1 - \cos 4t}{2} \mathrm{d} t \\
+        & = \dfrac{1}{8} \int_0^{\frac{\pi}{2}} \left( 1 - \cos 4t \right) \mathrm{d} t \\
+        & = \dfrac{1}{8} \int_0^{\frac{\pi}{2}} \mathrm{d} t - \dfrac{1}{8} \int_0^{\frac{\pi}{2}} \cos 4t \mathrm{d} t \\
+        & = \dfrac{\pi}{16}.
+
+    (6). 令 :math:`x = \sec \varphi`, 积分区域变为 :math:`[0, \frac{\pi}{3}]`, 从而有
+
+    .. math::
+
+        \int_1^2 \dfrac{\sqrt{x^2 - 1}}{x} \mathrm{d} x & = \int_{0}^{\frac{\pi}{3}} \dfrac{\tan \varphi}{\sec \varphi} \cdot \sec \varphi \tan \varphi \mathrm{d} \varphi \\
+        & = \int_{0}^{\frac{\pi}{3}} \tan^2 \varphi \mathrm{d} \varphi \\
+        & = \int_{0}^{\frac{\pi}{3}} \sec^2 \varphi \mathrm{d} \varphi - \int_{0}^{\frac{\pi}{3}} \mathrm{d} \varphi \\
+        & = \left. \tan \varphi \right|_0^{\frac{\pi}{3}} - \left. \varphi \right|_0^{\frac{\pi}{3}} \\
+        & = \sqrt{3} - \dfrac{\pi}{3}.
+
+    (8). 令 :math:`t = \sqrt{5 - 4x}`, 那么 :math:`x = \dfrac{5 - t^2}{4}`, :math:`\mathrm{d} x = -\dfrac{t}{2} \mathrm{d} t`, 从而有
+
+    .. math::
+
+        \int_{-1}^1 \dfrac{x}{\sqrt{5 - 4x}} \mathrm{d} x & = \int_{3}^1 \dfrac{\frac{5 - t^2}{4}}{t} \cdot \left( -\dfrac{t}{2} \right) \mathrm{d} t = \dfrac{1}{8} \int_1^{3} \left( 5 - t^2 \right) \mathrm{d} t \\
+        & = \dfrac{1}{8} \left. \left( 5t - \dfrac{t^3}{3} \right) \right|_1^{3} = \dfrac{1}{8} \left( 15 - \dfrac{27}{3} - 5 + \dfrac{1}{3} \right) \\
+        & = \dfrac{1}{6}.
 
 6. 计算下列定积分：
 
@@ -488,7 +537,41 @@
 
 .. proof:solution::
 
-    待写
+    (1).
+
+    .. math::
+
+        \int_0^1 x \ln(1 + x) \mathrm{d} x & = \dfrac{1}{2} \int_0^1 \ln(1 + x) \mathrm{d} x^2 = \left. \dfrac{1}{2} \ln(1 + x) \cdot x^2 \right|_0^1 - \dfrac{1}{2} \int_0^1 \dfrac{x^2}{1 + x} \mathrm{d} x \\
+        & = \dfrac{1}{2} \ln 2 - \dfrac{1}{2} \int_0^1 \left( x - 1 + \dfrac{1}{1 + x} \right) \mathrm{d} x \\
+        & = \dfrac{1}{2} \ln 2 - \dfrac{1}{2} \left. \left( \dfrac{x^2}{2} - x + \ln(1 + x) \right) \right|_0^1 \\
+        & = \dfrac{1}{2} \ln 2 - \dfrac{1}{2} \left( \dfrac{1}{2} - 1 + \ln 2 \right) \\
+        & = \dfrac{1}{4}.
+
+    (3).
+
+    .. math::
+
+        \int_0^{\sqrt{3}} \ln \left( x + \sqrt{1 + x^2} \right) \mathrm{d} x & = \left. x \ln \left( x + \sqrt{1 + x^2} \right) \right|_0^{\sqrt{3}} - \int_0^{\sqrt{3}} x \dfrac{1 + \dfrac{x}{\sqrt{1 + x^2}}}{x + \sqrt{1 + x^2}} \mathrm{d} x \\
+        & = \sqrt{3} \ln \left( \sqrt{3} + 2 \right) - \int_0^{\sqrt{3}} \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x \\
+        & = \sqrt{3} \ln \left( \sqrt{3} + 2 \right) - \dfrac{1}{2} \int_0^{\sqrt{3}} \dfrac{\mathrm{d} x^2}{\sqrt{1 + x^2}} \\
+        & = \sqrt{3} \ln \left( \sqrt{3} + 2 \right) - \dfrac{1}{2} \int_0^{\sqrt{3}} \dfrac{\mathrm{d} \left( 1 + x^2 \right)}{\sqrt{1 + x^2}} \\
+        & = \sqrt{3} \ln \left( \sqrt{3} + 2 \right) - \left. \sqrt{1 + x^2} \right|_0^{\sqrt{3}} \\
+        & = \sqrt{3} \ln \left( \sqrt{3} + 2 \right) - 1.
+
+    (5).
+
+    .. math::
+
+        \int_0^{\frac{\sqrt{2}}{2}} \arccos x \mathrm{d} x & = \left. x \arccos x \right|_0^{\frac{\sqrt{2}}{2}} - \int_0^{\frac{\sqrt{2}}{2}} \dfrac{x}{-\sqrt{1 - x^2}} \mathrm{d} x \\
+        & = \dfrac{\pi}{4} \cdot \dfrac{\sqrt{2}}{2} - \left. \sqrt{1 - x^2} \right|_0^{\frac{\sqrt{2}}{2}} \\
+        & = \dfrac{\pi}{8} - \dfrac{\sqrt{2}}{2} + 1.
+
+    (7). 因为 :math:`\dfrac{x^2 \sin^5 x}{1 + x^2}` 是奇函数，所以 :math:`\displaystyle \int_{-1}^1 \dfrac{x^2 \sin^5 x}{1 + x^2} \mathrm{d} x = 0`, 因此有
+
+    .. math::
+
+        \int_{-1}^1 \dfrac{x^2 \sin^5 x + 1}{1 + x^2} \mathrm{d} x & = \int_{-1}^1 \dfrac{1}{1 + x^2} \mathrm{d} x = \left. \arctan x \right|_{-1}^1 \\
+        & = \arctan 1 - \arctan (-1) = \dfrac{\pi}{2}.
 
 7. 设 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，证明 :math:`\displaystyle \int_a^b f(x) \mathrm{d} x = \int_a^b f(a + b - x) \mathrm{d} x`.
 
@@ -526,5 +609,23 @@
 §3.4 定积分的应用
 ---------------------
 
+1. 求下列各曲线所围成的图形的面积：
+
+(1). :math:`y = 9 - x^2, y = 0`;
+
+(3). :math:`y = x^3, x = 0, y = 1`;
+
+(5). :math:`y = \sin x, x = -\pi, x = \dfrac{\pi}{2}, y = 0`;
+
+(7). :math:`r = 2a (2 + \cos \theta)`.
+
 §3.5 广义积分
 ---------------------
+
+1. 计算下列广义积分：
+
+(2). :math:`\displaystyle \int_2^{+\infty} \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x`;
+
+(4). :math:`\displaystyle \int_1^{+\infty} \dfrac{1}{\sqrt{x}(1 + x)} \mathrm{d} x`;
+
+(6). :math:`\displaystyle \int_0^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x`.
