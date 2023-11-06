@@ -776,3 +776,70 @@
 (4). :math:`\displaystyle \int_1^{+\infty} \dfrac{1}{\sqrt{x}(1 + x)} \mathrm{d} x`;
 
 (6). :math:`\displaystyle \int_0^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x`.
+
+.. proof:solution::
+
+    (2).
+
+    .. math::
+
+        \int_2^{+\infty} \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x & = \dfrac{1}{2} \int_2^{+\infty} \dfrac{\mathrm{d} (1 + x^2)}{\sqrt{1 + x^2}} \\
+        & = \left. \sqrt{1 + x^2} \right|_2^{+\infty} = +\infty.
+
+    该广义积分发散.
+
+    (4).
+
+    .. math::
+
+        \int_1^{+\infty} \dfrac{1}{\sqrt{x}(1 + x)} \mathrm{d} x & = 2 \int_1^{+\infty} \dfrac{\mathrm{d} \sqrt{x}}{1 + \left( \sqrt{x} \right)^2} = 2 \cdot \left. \arctan \sqrt{x} \right|_1^{+\infty} \\
+        & = 2 \cdot \left( \dfrac{\pi}{2} - \dfrac{\pi}{4} \right) = \dfrac{\pi}{2}.
+
+    (6).
+
+    .. math::
+
+        \int_0^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x & = \int_0^1 \dfrac{1}{(1 - x)^2} \mathrm{d} x + \int_1^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x \\
+        & = \left. \dfrac{1}{1 - x} \right|_0^1 + \left. \dfrac{1}{1 - x} \right|_1^2.
+
+    该广义积分发散.
+
+2. 讨论广义积分 :math:`\displaystyle \int_2^{+\infty} \dfrac{1}{x (\ln x)^k} \mathrm{d} x` 的敛散性，若收敛，求其值. 又当 :math:`k` 为何值时，该广义积分取得最小值.
+
+.. proof:solution::
+
+    由于
+
+    .. math::
+
+        \int_2^{+\infty} \dfrac{1}{x (\ln x)^k} \mathrm{d} x = \int_2^{+\infty} \dfrac{\mathrm{d} (\ln x)}{(\ln x)^k} = \begin{cases} \left. \dfrac{1}{(1 - k)(\ln x)^{k - 1}} \right|_2^{+\infty}, & k \neq 1 \\ \left. \dfrac{1}{\ln x} \right|_2^{+\infty}, & k = 1 \end{cases}
+
+    所以当 :math:`k > 1` 时，该广义积分收敛，值为 :math:`\dfrac{1}{(k - 1)(\ln 2)^{k - 1}}`; 当 :math:`k \le 1` 时，该广义积分发散.
+
+    令 :math:`f(k) = (k - 1)(\ln 2)^{k - 1}, k > 1`, 那么
+
+    .. math::
+
+        f'(k) = (\ln 2)^{k - 1} + (k - 1)(\ln 2)^{k - 1} \cdot \ln \ln 2 = (\ln 2)^{k - 1} \left( 1 + (k - 1) \ln \ln 2 \right).
+
+    由于 :math:`\ln 2 \in (0, 1)`, :math:`\ln \ln 2 < 0`, 令 :math:`f'(k) = 0` 解得 :math:`k = 1 - \dfrac{1}{\ln \ln 2}`.
+    当 :math:`1 < k < 1 - \dfrac{1}{\ln \ln 2}` 时， :math:`f'(k) > 0`; 当 :math:`k > 1 - \dfrac{1}{\ln \ln 2}` 时， :math:`f'(k) < 0`,
+    因此当 :math:`k = 1 - \dfrac{1}{\ln \ln 2}` 时， :math:`f(k)` 取得极大值. 它是 :math:`f(k)` 唯一的极大值点，因此是其最大值点，
+    从而是该广义积分的最小值点.
+
+3. 设 :math:`\displaystyle f(x) = \begin{cases} \lambda e^{-\lambda x}, & x \ge 0 \\ 0, & x < 0 \end{cases}`, 其中 :math:`\lambda > 0`, 试求 :math:`\displaystyle \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x` 与 :math:`\displaystyle \int_{-\infty}^{+\infty} x^2 f(x) \mathrm{d} x`.
+
+.. proof:solution::
+
+    .. math::
+
+        \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x & = \int_0^{+\infty} x \cdot \lambda e^{-\lambda x} \mathrm{d} x = - \int_0^{+\infty} x \mathrm{d} e^{-\lambda x} \\
+        & = - \left. x e^{-\lambda x} \right|_0^{+\infty} + \int_0^{+\infty} e^{-\lambda x} \mathrm{d} x \\
+        & = \left. - \dfrac{1}{\lambda} e^{-\lambda x} \right|_0^{+\infty} = \dfrac{1}{\lambda}.
+
+    .. math::
+
+        \int_{-\infty}^{+\infty} x^2 f(x) \mathrm{d} x & = \int_0^{+\infty} x^2 \cdot \lambda e^{-\lambda x} \mathrm{d} x = - \int_0^{+\infty} x^2 \mathrm{d} e^{-\lambda x} \\
+        & = - \left. x^2 e^{-\lambda x} \right|_0^{+\infty} + \int_0^{+\infty} 2x e^{-\lambda x} \mathrm{d} x \\
+        & = \dfrac{2}{\lambda} \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x \\
+        & = \dfrac{2}{\lambda^2}.
