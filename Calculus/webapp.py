@@ -11,9 +11,13 @@ st.set_page_config(page_title="2023秋微积分查询随堂测验成绩", page_i
 Path(__file__).parent.joinpath(".logs").mkdir(exist_ok=True)
 
 
+if "dropped_columns" not in st.session_state:
+    st.session_state["dropped_columns"] = []
+
+
 @st.cache_resource
 def load_table():
-    path = "/home/wenh06/Jupyter/wenhao/resources/2023秋微积分随堂测验.xls"
+    path = "/home/wenh06/Jupyter/wenhao/resources/2023秋微积分随堂测验.xlsx"
     table = pd.read_excel(path)
     table = table.set_index("学生用户名")
     password_table = pd.read_csv("/home/wenh06/Jupyter/wenhao/resources/2023秋微积分查询密码-加密.csv")[["学生用户名", "密码"]]
@@ -21,7 +25,8 @@ def load_table():
     table = table.join(password_table.set_index("学生用户名"))
     table = table.fillna(-1)
     # drop columns with all -1 values
-    table = table.drop(columns=[c for c in table.columns if all(table[c] == -1)])
+    st.session_state["dropped_columns"] = [c for c in table.columns if all(table[c] == -1)]
+    table = table.drop(columns=st.session_state["dropped_columns"])
     for col in table.columns:
         if col not in ["学生姓名", "密码", "所属分组", "班级"]:
             # convert from float to int
@@ -159,6 +164,10 @@ if not st.session_state.is_admin:
                 }
                 st.session_state.remain_retries = MAX_RETRIES
 
+
+NON_EDITABLE_COLUMNS = ["学生姓名", "班级", "学生用户名"]
+SECRET_COLUMNS = ["密码", "所属分组"]
+
 # if bcrypt.checkpw(st.session_state["admin_password"].encode("utf-8"), magic_password):
 if st.session_state.is_admin:
     # logout button
@@ -167,6 +176,7 @@ if st.session_state.is_admin:
         st.sidebar.success("登出成功")
         # st.session_state["is_admin"] = False
         st.session_state.is_admin = False
+        st.session_state.edit_table = False
         # reload the page
         st.rerun()
     else:
@@ -181,7 +191,50 @@ if st.session_state.is_admin:
         # show the whole table
         show_table_button = st.sidebar.button("显示所有学生成绩", help="显示所有学生成绩")
         if show_table_button:
-            st.table(table[[c for c in table.columns if c not in ["密码", "所属分组"]]])
+            if st.session_state.get("edit_table", False):
+                st.sidebar.error("请先退出编辑")
+            else:
+                st.table(table[[c for c in table.columns if c not in SECRET_COLUMNS]])
+        edit_table_button = st.sidebar.button("编辑成绩", help="编辑成绩")
+        save_edited_table_button = st.sidebar.button("保存编辑", help="保存编辑")
+        quit_edit_button = st.sidebar.button("退出编辑", help="退出编辑")
+        if "edit_table" not in st.session_state:
+            st.session_state["edit_table"] = False
+        if edit_table_button:
+            st.session_state.edit_table = True
+        if quit_edit_button:
+            st.session_state.edit_table = False
+        if not show_table_button and st.session_state.edit_table:
+            if "edited_df" not in st.session_state:
+                st.session_state["edited_df"] = table.copy()
+
+            edited_df = st.data_editor(
+                st.session_state.edited_df[[c for c in st.session_state.edited_df if c not in SECRET_COLUMNS]],
+                disabled=NON_EDITABLE_COLUMNS,
+                use_container_width=True,
+            )
+
+            # update st.session_state.edited_df
+            for c in st.session_state.edited_df.columns:
+                if c not in SECRET_COLUMNS:
+                    st.session_state.edited_df[c] = edited_df[c]
+
+        if save_edited_table_button:
+            if not st.session_state.edit_table:
+                st.sidebar.error("不在编辑状态")
+            else:
+                raw_table = pd.read_excel("/home/wenh06/Jupyter/wenhao/resources/2023秋微积分随堂测验.xlsx")
+                raw_table = raw_table.set_index("学生用户名")
+                for c in raw_table.columns:
+                    if c in st.session_state.edited_df.columns:
+                        raw_table[c] = st.session_state.edited_df[c]
+                raw_table.to_excel("/home/wenh06/Jupyter/wenhao/resources/2023秋微积分随堂测验.xlsx")
+                st.sidebar.success("保存成功")
+                # clear cache
+                st.cache_resource.clear()
+                # reload table
+                table = load_table()
+                # st.success("表格已重新加载")
 
 # command to run:
 # nohup streamlit run webapp.py --server.port 8501 > .logs/webapp.log 2>&1 & echo $! > .logs/webapp.pid
