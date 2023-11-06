@@ -98,7 +98,7 @@
 
 (13). :math:`\displaystyle \int \sin^2 x \cos^2 x \mathrm{d} x`;
 
-(15). :math:`\displaystyle \int x (2x - 3)^10 \mathrm{d} x`;
+(15). :math:`\displaystyle \int x (2x - 3)^{10} \mathrm{d} x`;
 
 (17). :math:`\displaystyle \int \dfrac{1}{x^2 \sqrt{1 + x^2}} \mathrm{d} x`.
 
@@ -117,7 +117,7 @@
 
     .. math::
 
-        \int \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x = \int \dfrac{\sqrt{1 + x^2}}{2} \mathrm{d} (1 + x^2) = \dfrac{\sqrt{1 + x^2}}{2} + C.
+        \int \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x = \int \dfrac{\sqrt{1 + x^2}}{2} \mathrm{d} (1 + x^2) = \sqrt{1 + x^2} + C.
 
     (5).
 
@@ -129,7 +129,7 @@
 
     .. math::
 
-        \int \dfrac{\sqrt{1 + 3\ln x}}{x} \mathrm{d} x = \int \sqrt{1 + 3\ln x} \mathrm{d} (\ln x) = \dfrac{2}{3} (1 + 3\ln x)^{\frac{3}{2}} + C.
+        \int \dfrac{\sqrt{1 + 3\ln x}}{x} \mathrm{d} x = \int \sqrt{1 + 3\ln x} \mathrm{d} (\ln x) = \dfrac{2}{9} (1 + 3\ln x)^{\frac{3}{2}} + C.
 
     (9).
 
@@ -156,10 +156,10 @@
 
     .. math::
 
-        \int x (2x - 3)^10 \mathrm{d} x & = \int \dfrac{1}{2} (2x - 3)^11 \mathrm{d} x + \int \dfrac{3}{2} (2x - 3)^10 \mathrm{d} x \\
-        & = \dfrac{1}{4} \int (2x - 3)^11 \mathrm{d} (2x - 3) + \dfrac{3}{4} \int (2x - 3)^10 \mathrm{d} (2x - 3) \\
-        & = \dfrac{1}{4} \cdot \dfrac{(2x - 3)^12}{12} + \dfrac{3}{4} \cdot \dfrac{(2x - 3)^11}{11} + C \\
-        & = \dfrac{1}{48} (2x - 3)^12 + \dfrac{3}{44} (2x - 3)^11 + C.
+        \int x (2x - 3)^{10} \mathrm{d} x & = \int \dfrac{1}{2} (2x - 3)^{11} \mathrm{d} x + \int \dfrac{3}{2} (2x - 3)^{10} \mathrm{d} x \\
+        & = \dfrac{1}{4} \int (2x - 3)^{11} \mathrm{d} (2x - 3) + \dfrac{3}{4} \int (2x - 3)^{10} \mathrm{d} (2x - 3) \\
+        & = \dfrac{1}{4} \cdot \dfrac{(2x - 3)^{12}}{12} + \dfrac{3}{4} \cdot \dfrac{(2x - 3)^{11}}{11} + C \\
+        & = \dfrac{1}{48} (2x - 3)^{12} + \dfrac{3}{44} (2x - 3)^{11} + C.
 
     (17).
 
@@ -167,7 +167,10 @@
 
         \int \dfrac{1}{x^2 \sqrt{1 + x^2}} \mathrm{d} x & = -\int \dfrac{1}{\sqrt{1 + x^2}} \mathrm{d} \left( \dfrac{1}{x} \right) = -\int \dfrac{1}{x} \cdot \dfrac{1}{\sqrt{1 + \left(\frac{1}{x}\right)^2}} \mathrm{d} \left( \dfrac{1}{x} \right) \\
         & = -\dfrac{1}{2} \int \dfrac{1}{\sqrt{1 + \left(\frac{1}{x}\right)^2}} \mathrm{d} \left( \frac{1}{x} \right)^2 \\
-        & = -\sqrt{1 + \left(\frac{1}{x}\right)^2} + C.
+        & = -\sqrt{1 + \left(\frac{1}{x}\right)^2} + C \\
+        & = -\dfrac{\sqrt{x^2 + 1}}{x} + C.
+
+    以上假设了 :math:`x > 0`, 对于 :math:`x < 0` 的情况，从根式中提出 :math:`x` 要变（2次）号，最终结果是一样的。
 
 5. 计算下列不定积分：
 
@@ -197,7 +200,16 @@
         & = 4t \ln t - 4t + C = 4 \sqrt{x} \ln \sqrt{x} - 4 \sqrt{x} + C \\
         & = 2 \sqrt{x} \ln x - 4 \sqrt{x} + C.
 
-    (6).
+    也可以直接采用分部积分法：
+
+    .. math::
+
+        \int \dfrac{\ln x}{\sqrt{x}} \mathrm{d} x & = 2 \int \ln x \mathrm{d} \left( \sqrt{x} \right) = 2 \sqrt{x} \ln x - 2 \int \sqrt{x} \mathrm{d} (\ln x) \\
+        & = 2 \sqrt{x} \ln x - 2 \int \sqrt{x} \cdot \dfrac{1}{x} \mathrm{d} x \\
+        & = 2 \sqrt{x} \ln x - 2 \int \dfrac{1}{\sqrt{x}} \mathrm{d} x \\
+        & = 2 \sqrt{x} \ln x - 4 \sqrt{x} + C.
+
+    (6). 采用分部积分法：
 
     .. math::
 
@@ -205,7 +217,7 @@
         & = x \ln(1 + x^2) - 2 \int \dfrac{x^2}{1 + x^2} \mathrm{d} x = x \ln(1 + x^2) - 2 \int \left( 1 - \dfrac{1}{1 + x^2} \right) \mathrm{d} x \\
         & = x \ln(1 + x^2) - 2x + 2 \arctan x + C.
 
-    (8).
+    (8). 采用分部积分法：
 
     .. math::
 
