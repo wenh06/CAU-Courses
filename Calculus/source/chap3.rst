@@ -631,6 +631,141 @@
 
 (7). :math:`r = 2a (2 + \cos \theta)`.
 
+.. proof:solution::
+
+    (1). :math:`y = 9 - x^2` 与 :math:`y = 0` 的交点为 :math:`x = \pm 3`, 因此所围成的图形的面积 :math:`S` 为
+
+    .. math::
+
+        S = \int_{-3}^3 (9 - x^2) \mathrm{d} x = \left. \left( 9x - \dfrac{x^3}{3} \right) \right|_{-3}^3 = 36.
+
+    (3). :math:`y = x^3, x = 0, y = 1` 所围成的图形为正方形 :math:`[0, 1] \times [0, 1]` 内，位于曲线 :math:`y = x^3` 之上的部分，
+    因此所围成的图形的面积 :math:`S` 为
+
+    .. math::
+
+        S = 1 \times 1 - \int_0^1 x^3 \mathrm{d} x = 1 - \left. \dfrac{x^4}{4} \right|_0^1 = \dfrac{3}{4}.
+
+    (5). :math:`y = \sin x, x = -\pi, x = \dfrac{\pi}{2}, y = 0` 所围成的图形分为两部分，一部分为 :math:`[-\pi, 0] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之上的部分，
+    这部分函数值为负的，因此面积等于积分的相反数；另一部分为 :math:`[0, \frac{\pi}{2}] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之下的部分，因此所围成的图形的面积 :math:`S` 为
+
+    .. math::
+
+        S = -\int_{-\pi}^0 \sin x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin x \mathrm{d} x = \left. \left( \cos x \right) \right|_{-\pi}^0 - \left. \cos x \right|_0^{\frac{\pi}{2}} = 3.
+
+    (7). :math:`r = 2a (2 + \cos \theta)` 所围成的图形为 :math:`\theta` 从 :math:`0` 增加到 :math:`2\pi` 形成的闭合曲线所围成的图形，因此所围成的图形的面积 :math:`S` 为
+
+    .. math::
+
+        S & = \int_0^{2\pi} \dfrac{1}{2} r^2 \mathrm{d} \theta = \int_0^{2\pi} \dfrac{1}{2} \cdot 4a^2 (2 + \cos \theta)^2 \mathrm{d} \theta \\
+        & = 2a^2 \int_0^{2\pi} \left( 4 + 4 \cos \theta + \cos^2 \theta \right) \mathrm{d} \theta \\
+        & = 2a^2 \int_0^{2\pi} \left( 4 + 4 \cos \theta + \dfrac{1 + \cos 2\theta}{2} \right) \mathrm{d} \theta \\
+        & = 2a^2 \left. \left( 4\theta + 4 \sin \theta + \dfrac{\theta}{2} + \dfrac{\sin 2\theta}{4} \right) \right|_0^{2\pi} \\
+        & = 2a^2 \left( 8\pi + 0 + \pi + 0 \right) = 18 \pi a^2.
+
+2. 求抛物线 :math:`y = -x^2 + 4x - 3` 与其在点 :math:`(0, -3)` 和 :math:`(3, 0)` 处的切线所围成的平面图形的面积.
+
+.. proof:solution::
+
+    抛物线 :math:`y = -x^2 + 4x - 3` 的导函数为 :math:`y' = -2x + 4`, 因此在点 :math:`A = (0, -3)` 处的切线方程为 :math:`y = 4x - 3`,
+    在点 :math:`B = (3, 0)` 处的切线方程为 :math:`y = -2x + 6`, 两条切线的交点为 :math:`C = \left( \frac{3}{2}, 3 \right)`.
+    因此所围成的图形的为三角形 :math:`\triangle ABC` 内位于抛物线 :math:`y = -x^2 + 4x - 3` 之上的部分。
+    :math:`y = 4x - 3` 与 :math:`x` 轴的交点为 :math:`D = (\frac{3}{4}, 0)`, 抛物线 :math:`y = -x^2 + 4x - 3` 与 :math:`x` 轴的交点为 :math:`B` 与 :math:`E = (1, 0)`.
+    因此所围成的图形可以分为两部分，第一部分为 :math:`y = 4x - 3`, :math:`y = -x^2 + 4x - 3` 以及 :math:`x` 轴围成的图形，其面积为
+
+    .. math::
+
+        S_1 & = - \int_0^1 (-x^2 + 4x - 3) \mathrm{d} x - S_{\triangle AOD} \\
+        & = - \left. \left( -\dfrac{x^3}{3} + 2x^2 - 3x \right) \right|_0^1 - \dfrac{1}{2} \cdot \dfrac{3}{4} \cdot 3 \\
+        & = - \left( -\dfrac{1}{3} + 2 - 3 \right) - \dfrac{9}{8} = \dfrac{4}{3} - \dfrac{9}{8} \\
+        & = \dfrac{5}{24}.
+
+    第二部分为三角形 :math:`\triangle BCD` 内位于抛物线 :math:`y = -x^2 + 4x - 3` 以及 :math:`x` 轴上方的部分，其面积为
+
+    .. math::
+
+        S_2 & = S_{\triangle BCD} - \int_1^3 (-x^2 + 4x - 3) \mathrm{d} x \\
+        & = \dfrac{1}{2} \cdot \left(3 - \frac{3}{4} \right) \cdot 3 - \left. \left( -\dfrac{x^3}{3} + 2x^2 - 3x \right) \right|_1^3 \\
+        & = \dfrac{27}{8} - \left( -9 + 18 - 9 \right) + \left( -\dfrac{1}{3} + 2 - 3 \right) \\
+        & = \dfrac{27}{8} - \dfrac{4}{3} = \dfrac{49}{24}.
+
+    所以所围成的图形的面积 :math:`S = S_1 + S_2 = \dfrac{5}{24} + \dfrac{49}{24} = \dfrac{54}{24} = \dfrac{9}{4}`.
+
+4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \le t \le 2\pi)` 所围成的图形的面积.
+
+.. proof:solution::
+
+    摆线长 :math:`\displaystyle \ell = \int_0^{2\pi} \sqrt{\left( \dfrac{\mathrm{d} x}{\mathrm{d} t} \right)^2 + \left( \dfrac{\mathrm{d} y}{\mathrm{d} t} \right)^2} \mathrm{d} t`, 因此有
+
+    .. math::
+
+        \ell & = \int_0^{2\pi} \sqrt{a^2 \left( 1 - \cos t \right)^2 + a^2 \sin^2 t} \mathrm{d} t = \int_0^{2\pi} a \sqrt{2 - 2 \cos t} \mathrm{d} t \\
+        & = \int_0^{2\pi} a \sqrt{4 \sin^2 \frac{t}{2}} \mathrm{d} t = 2a \int_0^{2\pi} \sin \frac{t}{2} \mathrm{d} t = -4a \left. \cos \frac{t}{2} \right|_0^{2\pi} \\
+        & = 8a.
+
+6. 设抛物线 :math:`y^2 = 2x` 与直线 :math:`y = x - 4` 围成的平面区域为 :math:`D`,
+
+(1). 求 :math:`D` 的面积；
+
+(2). 求 :math:`D` 绕 :math:`x` 轴旋转一周所生成的旋转体体积.
+
+.. proof:solution::
+
+    (1). 抛物线 :math:`y^2 = 2x` 与直线 :math:`y = x - 4` 的交点为 :math:`A = (8, 4)`, :math:`B = (2, -2)`,
+    因此所围成的图形为三角形 :math:`\triangle OAB` 内位于抛物线 :math:`y^2 = 2x` 以及直线 :math:`y = x - 4` 之间的部分。
+    令点 :math:`C = (0, -2), D = (0, 4)`, 那么平面区域 :math:`D` 的面积等于梯形 :math:`ABCD` 的面积减去以 :math:`y` 为自变量的函数
+    :math:`x = \dfrac{y^2}{2}` 在区间 :math:`[-2, 4]` 上的定积分，即
+
+    .. math::
+
+        S_D & = \dfrac{1}{2} \cdot (8 + 2) \cdot 6 - \int_{-2}^4 \dfrac{y^2}{2} \mathrm{d} y = 30 - \left. \dfrac{y^3}{6} \right|_{-2}^4 \\
+        & = 30 - \dfrac{8^3}{6} + \dfrac{(-2)^3}{6} = 30 - \dfrac{64}{6} - \dfrac{8}{6} = 18.
+
+    (2). 令点 :math:`E = (4, 0), F = (8, 0)`, 那么旋转体的体积等于曲线 :math:`y = \sqrt{2x}`, 直线 :math:`x = 8` 与 :math:`x` 轴所围成的图形绕
+    :math:`x` 轴旋转一周所形成的旋转体的体积，减去以 :math:`EF` 为高的圆锥的体积，即
+
+    .. math::
+
+        V & = \pi \int_0^8 \left( \sqrt{2x} \right)^2 \mathrm{d} x - \dfrac{1}{3} \pi \cdot 4^2 \cdot 4 \\
+        & = 2 \pi \int_0^8 x \mathrm{d} x - \dfrac{64}{3} \pi = \left. \pi x^2 \right|_0^8 - \dfrac{64}{3} \pi \\
+        & = 64 \pi - \dfrac{64}{3} \pi = \dfrac{128}{3} \pi.
+
+8. 求曲线 :math:`xy = 1` 与直线 :math:`x = 1, x = 2, y = 0` 所围成的平面区域绕 :math:`y` 轴旋转一周所形成的旋转体体积.
+
+.. proof:solution::
+
+    曲线 :math:`xy = 1` 与直线 :math:`x = 1, x = 2, y = 0` 所围成的平面区域绕 :math:`y` 轴旋转一周所形成的旋转体可以分为两部分。
+    第一部分为曲线 :math:`x = \dfrac{1}{y}`, 直线 :math:`y = 1, y = \dfrac{1}{2}` 与 :math:`y` 轴所围成的曲边梯形绕
+    :math:`y` 轴旋转一周所形成的旋转体减去矩形 :math:`[0, 1] \times [\frac{1}{2}, 1]` 绕 :math:`y` 轴旋转一周所形成的旋转体，其体积为
+
+    .. math::
+
+        S_1 & = \pi \int_{\frac{1}{2}}^1 \left( \dfrac{1}{y} \right)^2 \mathrm{d} y - \left( 1 - \dfrac{1}{2} \right) \cdot \pi \cdot 1^2 \\
+        & = \pi \int_{\frac{1}{2}}^1 \dfrac{1}{y^2} \mathrm{d} y - \dfrac{\pi}{2} = \left. -\dfrac{\pi}{y} \right|_{\frac{1}{2}}^1 - \dfrac{\pi}{2} \\
+        & = -\pi + 2 \pi - \dfrac{\pi}{2} \\
+        & = \dfrac{\pi}{2}.
+
+    第二部分为矩形 :math:`[1, 2] \times [0, \frac{1}{2}]` 绕 :math:`y` 轴旋转一周所形成的旋转体，其体积为
+
+    .. math::
+
+        S_2 = \dfrac{1}{2} \cdot \pi \cdot 2^2 - \dfrac{1}{2} \cdot \pi \cdot 1^2 = \dfrac{3\pi}{2}.
+
+    所以所围成的图形的面积 :math:`S = S_1 + S_2 = \dfrac{\pi}{2} + \dfrac{3\pi}{2} = 2\pi`.
+
+10. 设某水库的闸门为一等腰梯形，下底为 2m, 上底为 6m, 高为 10m. 当水库水齐闸门顶时，求闸门所受的水压力.
+
+.. proof:solution::
+
+    水深 :math:`h` 处的压强为 :math:`\rho g h`, 其中 :math:`\rho` 为水的密度， :math:`g` 为重力加速度。
+    水深 :math:`h` 处闸门宽 :math:`w` 为 :math:`w = 6 - \dfrac{4}{10} h`, 因此闸门所受的水压力
+
+    .. math::
+
+        F & = \int_0^{10} \rho g h \cdot \left( 6 - \dfrac{4}{10} h \right) \mathrm{d} h = \rho g \int_0^{10} \left( 6h - \dfrac{4}{10} h^2 \right) \mathrm{d} h \\
+        & = \rho g \left. \left( 3h^2 - \dfrac{4}{30} h^3 \right) \right|_0^{10} = \rho g \left( 300 - \dfrac{400}{3} \right) \\
+        & = \dfrac{500}{3} \rho g.
+
 §3.5 广义积分
 ---------------------
 
