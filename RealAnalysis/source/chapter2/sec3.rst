@@ -80,6 +80,8 @@
     由于 :math:`G` 是开集，所以 :math:`\mathring{U} (x) \cap G` 也是开集。任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
     那么有 :math:`(a, b) \subset E`，这与 :math:`E` 是零测度集矛盾，所以 :math:`\overline{G} = \overline{G \setminus E}`.
 
+.. _ex-2-14:
+
 14. 设 :math:`E_1 \subset E_2 \subset \cdots \subset E_n \subset \cdots`，试证
 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) = \lim\limits_{n \to \infty} m^* E_n`.
 
@@ -97,7 +99,7 @@
 
         \lim\limits_{n \to \infty} m^* E_n \le m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
 
-    另一方面，由外测度的正则性，即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
+    另一方面，由 :ref:`勒贝格外测度的正则性 <reg_outer_measure>`, 即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
     使得 :math:`m A_n = m^* E_n`, 令
 
     .. math::
