@@ -17,3 +17,20 @@
         m^* E \le m^* A \le m A \le m G_n \le m^* E + \frac{1}{n}.
 
     令 :math:`n \to \infty`, 则有 :math:`m^* E = m^* A = m A`.
+
+勒贝格外测度的正则性有一系列重要的推论，这里列举几个：
+
+(1). 设 :math:`\{E_n\}_{n=1}^{\infty}` 为 :math:`\mathbb{R}^d` 中的一列点集，那么
+
+.. math::
+
+    \DeclareMathOperator*\lowlim{\underline{lim}}
+    \DeclareMathOperator*\uplim{\overline{lim}}
+
+    m^* \left( \lowlim_{n \to \infty} E_n \right) \le \lowlim_{n \to \infty} m^* E_n.
+
+(2). 设 :math:`\{E_n\}_{n=1}^{\infty}` 为 :math:`\mathbb{R}^d` 中的渐张集列，那么
+
+.. math::
+
+    \lim_{n \to \infty} m^* E_n = m^* \left( \lim_{n \to \infty} E_n \right).

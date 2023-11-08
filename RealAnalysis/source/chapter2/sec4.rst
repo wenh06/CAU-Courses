@@ -125,7 +125,7 @@
 .. proof:proof::
 
     对所有 :math:`n \in \mathbb{N}`, 令 :math:`\displaystyle A_n = \bigcup_{k=1}^{n} E_k`, 那么 :math:`\{A_n\}_{n \in \mathbb{N}}`
-    形成了一个渐增集列，且有 :math:`\displaystyle \bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} E_n`.
+    形成了一个渐张集列，且有 :math:`\displaystyle \bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} E_n`.
     由 :ref:`本章第 3 节第 14 题 <ex-2-14>` 有
 
     .. math::
