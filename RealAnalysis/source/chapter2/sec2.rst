@@ -39,7 +39,7 @@
 
 .. proof:solution::
 
-    不合理。因为闭集的闭包仍然是闭集，以 :ref:`上题<ex-2-4>` 中的 :math:`G` 为例，由于 :math:`m \overline{G} = 1`，所以这样定义的 :math:`G` 的外测度 :math:`m^* G \ge 1`.
+    不合理。因为闭集的闭包仍然是闭集，以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例，由于 :math:`m \overline{G} = 1`，所以这样定义的 :math:`G` 的外测度 :math:`m^* G \ge 1`.
     而对每一个开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})` 来说，包含它的最小闭集为
     :math:`\overline{G_n} = [a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}}]`, 所以这样定义的 :math:`G_n` 的外测度 :math:`m^* G_n = \dfrac{\varepsilon}{2^n}`.
     那么 :math:`\sum\limits_{n=1}^\infty m^* G_n = \varepsilon`. 这样一来，外测度的半可加性

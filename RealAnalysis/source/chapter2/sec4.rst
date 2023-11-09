@@ -63,7 +63,7 @@
 
     .. math::
 
-        m \left( \bigcap_{i = 1}^{+\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{+\infty} \mathcal{C} E_{n_{k_i}} \right) \ge 1 - \sum_{i = 1}^{+\infty} m \mathcal{C} E_{n_{k_i}} \ge 1 - \varepsilon.
+        m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathcal{C} E_{n_{k_i}} \right) \ge 1 - \sum_{i = 1}^{\infty} m \mathcal{C} E_{n_{k_i}} \ge 1 - \varepsilon.
 
     :math:`\varepsilon` 足够小的时候 (比如 :math:`\varepsilon < 1`), 有 :math:`m \left( \bigcap\limits_{i=1}^\infty E_{n_{k_i}} \right) > 0`.
     所以，子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 即是题目所求。
@@ -73,7 +73,62 @@
 
 .. proof:proof::
 
-    待写
+    由于 :math:`E` 是 :math:`\mathbb{R}` 中的可测集，那么存在一个 :math:`F_{\sigma}` 集 :math:`F`, 即 :math:`E` 的等测核，
+    使得 :math:`F \subset E` 且 :math:`m F = m E`. 记 :math:`Z = E \setminus F`, 那么 :math:`Z` 是零测集， 且
+
+    .. math::
+
+        E = F \cup Z
+
+    为一个 Borel 集与零测集的不交并。令
+
+    .. math::
+
+        f: \mathbb{R}^2 \to \mathbb{R}, \quad f(x, y) = x - y,
+
+    那么 :math:`f` 是一个线性映射，从而是连续的。令 :math:`\mathcal{B}` 为 :math:`\mathbb{R}` 中的 Borel 集构成的 :math:`\sigma` 代数，
+    那么由 :ref:`本节第 35 题 <ex-2-35>` 知 :math:`\{ f^{-1} (B) : B \in \mathcal{B} \}` 为 :math:`\mathbb{R}^2` 中的 :math:`\sigma` 代数。
+    由于开集在连续映射下的原像为开集，所以这个 :math:`\sigma` 代数是 :math:`\mathbb{R}^2` 中的 Borel :math:`\sigma` 代数。
+    由于 :math:`D(E) = f^{-1} (E) = f^{-1} (F) \cup f^{-1} (Z)`, 其中 :math:`f^{-1} (F)` 为 :math:`\mathbb{R}^2` 中的 Borel 集，
+    只要证明 :math:`f^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集，即有 :math:`D(E)` 为 :math:`\mathbb{R}^2` 中的可测集。
+
+    下证 :math:`f^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集。事实上， :math:`f` 可以视为如下两个映射的复合：
+
+    .. math::
+
+        & T: \mathbb{R}^2 \to \mathbb{R}^2, \quad T(x, y) = (x - y, y), \\
+        & \operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}, \quad \operatorname{pr}_1 (x, y) = x,
+
+    即 :math:`f = \operatorname{pr}_1 \circ T`. 由于 :math:`T` 是一个非奇异线性变换，对任意 :math:`A \subset \mathbb{R}^2` 有
+    （这个结论参见 :ref:`本节第 32 题 <ex-2-32>` ）
+
+    .. math::
+
+        m^* (T^{-1}(A)) = \lvert \det T^{-1} \rvert m^* A,
+
+    所以只要证明 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集即可。事实上任取 :math:`\varepsilon > 0`, 有
+
+    .. math::
+
+        \operatorname{pr}_1^{-1} (Z) = \{ (x, y) \in \mathbb{R}^2 : x \in Z \} = Z \times \mathbb{R} \subset \bigcup_{k = 1}^{\infty} G_k \times (-k, k),
+
+    其中 :math:`Z \subset G_k \subset \mathbb{R}` 是开集，且 :math:`m G_k < \dfrac{\varepsilon}{k \cdot 2^{k+1}}`.
+    这样的 :math:`G_k` 总可以取到，因为 :math:`Z` 是零测集。那么有
+
+    .. math::
+
+        m^* \left( \operatorname{pr}_1^{-1} (Z) \right) \le \sum_{k = 1}^{\infty} m^* \left( G_k \times (-k, k) \right) = \sum_{k = 1}^{\infty} m G_k \cdot 2k < \sum_{k = 1}^{\infty} \frac{\varepsilon}{k \cdot 2^{k+1}} \cdot 2k = \varepsilon.
+
+    由于 :math:`\varepsilon` 是任意的正数，所以 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集。
+    于是我们证明了 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集。
+
+    综上所述，
+
+    .. math::
+
+        D(E) = f^{-1} (F) \cup f^{-1} (Z) = f^{-1} (F) \cup T^{-1} (\operatorname{pr}_1^{-1} (Z))
+
+    为 :math:`\mathbb{R}^2` 中的可测集。
 
 29. 设 :math:`E` 为 :math:`(0, 1)` 中正测度子集且存在常数 :math:`c > 0` 使对 :math:`(0, 1)` 中的变动区间 :math:`I` 有
 :math:`\lim\limits_{m I \to 0} m(E \cap I) / m I = c`, 证明 :math:`m E = 1`.
@@ -169,6 +224,18 @@
         m^* \left( \bigcup\limits_{n=1}^{N-1} E_n \right) = m^* A_{N-1} < \sum\limits_{n=1}^{N-1} m^* E_n,
 
     这与 :math:`N` 的最小性矛盾。所以 :math:`E_N` 是不可测的。
+
+.. _ex-2-32:
+
+32. 设 :math:`T` 是 :math:`\mathbb{R}^n` 上的非奇异线性变换，证明对任一 :math:`E \subset \mathbb{R}^n` 有
+
+.. math::
+
+    m^* (T(E)) = \lvert \det T \rvert m^* E.
+
+.. proof:proof::
+
+    待写。
 
 33. 设 :math:`E` 为 :math:`\mathbb{R}^n` 中任一子集， :math:`\alpha` 为给定正数。对任意的 :math:`\varepsilon > 0`, 令
 
@@ -294,6 +361,8 @@
 
     从而有 :math:`N \le (1+b)^n a^{-n}`.
 
+.. _ex-2-35:
+
 35. 设 :math:`f` 为集 :math:`X \to Y` 的任一映射， :math:`\mathcal{A}, \mathcal{B}` 分别为 :math:`X, Y` 中的 :math:`\sigma` 代数，证明
 
 .. math::
@@ -325,10 +394,10 @@
 
     .. math::
 
-        \bigcup_{n=1}^{+\infty} A_n = \bigcup_{n=1}^{+\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{+\infty} B_n \right).
+        \bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
-    由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数，那么 :math:`\bigcup\limits_{n=1}^{+\infty} B_n \in \mathcal{B}`,
-    从而 :math:`\bigcup\limits_{n=1}^{+\infty} A_n \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
+    由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数，那么 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \mathcal{B}`,
+    从而 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
 
     综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{ f^{-1} (B) : B \in \mathcal{B} \}` 为 :math:`X` 中的 :math:`\sigma` 代数。
 
@@ -352,9 +421,9 @@
 
     .. math::
 
-        \mathcal{A} \ni \bigcup_{n=1}^{+\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{+\infty} B_n \right).
+        \mathcal{A} \ni \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
-    从而 :math:`\bigcup\limits_{n=1}^{+\infty} B_n \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
+    从而 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
 
     综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathcal{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数。
 
@@ -385,14 +454,14 @@
 
     .. math::
 
-        m \left( \bigcup_{n=1}^{+\infty} A_n \right) \le \sum_{n=1}^{+\infty} m A_n = 0.
+        m \left( \bigcup_{n=1}^{\infty} A_n \right) \le \sum_{n=1}^{\infty} m A_n = 0.
 
     若存在 :math:`A_{n_0} \in \{A_n\}_{n \in \mathbb{N}}`, 使得 :math:`m \mathcal{C} A_{n_0} = 0`, 那么有
 
     .. math::
 
-        m \left( \mathcal{C} \left( \bigcup_{n=1}^{+\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{+\infty} \mathcal{C} A_n \right) \le m \mathcal{C} A_{n_0} = 0.
+        m \left( \mathcal{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{\infty} \mathcal{C} A_n \right) \le m \mathcal{C} A_{n_0} = 0.
 
-    即知 :math:`\bigcup\limits_{n=1}^{+\infty} A_n \in \mathcal{A}`.
+    即知 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \mathcal{A}`.
 
     综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数。

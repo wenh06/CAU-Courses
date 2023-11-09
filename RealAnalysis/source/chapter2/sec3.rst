@@ -104,13 +104,13 @@
 
     .. math::
 
-        C_n = \bigcap\limits_{k=n}^{+\infty} A_k, \quad n \in \mathbb{N}.
+        C_n = \bigcap\limits_{k=n}^{\infty} A_k, \quad n \in \mathbb{N}.
 
     那么 :math:`C_n` 也是 :math:`G_{\delta}`-集，从而可测，而且 :math:`\{C_n\}` 构成（可测集的）渐张列，那么有
 
     .. math::
 
-        m \left( \bigcup\limits_{n=1}^\infty C_n \right) = \lim\limits_{n \to \infty} m C_n.
+        m \left( \bigcup\limits_{n=1}^{\infty} C_n \right) = \lim\limits_{n \to \infty} m C_n.
 
     又由于有包含关系 :math:`E_n \subset C_n \subset A_n`, 以及 :math:`m A_n = m^* E_n`, 所以有
 
@@ -135,7 +135,7 @@
 
 .. proof:proof::
 
-    仿照 :ref:`第一章第21题<ex-1-21>` 中的构造，也是本章第四节定理 4.1 中的构造，定义区间 :math:`[0, 1)` 上的一个等价关系为
+    仿照 :ref:`第一章第 21 题 <ex-1-21>` 中的构造，也是本章第四节定理 4.1 中的构造，定义区间 :math:`[0, 1)` 上的一个等价关系为
 
     .. math::
 
@@ -159,7 +159,7 @@
 
 .. proof:solution::
 
-    可以借用 :ref:`第一章第6题<ex-1-6>` 中的例子，构造如下的可测集列
+    可以借用 :ref:`第一章第 6 题 <ex-1-6>` 中的例子，构造如下的可测集列
 
     .. math::
 

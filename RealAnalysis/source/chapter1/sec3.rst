@@ -42,7 +42,7 @@
 
     这与题设矛盾。所以交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k` 非空。
 
-19. 设点集列 :math:`\{ E_k \}` 如 :ref:`上题<ex-1-18>`, :math:`f` 为 :math:`[a, b]` 上连续函数，
+19. 设点集列 :math:`\{ E_k \}` 如 :ref:`上题 <ex-1-18>`, :math:`f` 为 :math:`[a, b]` 上连续函数，
 证明 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) = \bigcap\limits_{k=1}^{\infty} f(E_k)`.
 
 .. proof:proof::
@@ -160,7 +160,7 @@
 
         任取 :math:`\mathbb{R}` 中开集 :math:`U`, 若 :math:`U \cap P \neq \emptyset`, 那么从上面的证明过程可以看出 :math:`f(U) = \mathbb{R}`.
         若 :math:`U \cap P = \emptyset`, 那么 :math:`U \subset G`. 令 :math:`U` 的构成区间为 :math:`\{ U_s \}_{s \in S}`,
-        那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中（见本章 :ref:`第24题<ex-1-24>`）。 由于
+        那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中（见本章 :ref:`第 24 题 <ex-1-24>`）。 由于
 
         .. math::
 
