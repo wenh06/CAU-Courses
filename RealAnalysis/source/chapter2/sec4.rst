@@ -241,7 +241,43 @@
 
 .. proof:proof::
 
-    待写。
+    由于非奇异线性变换都可以表示为以下三类变换的复合：
+
+    1. 某两个分量的交换： :math:`T(x_1, \dots, x_i, \dots, x_j, \dots, x_n) = (x_1, \dots, x_j, \dots, x_i, \dots, x_n)`;
+
+    2. 某个分量的伸缩： :math:`T(x_1, \dots, x_i, \dots, x_n) = (x_1, \dots, c x_i, \dots, x_n)`, 其中 :math:`c \ne 0`;
+
+    3. 某个分量乘以常数加到另一个分量上： :math:`T(x_1, \dots, x_i, \dots, x_j, \dots, x_n) = (x_1, \dots, x_i + c x_j, \dots, x_j, \dots, x_n)`.
+
+    而又有 :math:`\det T_k \circ \cdots \circ T_1 = \det T_k \cdots \det T_1`, 所以只要证明对于上述三种变换，结论成立即可。
+
+    :math:`\mathbb{R}^n` 中点集外测度的定义为该点集的 :math:`L`-覆盖的体积和的下确界， :math:`L`-覆盖由可数多个半开闭矩体构成，
+    因此只要对半开闭矩体的变换证明结论成立即可。任取一个半开闭矩体 :math:`I = [a_1, b_1) \times \cdots \times [a_n, b_n)`,
+    :math:`m I = (b_1 - a_1) \cdots (b_n - a_n)`.
+
+    对于第一类变换， :math:`T(I) = [a_1, b_1) \times \cdots \times [a_j, b_j) \times \cdots \times [a_i, b_i) \times \cdots \times [a_n, b_n)`, :math:`\det T = -1`, 有
+
+    .. math::
+
+        m T(I) = (b_1 - a_1) \cdots (b_j - a_j) \cdots (b_i - a_i) \cdots (b_n - a_n) = m I = \lvert \det T \rvert m I.
+
+    对于第二类变换，若 :math:`c > 0`, 则 :math:`T(I) = [a_1, b_1) \times \cdots \times [c a_i, c b_i) \times \cdots \times [a_n, b_n)`,
+    :math:`\det T = c`, 若 :math:`c < 0`, 则 :math:`T(I) = [c b_1, c a_1) \times \cdots \times (c b_i, c a_i] \times \cdots \times [c b_n, c a_n)`, :math:`\det T = c`. 那么有
+
+    .. math::
+
+        m T(I) & = (b_1 - a_1) \cdots \lvert c b_i - c a_i \rvert \cdots (b_n - a_n) = c (b_1 - a_1) \cdots (b_i - a_i) \cdots (b_n - a_n) \\
+        & = \lvert c \rvert m I = \lvert \det T \rvert m I.
+
+    对于第三类变换， :math:`T(I) = [a_1, b_1) \times \cdots \times [a_i + c (b_j - a_j), b_i + c (b_j - a_j)) \times \cdots \times [a_j, b_j) \times \cdots \times [a_n, b_n)`, :math:`\det T = 1`,
+
+    .. math::
+
+        m T(I) & = (b_1 - a_1) \cdots (b_i + c (b_j - a_j) - a_i - c (b_j - a_j)) \cdots (b_j - a_j) \cdots (b_n - a_n) \\
+        & = (b_1 - a_1) \cdots (b_i - a_i) \cdots (b_j - a_j) \cdots (b_n - a_n) \\
+        & = m I = \lvert \det T \rvert m I.
+
+    综上所述，对于任意的半开闭矩体 :math:`I`, 有 :math:`m T(I) = \lvert \det T \rvert m I`, 从而有 :math:`m^* (T(E)) = \lvert \det T \rvert m^* E`.
 
 33. 设 :math:`E` 为 :math:`\mathbb{R}^n` 中任一子集， :math:`\alpha` 为给定正数。对任意的 :math:`\varepsilon > 0`, 令
 
