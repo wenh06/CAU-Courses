@@ -644,14 +644,13 @@
 
     .. math::
 
-        S = 1 \times 1 - \int_0^1 x^3 \mathrm{d} x = 1 - \left. \dfrac{x^4}{4} \right|_0^1 = \dfrac{3}{4}.
+        S = \int_0^1 (1 - x^3) \mathrm{d} x = \left. \left( x - \dfrac{x^4}{4} \right) \right|_0^1 = \dfrac{3}{4}.
 
-    (5). :math:`y = \sin x, x = -\pi, x = \dfrac{\pi}{2}, y = 0` 所围成的图形分为两部分，一部分为 :math:`[-\pi, 0] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之上的部分，
-    这部分函数值为负的，因此面积等于积分的相反数；另一部分为 :math:`[0, \frac{\pi}{2}] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之下的部分，因此所围成的图形的面积 :math:`S` 为
+    (5). :math:`y = \sin x, x = -\pi, x = \dfrac{\pi}{2}, y = 0` 所围成的图形分为两部分，一部分为 :math:`[-\pi, 0] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之上的部分；另一部分为 :math:`[0, \frac{\pi}{2}] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之下的部分，因此所围成的图形的面积 :math:`S` 为
 
     .. math::
 
-        S = -\int_{-\pi}^0 \sin x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin x \mathrm{d} x = \left. \left( \cos x \right) \right|_{-\pi}^0 - \left. \cos x \right|_0^{\frac{\pi}{2}} = 3.
+        S = \int_{-\pi}^0 (0 - \sin x) \mathrm{d} x + \int_0^{\frac{\pi}{2}} (\sin x - 0) \mathrm{d} x = \left. \left( \cos x \right) \right|_{-\pi}^0 - \left. \cos x \right|_0^{\frac{\pi}{2}} = 3.
 
     (7). :math:`r = 2a (2 + \cos \theta)` 所围成的图形为 :math:`\theta` 从 :math:`0` 增加到 :math:`2\pi` 形成的闭合曲线所围成的图形，因此所围成的图形的面积 :math:`S` 为
 
@@ -670,26 +669,15 @@
     抛物线 :math:`y = -x^2 + 4x - 3` 的导函数为 :math:`y' = -2x + 4`, 因此在点 :math:`A = (0, -3)` 处的切线方程为 :math:`y = 4x - 3`,
     在点 :math:`B = (3, 0)` 处的切线方程为 :math:`y = -2x + 6`, 两条切线的交点为 :math:`C = \left( \frac{3}{2}, 3 \right)`.
     因此所围成的图形的为三角形 :math:`\triangle ABC` 内位于抛物线 :math:`y = -x^2 + 4x - 3` 之上的部分。
-    :math:`y = 4x - 3` 与 :math:`x` 轴的交点为 :math:`D = (\frac{3}{4}, 0)`, 抛物线 :math:`y = -x^2 + 4x - 3` 与 :math:`x` 轴的交点为 :math:`B` 与 :math:`E = (1, 0)`.
-    因此所围成的图形可以分为两部分，第一部分为 :math:`y = 4x - 3`, :math:`y = -x^2 + 4x - 3` 以及 :math:`x` 轴围成的图形，其面积为
+    因此所围成的图形的面积 :math:`S` 为
 
     .. math::
 
-        S_1 & = - \int_0^1 (-x^2 + 4x - 3) \mathrm{d} x - S_{\triangle AOD} \\
-        & = - \left. \left( -\dfrac{x^3}{3} + 2x^2 - 3x \right) \right|_0^1 - \dfrac{1}{2} \cdot \dfrac{3}{4} \cdot 3 \\
-        & = - \left( -\dfrac{1}{3} + 2 - 3 \right) - \dfrac{9}{8} = \dfrac{4}{3} - \dfrac{9}{8} \\
-        & = \dfrac{5}{24}.
-
-    第二部分为三角形 :math:`\triangle BCD` 内位于抛物线 :math:`y = -x^2 + 4x - 3` 以及 :math:`x` 轴上方的部分，其面积为
-
-    .. math::
-
-        S_2 & = S_{\triangle BCD} - \int_1^3 (-x^2 + 4x - 3) \mathrm{d} x \\
-        & = \dfrac{1}{2} \cdot \left(3 - \frac{3}{4} \right) \cdot 3 - \left. \left( -\dfrac{x^3}{3} + 2x^2 - 3x \right) \right|_1^3 \\
-        & = \dfrac{27}{8} - \left( -9 + 18 - 9 \right) + \left( -\dfrac{1}{3} + 2 - 3 \right) \\
-        & = \dfrac{27}{8} - \dfrac{4}{3} = \dfrac{49}{24}.
-
-    所以所围成的图形的面积 :math:`S = S_1 + S_2 = \dfrac{5}{24} + \dfrac{49}{24} = \dfrac{54}{24} = \dfrac{9}{4}`.
+        S & = \int_0^{3/2} (4x - 3 - (-x^2 + 4x - 3)) \mathrm{d} x + \int_{3/2}^3 (-2x + 6 - (-x^2 + 4x - 3)) \mathrm{d} x \\
+        & = \int_0^{3/2} x^2 \mathrm{d} x + \int_{3/2}^3 (x^2 - 6x + 9) \mathrm{d} x \\
+        & = \left. \left( \dfrac{x^3}{3} \right) \right|_0^{3/2} + \left. \left( \dfrac{x^3}{3} - 3x^2 + 9x \right) \right|_{3/2}^3 \\
+        & = \dfrac{9}{8} - 0 + \left( 9 - 27 + 27 - \dfrac{9}{8} + \dfrac{27}{4} - \dfrac{27}{2} \right) \\
+        & = \dfrac{9}{8} + \dfrac{9}{8} = \dfrac{9}{4}.
 
 4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \le t \le 2\pi)` 所围成的图形的面积.
 
@@ -713,13 +701,12 @@
 
     (1). 抛物线 :math:`y^2 = 2x` 与直线 :math:`y = x - 4` 的交点为 :math:`A = (8, 4)`, :math:`B = (2, -2)`,
     因此所围成的图形为三角形 :math:`\triangle OAB` 内位于抛物线 :math:`y^2 = 2x` 以及直线 :math:`y = x - 4` 之间的部分。
-    令点 :math:`C = (0, -2), D = (0, 4)`, 那么平面区域 :math:`D` 的面积等于梯形 :math:`ABCD` 的面积减去以 :math:`y` 为自变量的函数
-    :math:`x = \dfrac{y^2}{2}` 在区间 :math:`[-2, 4]` 上的定积分，即
+    以 :math:`y` 为自变量，那么所围成的图形的面积 :math:`S` 为直线 :math:`x = y + 4` 之下，抛物线 :math:`x = \dfrac{y^2}{2}` 之上的部分：
 
     .. math::
 
-        S_D & = \dfrac{1}{2} \cdot (8 + 2) \cdot 6 - \int_{-2}^4 \dfrac{y^2}{2} \mathrm{d} y = 30 - \left. \dfrac{y^3}{6} \right|_{-2}^4 \\
-        & = 30 - \dfrac{8^3}{6} + \dfrac{(-2)^3}{6} = 30 - \dfrac{64}{6} - \dfrac{8}{6} = 18.
+        S_D & = \int_{-2}^4 \left( y + 4 - \dfrac{y^2}{2} \right) \mathrm{d} y = \left. \left( \dfrac{y^2}{2} + 4y - \dfrac{y^3}{6} \right) \right|_{-2}^4 \\
+        & = 8 + 16 - \dfrac{64}{6} - \left( 2 - 8 + \dfrac{8}{6} \right) = 18.
 
     (2). 令点 :math:`E = (4, 0), F = (8, 0)`, 那么旋转体的体积等于曲线 :math:`y = \sqrt{2x}`, 直线 :math:`x = 8` 与 :math:`x` 轴所围成的图形绕
     :math:`x` 轴旋转一周所形成的旋转体的体积，减去以 :math:`EF` 为高的圆锥的体积，即
