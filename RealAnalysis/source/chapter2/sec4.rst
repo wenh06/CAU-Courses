@@ -133,7 +133,8 @@
     .. note::
 
         可以利用一般性的结论：设 :math:`f: \mathbb{R}^n \to \mathbb{R}` 可测， :math:`T: \mathbb{R}^n \to \mathbb{R}^n` 为非奇异线性变换，
-        那么 :math:`f \circ T` 为可测函数。那么这题就归结为证明 :math:`\operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}` 为可测函数。
+        那么 :math:`f \circ T` 为可测函数。那么这题就归结为证明 :math:`\operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}` 为可测函数，
+        以及在映射 :math:`\operatorname{pr}_1` 下，零测集的原像仍为零测集。
 
 29. 设 :math:`E` 为 :math:`(0, 1)` 中正测度子集且存在常数 :math:`c > 0` 使对 :math:`(0, 1)` 中的变动区间 :math:`I` 有
 :math:`\lim\limits_{m I \to 0} m(E \cap I) / m I = c`, 证明 :math:`m E = 1`.
