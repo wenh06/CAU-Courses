@@ -463,7 +463,8 @@
     .. math::
 
         \int_0^2 (2 - x)^2 (2 + x) \mathrm{d} x & = \int_2^0 x^2 (4 - x) \mathrm{d} (2-x) = \int_0^2 x^2 (4 - x) \mathrm{d} x \\
-        & = \int_0^2 (4x^2 - x^3) \mathrm{d} x = \left. \left( \dfrac{4}{3} x^3 - \dfrac{1}{4} x^4 \right) \right|_0^2 = \dfrac{32}{3} - 4 = \dfrac{20}{3}.
+        & = \int_0^2 (4x^2 - x^3) \mathrm{d} x = \left. \left( \dfrac{4}{3} x^3 - \dfrac{1}{4} x^4 \right) \right|_0^2 \\
+        & = \dfrac{32}{3} - 4 = \dfrac{20}{3}.
 
     (9). 由于 :math:`\sin^3 \varphi = \dfrac{3}{4} \sin \varphi - \dfrac{1}{4} \sin 3\varphi`, 因此有
 
@@ -589,7 +590,7 @@
 
 .. proof:proof::
 
-    令 :math:`t = a + b - x`, 那么 :math:`x = a + b - t, \mathrm{d} t = -\mathrm{d} x`, 从而有
+    令 :math:`t = a + b - x`, 那么 :math:`x = a + b - t, \mathrm{d} t = -\mathrm{d} x`, 积分区间变为 :math:`[a + b - b, a + b - a] = [a, b]`, 从而有
 
     .. math::
 
@@ -607,16 +608,17 @@
 
 .. proof:proof::
 
+    令 :math:`t = x - \dfrac{\pi}{2}`, 那么 :math:`x = t + \dfrac{\pi}{2}`, :math:`\mathrm{d} t = \mathrm{d} x`, 积分区间变为 :math:`[-\dfrac{\pi}{2}, \dfrac{\pi}{2}]`, 从而有
+
     .. math::
 
-        \int_0^{\pi} \sin^n x \mathrm{d} x & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_{\frac{\pi}{2}}^{\pi} \sin^n x \mathrm{d} x \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin^n (x + \frac{\pi}{2}) \mathrm{d} (x + \frac{\pi}{2}) \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \cos x^n \mathrm{d} x \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{-\frac{\pi}{2}} \cos^n (-x) \mathrm{d} (-x) \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_{-\frac{\pi}{2}}^0 \cos^n (x) \mathrm{d} x \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \cos^n (x - \frac{\pi}{2}) \mathrm{d} (x - \frac{\pi}{2}) \\
-        & = \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x + \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x \\
-        & = 2 \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x.
+        \int_0^{\pi} \sin^n x \mathrm{d} x = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^n \left( t + \dfrac{\pi}{2} \right) \mathrm{d} t = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^n t \mathrm{d} t.
+
+    由于 :math:`\cos^n t` 是偶函数，因此有
+
+    .. math::
+
+        \int_0^{\pi} \sin^n x \mathrm{d} x = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^n t \mathrm{d} t = 2 \int_0^{\frac{\pi}{2}} \cos^n t \mathrm{d} t = 2 \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x.
 
 §3.4 定积分的应用
 ---------------------
