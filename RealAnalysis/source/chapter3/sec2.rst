@@ -43,3 +43,132 @@
 用记号 :math:`E(\lvert f_n - f \rvert \le 1 / r)` 表示 :math:`E` 中满足 :math:`\lvert f_n (x) - f (x) \rvert \le 1 / r` 的点所成的集。
 试证集 :math:`\displaystyle \cap_{r=1}^\infty E(\lvert f_n - f \rvert \le 1 / r)` 是 :math:`E` 中使
 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集。
+
+.. proof:proof::
+
+    待写
+
+25. 设 :math:`m E > 0`, :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列，且当 :math:`n \to \infty` 时，
+:math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛。证明存在常数 :math:`c` 与正测度集 :math:`E_0 \subset E`,
+使在 :math:`E_0` 上对一切 :math:`n \in \mathbb{N}` 有 :math:`\lvert f_n \rvert \le c`.
+
+.. proof:proof::
+
+    待写
+
+26. 设函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`. 试证存在可测集列 :math:`\{E_k\}_{k \in \mathbb{N}}`,
+使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f (n \to \infty)` 而 :math:`\displaystyle \mathcal{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
+
+.. proof:proof::
+
+    待写
+
+29. 对 :math:`n \in \mathbb{N}`, 令
+
+.. math::
+
+    \alpha_n = 1 + \dfrac{1}{2} + \cdots + \dfrac{1}{n} - \left[ 1 + \dfrac{1}{2} + \cdots + \dfrac{1}{n} \right],
+
+其中 :math:`[\alpha]` 表示数 :math:`\alpha` 的整部。定义区间列
+
+.. math::
+
+    I_n = \begin{cases}
+        \left[ \alpha_n, \alpha_{n+1} \right), & \text{ 若 } \alpha_n \le \alpha_{n+1}, \\
+        \\
+        \left[ \alpha_{n}, 1 \right) \cup \left[ 0, \alpha_{n+1} \right), & \text{ 若 } \alpha_n > \alpha_{n+1}.
+    \end{cases}
+
+再定义 :math:`[0, 1)` 上的函数列 :math:`\{f_n = \chi_{I_n}\}_{n \in \mathbb{N}}`. 试证 :math:`\{f_n\}` 依测度收敛于 :math:`0`
+而不几乎处处收敛于 :math:`0`. 试选出子序列 :math:`\{f_{n_k}\}` 使它处处收敛于 :math:`0`.
+
+.. proof:proof::
+
+    令 :math:`r_n = 1 + \dfrac{1}{2} + \cdots + \dfrac{1}{n}`, 那么 :math:`\alpha_n = \{ r_n \}`, 其中 :math:`\{ \cdot \}` 表示取小数部分。
+    我们有
+
+    .. math::
+
+        \alpha_{n+1} = \begin{cases}
+            \alpha_n + \dfrac{1}{n + 1}, & \text{ 若 } \alpha_n < 1 - \dfrac{1}{n+1}, \\
+            \alpha_n + \dfrac{1}{n + 1} - 1 = \alpha_n - \dfrac{n}{n + 1}, & \text{ 若 } \alpha_n \ge 1 - \dfrac{1}{n+1}.
+        \end{cases}
+
+    在这两种情况下，总有 :math:`m I_n = \dfrac{1}{n + 1} \to 0 (n \to \infty)`. 因此 :math:`\{f_n = \chi_{I_n}\}` 依测度收敛于 :math:`0`.
+
+    由于 :math:`r_n \to + \infty (n \to \infty)`, 那么 :math:`\forall N \in \mathbb{N}`, 总存在 :math:`n, k > N`,
+    使得 :math:`\dfrac{1}{n+1} + \cdots + \dfrac{1}{n+k} > 1`. 这种情况下， :math:`I_n, \cdots, I_{n+k}` 构成了 :math:`[0, 1)` 的一个覆盖，
+    那么对于所有的 :math:`x \in [0, 1)`, :math:`\{f_n(x), \cdots, f_{n+k}(x)\}` 至少有一个为 1, 因此数列 :math:`\{f_n(x)\}_{n \in \mathbb{N}}`
+    不收敛于 :math:`0`. 因此 :math:`\{f_n\}` 不几乎处处收敛于 :math:`0`.
+
+    我们将所有满足 :math:`a_n \ge 1 - \dfrac{1}{n+1}` 的 :math:`n` 挑出来，按从小到大的顺序排列，得到下标的序列记为 :math:`\{n_k\}`.
+    由于 :math:`r_n \to + \infty (n \to \infty)`, 得到的序列也是无穷的 :math:`\{n_k\}_{k \in \mathbb{N}}`。在这种情况下，有
+
+    .. math::
+
+        I_{n_k} = [\alpha_{n_k}, 1) \cup [0, \alpha_{n_k + 1}).
+
+    由于 :math:`1 > a_{n_k} \ge 1 - \dfrac{1}{n_k+1}, 0 < \alpha_{n_k + 1} < \dfrac{1}{n_k + 1}`, 因此 :math:`\forall x \in (0, 1)`,
+    存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时，有 :math:`x < 1 - \dfrac{1}{n_k+1} < a_{n_k}` 且 :math:`x > \dfrac{1}{n_k + 1} > \alpha_{n_k + 1}`,
+    即 :math:`x \not \in I_{n_k}`. 因此 :math:`\{f_{n_k}\}` 在 :math:`(0, 1)` 上处处收敛于 :math:`0`. 由于 :math:`0 \in I_{n_k}, \forall k \in \mathbb{N}`,
+    所以 :math:`\displaystyle \lim_{k \to \infty} f_{n_k}(0) = 1`, 总之， :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上几乎处处（除了 :math:`x = 0` 这一点）收敛于 :math:`0`,
+    离想要的结果还差一点。
+
+    更进一步：将所有满足 :math:`a_n \ge 1 - \dfrac{1}{n+1}` 的 :math:`n` 挑出来，按从小到大的顺序排列，得到下标的序列记为 :math:`\{m_k\}_{k \in \mathbb{N}}`.
+    令 :math:`n_k = m_k - 1, k \in \mathbb{N}`, 即上一种取法的每一项在原序列中的前一项，那么有
+
+    .. math::
+
+        1 - \dfrac{1}{n_k + 1 + 1} \le a_{n_k + 1} = a_{n_k} + \dfrac{1}{n_k + 1},
+
+    即
+
+    .. math::
+
+        1 - \dfrac{1}{n_k + 2} - \dfrac{1}{n_k + 1} \le a_{n_k}, \quad 1 - \dfrac{1}{n_k + 2} \le a_{n_k + 1} < 1,
+
+    而且 :math:`I_{n_k} = [\alpha_{n_k}, \alpha_{n_k + 1})`. 可以看到，当 :math:`k \to \infty` 时， :math:`a_{n_k} \to 1, a_{n_k + 1} \to 1`,
+    因此 :math:`\forall x \in [0, 1)`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时，有 :math:`x < 1 - \dfrac{1}{n_k + 2} - \dfrac{1}{n_k + 1} < a_{n_k}`,
+    即 :math:`x \not \in I_{n_k}`. 因此 :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上处处收敛于 :math:`0`.
+
+30. 试作 :math:`E = [0, 1]` 上的可测函数 :math:`f`, 使对 :math:`E` 上任何连续函数 :math:`g` 有 :math:`m E( f \neq g ) \neq 0`.
+此结果与 Luzin 定理有无矛盾？
+
+.. proof:solution::
+
+    取
+
+    .. math::
+        f(x) = \begin{cases} -1, & 0 \le x < 1/2, \\ 1, & 1/2 \le x \le 1. \end{cases}.
+
+
+    假设存在连续函数 :math:`g` 使得 :math:`m E( f \neq g ) = 0`, 则 :math:`m E(g = -1) = 1/2`, :math:`m E(g = 1) = 1/2`,
+    即存在 :math:`x_1, x_2 \in E` 使得 :math:`g(x_1) = -1`, :math:`g(x_2) = 1`. 由于 :math:`g` 是连续函数，
+    那么 :math:`\forall y \in (-1, 1)`, 存在 :math:`x_3 \in E` 使得 :math:`g(x_3) = y`, 即 :math:`g(E) \subset [-1, 1]`.
+    由于开集在连续函数下的原像是开集，那么 :math:`g^{-1}((-1, 1))` 是开集，从而有正测度，即 :math:`m E (-1 < g < 1) > 0`.
+    这会导致
+
+    .. math::
+
+        1 = m E \ge m E(g = -1) + m E(g = 1) + m E (-1 < g < 1) > 1,
+
+    矛盾。因此不存在这样的连续函数 :math:`g`, 也就是说 :math:`m E( f \neq g ) \neq 0` 对任何连续函数 :math:`g` 都成立。
+
+    这与 Luzin 定理不矛盾，因为 Luzin 定理的结论是 :math:`\forall \varepsilon > 0`, 存在连续函数 :math:`g` 使得 :math:`m E( f \neq g ) < \varepsilon`.
+    在我们的例子中， :math:`\forall \varepsilon > 0`, 可以取区间 :math:`(1/2 - \varepsilon/2, 1/2 + \varepsilon/2)`, 并令
+
+    .. math::
+
+        g(x) = \begin{cases}
+            -1, & 0 \le x < 1/2 - \varepsilon/2, \\
+            1, & 1/2 + \varepsilon/2 < x \le 1, \\
+            1 + \dfrac{2}{\varepsilon} (x - \dfrac{1 + \varepsilon}{2}), & 1/2 - \varepsilon/2 \le x < 1/2 + \varepsilon/2.
+        \end{cases}
+
+32. 试证对 :math:`[0, 1]` 上带连续参数的可测函数族 :math:`\{f_t\}_{t \in [0, 1]}`, Egorov 定理不成立。
+即存在 :math:`I = [0, 1]` 上的可测函数族 :math:`\{f_t\}_{t \in [0, 1]}`, 当 :math:`t \to 0` 时有 :math:`f_t \to 0` a.e.,
+但对某个 :math:`\varepsilon > 0`, :math:`m^* I(f_t > \varepsilon) \nrightarrow 0 (t \to 0)`.
+
+.. proof:proof::
+
+    待写
