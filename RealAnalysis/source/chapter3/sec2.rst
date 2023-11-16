@@ -41,7 +41,7 @@
 
 22. 设 :math:`f, f_n (n \in \mathbb{N})` 是定义在区间 :math:`E = [a, b]` 上的实函数， :math:`r` 为自然数，
 用记号 :math:`E(\lvert f_n - f \rvert \le 1 / r)` 表示 :math:`E` 中满足 :math:`\lvert f_n (x) - f (x) \rvert \le 1 / r` 的点所成的集。
-试证集 :math:`\displaystyle \cap_{r=1}^\infty E(\lvert f_n - f \rvert \le 1 / r)` 是 :math:`E` 中使
+试证集 :math:`\displaystyle \bigcap_{r=1}^\infty E(\lvert f_n - f \rvert \le 1 / r)` 是 :math:`E` 中使
 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集。
 
 .. proof:proof::
@@ -54,14 +54,62 @@
 
 .. proof:proof::
 
-    待写
+    由于 :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列，那么 :math:`\displaystyle Z_0 = \bigcup_{n=1}^\infty E (\lvert f_n \rvert = \infty)`
+    是零测集。又由于 :math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛（ 注意：收敛指的是收敛到一个有限的值，不包括 :math:`\pm\infty` ）,
+    那么存在零测集 :math:`Z_1 \subset E` 使得 :math:`\{f_n\}` 在 :math:`E \setminus Z_1` 上处处收敛。令 :math:`E_1 = E \setminus (Z_0 \cup Z_1)`,
+    那么 :math:`\displaystyle f(x) := \lim_{n \to \infty} f_n(x)` 是 :math:`E_1` 上处处有限的可测函数，且 :math:`m E_1 > 0`. 由于
+
+    .. math::
+
+        E_1 = E_1 (\lvert f \rvert < \infty) = \bigcup_{k=1}^\infty \left( E_1 (\lvert f \rvert < k) \cap \{ x \in E_1 : \lvert x \rvert < k \} \right),
+
+    那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`m \left( E_1 (\lvert f \rvert < k_0) \cap \{ x \in E_1 : \lvert x \rvert < k_0 \} \right) > 0`. 令
+
+    .. math::
+
+        E_2 = E_1 (\lvert f \rvert < k_0) \cap \{ x \in E_1 : \lvert x \rvert < k_0 \},
+
+    那么 :math:`0 < m E_2 < \infty` 且 :math:`\lvert f \rvert < k_0` 在 :math:`E_2` 上处处成立。由 Egorov 定理，对于 :math:`\delta = \dfrac{m E_2}{2} > 0`,
+    存在集合 :math:`E_3 \subset E_2` 使得 :math:`m E_3 > m E_2 - \delta = \dfrac{m E_2}{2} > 0`, 且 :math:`\{f_n\}` 在 :math:`E_3` 上一致收敛于 :math:`f`.
+    因此，对于 :math:`\varepsilon = 1`, 存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n > N` 时，有 :math:`\lvert f_n(x) - f(x) \rvert < \varepsilon = 1, \forall x \in E_3`.
+    那么对于所有的 :math:`n > N`, 有
+
+    .. math::
+
+        E_3(\lvert f_n \rvert \le k_0 + 1) = E_3.
+
+    另一方面，令 :math:`E_{30} = E_3`, 有 :math:`m E_{30} > 0`, 且
+
+    .. math::
+
+        E_{30} = E_{30} (\lvert f_1 \rvert < \infty) = \bigcup_{k=1}^\infty E_{30} (\lvert f_1 \rvert < k),
+
+    于是可以选取 :math:`k_1 \in \mathbb{N}`, 使得
+
+    .. math::
+
+        m E_{31} = m E_{30} (\lvert f_1 \rvert < k_1) > 0.
+
+    于是对于 :math:`1 \le n \le N`, 可以归纳地选取 :math:`k_n \in \mathbb{N}` 以及集合 :math:`E_{3n} \subset E_{3(n-1)}` 使得 :math:`m E_{3n} > 0`,
+    且 :math:`f_n(x) < k_n` 在 :math:`E_{3n}` 上处处成立。那么令
+
+    .. math::
+
+        & c = \max \{ k_1, \cdots, k_N, k_0 + 1 \}, \\
+        & E_0 = E_{3N},
+
+    即有 :math:`\lvert f_n \rvert \le c` 在正测度集 :math:`E_0` 上对一切 :math:`n \in \mathbb{N}` 成立。
 
 26. 设函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`. 试证存在可测集列 :math:`\{E_k\}_{k \in \mathbb{N}}`,
 使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f (n \to \infty)` 而 :math:`\displaystyle \mathcal{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
 
 .. proof:proof::
 
-    待写
+    由于函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`, 那么对于每个自然数 :math:`k \in \mathbb{N}`,
+    函数列 :math:`\{f_n\}` 在区间 :math:`[-k, k]` 上几乎处处收敛于 :math:`f`. 由 Egorov 定理，对于任意给定的 :math:`\varepsilon > 0`,
+    存在可测集 :math:`F_k \subset [-k, k]` 使得 :math:`m([-k, k] \setminus F_k) < \varepsilon / 2^k`, 且 :math:`\{f_n\}` 在 :math:`F_k` 上一致收敛于 :math:`f`.
+    令 :math:`\displaystyle E_k = \bigcup_{i=1}^k F_i`, 那么 :math:`\{E_k\}_{k \in \mathbb{N}}` 是渐张可测集列，
+    且 :math:`f_n` 在 :math:`E_k` 上一致收敛于 :math:`f`. 又有.... (待写)
 
 29. 对 :math:`n \in \mathbb{N}`, 令
 
@@ -130,6 +178,10 @@
     而且 :math:`I_{n_k} = [\alpha_{n_k}, \alpha_{n_k + 1})`. 可以看到，当 :math:`k \to \infty` 时， :math:`a_{n_k} \to 1, a_{n_k + 1} \to 1`,
     因此 :math:`\forall x \in [0, 1)`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时，有 :math:`x < 1 - \dfrac{1}{n_k + 2} - \dfrac{1}{n_k + 1} < a_{n_k}`,
     即 :math:`x \not \in I_{n_k}`. 因此 :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上处处收敛于 :math:`0`.
+
+    .. note::
+
+        我们这里取的区间 :math:`I_{n_k}` 是随着 :math:`k` 的增大，逐渐向 :math:`1` 靠近，而且区间长度逐渐趋于 :math:`0`.
 
 30. 试作 :math:`E = [0, 1]` 上的可测函数 :math:`f`, 使对 :math:`E` 上任何连续函数 :math:`g` 有 :math:`m E( f \neq g ) \neq 0`.
 此结果与 Luzin 定理有无矛盾？
