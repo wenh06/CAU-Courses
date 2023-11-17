@@ -59,6 +59,8 @@
 
             f'(x) = g(\psi(x)) \psi'(x) - g(\varphi(x)) \varphi'(x).
 
+        可以直接使用这个公式求解上面的题目。
+
 4. 求由曲线 :math:`y = \sqrt{x}` 与 :math:`y = x^2` 所围成的图形的面积.
 
 .. proof:solution::

@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-微积分
+微积分 I 课程资料
 ============================================
 
 课程教材：《高等数学》，第2版，王来生，卢恩双，中国农业大学出版社，2019
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目录:
+   :caption: 课后习题解答:
 
    chap1
    chap2

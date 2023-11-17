@@ -144,13 +144,13 @@
 
     在这两种情况下，总有 :math:`m I_n = \dfrac{1}{n + 1} \to 0 (n \to \infty)`. 因此 :math:`\{f_n = \chi_{I_n}\}` 依测度收敛于 :math:`0`.
 
-    由于 :math:`r_n \to + \infty (n \to \infty)`, 那么 :math:`\forall N \in \mathbb{N}`, 总存在 :math:`n, k > N`,
+    由于 :math:`r_n \to + \infty (n \to \infty)`, 那么 :math:`\forall n \in \mathbb{N}`, 总存在 :math:`k \in \mathbb{N}`,
     使得 :math:`\dfrac{1}{n+1} + \cdots + \dfrac{1}{n+k} > 1`. 这种情况下， :math:`I_n, \cdots, I_{n+k}` 构成了 :math:`[0, 1)` 的一个覆盖，
     那么对于所有的 :math:`x \in [0, 1)`, :math:`\{f_n(x), \cdots, f_{n+k}(x)\}` 至少有一个为 1, 因此数列 :math:`\{f_n(x)\}_{n \in \mathbb{N}}`
     不收敛于 :math:`0`. 因此 :math:`\{f_n\}` 不几乎处处收敛于 :math:`0`.
 
     我们将所有满足 :math:`a_n \ge 1 - \dfrac{1}{n+1}` 的 :math:`n` 挑出来，按从小到大的顺序排列，得到下标的序列记为 :math:`\{n_k\}`.
-    由于 :math:`r_n \to + \infty (n \to \infty)`, 得到的序列也是无穷的 :math:`\{n_k\}_{k \in \mathbb{N}}`。在这种情况下，有
+    由于 :math:`r_n \to + \infty (n \to \infty)`, 得到的序列也是一个无穷序列 :math:`\{n_k\}_{k \in \mathbb{N}}`。在这种情况下，有
 
     .. math::
 
@@ -193,12 +193,11 @@
     .. math::
         f(x) = \begin{cases} -1, & 0 \le x < 1/2, \\ 1, & 1/2 \le x \le 1. \end{cases}.
 
-
-    假设存在连续函数 :math:`g` 使得 :math:`m E( f \neq g ) = 0`, 则 :math:`m E(g = -1) = 1/2`, :math:`m E(g = 1) = 1/2`,
-    即存在 :math:`x_1, x_2 \in E` 使得 :math:`g(x_1) = -1`, :math:`g(x_2) = 1`. 由于 :math:`g` 是连续函数，
-    那么 :math:`\forall y \in (-1, 1)`, 存在 :math:`x_3 \in E` 使得 :math:`g(x_3) = y`, 即 :math:`g(E) \subset [-1, 1]`.
-    由于开集在连续函数下的原像是开集，那么 :math:`g^{-1}((-1, 1))` 是开集，从而有正测度，即 :math:`m E (-1 < g < 1) > 0`.
-    这会导致
+    假设存在连续函数 :math:`g` 使得 :math:`m E( f \neq g ) = 0`, 则 :math:`m E(g = -1) = m E(f = -1) = 1/2`,
+    :math:`m E(g = 1) = m E(f = 1) = 1/2`, 即存在 :math:`x_1, x_2 \in E` 使得 :math:`g(x_1) = -1`, :math:`g(x_2) = 1`.
+    由于 :math:`g` 是连续函数，那么 :math:`\forall y \in (-1, 1)`, 存在 :math:`x_3 \in E` 使得 :math:`g(x_3) = y`,
+    即 :math:`g(E) \subset [-1, 1]`. 由于开集在连续函数下的原像是非空开集，那么 :math:`g^{-1}((-1, 1))` 是开集，从而有正测度，
+    即 :math:`m E (-1 < g < 1) > 0`. 这会导致
 
     .. math::
 
