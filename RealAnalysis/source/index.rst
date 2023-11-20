@@ -25,11 +25,3 @@
    suppl/chap1
    suppl/chap2
    suppl/chap3
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

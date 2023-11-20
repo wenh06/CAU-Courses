@@ -15,11 +15,3 @@
 .. toctree::
    :maxdepth: 2
    :caption: 补充材料:
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
