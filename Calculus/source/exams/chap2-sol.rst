@@ -67,7 +67,8 @@
 
         \lim\limits_{x \to \infty} \left( \dfrac{x}{x + 1} \right)^x = \lim\limits_{x \to \infty} \dfrac{1}{\left( 1 + \dfrac{1}{x} \right)^x} = \dfrac{1}{e},
 
-    所以这是一个 :math:`\infty \cdot 0` 型的不定式. 令 :math:`t = \dfrac{1}{x}`, 则
+    所以 :math:`x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)` 是一个 :math:`\infty \cdot 0` 型的不定式 (:math:`x \to \infty`).
+    令 :math:`t = \dfrac{1}{x}`, 则
 
     .. math::
 

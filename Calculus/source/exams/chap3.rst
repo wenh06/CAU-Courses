@@ -1,6 +1,10 @@
 第三章随堂测验
 =======================
 
+.. note::
+
+    此次随堂测验未进行。
+
 1. 求不定积分 :math:`\displaystyle\int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
 
 2. 求极限 :math:`\displaystyle \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x`.

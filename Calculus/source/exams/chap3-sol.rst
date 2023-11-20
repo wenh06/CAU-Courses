@@ -1,6 +1,10 @@
 第三章随堂测验答案解析
 =========================
 
+.. note::
+
+    此次随堂测验未进行。
+
 1. 求不定积分 :math:`\displaystyle \int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
 
 .. proof:solution::
@@ -42,7 +46,7 @@
         & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{(x + h)^3} e^{t^2} \mathrm{d} t - \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{x^3} e^{t^2} \mathrm{d} t \\
         & = \lim\limits_{h \to 0} \int_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
 
-    那么由积分第一中值定理有
+    那么由积分中值定理有
 
     .. math::
 

@@ -31,10 +31,3 @@
    exams/chap1-sol
    exams/chap2-sol
    exams/chap3-sol
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
