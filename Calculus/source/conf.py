@@ -35,6 +35,7 @@ extensions = [
     # 'sphinx.ext.autosectionlabel',
     "sphinx_multiversion",
     "sphinx_favicon",
+    "sphinx_emoji_favicon",
     # "sphinx_toolbox.collapse",  # replaced by dropdown of sphinx_design
     # "numpydoc",
     "sphinxcontrib.tikz",
@@ -124,9 +125,10 @@ else:  # builtin themes: alabaster, etc.
 html_static_path = ["_static"]
 html_title = "CAU Calculus C"
 
-favicons = [
-    {"href": "favicon.png"},  # => use `_static/favicon.png`
-]
+# favicons = [
+#     {"href": "favicon.png"},  # => use `_static/favicon.png`
+# ]
+emoji_favicon = ":livres:"
 
 master_doc = "index"
 
