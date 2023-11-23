@@ -39,7 +39,7 @@ extensions = [
     # "sphinx_toolbox.collapse",  # replaced by dropdown of sphinx_design
     # "numpydoc",
     "sphinxcontrib.tikz",
-    "sphinxcontrib.pseudocode",
+    # "sphinxcontrib.pseudocode",
     # "sphinxcontrib.bibtex",
     "sphinxcontrib.proof",
 ]
