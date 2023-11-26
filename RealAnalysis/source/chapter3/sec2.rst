@@ -9,12 +9,12 @@
 
 14. 设 :math:`x \in [0, 1)`, 其二进表示为 :math:`\displaystyle x = \sum_{i=1}^\infty \frac{x_i}{2^i}`,
 :math:`x_i \in \{0, 1\}`, 并约定用有尽表示。定义函数 :math:`\displaystyle \varphi (x) = \sum_{i=1}^\infty \frac{2x_i}{3^i}`,
-再取 :math:`[0, 1]` 的一不可测子集 :math:`E`, 并在 :math:`\mathbb{R}` 上定义函数
+再取 :math:`[0, 1)` 的一不可测子集 :math:`E`, 并在 :math:`\mathbb{R}` 上定义函数
 
 .. math::
 
     \psi (x) = \begin{cases}
-        \varphi (x), & x \in E, \\
+        1, & x \in \varphi (E), \\
         0, & \text{其余情形}.
     \end{cases}
 
@@ -22,14 +22,105 @@
 
 .. proof:proof::
 
-    待写
+    设 :math:`\displaystyle x = \sum_{i=1}^\infty \frac{x_i}{2^i}, y = \sum_{i=1}^\infty \frac{y_i}{2^i} \in [0, 1)`,
+    其中 :math:`x_i, y_i \in \{0, 1\}`, 且都是有尽表示。假设 :math:`x < y`, 那么存在 :math:`k_0 \in \mathbb{N}`,
+    使得 :math:`x_{k_0} = 0, y_{k_0} = 1`, 并且要么 :math:`k_0 = 1`, 要么 :math:`k_0 > 1` 且 :math:`x_k = y_k, \forall 1 \le k < k_0`.
+    于是有
+
+    .. math::
+
+        \varphi (x) = \sum_{i=1}^\infty \frac{2x_i}{3^i} < \sum_{i=1}^\infty \frac{2y_i}{3^i} = \varphi (y).
+
+    所以 :math:`\varphi` 是严格单调递增的，为单射，并且其值域为 Cantor 三分集 :math:`P_0`. 记 :math:`I = [0, 1)`,
+    那么对于 :math:`\alpha \in \mathbb{R}` 有
+
+    .. math::
+
+        I (\varphi > \alpha) = \begin{cases}
+            \emptyset, & \alpha \ge 1, \\
+            (\varphi^{-1} (\alpha), 1), & \alpha \in P_0, \\
+            [\varphi^{-1} (\beta), 1), & \alpha \in I \setminus P_0, \beta = \inf \{ x \in P_0 : x > \alpha \}, \\
+            I, & \alpha < 0.
+        \end{cases}
+
+    以上都是可测集，因此 :math:`\varphi` 是可测函数。事实上，若 :math:`\alpha \in I \setminus P_0 = G_0`,
+    那么 :math:`\alpha` 落入开集 :math:`G_0` 的某个构成区间 :math:`I_{n, k} = (a, b)`, 上式中的 :math:`\beta` 即为
+    :math:`I_{n, k}` 的右端点 :math:`b`.
+
+    :math:`\forall \alpha \in \mathbb{R}`, 对于函数 :math:`\psi` 有
+
+    .. math::
+
+        I (\psi > \alpha) = \begin{cases}
+            \emptyset, & \alpha \ge 1, \\
+            \varphi (E), & \alpha \in [0, 1), \\
+            \mathbb{R}, & \alpha < 0.
+        \end{cases}
+
+    由于 :math:`P_0` 是零测集，而 :math:`\varphi (E) \subset P_0`, 所以 :math:`\varphi (E)` 也是零测集，从而可测。
+    于是 :math:`\psi` 是可测函数。
+
+    对于 :math:`\psi \circ \varphi` 来说，取 :math:`\alpha \in [0, 1)` 有
+
+    .. math::
+
+        I (\psi \circ \varphi > \alpha) = \left\{ x \in [0, 1) : \psi (\varphi (x)) > \alpha \right\} = \left\{ x \in [0, 1) : \varphi (x) \in \varphi (E) \right\} = E,
+
+    为不可测集，因此 :math:`\psi \circ \varphi` 不可测。
 
 17. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且在 :math:`E` 上几乎处处有 :math:`f_n \le g`,
 :math:`n \in \mathbb{N}`. 试证在 :math:`E` 上几乎处处有 :math:`f \le g`.
 
 .. proof:proof::
 
-    待写
+    令 :math:`E_n = E (f_n > g), n \in \mathbb{N},` 由于在 :math:`E` 上几乎处处有 :math:`f_n \le g`, 所以 :math:`m E_n = 0`.
+    令 :math:`\displaystyle E_0 = \bigcup_{n=1}^\infty E_n`, 那么 :math:`m E_0 = 0`. 于是，在 :math:`\widetilde{E} = E \setminus E_0` 上，
+    对于任意的 :math:`x \in \widetilde{E}`, 有 :math:`f_n(x) \le g(x), \forall n \in \mathbb{N}`,
+    且函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`\widetilde{E}` 上也依测度收敛于 :math:`f`. 我们有
+
+    .. math::
+
+        \widetilde{E} (f > g) = \bigcup_{k=1}^\infty \widetilde{E} \left( f - g \ge \dfrac{1}{k} \right).
+
+    由于 :math:`\left\{ \widetilde{E} \left( f - g > \dfrac{1}{k} \right) \right\}_{k \in \mathbb{N}}` 构成了渐张可测集列，
+    因此
+
+    .. math::
+
+        m \widetilde{E} (f > g) = m \left( \bigcup_{k=1}^\infty \widetilde{E} \left( f - g \ge \dfrac{1}{k} \right) \right) = \lim_{k \to \infty} m \widetilde{E} \left( f - g \ge \dfrac{1}{k} \right).
+
+    由于 :math:`f - g = (f - f_n) + (f_n - g)`, 所以 :math:`\forall n \in \mathbb{N}` 有
+
+    .. math::
+
+        \widetilde{E} \left( f \ge g + \dfrac{1}{k} \right) \subset \widetilde{E} \left( f - f_n \ge \dfrac{1}{k} \right) \subset \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right),
+
+    从而有
+
+    .. math::
+
+        m \widetilde{E} \left( f \ge g + \dfrac{1}{k} \right) \le \inf_{n \in \mathbb{N}} m \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right).
+
+    另一方面，由于函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`\widetilde{E}` 上依测度收敛于 :math:`f`,
+    那么对于任意给定的 :math:`k \in \mathbb{N}` 有
+
+    .. math::
+
+        \lim_{n \to \infty} m \widetilde{E} \left( \lvert f_n - f \rvert > \dfrac{1}{k} \right) = 0,
+
+    因此，:math:`m \widetilde{E} \left( f \ge g + \dfrac{1}{k} \right) = 0, \forall k \in \mathbb{N}`, 从而有
+
+    .. math::
+
+        m \widetilde{E} (f > g) = \lim_{k \to \infty} m \widetilde{E} \left( f - g \ge \dfrac{1}{k} \right) = 0,
+
+    以及
+
+    .. math::
+
+        0 \le m E (f > g) \le m (E_0 \cup \widetilde{E} (f > g)) = m E_0 + m \widetilde{E} (f > g) = 0.
+
+    最终我们有 :math:`m E (f > g) = 0`, 即 :math:`f \le g` 几乎处处成立。
 
 21. 试构造 :math:`[0, 1]` 上的连续函数列 :math:`\{f_n\}_{n \in \mathbb{N}}`, 使满足
 (i) :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`[0, 1]` 上几乎处处收敛于 :math:`0`,
