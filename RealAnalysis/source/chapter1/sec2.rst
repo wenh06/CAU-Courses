@@ -74,7 +74,7 @@
 
     .. note::
 
-        可以通过显式表达式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`：
+        可以通过显式表达式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
 
         .. math::
 

@@ -128,16 +128,103 @@
 
 .. proof:solution::
 
-    待写
+    令 :math:`A = \{ r_1, r_2, \cdots \} = \mathbb{Q} \cap [0, 1]` 是 :math:`[0, 1]` 区间内的有理数之集。
+    取 :math:`\delta = \dfrac{1}{2}`, 对于每个 :math:`r_k \in A`, 取
+
+    .. math::
+
+        I_k & = (a_k, b_k) = \left( r_k - \dfrac{\delta}{2^{k+1}}, r_k + \dfrac{\delta}{2^{k+1}} \right), \\
+        d_k & = \dfrac{\lvert I_k \rvert}{2} = \dfrac{\delta}{2^{k+1}}.
+
+    对 :math:`r \in A`, 约定 :math:`q(r)` 表示 :math:`r` 的既约分数表示的分母. 对每个 :math:`t \in \mathbb{N}`, 令
+
+    .. math::
+
+        \varphi_{k, t} (x) = \begin{cases}
+            \dfrac{1}{q(r_k)} \cdot \left( 1 - \dfrac{2^{t+1}}{d_k} \lvert x - r_k \rvert \right), & x \in \left[ r_k - \dfrac{d_k}{2^{t+1}}, r_k + \dfrac{d_k}{2^{t+1}} \right], \\
+            0, & \text{其余情形}.
+        \end{cases}
+
+    通过如下的一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
+
+    .. math::
+
+        s: \mathbb{N} \times \mathbb{N} \to \mathbb{N}, \quad (k, t) \mapsto \dfrac{(k + t - 2)(k + t - 1)}{2} + k,
+
+    令 :math:`n = s(k, t)`, 以及 :math:`f_n = \varphi_{k, t}`, 那么 :math:`\{f_n\}_{n \in \mathbb{N}}` 是 :math:`[0, 1]` 上的连续函数列。
+
+    首先， :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`[0, 1]` 上几乎处处收敛于 :math:`0`. 事实上，
+    对于任意给定的 :math:`x \in [0, 1] \setminus A`, 任取 :math:`\varepsilon > 0`, 取 :math:`q_0 \in \mathbb{N}`,
+    使得 :math:`\dfrac{1}{q_0} < \varepsilon`, 令
+
+    .. math::
+
+        k_0 = \min \left\{ k \in \mathbb{N} : q(r_k) \ge q_0 \right\},
+
+    那么对任意 :math:`k > k_0, t \in \mathbb{N}`, 有 :math:`q(r_k) \ge q_0`, 从而 :math:`\varphi_{k, t} (x) < \varepsilon`.
+    对于 :math:`k \le k_0`, 令
+
+    .. math::
+
+        d & = \min \left\{ \lvert x - r_k \rvert : k \le k_0 \right\} > 0, \\
+        t_0 & = \min \left\{ t \in \mathbb{N} : \dfrac{d_k}{2^{t+1}} < \dfrac{d}{2}, ~ \forall k \le k_0 \right\},
+
+    那么对任意 :math:`t > t_0, k \le k_0`, 有 :math:`\varphi_{k, t} (x) = 0 < \varepsilon`. 因此取
+
+    .. math::
+
+        N_0 = s(k_0 + 1, t_0 + 1) = \dfrac{(k_0 + t_0 + 1)(k_0 + t_0 + 2)}{2} + k_0 + 1,
+
+    必有 :math:`f_n (x) < \varepsilon, \forall n > N_0`. 这就证明了在 :math:`[0, 1]` 区间的所有无理点上，
+    有 :math:`\displaystyle \lim_{n \to \infty} f_n (x) = 0`, 即 :math:`\{f_n\}_{n \in \mathbb{N}}`
+    在 :math:`[0, 1]` 上几乎处处收敛于 :math:`0`.
+
+    其次， :math:`\{f_n\}_{n \in \mathbb{N}}` 在任何子区间上不一致收敛于 :math:`0`. 事实上，
+    :math:`[0, 1]` 区间的任何子区间都包含有理数，设其中一个为 :math:`r_{k_0}`, 那么对于任意的 :math:`t \in \mathbb{N}`,
+    有 :math:`f_{s(k_0, t)} (r_{k_0}) = \dfrac{1}{q(r_{k_0})}`,
+    从而 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`[0, 1]` 区间的任何子区间上都不一致收敛于 :math:`0`.
 
 22. 设 :math:`f, f_n (n \in \mathbb{N})` 是定义在区间 :math:`E = [a, b]` 上的实函数， :math:`r` 为自然数，
 用记号 :math:`E(\lvert f_n - f \rvert \le 1 / r)` 表示 :math:`E` 中满足 :math:`\lvert f_n (x) - f (x) \rvert \le 1 / r` 的点所成的集。
-试证集 :math:`\displaystyle \bigcap_{r=1}^\infty E(\lvert f_n - f \rvert \le 1 / r)` 是 :math:`E` 中使
+试证集 :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r)` 是 :math:`E` 中使
 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集。
 
 .. proof:proof::
 
-    待写
+    :math:`E` 中使 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集为
+
+    .. math::
+
+        A = \{ x \in E : \forall \varepsilon > 0, \exists N (x, \varepsilon) \in \mathbb{N}, \forall n > N (x, \varepsilon), \lvert f_n (x) - f(x) \rvert < \varepsilon \}.
+
+    任取 :math:`x \in A`, 那么 :math:`\forall \varepsilon > 0`, 存在 :math:`N (x, \varepsilon) \in \mathbb{N}`,
+    使得 :math:`\forall n > N (x, \varepsilon)` 有 :math:`\lvert f_n (x) - f(x) \rvert < \varepsilon`. 特别地，
+    对每个自然数 :math:`r \in \mathbb{N}`, 取 :math:`\varepsilon = \dfrac{1}{2r}`,
+    那么 :math:`x \in E (\lvert f_n - f \rvert \le 1 / r), \forall n > N (x, \varepsilon)`,
+    从而知 :math:`\displaystyle x \in \bigcap_{n=N (x, \varepsilon)+1}^\infty E(\lvert f_n - f \rvert \le 1 / r)`, 因此
+
+    .. math::
+
+        x \in \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r) = \bigcup_{k=1}^\infty \bigcap_{n=k}^\infty E(\lvert f_n - f \rvert \le 1 / r).
+
+    由于上式对任意的 :math:`r \in \mathbb{N}` 都成立，因此
+
+    .. math::
+
+        x \in \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r).
+
+    因此 :math:`\displaystyle A \subset \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r)`.
+
+    反过来，任取 :math:`\displaystyle x \in \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r)`,
+    那么 :math:`\forall r \in \mathbb{N}`, 有 :math:`x \in \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r)`.
+    这表明，对每个自然数 :math:`r \in \mathbb{N}`, 存在自然数 :math:`N (x, r) \in \mathbb{N}`, 使得 :math:`\forall n > N (x, r)`,
+    有 :math:`x \in E(\lvert f_n - f \rvert \le 1 / r)`. 对任取的 :math:`\varepsilon > 0`,
+    取 :math:`r = \left\lceil \dfrac{1}{\varepsilon} \right\rceil`, 那么 :math:`\dfrac{1}{r} < \varepsilon`,
+    于是 :math:`x \in E(\lvert f_n - f \rvert \le 1 / r) \subset E(\lvert f_n - f \rvert < \varepsilon)`
+    对所有的 :math:`n > N (x, r)` 都成立。这表明了 :math:`x \in A`, 因此
+    :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r) \subset A`.
+
+    综上所述， :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \le 1 / r) = A`,
 
 25. 设 :math:`m E > 0`, :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列，且当 :math:`n \to \infty` 时，
 :math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛。证明存在常数 :math:`c` 与正测度集 :math:`E_0 \subset E`,
