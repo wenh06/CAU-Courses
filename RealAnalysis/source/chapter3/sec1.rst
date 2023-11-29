@@ -125,10 +125,10 @@
 
         E(f > \alpha) = \begin{cases}
             \emptyset, & \alpha > 4, \\
-            (\alpha - 3, +\infty) \cap ([0, 1) \setminus \cup_{i=0}^2 P_i), & 3 < \alpha \le 4, \\
-            (\alpha - 2, +\infty) \cap P_2, & 2 < \alpha \le 3, \\
+            (\alpha - 3, +\infty) \cap ([0, 1) \setminus \cup_{i=0}^2 P_i), & 3 < \alpha \leqslant 4, \\
+            (\alpha - 2, +\infty) \cap P_2, & 2 < \alpha \leqslant 3, \\
             P_2 \cup ((\alpha - 1, +\infty) \cap P_1), & 1 < \alpha \leq 2, \\
-            P_2 \cup P_1 \cup ((\alpha, +\infty) \cap P_0), & 0 < \alpha \le 1, \\
+            P_2 \cup P_1 \cup ((\alpha, +\infty) \cap P_0), & 0 < \alpha \leqslant 1, \\
             [0, 1), & \alpha \leq 0.
         \end{cases}
 
@@ -141,7 +141,7 @@
 
     .. math::
 
-        \lvert f(x') - f(x) \rvert = \lvert x' + 3 - x - i \rvert \ge 3 - i - \lvert x' - x \rvert \ge \dfrac{5}{2} - i > \dfrac{1}{2} > \varepsilon.
+        \lvert f(x') - f(x) \rvert = \lvert x' + 3 - x - i \rvert \geqslant 3 - i - \lvert x' - x \rvert \geqslant \dfrac{5}{2} - i > \dfrac{1}{2} > \varepsilon.
 
     上式中 :math:`i \in \{0, 1, 2\}` 为 :math:`x` 所属集合 :math:`P_i` 的下标。因此 :math:`f(x)` 在 :math:`[0, 1)` 上不连续。
 

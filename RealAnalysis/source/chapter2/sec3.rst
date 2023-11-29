@@ -62,8 +62,8 @@
 
     .. math::
 
-        m^* (E \cap A) + m^* (E \cap A) \le m^* E + m^* A, \\
-        m_* (E \cap A) + m_* (E \cap A) \ge m_* E + m_* A.
+        m^* (E \cap A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
+        m_* (E \cap A) + m_* (E \cap A) \geqslant m_* E + m_* A.
 
 13. 设 :math:`G` 是开集， :math:`E` 是零测度集，试证 :math:`\overline{G} = \overline{G \setminus E}`.
 
@@ -91,13 +91,13 @@
 
     .. math::
 
-        m^* E_n \le  m^* S.
+        m^* E_n \leqslant  m^* S.
 
     令 :math:`n \to \infty` 即有
 
     .. math::
 
-        \lim\limits_{n \to \infty} m^* E_n \le m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
+        \lim\limits_{n \to \infty} m^* E_n \leqslant m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
 
     另一方面，由 :ref:`勒贝格外测度的正则性 <reg_outer_measure>`, 即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
     使得 :math:`m A_n = m^* E_n`, 令
@@ -122,7 +122,7 @@
 
     .. math::
 
-        m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) \le m \left( \bigcup\limits_{n=1}^\infty C_n \right) = \lim\limits_{n \to \infty} m C_n = \lim\limits_{n \to \infty} m^* E_n.
+        m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) \leqslant m \left( \bigcup\limits_{n=1}^\infty C_n \right) = \lim\limits_{n \to \infty} m C_n = \lim\limits_{n \to \infty} m^* E_n.
 
     综上所述，有 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) = \lim\limits_{n \to \infty} m^* E_n`.
 
@@ -189,7 +189,7 @@
         1 & = m \left( [0, 1] \setminus A \right) = m \left( [0, 1] \cap \mathcal{C} A \right) \\
         & = m \left( [0, 1] \cap \mathcal{C} \left( \bigcap\limits_{k=1}^n A_k \right) \right) = m \left( [0, 1] \cap \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \right) \\
         & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathcal{C} A_k \right) \right) = m \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \\
-        & \le \sum \limits_{k=1}^n m \mathcal{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
+        & \leqslant \sum \limits_{k=1}^n m \mathcal{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
         & = n - \sum \limits_{k=1}^n m A_k < 1,
 
     矛盾，所以 :math:`m A = m \left( \bigcap\limits_{k=1}^n A_k \right) > 0`.
@@ -198,7 +198,7 @@
 
 .. proof:solution::
 
-    按如下方法修改 Cantor 三分集的构造：第一次去掉中间的开区间，长度为 :math:`0 < a \le 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间，
+    按如下方法修改 Cantor 三分集的构造：第一次去掉中间的开区间，长度为 :math:`0 < a \leqslant 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间，
     长度为 :math:`a^2`; 依此构造，第 :math:`n` 次去掉剩下 :math:`2^{n-1}` 个闭区间中间的开区间，长度为 :math:`a^n`.
     这样，被去掉的开区间的总长度为
 

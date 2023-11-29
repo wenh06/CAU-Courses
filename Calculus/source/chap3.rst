@@ -303,7 +303,7 @@
     当 :math:`a, b` 同号时，这是一个底边长 :math:`|a|, |b|`, 高为 :math:`|a - b|` 的梯形，面积为 :math:`\dfrac{|a| + |b|}{2} |a - b|`.
     当 :math:`a, b > 0` 时，面积为正的，当 :math:`a, b < 0` 时，面积为负的。值为 :math:`\dfrac{b^2 - a^2}{2}`.
 
-    当 :math:`a \le 0 \le b`, 定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示两个三角形的面积之差 (包括等于 :math:`0` 时退化的情况).
+    当 :math:`a \leqslant 0 \leqslant b`, 定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示两个三角形的面积之差 (包括等于 :math:`0` 时退化的情况).
     这是两个等腰直角三角形，直角边长分别为 :math:`-a, b`, 面积之差为 :math:`\dfrac{b^2 - a^2}{2}`.
 
     (3). :math:`\sin x` 在 :math:`(-\pi, 0)` 取值为负， :math:`(0, \pi)` 取值为正，因此定积分 :math:`\displaystyle \int_{-\pi}^{\pi} \sin x \mathrm{d} x`
@@ -401,9 +401,9 @@
 
 .. math::
 
-    F(x) = \dfrac{1}{x - a} \int_a^x f(t) \mathrm{d} t \quad (a < x \le b),
+    F(x) = \dfrac{1}{x - a} \int_a^x f(t) \mathrm{d} t \quad (a < x \leqslant b),
 
-试证明在区间 :math:`(a, b]` 上恒有 :math:`F'(x) \ge 0`.
+试证明在区间 :math:`(a, b]` 上恒有 :math:`F'(x) \geqslant 0`.
 
 .. proof:proof::
 
@@ -419,7 +419,7 @@
 
         F'(x) = \dfrac{1}{x - a} \cdot f(x) - \dfrac{f(\xi) (x - a)}{(x - a)^2} = \dfrac{1}{x - a} \cdot \left( f(x) - f(\xi) \right).
 
-    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，因此有 :math:`f(x) \ge f(\xi)`, 从而有 :math:`F'(x) \ge 0`.
+    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加，因此有 :math:`f(x) \geqslant f(\xi)`, 从而有 :math:`F'(x) \geqslant 0`.
 
 4. 计算下列定积分：
 
@@ -427,7 +427,7 @@
 
 (3). :math:`\displaystyle \int_0^1 \dfrac{1}{\sqrt{4-u^2}} \mathrm{d} u`;
 
-(5). 设 :math:`\displaystyle f(x) = \begin{cases} \frac{x}{2} + 1, & 0 \le x \le 2 \\ x, & 2 < x \le 3 \end{cases}`, 求 :math:`\displaystyle \int_0^3 f(x) \mathrm{d} x`.
+(5). 设 :math:`\displaystyle f(x) = \begin{cases} \frac{x}{2} + 1, & 0 \leqslant x \leqslant 2 \\ x, & 2 < x \leqslant 3 \end{cases}`, 求 :math:`\displaystyle \int_0^3 f(x) \mathrm{d} x`.
 
 (7). :math:`\displaystyle \int_0^2 (2 - x)^2 (2 + x) \mathrm{d} x`;
 
@@ -681,7 +681,7 @@
         & = \dfrac{9}{8} - 0 + \left( 9 - 27 + 27 - \dfrac{9}{8} + \dfrac{27}{4} - \dfrac{27}{2} \right) \\
         & = \dfrac{9}{8} + \dfrac{9}{8} = \dfrac{9}{4}.
 
-4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \le t \le 2\pi)` 所围成的图形的面积.
+4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \leqslant t \leqslant 2\pi)` 所围成的图形的面积.
 
 .. proof:solution::
 
@@ -803,7 +803,7 @@
 
         \int_2^{+\infty} \dfrac{1}{x (\ln x)^k} \mathrm{d} x = \int_2^{+\infty} \dfrac{\mathrm{d} (\ln x)}{(\ln x)^k} = \begin{cases} \left. \dfrac{1}{(1 - k)(\ln x)^{k - 1}} \right|_2^{+\infty}, & k \neq 1 \\ \left. \dfrac{1}{\ln x} \right|_2^{+\infty}, & k = 1 \end{cases}
 
-    所以当 :math:`k > 1` 时，该广义积分收敛，值为 :math:`\dfrac{1}{(k - 1)(\ln 2)^{k - 1}}`; 当 :math:`k \le 1` 时，该广义积分发散.
+    所以当 :math:`k > 1` 时，该广义积分收敛，值为 :math:`\dfrac{1}{(k - 1)(\ln 2)^{k - 1}}`; 当 :math:`k \leqslant 1` 时，该广义积分发散.
 
     令 :math:`f(k) = (k - 1)(\ln 2)^{k - 1}, k > 1`, 那么
 
@@ -816,7 +816,7 @@
     因此当 :math:`k = 1 - \dfrac{1}{\ln \ln 2}` 时， :math:`f(k)` 取得极大值. 它是 :math:`f(k)` 唯一的极大值点，因此是其最大值点，
     从而是该广义积分的最小值点.
 
-3. 设 :math:`\displaystyle f(x) = \begin{cases} \lambda e^{-\lambda x}, & x \ge 0 \\ 0, & x < 0 \end{cases}`, 其中 :math:`\lambda > 0`, 试求 :math:`\displaystyle \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x` 与 :math:`\displaystyle \int_{-\infty}^{+\infty} x^2 f(x) \mathrm{d} x`.
+3. 设 :math:`\displaystyle f(x) = \begin{cases} \lambda e^{-\lambda x}, & x \geqslant 0 \\ 0, & x < 0 \end{cases}`, 其中 :math:`\lambda > 0`, 试求 :math:`\displaystyle \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x` 与 :math:`\displaystyle \int_{-\infty}^{+\infty} x^2 f(x) \mathrm{d} x`.
 
 .. proof:solution::
 

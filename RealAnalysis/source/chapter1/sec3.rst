@@ -58,7 +58,7 @@
     所以有 :math:`\lim\limits_{i \to \infty} f(x_{k_i}) = f(x_0)`, 于是有 :math:`y = f(x_0)`. 可以断言 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`,
     如若不然，那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`x_0 \not\in E_{k_0}`, 那么 :math:`x_0 \in \mathcal{C} E_{k_0}`.
     而 :math:`\mathcal{C} E_{k_0}` 是一个开集，所以存在 :math:`\varepsilon > 0`, 使得 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0}`,
-    那么对任意 :math:`k \ge k_0`, 都有 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0} \subset \mathcal{C} E_k`, 于是有
+    那么对任意 :math:`k \geqslant k_0`, 都有 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0} \subset \mathcal{C} E_k`, 于是有
     :math:`\lvert x_k - x_0 \rvert >= \varepsilon`, 这与 :math:`\{ x_k \}` 收敛到 :math:`x_0` 矛盾。所以有 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`.
     于是 :math:`y = f(x_0) \in f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`.
     这样，我们就证明了 :math:`\bigcap\limits_{k=1}^{\infty} f(E_k) \subset f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`.
@@ -152,7 +152,7 @@
 
         那么 :math:`f` 在集合 :math:`P` 任何一点 :math:`x` 都不连续：不妨设 :math:`x \in P_0`, 对任意的 :math:`\delta > 0`,
         取 :math:`n_0 \in \mathbb{N}` 使得 :math:`2 \cdot \left(\dfrac{1}{3} \right)^{n_0} < \delta` 成立.
-        由于 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 所以 :math:`x \in F_{n_0}`, 那么存在 :math:`k, 1 \le k \le 2^{n_0}`,
+        由于 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 所以 :math:`x \in F_{n_0}`, 那么存在 :math:`k, 1 \leqslant k \leqslant 2^{n_0}`,
         使得 :math:`x \in F_{n_0k}`. 闭区间 :math:`F_{n_0k}` 的长度为 :math:`\left(\dfrac{1}{3} \right)^{n_0}`,
         所以 :math:`F_{n_0k} \subset U(x, \delta)`. 那么根据 Cantor 三分集的构造，闭区间 :math:`F_{n_0k}` 的中间 1/3 开区间，
         记为 :math:`I`, 是 :math:`G` 的构成区间，同时包含于 :math:`U(x, \delta)`. 取 :math:`I` 中的一点 :math:`y`,

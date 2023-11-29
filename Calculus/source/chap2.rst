@@ -32,7 +32,7 @@
 
     法线的斜率为 :math:`-\frac{1}{2 \ln 2}`, 所以法线方程为 :math:`y - 2 = -\frac{1}{2 \ln 2} (x - 1)`, 即 :math:`y = -\frac{1}{2 \ln 2} x + \frac{1}{2 \ln 2} + 2`.
 
-5. 函数 :math:`f(x) = \begin{cases} a \sin x, & x \le 0 \\ e^x + b, & x > 0 \end{cases}` 可导, 求 :math:`a, b`.
+5. 函数 :math:`f(x) = \begin{cases} a \sin x, & x \leqslant 0 \\ e^x + b, & x > 0 \end{cases}` 可导, 求 :math:`a, b`.
 
 .. proof:solution::
 
@@ -492,11 +492,11 @@
     而且 :math:`f(0) = f(1) = 0`, 所以根据罗尔定理，存在 :math:`\xi \in (0, 1)` 使得 :math:`0 = f'(\xi) = c_0 + c_1 \xi + \cdots + c_n \xi^n`, 即 :math:`p(\xi) = 0`.
     因此， :math:`p(x)` 至少有一正实根 :math:`\xi`.
 
-6. 求证 :math:`\arcsin x + \arccos x \equiv \dfrac{\pi}{2} (\lvert x \rvert \le 1)`.
+6. 求证 :math:`\arcsin x + \arccos x \equiv \dfrac{\pi}{2} (\lvert x \rvert \leqslant 1)`.
 
 .. proof:proof::
 
-    考虑函数 :math:`f(x) = \arcsin x + \arccos x, \lvert x \rvert \le 1`. 它的导数为 :math:`f'(x) = \dfrac{1}{\sqrt{1 - x^2}} - \dfrac{1}{\sqrt{1 - x^2}} = 0`,
+    考虑函数 :math:`f(x) = \arcsin x + \arccos x, \lvert x \rvert \leqslant 1`. 它的导数为 :math:`f'(x) = \dfrac{1}{\sqrt{1 - x^2}} - \dfrac{1}{\sqrt{1 - x^2}} = 0`,
     所以 :math:`f(x)` 在闭区间 :math:`[-1, 1]` 上是常数函数。易知 :math:`f(0) = \dfrac{\pi}{2}`, 所以 :math:`f(x) \equiv \dfrac{\pi}{2}`.
 
 7. 证明：当 :math:`a > b > 0` 时， :math:`\dfrac{a - b}{a} < \ln \dfrac{a}{b} < \dfrac{a - b}{b}`.
@@ -786,17 +786,17 @@
 
 (2). :math:`y = \sqrt{2x - x^2}`;
 
-(4). :math:`y = x^n e^{-x} \quad (n > 0, x \ge 0)`.
+(4). :math:`y = x^n e^{-x} \quad (n > 0, x \geqslant 0)`.
 
 .. proof:solution::
 
     (2). :math:`y = \sqrt{2x - x^2}` 的定义域为 :math:`[0, 2]`, 导函数为 :math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}}`. 令 :math:`y' = 0` 解得 :math:`x = 1`.
-    当 :math:`0 \le x \le 1` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} > 0`, 所以 :math:`y` 在 :math:`[0, 1]` 上单调递增；
-    当 :math:`1 \le x \le 2` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} < 0`, 所以 :math:`y` 在 :math:`[1, 2]` 上单调递减.
+    当 :math:`0 \leqslant x \leqslant 1` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} > 0`, 所以 :math:`y` 在 :math:`[0, 1]` 上单调递增；
+    当 :math:`1 \leqslant x \leqslant 2` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} < 0`, 所以 :math:`y` 在 :math:`[1, 2]` 上单调递减.
 
-    (4). :math:`y = x^n e^{-x} \quad (n > 0, x \ge 0)` 的导函数为 :math:`y' = x^{n-1} e^{-x} (n - x)`. 令 :math:`y' = 0` 解得 :math:`x = n`.
-    当 :math:`0 \le x \le n` 时，:math:`y' = x^{n-1} e^{-x} (n - x) > 0`, 所以 :math:`y` 在 :math:`[0, n]` 上单调递增；
-    当 :math:`n \le x` 时，:math:`y' = x^{n-1} e^{-x} (n - x) < 0`, 所以 :math:`y` 在 :math:`[n, +\infty)` 上单调递减.
+    (4). :math:`y = x^n e^{-x} \quad (n > 0, x \geqslant 0)` 的导函数为 :math:`y' = x^{n-1} e^{-x} (n - x)`. 令 :math:`y' = 0` 解得 :math:`x = n`.
+    当 :math:`0 \leqslant x \leqslant n` 时，:math:`y' = x^{n-1} e^{-x} (n - x) > 0`, 所以 :math:`y` 在 :math:`[0, n]` 上单调递增；
+    当 :math:`n \leqslant x` 时，:math:`y' = x^{n-1} e^{-x} (n - x) < 0`, 所以 :math:`y` 在 :math:`[n, +\infty)` 上单调递减.
 
 2. 应用函数的单调性证明下列不等式：
 
@@ -806,14 +806,14 @@
 
 .. proof:proof::
 
-    (1). 令 :math:`f(x) = 2 \sqrt{x} - (3 - \dfrac{1}{x})`, 那么当 :math:`x \ge 1`时有 :math:`f'(x) = \dfrac{1}{\sqrt{x}} + \dfrac{1}{x^2} > 0`,
+    (1). 令 :math:`f(x) = 2 \sqrt{x} - (3 - \dfrac{1}{x})`, 那么当 :math:`x \geqslant 1`时有 :math:`f'(x) = \dfrac{1}{\sqrt{x}} + \dfrac{1}{x^2} > 0`,
     所以 :math:`f(x)` 在 :math:`[1, +\infty)` 上单调递增, 故 :math:`f(x) > f(1) = 0` 对一切 :math:`x > 1` 成立.
 
     (3). 令 :math:`f(x) = \sin x - \dfrac{2}{\pi} x`, 那么 :math:`f(x)` 的导函数为 :math:`f'(x) = \cos x - \dfrac{2}{\pi}`. 令 :math:`f'(x) = 0`,
     解得 :math:`x = \arccos \dfrac{2}{\pi}`. 在区间 :math:`[0, \arccos \dfrac{2}{\pi})` 上有 :math:`f'(x) > 0`,
-    所以 :math:`f(x)` 在 :math:`[0, \arccos \dfrac{2}{\pi}]` 上单调递增，从而有 :math:`f(x) > f(0) = 0` 对一切 :math:`0 < x \le \arccos \dfrac{2}{\pi}` 成立。
+    所以 :math:`f(x)` 在 :math:`[0, \arccos \dfrac{2}{\pi}]` 上单调递增，从而有 :math:`f(x) > f(0) = 0` 对一切 :math:`0 < x \leqslant \arccos \dfrac{2}{\pi}` 成立。
     在区间 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2})` 上有 :math:`f'(x) < 0`, 所以 :math:`f(x)` 在 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2}]` 上单调递减，
-    从而有 :math:`f(x) > f(\dfrac{\pi}{2}) = 0` 对一切 :math:`\arccos \dfrac{2}{\pi} \le x < \dfrac{\pi}{2}` 成立。
+    从而有 :math:`f(x) > f(\dfrac{\pi}{2}) = 0` 对一切 :math:`\arccos \dfrac{2}{\pi} \leqslant x < \dfrac{\pi}{2}` 成立。
     于是 :math:`f(x) > 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立。
 
     另一方面，令 :math:`g(x) = x - \sin x`, 那么 :math:`g(x)` 的导函数为 :math:`g'(x) = 1 - \cos x`. 在区间 :math:`(0, \dfrac{\pi}{2})` 上恒有 :math:`g'(x) > 0`,
@@ -912,13 +912,13 @@
 
     .. math::
 
-        \lambda f(x) + (1 - \lambda) f(y) \ge f(\lambda x + (1 - \lambda) y), \quad \lambda \in [0, 1].
+        \lambda f(x) + (1 - \lambda) f(y) \geqslant f(\lambda x + (1 - \lambda) y), \quad \lambda \in [0, 1].
 
     特别地，取 :math:`y = x_0, t = \frac{1}{2}`, 那么有
 
     .. math::
 
-        f(x) \ge 2 f \left( \dfrac{x + x_0}{2} \right) - f(x_0) \ge 2 f(x_0) - f(x_0) = f(x_0).
+        f(x) \geqslant 2 f \left( \dfrac{x + x_0}{2} \right) - f(x_0) \geqslant 2 f(x_0) - f(x_0) = f(x_0).
 
 4. 求下列函数在指定区间上的最大值最小值：
 
@@ -932,7 +932,7 @@
     因为 :math:`y''(e^{-2}) = \dfrac{1}{2e^{-3}} > 0`, 所以 :math:`x = e^{-2}` 为极小值点，
     相应的极小值为 :math:`y(e^{-2}) = -\dfrac{1}{2e}`. 这是唯一的极值点，所以也是最小值点.
 
-7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \ge 0` 的矩形的最大面积.
+7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \geqslant 0` 的矩形的最大面积.
 
 .. proof:solution::
 

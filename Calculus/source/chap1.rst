@@ -65,12 +65,12 @@
 
 .. proof:proof::
 
-    由于 :math:`f(x)` 在 :math:`(0, \ell)` 内单调增加，所以 :math:`f(x_1) \le f(x_2)` 对于 :math:`0 < x_1 < x_2 < \ell` 成立。
+    由于 :math:`f(x)` 在 :math:`(0, \ell)` 内单调增加，所以 :math:`f(x_1) \leqslant f(x_2)` 对于 :math:`0 < x_1 < x_2 < \ell` 成立。
     现任取 :math:`-\ell < x_1 < x_2 < 0`, 那么有 :math:`0 < -x_2 < -x_1 < \ell`, 由于 :math:`f(x)` 是奇函数，所以有
 
     .. math::
 
-        f(x_2) = -f(-x_2) \le -f(-x_1) = f(x_1),
+        f(x_2) = -f(-x_2) \leqslant -f(-x_1) = f(x_1),
 
     由于 :math:`x_1, x_2` 的任意性，所以 :math:`f(x)` 在 :math:`(-\ell, 0)` 内单调增加。
 
@@ -120,11 +120,11 @@
 
 .. proof:proof::
 
-    充分性：若 :math:`f(x)` 在 :math:`X` 上有界，那么存在 :math:`M > 0`, 使得 :math:`\forall x \in X` 有 :math:`\lvert f(x) \rvert \le M`,
+    充分性：若 :math:`f(x)` 在 :math:`X` 上有界，那么存在 :math:`M > 0`, 使得 :math:`\forall x \in X` 有 :math:`\lvert f(x) \rvert \leqslant M`,
     那么 :math:`f(x)` 在 :math:`X` 上既有上界 :math:`M`, 又有下界 :math:`-M`.
 
     必要性：若 :math:`f(x)` 在 :math:`X` 上既有上界 :math:`M`, 又有下界 :math:`m`, 那么 :math:`\forall x \in X` 有
-    :math:`\lvert f(x) \rvert \le \max \{ \lvert m \rvert, \lvert M \rvert \}`, 所以 :math:`f(x)` 在 :math:`X` 上有界
+    :math:`\lvert f(x) \rvert \leqslant \max \{ \lvert m \rvert, \lvert M \rvert \}`, 所以 :math:`f(x)` 在 :math:`X` 上有界
     :math:`\max \{ \lvert m \rvert, \lvert M \rvert \}`.
 
 §1.2 函数的极限
@@ -140,7 +140,7 @@
 
     .. math::
 
-        \lvert \lvert u_n \rvert - \lvert a \rvert \rvert \le \lvert u_n - a \rvert < \varepsilon
+        \lvert \lvert u_n \rvert - \lvert a \rvert \rvert \leqslant \lvert u_n - a \rvert < \varepsilon
 
     所以 :math:`\lim\limits_{n \to \infty} \lvert u_n \rvert = \lvert a \rvert`.
 
@@ -382,7 +382,7 @@
 
         \begin{align*}
         f(0) & = -b < 0, \\
-        f(a + b) & = a + b - a \sin (a + b) - b = a \bigl(1 - \sin (a + b)\bigr) \ge 0.
+        f(a + b) & = a + b - a \sin (a + b) - b = a \bigl(1 - \sin (a + b)\bigr) \geqslant 0.
         \end{align*}
 
     所以或者有 :math:`f(a + b) = 0`, :math:`a + b` 是方程 :math:`x = a \sin x + b` 的一个正根；或者有 :math:`f(a + b) > 0`, 那么由零点存在定理知
@@ -414,7 +414,7 @@
 §1.2 函数的极限
 --------------------------------
 
-1. 设 :math:`a_n > 0 (n = 1, 2, \ldots)` 且存在常数 :math:`c > 0` 使得 :math:`\forall n > m > 1` 有 :math:`a_n \le c \cdot a_m`.
+1. 设 :math:`a_n > 0 (n = 1, 2, \ldots)` 且存在常数 :math:`c > 0` 使得 :math:`\forall n > m > 1` 有 :math:`a_n \leqslant c \cdot a_m`.
 已知 :math:`\{a_n\}` 存在子列 :math:`\{a_{n_k}\}` 极限等于0，求证 :math:`\lim\limits_{n \to \infty} a_n = 0`。
 
 .. proof:proof::
@@ -426,7 +426,7 @@
 
         0 < a_{n_k} < \varepsilon / c
 
-    由于 :math:`\forall n > m > 1` 有 :math:`a_n \le c \cdot a_m`, 那么 :math:`\forall n > n_{K(\varepsilon)+1}` 有
+    由于 :math:`\forall n > m > 1` 有 :math:`a_n \leqslant c \cdot a_m`, 那么 :math:`\forall n > n_{K(\varepsilon)+1}` 有
 
     .. math::
 
@@ -445,20 +445,20 @@
 
     .. math::
 
-        [x] = \max \{ n \in \mathbb{Z} | n \le x \} = n \text{ 若 } n \le x < n + 1, n \in \mathbb{Z}
+        [x] = \max \{ n \in \mathbb{Z} | n \leqslant x \} = n \text{ 若 } n \leqslant x < n + 1, n \in \mathbb{Z}
 
-    那么对于 :math:`\left[ \dfrac{1}{x} \right]` 来说，有 :math:`\left[ \dfrac{1}{x} \right] \le \dfrac{1}{x} < \left[ \dfrac{1}{x} \right] + 1`
+    那么对于 :math:`\left[ \dfrac{1}{x} \right]` 来说，有 :math:`\left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x} < \left[ \dfrac{1}{x} \right] + 1`
     (将上式的 :math:`x, n` 分别替换为 :math:`\dfrac{1}{x}, \left[ \dfrac{1}{x} \right]` 即可)，那么
 
     .. math::
 
-        \dfrac{1}{x} - 1 < \left[ \dfrac{1}{x} \right] \le \dfrac{1}{x}
+        \dfrac{1}{x} - 1 < \left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x}
 
     那么可以利用夹逼准则得到
 
     .. math::
 
-        1 = \lim\limits_{x \to 0} x \left( \dfrac{1}{x} - 1 \right) \le \lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] \le \lim\limits_{x \to 0} x \cdot \dfrac{1}{x} = 1
+        1 = \lim\limits_{x \to 0} x \left( \dfrac{1}{x} - 1 \right) \leqslant \lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] \leqslant \lim\limits_{x \to 0} x \cdot \dfrac{1}{x} = 1
 
 §1.6 函数的连续性与连续函数的运算
 --------------------------------------------
@@ -483,7 +483,7 @@ Riemann 函数定义为
         :label: riemann-nbhd
 
         \begin{aligned}
-        A(x_0, q_0) & := \left\{ a \in \mathbb{Q} \ :\ a = \dfrac{p}{q}, p, q \text{ 互素, } 0 < q \le q_0, ([x_0] - 1) q \le p \le ([x_0] + 2) q \right\} \\
+        A(x_0, q_0) & := \left\{ a \in \mathbb{Q} \ :\ a = \dfrac{p}{q}, p, q \text{ 互素, } 0 < q \leqslant q_0, ([x_0] - 1) q \leqslant p \leqslant ([x_0] + 2) q \right\} \\
         & \subset [[x_0] - 1, [x_0] + 2]
         \end{aligned}
 
@@ -496,7 +496,7 @@ Riemann 函数定义为
 
         \lvert R(x) - 0 \rvert = R(x) < \dfrac{1}{q_0} < \varepsilon,
 
-    这是因为在这个领域内使得 :math:`R(x) \ge \dfrac{1}{q_0}` 的(有理)数 :math:`x` 都必须属于集合 :math:`A`. 那么 :math:`\lim\limits_{x \to x_0} R(x) = 0 = R(x_0)`.
+    这是因为在这个领域内使得 :math:`R(x) \geqslant \dfrac{1}{q_0}` 的(有理)数 :math:`x` 都必须属于集合 :math:`A`. 那么 :math:`\lim\limits_{x \to x_0} R(x) = 0 = R(x_0)`.
     由于 :math:`x_0` 是任意的，所以 Riemann 函数 :math:`R(x)` 在所有无理数点处连续。
 
     然后来证明 Riemann 函数在所有有理数点处间断。任取有理数 :math:`x_0 = \dfrac{p_0}{q_0} \in \mathbb{Q}`, 取 :math:`\varepsilon = \dfrac{1}{2 q_0}`, 那么

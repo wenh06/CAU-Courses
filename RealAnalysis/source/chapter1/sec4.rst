@@ -13,10 +13,10 @@
 
         .. math::
 
-            \rho(b, F) \le \rho(b, x_0) \le \rho(b, a) + \rho(a, x_0) < \rho(b, a) + \rho(a, F) + \varepsilon.
+            \rho(b, F) \leqslant \rho(b, x_0) \leqslant \rho(b, a) + \rho(a, x_0) < \rho(b, a) + \rho(a, F) + \varepsilon.
 
-        由于 :math:`\varepsilon` 是任意的，所以有 :math:`\rho(b, F) \le \rho(b, a) + \rho(a, F)`. 同理可证 :math:`\rho(a, F) \le \rho(a, b) + \rho(b, F)`.
-        所以有 :math:`\lvert \rho(a, F) - \rho(b, F) \rvert \le \rho(a, b)`. 那么对于任意取定的 :math:`\varepsilon > 0`, 取 :math:`\delta = \varepsilon`,
+        由于 :math:`\varepsilon` 是任意的，所以有 :math:`\rho(b, F) \leqslant \rho(b, a) + \rho(a, F)`. 同理可证 :math:`\rho(a, F) \leqslant \rho(a, b) + \rho(b, F)`.
+        所以有 :math:`\lvert \rho(a, F) - \rho(b, F) \rvert \leqslant \rho(a, b)`. 那么对于任意取定的 :math:`\varepsilon > 0`, 取 :math:`\delta = \varepsilon`,
         只要 :math:`\rho(a, b) < \delta`, 就有 :math:`\lvert \rho(a, F) - \rho(b, F) \rvert < \varepsilon`.
         这就证明了函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F)` 是一致连续的。
 
@@ -45,8 +45,8 @@
 
         a_2 = \inf \{ x : \ (x, x_0) \subset G_2 \}, \quad b_2 = \sup \{ x : \ (x_0, x) \subset G_2 \}.
 
-    又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \le a_2`.
-    同理可证 :math:`b_1 \ge b_2`. 于是有 :math:`I_1 \subset I_2`.
+    又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \leqslant a_2`.
+    同理可证 :math:`b_1 \geqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
 
 26. 设 :math:`E` 为康托三分集的补集中构成区间的中点所成的集，求 :math:`E'`.
 
@@ -77,8 +77,8 @@
     任取康托三分集中的点 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 那么 :math:`x \in F_n, \forall n \in \mathbb{N}` 成立。
     对任意 :math:`\varepsilon > 0`, 取 :math:`n \in \mathbb{N}`, 使得 :math:`\dfrac{1}{3^{n}} < \varepsilon`,
     那么 :math:`x \in F_n`, 从而存在 :math:`k \in \{ 1, 2, \dots, 2^n \}`, 使得 :math:`x \in F_{nk}`. 闭区间 :math:`F_{nk}` 的长度为
-    :math:`\dfrac{1}{3^{n}}`, 所以 :math:`\forall y \in F_{nk}`, 都有 :math:`\lvert x - y \rvert \le \varepsilon`. 同时，
-    闭区间 :math:`F_{nk}` 包含了 :math:`I_{n+1}` 中的某个开区间 :math:`I_{n+1, k}, 1 \le k \le 2^{n}`
+    :math:`\dfrac{1}{3^{n}}`, 所以 :math:`\forall y \in F_{nk}`, 都有 :math:`\lvert x - y \rvert \leqslant \varepsilon`. 同时，
+    闭区间 :math:`F_{nk}` 包含了 :math:`I_{n+1}` 中的某个开区间 :math:`I_{n+1, k}, 1 \leqslant k \leqslant 2^{n}`
     (即第 :math:`n+1` 步从闭区间 :math:`F_{nk}` 中去除的中间 :math:`\dfrac{1}{3}` 开区间)，进而包含了 :math:`I_{n+1, k}` 的中点，
     记其为 :math:`y_0`, 那么有 :math:`0 < \lvert x - y_0 \rvert < \varepsilon`, 即 :math:`y_0 \in \mathring{U}(x, \varepsilon) \cap E`.
     这就证明了 :math:`x \in P_0` 是 :math:`E` 的聚点。所以有 :math:`E' \supset P_0`.

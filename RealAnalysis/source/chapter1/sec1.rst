@@ -158,7 +158,7 @@
     于是有 :math:`\mathbb{Z} \subset \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \varliminf\limits_{n} E_n`.
     另一方面，任取 :math:`x \in \varliminf\limits_{n} E_n = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`,
     那么存在 :math:`k \in \mathbb{N}`, 使得 :math:`x \in \bigcap\limits_{n=k}^{\infty} E_n`. 将 :math:`x = \dfrac{p}{q}, q > 0` 写为既约分数的形式,
-    那么 :math:`\forall n \ge k, n \in \mathbb{N}`, 都有 :math:`x = \dfrac{p}{q} \in E_n = \left\{ m / n : m \in \mathbb{Z} \right\}`. 假设 :math:`q \neq 1`,
+    那么 :math:`\forall n \geqslant k, n \in \mathbb{N}`, 都有 :math:`x = \dfrac{p}{q} \in E_n = \left\{ m / n : m \in \mathbb{Z} \right\}`. 假设 :math:`q \neq 1`,
     那么取 :math:`n \in \mathbb{N}`, 使得 :math:`n > k` 且不被 :math:`q` 的某个素因子 :math:`p_0 > 1` 整除。那么由 :math:`\dfrac{p}{q} = \dfrac{m}{n}`,
     即 :math:`p n = q m`, 两边不可能有相同的素因子组 (例如 :math:`p_0` 不是左边的素因子，但是是右边的素因子)。所以 :math:`q \neq 1` 的假设不成立，也就是说
     :math:`\varliminf\limits_{n} E_n` 中任何元素写成既约分数的形式时，分母都是1，也就是说 :math:`\varliminf\limits_{n} E_n \subset \mathbb{Z}`.

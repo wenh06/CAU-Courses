@@ -22,13 +22,13 @@
 
     .. math::
 
-        0 \le \dfrac{x^n}{1 + \sqrt{x}} \le x^n.
+        0 \leqslant \dfrac{x^n}{1 + \sqrt{x}} \leqslant x^n.
 
     所以
 
     .. math::
 
-        0 \le \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x & \le \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
+        0 \leqslant \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x & \leqslant \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
         & = \lim\limits_{n \to \infty} \dfrac{1}{n + 1} \\
         & = 0.
 
@@ -88,7 +88,7 @@
 
     .. math::
 
-        0 \le \dfrac{1}{(1 + x^2)(1 + x^a)} \le \dfrac{1}{1 + x^2},
+        0 \leqslant \dfrac{1}{(1 + x^2)(1 + x^a)} \leqslant \dfrac{1}{1 + x^2},
 
     而 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛。那么有
 

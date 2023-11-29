@@ -34,7 +34,7 @@
 .. proof:proof::
 
     由于 :math:`0 < a_1 < \pi`, 所以 :math:`0 < \sin a_1 < 1`. 由于 :math:`\sin x` 在 :math:`[0, 1] \subset [0, \frac{\pi}{2}]` 上是单调递增的，
-    所以 :math:`0 = \sin 0 < a_2 = \sin a_1 < 1 = \sin \frac{\pi}{2}`. 那么容易由数学归纳法知 :math:`0 < a_n < 1` 对所有 :math:`n \ge 2` 成立。
+    所以 :math:`0 = \sin 0 < a_2 = \sin a_1 < 1 = \sin \frac{\pi}{2}`. 那么容易由数学归纳法知 :math:`0 < a_n < 1` 对所有 :math:`n \geqslant 2` 成立。
 
     由于在区间 :math:`(0, 1) \subset (0, \frac{\pi}{2})` 上，有 :math:`\sin x < x`, 所以对于任意的 :math:`n \in \mathbb{N}^+`, 有 :math:`0 < a_{n+1} = \sin a_n < a_n`.
     那么由单调有界原理知数列 :math:`\{a_n\}_{n\in\mathbb{N}}` 收敛，即极限 :math:`\lim\limits_{n \to \infty} a_n` 存在。

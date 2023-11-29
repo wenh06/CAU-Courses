@@ -5,7 +5,7 @@
 
 .. proof:proof::
 
-    设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`，其中 :math:`E_n` 是零测度集。由于 :math:`0 \le m_* E \le m^* E`, 所以要证明 :math:`E` 是零测度集，
+    设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`，其中 :math:`E_n` 是零测度集。由于 :math:`0 \leqslant m_* E \leqslant m^* E`, 所以要证明 :math:`E` 是零测度集，
     只要证明 :math:`E` 的外测度为零即可。根据外测度的性质，有
 
     .. math::
@@ -31,7 +31,7 @@
 
     .. math::
 
-        m G \le \sum_{n=1}^\infty m G_n = \sum_{n=1}^\infty \frac{\varepsilon}{2^n} = \varepsilon
+        m G \leqslant \sum_{n=1}^\infty m G_n = \sum_{n=1}^\infty \frac{\varepsilon}{2^n} = \varepsilon
 
     但是 :math:`\overline{G} = [0, 1]`，所以 :math:`m \overline{G} = 1`. 此时必有 :math:`m \overline{G} \neq m G`.
 
@@ -39,14 +39,14 @@
 
 .. proof:solution::
 
-    不合理。因为闭集的闭包仍然是闭集，以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例，由于 :math:`m \overline{G} = 1`，所以这样定义的 :math:`G` 的外测度 :math:`m^* G \ge 1`.
+    不合理。因为闭集的闭包仍然是闭集，以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例，由于 :math:`m \overline{G} = 1`，所以这样定义的 :math:`G` 的外测度 :math:`m^* G \geqslant 1`.
     而对每一个开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})` 来说，包含它的最小闭集为
     :math:`\overline{G_n} = [a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}}]`, 所以这样定义的 :math:`G_n` 的外测度 :math:`m^* G_n = \dfrac{\varepsilon}{2^n}`.
     那么 :math:`\sum\limits_{n=1}^\infty m^* G_n = \varepsilon`. 这样一来，外测度的半可加性
 
     .. math::
 
-        m^* G \le \sum_{n=1}^\infty m^* G_n
+        m^* G \leqslant \sum_{n=1}^\infty m^* G_n
 
     就不成立了。
 

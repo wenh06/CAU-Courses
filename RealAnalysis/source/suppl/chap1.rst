@@ -54,13 +54,13 @@
 
     .. math::
 
-        \min \{ i \mid \tilde{a}_i \neq \tilde{b}_i \} \ge \min \{ i \mid a_i \neq b_i \} \ge N.
+        \min \{ i \mid \tilde{a}_i \neq \tilde{b}_i \} \geqslant \min \{ i \mid a_i \neq b_i \} \geqslant N.
 
     因此有
 
     .. math::
 
-        \lvert \Phi(x) - \Phi(y) \rvert = \lvert \varphi(\tilde{x}) - \varphi(\tilde{y}) \rvert \le \left\lvert \sum\limits_{i=N}^{\infty} \dfrac{2}{2^{i+1}} \right\rvert = \dfrac{1}{2^{N-1}} < 2\varepsilon.
+        \lvert \Phi(x) - \Phi(y) \rvert = \lvert \varphi(\tilde{x}) - \varphi(\tilde{y}) \rvert \leqslant \left\lvert \sum\limits_{i=N}^{\infty} \dfrac{2}{2^{i+1}} \right\rvert = \dfrac{1}{2^{N-1}} < 2\varepsilon.
 
     由 :math:`\varepsilon` 的任意性，可知 :math:`\Phi` 是连续的。
 
@@ -85,7 +85,7 @@
 
     .. math::
 
-        \sum\limits_{i=1}^{n} (b_i - a_i) \le m(G) < \delta,
+        \sum\limits_{i=1}^{n} (b_i - a_i) \leqslant m(G) < \delta,
 
     从而有
 

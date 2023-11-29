@@ -1,19 +1,19 @@
 §1 勒贝格积分的引入
 ------------------------------------------
 
-2. 设 :math:`f` 于 :math:`E` 上可积，令 :math:`E_n = E( \lvert f \rvert \ge n)`, 证明 :math:`\displaystyle \lim_n m E_n = 0`.
+2. 设 :math:`f` 于 :math:`E` 上可积，令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 证明 :math:`\displaystyle \lim_n m E_n = 0`.
 
 .. proof:proof::
 
     :math:`f` 于 :math:`E` 上可积，那么 :math:`\lvert f \rvert` 于 :math:`E` 上可积，即 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m < \infty`.
-    由于 :math:`\{ m E_n \}_{n \in \mathbb{N}}` 是单调不增的，且 :math:`m E_n \ge 0`, 所以 :math:`\displaystyle \lim_n m E_n` 极限存在，设为 :math:`\alpha`.
-    假设 :math:`\alpha > 0`, 那么存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n \ge N` 时，有 :math:`m E_n \ge \dfrac{\alpha}{2}`, 于是
+    由于 :math:`\{ m E_n \}_{n \in \mathbb{N}}` 是单调不增的，且 :math:`m E_n \geqslant 0`, 所以 :math:`\displaystyle \lim_n m E_n` 极限存在，设为 :math:`\alpha`.
+    假设 :math:`\alpha > 0`, 那么存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n \geqslant N` 时，有 :math:`m E_n \geqslant \dfrac{\alpha}{2}`, 于是
 
     .. math::
 
-        \int_E \lvert f \rvert \mathrm{d} m \ge \int_{E_n} \lvert f \rvert \mathrm{d} m \ge n \cdot m E_n \ge \frac{n \alpha}{2}
+        \int_E \lvert f \rvert \mathrm{d} m \geqslant \int_{E_n} \lvert f \rvert \mathrm{d} m \geqslant n \cdot m E_n \geqslant \frac{n \alpha}{2}
 
-    对任意 :math:`n \ge N` 成立，这与 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m < \infty` 矛盾，所以 :math:`\alpha = 0`.
+    对任意 :math:`n \geqslant N` 成立，这与 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m < \infty` 矛盾，所以 :math:`\alpha = 0`.
 
 3. 设函数 :math:`f` 在 Cantor 三分集 :math:`P_0` 上定义为零，而在 :math:`P_0` 的补集中长为 :math:`\dfrac{1}{3^n}` 的构成区间上定义为 :math:`n`, :math:`n \in \mathbb{N}`
 试证 :math:`f \in L`, 并求积分值。
@@ -50,13 +50,13 @@
 
     .. math::
 
-        \sum_{k = 1}^n \chi_{E_k} (x) \ge p, \quad \forall x \in [0, 1],
+        \sum_{k = 1}^n \chi_{E_k} (x) \geqslant p, \quad \forall x \in [0, 1],
 
     于是有
 
     .. math::
 
-        \sum_{k = 1}^n m E_k = \sum_{k = 1}^n \int_{[0, 1]} \chi_{E_k} (x) \mathrm{d} m = \int_{[0, 1]} \sum_{k = 1}^n \chi_{E_k} (x) \mathrm{d} m \ge \int_{[0, 1]} p \mathrm{d} m = p.
+        \sum_{k = 1}^n m E_k = \sum_{k = 1}^n \int_{[0, 1]} \chi_{E_k} (x) \mathrm{d} m = \int_{[0, 1]} \sum_{k = 1}^n \chi_{E_k} (x) \mathrm{d} m \geqslant \int_{[0, 1]} p \mathrm{d} m = p.
 
     所以上式左端的和至少有一项不小于 :math:`\dfrac{p}{n}`, 也即对应的集合的测度不小于 :math:`\dfrac{p}{n}`.
 
@@ -87,7 +87,7 @@
 
 .. proof:proof::
 
-    :math:`\forall n \in \mathbb{N}`, 令 :math:`E_n = E( \lvert f \rvert \ge n)`, 那么 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`. 令
+    :math:`\forall n \in \mathbb{N}`, 令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 那么 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`. 令
 
     .. math::
 
@@ -96,7 +96,7 @@
             0, & x \in E_n,
         \end{cases}
 
-    那么 :math:`\varphi_n` 是 :math:`E` 上有界可测函数 (:math:`\lvert \varphi_n \rvert \le n`), 且依题意有
+    那么 :math:`\varphi_n` 是 :math:`E` 上有界可测函数 (:math:`\lvert \varphi_n \rvert \leqslant n`), 且依题意有
 
     .. math::
 

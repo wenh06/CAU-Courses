@@ -22,19 +22,19 @@
 
     .. math::
 
-        m^* E \ge \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
+        m^* E \geqslant \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
 
     另一方面，由于外测度的次可加性，对所有覆盖 :math:`E` 的区间集列 :math:`\{I_k\}` 有
 
     .. math::
 
-        m^* E \le \sum\limits_{k=1}^\infty m^* I_k = \sum\limits_{k=1}^\infty m I_k,
+        m^* E \leqslant \sum\limits_{k=1}^\infty m^* I_k = \sum\limits_{k=1}^\infty m I_k,
 
     从而有
 
     .. math::
 
-        m^* E \le \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
+        m^* E \leqslant \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
 
     综上，有
 
@@ -63,7 +63,7 @@
 
     .. math::
 
-        m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathcal{C} E_{n_{k_i}} \right) \ge 1 - \sum_{i = 1}^{\infty} m \mathcal{C} E_{n_{k_i}} \ge 1 - \varepsilon.
+        m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathcal{C} E_{n_{k_i}} \right) \geqslant 1 - \sum_{i = 1}^{\infty} m \mathcal{C} E_{n_{k_i}} \geqslant 1 - \varepsilon.
 
     :math:`\varepsilon` 足够小的时候 (比如 :math:`\varepsilon < 1`), 有 :math:`m \left( \bigcap\limits_{i=1}^\infty E_{n_{k_i}} \right) > 0`.
     所以，子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 即是题目所求。
@@ -117,7 +117,7 @@
 
     .. math::
 
-        m^* \left( \operatorname{pr}_1^{-1} (Z) \right) \le \sum_{k = 1}^{\infty} m^* \left( G_k \times (-k, k) \right) = \sum_{k = 1}^{\infty} m G_k \cdot 2k < \sum_{k = 1}^{\infty} \frac{\varepsilon}{k \cdot 2^{k+1}} \cdot 2k = \varepsilon.
+        m^* \left( \operatorname{pr}_1^{-1} (Z) \right) \leqslant \sum_{k = 1}^{\infty} m^* \left( G_k \times (-k, k) \right) = \sum_{k = 1}^{\infty} m G_k \cdot 2k < \sum_{k = 1}^{\infty} \frac{\varepsilon}{k \cdot 2^{k+1}} \cdot 2k = \varepsilon.
 
     由于 :math:`\varepsilon` 是任意的正数，所以 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集。
     于是我们证明了 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集。
@@ -141,8 +141,8 @@
 
 .. proof:proof::
 
-    首先，由于 :math:`E \cap I \subset I`, 所以有 :math:`m(E \cap I) \le m I`, 从而有 :math:`m(E \cap I) / m I \le 1`.
-    由此可知必须有 :math:`c \le 1`.
+    首先，由于 :math:`E \cap I \subset I`, 所以有 :math:`m(E \cap I) \leqslant m I`, 从而有 :math:`m(E \cap I) / m I \leqslant 1`.
+    由此可知必须有 :math:`c \leqslant 1`.
 
     由于 :math:`\lim\limits_{m I \to 0} m(E \cap I) / m I = c`, 那么任取 :math:`0 < c' < c`, 存在 :math:`\delta > 0`,
     使得当 :math:`m I < \delta` 时有 :math:`m(E \cap I) / m I > c'`, 即
@@ -209,7 +209,7 @@
         m^* \left( \bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} m^* E_n,
 
     这与题设已知的 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) < \sum\limits_{n=1}^\infty m^* E_n` 矛盾。
-    所以存在（最小的）自然数 :math:`N \ge 2` 使得
+    所以存在（最小的）自然数 :math:`N \geqslant 2` 使得
 
     .. math::
 
@@ -300,13 +300,13 @@
 .. proof:proof::
 
     :math:`1^{\circ}`. :math:`H_{\alpha}` 的非负性：由于集合的直径是非负的，而 :math:`\lim, \sup, \inf` 都具有保号性，
-    所以 :math:`H_{\alpha} (E) \ge 0` 对于任意的 :math:`E \subset \mathbb{R}^n` 成立。对于 :math:`E = \emptyset`,
+    所以 :math:`H_{\alpha} (E) \geqslant 0` 对于任意的 :math:`E \subset \mathbb{R}^n` 成立。对于 :math:`E = \emptyset`,
     以及任意给定的 :math:`\varepsilon > 0`, 对任意 :math:`n \in \mathbb{N}`, 可以取到 :math:`E_n \in \mathbb{R}^n`,
     使得其直径 :math:`d (E_n) < \varepsilon / n`, 例如直径为 :math:`\varepsilon / 2n` 的闭球。那么有 :math:`E \subset E_n`, 以及
 
     .. math::
 
-        H_{\alpha, \varepsilon} (E) \le \inf_{n \in \mathbb{N}} d (E_n)^{\alpha} \le \inf_{n \in \mathbb{N}} \left( \frac{\varepsilon}{n} \right)^{\alpha} = 0,
+        H_{\alpha, \varepsilon} (E) \leqslant \inf_{n \in \mathbb{N}} d (E_n)^{\alpha} \leqslant \inf_{n \in \mathbb{N}} \left( \frac{\varepsilon}{n} \right)^{\alpha} = 0,
 
     从而有 :math:`H_{\alpha} (\emptyset) = 0`.
 
@@ -338,7 +338,7 @@
 
     .. math::
 
-        H_{\alpha, \varepsilon} (A) \le \inf \sum_{n = 1}^{\infty} \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha}.
+        H_{\alpha, \varepsilon} (A) \leqslant \inf \sum_{n = 1}^{\infty} \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha}.
 
     对于不同的 :math:`n`, 即不同的 :math:`A_n`, 覆盖的选取是独立无关的，所以实际上有
 
@@ -346,36 +346,36 @@
 
         \inf \sum_{n = 1}^{\infty} \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha} = \sum_{n = 1}^{\infty} \inf \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha} = \sum_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n),
 
-    即有 :math:`H_{\alpha, \varepsilon} (A) \le \sum\limits_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n)`, 进而有
+    即有 :math:`H_{\alpha, \varepsilon} (A) \leqslant \sum\limits_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n)`, 进而有
 
     .. math::
 
-        H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \le \sup_{\varepsilon > 0} \sum_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n) \le \sum_{n = 1}^{\infty} \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A_n) = \sum_{n = 1}^{\infty} H_{\alpha} (A_n).
+        H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \leqslant \sup_{\varepsilon > 0} \sum_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n) \leqslant \sum_{n = 1}^{\infty} \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A_n) = \sum_{n = 1}^{\infty} H_{\alpha} (A_n).
 
     :math:`3^{\circ}`. :math:`H_{\alpha}` 的单调性：设 :math:`A \subset B`, 那么任何一个由直径不超过 :math:`\varepsilon` 的集合构成的覆盖 :math:`B` 的集列
     同时也是覆盖 :math:`A` 的集列，但反过来不一定成立。所以有
 
     .. math::
 
-        H_{\alpha, \varepsilon} (A) \le H_{\alpha, \varepsilon} (B).
+        H_{\alpha, \varepsilon} (A) \leqslant H_{\alpha, \varepsilon} (B).
 
     对 :math:`\varepsilon > 0` 取上确界，有
 
     .. math::
 
-        H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \le \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (B) = H_{\alpha} (B).
+        H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \leqslant \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (B) = H_{\alpha} (B).
 
     设集列 :math:`\{E_k\}_{k \in \mathbb{N}}` 满足 :math:`d (E_k) < \varepsilon, \forall k \in \mathbb{N}`. 对于 :math:`\beta > \alpha`, 有
 
     .. math::
 
-        \sum_{k} d (E_k)^{\beta} = \sum_{k} d (E_k)^{\alpha} \cdot d (E_k)^{\beta - \alpha} \le \varepsilon^{\beta - \alpha} \sum_{k} d (E_k)^{\alpha}.
+        \sum_{k} d (E_k)^{\beta} = \sum_{k} d (E_k)^{\alpha} \cdot d (E_k)^{\beta - \alpha} \leqslant \varepsilon^{\beta - \alpha} \sum_{k} d (E_k)^{\alpha}.
 
     于是有
 
     .. math::
 
-        H_{\beta, \varepsilon} (E) = \inf \sum_{k} d (E_k)^{\beta} \le \varepsilon^{\beta - \alpha} \inf \sum_{k} d (E_k)^{\alpha} = \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E).
+        H_{\beta, \varepsilon} (E) = \inf \sum_{k} d (E_k)^{\beta} \leqslant \varepsilon^{\beta - \alpha} \inf \sum_{k} d (E_k)^{\alpha} = \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E).
 
     由于 :math:`\lim\limits_{\varepsilon \to 0} \varepsilon^{\beta - \alpha} = 0`,
     :math:`\lim\limits_{\varepsilon \to 0} H_{\alpha, \varepsilon} (E) = H_{\alpha} (E)` 为有限值，
@@ -383,25 +383,25 @@
 
     .. math::
 
-        H_{\beta} (E) = \lim_{\varepsilon \to 0} H_{\beta, \varepsilon} (E) \le \lim_{\varepsilon \to 0} \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E) = 0.
+        H_{\beta} (E) = \lim_{\varepsilon \to 0} H_{\beta, \varepsilon} (E) \leqslant \lim_{\varepsilon \to 0} \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E) = 0.
 
 34. 设 :math:`r` 为给定的正数， :math:`a, b` 为正的常数. :math:`\mathbb{R}^n` 中子集列 :math:`V_1, V_2, \dots` 满足条件：
-每个 :math:`V_k` 中含有半径 :math:`ar` 的一个球且其直径 :math:`d(V_k) \le br`.
+每个 :math:`V_k` 中含有半径 :math:`ar` 的一个球且其直径 :math:`d(V_k) \leqslant br`.
 试证任一球 :math:`B(z, r)` 与 :math:`\{\overline{V}_k\}` 中元素相交的个数小于或等于 :math:`(1+b)^n a^{-n}`.
 
 .. proof:proof::
 
     这题假设这些 :math:`V_k` 是互不相交的。
 
-    由于每个 :math:`V_k` 中直径 :math:`d(V_k) \le br`, 所以若 :math:`B(z, r)` 与 :math:`\overline{V}_k` 相交,
+    由于每个 :math:`V_k` 中直径 :math:`d(V_k) \leqslant br`, 所以若 :math:`B(z, r)` 与 :math:`\overline{V}_k` 相交,
     那么 :math:`B(z, r) \cup \overline{V}_k \subset B(z, (1+b)r)`. 设球 :math:`B(z, (1+b)r)` 中能容纳半径为 :math:`ar` 的球的个数为 :math:`N`,
     令 :math:`c = \dfrac{\pi^{n/2}}{\Gamma (n/2 + 1)}`, 那么有
 
     .. math::
 
-        N \cdot c (ar)^n \le c ((1+b)r)^n,
+        N \cdot c (ar)^n \leqslant c ((1+b)r)^n,
 
-    从而有 :math:`N \le (1+b)^n a^{-n}`.
+    从而有 :math:`N \leqslant (1+b)^n a^{-n}`.
 
 .. _ex-2-35:
 
@@ -481,13 +481,13 @@
 
     .. math::
 
-        m (A_1 \setminus A_2) \le m A_1 = 0;
+        m (A_1 \setminus A_2) \leqslant m A_1 = 0;
 
     若 :math:`m \mathcal{C} A_1 = 0`, 那么
 
     .. math::
 
-        m (\mathcal{C}(A_1 \setminus A_2)) \le m \mathcal{C} A_1 = 0.
+        m (\mathcal{C}(A_1 \setminus A_2)) \leqslant m \mathcal{C} A_1 = 0.
 
     从而知 :math:`A_1 \setminus A_2 \in \mathcal{A}`.
 
@@ -496,13 +496,13 @@
 
     .. math::
 
-        m \left( \bigcup_{n=1}^{\infty} A_n \right) \le \sum_{n=1}^{\infty} m A_n = 0.
+        m \left( \bigcup_{n=1}^{\infty} A_n \right) \leqslant \sum_{n=1}^{\infty} m A_n = 0.
 
     若存在 :math:`A_{n_0} \in \{A_n\}_{n \in \mathbb{N}}`, 使得 :math:`m \mathcal{C} A_{n_0} = 0`, 那么有
 
     .. math::
 
-        m \left( \mathcal{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{\infty} \mathcal{C} A_n \right) \le m \mathcal{C} A_{n_0} = 0.
+        m \left( \mathcal{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{\infty} \mathcal{C} A_n \right) \leqslant m \mathcal{C} A_{n_0} = 0.
 
     即知 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \mathcal{A}`.
 
