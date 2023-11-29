@@ -144,4 +144,4 @@ linkcheck_ignore = [
 
 def setup(app):
     app.add_css_file("css/custom.css")
-    # app.add_css_file("css/proof.css")
+    app.add_css_file("css/proof.css")

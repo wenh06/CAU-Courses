@@ -36,7 +36,7 @@
 
     是可测集。
 
-6. 设 :math:`f(x)` 是 :math:`(-\infty, \infty)` 上的连续函数， :math:`g(x)` 是 :math:`[a, b]` 上的有限可测函数，
+7. 设 :math:`f(x)` 是 :math:`(-\infty, \infty)` 上的连续函数， :math:`g(x)` 是 :math:`[a, b]` 上的有限可测函数，
 证明 :math:`f(g(x))` 是可测函数。
 
 .. proof:proof::
