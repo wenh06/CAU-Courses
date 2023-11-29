@@ -44,15 +44,15 @@
 
     .. math::
 
-        m^* A = m^* (A \cap E) + m^* (A \cap \mathcal{C} E).
+        m^* A = m^* (A \cap E) + m^* (A \cap \mathscr{C} E).
 
     对集 :math:`A \cup E` 再次应用 Carathéodory 条件，有
 
     .. math::
 
-        m^* (A \cup E) = m^* ((A \cup E) \cap E) + m^* ((A \cup E) \cap \mathcal{C} E) = m E + m^* (A \cap \mathcal{C} E).
+        m^* (A \cup E) = m^* ((A \cup E) \cap E) + m^* ((A \cup E) \cap \mathscr{C} E) = m E + m^* (A \cap \mathscr{C} E).
 
-    两式消去共同项 :math:`m^* (A \cap \mathcal{C} E)` 即有
+    两式消去共同项 :math:`m^* (A \cap \mathscr{C} E)` 即有
 
     .. math::
 
@@ -186,10 +186,10 @@
 
     .. math::
 
-        1 & = m \left( [0, 1] \setminus A \right) = m \left( [0, 1] \cap \mathcal{C} A \right) \\
-        & = m \left( [0, 1] \cap \mathcal{C} \left( \bigcap\limits_{k=1}^n A_k \right) \right) = m \left( [0, 1] \cap \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \right) \\
-        & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathcal{C} A_k \right) \right) = m \left( \bigcup\limits_{k=1}^n \mathcal{C} A_k \right) \\
-        & \leqslant \sum \limits_{k=1}^n m \mathcal{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
+        1 & = m \left( [0, 1] \setminus A \right) = m \left( [0, 1] \cap \mathscr{C} A \right) \\
+        & = m \left( [0, 1] \cap \mathscr{C} \left( \bigcap\limits_{k=1}^n A_k \right) \right) = m \left( [0, 1] \cap \left( \bigcup\limits_{k=1}^n \mathscr{C} A_k \right) \right) \\
+        & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathscr{C} A_k \right) \right) = m \left( \bigcup\limits_{k=1}^n \mathscr{C} A_k \right) \\
+        & \leqslant \sum \limits_{k=1}^n m \mathscr{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
         & = n - \sum \limits_{k=1}^n m A_k < 1,
 
     矛盾，所以 :math:`m A = m \left( \bigcap\limits_{k=1}^n A_k \right) > 0`.

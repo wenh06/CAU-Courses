@@ -69,7 +69,7 @@
         I_n & = I_{n1} \cup I_{n2} \cup \cdots \cup I_{n2^{n-1}}, \\
         & \vdots \\
         G_0 & = \bigcup_{n=1}^{\infty} I_n, \\
-        P_0 & = \mathcal{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}. \\
+        P_0 & = \mathscr{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}. \\
         \end{align*}
 
     康托三分集的补集即为 :math:`G_0`, 其构成区间为 :math:`I_n`, 集合 :math:`E` 即由这些构成区间的中点所成的集。
@@ -91,6 +91,6 @@
     那么取 :math:`\varepsilon = \min \left\{ \dfrac{1}{3^{n+1}}, \dfrac{1}{2} \lvert x - y_0 \rvert \right\}`, 这样，去心邻域 :math:`\mathring{U}(x, \varepsilon)`
     既不包含 :math:`y_0`, 也不会与 :math:`F_n` 中含有的与 :math:`I_{nk}` 相邻的任何一个闭区间的中间 :math:`\dfrac{1}{3}` 开区间相交，
     这样就有 :math:`\mathring{U}(x, \varepsilon) \cap E = \emptyset`, 也说明了 :math:`x` 不是 :math:`E` 的聚点。于是我们就证明了
-    :math:`\mathcal{C} P_0 \cap E' = \emptyset`, 从而有 :math:`E' \subset P_0`.
+    :math:`\mathscr{C} P_0 \cap E' = \emptyset`, 从而有 :math:`E' \subset P_0`.
 
     综上所述，有 :math:`E' = P_0`.

@@ -52,18 +52,18 @@
 
     由于数列 :math:`\{m E_n \}_{n \in \mathbb{N}}` 有聚点 :math:`1`, 那么存在子列 :math:`\{E_{n_k}\}_{k \in \mathbb{N}}`
     使得 :math:`\lim\limits_{k \to \infty} m E_{n_k} = 1`. 令基本集为单位正方形 :math:`[0,1;0,1]`,
-    那么有 :math:`\lim\limits_{k \to \infty} m \mathcal{C} E_{n_k} = 0`. 那么对任意的 :math:`\varepsilon > 0`,
+    那么有 :math:`\lim\limits_{k \to \infty} m \mathscr{C} E_{n_k} = 0`. 那么对任意的 :math:`\varepsilon > 0`,
     可以选出 :math:`\{E_{n_k}\}_{k \in \mathbb{N}}` 的子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 使得
 
     .. math::
 
-        m \mathcal{C} E_{n_{k_i}} < \frac{\varepsilon}{2^i}, \quad i \in \mathbb{N}.
+        m \mathscr{C} E_{n_{k_i}} < \frac{\varepsilon}{2^i}, \quad i \in \mathbb{N}.
 
     那么有
 
     .. math::
 
-        m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathcal{C} E_{n_{k_i}} \right) \geqslant 1 - \sum_{i = 1}^{\infty} m \mathcal{C} E_{n_{k_i}} \geqslant 1 - \varepsilon.
+        m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathscr{C} E_{n_{k_i}} \right) \geqslant 1 - \sum_{i = 1}^{\infty} m \mathscr{C} E_{n_{k_i}} \geqslant 1 - \varepsilon.
 
     :math:`\varepsilon` 足够小的时候 (比如 :math:`\varepsilon < 1`), 有 :math:`m \left( \bigcap\limits_{i=1}^\infty E_{n_{k_i}} \right) > 0`.
     所以，子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 即是题目所求。
@@ -152,17 +152,17 @@
 
         m(E \cap I) > c' m I.
 
-    假设 :math:`m E < 1`, 那么 :math:`m \mathcal{C} E > 0`,
-    即 :math:`\mathcal{C} E` 是具有正测度的可测集，那么根据引理 4.1, 对于数 :math:`\alpha = 1 - \dfrac{c'}{2} \in (0, 1)`,
+    假设 :math:`m E < 1`, 那么 :math:`m \mathscr{C} E > 0`,
+    即 :math:`\mathscr{C} E` 是具有正测度的可测集，那么根据引理 4.1, 对于数 :math:`\alpha = 1 - \dfrac{c'}{2} \in (0, 1)`,
     存在开区间 :math:`J \subset (0, 1)`, 使得
 
     .. math::
         :label: ex-2-29-eq-2
 
-        m \left( \mathcal{C} E \cap J \right) > \alpha m J = \left( 1 - \frac{c'}{2} \right) m J.
+        m \left( \mathscr{C} E \cap J \right) > \alpha m J = \left( 1 - \frac{c'}{2} \right) m J.
 
     可以假设 :math:`m J < \delta`, 否则可以将 :math:`J` 平均分割成若干个长度小于 :math:`\delta` 的开区间（有限个区间端点对测度不影响），
-    那么其中至少有一个开区间 :math:`J'` 满足 :math:`m \left( \mathcal{C} E \cap J' \right) > \alpha m J'`,
+    那么其中至少有一个开区间 :math:`J'` 满足 :math:`m \left( \mathscr{C} E \cap J' \right) > \alpha m J'`,
     否则上述不等式不成立。那么由式 :eq:`ex-2-29-eq-1` 知
 
     .. math::
@@ -174,7 +174,7 @@
 
     .. math::
 
-        m J = m \left( \mathcal{C} E \cap J \right) + m \left( E \cap J \right) > \left( 1 - \frac{c'}{2} \right) m J + c' m J = \left( 1 + \frac{c'}{2} \right) m J,
+        m J = m \left( \mathscr{C} E \cap J \right) + m \left( E \cap J \right) > \left( 1 - \frac{c'}{2} \right) m J + c' m J = \left( 1 + \frac{c'}{2} \right) m J,
 
     从而有 :math:`c' m J < 0`, 矛盾。所以必须有 :math:`m E = 1`.
 
@@ -220,7 +220,7 @@
 
     .. math::
 
-        \sum_{n=1}^{N} m^* E_n > m^* A_N & = m^* \left( A_N \cap E_N \right) + m^* \left( A_N \cap \mathcal{C} E_N \right) \\
+        \sum_{n=1}^{N} m^* E_n > m^* A_N & = m^* \left( A_N \cap E_N \right) + m^* \left( A_N \cap \mathscr{C} E_N \right) \\
         & = m^* E_N + m^* A_{N-1}.
 
     上式两边同时消去 :math:`m^* E_{N}`, 有
@@ -425,8 +425,8 @@
 
     .. math::
 
-        A_1 \setminus A_2 & = f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1) \cap \mathcal{C}_X f^{-1} (B_2) \\
-        & = f^{-1} (B_1 \cap \mathcal{C}_Y B_2) = f^{-1} (B_1 \setminus B_2).
+        A_1 \setminus A_2 & = f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1) \cap \mathscr{C}_X f^{-1} (B_2) \\
+        & = f^{-1} (B_1 \cap \mathscr{C}_Y B_2) = f^{-1} (B_1 \setminus B_2).
 
     由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数，那么 :math:`B_1 \setminus B_2 \in \mathcal{B}`,
     从而 :math:`A_1 \setminus A_2 \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
@@ -470,24 +470,24 @@
     综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathcal{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数。
 
 36. 设 :math:`\mathcal{A}` 为由 :math:`\mathbb{R}` 中的一切这样的可测集 :math:`E` 构成：
-或者 :math:`m E = 0` 或者 :math:`m \mathcal{C} E = 0`. 试证 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数。
+或者 :math:`m E = 0` 或者 :math:`m \mathscr{C} E = 0`. 试证 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数。
 
 .. proof:proof::
 
-    :math:`1^{\circ}`. 由于 :math:`\emptyset = \mathcal{C} \mathbb{R}` 且 :math:`m \emptyset = 0`, 那么 :math:`\mathbb{R} \in \mathcal{A}`.
+    :math:`1^{\circ}`. 由于 :math:`\emptyset = \mathscr{C} \mathbb{R}` 且 :math:`m \emptyset = 0`, 那么 :math:`\mathbb{R} \in \mathcal{A}`.
 
-    :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \mathcal{A}`, 那么有 :math:`m A_1 = 0` 或者 :math:`m \mathcal{C} A_1 = 0`;
-    :math:`m A_2 = 0` 或者 :math:`m \mathcal{C} A_2 = 0`. 若 :math:`m A_1 = 0`, 那么
+    :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \mathcal{A}`, 那么有 :math:`m A_1 = 0` 或者 :math:`m \mathscr{C} A_1 = 0`;
+    :math:`m A_2 = 0` 或者 :math:`m \mathscr{C} A_2 = 0`. 若 :math:`m A_1 = 0`, 那么
 
     .. math::
 
         m (A_1 \setminus A_2) \leqslant m A_1 = 0;
 
-    若 :math:`m \mathcal{C} A_1 = 0`, 那么
+    若 :math:`m \mathscr{C} A_1 = 0`, 那么
 
     .. math::
 
-        m (\mathcal{C}(A_1 \setminus A_2)) \leqslant m \mathcal{C} A_1 = 0.
+        m (\mathscr{C}(A_1 \setminus A_2)) \leqslant m \mathscr{C} A_1 = 0.
 
     从而知 :math:`A_1 \setminus A_2 \in \mathcal{A}`.
 
@@ -498,11 +498,11 @@
 
         m \left( \bigcup_{n=1}^{\infty} A_n \right) \leqslant \sum_{n=1}^{\infty} m A_n = 0.
 
-    若存在 :math:`A_{n_0} \in \{A_n\}_{n \in \mathbb{N}}`, 使得 :math:`m \mathcal{C} A_{n_0} = 0`, 那么有
+    若存在 :math:`A_{n_0} \in \{A_n\}_{n \in \mathbb{N}}`, 使得 :math:`m \mathscr{C} A_{n_0} = 0`, 那么有
 
     .. math::
 
-        m \left( \mathcal{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{\infty} \mathcal{C} A_n \right) \leqslant m \mathcal{C} A_{n_0} = 0.
+        m \left( \mathscr{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right) = m \left( \bigcap_{n=1}^{\infty} \mathscr{C} A_n \right) \leqslant m \mathscr{C} A_{n_0} = 0.
 
     即知 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \mathcal{A}`.
 

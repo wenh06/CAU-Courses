@@ -25,8 +25,8 @@
 
         \begin{align*}
         & (A \setminus B) \cap (C \setminus D) \\
-        = & (A \cap \mathcal{C} B) \cap (C \cap \mathcal{C} D) = (A \cap C) \cap (\mathcal{C} B \cap \mathcal{C} D) \\
-        = & (A \cap C) \cap \mathcal{C} ( B \cup D) = (A \cap C) \setminus (B \cup D)
+        = & (A \cap \mathscr{C} B) \cap (C \cap \mathscr{C} D) = (A \cap C) \cap (\mathscr{C} B \cap \mathscr{C} D) \\
+        = & (A \cap C) \cap \mathscr{C} ( B \cup D) = (A \cap C) \setminus (B \cup D)
         \end{align*}
 
     (2). 这是集合交、并运算的分配律。
@@ -37,8 +37,8 @@
 
         \begin{align*}
         & A \setminus (B \setminus C) \\
-        = & A \cap \mathcal{C} (B \cap \mathcal{C} C) = A \cap (\mathcal{C} B \cup C) \\
-        = & (A \cap \mathcal{C} B) \cup (A \cap C) \subset (A \setminus B) \cup C
+        = & A \cap \mathscr{C} (B \cap \mathscr{C} C) = A \cap (\mathscr{C} B \cup C) \\
+        = & (A \cap \mathscr{C} B) \cup (A \cap C) \subset (A \setminus B) \cup C
         \end{align*}
 
     (4). 有
@@ -47,8 +47,8 @@
 
         \begin{align*}
         & (A \setminus B) \setminus (C \setminus D) \\
-        = & (A \cap \mathcal{C} B) \cap \mathcal{C}(C \cap \mathcal{C} D) = (A \cap \mathcal{C} B) \cap (\mathcal{C} C \cup D) \\
-        = & (A \cap \mathcal{C} B \cap \mathcal{C} C) \cup (A \cap \mathcal{C} B \cap D) = ((A \cap \mathcal{C} B) \setminus C) \cup ((D \cap A) \setminus B) \\
+        = & (A \cap \mathscr{C} B) \cap \mathscr{C}(C \cap \mathscr{C} D) = (A \cap \mathscr{C} B) \cap (\mathscr{C} C \cup D) \\
+        = & (A \cap \mathscr{C} B \cap \mathscr{C} C) \cup (A \cap \mathscr{C} B \cap D) = ((A \cap \mathscr{C} B) \setminus C) \cup ((D \cap A) \setminus B) \\
         \subset & (A \setminus C) \cup (D \setminus B)
         \end{align*}
 
@@ -59,9 +59,9 @@
 
         \begin{align*}
         & (A \setminus B) \cup C \\
-        = & (A \cap \mathcal{C} B) \cup C = (A \cup C) \cap (\mathcal{C} B \cup C) \\
-        = & (A \cap (\mathcal{C} B \cup C)) \cup (C \cap (\mathcal{C} B \cup C)) \\
-        = & (A \cap (\mathcal{C} B \cup C)) \cup C
+        = & (A \cap \mathscr{C} B) \cup C = (A \cup C) \cap (\mathscr{C} B \cup C) \\
+        = & (A \cap (\mathscr{C} B \cup C)) \cup (C \cap (\mathscr{C} B \cup C)) \\
+        = & (A \cap (\mathscr{C} B \cup C)) \cup C
         \end{align*}
 
     等式的右边化为集合交、并的形式为
@@ -69,10 +69,10 @@
     .. math::
         :label: 1-5-right
 
-        A \cap \mathcal{C} (B \cap \mathcal{C} C) = A \cap (\mathcal{C} B \cup C)
+        A \cap \mathscr{C} (B \cap \mathscr{C} C) = A \cap (\mathscr{C} B \cup C)
 
-    比较式 :eq:`1-5-left` 与式 :eq:`1-5-right`, 若要使等式成立，必须有 :math:`(A \cap (\mathcal{C} B \cup C)) \cup C = A \cap (\mathcal{C} B \cup C)`,
-    这要求 :math:`C \subset A \cap (\mathcal{C} B \cup C)`. 因为 :math:`C \subset \mathcal{C} B \cup C` 是显然的，故上式等价于 :math:`C \subset A`.
+    比较式 :eq:`1-5-left` 与式 :eq:`1-5-right`, 若要使等式成立，必须有 :math:`(A \cap (\mathscr{C} B \cup C)) \cup C = A \cap (\mathscr{C} B \cup C)`,
+    这要求 :math:`C \subset A \cap (\mathscr{C} B \cup C)`. 因为 :math:`C \subset \mathscr{C} B \cup C` 是显然的，故上式等价于 :math:`C \subset A`.
 
     (6). 不成立。因为集合 :math:`A` 是左边 :math:`A \cup (B \setminus C)` 的一个子集，但如果 :math:`A \cap C \neq \emptyset` 的话，
     集合 :math:`A` 不是右边 :math:`(A \cup B) \setminus C` 的子集。

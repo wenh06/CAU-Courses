@@ -110,7 +110,7 @@
     \begin{gather*}
     f^{-1} \left( \bigcup_{\alpha \in I} B_{\alpha} \right) = \bigcup_{\alpha \in I} f^{-1} (B_{\alpha}), \quad
     f^{-1} \left( \bigcap_{\alpha \in I} B_{\alpha} \right) \subset \bigcap_{\alpha \in I} f^{-1} (B_{\alpha}), \\
-    f^{-1} (\mathcal{C} B) = \mathcal{C} f^{-1} (B).
+    f^{-1} (\mathscr{C} B) = \mathscr{C} f^{-1} (B).
     \end{gather*}
 
 .. proof:proof::
@@ -128,9 +128,9 @@
     那么对任意 :math:`\alpha \in I`, 都有 :math:`x \in f^{-1} (B_{\alpha})`, 于是有 :math:`f(x) \in B_{\alpha}`, 从而有
     :math:`f(x) \in \bigcap\limits_{\alpha \in I} B_{\alpha}`, 于是有 :math:`x \in f^{-1} \left( \bigcap\limits_{\alpha \in I} B_{\alpha} \right)`.
 
-    若 :math:`f^{-1} (\mathcal{C} B) = \emptyset`, 即 :math:`\forall x \in X, f(x) \not\in \mathcal{C} B`, 那么有 :math:`\forall x \in X, f(x) \in B`,
-    这意味着 :math:`f^{-1} (B) = X`, 于是有 :math:`\mathcal{C} f^{-1} (B) = \emptyset`. 若 :math:`f^{-1} (\mathcal{C} B) \neq \emptyset`,
-    任取 :math:`x \in f^{-1} (\mathcal{C} B)`, 那么有 :math:`f(x) \in \mathcal{C} B`, 于是有 :math:`f(x) \not\in B`, 从而有
-    :math:`x \not\in f^{-1} (B)`, 于是有 :math:`x \in \mathcal{C} f^{-1} (B)`. 反过来，任取 :math:`x \in \mathcal{C} f^{-1} (B)`,
-    那么有 :math:`x \not\in f^{-1} (B)`, 于是有 :math:`f(x) \not\in B`, 从而有 :math:`f(x) \in \mathcal{C} B`, 于是有
-    :math:`x \in f^{-1} (\mathcal{C} B)`. 综上所述，有 :math:`f^{-1} (\mathcal{C} B) = \mathcal{C} f^{-1} (B)`.
+    若 :math:`f^{-1} (\mathscr{C} B) = \emptyset`, 即 :math:`\forall x \in X, f(x) \not\in \mathscr{C} B`, 那么有 :math:`\forall x \in X, f(x) \in B`,
+    这意味着 :math:`f^{-1} (B) = X`, 于是有 :math:`\mathscr{C} f^{-1} (B) = \emptyset`. 若 :math:`f^{-1} (\mathscr{C} B) \neq \emptyset`,
+    任取 :math:`x \in f^{-1} (\mathscr{C} B)`, 那么有 :math:`f(x) \in \mathscr{C} B`, 于是有 :math:`f(x) \not\in B`, 从而有
+    :math:`x \not\in f^{-1} (B)`, 于是有 :math:`x \in \mathscr{C} f^{-1} (B)`. 反过来，任取 :math:`x \in \mathscr{C} f^{-1} (B)`,
+    那么有 :math:`x \not\in f^{-1} (B)`, 于是有 :math:`f(x) \not\in B`, 从而有 :math:`f(x) \in \mathscr{C} B`, 于是有
+    :math:`x \in f^{-1} (\mathscr{C} B)`. 综上所述，有 :math:`f^{-1} (\mathscr{C} B) = \mathscr{C} f^{-1} (B)`.

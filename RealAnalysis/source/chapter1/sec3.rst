@@ -30,11 +30,11 @@
 .. proof:proof::
 
     用反证法证明。取基本集为 :math:`\mathbb{R}`. 假设交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k = \emptyset`, 那么考虑集族
-    :math:`\{ \mathcal{C} E_k \}`, 这是闭区间 :math:`[a, b]` 的开覆盖，由于 :math:`[a, b]` 是紧集，所以存在有限子覆盖
-    :math:`\{ \mathcal{C} E_{k_i} \}_{i=1}^{N}`, 即
-    :math:`[a, b] \subset \bigcup\limits_{i=1}^{N} (\mathcal{C} E_{k_i}) = \mathcal{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)`,
+    :math:`\{ \mathscr{C} E_k \}`, 这是闭区间 :math:`[a, b]` 的开覆盖，由于 :math:`[a, b]` 是紧集，所以存在有限子覆盖
+    :math:`\{ \mathscr{C} E_{k_i} \}_{i=1}^{N}`, 即
+    :math:`[a, b] \subset \bigcup\limits_{i=1}^{N} (\mathscr{C} E_{k_i}) = \mathscr{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)`,
     此时必须有 :math:`\bigcap\limits_{i=1}^{N} E_{k_i} = \emptyset`, 否则其作为 :math:`[a, b]` 的子集非空，就不可能有
-    :math:`[a, b] \subset \mathcal{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)` 成立。于是有
+    :math:`[a, b] \subset \mathscr{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)` 成立。于是有
 
     .. math::
 
@@ -56,9 +56,9 @@
     :math:`x_k \in E_k`, 使得 :math:`y = f(x_k)`. 由于 :math:`\{ E_k \}` 是区间 :math:`[a, b]` 中的渐缩列，所以 :math:`\{ x_k \}` 是有界数列，
     从而存在收敛子列 :math:`\{ x_{k_i} \}`, 令 :math:`\lim\limits_{i \to \infty} x_{k_i} = x_0 \in [a, b]`. 由于 :math:`f` 在 :math:`[a, b]` 上连续，
     所以有 :math:`\lim\limits_{i \to \infty} f(x_{k_i}) = f(x_0)`, 于是有 :math:`y = f(x_0)`. 可以断言 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`,
-    如若不然，那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`x_0 \not\in E_{k_0}`, 那么 :math:`x_0 \in \mathcal{C} E_{k_0}`.
-    而 :math:`\mathcal{C} E_{k_0}` 是一个开集，所以存在 :math:`\varepsilon > 0`, 使得 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0}`,
-    那么对任意 :math:`k \geqslant k_0`, 都有 :math:`U(x_0, \varepsilon) \subset \mathcal{C} E_{k_0} \subset \mathcal{C} E_k`, 于是有
+    如若不然，那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`x_0 \not\in E_{k_0}`, 那么 :math:`x_0 \in \mathscr{C} E_{k_0}`.
+    而 :math:`\mathscr{C} E_{k_0}` 是一个开集，所以存在 :math:`\varepsilon > 0`, 使得 :math:`U(x_0, \varepsilon) \subset \mathscr{C} E_{k_0}`,
+    那么对任意 :math:`k \geqslant k_0`, 都有 :math:`U(x_0, \varepsilon) \subset \mathscr{C} E_{k_0} \subset \mathscr{C} E_k`, 于是有
     :math:`\lvert x_k - x_0 \rvert >= \varepsilon`, 这与 :math:`\{ x_k \}` 收敛到 :math:`x_0` 矛盾。所以有 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`.
     于是 :math:`y = f(x_0) \in f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`.
     这样，我们就证明了 :math:`\bigcap\limits_{k=1}^{\infty} f(E_k) \subset f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`.
@@ -122,7 +122,7 @@
             I_n & = I_{n1} \cup I_{n2} \cup \cdots \cup I_{n2^{n-1}}, \\
             & \vdots \\
             G_0 & = \bigcup_{n=1}^{\infty} I_n, \\
-            P_0 & = \mathcal{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(Cantor 三分集)}. \\
+            P_0 & = \mathscr{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(Cantor 三分集)}. \\
             \end{align*}
 
         对于任意 :math:`m \in \mathbb{Z}^*`, 考虑集合
@@ -131,7 +131,7 @@
 
             G_m & := m + G_0 = \left\{ m + x : x \in G_0 \right\}, \\
             G & := \bigcup_{m \in \mathbb{Z}} G_m, \\
-            P & := \mathcal{C} G = \mathbb{R} \setminus G.
+            P & := \mathscr{C} G = \mathbb{R} \setminus G.
 
         容易看出，
 

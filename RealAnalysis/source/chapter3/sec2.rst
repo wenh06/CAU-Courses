@@ -279,7 +279,7 @@
     即有 :math:`\lvert f_n \rvert \leqslant c` 在正测度集 :math:`E_0` 上对一切 :math:`n \in \mathbb{N}` 成立。
 
 26. 设函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`. 试证存在可测集列 :math:`\{E_k\}_{k \in \mathbb{N}}`,
-使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f (n \to \infty)` 而 :math:`\displaystyle \mathcal{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
+使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f (n \to \infty)` 而 :math:`\displaystyle \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
 
 .. proof:proof::
 
