@@ -11,7 +11,7 @@
 
 .. math::
 
-    \Phi: [0, 1] \to [0, 1], \quad x \mapsto \sup \{ \varphi(y) \mid y \in P_0, y \leq x \}.
+    \Phi: [0, 1] \to [0, 1], \quad x \mapsto \sup \{ \varphi(y) \mid y \in P_0, y \leqslant x \}.
 
 .. proof:proof::
 
@@ -38,12 +38,12 @@
     .. math::
 
         \tilde{a}_i = \begin{cases}
-            a_i, & 1 \leq i \leq k(x) - 1, \\
+            a_i, & 1 \leqslant i \leqslant k(x) - 1, \\
             2, & i = k(x), \\
             0, & i > k(x),
         \end{cases} \quad
         \tilde{b}_i = \begin{cases}
-            b_i, & 1 \leq i \leq k(y) - 1, \\
+            b_i, & 1 \leqslant i \leqslant k(y) - 1, \\
             2, & i = k(y), \\
             0, & i > k(y),
         \end{cases}

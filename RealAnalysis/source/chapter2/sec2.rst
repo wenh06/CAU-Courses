@@ -10,7 +10,7 @@
 
     .. math::
 
-        m^* E \leq \sum_{n=1}^\infty m^* E_n = 0
+        m^* E \leqslant \sum_{n=1}^\infty m^* E_n = 0
 
     所以 :math:`m^* E = 0`，即 :math:`E` 是零测度集。
 

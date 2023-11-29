@@ -1,5 +1,6 @@
 sphinx<7.0
 nbsphinx
+requests
 sphinx-theme
 pydata-sphinx-theme
 sphinx-rtd-theme

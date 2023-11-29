@@ -3,7 +3,10 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import re
+
 import pydata_sphinx_theme
+import requests
 import sphinx_book_theme
 import sphinx_rtd_theme
 import sphinx_theme
@@ -130,8 +133,37 @@ html_title = "CAU Mathematical Analysis"
 # ]
 emoji_favicon = ":livres:"
 
-# mathjax_path = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
-mathjax_path = "https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+
+_mathjax_file = "tex-chtml-full.js"
+
+
+def _get_mathjax_latest_version() -> str:
+    """Get the latest mathjax version.
+
+    Returns
+    -------
+    str
+        The latest mathjax version.
+
+    """
+    defalut_mathjax_latest_version = "3.2.2"
+    url = f"https://unpkg.com/mathjax@latest/es5/{_mathjax_file}"
+    try:
+        r = requests.get(url, timeout=3)
+        if r.status_code == 200:
+            # search for the version number in r.url
+            # which will be redirected to the latest version with version number
+            # e.g. https://unpkg.com/mathjax@3.2.2/es5/tex-chtml-full.js
+            return re.search("mathjax@([\\w\\.\\-]+)", r.url).group(1)
+        else:
+            return defalut_mathjax_latest_version
+    except Exception:
+        return defalut_mathjax_latest_version
+
+
+# mathjax_path = f"https://cdnjs.cloudflare.com/ajax/libs/mathjax/{_get_mathjax_latest_version()}/es5/{_mathjax_file}"
+mathjax_path = f"https://cdn.bootcdn.net/ajax/libs/mathjax/{_get_mathjax_latest_version()}/es5/{_mathjax_file}"
+
 
 master_doc = "index"
 

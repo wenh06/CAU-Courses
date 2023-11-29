@@ -127,9 +127,9 @@
             \emptyset, & \alpha > 4, \\
             (\alpha - 3, +\infty) \cap ([0, 1) \setminus \cup_{i=0}^2 P_i), & 3 < \alpha \leqslant 4, \\
             (\alpha - 2, +\infty) \cap P_2, & 2 < \alpha \leqslant 3, \\
-            P_2 \cup ((\alpha - 1, +\infty) \cap P_1), & 1 < \alpha \leq 2, \\
+            P_2 \cup ((\alpha - 1, +\infty) \cap P_1), & 1 < \alpha \leqslant 2, \\
             P_2 \cup P_1 \cup ((\alpha, +\infty) \cap P_0), & 0 < \alpha \leqslant 1, \\
-            [0, 1), & \alpha \leq 0.
+            [0, 1), & \alpha \leqslant 0.
         \end{cases}
 
     以上集合都是可测集，因此 :math:`f(x)` 是可测函数。
