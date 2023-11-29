@@ -130,6 +130,9 @@ html_title = "CAU Mathematical Analysis"
 # ]
 emoji_favicon = ":livres:"
 
+# mathjax_path = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+mathjax_path = "https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+
 master_doc = "index"
 
 numfig = False

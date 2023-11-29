@@ -132,6 +132,9 @@ emoji_favicon = ":livres:"
 
 master_doc = "index"
 
+# mathjax_path = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+mathjax_path = "https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+
 numfig = False
 
 linkcheck_ignore = [
@@ -141,4 +144,4 @@ linkcheck_ignore = [
 
 def setup(app):
     app.add_css_file("css/custom.css")
-    app.add_css_file("css/proof.css")
+    # app.add_css_file("css/proof.css")
