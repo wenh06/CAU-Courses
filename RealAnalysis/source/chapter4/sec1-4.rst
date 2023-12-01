@@ -1,5 +1,5 @@
 §1-4 勒贝格积分的引入、性质、积分序列的极限、与黎曼积分的关系
-------------------------------------------------------------
+-------------------------------------------------------------------------------------
 
 2. 设 :math:`f` 于 :math:`E` 上可积，令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 证明 :math:`\displaystyle \lim_n m E_n = 0`.
 
@@ -183,3 +183,45 @@
         & = \int_E \lvert f \rvert \mathrm{d} m.
 
     所以 :math:`\lvert f \rvert` 在 :math:`E` 上可积，从而知 :math:`f` 可积。
+
+21. 设 :math:`f` 在 :math:`(-\infty, \infty)` 上可积，证明
+
+.. math::
+
+    \lim_{h \to 0} \int_{-\infty}^\infty \lvert f(x + h) - f(x) \rvert \mathrm{d} m = 0.
+
+.. proof:proof::
+
+    待写。
+
+23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数，试证
+
+.. math::
+
+    \widehat{f} (t) = \int_{\mathbb{R}} f(x) e^{-itx} \mathrm{d} x.
+
+.. proof:proof::
+
+    待写。
+
+是 :math:`\mathbb{R}` 上的连续函数，且
+
+.. math::
+
+    \widehat{f} (t) = \dfrac{\mathrm{d}}{\mathrm{d} t} \int_{\mathbb{R}} \dfrac{e^{-itx} - 1}{-ix} f(x) \mathrm{d} x.
+
+25. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可测函数，令 :math:`\mu (\alpha) = m \mathbb{R}(\lvert f \rvert > \alpha)`, 试证
+
+.. math::
+
+    \int_{\mathbb{R}} \lvert f \rvert^p \mathrm{d} m = \int_0^\infty \alpha^{p-1} \mu (\alpha) \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
+
+.. proof:proof::
+
+    待写。
+
+26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛。当 :math:`m E = \infty` 时，结论是否成立？
+
+.. proof:proof::
+
+    待写。
