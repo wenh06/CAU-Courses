@@ -832,3 +832,29 @@
         & = - \left. x^2 e^{-\lambda x} \right|_0^{+\infty} + \int_0^{+\infty} 2x e^{-\lambda x} \mathrm{d} x \\
         & = \dfrac{2}{\lambda} \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x \\
         & = \dfrac{2}{\lambda^2}.
+
+
+补充题
+=====================
+
+1. 求不定积分 :math:`\displaystyle \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x`.
+
+.. proof:solution::
+
+    令 :math:`t = \sqrt{1-x}`, 那么 :math:`x = 1 - t^2`, 于是
+
+    .. math::
+
+        \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x & = \int \dfrac{t \arctan t}{1 + t^2} (-2t) \mathrm{d}t \\
+        & = -2 \int \dfrac{t^2 \arctan t}{1 + t^2} \mathrm{d}t \\
+        & = -2 \int \left( 1 - \dfrac{1}{1 + t^2} \right) \arctan t \mathrm{d}t \\
+        & = 2 \int \arctan t \mathrm d (\arctan t) - 2 \int \arctan t \mathrm{d}t \\
+        & = \arctan^2 t - 2 \int \arctan t \mathrm{d}t \\
+        & = \arctan^2 t -2 t \arctan t + 2 \int \dfrac{t}{1 + t^2} \mathrm{d}t \\
+        & = \arctan^2 t -2 t \arctan t + \ln(1 + t^2) + C
+
+    回代 :math:`t = \sqrt{1-x}`，得
+
+    .. math::
+
+        \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x = \arctan^2 \sqrt{1-x} -2 \sqrt{1-x} \arctan \sqrt{1-x} + \ln(2 - x) + C.
