@@ -194,7 +194,7 @@
 
         m^* \left( \bigcup_{n=1}^{\infty} E_n \right) = m^* \left( \bigcup_{n=1}^{\infty} A_n \right) = \lim_{n \to \infty} m^* A_n = \lim_{n \to \infty} m^* \left( \bigcup_{k=1}^{n} E_k \right).
 
-    假设对所有自然数 :math:`n`, 有 :math:`m^* \left( \bigcup\limits_{k=1}^n E_k \right) = \sum\limits_{n=1}^k m^* E_k`,
+    假设对所有自然数 :math:`n`, 有 :math:`m^* \left( \bigcup\limits_{k=1}^n E_k \right) = \sum\limits_{k=1}^n m^* E_k`,
     对此式两边同时取极限 :math:`n \to \infty`, 有
 
     .. math::

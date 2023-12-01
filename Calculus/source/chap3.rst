@@ -242,8 +242,8 @@
     .. math::
 
         \int \dfrac{1}{3 + \sin^2 x} \mathrm{d} x & = \int \dfrac{1}{3\cos^2 x + 4\sin^2 x} \mathrm{d} x = \int \dfrac{\sec^2x \mathrm{d} x}{3 + 4\tan^2 x} \\
-        & = \int \dfrac{\mathrm{d} \tan x}{3 + 4\tan^2 x} = \dfrac{\sqrt{3}}{2} \int \dfrac{\mathrm{d} \left( \frac{2}{\sqrt{3}} \tan x \right)}{1 + \left( \frac{2}{\sqrt{3}} \tan x \right)^2} \\
-        & = \dfrac{\sqrt{3}}{2} \arctan \left( \dfrac{2}{\sqrt{3}} \tan x \right) + C.
+        & = \int \dfrac{\mathrm{d} \tan x}{3 + 4\tan^2 x} = \dfrac{1}{2\sqrt{3}} \int \dfrac{\mathrm{d} \left( \frac{2}{\sqrt{3}} \tan x \right)}{1 + \left( \frac{2}{\sqrt{3}} \tan x \right)^2} \\
+        & = \dfrac{1}{2\sqrt{3}} \arctan \left( \dfrac{2}{\sqrt{3}} \tan x \right) + C.
 
     (3). 利用和差化积公式 :math:`\cos x \cos 5x = \dfrac{1}{2} (\cos 4x + \cos 6x)`, 从而有
 
