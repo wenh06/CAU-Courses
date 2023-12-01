@@ -13,7 +13,14 @@
 
     由对称性，只需要考虑 :math:`0 \leqslant \alpha - x \leqslant \beta - x \leqslant \pi` 的情况。此时，
     被积函数 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 的分母在被积区间 :math:`\left(\dfrac{\alpha-x}{2}, \dfrac{\beta-x}{2}\right)` 上非负，
-    且单调递增。令
+    且单调递增。有一个重要的观察是，令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`,
+    那么在相邻的区间 :math:`I_k` 和 :math:`I_{k+1}` 上有
+
+    .. math::
+
+        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert,
+
+    但积分值的符号相反， :math:`k` 为奇数时为正， :math:`k` 为偶数时为负。那么令
 
     .. math::
 
@@ -24,13 +31,7 @@
         k_{\beta, 0} & = \max \{ k \ :\ k \leqslant k_{\beta}, \text{ 且 } k \text{为偶数} \}, \\
         k_{\beta, 1} & = \max \{ k \ :\ k \leqslant k_{\beta}, \text{ 且 } k \text{为奇数} \}
 
-    令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`, 那么在相邻的区间 :math:`I_k` 和 :math:`I_{k+1}` 上有
-
-    .. math::
-
-        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert,
-
-    但积分值的符号相反， :math:`k` 为奇数时为正， :math:`k` 为偶数时为负。因此
+    有
 
     .. math::
 
@@ -48,7 +49,7 @@
 
     .. math::
 
-        \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
+        \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
 
     我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`, 在 :math:`[0, \pi/(2n+1)]` 恒负，因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减，
     于是有
