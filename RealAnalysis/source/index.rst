@@ -25,3 +25,4 @@
    suppl/chap1
    suppl/chap2
    suppl/chap3
+   suppl/chap4
