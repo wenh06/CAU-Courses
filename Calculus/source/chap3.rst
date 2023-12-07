@@ -858,3 +858,21 @@
     .. math::
 
         \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x = \arctan^2 \sqrt{1-x} -2 \sqrt{1-x} \arctan \sqrt{1-x} + \ln(2 - x) + C.
+
+2. 求定积分 :math:`\displaystyle \int_{-1}^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x`.
+
+.. proof:solution::
+
+    .. math::
+
+        \int_{-1}^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x & = \left(\int_{-1}^0 + \int_0^1 \right) \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
+        & = \int_{1}^0 \dfrac{e^{-x} + e^{x}}{1 + 3^{-x}} \mathrm{d}(-x) + \int_0^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
+        & = \int_0^1 3^x \cdot \dfrac{e^{-x} + e^{x}}{1 + 3^x} \mathrm{d}x + \int_0^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
+        & = \int_0^1 \left( 3^x + 1 \right) \cdot \dfrac{e^{-x} + e^{x}}{1 + 3^x} \mathrm{d}x \\
+        & = \int_0^1 e^{-x} + e^{x} \mathrm{d}x \\
+        & = \left. \left( -e^{-x} + e^{x} \right) \right|_0^1 \\
+        & = e - \dfrac{1}{e}.
+
+    .. note::
+
+        被积函数 :math:`\dfrac{e^x + e^{-x}}{1 + 3^x}` 分母里的 :math:`3` 替换为任何正实数，定积分的值都是 :math:`e - \dfrac{1}{e}`.
