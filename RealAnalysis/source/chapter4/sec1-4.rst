@@ -6,8 +6,9 @@
 .. proof:proof::
 
     :math:`f` 于 :math:`E` 上可积，那么 :math:`\lvert f \rvert` 于 :math:`E` 上可积，即 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m < \infty`.
-    由于 :math:`\{ m E_n \}_{n \in \mathbb{N}}` 是单调不增的，且 :math:`m E_n \geqslant 0`, 所以 :math:`\displaystyle \lim_n m E_n` 极限存在，设为 :math:`\alpha`.
-    假设 :math:`\alpha > 0`, 那么存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n \geqslant N` 时，有 :math:`m E_n \geqslant \dfrac{\alpha}{2}`, 于是
+    由于 :math:`\{E_n\}_{n \in \mathbb{N}}` 是渐缩列，故数列 :math:`\{ m E_n \}_{n \in \mathbb{N}}` 是非负单调不增数列，
+    所以 :math:`\displaystyle \lim_{n \to \infty} m E_n` 极限存在，设为 :math:`\alpha`. 假设 :math:`\alpha > 0`, 那么存在 :math:`N \in \mathbb{N}`,
+    使得当 :math:`n \geqslant N` 时，有 :math:`m E_n \geqslant \dfrac{\alpha}{2}`, 于是
 
     .. math::
 
@@ -68,14 +69,19 @@
 
 .. proof:proof::
 
-    由于可积函数 :math:`f, g` 满足 :math:`f < g`, 所以 :math:`\lvert g - f \rvert = g - f`. 假设 :math:`\displaystyle \int_E f \mathrm{d} m = \int_E g \mathrm{d} m`,
-    那么 :math:`\displaystyle \int_E \lvert g - f \rvert \mathrm{d} m = 0`, 由唯一性定理可知 :math:`g - f \sim 0`, 也即 :math:`g(x) = f(x)` a.e. :math:`x \in E`. 这意味着
+    由于可积函数 :math:`f, g` 满足 :math:`f < g`, 所以 :math:`\lvert g - f \rvert = g - f`. 假设 :math:`\displaystyle \int_E f \mathrm{d} m = \int_E g \mathrm{d} m`, 那么
+
+    .. math::
+
+        \int_E \lvert g - f \rvert \mathrm{d} m = \int_E (g - f) \mathrm{d} m = \int_E g \mathrm{d} m - \int_E f \mathrm{d} m = 0.
+
+    由唯一性定理可知 :math:`g - f \sim 0`, 也即 :math:`g(x) = f(x)` a.e. :math:`x \in E`. 这意味着
 
     .. math::
 
         0 = m E (g \neq f) = m E,
 
-    这与 :math:`m E > 0` 矛盾，所以 :math:`\displaystyle \int_E f \mathrm{d} m < \int_E g \mathrm{d} m`.
+    这与 :math:`m E > 0` 矛盾，所以必有 :math:`\displaystyle \int_E f \mathrm{d} m < \int_E g \mathrm{d} m`.
 
 7. 设 :math:`f` 为 :math:`E` 上可积函数，如果对任何有界可测函数 :math:`\varphi`, 都有
 
@@ -91,7 +97,7 @@
 
     .. math::
 
-        \varphi_n (x) = \begin{cases}
+        \varphi_n (x) = f(x) \cdot \chi_{E \setminus E_n} = \begin{cases}
             f(x), & x \in E \setminus E_n, \\
             0, & x \in E_n,
         \end{cases}
@@ -192,7 +198,8 @@
 
 .. proof:proof::
 
-    待写。
+    令 :math:`g_h (x) = \lvert f(x + h) - f(x) \rvert`, 那么 :math:`\{g_h\}_{h > 0}` 是 :math:`(-\infty, \infty)` 上的可测函数族，
+    且对任意 :math:`x \in (-\infty, \infty)`, 有 :math:`\displaystyle \lim_{h \to 0} g_h (x) = 0`.
 
 23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数，试证
 
@@ -200,15 +207,15 @@
 
     \widehat{f} (t) = \int_{\mathbb{R}} f(x) e^{-itx} \mathrm{d} x.
 
-.. proof:proof::
-
-    待写。
-
 是 :math:`\mathbb{R}` 上的连续函数，且
 
 .. math::
 
     \widehat{f} (t) = \dfrac{\mathrm{d}}{\mathrm{d} t} \int_{\mathbb{R}} \dfrac{e^{-itx} - 1}{-ix} f(x) \mathrm{d} x.
+
+.. proof:proof::
+
+    待写。
 
 25. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可测函数，令 :math:`\mu (\alpha) = m \mathbb{R}(\lvert f \rvert > \alpha)`, 试证
 
@@ -220,7 +227,8 @@
 
     待写。
 
-26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛。当 :math:`m E = \infty` 时，结论是否成立？
+26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛。
+当 :math:`m E = \infty` 时，结论是否成立？
 
 .. proof:proof::
 

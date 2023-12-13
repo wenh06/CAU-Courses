@@ -39,7 +39,6 @@ extensions = [
     "sphinx_multiversion",
     "sphinx_favicon",
     "sphinx_emoji_favicon",
-    # "sphinx_toolbox.collapse",  # replaced by dropdown of sphinx_design
     # "numpydoc",
     "sphinxcontrib.tikz",
     # "sphinxcontrib.pseudocode",

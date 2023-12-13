@@ -9,7 +9,6 @@ sphinx-autobuild
 sphinx-markdown-tables
 sphinx-copybutton
 sphinx-multiversion
-# sphinx-toolbox  # replaced by dropdown of sphinx_design
 sphinx-design
 sphinx-favicon
 sphinx-emoji-favicon

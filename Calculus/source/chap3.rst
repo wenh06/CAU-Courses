@@ -681,7 +681,7 @@
         & = \dfrac{9}{8} - 0 + \left( 9 - 27 + 27 - \dfrac{9}{8} + \dfrac{27}{4} - \dfrac{27}{2} \right) \\
         & = \dfrac{9}{8} + \dfrac{9}{8} = \dfrac{9}{4}.
 
-4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \leqslant t \leqslant 2\pi)` 所围成的图形的面积.
+4. 求摆线 :math:`x = a(t - \sin t), y = a(1 - \cos t)` 的一拱 :math:`(0 \leqslant t \leqslant 2\pi)` 的长度.
 
 .. proof:solution::
 
