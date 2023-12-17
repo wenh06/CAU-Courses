@@ -67,3 +67,59 @@
         .. image:: ../_static/images/Dirichlet_kernels.svg
             :align: center
             :width: 80%
+
+        以上图片来自 `Wikipedia <https://en.wikipedia.org/wiki/Dirichlet_kernel>`_.
+
+2. 关于勒贝格积分与微分关系的图表
+
+约定一些集合（空间）的记号
+
+.. math::
+
+    L_{[a, b]} & = [a, b] \text{ 区间上的 Lebesgue 可积函数}, \\
+    L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
+    B([a, b]) & = [a, b] \text{ 区间上处处有限的函数}, \\
+    AB([a, b]) & = [a, b] \text{ 区间上几乎处处有限的函数}, \\
+    BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
+    AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
+
+以上都是线性空间。勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性）映射展开的，可以用下面的图表来表示：
+
+.. tikz::
+    :align: center
+    :xscale: 80
+    :libs: arrows.meta,positioning,calc,cd
+
+    \node (L0) at (0, 0) {$L_0$};
+    \node (L) at (2, 0) {$L_{[a, b]}$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=2ex,yshift=1ex] L0) arc (90:270:0.5ex) -- (L);
+
+    \node (B) at (5, 0) {$B([a, b])$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}] (L) -- (B) node[midway,above] {$\int$};
+
+    \node (BV) at (5, -2) {$BV([a, b])$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] BV) arc (180:360:0.5ex) -- (B);
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- (BV) node[midway,right] {$\int$};
+
+    \node (AC) at (5, -4) {$AC([a, b])$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=2ex] AC) arc (180:360:0.5ex) -- (BV);
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,right] {$\int$};
+
+    \node (p1) at (2, -4) {$L_{[a, b]} / L_0$};
+    \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L) -- (p1) node[midway,left] {$\operatorname{pr}$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int$};
+
+    \node (AB) at (8, -2) {$AB([a, b])$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV) -- (AB) node[midway,above] {$\widetilde{\mathrm{d}}$};
+
+    \node (L_again) at (8, -4) {$L_{[a, b]}$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] L_again) arc (180:360:0.5ex) -- (AB);
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{\mathrm{d}}$};
+
+    \node (p2) at (11, -4) {$L_{[a, b]} / L_0$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
+    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{\mathrm{d}}~\circ~\int = \operatorname{id}$} (p2);
+
+以上的 :math:`\int` 表示勒贝格积分， :math:`\widetilde{\mathrm{d}}` 表示微分（几乎处处有定义，没有定义的集合是零测集，
+约定微分取值为 :math:`0`）， :math:`\hookrightarrow` 表示自然的嵌入（包含）映射， :math:`\operatorname{pr}` 表示商映射。
+虚线的箭头就是相关的定理。
