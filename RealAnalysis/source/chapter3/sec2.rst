@@ -5,7 +5,32 @@
 
 .. proof:solution::
 
-    待写
+    可测函数列当极限函数为无穷大情形的相应 Egorov 定理:
+
+        设 :math:`E` 是可测集， :math:`m E < \infty`, :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列，
+        且 :math:`\displaystyle \lim_{n \to \infty} f_n(x) = \infty` 几乎处处成立，那么对于任意给定的 :math:`\delta > 0`,
+        存在可测集 :math:`E_\delta \subset E` 使得 :math:`m (E \setminus E_\delta) < \delta`, 且 :math:`\{f_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`\infty`.
+
+    相应的证明：
+
+        考虑可测函数列 :math:`g_n = \dfrac{f_n}{1 + \lvert f_n \rvert}`, 那么 :math:`\{g_n\}` 是 :math:`E` 上处处有限的可测函数列，
+        而且 :math:`\displaystyle \lim_{n \to \infty} g_n(x) = 1` 几乎处处成立。由 Egorov 定理，对于任意给定的 :math:`\delta > 0`,
+        存在可测集 :math:`E_\delta \subset E` 使得 :math:`m (E \setminus E_\delta) < \delta`, 且 :math:`\{g_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`1`.
+        也就是说，对任意 :math:`\varepsilon > 0`, 存在自然数 :math:`N (\varepsilon) \in \mathbb{N}`, 使得当 :math:`n > N (\varepsilon)` 时，
+        有 :math:`0 < 1 - g_n(x) < \varepsilon, \forall x \in E_\delta`. 由于 :math:`g_n(x) = \dfrac{f_n(x)}{1 + \lvert f_n(x) \rvert}`,
+        所以对任意 :math:`n > N (\varepsilon)` 以及任意的 :math:`x \in E_\delta`, 有
+
+        .. math::
+
+            \dfrac{1}{1 + \lvert f_n(x) \rvert} \leqslant \dfrac{1 + \lvert f_n(x) \rvert - f_n(x)}{1 + \lvert f_n(x) \rvert} = 1 - g_n(x) < \varepsilon.
+
+        这等价于
+
+        .. math::
+
+            \lvert f_n(x) \rvert > \dfrac{1}{\varepsilon} - 1,
+
+        这意味着 :math:`\{f_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`\infty`.
 
 14. 设 :math:`x \in [0, 1)`, 其二进表示为 :math:`\displaystyle x = \sum_{i=1}^\infty \frac{x_i}{2^i}`,
 :math:`x_i \in \{0, 1\}`, 并约定用有尽表示。定义函数 :math:`\displaystyle \varphi (x) = \sum_{i=1}^\infty \frac{2x_i}{3^i}`,
@@ -279,15 +304,56 @@
     即有 :math:`\lvert f_n \rvert \leqslant c` 在正测度集 :math:`E_0` 上对一切 :math:`n \in \mathbb{N}` 成立。
 
 26. 设函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`. 试证存在可测集列 :math:`\{E_k\}_{k \in \mathbb{N}}`,
-使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f (n \to \infty)` 而 :math:`\displaystyle \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
+使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f, (n \to \infty)` 而 :math:`\displaystyle \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
 
 .. proof:proof::
 
     由于函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`, 那么对于每个自然数 :math:`k \in \mathbb{N}`,
     函数列 :math:`\{f_n\}` 在区间 :math:`[-k, k]` 上几乎处处收敛于 :math:`f`. 由 Egorov 定理，对于任意给定的 :math:`\varepsilon > 0`,
     存在可测集 :math:`F_k \subset [-k, k]` 使得 :math:`m([-k, k] \setminus F_k) < \varepsilon / 2^k`, 且 :math:`\{f_n\}` 在 :math:`F_k` 上一致收敛于 :math:`f`.
-    令 :math:`\displaystyle E_k = \bigcup_{i=1}^k F_i`, 那么 :math:`\{E_k\}_{k \in \mathbb{N}}` 是渐张可测集列，
-    且 :math:`f_n` 在 :math:`E_k` 上一致收敛于 :math:`f`. 又有.... (待写)
+    令 :math:`\displaystyle E_k = \bigcup_{i=1}^k F_i \subset [-k, k]`, 那么 :math:`\{E_k\}_{k \in \mathbb{N}}` 是渐张可测集列，
+    且 :math:`f_n` 在 :math:`E_k` 上一致收敛于 :math:`f`, 且有
+
+    .. math::
+
+        m \left( [-k, k] \setminus E_k \right) \leqslant m \left( [-k, k] \setminus F_k \right) < \varepsilon / 2^k.
+
+    进一步考虑可测集列
+
+    .. math::
+
+        G_d := [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right), \quad d \in \mathbb{N},
+
+    那么 :math:`\{ G_d \}_{d \in \mathbb{N}}` 是渐张可测集列，且对任意 :math:`d \in \mathbb{N}`, 有
+
+    .. math::
+
+        G_d & = [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) = [-d, d] \cap \left( \bigcap_{k=1}^\infty \mathscr{C} (E_k) \right) \\
+        & = \left( \bigcap_{k=1}^\infty \left( [-d, d] \cap \mathscr{C} (E_k) \right) \right) \\
+        & \subset [-k, k] \setminus E_k, \quad \forall k \geqslant d,
+
+    于是 :math:`m G_d \leqslant m \left( [-k, k] \setminus E_k \right) < \varepsilon / 2^k, \forall k \geqslant d`, 从而必有 :math:`m G_d = 0`.
+    另一方面，由于
+
+    .. math::
+
+        \bigcup_{d=1}^\infty G_d = \bigcup_{d=1}^\infty \left( [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = \left( \bigcup_{d=1}^\infty [-d, d] \right) \cap \mathscr{C} \left( \bigcup_{k=1}^\infty E_k \right) = \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right),
+
+    因此有
+
+    .. math::
+
+        m \left( \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = m \left( \bigcup_{d=1}^\infty G_d \right) \leqslant \sum_{d=1}^\infty m G_d = 0.
+
+    .. note::
+
+        这里要注意的是，尽管 :math:`\mathscr{C} E_k, k \in \mathbb{N}` 构成了一个渐缩可测集列，但其中每一个集合的测度都是无穷大的，因此关于渐缩可测集列的性质
+
+        .. math::
+
+            m \left( \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = m \left( \bigcap_{k=1}^\infty \mathscr{C} E_k \right) = \lim_{k \to \infty} m \left( \mathscr{C} E_k \right)
+
+        在这里不能使用。
 
 29. 对 :math:`n \in \mathbb{N}`, 令
 
