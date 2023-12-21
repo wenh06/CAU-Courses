@@ -216,8 +216,91 @@
 
 .. proof:proof::
 
-    令 :math:`g_h (x) = \lvert f(x + h) - f(x) \rvert`, 那么 :math:`\{g_h\}_{h > 0}` 是 :math:`(-\infty, \infty)` 上的可测函数族，
-    且对任意 :math:`x \in (-\infty, \infty)`, 有 :math:`\displaystyle \lim_{h \to 0} g_h (x) = 0`.
+    对每个自然数 :math:`k \in \mathbb{N}`, 令 :math:`E_k = [-k, k]`, 那么 :math:`\forall x \in \mathbb{R}`,
+    有 :math:`\displaystyle \lim_{k \to \infty} f \cdot \chi_{E_k} (x) = f (x)`. 由于 :math:`f \in L_{\mathbb{R}}`,
+    所以 :math:`\lvert f \rvert \in L_{\mathbb{R}}`, 并且 :math:`\lvert f \cdot \chi_{E_k} (x) \rvert \leqslant \lvert f (x) \rvert`
+    对所有 :math:`x \in \mathbb{R}` 以及 :math:`k \in \mathbb{N}` 成立。于是，由 Lebesgue 控制收敛定理可得
+
+    .. math::
+
+        \lim_{k \to \infty} \int_{E_k} f \mathrm{d} m = \lim_{k \to \infty} \int_{\mathbb{R}} f \cdot \chi_{E_k} \mathrm{d} m = \int_{\mathbb{R}} \lim_{k \to \infty} f \cdot \chi_{E_k} \mathrm{d} m = \int_{\mathbb{R}} f \mathrm{d} m.
+
+    那么 :math:`\forall \varepsilon > 0`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时， 有
+
+    .. math::
+
+        0 \leqslant \int_{\mathbb{R} \setminus E_{k-1}} \lvert f \rvert \mathrm{d} m = \int_{\mathbb{R}} \lvert f \rvert \mathrm{d} m - \int_{E_{k-1}} \lvert f \rvert \mathrm{d} m < \dfrac{\varepsilon}{3}.
+
+    同时，对于任一取定的 :math:`k > K`, 可以选取定义在 :math:`E_k` 上的简单函数 :math:`\displaystyle \varphi = \sum_{i=1}^n c_i \chi_{e_i}` 使得
+
+    .. math::
+        :label: ex-4-21-eq-1
+
+        \int_{E_k} \lvert f - \varphi \rvert \mathrm{d} m \leqslant \int_{E_{k+1}} \lvert f - \varphi \rvert \mathrm{d} m < \dfrac{\varepsilon}{9}.
+
+    这里，:math:`\varphi` 也被视作是 :math:`E_{k+1}` 上的简单函数。对于 :math:`0 < \lvert h \rvert < 1`, 在 :math:`E_{k+1}` 上有
+
+    .. math::
+
+        \lvert f(x + h) - f(x) \rvert \leqslant \lvert f(x + h) - \varphi(x + h) \rvert + \lvert \varphi(x + h) - \varphi(x) \rvert + \lvert \varphi(x) - f(x) \rvert.
+
+    对于简单函数 :math:`\varphi`, 令 :math:`M = \displaystyle \sup_{x \in E_{k+1}} \lvert \varphi(x) \rvert = \max_{1 \leqslant i \leqslant n} \lvert c_i \rvert`.
+    对所有 :math:`1 \leqslant i \leqslant n`, 可以选取开集 :math:`G_i \supset e_i` 使得 :math:`m G_i < m e_i + \dfrac{\varepsilon}{72nM}`.
+    那么所有开集 :math:`G_i` 的构成区间形成了紧集 :math:`E_{k+1}` 的一个开覆盖，从而可以选出有限个开区间 :math:`I_1, I_2, \dots, I_t`,
+    使得 :math:`\displaystyle E_{k+1} \subset \bigcup_{j=1}^t I_j`. 令 :math:`\displaystyle \widetilde{\varphi} = \sum_{j=1}^t \widetilde{c}_j \chi_{I_j}`,
+    其中 :math:`\widetilde{c}_j = c_i` 若 :math:`I_j \subset G_i`; 对于可能重叠的部分，任意取定其中某一个值即可。
+    那么当 :math:`\displaystyle 0 < h < \min_{1 \leqslant j \leqslant t} m I_j`, 总有
+
+    .. math::
+
+        \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert \mathrm{d} m \leqslant 2 M t \lvert h \rvert.
+
+    进一步缩小 :math:`\lvert h \rvert`, 使其满足 :math:`0 < \lvert h \rvert < \dfrac{\varepsilon}{36 M t}`, 那么有
+
+    .. math::
+
+        \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert \mathrm{d} m < \dfrac{\varepsilon}{18}.
+
+    另一方面有
+
+    .. math::
+
+        \lvert \varphi(x + h) - \varphi(x) \rvert \leqslant \lvert \varphi(x + h) - \widetilde{\varphi}(x + h) \rvert + \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert + \lvert \widetilde{\varphi}(x) - \varphi(x) \rvert,
+
+    从而有
+
+    .. math::
+        :label: ex-4-21-eq-2
+
+        & \int_{E_k} \lvert \varphi(x + h) - \varphi(x) \rvert \mathrm{d} m \\
+        & \leqslant \int_{E_k} \lvert \varphi(x + h) - \widetilde{\varphi}(x + h) \rvert \mathrm{d} m + \int_{E_k} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert \mathrm{d} m + \int_{E_k} \lvert \widetilde{\varphi}(x) - \varphi(x) \rvert \mathrm{d} m \\
+        & \leqslant \int_{E_{k+1}} \lvert \varphi(x) - \widetilde{\varphi}(x) \rvert \mathrm{d} m + \int_{E_k} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert \mathrm{d} m + \int_{E_{k+1}} \lvert \widetilde{\varphi}(x) - \varphi(x) \rvert \mathrm{d} m \\
+        & \leqslant 2 \cdot 2M \cdot \dfrac{\varepsilon}{72nM} \cdot n + \dfrac{\varepsilon}{18} \\
+        & \leqslant \dfrac{\varepsilon}{9}.
+
+    综合式 :eq:`ex-4-21-eq-1` 和 :eq:`ex-4-21-eq-2`, 有
+
+    .. math::
+
+        & \int_{E_k} \lvert f(x + h) - f(x) \rvert \mathrm{d} m \\
+        & \leqslant \int_{E_k} \leqslant \lvert f(x + h) - \varphi(x + h) \rvert  \mathrm{d} m + \int_{E_k} \lvert \varphi(x + h) - \varphi(x) \rvert  \mathrm{d} m + \int_{E_k} \lvert \varphi(x) - f(x) \rvert  \mathrm{d} m \\
+        & \leqslant \int_{E_{k+1}} \leqslant \lvert f(x) - \varphi(x) \rvert  \mathrm{d} m + \int_{E_k} \lvert \varphi(x + h) - \varphi(x) \rvert  \mathrm{d} m + \int_{E_{k+1}} \lvert \varphi(x) - f(x) \rvert  \mathrm{d} m \\
+        & \leqslant \dfrac{\varepsilon}{9} + \dfrac{\varepsilon}{9} + \dfrac{\varepsilon}{9} = \dfrac{\varepsilon}{3}.
+
+    于是有
+
+    .. math::
+
+        \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert \mathrm{d} m & = \left( \int_{E_k} + \int_{\mathbb{R} \setminus E_k} \right) \lvert f(x + h) - f(x) \rvert \mathrm{d} m \\
+        & \leqslant \int_{E_k} \lvert f(x + h) - f(x) \rvert \mathrm{d} m + \int_{\mathbb{R} \setminus E_k} \lvert f(x + h) \rvert + \lvert f(x) \rvert \mathrm{d} m \\
+        & \leqslant \dfrac{\varepsilon}{3} + \int_{\mathbb{R} \setminus E_{k-1}} 2 \lvert f(x) \rvert \mathrm{d} m \\
+        & \leqslant \dfrac{\varepsilon}{3} + 2 \cdot \dfrac{\varepsilon}{3} = \varepsilon.
+
+    这便证明了 :math:`\displaystyle \lim_{h \to 0} \int_{-\infty}^\infty \lvert f(x + h) - f(x) \rvert \mathrm{d} m = 0.`
+
+    .. note::
+
+        以上性质称作是 Lebesgue 积分的平均连续性。
 
 .. _ex-4-23:
 
