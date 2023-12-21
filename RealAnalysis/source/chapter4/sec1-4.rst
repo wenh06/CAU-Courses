@@ -1,6 +1,8 @@
 §1-4 勒贝格积分的引入、性质、积分序列的极限、与黎曼积分的关系
 -------------------------------------------------------------------------------------
 
+.. _ex-4-2:
+
 2. 设 :math:`f` 于 :math:`E` 上可积，令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 证明 :math:`\displaystyle \lim_n m E_n = 0`.
 
 .. proof:proof::
@@ -15,6 +17,8 @@
         \int_E \lvert f \rvert \mathrm{d} m \geqslant \int_{E_n} \lvert f \rvert \mathrm{d} m \geqslant n \cdot m E_n \geqslant \frac{n \alpha}{2}
 
     对任意 :math:`n \geqslant N` 成立，这与 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m < \infty` 矛盾，所以 :math:`\alpha = 0`.
+
+.. _ex-4-3:
 
 3. 设函数 :math:`f` 在 Cantor 三分集 :math:`P_0` 上定义为零，而在 :math:`P_0` 的补集中长为 :math:`\dfrac{1}{3^n}` 的构成区间上定义为 :math:`n`, :math:`n \in \mathbb{N}`
 试证 :math:`f \in L`, 并求积分值。
@@ -42,6 +46,8 @@
 
     因此 :math:`I = \dfrac{a}{2(1 - a)^2} = 3`.
 
+.. _ex-4-5:
+
 5. 设由 :math:`[0, 1]` 中取 :math:`n` 个可测子集 :math:`E_1, E_2, \dots, E_n`. 假定 :math:`[0, 1]` 中任一点至少属于这 :math:`n` 个集合中的 :math:`p` 个，
 试证这 :math:`n` 个自己中必有一集，它的测度不小于 :math:`\dfrac{p}{n}`.
 
@@ -60,6 +66,8 @@
         \sum_{k = 1}^n m E_k = \sum_{k = 1}^n \int_{[0, 1]} \chi_{E_k} (x) \mathrm{d} m = \int_{[0, 1]} \sum_{k = 1}^n \chi_{E_k} (x) \mathrm{d} m \geqslant \int_{[0, 1]} p \mathrm{d} m = p.
 
     所以上式左端的和至少有一项不小于 :math:`\dfrac{p}{n}`, 也即对应的集合的测度不小于 :math:`\dfrac{p}{n}`.
+
+.. _ex-4-6:
 
 6. 设 :math:`m E > 0`, 又设 :math:`E` 上可积函数 :math:`f, g` 满足 :math:`f < g`, 试证
 
@@ -82,6 +90,8 @@
         0 = m E (g \neq f) = m E,
 
     这与 :math:`m E > 0` 矛盾，所以必有 :math:`\displaystyle \int_E f \mathrm{d} m < \int_E g \mathrm{d} m`.
+
+.. _ex-4-7:
 
 7. 设 :math:`f` 为 :math:`E` 上可积函数，如果对任何有界可测函数 :math:`\varphi`, 都有
 
@@ -117,6 +127,8 @@
     由于 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`, 所以 :math:`\displaystyle m \left( \bigcap_{n = 1}^\infty E_n \right) = 0`,
     那么 :math:`f(x) = 0` a.e. :math:`x \in E`.
 
+.. _ex-4-8:
+
 8. Levi 定理中去掉函数列的非负性假定，结论是否成立？
 
 .. proof:solution::
@@ -130,6 +142,8 @@
         \int_E f \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n \mathrm{d} m.
 
     如果加上 :math:`f_n` 的积分都有定义，且 :math:`\displaystyle \int_E f_1 \mathrm{d} m \geqslant - \infty` 这个条件，Levi 定理就成立了。
+
+.. _ex-4-14:
 
 14. 设 :math:`f` 是区间 :math:`[0, 1]` 上的可积函数，若对任何 :math:`c \in (0, 1)` 恒有
 
@@ -165,6 +179,8 @@
     它与 :math:`\{ x \in [0, 1] \ :\ f(x) \neq 0 \}` 至多只差一个有限集。记 :math:`I = [0, 1]`,
     那么有 :math:`m I(f \neq 0) = 0`, 即 :math:`f \sim 0`.
 
+.. _ex-4-19:
+
 19. 设对每个 :math:`n \in \mathbb{N}`, :math:`f_n` 在 :math:`E` 上可积，序列 :math:`\{f_n\}` 几乎处处收敛于 :math:`f, n \to \infty`,
 且一致地有
 
@@ -190,6 +206,8 @@
 
     所以 :math:`\lvert f \rvert` 在 :math:`E` 上可积，从而知 :math:`f` 可积。
 
+.. _ex-4-21:
+
 21. 设 :math:`f` 在 :math:`(-\infty, \infty)` 上可积，证明
 
 .. math::
@@ -200,6 +218,8 @@
 
     令 :math:`g_h (x) = \lvert f(x + h) - f(x) \rvert`, 那么 :math:`\{g_h\}_{h > 0}` 是 :math:`(-\infty, \infty)` 上的可测函数族，
     且对任意 :math:`x \in (-\infty, \infty)`, 有 :math:`\displaystyle \lim_{h \to 0} g_h (x) = 0`.
+
+.. _ex-4-23:
 
 23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数，试证
 
@@ -217,6 +237,8 @@
 
     待写。
 
+.. _ex-4-25:
+
 25. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可测函数，令 :math:`\mu (\alpha) = m \mathbb{R}(\lvert f \rvert > \alpha)`, 试证
 
 .. math::
@@ -226,6 +248,8 @@
 .. proof:proof::
 
     待写。
+
+.. _ex-4-26:
 
 26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛。
 当 :math:`m E = \infty` 时，结论是否成立？

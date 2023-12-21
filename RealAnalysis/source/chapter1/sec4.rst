@@ -1,6 +1,8 @@
 §4 开集的构造
 ------------------------------
 
+.. _ex-1-22:
+
 22. 设 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的非空闭集，且 :math:`F_1 \cap F_2 = \emptyset`. 试证存在两个开集 :math:`G_1, G_2`,
     使 :math:`G_1 \cap G_2 = \emptyset`, 而 :math:`G_1 \supset F_1, G_2 \supset F_2`.
 
@@ -15,6 +17,8 @@
 
     那么 :math:`G_1, G_2` 都是开集，且 :math:`G_1 \cap G_2 = \emptyset`. 又由于 :math:`\forall x \in F_1`, 有 :math:`U(x, \delta) \subset G_1`,
     所以 :math:`F_1 \subset G_1`. 同理可证 :math:`F_2 \subset G_2`.
+
+.. _ex-1-23:
 
 23. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}^n` 中的闭集，其中之一有界，试证存在两点 :math:`a_1 \in F_1, a_2 \in F_2` 使 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
 
@@ -62,6 +66,8 @@
 
     又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \leqslant a_2`.
     同理可证 :math:`b_1 \geqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
+
+.. _ex-1-26:
 
 26. 设 :math:`E` 为康托三分集的补集中构成区间的中点所成的集，求 :math:`E'`.
 

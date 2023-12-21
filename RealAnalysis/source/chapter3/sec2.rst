@@ -1,6 +1,8 @@
 §2 可测函数列的收敛性
 ------------------------------------------
 
+.. _ex-3-13:
+
 13. 试给出关于可测函数列当极限函数为无穷大情形的相应 Egorov 定理的陈述并加以证明.
 
 .. proof:solution::
@@ -31,6 +33,8 @@
             \lvert f_n(x) \rvert > \dfrac{1}{\varepsilon} - 1,
 
         这意味着 :math:`\{f_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`\infty`.
+
+.. _ex-3-14:
 
 14. 设 :math:`x \in [0, 1)`, 其二进表示为 :math:`\displaystyle x = \sum_{i=1}^\infty \frac{x_i}{2^i}`,
 :math:`x_i \in \{0, 1\}`, 并约定用有尽表示。定义函数 :math:`\displaystyle \varphi (x) = \sum_{i=1}^\infty \frac{2x_i}{3^i}`,
@@ -93,6 +97,8 @@
 
     为不可测集，因此 :math:`\psi \circ \varphi` 不可测。
 
+.. _ex-3-17:
+
 17. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且在 :math:`E` 上几乎处处有 :math:`f_n \leqslant g`,
 :math:`n \in \mathbb{N}`. 试证在 :math:`E` 上几乎处处有 :math:`f \leqslant g`.
 
@@ -146,6 +152,8 @@
         0 \leqslant m E (f > g) \leqslant m (E_0 \cup \widetilde{E} (f > g)) = m E_0 + m \widetilde{E} (f > g) = 0.
 
     最终我们有 :math:`m E (f > g) = 0`, 即 :math:`f \leqslant g` 几乎处处成立。
+
+.. _ex-3-21:
 
 21. 试构造 :math:`[0, 1]` 上的连续函数列 :math:`\{f_n\}_{n \in \mathbb{N}}`, 使满足
 (i) :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`[0, 1]` 上几乎处处收敛于 :math:`0`,
@@ -209,6 +217,8 @@
     有 :math:`f_{s(k_0, t)} (r_{k_0}) = \dfrac{1}{q(r_{k_0})}`,
     从而 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`[0, 1]` 区间的任何子区间上都不一致收敛于 :math:`0`.
 
+.. _ex-3-22:
+
 22. 设 :math:`f, f_n (n \in \mathbb{N})` 是定义在区间 :math:`E = [a, b]` 上的实函数， :math:`r` 为自然数，
 用记号 :math:`E(\lvert f_n - f \rvert \leqslant 1 / r)` 表示 :math:`E` 中满足 :math:`\lvert f_n (x) - f (x) \rvert \leqslant 1 / r` 的点所成的集。
 试证集 :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r)` 是 :math:`E` 中使
@@ -250,6 +260,8 @@
     :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r) \subset A`.
 
     综上所述， :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r) = A`,
+
+.. _ex-3-25:
 
 25. 设 :math:`m E > 0`, :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列，且当 :math:`n \to \infty` 时，
 :math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛。证明存在常数 :math:`c` 与正测度集 :math:`E_0 \subset E`,
@@ -303,6 +315,8 @@
 
     即有 :math:`\lvert f_n \rvert \leqslant c` 在正测度集 :math:`E_0` 上对一切 :math:`n \in \mathbb{N}` 成立。
 
+.. _ex-3-26:
+
 26. 设函数列 :math:`\{f_n\}` 在 :math:`\mathbb{R}` 上几乎处处收敛于有限函数 :math:`f`. 试证存在可测集列 :math:`\{E_k\}_{k \in \mathbb{N}}`,
 使在每个 :math:`E_k` 上 :math:`\{f_n\}` 一致收敛于 :math:`f, (n \to \infty)` 而 :math:`\displaystyle \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right)` 为零测集。
 
@@ -354,6 +368,8 @@
             m \left( \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = m \left( \bigcap_{k=1}^\infty \mathscr{C} E_k \right) = \lim_{k \to \infty} m \left( \mathscr{C} E_k \right)
 
         在这里不能使用。
+
+.. _ex-3-29:
 
 29. 对 :math:`n \in \mathbb{N}`, 令
 
@@ -427,6 +443,8 @@
 
         我们这里取的区间 :math:`I_{n_k}` 是随着 :math:`k` 的增大，逐渐向 :math:`1` 靠近，而且区间长度逐渐趋于 :math:`0`.
 
+.. _ex-3-30:
+
 30. 试作 :math:`E = [0, 1]` 上的可测函数 :math:`f`, 使对 :math:`E` 上任何连续函数 :math:`g` 有 :math:`m E( f \neq g ) \neq 0`.
 此结果与 Luzin 定理有无矛盾？
 
@@ -459,6 +477,8 @@
             1, & 1/2 + \varepsilon/2 < x \leqslant 1, \\
             1 + \dfrac{2}{\varepsilon} (x - \dfrac{1 + \varepsilon}{2}), & 1/2 - \varepsilon/2 \leqslant x < 1/2 + \varepsilon/2.
         \end{cases}
+
+.. _ex-3-32:
 
 32. 试证对 :math:`[0, 1]` 上带连续参数的可测函数族 :math:`\{f_t\}_{t \in [0, 1]}`, Egorov 定理不成立。
 即存在 :math:`I = [0, 1]` 上的可测函数族 :math:`\{f_t\}_{t \in [0, 1]}`, 当 :math:`t \to 0` 时有 :math:`f_t \to 0` a.e.,

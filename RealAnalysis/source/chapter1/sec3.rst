@@ -1,6 +1,8 @@
 §3 一维开集、闭集及其性质
 ------------------------------
 
+.. _ex-1-16:
+
 16. 证明任何点集的内点全体是开集。
 
 .. proof:proof::
@@ -9,6 +11,8 @@
     由于 :math:`x` 为 :math:`E` 的内点，所以存在 :math:`x` 的邻域 :math:`U \subset E`. 任取 :math:`y \in U`, 那么 :math:`U` 也是 :math:`y` 的邻域，
     故 :math:`y` 也是 :math:`E` 的内点，从而有 :math:`y \in \mathring{E}`, 于是有 :math:`U \subset \mathring{E}`, 这就证明了 :math:`x` 是 :math:`\mathring{E}` 的内点。
     由于 :math:`x` 是任意取自 :math:`\mathring{E}` 的，所以 :math:`\mathring{E}` 是开集。
+
+.. _ex-1-17:
 
 17. 设 :math:`f(x)` 是定义在 :math:`\mathbb{R}^1` 上只取整数值的函数，试证它的连续点集为开集，不连续点集为闭集。
 
@@ -41,6 +45,8 @@
         E_{k_N} = \bigcap_{i=1}^{N} E_{k_i} = \emptyset,
 
     这与题设矛盾。所以交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k` 非空。
+
+.. _ex-1-19:
 
 19. 设点集列 :math:`\{ E_k \}` 如 :ref:`上题 <ex-1-18>`, :math:`f` 为 :math:`[a, b]` 上连续函数，
 证明 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) = \bigcap\limits_{k=1}^{\infty} f(E_k)`.

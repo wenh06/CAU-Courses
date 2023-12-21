@@ -1,6 +1,8 @@
 §1 集及其运算
 ----------------
 
+.. _ex-1-1:
+
 1. 证明关系式
 
 (1). :math:`(A \setminus B) \cap (C \setminus D) = (A \cap C) \setminus (B \cup D).`
@@ -77,6 +79,8 @@
     (6). 不成立。因为集合 :math:`A` 是左边 :math:`A \cup (B \setminus C)` 的一个子集，但如果 :math:`A \cap C \neq \emptyset` 的话，
     集合 :math:`A` 不是右边 :math:`(A \cup B) \setminus C` 的子集。
 
+.. _ex-1-3:
+
 3. 设给出集 :math:`E` 与任一集族 :math:`A_{\alpha}, \alpha \in I`, 问关系式
 
 .. math::
@@ -96,6 +100,8 @@
     即对任意 :math:`\alpha \in I`, 或有 :math:`x \in E`, 或有 :math:`x \in A_{\alpha}`. 若 :math:`x \in E`, 那么 :math:`x \in E \cup \bigcap\limits_{\alpha \in I} A_{\alpha}`.
     若 :math:`x \not\in E`, 那么就必须有 :math:`x \in A_{\alpha}, \forall \alpha \in I`, 从而 :math:`x \in \bigcap\limits_{\alpha \in I} A_{\alpha}`, 这种情况下同样有
     :math:`x \in E \cup \bigcap\limits_{\alpha \in I} A_{\alpha}`.
+
+.. _ex-1-5:
 
 5. 定义集 :math:`A, B` 的 **对称差** 为 :math:`A \triangle B = (A \setminus B) \cup (B \setminus A)`. 试证对任意集 :math:`A, B, C` 有
 

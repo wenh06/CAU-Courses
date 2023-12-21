@@ -30,6 +30,8 @@
 
         m (E_1 \cup E_2) = m E_1 + m E_2 - m (E_1 \cap E_2).
 
+.. _ex-2-10:
+
 10. 设 :math:`E` 是 :math:`\mathbb{R}` 中可测集，:math:`A` 是任意集，证明
 
 .. math::
@@ -64,6 +66,8 @@
 
         m^* (E \cap A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
         m_* (E \cap A) + m_* (E \cap A) \geqslant m_* E + m_* A.
+
+.. _ex-2-13:
 
 13. 设 :math:`G` 是开集， :math:`E` 是零测度集，试证 :math:`\overline{G} = \overline{G \setminus E}`.
 
@@ -126,6 +130,7 @@
 
     综上所述，有 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) = \lim\limits_{n \to \infty} m^* E_n`.
 
+.. _ex-2-15:
 
 15. 给出互不相交的集列 :math:`\{E_n\}_{n \in \mathbb{N}}`，满足
 
@@ -155,6 +160,8 @@
 
         m^* \left( \bigcup_{n=1}^\infty E_n \right) = m^* [0, 1) = 1 < \sum_{n=1}^\infty m^* (E_n) = +\infty.
 
+.. _ex-2-17:
+
 17. 试举例说明，存在可测集列 :math:`\{E_n \subset (a, b)\}_{n \in \mathbb{N}}`，使极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在，但 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
 
 .. proof:solution::
@@ -173,6 +180,8 @@
         \varlimsup\limits_{n} E_n & = \bigcap\limits\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n = \mathbb{Q} \cap (a, b),
 
     两者不相等，所以 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
+
+.. _ex-2-18:
 
 18. 设 :math:`A_1, A_2, \cdots, A_n` 是 :math:`[0, 1]` 中 :math:`n` 个可测集，且满足 :math:`\sum\limits_{k=1}^n m A_k > n - 1`，试证
 
@@ -193,6 +202,8 @@
         & = n - \sum \limits_{k=1}^n m A_k < 1,
 
     矛盾，所以 :math:`m A = m \left( \bigcap\limits_{k=1}^n A_k \right) > 0`.
+
+.. _ex-2-20:
 
 20. 试作一闭集 :math:`F \subset [0, 1]`，使 :math:`F` 中不含任何开区间，而 :math:`m F = 1/2`.
 

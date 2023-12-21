@@ -1,6 +1,8 @@
 §4 关于测度的几点评注
 ------------------------------------------
 
+.. _ex-2-24:
+
 24. 设 :math:`E` 是一维有界集， :math:`I_1, I_2, \dots` 是任意区间集列（可以相交），其并覆盖 :math:`E`, 试证
 
 .. math::
@@ -44,6 +46,8 @@
 
     对于二维（或更高维）情形，需要将区间集列改为矩体集列。
 
+.. _ex-2-25:
+
 25. 设 :math:`Q` 是 :math:`\mathbb{R}^2` 中的单位正方形 :math:`[0,1;0,1]`, :math:`\{E_n\}_{n \in \mathbb{N}}` 是 :math:`Q` 中的可测集列，
 且数列 :math:`\{m E_n \}_{n \in \mathbb{N}}` 有聚点 :math:`1`, 证明存在子列 :math:`\{E_{n_k}\}_{k \in \mathbb{N}}` 使
 :math:`m \left( \bigcap\limits_{k=1}^\infty E_{n_k} \right) > 0`.
@@ -68,6 +72,7 @@
     :math:`\varepsilon` 足够小的时候 (比如 :math:`\varepsilon < 1`), 有 :math:`m \left( \bigcap\limits_{i=1}^\infty E_{n_{k_i}} \right) > 0`.
     所以，子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 即是题目所求。
 
+.. _ex-2-27:
 
 27. 设 :math:`E` 是 :math:`\mathbb{R}` 中的可测集，证明 :math:`D(E) = \left\{ (x,y) \in \mathbb{R}^2 : x-y \in E \right\}` 是 :math:`\mathbb{R}^2` 中的可测集。
 
@@ -136,6 +141,8 @@
         那么 :math:`f \circ T` 为可测函数。那么这题就归结为证明 :math:`\operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}` 为可测函数，
         以及在映射 :math:`\operatorname{pr}_1` 下，零测集的原像仍为零测集。
 
+.. _ex-2-29:
+
 29. 设 :math:`E` 为 :math:`(0, 1)` 中正测度子集且存在常数 :math:`c > 0` 使对 :math:`(0, 1)` 中的变动区间 :math:`I` 有
 :math:`\lim\limits_{m I \to 0} m(E \cap I) / m I = c`, 证明 :math:`m E = 1`.
 
@@ -177,6 +184,8 @@
         m J = m \left( \mathscr{C} E \cap J \right) + m \left( E \cap J \right) > \left( 1 - \frac{c'}{2} \right) m J + c' m J = \left( 1 + \frac{c'}{2} \right) m J,
 
     从而有 :math:`c' m J < 0`, 矛盾。所以必须有 :math:`m E = 1`.
+
+.. _ex-2-30:
 
 30. 设 :math:`\{E_n\}_{n \in \mathbb{N}}` 为 :math:`\mathbb{R}` 中互不相交的集列，满足条件
 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) < \sum\limits_{n=1}^\infty m^* (E_n)`,
@@ -278,6 +287,8 @@
         & = m I = \lvert \det T \rvert m I.
 
     综上所述，对于任意的半开闭矩体 :math:`I`, 有 :math:`m T(I) = \lvert \det T \rvert m I`, 从而有 :math:`m^* (T(E)) = \lvert \det T \rvert m^* E`.
+
+.. _ex-2-33:
 
 33. 设 :math:`E` 为 :math:`\mathbb{R}^n` 中任一子集， :math:`\alpha` 为给定正数。对任意的 :math:`\varepsilon > 0`, 令
 
@@ -385,6 +396,8 @@
 
         H_{\beta} (E) = \lim_{\varepsilon \to 0} H_{\beta, \varepsilon} (E) \leqslant \lim_{\varepsilon \to 0} \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E) = 0.
 
+.. _ex-2-34:
+
 34. 设 :math:`r` 为给定的正数， :math:`a, b` 为正的常数. :math:`\mathbb{R}^n` 中子集列 :math:`V_1, V_2, \dots` 满足条件：
 每个 :math:`V_k` 中含有半径 :math:`ar` 的一个球且其直径 :math:`d(V_k) \leqslant br`.
 试证任一球 :math:`B(z, r)` 与 :math:`\{\overline{V}_k\}` 中元素相交的个数小于或等于 :math:`(1+b)^n a^{-n}`.
@@ -468,6 +481,8 @@
     从而 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
 
     综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathcal{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数。
+
+.. _ex-2-36:
 
 36. 设 :math:`\mathcal{A}` 为由 :math:`\mathbb{R}` 中的一切这样的可测集 :math:`E` 构成：
 或者 :math:`m E = 0` 或者 :math:`m \mathscr{C} E = 0`. 试证 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数。

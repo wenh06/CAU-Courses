@@ -1,6 +1,8 @@
 §2 有界点集的外、内测度 · 可测集
 ------------------------------------------
 
+.. _ex-2-1:
+
 1. 试证可列个零测度集的并集仍是零测度集.
 
 .. proof:proof::
@@ -13,6 +15,8 @@
         m^* E \leqslant \sum_{n=1}^\infty m^* E_n = 0
 
     所以 :math:`m^* E = 0`，即 :math:`E` 是零测度集。
+
+.. _ex-2-3:
 
 3. 设 :math:`G_1, G_2` 是开集，且 :math:`G_1` 是 :math:`G_2` 的真子集，是否一定有 :math:`m G_1 < m G_2`?
 
@@ -35,6 +39,8 @@
 
     但是 :math:`\overline{G} = [0, 1]`，所以 :math:`m \overline{G} = 1`. 此时必有 :math:`m \overline{G} \neq m G`.
 
+.. _ex-2-5:
+
 5. 如果把外测度的定义改为“有界集 :math:`E` 的外测度定义为包含 :math:`E` 的闭集的测度的下确界”，是否合理？
 
 .. proof:solution::
@@ -49,6 +55,8 @@
         m^* G \leqslant \sum_{n=1}^\infty m^* G_n
 
     就不成立了。
+
+.. _ex-2-6:
 
 6. 设 :math:`A_1, A_2, \cdots, A_n` 是 :math:`n` 个互不相交的可测集，且 :math:`E_k \subset A_k, k = 1, 2, \cdots, n`. 试证
 
