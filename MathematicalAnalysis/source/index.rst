@@ -8,6 +8,16 @@
 
 课程教材：《数学分析》（第3版），陈纪修，於崇华，金路，高等教育出版社，2019年
 
+任课教师联系方式：
+
+- 邮箱：`wenh06 at cau.edu.cn`
+
+- 微信二维码：|wx_qrcode|
+
+.. |wx_qrcode| image:: _static/images/wx_qrcode.png
+   :height: 16ex
+   :class: no-scaled-link
+
 .. toctree::
    :maxdepth: 2
    :caption: 目录:

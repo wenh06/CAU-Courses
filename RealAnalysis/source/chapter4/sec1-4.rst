@@ -238,7 +238,8 @@
 
         \int_{E_k} \lvert f - \varphi \rvert \mathrm{d} m \leqslant \int_{E_{k+1}} \lvert f - \varphi \rvert \mathrm{d} m < \dfrac{\varepsilon}{9}.
 
-    这里，:math:`\varphi` 也被视作是 :math:`E_{k+1}` 上的简单函数。对于 :math:`0 < \lvert h \rvert < 1`, 在 :math:`E_{k+1}` 上有
+    这里，:math:`\varphi` 也被视作是 :math:`E_{k+1}` 上的简单函数， :math:`e_i \subset E` 是互不相交的可测集。对于 :math:`0 < \lvert h \rvert < 1`,
+    在 :math:`E_{k+1}` 上有
 
     .. math::
 
@@ -248,7 +249,7 @@
     对所有 :math:`1 \leqslant i \leqslant n`, 可以选取开集 :math:`G_i \supset e_i` 使得 :math:`m G_i < m e_i + \dfrac{\varepsilon}{72nM}`.
     那么所有开集 :math:`G_i` 的构成区间形成了紧集 :math:`E_{k+1}` 的一个开覆盖，从而可以选出有限个开区间 :math:`I_1, I_2, \dots, I_t`,
     使得 :math:`\displaystyle E_{k+1} \subset \bigcup_{j=1}^t I_j`. 令 :math:`\displaystyle \widetilde{\varphi} = \sum_{j=1}^t \widetilde{c}_j \chi_{I_j}`,
-    其中 :math:`\widetilde{c}_j = c_i` 若 :math:`I_j \subset G_i`; 对于可能重叠的部分，任意取定其中某一个值即可。
+    其中 :math:`\widetilde{c}_j = c_i` 若 :math:`I_j \subset G_i`. 对于可能重叠的部分，任意取定其中某一个值即可。
     那么当 :math:`\displaystyle 0 < h < \min_{1 \leqslant j \leqslant t} m I_j`, 总有
 
     .. math::
@@ -308,7 +309,7 @@
 
 .. math::
 
-    \widehat{f} (t) = \int_{\mathbb{R}} f(x) e^{-itx} \mathrm{d} x.
+    \widehat{f} (t) = \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x.
 
 是 :math:`\mathbb{R}` 上的连续函数，且
 
@@ -318,7 +319,11 @@
 
 .. proof:proof::
 
-    待写。
+    由于 :math:`\left\lvert e^{-itx} f(x) \right\rvert = \lvert f(x) \rvert`, 所以由 Lebesgue 控制收敛定理，对任意 :math:`t_0 \in \mathbb{R}` 有
+
+    .. math::
+
+        \lim_{t \to t_0} \widehat{f} (t) = \lim_{t \to t_0} \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x =
 
 .. _ex-4-25:
 

@@ -8,6 +8,16 @@
 
 课程教材：《实变函数与泛函分析概要》（第5版 第1册），郑维行，王声望，高等教育出版社，2019年
 
+任课教师联系方式：
+
+- 邮箱：`wenh06 at cau.edu.cn`
+
+- 微信二维码：|wx_qrcode|
+
+.. |wx_qrcode| image:: _static/images/wx_qrcode.png
+   :height: 16ex
+   :class: no-scaled-link
+
 .. toctree::
    :maxdepth: 2
    :caption: 课后习题解答:
