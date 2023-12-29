@@ -498,11 +498,17 @@
 
         m (A_1 \setminus A_2) \leqslant m A_1 = 0;
 
-    若 :math:`m \mathscr{C} A_1 = 0`, 那么
+    若 :math:`m \mathscr{C} A_1 = 0`, 那么考虑到 :math:`\mathscr{C}(A_1 \setminus A_2) = \mathscr{C} A_1 \cup A_2`, 当 :math:`m A_2 = 0` 时有
 
     .. math::
 
-        m (\mathscr{C}(A_1 \setminus A_2)) \leqslant m \mathscr{C} A_1 = 0.
+        m (\mathscr{C}(A_1 \setminus A_2)) = m (\mathscr{C} A_1 \cup A_2) \leqslant m \mathscr{C} A_1 + m A_2 = 0;
+
+    当 :math:`m \mathscr{C} A_2 = 0` 时有
+
+    .. math::
+
+        m (A_1 \setminus A_2) = m (A_1 \cap \mathscr{C} A_2) \leqslant m \mathscr{C} A_2 = 0.
 
     从而知 :math:`A_1 \setminus A_2 \in \mathcal{A}`.
 
