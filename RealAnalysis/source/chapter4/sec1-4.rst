@@ -309,21 +309,36 @@
 
 .. math::
 
-    \widehat{f} (t) = \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x.
+    \hat{f} (t) = \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x.
 
 是 :math:`\mathbb{R}` 上的连续函数，且
 
 .. math::
 
-    \widehat{f} (t) = \dfrac{\mathrm{d}}{\mathrm{d} t} \int_{\mathbb{R}} \dfrac{e^{-itx} - 1}{-ix} f(x) \mathrm{d} x.
+    \hat{f} (t) = \dfrac{\mathrm{d}}{\mathrm{d} t} \int_{\mathbb{R}} \dfrac{e^{-itx} - 1}{-ix} f(x) \mathrm{d} x.
 
 .. proof:proof::
 
-    由于 :math:`\left\lvert e^{-itx} f(x) \right\rvert = \lvert f(x) \rvert`, 所以由 Lebesgue 控制收敛定理，对任意 :math:`t_0 \in \mathbb{R}` 有
+    由于 :math:`\left\lvert e^{-itx} f(x) \right\rvert = \lvert f(x) \rvert`, 所以由 Lebesgue 控制收敛定理 (分别对实部虚部)，
+    对任意 :math:`t_0 \in \mathbb{R}` 有
 
     .. math::
 
-        \lim_{t \to t_0} \widehat{f} (t) = \lim_{t \to t_0} \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x =
+        \lim_{t \to t_0} \hat{f} (t) = \lim_{t \to t_0} \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x = \int_{\mathbb{R}} \lim_{t \to t_0} e^{-itx} f(x) \mathrm{d} x = \int_{\mathbb{R}} e^{-it_0x} f(x) \mathrm{d} x = \hat{f} (t_0).
+
+    这说明 :math:`\hat{f}` 在 :math:`\mathbb{R}` 上连续。
+
+    令 :math:`g(x, t) = \dfrac{e^{-itx} - 1}{-ix} f(x)`, 那么
+
+    .. math::
+
+        \left\lvert \dfrac{\partial}{\partial t} g(x, t) \right\rvert = \left\lvert e^{-itx} f(x) \right\rvert = \lvert f(x) \rvert,
+
+    由 :ref:`积分号下求导定理 <thm-differentiation-under-integral-sign>` 可得
+
+    .. math::
+
+        \dfrac{\mathrm{d}}{\mathrm{d} t} \int_{\mathbb{R}} g(x, t) \mathrm{d} x = \int_{\mathbb{R}} \dfrac{\partial}{\partial t} g(x, t) \mathrm{d} x = \int_{\mathbb{R}} e^{-itx} f(x) \mathrm{d} x = \hat{f} (t).
 
 .. _ex-4-25:
 
@@ -331,11 +346,41 @@
 
 .. math::
 
-    \int_{\mathbb{R}} \lvert f \rvert^p \mathrm{d} m = \int_0^\infty \alpha^{p-1} \mu (\alpha) \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
+    \int_{\mathbb{R}} \lvert f \rvert^p \mathrm{d} m = p \int_0^\infty \alpha^{p-1} \mu (\alpha) \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
 
 .. proof:proof::
 
-    待写。
+    对任意 :math:`x \in \mathbb{R}`, 有
+
+    .. math::
+
+        \lvert f(x) \rvert^p & = \int_0^{\lvert f(x) \rvert^p} \mathrm{d} t = \int_0^{\infty} \chi_{[0, \lvert f(x) \rvert^p]} (t) \mathrm{d} t \\
+        & = \int_0^\infty \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) \mathrm{d} t.
+
+    对上式两端在 :math:`\mathbb{R}` 上积分，由 Fubini 定理可得
+
+    .. math::
+
+        \int_{\mathbb{R}} \lvert f \rvert^p \mathrm{d} m & = \int_{\mathbb{R}} \left( \int_0^\infty \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) \mathrm{d} t \right) \mathrm{d} x \\
+        & = \int_0^{\infty} \left( \int_{\mathbb{R}} \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) \mathrm{d} x \right) \mathrm{d} t \\
+        & = \int_0^{\infty} m \mathbb{R}(\lvert f \rvert^p > t) \mathrm{d} t \\
+        (\text{令 } t = \alpha^p) & = \int_0^{\infty} m \mathbb{R}(\lvert f \rvert^p > \alpha^p) \mathrm{d} \alpha^p \\
+        & = \int_0^{\infty} m \mathbb{R}(\lvert f \rvert > \alpha) \cdot p \alpha^{p-1} \mathrm{d} \alpha \\
+        & = p \int_0^\infty \alpha^{p-1} \mu (\alpha) \mathrm{d} \alpha.
+
+    .. note::
+
+        这题的结论是所谓的 layer cake representation, 可以推广到一般的测度空间 :math:`(X, \mathscr{R}, \mu)` 上的非负可测函数 :math:`f` 上：
+
+        .. math::
+
+            f(x) = \int_0^{\infty} \chi_{\left\{ y\in X ~:~ f(y) > t \right\}}(x) \mathrm{d} t.
+
+        进一步有
+
+        .. math::
+
+            \int_X f \mathrm{d} \mu = \int_0^{\infty} \mu (\left\{ x\in X ~:~ f(x) > t \right\}) \mathrm{d} t.
 
 .. _ex-4-26:
 
@@ -344,4 +389,46 @@
 
 .. proof:proof::
 
-    待写。
+    :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 是非负项级数，所以它要么收敛，要么等于 :math:`\infty`。
+
+    充分性：由于 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛，
+    即 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n) < \infty`, 那么由逐项积分定理可得
+
+    .. math::
+
+        \int_E \lvert f \rvert \mathrm{d} m & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} \mathrm{d} m = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert \mathrm{d} m \\
+        & \leqslant \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} n \mathrm{d} m \\
+        & = \sum_{n=1}^\infty n \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
+        & = \sum_{n=1}^\infty m E (n - 1 \leqslant \lvert f \rvert < n) + \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
+        & = m E + \sum_{n=1}^\infty n \cdot m E (n \leqslant \lvert f \rvert < n + 1) \\
+        & = m E + \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n) \\
+        & < \infty.
+
+    这说明 :math:`\lvert f \rvert` 在 :math:`E` 上可积，从而知 :math:`f` 在 :math:`E` 上可积。
+
+    必要性：由于 :math:`f` 在 :math:`E` 上可积，所以 :math:`\lvert f \rvert` 在 :math:`E` 上可积。类似于充分性的证明，有
+
+    .. math::
+
+        \infty > \int_E \lvert f \rvert \mathrm{d} m & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} \mathrm{d} m = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert \mathrm{d} m \\
+        & \geqslant \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} (n - 1) \mathrm{d} m \\
+        & = \sum_{n=1}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
+        & = \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
+        & = \sum_{n=1}^\infty n \cdot m E (n \leqslant \lvert f \rvert < n + 1) \\
+        & = \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n).
+
+    这说明 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛。
+
+    .. note::
+
+        实际上，本题使用了如下的不等式：
+
+        .. math::
+
+            \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n) \leqslant \int_E \lvert f \rvert \mathrm{d} m \leqslant m E + \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n).
+
+    从上面的证明可以看出，当 :math:`m E = \infty` 时，级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛是
+    :math:`f` 在 :math:`E` 上可积的必要条件，但不是充分条件。相关的反例：令 :math:`f = \dfrac{1}{2}` 为常值函数，
+    那么对任意自然数 :math:`n \in \mathbb{N}`, :math:`E ( \lvert f \rvert \geqslant n) = \emptyset`,
+    所以 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n) = \sum_{n=1}^\infty 0 = 0`,
+    但 :math:`\displaystyle \int_E \lvert f \rvert \mathrm{d} m = \dfrac{1}{2} \cdot m E = \infty`, 所以 :math:`f` 在 :math:`E` 上不可积。

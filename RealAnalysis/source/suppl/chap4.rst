@@ -70,7 +70,42 @@
 
         以上图片来自 `Wikipedia <https://en.wikipedia.org/wiki/Dirichlet_kernel>`_.
 
-2. 关于勒贝格积分与微分关系的图表
+.. _thm-differentiation-under-integral-sign:
+
+2. 积分号下求导定理：设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上，
+且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有 :math:`f(x, t)` 关于 :math:`t` 处处可微。
+若存在 :math:`F(x) \in L_E` 使得
+
+.. math::
+
+    \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall (x, t) \in E \times (\alpha, \beta),
+
+那么
+
+.. math::
+
+    \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} \mathrm{d}x.
+
+.. proof:proof::
+
+    由微分中值定理，有
+
+    .. math::
+
+        \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) \mathrm{d}x \\
+        & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h \mathrm{d}x \\
+        & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x, \quad \theta(h) \in (0, 1).
+
+    那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族，
+    且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为 指标集 :math:`(0, 1)` 的聚点，由 Lebesgue 控制收敛定理，有
+
+    .. math::
+
+        \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
+        & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
+        & = \int_E \dfrac{\partial}{\partial t} f(x, t) \mathrm{d}x.
+
+3. 关于勒贝格积分与微分关系的图表
 
 约定一些集合（空间）的记号
 

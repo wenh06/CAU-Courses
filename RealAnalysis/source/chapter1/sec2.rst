@@ -21,8 +21,8 @@
 
         f: B \setminus B_0 \to [0, 1], \quad (a_1, a_2, \cdots, a_n, \cdots) \mapsto \sum_{n=1}^{\infty} a_n 2^n.
 
-    以上映射给出了集合 :math:`B \setminus B_0` 与区间 :math:`[0, 1]` 之间的一一对应，而 :math:`B_0` 是可列集，所以集合 :math:`B = (B \setminus B_0) \cup B_0`
-    也与区间 :math:`[0, 1]` 对等，从而它的势为 :math:`\aleph`.
+    以上映射给出了集合 :math:`B \setminus B_0` 与区间 :math:`[0, 1]` 之间的一一对应，而 :math:`B_0` 是可列集，
+    所以集合 :math:`B = (B \setminus B_0) \cup B_0` 也与区间 :math:`[0, 1]` 对等 [1]_ ，从而它的势为 :math:`\aleph`.
 
 .. _ex-1-9:
 
@@ -142,3 +142,7 @@
     :math:`x \not\in f^{-1} (B)`, 于是有 :math:`x \in \mathscr{C} f^{-1} (B)`. 反过来，任取 :math:`x \in \mathscr{C} f^{-1} (B)`,
     那么有 :math:`x \not\in f^{-1} (B)`, 于是有 :math:`f(x) \not\in B`, 从而有 :math:`f(x) \in \mathscr{C} B`, 于是有
     :math:`x \in f^{-1} (\mathscr{C} B)`. 综上所述，有 :math:`f^{-1} (\mathscr{C} B) = \mathscr{C} f^{-1} (B)`.
+
+.. rubric:: 注
+
+.. [1] 这是根据本节例1的结论得到的：“设集 :math:`A` 与 :math:`[0, 1]` 对等， :math:`B` 是可列集，则 :math:`A \cup B` 与 :math:`A \setminus B` 均与 :math:`[0, 1]` 对等。”
