@@ -8,7 +8,7 @@
 
 .. proof:proof::
 
-    由 :ref:`本章补充材料 <measurable_function_supp>` 知，若存在 :math:`D` 为 :math:`\mathbb{R}` 中稠密集，
+    由 :ref:`本章补充材料 <measurable-function-supp>` 知，若存在 :math:`D` 为 :math:`\mathbb{R}` 中稠密集，
     使得 :math:`\forall \alpha \in D`, :math:`E(f > \alpha)` 都是可测集，则 :math:`f` 是可测函数。
     特别地，本题中取 :math:`D` 为有理数集 :math:`\mathbb{Q}`，则 :math:`\forall r \in \mathbb{Q}`,
     :math:`E(f > r)` 都是可测集，于是 :math:`f` 是可测函数。反过来显然。

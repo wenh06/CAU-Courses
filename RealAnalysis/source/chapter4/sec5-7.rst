@@ -21,12 +21,32 @@
 
 .. _ex-4-28:
 
-28. 设 :math:`(X, \mathscr(R), \mu), (Y, \mathscr{S}, \nu)` 为对应于勒贝格测度的单位区间这样的测度空间， :math:`E` 是 :math:`X \times Y` 中是和下述条件的集：
-对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可测集。证明 :math:`E` 是不可测的。
+28. 设 :math:`(X, \mathscr{R}, \mu), (Y, \mathscr{S}, \nu)` 为对应于勒贝格测度的单位区间这样的测度空间， :math:`E` 是 :math:`X \times Y` 中是和下述条件的集：
+对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可列集。证明 :math:`E` 是不可测的。
 
 .. proof:proof::
 
-    待写。
+    假设 :math:`E` 可测，那么
+
+    .. math::
+
+        1 = m ([0, 1] \times [0, 1]) \geqslant m (E) = \int_{X \times Y} \chi_E \mathrm{d} (\mu \times \nu),
+
+    即 :math:`\chi_E` 是 :math:`E` 上的可积函数，从而由 Fubini 定理知
+
+    .. math::
+
+            \int_X \nu(E_x) \mathrm{d} \mu = \int_X \left( \int_Y \chi_{E_x} \mathrm{d} \nu \right) \mathrm{d} \mu = \int_{X \times Y} \chi_E \mathrm{d} (\mu \times \nu) = int_Y \left( \int_X \chi_{E^y} \mathrm{d} \mu \right) \mathrm{d} \nu = \int_Y \mu (E^y) \mathrm{d} \nu.
+
+    由于对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可列集，而可列集都是零测集，
+    所以 :math:`\nu(E_x) = 0`, :math:`\mu(E^y) = m(X) = 1`, 从而有
+
+    .. math::
+
+        \int_X \nu(E_x) \mathrm{d} \mu & = \int_X 0 \mathrm{d} \mu = 0, \\
+        \int_Y \mu(E^y) \mathrm{d} \nu & = \int_Y 1 \mathrm{d} \nu = 1,
+
+    这与上式矛盾，所以 :math:`E` 不可测。
 
 .. _ex-4-30:
 
@@ -39,12 +59,29 @@
 
 .. proof:proof::
 
-    待写。
+    有如下的互逆的连续一一映射
+
+    .. math::
+
+        [0, 1] \overset{f}{\underset{g}\rightleftarrows} [0, 2]
+
+    (1). 任取 :math:`[0, 1]` 上 Cantor 三分集 :math:`P_0` 的补集 :math:`G_0` 的构成区间 :math:`I = (a, b)`,
+    Cantor 函数 :math:`\theta` 在 :math:`I` 上为常值函数，因此 :math:`f(I) = (a + \theta(a), b + \theta(b))`.
+    于是有 :math:`m (f(I)) = b - a = m I`. 依据测度的可列可加性，有 :math:`m (f(G_0)) = m G_0 = 1` 成立，从而知
+
+    .. math::
+
+        m (f (P_0)) = m ([0, 2]) - m (f (G_0)) = 2 - 1 = 1.
+
+    于是可以从正测度集 :math:`f (P_0)` 中取出不可测集 :math:`B_0`, 并令 :math:`B = g (B_0) = f^{-1} (B_0) \subset P_0`.
+    由于 :math:`P_0` 是零测集，所以它的子集 :math:`B` 也是零测集，从而是可测集。而 :math:`g^{-1} (B) = B_0` 不可测。
+
+    (2). 任取 :math:`[0, 1]` 区间内的不可测集 :math:`E`, 假设 :math:`g^{-1} (E) = f (E)` 可测。
 
 .. _ex-4-34:
 
-34. 设 :math:`\{ f_n \}` 为 :math:`[a, b]` 上有界变差函数列， :math:`f_n` 收敛于一有限函数 :math:`f (n \to \infty)`, 且有 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`,
-:math:`K` 为常数（ :math:`n \in \mathbb{N}`）。证明 :math:`f` 也是有界变差函数。
+34. 设 :math:`\{ f_n \}` 为 :math:`[a, b]` 上有界变差函数列， :math:`f_n` 收敛于一有限函数 :math:`f` (当 :math:`n \to \infty`),
+且有 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`, :math:`K` 为常数 (:math:`n \in \mathbb{N}`)。证明 :math:`f` 也是有界变差函数。
 
 .. proof:proof::
 
@@ -56,7 +93,20 @@
 
 .. proof:proof::
 
-    待写。
+    由于函数 :math:`f` 在 :math:`[a, b]` 上绝对连续，所以存在 :math:`[a, b]` 上可积函数 :math:`g` 使得
+
+    .. math::
+
+        f(x) = f(a) + \int_{[a, x]} g \mathrm{d} m, \quad x \in [a, b],
+
+    并且 :math:`f'(x) = g(x)` 几乎处处成立。由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数，即 :math:`f'(x) = g(x)` 几乎处处非负，
+    所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g \mathrm{d} m \geqslant 0`, 从而知
+
+    .. math::
+
+        f(x_2) - f(x_1) = \int_{[x_1, x_2]} g \mathrm{d} m \geqslant 0,
+
+    这就证明了 :math:`f` 是增函数。
 
 .. _ex-4-38:
 

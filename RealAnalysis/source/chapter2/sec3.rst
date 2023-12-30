@@ -103,7 +103,7 @@
 
         \lim\limits_{n \to \infty} m^* E_n \leqslant m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
 
-    另一方面，由 :ref:`勒贝格外测度的正则性 <reg_outer_measure>`, 即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
+    另一方面，由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 即对于任意 :math:`E_n`，存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
     使得 :math:`m A_n = m^* E_n`, 令
 
     .. math::

@@ -1,7 +1,7 @@
 第二章补充材料
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _reg_outer_measure:
+.. _reg-outer-measure:
 
 1. 勒贝格外测度的正则性。对任意集合 :math:`E \subset \mathbb{R}^d`, 存在 :math:`G_{\delta}`-集 :math:`A`,
 称为 :math:`E` 的等测包，使得 :math:`E \subset A` 且 :math:`m A = m^* E`.

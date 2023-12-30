@@ -1,7 +1,7 @@
 第三章补充材料
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _measurable_function_supp:
+.. _measurable-function-supp:
 
 1. 设 :math:`f` 是可测集 :math:`E` 上的函数， :math:`D` 是 :math:`\mathbb{R}` 中稠密集，
 若 :math:`\forall \alpha \in D`, :math:`E(f > \alpha)` 都是可测集，则 :math:`f` 是可测函数。

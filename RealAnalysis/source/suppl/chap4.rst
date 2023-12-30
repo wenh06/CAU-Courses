@@ -1,6 +1,8 @@
 第四章补充材料
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _dirichlet-kernel-uniformly-bounded:
+
 1. 令 :math:`\varphi = \chi_{(\alpha, \beta)}`, 其中 :math:`(\alpha, \beta) \subset E = [-\pi, \pi]`, 那么
 
 .. math::
@@ -104,6 +106,8 @@
         \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
         & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
         & = \int_E \dfrac{\partial}{\partial t} f(x, t) \mathrm{d}x.
+
+.. _diagram-of-lebesgue-integral-and-differential:
 
 3. 关于勒贝格积分与微分关系的图表
 
