@@ -19,8 +19,16 @@
 
         m^* E = \inf_{G \supset E} m G = \inf_{\cup I_k = G \supset E} \sum_k m I_k,
 
-    其中 :math:`G` 包含 :math:`E` 的开集， :math:`m G = \sum\limits_{k} I_k` 为 :math:`G` 的测度，
-    :math:`G = \bigcup\limits_k I_k` 为 :math:`G` 的结构表示。那么自然有
+    其中 :math:`G` 包含 :math:`E` 的开集， :math:`m G = \sum\limits_{k} m I_k` 为 :math:`G` 的测度，
+    :math:`G = \bigcup\limits_k I_k` 为 :math:`G` 的结构表示。那么任取 :math:`\varepsilon > 0`,
+    由于 :math:`m^* E` 为下确界，所以存在开集 :math:`\bigcup\limits_k I_k = G \supset E` 使得
+
+    .. math::
+
+        m^* E > m G - \varepsilon = \sum\limits_{k} m I_k - \varepsilon.
+
+    上式能推出 :math:`m^* E \geqslant \inf\limits_{\cup I_k \supset E} \sum\limits_{k} m I_k - \varepsilon`,
+    由于 :math:`\varepsilon` 是任意的正数，所以有
 
     .. math::
 
