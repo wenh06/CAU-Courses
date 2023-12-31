@@ -10,6 +10,7 @@ import requests
 import sphinx_book_theme
 import sphinx_rtd_theme
 import sphinx_theme
+from docutils import nodes
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -106,10 +107,10 @@ elif _theme_name == "sphinx_book_theme":
     html_theme = "sphinx_book_theme"
     html_theme_path = [sphinx_book_theme.get_html_theme_path()]
     html_theme_options = {
-        "repository_url": "https://github.com/wenh06/CAU-Courses",
-        "use_repository_button": True,
-        "use_issues_button": True,
-        "use_edit_page_button": True,
+        # "repository_url": "https://github.com/wenh06/CAU-Courses",
+        # "use_repository_button": True,
+        # "use_issues_button": True,
+        # "use_edit_page_button": True,
         "use_download_button": True,
         "use_fullscreen_button": True,
         "path_to_docs": "RealAnalysis/source",
@@ -174,6 +175,50 @@ linkcheck_ignore = [
 ]
 
 
+# -------------------------------------------------
+# Code from https://github.com/SuperKogito/sphinxcontrib-pdfembed/blob/master/sphinxcontrib/pdfembed.py
+# -------------------------------------------------
+
+
+def pdfembed_html(pdfembed_specs):
+    """
+    Build the iframe code for the pdf file,
+    """
+    html_base_code = """
+                        <iframe
+                                id="ID"
+                                style="border:1px solid #666CCC"
+                                title="PDF"
+                                src="%s"
+                                frameborder="1"
+                                scrolling="auto"
+                                height="%s"
+                                width="%s"
+                                align="%s">
+                        </iframe>
+                     """
+    return html_base_code % (pdfembed_specs["src"], pdfembed_specs["height"], pdfembed_specs["width"], pdfembed_specs["align"])
+
+
+def pdfembed_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+    """
+    Get iframe specifications and generate the associate HTML code for the pdf iframe.
+    """
+    # parse and init variables
+    text = text.replace(" ", "")
+    pdfembed_specs = {}
+    # read specs
+    for component in text.split(","):
+        pdfembed_specs[component.split(":")[0]] = component.split(":")[1]
+    # build node from pdf iframe html code
+    node = nodes.raw("", pdfembed_html(pdfembed_specs), format="html")
+    return [node], []
+
+
+# -------------------------------------------------
+
+
 def setup(app):
     app.add_css_file("css/custom.css")
     app.add_css_file("css/proof.css")
+    app.add_role("pdfembed", pdfembed_role)

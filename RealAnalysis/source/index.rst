@@ -36,3 +36,12 @@
    suppl/chap2
    suppl/chap3
    suppl/chap4
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 历年期末考题:
+
+   final_exams/2020-2021
+   final_exams/2021-2022
+   final_exams/2022-2023
+   final_exams/2023-2024
