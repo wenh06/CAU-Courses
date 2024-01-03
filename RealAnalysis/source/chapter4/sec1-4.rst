@@ -141,7 +141,7 @@
 
         \int_E f \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n \mathrm{d} m.
 
-    如果加上 :math:`f_n` 的积分都有定义，且 :math:`\displaystyle \int_E f_1 \mathrm{d} m \geqslant - \infty` 这个条件，Levi 定理就成立了。
+    如果加上 :math:`f_n` 的积分都有定义，且 :math:`\displaystyle \int_E f_1 \mathrm{d} m > - \infty` 这个条件，Levi 定理就成立了。
 
 .. _ex-4-14:
 
