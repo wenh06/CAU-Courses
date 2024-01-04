@@ -96,20 +96,19 @@
 
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) < \varepsilon.
 
-    另一方面， Cantor 函数 :math:`\Phi` 在 :math:`\mathbb{R} \setminus P_0 \supset \mathbb{R} \setminus G` 上是常值函数，
-    特别地，:math:`\Phi` 在所有的闭区间 :math:`[b_i, a_{i+1}], i = 1, \dots, n-1` 上都是常值函数，因此
+    另一方面，每一个闭区间 :math:`[b_i, a_{i+1}], i = 1, \dots, n-1`, 都包含于 :math:`G_0` 的某个构成区间中，而 Cantor 函数在这些构成区间上是常值函数，于是
 
     .. math::
 
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) & = -\Phi(a_1) + (\Phi(b_1) - \Phi(a_2)) + \cdots + (\Phi(b_{n-1}) - \Phi(a_n)) + \Phi(b_n) \\
-        & = \Phi(b_n) - \Phi(a_0)
+        & = \Phi(b_n) - \Phi(a_1)
 
     由于 :math:`\{I_i = (a_i, b_i)\}_{i = 1, \dots, n}` 覆盖了 :math:`P_0`, 不妨设 :math:`a_1 < b_1 < a_2 < b_2 < \cdots < a_n < b_n`,
-    因此 :math:`a_0 < 0, b_n > 1`, 从而有 :math:`\Phi(a_0) = 0, \Phi(b_n) = 1`. 于是有
+    因此 :math:`a_1 < 0, b_n > 1`, 从而有 :math:`\Phi(a_1) = 0, \Phi(b_n) = 1`. 于是有
 
     .. math::
 
-        \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \Phi(b_n) - \Phi(a_0) = 1.
+        \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \Phi(b_n) - \Phi(a_1) = 1.
 
     这与式 :eq:`abs-cont-cond` 矛盾，因此 :math:`\Phi` 不是绝对连续的。
 
