@@ -1,7 +1,7 @@
 实变函数2023-2024学年秋季学期期末考试试卷
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. :pdfembed:`src:../_static/final_exams/实变函数2023-2024学年秋季学期（文豪-CAU-数学21).pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/实变函数2023-2024学年秋季学期（文豪-CAU-数学21).pdf, height:800, width:100%, align:middle`
 
 答案解析
 ---------
@@ -45,7 +45,6 @@
     .. math::
 
         m E \leqslant \sum\limits_{n=1}^{\infty} m E_n = 0.
-
 
 二、简答题（第1题15分，第2题10分，共25分）
 
@@ -167,15 +166,14 @@
         \lvert x_n - y_n \rvert < \rho(F_1, F_2) + \dfrac{1}{n} = \dfrac{1}{n}.
 
     由于 :math:`F_1, F_2` 都是有界集，所以 :math:`\{x_n\}, \{y_n\}` 都是有界数列，故存在收敛子列 :math:`\{x_{n_k}\}, \{y_{n_k}\}`,
-    即 :math:`x_{n_k} \to x, y_{n_k} \to y`, 当 :math:`k \to \infty`. 由于 :math:`F_1, F_2` 都是闭集，所以 :math:`x \in F_1, y \in F_2`,
-    且由 :math:`\{x_{n_k}\}, \{y_{n_k}\}` 的收敛性，有
+    即 :math:`x_{n_k} \to x, y_{n_k} \to y`, 当 :math:`k \to \infty`. 由于 :math:`F_1, F_2` 都是闭集，所以 :math:`x \in F_1, y \in F_2`, 且有
 
     .. math::
         :label: eq:cau-real-analysis-exam2024-3-2
 
         \lvert x - y \rvert = \lim\limits_{k\to\infty} \lvert x_{n_k} - y_{n_k} \rvert = 0,
 
-    这与 :math:`\rho(F_1, F_2) = 0` 矛盾，故 :math:`\rho(F_1, F_2) > 0`.
+    从而有 :math:`x = y`, 这与 :math:`F_1 \cap F_2 = \emptyset` 矛盾，故 :math:`\rho(F_1, F_2) > 0`.
 
     也可以直接由 :math:`F_1 \cap F_2 = \emptyset` 得 :math:`x \neq y`, 从而 :math:`\lvert x - y \rvert > 0`. 再由 :eq:`eq:cau-real-analysis-exam2024-3-1` 和 :eq:`eq:cau-real-analysis-exam2024-3-2` 得
 
@@ -203,7 +201,7 @@
 
         任取实数 :math:`r \in \mathbb{R}`，由于 :math:`D` 是 :math:`\mathbb{R}` 中稠密集，
         所以存在 :math:`D` 中点列 :math:`\{\alpha_k\}_{k \in \mathbb{N}}` 使得 :math:`\alpha_k > r`,
-        且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有
+        且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有（断言3分，断言的证明2分）
 
         .. math::
 
