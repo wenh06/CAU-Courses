@@ -106,10 +106,10 @@ elif _theme_name == "sphinx_book_theme":
     html_theme = "sphinx_book_theme"
     html_theme_path = [sphinx_book_theme.get_html_theme_path()]
     html_theme_options = {
-        "repository_url": "https://github.com/wenh06/CAU-Courses",
-        "use_repository_button": True,
-        "use_issues_button": True,
-        "use_edit_page_button": True,
+        # "repository_url": "https://github.com/wenh06/CAU-Courses",
+        # "use_repository_button": True,
+        # "use_issues_button": True,
+        # "use_edit_page_button": True,
         "use_download_button": True,
         "use_fullscreen_button": True,
         "path_to_docs": "MathematicalAnalysis/source",
