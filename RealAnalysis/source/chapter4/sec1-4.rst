@@ -49,7 +49,7 @@
 .. _ex-4-5:
 
 5. 设由 :math:`[0, 1]` 中取 :math:`n` 个可测子集 :math:`E_1, E_2, \dots, E_n`. 假定 :math:`[0, 1]` 中任一点至少属于这 :math:`n` 个集合中的 :math:`p` 个，
-试证这 :math:`n` 个自己中必有一集，它的测度不小于 :math:`\dfrac{p}{n}`.
+试证这 :math:`n` 个子集中必有一集，它的测度不小于 :math:`\dfrac{p}{n}`.
 
 .. proof:proof::
 
@@ -200,7 +200,7 @@
     .. math::
 
         K \geqslant \varliminf_{n \to \infty} \int_E \lvert f_n \rvert \mathrm{d} m \geqslant \int_E \varliminf_{n \to \infty} \lvert f_n \rvert \mathrm{d} m & = \int_{E_0} \varliminf_{n \to \infty} \lvert f_n \rvert \mathrm{d} m + \int_{E \setminus E_0} \varliminf_{n \to \infty} \lvert f_n \rvert \mathrm{d} m \\
-        & = \int_{E_0} \lvert f \rvert \mathrm{d} m + 0 \\
+        & = 0 + \int_{E \setminus E_0} \lvert f \rvert \mathrm{d} m \\
         & = \int_{E_0} \lvert f \rvert \mathrm{d} m + \int_{E \setminus E_0} \lvert f \rvert \mathrm{d} m \\
         & = \int_E \lvert f \rvert \mathrm{d} m.
 

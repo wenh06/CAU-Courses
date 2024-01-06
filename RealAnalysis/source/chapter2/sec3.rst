@@ -36,7 +36,7 @@
 
 .. math::
 
-    m^* (E \cap A) + m^* (E \cap A) = m E + m^* A;
+    m^* (E \cup A) + m^* (E \cap A) = m E + m^* A;
 
 :math:`E` 不可测时如何？
 
@@ -58,14 +58,14 @@
 
     .. math::
 
-        m^* (E \cap A) + m^* (E \cap A) = m E + m^* A.
+        m^* (E \cup A) + m^* (E \cap A) = m E + m^* A.
 
     当 :math:`E` 不可测时，我们只能根据内测度以及外测度的半可加性得到
 
     .. math::
 
-        m^* (E \cap A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
-        m_* (E \cap A) + m_* (E \cap A) \geqslant m_* E + m_* A.
+        m^* (E \cup A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
+        m_* (E \cup A) + m_* (E \cap A) \geqslant m_* E + m_* A.
 
 .. _ex-2-13:
 
