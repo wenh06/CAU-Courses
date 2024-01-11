@@ -4,6 +4,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import re
+from typing import Any, Dict
 
 import pydata_sphinx_theme
 import requests
@@ -11,6 +12,7 @@ import sphinx_book_theme
 import sphinx_rtd_theme
 import sphinx_theme
 from docutils import nodes
+from sphinx.application import Sphinx
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -218,7 +220,42 @@ def pdfembed_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
 # -------------------------------------------------
 
 
+def html_page_context(
+    app: Sphinx,
+    pagename: str,
+    templatename: str,
+    context: Dict[str, Any],
+    doctree: nodes.document,
+) -> None:
+    """Update the html page context by adding tikzjax related parameters.
+
+    Parameters
+    ----------
+    app : Sphinx
+        The Sphinx application.
+    pagename : str
+        The name of the page.
+    templatename : str
+        The name of the template.
+    context : Dict[str, Any]
+        The context of the html page.
+    doctree : nodes.document
+        The document tree.
+
+    Returns
+    -------
+    None
+        The context is updated in-place.
+
+    """
+    if "metatags" not in context:
+        context["metatags"] = ""
+    context["metatags"] += """<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">"""
+    context["metatags"] += """<script src="https://tikzjax.com/v1/tikzjax.js"></script>"""
+
+
 def setup(app):
     app.add_css_file("css/custom.css")
     app.add_css_file("css/proof.css")
     app.add_role("pdfembed", pdfembed_role)
+    app.connect("html-page-context", html_page_context)
