@@ -1,3 +1,7 @@
+import inspect
+import sys
+from functools import partial, reduce
+from pathlib import Path
 from typing import List
 
 import numpy as np
@@ -5,18 +9,67 @@ import pandas as pd
 import torch
 
 
-def 算平时成绩(row: pd.Series, 取最高的几次作业成绩: int = 7) -> float:
+def 计算平时成绩(row: pd.Series, 取最高的几次作业成绩: int = 7) -> float:
     平时作业_cols = [c for c in row.keys().tolist() if "作业" in c]
     作业成绩 = round(torch.topk(torch.Tensor(row[平时作业_cols]), k=取最高的几次作业成绩).values.numpy().mean() * 10)
     return 作业成绩
 
 
-def 算总分(row: pd.Series, 平时成绩占比: float = 0.3, 取最高的几次作业成绩: int = 7) -> float:
+def 计算总分(row: pd.Series, 平时成绩占比: float = 0.3, 取最高的几次作业成绩: int = 7) -> float:
     期末卷面_cols = ["期末卷面成绩"]
-    作业成绩 = 算平时成绩(row, 取最高的几次作业成绩)
+    作业成绩 = 计算平时成绩(row, 取最高的几次作业成绩)
     最终成绩 = 作业成绩 * 平时成绩占比 + row[期末卷面_cols].mean() * (1 - 平时成绩占比)
     return 最终成绩
 
 
 def 是否可能需要调整(row: pd.Series, 边缘分数: List[int] = [89, 84, 81, 77, 74]) -> bool:
     return np.floor(row["最终成绩"]).astype(int).item() in 边缘分数
+
+
+if __name__ == "__main__":
+    assert len(sys.argv) >= 2, "请提供数据文件夹路径"
+    if sys.argv[1] in ["-h", "--help"]:
+        print("Usage: python compute_final_marks.py <data_folder> " "[平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (default: 7)]")
+        exit(0)
+    data_folder = Path(sys.argv[1]).expanduser().resolve()
+    if len(sys.argv) >= 3:
+        平时成绩占比 = float(sys.argv[2])
+    else:
+        平时成绩占比 = inspect.signature(计算总分).parameters["平时成绩占比"].default
+    if len(sys.argv) >= 4:
+        取最高的几次作业成绩 = int(sys.argv[3])
+    else:
+        取最高的几次作业成绩 = inspect.signature(计算平时成绩).parameters["取最高的几次作业成绩"].default
+    try:
+        期末卷面成绩 = pd.read_csv(data_folder.glob("*期末卷面*.csv").__next__())
+        平时作业成绩 = pd.read_csv(data_folder.glob("*作业*.csv").__next__())
+        人员名单 = pd.read_csv(data_folder.glob("*人员名单*.csv").__next__())
+        prefix = data_folder.glob("*期末卷面*.csv").__next__().name.split("期末卷面")[0]
+    except StopIteration:
+        raise FileNotFoundError("请检查数据文件夹路径是否正确。" "数据文件夹应包含期末卷面成绩、平时作业成绩、人员名单三个CSV文件。")
+    for df in [期末卷面成绩, 平时作业成绩]:
+        if "班级" in df.columns:
+            df.drop(columns=["班级"], inplace=True)
+    算分表格 = reduce(lambda left, right: pd.merge(left, right, on=["学号", "姓名"], how="outer"), [人员名单, 期末卷面成绩, 平时作业成绩])
+    算分表格["平时成绩"] = 算分表格.apply(partial(计算平时成绩, 取最高的几次作业成绩=取最高的几次作业成绩), axis=1)
+    算分表格["最终成绩"] = 算分表格.apply(partial(计算总分, 平时成绩占比=平时成绩占比, 取最高的几次作业成绩=取最高的几次作业成绩), axis=1)
+    可能需要调整名单 = 算分表格[算分表格.apply(是否可能需要调整, axis=1)]
+    不及格名单 = 算分表格[算分表格["最终成绩"] < 60]
+    优秀名单 = 算分表格[算分表格["最终成绩"] >= 90]
+
+    算分表格.to_csv(data_folder / f"{prefix}最终成绩单.csv", index=False)
+
+    print(f"优秀人数：{len(优秀名单)}, 优秀率：{len(优秀名单) / len(算分表格):.2%}")
+    print(f"不及格人数：{len(不及格名单)}, 不及格率：{len(不及格名单) / len(算分表格):.2%}")
+
+    if len(优秀名单) > 0:
+        print("优秀名单：")
+        print(优秀名单[["学号", "姓名", "平时成绩", "最终成绩"]])
+
+    if len(不及格名单) > 0:
+        print("不及格名单：")
+        print(不及格名单[["学号", "姓名", "平时成绩", "最终成绩"]])
+
+    if len(可能需要调整名单) > 0:
+        print("可能需要调整的名单：")
+        print(可能需要调整名单[["学号", "姓名", "平时成绩", "最终成绩"]])
