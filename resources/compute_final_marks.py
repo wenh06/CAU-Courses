@@ -1,21 +1,30 @@
 import inspect
 import sys
+import warnings
 from functools import partial, reduce
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import numpy as np
 import pandas as pd
 import torch
 
 
-def 计算平时成绩(row: pd.Series, 取最高的几次作业成绩: int = 7) -> float:
+def 计算平时成绩(row: pd.Series, 取最高的几次作业成绩: Optional[int] = None) -> float:
     平时作业_cols = [c for c in row.keys().tolist() if "作业" in c]
+    if 取最高的几次作业成绩 is None:
+        取最高的几次作业成绩 = len(平时作业_cols)
+    if 取最高的几次作业成绩 == 0:
+        raise ValueError("取最高的几次作业成绩不能为0")
+    if 取最高的几次作业成绩 > len(平时作业_cols):
+        warnings.warn("取最高的几次作业成绩大于总作业次数，将取所有作业成绩的平均值。")
+        取最高的几次作业成绩 = len(平时作业_cols)
     作业成绩 = round(torch.topk(torch.Tensor(row[平时作业_cols]), k=取最高的几次作业成绩).values.numpy().mean() * 10)
     return 作业成绩
 
 
-def 计算总分(row: pd.Series, 平时成绩占比: float = 0.3, 取最高的几次作业成绩: int = 7) -> float:
+def 计算总分(row: pd.Series, 平时成绩占比: float = 0.3, 取最高的几次作业成绩: Optional[int] = None) -> float:
+    assert 0 <= 平时成绩占比 <= 1, "平时成绩占比必须在0到1之间"
     期末卷面_cols = ["期末卷面成绩"]
     作业成绩 = 计算平时成绩(row, 取最高的几次作业成绩)
     最终成绩 = 作业成绩 * 平时成绩占比 + row[期末卷面_cols].mean() * (1 - 平时成绩占比)
@@ -29,7 +38,7 @@ def 是否可能需要调整(row: pd.Series, 边缘分数: List[int] = [89, 84, 
 if __name__ == "__main__":
     assert len(sys.argv) >= 2, "请提供数据文件夹路径"
     if sys.argv[1] in ["-h", "--help"]:
-        print("Usage: python compute_final_marks.py <data_folder> " "[平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (default: 7)]")
+        print("Usage: python compute_final_marks.py <data_folder> " "[平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]")
         exit(0)
     data_folder = Path(sys.argv[1]).expanduser().resolve()
     if len(sys.argv) >= 3:
