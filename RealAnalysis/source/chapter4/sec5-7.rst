@@ -17,7 +17,23 @@
 
 .. proof:proof::
 
-    待写。
+    首先，由于 :math:`f(x), g(x)` 分别是定义在集 :math:`X, Y` 上的 :math:`\mu, \nu` 可积函数，从而可测，
+    所以 :math:`h(x, y) = f(x) g(y)` 是乘积空间 :math:`X \times Y` 上的可测函数。
+
+    接下来，需要证明 :math:`\int_{X \times Y} h \mathrm{d} (\mu \times \nu) < \infty`.
+    这等价于 :math:`\int_{X \times Y} \lvert h \rvert \mathrm{d} (\mu \times \nu) < \infty`.
+    由 :ref:`Tonelli 定理 <thm-tonelli>` 知
+
+    .. math::
+
+        \int_{X \times Y} \lvert h \rvert \mathrm{d} (\mu \times \nu) & = \int_X \left( \int_Y \lvert h(x, y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu = \int_X \left( \int_Y \lvert f(x) g(y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu \\
+        & = \int_X \lvert f(x) \rvert \left( \int_Y \lvert g(y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu = \int_X \lvert f(x) \rvert \mathrm{d} \mu \int_Y \lvert g(y) \rvert \mathrm{d} \nu < \infty.
+
+    于是 :math:`h(x, y) = f(x) g(y)` 是乘积空间 :math:`X \times Y` 上的可积函数。
+
+    .. note::
+
+        本题结论即为所谓的 Fubini-Tonelli 定理。
 
 .. _ex-4-28:
 
@@ -67,7 +83,14 @@
 
     (1). 任取 :math:`[0, 1]` 上 Cantor 三分集 :math:`P_0` 的补集 :math:`G_0` 的构成区间 :math:`I = (a, b)`,
     Cantor 函数 :math:`\theta` 在 :math:`I` 上为常值函数，因此 :math:`f(I) = (a + \theta(a), b + \theta(b))`.
-    于是有 :math:`m (f(I)) = b - a = m I`. 依据测度的可列可加性，有 :math:`m (f(G_0)) = m G_0 = 1` 成立，从而知
+    于是有 :math:`m (f(I)) = b - a = m I`, 且 :math:`f(G_0)` 为构成区间为 :math:`f(I)` 的开集，从而可测。
+    依据测度的可列可加性，有
+
+    .. math::
+
+        m (f(G_0)) = \sum_{n = 1}^\infty m (f(I_n)) = \sum_{n = 1}^\infty m (I_n) = m (G_0) = 1
+
+    成立，从而知
 
     .. math::
 
@@ -76,7 +99,7 @@
     于是可以从正测度集 :math:`f (P_0)` 中取出不可测集 :math:`B_0`, 并令 :math:`B = g (B_0) = f^{-1} (B_0) \subset P_0`.
     由于 :math:`P_0` 是零测集，所以它的子集 :math:`B` 也是零测集，从而是可测集。而 :math:`g^{-1} (B) = B_0` 不可测。
 
-    (2). 任取 :math:`[0, 1]` 区间内的不可测集 :math:`E`, 假设 :math:`g^{-1} (E) = f (E)` 可测。
+    (2). 任取 :math:`[0, 1]` 区间内的不可测集 :math:`E`, 假设 :math:`g^{-1} (E) = f (E)` 可测。未写完。。。。
 
 .. _ex-4-34:
 
