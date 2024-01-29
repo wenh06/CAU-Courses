@@ -108,7 +108,48 @@
 
 .. proof:proof::
 
-    待写。
+    任取区间 :math:`[a, b]` 的一个划分
+
+    .. math::
+
+        \mathscr{P}: ~ a = x_0 < x_1 < \cdots < x_k = b,
+
+    由于 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`, 所以对任意 :math:`n \in \mathbb{N}`, 有
+
+    .. math::
+
+        \sum_{i = 1}^k \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \leqslant K.
+
+    又由于 :math:`\forall x \in [a, b]`, 实数列 :math:`\{ f_n(x) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x)`,
+    所以特别地对 :math:`x_i, i = 0, 1, \cdots, k`, 有 :math:`\{ f_n(x_i) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x_i)`.
+    于是 :math:`\forall \varepsilon > 0`, 存在正整数 :math:`N(\varepsilon, i)`, 使得当 :math:`n > N(\varepsilon, i)` 时，有
+
+    .. math::
+
+        \lvert f_n(x_i) - f(x_i) \rvert < \dfrac{\varepsilon}{2k}, \quad i = 0, 1, \cdots, k.
+
+    取 :math:`N(\varepsilon, \mathscr{P}) = \max \{ N(\varepsilon, 0), N(\varepsilon, 1), \cdots, N(\varepsilon, k) \}`,
+    那么当 :math:`n > N(\varepsilon, \mathscr{P})` 时，有
+
+    .. math::
+
+        \lvert f_n(x_i) - f(x_i) \rvert < \dfrac{\varepsilon}{2k}, \quad i = 0, 1, \cdots, k.
+
+    考察 :math:`f` 在这个划分上的变差，有
+
+    .. math::
+
+        \sum_{i = 1}^k \lvert f(x_i) - f(x_{i - 1}) \rvert & \leqslant \sum_{i = 1}^k \left( \lvert f(x_i) - f_n(x_i) \rvert + \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert + \lvert f_n(x_{i - 1}) - f(x_{i - 1}) \rvert \right) \\
+        & \leqslant \sum_{i = 1}^k \dfrac{\varepsilon}{2k} + \sum_{i = 1}^k \left( \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \right) + \sum_{i = 1}^k \dfrac{\varepsilon}{2k} \\
+        & \leqslant \varepsilon + K,
+
+    其中 :math:`n` 是任意大于 :math:`N(\varepsilon, \mathscr{P})` 的正整数。由于 :math:`\varepsilon` 的任意性，所以有
+
+    .. math::
+
+        \sum_{i = 1}^k \lvert f(x_i) - f(x_{i - 1}) \rvert \leqslant K.
+
+    由于上式对任意划分成立，所以 :math:`f` 是有界变差函数，且有 :math:`\displaystyle \bigvee_a^b (f) \leqslant K`.
 
 .. _ex-4-35:
 
