@@ -33,7 +33,7 @@
 
     .. note::
 
-        本题结论即为所谓的 Fubini-Tonelli 定理。
+        本题结论即为 Fubini-Tonelli 定理的一种特殊情形。
 
 .. _ex-4-28:
 
@@ -122,7 +122,7 @@
 
         f(x) = f(a) + \int_{[a, x]} g \mathrm{d} m, \quad x \in [a, b],
 
-    并且 :math:`f'(x) = g(x)` 几乎处处成立。由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数，即 :math:`f'(x) = g(x)` 几乎处处非负，
+    并且 :math:`f'(x) = g(x)` 几乎处处成立。由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数，即 :math:`g(x)` 几乎处处非负，
     所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g \mathrm{d} m \geqslant 0`, 从而知
 
     .. math::
@@ -137,4 +137,107 @@
 
 .. proof:proof::
 
-    待写。
+    设 :math:`E \subset \mathbb{R}` 为有有限测度的无界集， :math:`m (E) < \infty`,
+    :math:`\mathscr{M}` 为 :math:`E` 的一个由有正测度的闭区间构成的 Vitali 覆盖。
+    要证明 :math:`\forall \varepsilon > 0`, 存在有限个互不相交的区间 :math:`d_1, d_2, \cdots, d_n \in \mathscr{M}`,
+    使得 :math:`m (E \setminus \bigcup_{i = 1}^n d_i) < \varepsilon`.
+
+    取开集 :math:`G` 使得 :math:`E \subset G`, 且 :math:`m G < \infty`. 可以不妨设 :math:`\mathscr{M}` 中的区间都包含于 :math:`G` 中。
+    这是因为 :math:`\forall x \in E \subset G`, :math:`x` 必然属于开集 :math:`G` 的某个构成区间 :math:`(a, b)`,
+    而 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖，对于所有的 :math:`x \in E`, 都存在闭区间列 :math:`\{ d_k \} \subset \mathscr{M}`,
+    使得 :math:`x \in d_k`, 且 :math:`\displaystyle \lim_{k \to \infty} m (d_k) = 0`. 于是从某一项开始， :math:`d_k \subset (a, b) \subset G`.
+    令 :math:`\mathscr{M}'` 为 :math:`\mathscr{M}` 中所有包含于 :math:`G` 的闭区间构成的子族，那么 :math:`\mathscr{M}'` 也是 :math:`E` 的 Vitali 覆盖。
+    对 :math:`\mathscr{M}'` 证明题设结论，则该结论对 :math:`\mathscr{M}` 也成立。
+
+    从 :math:`\mathscr{M}` 中任选一个区间 :math:`d_1`, 由数学归纳法依照如下步骤选取区间 :math:`d_2, d_3, \cdots, d_n`:
+    假设已经选取了 :math:`d_1, d_2, \cdots, d_k`, 若 :math:`\displaystyle E \subset \bigcup_{i = 1}^k d_i`, 则停止选取; 否则令
+
+    .. math::
+        :label: ex-4-38-1
+
+        \mathscr{S}_k = \{ d \in \mathscr{M} ~:~ d \cap \bigcup_{i = 1}^k d_i = \emptyset \},
+
+    那么 :math:`\mathscr{S}_k` 非空，这是由于任取 :math:`x \in E \setminus \bigcup_{i = 1}^k d_i \neq \emptyset`,
+    因为 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖，所以存在足够小的闭区间 :math:`d \in \mathscr{M}`,
+    使得 :math:`x \in d`, 且 :math:`\displaystyle d \cap \bigcup_{i = 1}^k d_i = \emptyset`. 令
+
+    .. math::
+        :label: ex-4-38-2
+
+        \delta_k = \sup \{ m (d) ~:~ d \in \mathscr{S}_k \},
+
+    那么 :math:`0 < \delta_k \leqslant m (G) < \infty`. 由上确界的定义，可以从 :math:`\mathscr{S}_k` 中选取一个闭区间 :math:`d_{k + 1}`, 使得
+
+    .. math::
+        :label: ex-4-38-3
+
+        m (d_{k + 1}) > \dfrac{\delta_k}{2}, \quad d_{k + 1} \cap \bigcup_{i = 1}^k d_i = \emptyset.
+
+    由此可得到互不相交的区间序列 :math:`\{ d_k \}`. 由于每一个 :math:`d_k` 都包含于 :math:`G` 中，由测度的可列可加性以及单调性，有
+
+    .. math::
+        :label: ex-4-38-4
+
+        \sum_{k = 1}^\infty m (d_k) = m \left( \bigcup_{k = 1}^\infty d_k \right) \leqslant m (G) < \infty.
+
+    于是由级数的 Cauchy 收敛准则知 :math:`\forall \varepsilon > 0`, 存在正整数 :math:`n`, 使得
+
+    .. math::
+        :label: ex-4-38-5
+
+        \sum_{k = n + 1}^\infty m (d_k) < \dfrac{\varepsilon}{5}.
+
+    令 :math:`\displaystyle B = E \setminus \bigcup_{k = 1}^n d_k`, 下证 :math:`m B < \varepsilon`. 任取 :math:`x \in B`,
+    由于 :math:`\displaystyle \bigcup_{k = 1}^n d_k \not\ni x` 为闭集，所以存在 :math:`\delta > 0`,
+    使得 :math:`\displaystyle (x - \delta, x + \delta) \cap \bigcup_{k = 1}^n d_k = \emptyset`.
+    又由于 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖，所以存在闭区间 :math:`d(x) \in \mathscr{M}`,
+    使得 :math:`x \in d(x) \subset (x - \delta, x + \delta)`. 那么有 :math:`\displaystyle d(x) \cap \bigcup_{k = 1}^n d_k = \emptyset`,
+    即 :math:`d(x) \in \mathscr{S}_n`, 从而有
+
+    .. math::
+        :label: ex-4-38-6
+
+        m (d(x)) \leqslant \delta_n < 2 m (d_{n + 1}).
+
+    可以断言必然存在 :math:`n_0 (x) > n`, 使得 :math:`d(x) \not \in \mathscr{S}_{n_0 (x)}`, 否则对任意 :math:`k > n`,
+    都有 :math:`\mathbb{N} \ni d(x) \in \mathscr{S}_k`, 即有
+
+    .. math::
+        :label: ex-4-38-7
+
+        m (d_{k + 1}) > \dfrac{\delta_k}{2} = \dfrac{1}{2} \sup \{ m (d) ~:~ d \in \mathscr{S}_k \} \geqslant \dfrac{1}{2} m (d(x)),
+
+    这与级数 :eq:`ex-4-38-4` 的收敛性矛盾。那么由于 :math:`d(x) \not \in \mathscr{S}_{n_0 (x)}`, 所以存在 :math:`n_1(x) \in \mathbb{N}`,
+    使得 :math:`n < n_1(x) \leqslant n_0 (x)`, 且有 :math:`d(x) \cap d_{n_1(x)} \neq \emptyset`, 以及
+
+    .. math::
+        :label: ex-4-38-8
+
+        d(x) \cap d_{k} = \emptyset, k = 1, 2, \cdots, n_1(x) - 1.
+
+    由上式 :eq:`ex-4-38-7`, 以及 :math:`\mathscr{S}_k` 的定义式 :eq:`ex-4-38-1`, :math:`\delta_k` 的定义式 :eq:`ex-4-38-2`,
+    :math:`d_{k + 1}` 的取法 :eq:`ex-4-38-3`, 有
+
+    .. math::
+        :label: ex-4-38-9
+
+        m (d(x)) \leqslant \delta_{n_1(x) - 1} < 2 m (d_{n_1(x)}).
+
+    由于 :math:`d(x) \cap d_{n_1(x)} \neq \emptyset`, 所以将闭区间 :math:`d_{n_1(x)}` 分别往左右两边延伸 :math:`2 m (d_{n_1(x)})`,
+    便得到一个闭区间 :math:`d_{n_1(x)}'`, 使得 :math:`x \in d(x) \subset d_{n_1(x)}'`, 且有区间长度关系
+
+    .. math::
+        :label: ex-4-38-10
+
+        m (d_{n_1(x)}') = 5 m (d_{n_1(x)}).
+
+    结合式 :eq:`ex-4-38-5`, 有
+
+    .. math::
+        :label: ex-4-38-11
+
+        m B \leqslant m \left( \bigcup_{x \in B} d_{n_1(x)}' \right) \leqslant m \left( \bigcup_{k = n + 1}^\infty d_k' \right) \leqslant \sum_{k = n + 1}^\infty m (d_k') = 5 \sum_{k = n + 1}^\infty m (d_k) < \varepsilon.
+
+    上式 :eq:`ex-4-38-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-10` 的方法将闭区间 :math:`d_k` 分别往左右两边延伸 :math:`2 m (d_k)`,
+    得到的长度为 :math:`5 m (d_k)` 的闭区间；第一个不等式成立是由集合的包含关系 :math:`\displaystyle B \subset \bigcup_{x \in B} d_{n_1(x)}'`;
+    第二个不等式成立是因为集合 :math:`\{ n_1(x) ~:~ x \in B \}` 显然是集合 :math:`\{ k \in \mathbb{N} ~:~ k = n + 1, n + 2, \cdots \}` 的子集。
