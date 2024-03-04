@@ -1,13 +1,79 @@
+"""
+由平时成绩（作业成绩、期中成绩等）和期末卷面成绩计算最终成绩，并输出最终成绩单。
+
+Requirements:
+    - pandas
+    - numpy
+
+Usage:
+
+    ```bash
+    python compute_final_marks.py <data_folder> [平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]
+    ```
+
+    - `data_folder`: 数据文件夹路径
+    - `平时成绩占比`: 平时成绩占最终成绩的比例，默认为0.3
+    - `取最高的几次作业成绩`: 取最高的几次作业成绩，默认为None，即取所有作业成绩的平均值
+
+"""
+
 import inspect
 import sys
 import warnings
 from functools import partial, reduce
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
-import torch
+
+
+def np_topk(arr: np.ndarray, k: int, dim: int = -1, largest: bool = True, sorted: bool = True) -> Tuple[np.ndarray, np.ndarray]:
+    """Find the k largest elements of an array along a specified axis.
+
+    Parameters
+    ----------
+    arr : array_like
+        Input array.
+    k : int
+        Number of elements to retrieve.
+    dim : int, default -1
+        Axis along which to operate. Default is -1 (the last axis).
+    largest : bool, default True
+        If True, find the largest elements, else find the smallest elements.
+    sorted : bool, default True
+        If True, the result is sorted. If False, the result is not sorted.
+
+    Returns
+    -------
+    values : ndarray
+        The k largest values along each axis.
+    indices : ndarray
+        The indices of the k largest values along each axis.
+
+    .. note::
+
+        This function has the same functionality as :func:`torch.topk`,
+        but is implemented using only numpy.
+
+    """
+    arr = np.asarray(arr).copy()  # copy to avoid modifying the input array
+    assert 0 < k <= arr.size, "k out of bounds"
+    assert -arr.ndim <= dim < arr.ndim, "dim out of bounds"
+    dim = dim % arr.ndim  # convert negative dim to positive
+
+    if largest:
+        arr = -arr
+    if sorted:
+        indices = np.take(np.argsort(arr, axis=dim), np.arange(k), axis=dim)
+    else:
+        indices = np.take(np.argpartition(arr, kth=k, axis=dim), np.arange(k), axis=dim)
+    values = np.take_along_axis(arr, indices, axis=dim)
+
+    if largest:
+        values = -values
+
+    return values, indices
 
 
 def 计算平时成绩(row: pd.Series, 取最高的几次作业成绩: Optional[int] = None) -> float:
@@ -19,7 +85,8 @@ def 计算平时成绩(row: pd.Series, 取最高的几次作业成绩: Optional[
     if 取最高的几次作业成绩 > len(平时作业_cols):
         warnings.warn("取最高的几次作业成绩大于总作业次数，将取所有作业成绩的平均值。")
         取最高的几次作业成绩 = len(平时作业_cols)
-    作业成绩 = round(torch.topk(torch.Tensor(row[平时作业_cols]), k=取最高的几次作业成绩).values.numpy().mean() * 10)
+    # 作业成绩 = round(torch.topk(torch.Tensor(row[平时作业_cols]), k=取最高的几次作业成绩).values.numpy().mean() * 10)
+    作业成绩 = round(np_topk(row[平时作业_cols].to_numpy(), k=取最高的几次作业成绩)[0].mean() * 10)
     return 作业成绩
 
 
@@ -38,7 +105,7 @@ def 是否可能需要调整(row: pd.Series, 边缘分数: List[int] = [89, 84, 
 if __name__ == "__main__":
     assert len(sys.argv) >= 2, "请提供数据文件夹路径"
     if sys.argv[1] in ["-h", "--help"]:
-        print("Usage: python compute_final_marks.py <data_folder> " "[平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]")
+        print("Usage: python compute_final_marks.py <data_folder> [平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]")
         exit(0)
     data_folder = Path(sys.argv[1]).expanduser().resolve()
     if len(sys.argv) >= 3:
