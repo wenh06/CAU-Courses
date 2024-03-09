@@ -47,6 +47,7 @@ extensions = [
     # "sphinxcontrib.pseudocode",
     # "sphinxcontrib.bibtex",
     "sphinxcontrib.proof",
+    "sphinxcontrib.xlsxtable",
 ]
 
 # bibtex_bibfiles = ["references.bib"]

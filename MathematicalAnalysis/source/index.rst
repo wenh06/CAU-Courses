@@ -25,3 +25,9 @@
 .. toctree::
    :maxdepth: 2
    :caption: 补充材料:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 习题课:
+
+   recitation
