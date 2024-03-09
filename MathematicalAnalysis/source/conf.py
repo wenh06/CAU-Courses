@@ -47,6 +47,8 @@ extensions = [
     # "sphinxcontrib.pseudocode",
     # "sphinxcontrib.bibtex",
     "sphinxcontrib.proof",
+    # TODO: freeze the top row of the table
+    # https://stackoverflow.com/a/58563703
     "sphinxcontrib.xlsxtable",
 ]
 

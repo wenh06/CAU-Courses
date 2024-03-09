@@ -12,3 +12,19 @@ span.caption-text {
 .eqno {
   float: right;
 }
+
+table {
+  text-align: left;
+  position: relative;
+}
+
+th {
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+#managerTable {
+  max-height: 500px;
+  overflow: auto;
+}
