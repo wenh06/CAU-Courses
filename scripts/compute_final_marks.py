@@ -164,7 +164,9 @@ def 是否可能需要调整(row: pd.Series, 边缘分数: List[int] = [89, 84, 
 if __name__ == "__main__":
     assert len(sys.argv) >= 2, "请提供数据文件夹路径"
     if sys.argv[1] in ["-h", "--help"]:
-        print("Usage: python compute_final_marks.py <data_folder> [平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]")
+        print(
+            "Usage: python compute_final_marks.py <data_folder> [平时成绩占比 (default: 0.3)] [取最高的几次作业成绩 (optional)]"
+        )
         exit(0)
     data_folder = Path(sys.argv[1]).expanduser().resolve()
     if len(sys.argv) >= 3:
@@ -181,13 +183,19 @@ if __name__ == "__main__":
         人员名单 = pd.read_csv(data_folder.glob("*人员名单*.csv").__next__())
         prefix = data_folder.glob("*期末卷面*.csv").__next__().name.split("期末卷面")[0]
     except StopIteration:
-        raise FileNotFoundError("请检查数据文件夹路径是否正确。" "数据文件夹应包含期末卷面成绩、平时作业成绩、人员名单三个CSV文件。")
+        raise FileNotFoundError(
+            "请检查数据文件夹路径是否正确。" "数据文件夹应包含期末卷面成绩、平时作业成绩、人员名单三个CSV文件。"
+        )
     for df in [期末卷面成绩, 平时作业成绩]:
         if "班级" in df.columns:
             df.drop(columns=["班级"], inplace=True)
-    算分表格 = reduce(lambda left, right: pd.merge(left, right, on=["学号", "姓名"], how="outer"), [人员名单, 期末卷面成绩, 平时作业成绩])
+    算分表格 = reduce(
+        lambda left, right: pd.merge(left, right, on=["学号", "姓名"], how="outer"), [人员名单, 期末卷面成绩, 平时作业成绩]
+    )
     算分表格["平时成绩"] = 算分表格.apply(partial(计算平时成绩, 取最高的几次作业成绩=取最高的几次作业成绩), axis=1)
-    算分表格["最终成绩"] = 算分表格.apply(partial(计算总分, 平时成绩占比=平时成绩占比, 取最高的几次作业成绩=取最高的几次作业成绩), axis=1)
+    算分表格["最终成绩"] = 算分表格.apply(
+        partial(计算总分, 平时成绩占比=平时成绩占比, 取最高的几次作业成绩=取最高的几次作业成绩), axis=1
+    )
     可能需要调整名单 = 算分表格[算分表格.apply(是否可能需要调整, axis=1)]
     不及格名单 = 算分表格[算分表格["最终成绩"] < 60]
     优秀名单 = 算分表格[算分表格["最终成绩"] >= 90]
