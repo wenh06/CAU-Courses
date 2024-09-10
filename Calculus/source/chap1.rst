@@ -23,6 +23,16 @@
 
         也可以直接求导数 :math:`y' = \dfrac{1}{(1-x)^2}`，由于 :math:`(1-x)^2 > 0`，所以 :math:`y' > 0`，从而知 :math:`y` 单调递增。
 
+(2). :math:`y = e^{\frac{1}{x}}, \quad (0, +\infty)`
+
+.. proof:solution::
+
+    由于 :math:`y = e^u` 单调递增，而 :math:`u = \dfrac{1}{x}` 在 :math:`x \in (0, +\infty)` 上单调递减，所以 :math:`y = e^{\frac{1}{x}}` 单调递减。
+
+    .. note::
+
+        也可以直接求导数 :math:`y' = -\dfrac{1}{x^2} e^{\frac{1}{x}}`，由于 :math:`x > 0`，所以 :math:`y' < 0`，从而知 :math:`y` 单调递减。
+
 2. 确定函数奇偶性
 
 (1). :math:`f(x) = \ln (x + \sqrt{1 + x^2})`
@@ -39,6 +49,18 @@
         \end{align*}
 
     所以 :math:`f(x)` 是奇函数。
+
+(2). :math:`f(x) = \dfrac{a^x + a^{-x}}{2}, \quad a > 0`
+
+.. proof:solution::
+
+    :math:`f(x)` 的定义域为 :math:`(-\infty, +\infty)`, 关于原点对称。由于
+
+    .. math::
+
+        f(-x) = \dfrac{a^{-x} + a^x}{2} = \dfrac{a^x + a^{-x}}{2} = f(x),
+
+    所以 :math:`f(x)` 是偶函数。
 
 3. 下列哪些函数是周期函数，周期是多少？
 

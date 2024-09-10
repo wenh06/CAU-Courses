@@ -30,14 +30,8 @@
    :maxdepth: 2
    :caption: 随堂测验:
 
-   exams/chap1
-   exams/chap2
-   exams/chap3
+   exams/index
 
 .. toctree::
    :maxdepth: 2
    :caption: 随堂测验答案解析:
-
-   exams/chap1-sol
-   exams/chap2-sol
-   exams/chap3-sol
