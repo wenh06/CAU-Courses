@@ -1,6 +1,38 @@
 §2 映射·集的对等·可列集
 ------------------------------
 
+.. _ex-1-7:
+
+7. 试作下列各题中集之间的一一对应：
+
+(1). :math:`[0, 1)` 与 :math:`(0, 1)`;
+
+(2). :math:`[a, b]` 与 :math:`(-\infty, +\infty)`;
+
+(3). 开区间 :math:`(0, 1)` 与 无理数集;
+
+(4). 开上半平面与开单位圆;
+
+(5). :math:`\mathbb{N}^2` 与 :math:`\mathbb{N}`.
+
+.. proof:solution::
+
+    (1). 由于 :math:`(0, 1)` 中有理数是可列的，记为 :math:`\{ r_1, r_2, \dots, r_n, \dots \}`, 记 :math:`r_0 = 0`, 那么可以通过如下的映射给出一一对应：
+
+    .. math::
+
+        f: [0, 1) \to (0, 1), \quad x \mapsto \begin{cases}
+        r_{n}, & x = r_{n-1}, n \in \mathbb{N}, \\
+        x, & x \in (0, 1) \setminus \mathbb{Q}.
+        \end{cases}
+
+    (2). :math:`[a, b]` 与 :math:`[0, 1]` 可以通过映射 :math:`f: x \mapsto \dfrac{x - a}{b - a}` 得到一一对应。
+        另一方面，:math:`(-\infty, +\infty)` 与 :math:`(0, 1)` 可以通过映射 :math:`g: x \mapsto \dfrac{1 + \tanh x}{2}` 得到一一对应。
+        再利用类似 (1) 中的方法，可以构造 :math:`[0, 1]` 与 :math:`(0, 1)` 的一一对应 :math:`\varphi`, 
+        那么复合映射 :math:`g^{-1} \circ \varphi \circ f` 就给出了 :math:`[a, b]` 与 :math:`(-\infty, +\infty)` 的一一对应。
+
+    未完待续。。。。
+
 .. _ex-1-8:
 
 8. 设 :math:`A = \{0, 1\}`, 试证一切排列
@@ -108,6 +140,43 @@
 
     其中 :math:`\mathbb{Z}^{\ast} = \mathbb{Z} \setminus \{ 0 \}` (最高次项系数不为 :math:`0`). 由于 :math:`\mathbb{Z}^{n} \times \mathbb{Z}^{\ast}` 是可列集，
     所以 :math:`\mathbb{Z}_n[X]` 是可列集，从而 :math:`\mathbb{Z}[X]` 是可列集。
+
+.. _ex-1-11:
+
+11. 设用 :math:`C[0, 1]` 表示 :math:`[0, 1]` 上的一切连续函数所成的集，试证它的势为 :math:`\aleph`.
+
+.. proof:proof::
+
+    :math:`[0, 1]` 上常值函数全体与 :math:`\mathbb{R}` 对等，而且是 :math:`C[0, 1]` 的真子集。
+    另一方面，:math:`[0, 1]` 上的任一连续函数 :math:`f` 完全由它在所有有理点上的取值决定，于是 :math:`C[0, 1]` 与 :math:`\mathbb{R}^{\mathbb{N}}` 的真子集对等。
+    这里是真子集是因为需要排除不能对应于连续函数的实数列，例如设 :math:`a_1, a_2, \dots` 是 :math:`[0, 1]` 上的一个收敛到 :math:`\frac{\sqrt{2}}{2}` 的有理数数序列，
+    相应的值 :math:`f(a_n) = (-1)^n` 不能对应于任何连续函数。于是 :math:`C[0, 1]` 与 :math:`\mathbb{R}^{\mathbb{N}}` 的真子集对等。
+    由 Cantor-Bernstein 定理，有 :math:`C[0, 1]` 与 :math:`\mathbb{R}` 对等，从而它的势为 :math:`\aleph`.
+
+    这里，我们还需要说明 :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等，或者等价地， :math:`(0, 1)^{\mathbb{N}}` 与 :math:`(0, 1)` 对等：
+
+    .. math::
+
+        (0.a_{11}a_{12}a_{13} \cdots, 0.a_{21}a_{22}a_{23} \cdots, \dots) \mapsto 0.a_{11}a_{12}a_{21}a_{13}a_{22}a_{31} \cdots.
+
+.. _ex-1-12:
+
+12. 设用 :math:`M` 表示 :math:`(-\infty, +\infty)` 上一切单调函数所成的集，试讨论它的势。
+
+.. proof:solution::
+    
+    任一单调函数 :math:`f` 至多有可数个间断点，而且每个间断点都是第一类间断点，所以单调函数 :math:`f` 可以表示为 :math:`f = f_1 + f_2`, 其中 :math:`f_1` 是连续函数，
+    :math:`f_2` 是有至多可数个第一类间断点的阶跃函数。:math:`f_2` 完全由间断点的值以及相应的阶跃的量决定，所以可视为
+    :math:`\mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}}` 的一个元素，故其全体具有势 :math:`\aleph`.
+    再结合 :ref:`ex-1-11` 的结论，有 :math:`M` 的势为 :math:`\aleph`.
+
+.. _ex-1-13:
+
+13. 设 :math:`A` 是势大于 :math:`1` 的集，:math:`A` 上的一一映射称为 :math:`A` 的置换. 试证存在 :math:`A` 的一个置换 :math:`f` 使对一切 :math:`x \in A`, :math:`f(x) \neq x`.
+
+.. proof:solution::
+    
+    待写
 
 .. _ex-1-15:
 
