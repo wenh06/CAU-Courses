@@ -26,12 +26,52 @@
         x, & x \in (0, 1) \setminus \mathbb{Q}.
         \end{cases}
 
-    (2). :math:`[a, b]` 与 :math:`[0, 1]` 可以通过映射 :math:`f: x \mapsto \dfrac{x - a}{b - a}` 得到一一对应。
-        另一方面，:math:`(-\infty, +\infty)` 与 :math:`(0, 1)` 可以通过映射 :math:`g: x \mapsto \dfrac{1 + \tanh x}{2}` 得到一一对应。
-        再利用类似 (1) 中的方法，可以构造 :math:`[0, 1]` 与 :math:`(0, 1)` 的一一对应 :math:`\varphi`, 
-        那么复合映射 :math:`g^{-1} \circ \varphi \circ f` 就给出了 :math:`[a, b]` 与 :math:`(-\infty, +\infty)` 的一一对应。
+    (2). 闭区间 :math:`[a, b]` 与 :math:`[0, 1]` 可以通过映射 :math:`f: x \mapsto \dfrac{x - a}{b - a}` 得到一一对应。
+    另一方面，:math:`(-\infty, +\infty)` 与 :math:`(0, 1)` 可以通过映射 :math:`g: x \mapsto \dfrac{1 + \tanh x}{2}` 得到一一对应。
+    再利用类似 (1) 中的方法，可以构造 :math:`[0, 1]` 与 :math:`(0, 1)` 的一一对应 :math:`\varphi`, 
+    那么复合映射 :math:`g^{-1} \circ \varphi \circ f` 就给出了 :math:`[a, b]` 与 :math:`(-\infty, +\infty)` 的一一对应。
 
-    未完待续。。。。
+    (3). 由于 :math:`g(x) = \dfrac{1 + \tanh x}{2}` 给出了 :math:`\mathbb{R}` 到 :math:`(0, 1)` 的一一对应，
+    所以我们只要给出 :math:`\mathbb{R}` 与无理数集 :math:`\mathbb{R} \setminus \mathbb{Q}` 的一一对应即可。
+    记集 :math:`A = \mathbb{Q} + \sqrt{2} = \{ r + \sqrt{2} : \ r \in \mathbb{Q} \} = \{ a_1, a_2, \dots, a_n, \dots \}`,
+    那么集 :math:`A` 是可列集且 :math:`A \cap \mathbb{Q} = \emptyset`. 记 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`,
+    那么可以通过如下的映射给出一一对应：
+
+    .. math::
+
+        f: \mathbb{R} \rightarrow \mathbb{R} \setminus \mathbb{Q}, \quad x \mapsto \begin{cases}
+        x, & x \in \mathbb{R} \setminus (\mathbb{Q} \cup A), \\
+        a_{2n-1}, & x = r_n, n \in \mathbb{N}, \\
+        a_{2n}, & x = a_n, n \in \mathbb{N}.
+        \end{cases}
+
+    (4). 记 :math:`\mathbb{H} = \{ (x, y) \in \mathbb{R}^2 : \ y > 0 \}` 为开上半平面，
+    :math:`\mathbb{D} = \{ (x, y) \in \mathbb{R}^2 : \ x^2 + y^2 < 1 \}` 为开单位圆。
+    我们将 :math:`\mathbb{D}` 分为三个部分
+
+        :math:`\mathbb{D}_1 = \{ (x, y) \in \mathbb{D} : \ y < 0 \}`,
+    
+        :math:`\mathbb{D}_2 = \{ (x, y) \in \mathbb{D} : \ y > 0 \}`,
+
+        :math:`\mathbb{D}_3 = \{ (x, y) \in \mathbb{D} : \ y = 0 \}`.
+
+    类似地，我们将 :math:`\mathbb{H}` 分为三个部分
+
+        :math:`\mathbb{H}_1 = \mathbb{D}_2 = \{ (x, y) \in \mathbb{H} : \ x^2 + y^2 < 1 \}`,
+
+        :math:`\mathbb{H}_2 = \{ (x, y) \in \mathbb{H} : \ x^2 + y^2 > 1 \}`,
+
+        :math:`\mathbb{H}_3 = \{ (x, y) \in \mathbb{H} : \ x^2 + y^2 = 1 \}`.
+
+    我们给出对应部分之间的一一映射：
+
+        :math:`\mathbb{D}_1 \to \mathbb{H}_1: \quad (x, y) \mapsto (x, -y)`,
+
+        :math:`\mathbb{D}_2 \to \mathbb{H}_2: \quad (r, \theta) \mapsto (1/r, \theta)` (注意，这里是极坐标),
+
+        :math:`\mathbb{D}_3 \to \mathbb{H}_3: \quad (x, 0) \mapsto (x, \sqrt{1 - x^2})`.
+
+    (5). :math:`\mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`.
 
 .. _ex-1-8:
 
@@ -168,7 +208,7 @@
     任一单调函数 :math:`f` 至多有可数个间断点，而且每个间断点都是第一类间断点，所以单调函数 :math:`f` 可以表示为 :math:`f = f_1 + f_2`, 其中 :math:`f_1` 是连续函数，
     :math:`f_2` 是有至多可数个第一类间断点的阶跃函数。:math:`f_2` 完全由间断点的值以及相应的阶跃的量决定，所以可视为
     :math:`\mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}}` 的一个元素，故其全体具有势 :math:`\aleph`.
-    再结合 :ref:`ex-1-11` 的结论，有 :math:`M` 的势为 :math:`\aleph`.
+    再结合 :ref:`上题 <ex-1-11>` 的结论，有 :math:`M` 的势为 :math:`\aleph`.
 
 .. _ex-1-13:
 
