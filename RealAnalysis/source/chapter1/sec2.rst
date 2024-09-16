@@ -214,9 +214,48 @@
 
 13. 设 :math:`A` 是势大于 :math:`1` 的集，:math:`A` 上的一一映射称为 :math:`A` 的置换. 试证存在 :math:`A` 的一个置换 :math:`f` 使对一切 :math:`x \in A`, :math:`f(x) \neq x`.
 
+..
+    https://math.stackexchange.com/a/1383804/692822
+    https://math.stackexchange.com/q/56466/692822
+    https://math.stackexchange.com/q/134152/692822
+
 .. proof:solution::
     
-    待写
+    若 :math:`A` 是有限集, 记为 :math:`A = \{ a_0, a_2, \dots, a_{n-1} \}`, :math:`n > 1`,
+    那么 :math:`a_{k} \mapsto a_{k + 1} \mod n` 就是一个满足条件的置换。以下我们考虑 :math:`A` 是无限集的情况。
+
+    由于 :math:`A` 为无限集，那么 :math`A` 与 :math:`A \times \mathbb{F}_2` 对等，其中 :math:`\mathbb{F}_2 = \{ \bar{0}, \bar{1} \}`
+    (此结论非平凡), 即有双射 :math:`\varphi: A \to A \times \mathbb{F}_2`. 容易看出
+
+    .. math::
+
+        g: A \times \mathbb{F}_2 \rightarrow A \times \mathbb{F}_2, \quad (x, y) \mapsto (x, y + 1 \mod 2)
+
+    是一个没有不动点的置换，从而复合映射 :math:`f = \varphi^{-1} \circ g \circ \varphi` 就是集 :math:`A` 的一个没有不动点的置换。
+
+    .. note::
+
+        利用选择公理 (或者 Zorn 引理) 的证明方法：考虑集 :math:`A` 的所有满足如下条件的子集族
+
+        .. math::
+
+            \{ S_i \}_{i \in I}: \quad S_i \subset A, \quad \lvert S_i \rvert = 2, \quad \forall i \in I; \quad S_i \cap S_j = \emptyset, \quad i \neq j.
+
+        由包含关系定义偏序关系，那么任一全序子集都是上界，从而根据 Zorn 引理，存在极大元素 :math:`\mathcal{S} = \{ S_i \}_{i \in I}`.
+        那么 :math:`\bigcup_{i \in I} S_i` 要么等于 :math:`A`，要么等于 :math:`A \setminus \{ x \}`，其中 :math:`x` 是 :math:`A` 中的一个元素。
+        由于 :math:`A` 与 :math:`A \setminus \{ x \}` 对等，所以只要对 :math:`\bigcup_{i \in I} S_i = A` 的情况证明即可。
+        记 :math:`S_i = \{ a_{i0}, a_{i1} \}`, 那么可以通过如下的映射给出一个没有不动点的置换：
+
+        .. math::
+
+            f: A \to A, \quad a_{ij} \mapsto a_{i (j+1 \mod 2)}.
+
+        其实，以上我们 (利用选择公理) 也证明了 :math:`A` 与 :math:`A \times \mathbb{F}_2` 对等。
+        但是要注意的是，
+        
+            每一个无限集 :math:`A` 都与 :math:`A \times \mathbb{F}_2` 对等
+            
+        要严格弱于选择公理，即不能从这个结论推出选择公理。
 
 .. _ex-1-15:
 
