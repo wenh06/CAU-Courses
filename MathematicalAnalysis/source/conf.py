@@ -125,6 +125,7 @@ elif _theme_name == "pydata_sphinx_theme":
     html_theme_path = [pydata_sphinx_theme.get_html_theme_path()]
     html_theme_options = {
         "collapse_navigation": False,
+        "navigation_with_keys": True,  # https://github.com/pydata/pydata-sphinx-theme/issues/1492
         "display_version": True,
     }
 else:  # builtin themes: alabaster, etc.

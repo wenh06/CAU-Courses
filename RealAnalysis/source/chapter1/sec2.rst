@@ -71,7 +71,18 @@
 
         :math:`\mathbb{D}_3 \to \mathbb{H}_3: \quad (x, 0) \mapsto (x, \sqrt{1 - x^2})`.
 
-    (5). :math:`\mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`.
+    另解：将 :math:`\mathbb{R}^2` 与 :math:`\mathbb{C}` 对等，那么 :math:`\mathbb{D} = \{ z \in \mathbb{C} : \ \lvert z \rvert < 1 \}` 到
+    :math:`\mathbb{H} = \{ z \in \mathbb{C} : \ \mathfrak{Im} (z) > 0 \}` 的一一对应可以通过 Möbius 变换给出：
+
+    .. math::
+
+        f: \mathbb{D} \rightarrow \mathbb{H}, ~ z \mapsto i \dfrac{1 + z}{1 - z}.
+
+    (5). :math:`f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`, 或者 
+
+        .. math::
+
+            f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto \dfrac{(m + n - 2)(m + n - 1)}{2} + m.
 
 .. _ex-1-8:
 
@@ -155,6 +166,8 @@
         .. math::
 
             s: \mathbb{N} \times \mathbb{N} \to \mathbb{N}, \quad (n_1, n_2) \mapsto \dfrac{(n_1 + n_2 - 2)(n_1 + n_2 - 1)}{2} + n_1.
+
+        见 :ref:`习题1.7 <ex-1-7>`.
 
     (2). 这题是课本 §2 的例1，做法如下：
 
