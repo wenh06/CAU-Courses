@@ -28,7 +28,7 @@
 
     (2). 闭区间 :math:`[a, b]` 与 :math:`[0, 1]` 可以通过映射 :math:`f: x \mapsto \dfrac{x - a}{b - a}` 得到一一对应。
     另一方面，:math:`(-\infty, +\infty)` 与 :math:`(0, 1)` 可以通过映射 :math:`g: x \mapsto \dfrac{1 + \tanh x}{2}` 得到一一对应。
-    再利用类似 (1) 中的方法，可以构造 :math:`[0, 1]` 与 :math:`(0, 1)` 的一一对应 :math:`\varphi`, 
+    再利用类似 (1) 中的方法，可以构造 :math:`[0, 1]` 与 :math:`(0, 1)` 的一一对应 :math:`\varphi`,
     那么复合映射 :math:`g^{-1} \circ \varphi \circ f` 就给出了 :math:`[a, b]` 与 :math:`(-\infty, +\infty)` 的一一对应。
 
     (3). 由于 :math:`g(x) = \dfrac{1 + \tanh x}{2}` 给出了 :math:`\mathbb{R}` 到 :math:`(0, 1)` 的一一对应，
@@ -50,7 +50,7 @@
     我们将 :math:`\mathbb{D}` 分为三个部分
 
         :math:`\mathbb{D}_1 = \{ (x, y) \in \mathbb{D} : \ y < 0 \}`,
-    
+
         :math:`\mathbb{D}_2 = \{ (x, y) \in \mathbb{D} : \ y > 0 \}`,
 
         :math:`\mathbb{D}_3 = \{ (x, y) \in \mathbb{D} : \ y = 0 \}`.
@@ -78,7 +78,7 @@
 
         f: \mathbb{D} \rightarrow \mathbb{H}, ~ z \mapsto i \dfrac{1 + z}{1 - z}.
 
-    (5). :math:`f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`, 或者 
+    (5). :math:`f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`, 或者
 
         .. math::
 
@@ -217,7 +217,7 @@
 12. 设用 :math:`M` 表示 :math:`(-\infty, +\infty)` 上一切单调函数所成的集，试讨论它的势。
 
 .. proof:solution::
-    
+
     任一单调函数 :math:`f` 至多有可数个间断点，而且每个间断点都是第一类间断点，所以单调函数 :math:`f` 可以表示为 :math:`f = f_1 + f_2`, 其中 :math:`f_1` 是连续函数，
     :math:`f_2` 是有至多可数个第一类间断点的阶跃函数。:math:`f_2` 完全由间断点的值以及相应的阶跃的量决定，所以可视为
     :math:`\mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}}` 的一个元素，故其全体具有势 :math:`\aleph`.
@@ -233,7 +233,7 @@
     https://math.stackexchange.com/q/134152/692822
 
 .. proof:solution::
-    
+
     若 :math:`A` 是有限集, 记为 :math:`A = \{ a_0, a_2, \dots, a_{n-1} \}`, :math:`n > 1`,
     那么 :math:`a_{k} \mapsto a_{k + 1} \mod n` 就是一个满足条件的置换。以下我们考虑 :math:`A` 是无限集的情况。
 
@@ -265,9 +265,9 @@
 
         其实，以上我们 (利用选择公理) 也证明了 :math:`A` 与 :math:`A \times \mathbb{F}_2` 对等。
         但是要注意的是，
-        
+
             每一个无限集 :math:`A` 都与 :math:`A \times \mathbb{F}_2` 对等
-            
+
         要严格弱于选择公理，即不能从这个结论推出选择公理。
 
 .. _ex-1-15:
