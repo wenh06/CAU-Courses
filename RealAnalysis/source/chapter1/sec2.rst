@@ -270,6 +270,28 @@
 
         要严格弱于选择公理，即不能从这个结论推出选择公理。
 
+.. _ex-1-14:
+
+14. 设 :math:`f: X \to Y` 是满射， :math:`A \subset X, B \subset Y`. 问下列四个关系中哪些是正确的，哪些不是：
+
+(1). :math:`f^{-1}(f(A)) = A`;
+
+(2). :math:`f^{-1}(f(A)) \supset A`;
+
+(3). :math:`f(f^{-1}(B)) \subset B`;
+
+(4). :math:`f(f^{-1}(B)) = B`.
+
+.. proof:solution::
+
+    由于对任意 :math:`x \in A \subset X`, :math:`x` 是 :math:`f(x) \in f(A) \subset Y` 的原像，所以有 :math:`A \subset f^{-1}(f(A))`, 即 (2) 正确。
+    一般来说，相等的关系不一定成立，例如考虑 :math:`f: \mathbb{R} \to \mathbb{R}_{\geqslant 0}, x \mapsto x^2`, :math:`A = \mathbb{R}_{\geqslant 0}`,
+    那么 :math:`f(A) = \mathbb{R}_{\geqslant 0}`, 但是 :math:`f^{-1}(f(A)) = \mathbb{R} \supsetneq A`, 所以 (1) 错误。
+
+    另一方面，对于一般的映射 :math:`f: X \to Y`, 任取 :math:`x \in f^{-1}(B)`, 那么有 :math:`f(x) \in B`, 从而有 :math:`f(f^{-1}(B)) \subset B`.
+    由于 :math:`f` 是满射，所以对任意 :math:`y \in B`, :math:`f^{-1}(y) \neq \emptyset`, 即存在 :math:`x \in f^{-1}(y) \subset f^{-1}(B)`,
+    使得 :math:`f(x) = y`, 从而有 :math:`B \subset f(f^{-1}(B))`, 于是有 :math:`f(f^{-1}(B)) = B`, 即 (3) 和 (4) 正确。
+
 .. _ex-1-15:
 
 15. 设给定映射 :math:`f: X \to Y`. 试证对 :math:`Y` 中的任意集族 :math:`\{ B_{\alpha} \}_{\alpha \in I}` 有

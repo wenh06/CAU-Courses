@@ -67,6 +67,28 @@
     又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \leqslant a_2`.
     同理可证 :math:`b_1 \geqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
 
+.. _ex-1-25:
+
+25. 试证 :math:`\mathbb{R}^n` 中每个闭集可表为可列个开集的交，每个开集可表为可列个闭集的并。
+
+.. proof:proof::
+
+    由 De Morgan 法则，我们只要证明前一个结论即可。
+
+    任取 :math:`\mathbb{R}^n` 中的闭集 :math:`F`, 对任意的 :math:`n \in \mathbb{N}`, 令
+
+    .. math::
+
+        G_n = \bigcup_{x \in F} U \left( x, \dfrac{1}{n} \right),
+        \quad U \left( x, \dfrac{1}{n} \right) := \left\{ y \in \mathbb{R}^n : \ \lvert x - y \rvert < \dfrac{1}{n} \right\}.
+
+    那么 :math:`G_n` 是开集，且 :math:`F \subset G_n`. 可以证明 :math:`F = \bigcap\limits_{n=1}^{\infty} G_n`. 证明如下：
+
+    只要证明 :math:`F \supset \bigcap\limits_{n=1}^{\infty} G_n` 即可。任取 :math:`x \in \bigcap\limits_{n=1}^{\infty} G_n`,
+    那么 :math:`x \in G_n, \forall n \in \mathbb{N}`, 从而存在 :math:`x_n \in F`, 使得 :math:`x \in U \left( x_n, \dfrac{1}{n} \right)`,
+    即有 :math:`\lvert x - x_n \rvert < \dfrac{1}{n}`. 于是 :math:`\{ x_n \}` 是 :math:`\mathbb{R}^n` 中的 Cauchy 列，且收敛到 :math:`x`.
+    由于 :math:`F` 是闭集，所以 :math:`x \in F`. 于是有 :math:`\bigcap\limits_{n=1}^{\infty} G_n \subset F`.
+
 .. _ex-1-26:
 
 26. 设 :math:`E` 为康托三分集的补集中构成区间的中点所成的集，求 :math:`E'`.
