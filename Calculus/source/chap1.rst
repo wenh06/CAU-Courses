@@ -149,6 +149,10 @@
     :math:`\lvert f(x) \rvert \leqslant \max \{ \lvert m \rvert, \lvert M \rvert \}`, 所以 :math:`f(x)` 在 :math:`X` 上有界
     :math:`\max \{ \lvert m \rvert, \lvert M \rvert \}`.
 
+    .. note::
+
+        这题要注意的就是函数“有界”，“有上界”和“有下界”的确切定义，以及他们之间的细微差别。
+
 §1.2 函数的极限
 --------------------------------
 
