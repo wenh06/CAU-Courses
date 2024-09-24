@@ -5,4 +5,5 @@
    :maxdepth: 2
    :caption: 往年试题及解答:
 
+   2024/index
    2023/index
