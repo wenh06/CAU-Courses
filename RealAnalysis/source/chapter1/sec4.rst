@@ -64,8 +64,8 @@
 
       a_2 = \inf \{ x : \ (x, x_0) \subset G_2 \}, \quad b_2 = \sup \{ x : \ (x_0, x) \subset G_2 \}.
 
-   又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \leqslant a_2`.
-   同理可证 :math:`b_1 \geqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
+   又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \geqslant a_2`.
+   同理可证 :math:`b_1 \leqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
 
 .. _ex-1-25:
 
