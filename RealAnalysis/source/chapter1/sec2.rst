@@ -159,7 +159,8 @@
 
       s: \mathcal{G}_1, \mathcal{G}_2, \dots, \mathcal{G}_k, \dots
 
-   其中， :math:`\mathcal{G}_k = \{ (n_1, n_2) \in \mathbb{N} \times \mathbb{N} : \ n_1 + n_2 = k \}`, 其内部按 :math:`n_1` 的大小进行排序。于是，我们就给出了一一对应
+   其中， :math:`\mathcal{G}_k = \{ (n_1, n_2) \in \mathbb{N} \times \mathbb{N} : \ n_1 + n_2 = k \}`, 其内部按 :math:`n_1` 的大小进行排序。
+   于是，我们就给出了一一对应
 
    .. math::
 
@@ -195,7 +196,8 @@
 
    .. math::
 
-      \mathbb{Z}[X] = \bigcup_{n=0}^{\infty} \mathbb{Z}_n[X], \quad \mathbb{Z}_n[X] = \{ f \in \mathbb{Z}[X]: \ \deg f = n \} \cong \mathbb{Z}^{n} \times \mathbb{Z}^{\ast},
+      \mathbb{Z}[X] = \bigcup_{n=0}^{\infty} \mathbb{Z}_n[X], \quad \mathbb{Z}_n[X]
+      = \{ f \in \mathbb{Z}[X]: \ \deg f = n \} \cong \mathbb{Z}^{n} \times \mathbb{Z}^{\ast},
 
    其中 :math:`\mathbb{Z}^{\ast} = \mathbb{Z} \setminus \{ 0 \}` (最高次项系数不为 :math:`0`). 由于 :math:`\mathbb{Z}^{n} \times \mathbb{Z}^{\ast}` 是可列集，
    所以 :math:`\mathbb{Z}_n[X]` 是可列集，从而 :math:`\mathbb{Z}[X]` 是可列集。
@@ -231,7 +233,8 @@
 
 .. _ex-1-13:
 
-13. 设 :math:`A` 是势大于 :math:`1` 的集，:math:`A` 上的一一映射称为 :math:`A` 的置换. 试证存在 :math:`A` 的一个置换 :math:`f` 使对一切 :math:`x \in A`, :math:`f(x) \neq x`.
+13. 设 :math:`A` 是势大于 :math:`1` 的集，:math:`A` 上的一一映射称为 :math:`A` 的置换.
+    试证存在 :math:`A` 的一个置换 :math:`f` 使对一切 :math:`x \in A`, :math:`f(x) \neq x`.
 
 ..
    https://math.stackexchange.com/a/1383804/692822
@@ -258,7 +261,8 @@
 
       .. math::
 
-         \{ S_i \}_{i \in I}: \quad S_i \subset A, \quad \lvert S_i \rvert = 2, \quad \forall i \in I; \quad S_i \cap S_j = \emptyset, \quad i \neq j.
+         \{ S_i \}_{i \in I}: \quad S_i \subset A, \quad \lvert S_i \rvert = 2,
+         \quad \forall i \in I; \quad S_i \cap S_j = \emptyset, \quad i \neq j.
 
       由包含关系定义偏序关系，那么任一全序子集都是上界，从而根据 Zorn 引理，存在极大元素 :math:`\mathcal{S} = \{ S_i \}_{i \in I}`.
       那么 :math:`\bigcup_{i \in I} S_i` 要么等于 :math:`A`，要么等于 :math:`A \setminus \{ x \}`，其中 :math:`x` 是 :math:`A` 中的一个元素。

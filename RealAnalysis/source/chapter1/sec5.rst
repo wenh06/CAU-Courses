@@ -4,15 +4,15 @@
 .. _ex-1-28:
 
 28. 对 `本章第13题 <ex-1-13>`_ 中的集 :math:`A` 与所指的置换 :math:`f`, 当 :math:`A` 的势为偶数或者无限时，
-试证映射 :math:`f` 可选其满足 :math:`f(f(x)) = x`, 对一切 :math:`x \in A`. 当 :math:`A` 的势为奇数时，情况如何？
+    试证映射 :math:`f` 可选其满足 :math:`f(f(x)) = x`, 对一切 :math:`x \in A`. 当 :math:`A` 的势为奇数时，情况如何？
 
 .. proof:solution::
 
-    待写。
+   待写。
 
-    .. note::
+   .. note::
 
-        这样的映射成为对合 (involution)。
+      这样的映射成为对合 (involution)。
 
 .. _ex-1-29:
 
@@ -20,4 +20,4 @@
 
 .. proof:solution::
 
-    记 :math:`S(A)` 为 :math:`A` 的所有置换所成的集。
+   记 :math:`S(A)` 为 :math:`A` 的所有置换所成的集。
