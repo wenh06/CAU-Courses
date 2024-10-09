@@ -23,16 +23,16 @@
 
 3. 令 :math:`y(t) = \left( \dfrac{1}{t + 1} \right)^{\frac{1}{t}}`.
 
-(1). 求 :math:`\lim\limits_{t \to 0} y(t)` 以及 :math:`\lim\limits_{t \to 0} y'(t)`.
+   (1). 求 :math:`\lim\limits_{t \to 0} y(t)` 以及 :math:`\lim\limits_{t \to 0} y'(t)`.
 
-(2). 求极限 :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)`.
+   (2). 求极限 :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)`.
 
-提示：利用带佩亚诺型余项的麦克劳林公式
+   提示：利用带佩亚诺型余项的麦克劳林公式
 
-.. math::
+   .. math::
 
-    & \dfrac{1}{1 - t} = 1 + t + t^2 + o(t^2), \\
-    & \ln (1 + t) = t - \dfrac{t^2}{2} + o(t^2).
+        & \dfrac{1}{1 - t} = 1 + t + t^2 + o(t^2), \\
+        & \ln (1 + t) = t - \dfrac{t^2}{2} + o(t^2).
 
 .. proof:solution::
 
@@ -72,7 +72,9 @@
 
     .. math::
 
-        \lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right) = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - \left( \dfrac{1}{1 + t} \right)^{\frac{1}{t}}}{t} = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - y(t)}{t}
+        \lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)
+        = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - \left( \dfrac{1}{1 + t} \right)^{\frac{1}{t}}}{t}
+        = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - y(t)}{t}
 
     化为了 :math:`\dfrac{0}{0}` 型的不定式。对上式利用洛必达法则可得
 
@@ -84,11 +86,11 @@
 
 4. 设 :math:`0 < a < b`, 证明存在 :math:`\xi \in (a, b)`, 使得
 
-.. math::
+   .. math::
 
-    a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
+        a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
-提示：两边同时除以 :math:`ab`, 构造辅助函数，并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
+   提示：两边同时除以 :math:`ab`, 构造辅助函数，并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
 
 .. proof:solution::
 
@@ -109,7 +111,8 @@
 
     .. math::
 
-        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\tau}\right) e^{\frac{1}{\tau}} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
+        \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\tau}\right) e^{\frac{1}{\tau}}
+        = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
 
     上式两边同时乘以 :math:`ab` 即可得到题目要证明的结论：
 
@@ -136,7 +139,8 @@
 
         .. math::
 
-            \dfrac{e^b - e^a}{b - a} = \left.\dfrac{e^\xi}{\xi^2} \left(\xi - 1\right)  \middle/ \left(- \dfrac{1}{\xi^2}\right) \right. = \left(1 - \xi\right) e^\xi.
+            \dfrac{e^b - e^a}{b - a} = \left.\dfrac{e^\xi}{\xi^2} \left(\xi - 1\right) \middle/ \left(- \dfrac{1}{\xi^2}\right) \right.
+            = \left(1 - \xi\right) e^\xi.
 
 5. 求函数 :math:`y = x^{1/x}, x > 0` 的极大值.
 

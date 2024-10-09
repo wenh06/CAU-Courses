@@ -28,7 +28,8 @@
 
     .. math::
 
-        0 \leqslant \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x & \leqslant \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
+        0 \leqslant \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x
+        & \leqslant \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
         & = \lim\limits_{n \to \infty} \dfrac{1}{n + 1} \\
         & = 0.
 
@@ -80,7 +81,7 @@
 
 5. 证明 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}` 与 :math:`a` 无关.
 
-提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
+   提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
 
 .. proof:proof::
 
@@ -94,7 +95,8 @@
 
     .. math::
 
-        \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} & = \int_0^1 \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
+        \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}
+        & = \int_0^1 \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
         & = \int_{+\infty}^1 \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
         & = -\int_1^{+\infty} \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
         & = \int_1^{+\infty} \dfrac{x^a \mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\

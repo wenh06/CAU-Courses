@@ -24,12 +24,14 @@
 
     .. math::
 
-        \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x} & = \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x} \cdot \dfrac{\sqrt{1 + x} + \sqrt{1 - x}}{\sqrt{1 + x} + \sqrt{1 - x}} \\
+        \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x}
+        & = \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x} \cdot \dfrac{\sqrt{1 + x} + \sqrt{1 - x}}{\sqrt{1 + x} + \sqrt{1 - x}} \\
         & = \lim\limits_{x \to 0} \dfrac{1 + x - (1 - x)}{x \left( \sqrt{1 + x} + \sqrt{1 - x} \right)} \\
         & = \lim\limits_{x \to 0} \dfrac{2x}{x \left( \sqrt{1 + x} + \sqrt{1 - x} \right)} \\
         & = \lim\limits_{x \to 0} \dfrac{2}{\sqrt{1 + x} + \sqrt{1 - x}} = 1
 
-3. 设数列 :math:`\{a_n\}_{n\in\mathbb{N}}` 满足： :math:`0 < a_1 < \pi, a_{n+1} = \sin a_n (n = 1, 2, \ldots)`, 求证数列极限 :math:`\lim\limits_{n \to \infty} a_n` 存在。
+3. 设数列 :math:`\{a_n\}_{n\in\mathbb{N}}` 满足： :math:`0 < a_1 < \pi, a_{n+1} = \sin a_n (n = 1, 2, \ldots)`,
+   求证数列极限 :math:`\lim\limits_{n \to \infty} a_n` 存在。
 
 .. proof:proof::
 
@@ -46,7 +48,7 @@
         即有 :math:`a = \sin a`, 于是必须有 :math:`a = 0`.
 
 4. 设 :math:`n \in \mathbb{N}` 为正整数。当 :math:`x \to 0` 时， :math:`(1 - \cos x) \cdot \ln (1 + x^2)` 是比 :math:`x \sin x^n` 高阶的无穷小，
-而 :math:`x \sin x^n` 是比 :math:`e^{x^2} - 1` 高阶的无穷小。求正整数 :math:`n` 的值。
+   而 :math:`x \sin x^n` 是比 :math:`e^{x^2} - 1` 高阶的无穷小。求正整数 :math:`n` 的值。
 
 .. proof:solution::
 
@@ -94,8 +96,10 @@
 
     .. math::
 
-        \lim\limits_{x \to 1^-} f(x) & = \lim\limits_{x \to 1^-} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)} = \lim\limits_{x \to 1^-} \dfrac{-\sin(x - 2)}{ x (x - 2)} = -\sin 1 \\
-        \lim\limits_{x \to 1^+} f(x) & = \lim\limits_{x \to 1^+} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)} = \lim\limits_{x \to 1^+} \dfrac{\sin(x - 2)}{ x (x - 2)} = \sin 1
+        \lim\limits_{x \to 1^-} f(x) & = \lim\limits_{x \to 1^-} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
+            = \lim\limits_{x \to 1^-} \dfrac{-\sin(x - 2)}{ x (x - 2)} = -\sin 1 \\
+        \lim\limits_{x \to 1^+} f(x) & = \lim\limits_{x \to 1^+} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
+            = \lim\limits_{x \to 1^+} \dfrac{\sin(x - 2)}{ x (x - 2)} = \sin 1
 
     左右极限存在但不相等，所以 :math:`f(x)` 在 :math:`x = 1` 处间断点为第一类跳跃间断点。
 
@@ -103,6 +107,7 @@
 
     .. math::
 
-        \lim\limits_{x \to 2} f(x) = \lim\limits_{x \to 2} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)} = \lim\limits_{x \to 2} \dfrac{(x - 1)}{ x \lvert x - 1 \rvert} = \dfrac{1}{2}
+        \lim\limits_{x \to 2} f(x) = \lim\limits_{x \to 2} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
+        = \lim\limits_{x \to 2} \dfrac{(x - 1)}{ x \lvert x - 1 \rvert} = \dfrac{1}{2}
 
     左右极限存在且相等，所以 :math:`f(x)` 在 :math:`x = 2` 处间断点为第一类可去间断点。

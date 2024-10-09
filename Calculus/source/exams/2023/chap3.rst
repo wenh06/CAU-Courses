@@ -15,4 +15,4 @@
 
 5. 证明 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}` 与 :math:`a` 无关.
 
-提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
+   提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
