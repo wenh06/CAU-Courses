@@ -48,10 +48,10 @@
 
     .. math::
 
-        (1 - \cos x) \cdot \ln (1 + x^2) \sim \dfrac{x^2}{2} \cdot x^2 = \dfrac{x^4}{2}, \\
-        x \cdot \tan x^n \sim x \cdot x^n = x^{n+1}, \\
-        x \cdot \arcsin^n x \sim x \cdot x^n = x^{n+1}, \\
-        e^{x^2} - 1 \sim x^2.
+        (1 - \cos x) \cdot \ln (1 + x^2) & \sim \dfrac{x^2}{2} \cdot x^2 = \dfrac{x^4}{2}, \\
+        x \cdot \tan x^n & \sim x \cdot x^n = x^{n+1}, \\
+        x \cdot \arcsin^n x & \sim x \cdot x^n = x^{n+1}, \\
+        e^{x^2} - 1 & \sim x^2.
 
     于是有 :math:`n + 1 < 4`, 以及 :math:`n + 1 > 2`, 即 :math:`2 < n + 1 < 4`, 从而 :math:`n = 2`.
 

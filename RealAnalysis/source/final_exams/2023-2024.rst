@@ -6,20 +6,20 @@
 答案解析
 ---------
 
-一、证明题（第1题7分，第2题8分，共15分）
+一、证明题（第1题7分, 第2题8分, 共15分）
 
 1. 定义集合 :math:`A, B` 的对称差为 :math:`A \triangle B = (A \setminus B) \cup (B \setminus A)`. 证明集合的交与对称差满足分配律, 即任取三个集合 :math:`A, B, C`, 有 :math:`(A \triangle B) \cap C = (A \cap C) \triangle (B \cap C)`.
 
 .. proof:proof::
 
-    可以直接通过集合的运算律证明：
+    可以直接通过集合的运算律证明:
 
     .. math::
 
         (A \triangle B) \cap C & = ((A \setminus B) \cup (B \setminus A)) \cap C = ((A \setminus B) \cap C) \cup ((B \setminus A) \cap C) \\
         & = ((A \cap C) \setminus (B \cap C)) \cup ((B \cap C) \setminus (A \cap C)) = (A \cap C) \triangle (B \cap C).
 
-    也可以通过集合元素来证明相互包含关系。
+    也可以通过集合元素来证明相互包含关系.
 
 2. 证明可列多个零测集的并仍是零测集.
 
@@ -33,56 +33,56 @@
 
     由 :math:`\varepsilon` 的任意性, 知 :math:`E` 是零测集.
 
-    或者直接由外测度的次可加性得到结论：
+    或者直接由外测度的次可加性得到结论:
 
     .. math::
 
         m^* E \leqslant \sum\limits_{n=1}^{\infty} m^* E_n = 0.
 
-    或者先由每个 :math:`E_n` 是零测集（可测集）得到 :math:`E` 是可测集, 然后由测度的次可加性得到结论：
+    或者先由每个 :math:`E_n` 是零测集（可测集）得到 :math:`E` 是可测集, 然后由测度的次可加性得到结论:
 
     .. math::
 
         m E \leqslant \sum\limits_{n=1}^{\infty} m E_n = 0.
 
-二、简答题（第1题15分，第2题10分，共25分）
+二、简答题（第1题15分, 第2题10分, 共25分）
 
-1. 请叙述对集合 :math:`E\subset \mathbb{R}` 可测性进行判别的卡拉泰奥多里 (C. Carathéodory) 条件，并对集合 :math:`E` 有界 ( :math:`E \subset (a, b)` (区间)) 的情况进行证明.
+1. 请叙述对集合 :math:`E\subset \mathbb{R}` 可测性进行判别的卡拉泰奥多里 (C. Carathéodory) 条件, 并对集合 :math:`E` 有界 ( :math:`E \subset (a, b)` (区间)) 的情况进行证明.
 
 .. proof:solution::
 
-    卡拉泰奥多里条件：（7分）
+    卡拉泰奥多里条件: （7分）
 
-        设 :math:`E \subset \mathbb{R}`，则 :math:`E` 可测的充分必要条件是：对任意 :math:`A \subset \mathbb{R}`，有
+        设 :math:`E \subset \mathbb{R}`, 则 :math:`E` 可测的充分必要条件是: 对任意 :math:`A \subset \mathbb{R}`, 有
 
         .. math::
 
             m^* A = m^*(A \cap E) + m^*(A \cap \mathscr{C} E).
 
-    证明如下：（充分性，必要性各4分）
+    证明如下: （充分性, 必要性各4分）
 
-        充分性：取 :math:`A = (a, b)`, 那么由卡拉泰奥多里条件有
+        充分性: 取 :math:`A = (a, b)`, 那么由卡拉泰奥多里条件有
 
         .. math::
 
             b - a = m^* E + m^* \mathscr{C} E.
 
-        另一方面，对一般的有界集 :math:`E`, 有 :math:`m_* E + m^* \mathscr{C} E = b - a`, 于是 :math:`m^* E = m_* E`, 即 :math:`E` 可测。
+        另一方面, 对一般的有界集 :math:`E`, 有 :math:`m_* E + m^* \mathscr{C} E = b - a`, 于是 :math:`m^* E = m_* E`, 即 :math:`E` 可测.
 
-        必要性：设 :math:`E` 可测，由外测度的次可加性，对任意 :math:`A \subset \mathbb{R}`, 有
+        必要性: 设 :math:`E` 可测, 由外测度的次可加性, 对任意 :math:`A \subset \mathbb{R}`, 有
 
         .. math::
             :label: eq:cau-real-analysis-exam2024-caratheodory-1
 
             m^* A \leqslant m^*(A \cap E) + m^*(A \cap \mathscr{C} E).
 
-        另一方面，由外测度定义，对任意 :math:`\varepsilon > 0`，存在开集 :math:`G \supset A`，使得 :math:`m^* G < m^* A + \varepsilon`. 此时有
+        另一方面, 由外测度定义, 对任意 :math:`\varepsilon > 0`, 存在开集 :math:`G \supset A`, 使得 :math:`m^* G < m^* A + \varepsilon`. 此时有
 
         .. math::
 
             G \cap E \supset A \cap E, ~ G \cap \mathscr{C} E \supset A \cap \mathscr{C} E,
 
-        于是由外测度的单调性，有
+        于是由外测度的单调性, 有
 
         .. math::
 
@@ -94,60 +94,60 @@
 
             m^* (A \cap E) + m^* (A \cap \mathscr{C} E) \leqslant m^* (G \cap E) + m^* (G \cap \mathscr{C} E) = m^* G < m^* A + \varepsilon,
 
-        上式中的等号是由于开集的可测性。由 :math:`\varepsilon` 的任意性，有
+        上式中的等号是由于开集的可测性. 由 :math:`\varepsilon` 的任意性, 有
 
         .. math::
             :label: eq:cau-real-analysis-exam2024-caratheodory-2
 
             m^* (A \cap E) + m^* (A \cap \mathscr{C} E) \leqslant m^* A.
 
-        由 :eq:`eq:cau-real-analysis-exam2024-caratheodory-1` 和 :eq:`eq:cau-real-analysis-exam2024-caratheodory-2`，知满足卡拉泰奥多里条件成立。
+        由 :eq:`eq:cau-real-analysis-exam2024-caratheodory-1` 和 :eq:`eq:cau-real-analysis-exam2024-caratheodory-2`, 知满足卡拉泰奥多里条件成立.
 
 2. Vitali 覆盖引理是证明变上限积分及其微分相关结论的有力工具. 请叙述 :math:`E\subset \mathbb{R}` 的 Vitali 覆盖的定义, 以及当 :math:`E` 有界时的 Vitali 覆盖引理 (不需要证明).
 
 .. proof:solution::
 
-    :math:`E\subset \mathbb{R}` 的 Vitali 覆盖的定义：（5分）
+    :math:`E\subset \mathbb{R}` 的 Vitali 覆盖的定义: （5分）
 
-        设 :math:`\mathscr{M}` 是由长度为正的（闭）区间构成的类， :math:`E \subset \mathbb{R}`, 若对任意 :math:`x \in E`,
+        设 :math:`\mathscr{M}` 是由长度为正的（闭）区间构成的类, :math:`E \subset \mathbb{R}`, 若对任意 :math:`x \in E`,
         总存在 :math:`\mathscr{M}` 中的区间列 :math:`\{d_n\}`, 使得
 
         .. math::
 
             x \in d_n, ~ \lim\limits_{n\to\infty} m d_n = 0,
 
-        则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖。
+        则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖.
 
-    :math:`E\subset \mathbb{R}` 的 Vitali 覆盖的定义也可叙述为：
+    :math:`E\subset \mathbb{R}` 的 Vitali 覆盖的定义也可叙述为:
 
-        设 :math:`\mathscr{M}` 是由长度为正的（闭）区间构成的类， :math:`E \subset \mathbb{R}`, 若对任意 :math:`x \in E` 以及任意的 :math:`\varepsilon > 0`,
+        设 :math:`\mathscr{M}` 是由长度为正的（闭）区间构成的类, :math:`E \subset \mathbb{R}`, 若对任意 :math:`x \in E` 以及任意的 :math:`\varepsilon > 0`,
         总存在 :math:`\mathscr{M}` 中的区间 :math:`d`, 使得
 
         .. math::
 
             x \in d, ~ m d < \varepsilon,
 
-        则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖。
+        则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖.
 
-    当 :math:`E` 有界时的 Vitali 覆盖引理：（5分）
+    当 :math:`E` 有界时的 Vitali 覆盖引理: （5分）
 
-        设 :math:`E \subset \mathbb{R}` 有界， :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖，
-        则可从 :math:`\mathscr{M}` 中选出至多可列个区间 :math:`\{d_n\}_{n \in I}`, 其中 :math:`I` 是某个至多可列的指标集合，使得
+        设 :math:`E \subset \mathbb{R}` 有界, :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖,
+        则可从 :math:`\mathscr{M}` 中选出至多可列个区间 :math:`\{d_n\}_{n \in I}`, 其中 :math:`I` 是某个至多可列的指标集合, 使得
 
         .. math::
 
             m \left( E \setminus \bigcup\limits_{n \in I} d_n \right) = 0, ~ d_n \cap d_{n'} = \emptyset, ~ n \neq n'.
 
-    :math:`E` 有界时的 Vitali 覆盖引理也可叙述为：
+    :math:`E` 有界时的 Vitali 覆盖引理也可叙述为:
 
-        设 :math:`E \subset \mathbb{R}` 有界， :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖，那么对任意的 :math:`\varepsilon > 0`,
-        可从 :math:`\mathscr{M}` 中选出有限个区间 :math:`d_1, d_2, \cdots, d_n`，使得
+        设 :math:`E \subset \mathbb{R}` 有界, :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖, 那么对任意的 :math:`\varepsilon > 0`,
+        可从 :math:`\mathscr{M}` 中选出有限个区间 :math:`d_1, d_2, \cdots, d_n`, 使得
 
         .. math::
 
             m \left( E \setminus \bigcup\limits_{i=1}^n d_i \right) < \varepsilon, ~ d_i \cap d_j = \emptyset, ~ i \neq j.
 
-三、解答题（每题10分，共40分）
+三、解答题（每题10分, 共40分）
 
 1. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}` 中两个非空有界闭集, 且 :math:`F_1 \cap F_2 = \emptyset`.
 
@@ -164,15 +164,15 @@
 
         \lvert x_n - y_n \rvert < \rho(F_1, F_2) + \dfrac{1}{n} = \dfrac{1}{n}.
 
-    由于 :math:`F_1, F_2` 都是有界集，所以 :math:`\{x_n\}, \{y_n\}` 都是有界数列，故存在收敛子列 :math:`\{x_{n_k}\}, \{y_{n_k}\}`,
-    即 :math:`x_{n_k} \to x, y_{n_k} \to y`, 当 :math:`k \to \infty`. 由于 :math:`F_1, F_2` 都是闭集，所以 :math:`x \in F_1, y \in F_2`, 且有
+    由于 :math:`F_1, F_2` 都是有界集, 所以 :math:`\{x_n\}, \{y_n\}` 都是有界数列, 故存在收敛子列 :math:`\{x_{n_k}\}, \{y_{n_k}\}`,
+    即 :math:`x_{n_k} \to x, y_{n_k} \to y`, 当 :math:`k \to \infty`. 由于 :math:`F_1, F_2` 都是闭集, 所以 :math:`x \in F_1, y \in F_2`, 且有
 
     .. math::
         :label: eq:cau-real-analysis-exam2024-3-2
 
         \lvert x - y \rvert = \lim\limits_{k\to\infty} \lvert x_{n_k} - y_{n_k} \rvert = 0,
 
-    从而有 :math:`x = y`, 这与 :math:`F_1 \cap F_2 = \emptyset` 矛盾，故 :math:`\rho(F_1, F_2) > 0`.
+    从而有 :math:`x = y`, 这与 :math:`F_1 \cap F_2 = \emptyset` 矛盾, 故 :math:`\rho(F_1, F_2) > 0`.
 
     也可以直接由 :math:`F_1 \cap F_2 = \emptyset` 得 :math:`x \neq y`, 从而 :math:`\lvert x - y \rvert > 0`. 再由 :eq:`eq:cau-real-analysis-exam2024-3-1` 和 :eq:`eq:cau-real-analysis-exam2024-3-2` 得
 
@@ -186,7 +186,7 @@
 
         G_1 = \bigcup\limits_{x\in F_1} B(x, r), ~ G_2 = \bigcup\limits_{x\in F_2} B(x, r),
 
-    其中 :math:`B(x, r)` 表示以 :math:`x` 为中心， :math:`r` 为半径的开球（开区间）。以上都是开集的并，所以 :math:`G_1, G_2` 都是开集，并且满足
+    其中 :math:`B(x, r)` 表示以 :math:`x` 为中心, :math:`r` 为半径的开球（开区间）. 以上都是开集的并, 所以 :math:`G_1, G_2` 都是开集, 并且满足
 
     .. math::
 
@@ -196,27 +196,27 @@
 
 .. proof:solution::
 
-    :math:`f` 必然是可测函数。证明如下：（结论5分，证明5分）
+    :math:`f` 必然是可测函数. 证明如下: （结论5分, 证明5分）
 
-        任取实数 :math:`r \in \mathbb{R}`，由于 :math:`D` 是 :math:`\mathbb{R}` 中稠密集，
+        任取实数 :math:`r \in \mathbb{R}`, 由于 :math:`D` 是 :math:`\mathbb{R}` 中稠密集,
         所以存在 :math:`D` 中点列 :math:`\{\alpha_k\}_{k \in \mathbb{N}}` 使得 :math:`\alpha_k > r`,
-        且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有（断言3分，断言的证明2分）
+        且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有（断言3分, 断言的证明2分）
 
         .. math::
 
             E(f > r) = \bigcup_{k \in \mathbb{N}} E(f > \alpha_k).
 
-        首先，由于 :math:`\alpha_k > r`，所以 :math:`E(f > r) \supset E(f > \alpha_k)`, 从而知上式左边包含右边。
-        另一方面， :math:`\forall x \in E(f > r)`, 有 :math:`f(x) > r`，所以存在 :math:`k_0 \in \mathbb{N}` 使得
-        :math:`f(x) \geqslant \alpha_{k_0} \geqslant r`，从而 :math:`x \in E(f > \alpha_{k_0})`，所以上式右边包含左边。
+        首先, 由于 :math:`\alpha_k > r`, 所以 :math:`E(f > r) \supset E(f > \alpha_k)`, 从而知上式左边包含右边.
+        另一方面, :math:`\forall x \in E(f > r)`, 有 :math:`f(x) > r`, 所以存在 :math:`k_0 \in \mathbb{N}` 使得
+        :math:`f(x) \geqslant \alpha_{k_0} \geqslant r`, 从而 :math:`x \in E(f > \alpha_{k_0})`, 所以上式右边包含左边.
 
-        由于 :math:`E(f > \alpha_k)` 都是可测集，所以 :math:`E(f > r)` 也是可测集，这说明 :math:`f` 是可测函数。
+        由于 :math:`E(f > \alpha_k)` 都是可测集, 所以 :math:`E(f > r)` 也是可测集, 这说明 :math:`f` 是可测函数.
 
 3. 叙述可测集上的可测函数列 :math:`\{f_n\}` 依测度收敛到可测函数 :math:`f` 的定义, 并给出依测度收敛, 但不几乎处处收敛的可测函数列的例子.
 
 .. proof:solution::
 
-    可测函数列 :math:`\{f_n\}` 依测度收敛到可测函数 :math:`f` 的定义：（5分）
+    可测函数列 :math:`\{f_n\}` 依测度收敛到可测函数 :math:`f` 的定义: （5分）
 
         设 :math:`E \subset \mathbb{R}` 可测, :math:`\{f_n\}` 是定义在 :math:`E` 上的可测函数列, :math:`f` 是定义在 :math:`E` 上的可测函数.
         若对任意 :math:`\varepsilon > 0`, 总有
@@ -227,10 +227,10 @@
 
         则称 :math:`\{f_n\}` 依测度收敛到 :math:`f`.
 
-    依测度收敛, 但不几乎处处收敛的可测函数列的例子：（5分）
+    依测度收敛, 但不几乎处处收敛的可测函数列的例子: （5分）
 
     任意 :math:`n \in \mathbb{N}` 可以唯一表示为 :math:`n = 2^k + i`, 其中 :math:`k \in \mathbb{Z}_{\geqslant 0}`, :math:`i \in \{0, 1, \cdots, 2^k - 1\}`,
-    于是可以定义 :math:`[0, 1]` 区间上的函数 :math:`f_n` 如下：
+    于是可以定义 :math:`[0, 1]` 区间上的函数 :math:`f_n` 如下:
 
     .. math::
 
@@ -239,32 +239,32 @@
             0, & x \notin \left[ \dfrac{i}{2^k}, \dfrac{i+1}{2^k} \right].
         \end{cases}
 
-    由于 :math:`f_n` 是简单函数，所以是可测函数。函数列 :math:`\{f_n\}` 依测度收敛到函数 :math:`f(x) = 0`，但在 :math:`[0, 1]` 上任何一点处都不收敛。
+    由于 :math:`f_n` 是简单函数, 所以是可测函数. 函数列 :math:`\{f_n\}` 依测度收敛到函数 :math:`f(x) = 0`, 但在 :math:`[0, 1]` 上任何一点处都不收敛.
 
 4. 积分序列的 Levi 定理说的是: 对于定义在可测集 :math:`E \subset \mathbb{R}` 上的渐升非负可测函数列 :math:`\{f_n\}`, 若存在可测函数 :math:`f`, 使得 :math:`\lim\limits_{n\to\infty} f_n(x) = f(x)` 在 :math:`E` 上恒成立, 那么积分和极限可交换次序, 即 :math:`\displaystyle \int_E f \mathrm{d} m = \lim_{n \to \infty} \int_E f_n \mathrm{d} m`. 若去掉函数列 :math:`\{f_n\}` 非负性这一条件, 请问 Levi 定理是否仍成立? 若是, 请给出证明; 若否, 请给出反例, 并添加上一条使之成立的条件 (不能添加“渐升函数列 :math:`\{f_n\}` 从某一项开始都非负“的条件).
 
 .. proof:solution::
 
-    去掉函数列 :math:`\{f_n\}` 非负性的 Levi 定理不成立。（5分）
+    去掉函数列 :math:`\{f_n\}` 非负性的 Levi 定理不成立. （5分）
 
-    反例如下：（3分）
+    反例如下: （3分）
 
-    当 :math:`f_n` 的正部与负部积分都是 :math:`\infty` 时， :math:`f_n` 的积分不存在。
-    即使当 :math:`f_n` 的积分有定义时，Levi 定理也不一定成立，例如 :math:`E = [0, \infty)`, :math:`f_n(x) = - \chi_{[n, \infty)}`,
+    当 :math:`f_n` 的正部与负部积分都是 :math:`\infty` 时, :math:`f_n` 的积分不存在.
+    即使当 :math:`f_n` 的积分有定义时, Levi 定理也不一定成立, 例如 :math:`E = [0, \infty)`, :math:`f_n(x) = - \chi_{[n, \infty)}`,
     则 :math:`f_n` 的积分为 :math:`- \infty`, 但是 :math:`f_n` 逐点收敛于 :math:`f = 0`, :math:`f` 的积分为 :math:`0`, 此时
 
     .. math::
 
         \int_E f \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n \mathrm{d} m.
 
-    可以添加的条件：（只要一条就可以，2分）
+    可以添加的条件: （只要一条就可以, 2分）
 
-    - :math:`f_n` 的积分都有定义，且 :math:`\displaystyle \int_E f_1 \mathrm{d} m > - \infty`;
+    - :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 \mathrm{d} m > - \infty`;
     - 存在可积函数 :math:`g` 使得 :math:`\lvert f_n \rvert \leqslant g`, :math:`n \in \mathbb{N}`;
     - 存在可积函数 :math:`g` 使得 :math:`g \geqslant f_n`, :math:`n \in \mathbb{N}`;
     - :math:`\cdots\cdots`
 
-四、证明题（每题10分，共20分）
+四、证明题（每题10分, 共20分）
 
 1. 设 :math:`E \subset \mathbb{R}` 可测, :math:`1 \leqslant p \leqslant \infty`, :math:`L^p` 空间为 :math:`E` 上 :math:`p` 幂可积函数全体构成的空间.
 
@@ -274,7 +274,7 @@
 
 .. proof:proof::
 
-    (1). 对于 :math:`1 \leqslant p < \infty` 的情况：（4分）
+    (1). 对于 :math:`1 \leqslant p < \infty` 的情况: （4分）
 
     设 :math:`f, g \in L^p`, :math:`a, b \in \mathbb{R}`, 那么
 
@@ -283,10 +283,10 @@
         \int_E \lvert af + bg \rvert^p \mathrm{d} m & \leqslant \int_E \left( 2 \cdot \dfrac{\lvert af \rvert + \lvert bg \rvert}{2} \right)^p \mathrm{d} m \\
         & \leqslant 2^p \int_E \left( \dfrac{\lvert af \rvert^p + \lvert bg \rvert^p}{2} \right) \mathrm{d} m < \infty,
 
-    第二个不等式是由于定义在 :math:`\mathbb{R}_{\geqslant 0}` 上的函数 :math:`\phi(t) = t^p` 当 :math:`p \geqslant 1` 时是凸函数。
-    所以 :math:`af + bg \in L^p`，这说明 :math:`L^p` 是线性空间。
+    第二个不等式是由于定义在 :math:`\mathbb{R}_{\geqslant 0}` 上的函数 :math:`\phi(t) = t^p` 当 :math:`p \geqslant 1` 时是凸函数.
+    所以 :math:`af + bg \in L^p`, 这说明 :math:`L^p` 是线性空间.
 
-    对于 :math:`p = \infty` 的情况：（1分）
+    对于 :math:`p = \infty` 的情况: （1分）
 
     设 :math:`f, g \in L^\infty`, :math:`a, b \in \mathbb{R}`, 那么存在 :math:`M_1, M_2 \geqslant 0` 使得
 
@@ -300,9 +300,9 @@
 
         \lvert af(x) + bg(x) \rvert \leqslant \lvert a \rvert \lvert f(x) \rvert + \lvert b \rvert \lvert g(x) \rvert \leqslant \lvert a \rvert M_1 + \lvert b \rvert M_2, ~ a.e. x \in E,
 
-    这说明 :math:`\lvert a \rvert M_1 + \lvert b \rvert M_2` 是函数 :math:`af + bg` 的一个本性上界，所以 :math:`af + bg \in L^\infty`, 这说明 :math:`L^\infty` 是线性空间。
+    这说明 :math:`\lvert a \rvert M_1 + \lvert b \rvert M_2` 是函数 :math:`af + bg` 的一个本性上界, 所以 :math:`af + bg \in L^\infty`, 这说明 :math:`L^\infty` 是线性空间.
 
-    (2). 对于 :math:`1 \leqslant p_1 < p_2 < \infty` 的情况：（4分）
+    (2). 对于 :math:`1 \leqslant p_1 < p_2 < \infty` 的情况: （4分）
 
     设 :math:`f \in L^{p_2}`, 令 :math:`A = E(\lvert f \rvert \geqslant 1)`, 那么
 
@@ -313,10 +313,10 @@
 
     所以 :math:`f \in L^{p_1}`, 从而 :math:`L^{p_2} \subset L^{p_1}`.
 
-    对于 :math:`p_2 = \infty` 的情况：（1分）
+    对于 :math:`p_2 = \infty` 的情况: （1分）
 
     设 :math:`f \in L^\infty`, 那么存在 :math:`M \geqslant 0` 使得 :math:`\lvert f(x) \rvert \leqslant M`, :math:`a.e. x \in E`,
-    令 :math:`Z = E(\lvert f \rvert \geqslant M)`, 那么 :math:`Z` 是零测集，且
+    令 :math:`Z = E(\lvert f \rvert \geqslant M)`, 那么 :math:`Z` 是零测集, 且
 
     .. math::
 
@@ -325,7 +325,7 @@
 
     所以 :math:`f \in L^{p_1}`, 从而 :math:`L^\infty \subset L^{p_1}`.
 
-2. 设 :math:`P_0` 为 Cantor 三分集，它是从 :math:`[0, 1]` 区间归纳地构造得来的: 第1步从 :math:`[0, 1]` 区间中去掉正中间长为 :math:`\dfrac{1}{3}` 的开区间 :math:`\left( \dfrac{1}{3}, \dfrac{2}{3} \right)`, 得到两个闭区间 :math:`\left[ 0, \dfrac{1}{3} \right]` 与 :math:`\left[ \dfrac{2}{3}, 1 \right]`; 此后的第 :math:`k + 1` 步, 对上一步得到的个闭区间, 去掉每个闭区间正中间长为 :math:`\dfrac{1}{3^{k+1}}` 的开区间. 最终我们得到的集合为 Cantor 三分集.
+2. 设 :math:`P_0` 为 Cantor 三分集, 它是从 :math:`[0, 1]` 区间归纳地构造得来的: 第1步从 :math:`[0, 1]` 区间中去掉正中间长为 :math:`\dfrac{1}{3}` 的开区间 :math:`\left( \dfrac{1}{3}, \dfrac{2}{3} \right)`, 得到两个闭区间 :math:`\left[ 0, \dfrac{1}{3} \right]` 与 :math:`\left[ \dfrac{2}{3}, 1 \right]`; 此后的第 :math:`k + 1` 步, 对上一步得到的个闭区间, 去掉每个闭区间正中间长为 :math:`\dfrac{1}{3^{k+1}}` 的开区间. 最终我们得到的集合为 Cantor 三分集.
 
 (1). 证明 :math:`P_0` 是闭集, 不可列, 并且具有零测度.
 
@@ -345,7 +345,7 @@
 
 .. proof:proof::
 
-    (1). （ :math:`P_0` 是闭集, 不可列, 具有零测度，这三个结论每个2分，全对5分 ）
+    (1). （ :math:`P_0` 是闭集, 不可列, 具有零测度, 这三个结论每个2分, 全对5分 ）
 
     记第 :math:`k` 步得到的闭区间为 :math:`F_{k, 1}, F_{k, 2}, \cdots, F_{k, 2^k}`, 去掉的开区间为 :math:`G_{k, 1}, G_{k, 2}, \cdots, G_{k, 2^{k-1}}`, 那么有
 
@@ -354,17 +354,17 @@
         P_0 & = \bigcap\limits_{k=1}^{\infty} \bigcup\limits_{i=1}^{2^k} F_{k, i} = [0, 1] \setminus G_0, \\
         G_0 & = \bigcup\limits_{k=1}^{\infty} \bigcup\limits_{i=1}^{2^{k-1}} G_{k, i}.
 
-    也就是说， :math:`P_0` 是闭集的交，或者说 :math:`P_0` 是闭区间 :math:`[0, 1]` 中开集 :math:`G_0` 的补集，所以 :math:`P_0` 是闭集。
+    也就是说, :math:`P_0` 是闭集的交, 或者说 :math:`P_0` 是闭区间 :math:`[0, 1]` 中开集 :math:`G_0` 的补集, 所以 :math:`P_0` 是闭集.
 
-    假设 :math:`P_0` 是可列集，那么 :math:`P_0` 可以写成 :math:`P_0 = \{ x_1, x_2, \cdots \}`，其中 :math:`x_i \in P_0`, :math:`i \in \mathbb{N}`.
-    对于 :math:`x_1`, 由于 :math:`F_{1, 1}, F_{1, 2}` 是不交的闭区间，所以 :math:`F_{1, 1}, F_{1, 2}` 中有一个不包含 :math:`x_1`, 记为 :math:`I_1`.
+    假设 :math:`P_0` 是可列集, 那么 :math:`P_0` 可以写成 :math:`P_0 = \{ x_1, x_2, \cdots \}`, 其中 :math:`x_i \in P_0`, :math:`i \in \mathbb{N}`.
+    对于 :math:`x_1`, 由于 :math:`F_{1, 1}, F_{1, 2}` 是不交的闭区间, 所以 :math:`F_{1, 1}, F_{1, 2}` 中有一个不包含 :math:`x_1`, 记为 :math:`I_1`.
     从 :math:`I_1` 去掉正中间长为 :math:`\dfrac{1}{3^2}` 的开区间得到两个闭区间至少有一个不包含 :math:`x_2`, 记为 :math:`I_2`.
     由此可以归纳地构造出一个闭区间套 :math:`I_1 \supset I_2 \supset \cdots`, 使得 :math:`x_n \notin I_n`, :math:`n \in \mathbb{N}`.
-    由闭区间套定理，知存在唯一的点 :math:`x \in \bigcap\limits_{n=1}^{\infty} I_n`, 且 :math:`x_n \to x`, 当 :math:`n \to \infty`.
-    由于 :math:`x_n \in P_0` 且 :math:`P_0` 是闭集，所以 :math:`x \in P_0`. 另一方面，由于 :math:`x_n \notin I_n`, 所以 :math:`x \neq x_n`, :math:`n \in \mathbb{N}`,
-    这说明 :math:`x` 不是 :math:`P_0` 中的点，这与 :math:`x \in P_0` 矛盾，所以 :math:`P_0` 不是可列集。
+    由闭区间套定理, 知存在唯一的点 :math:`x \in \bigcap\limits_{n=1}^{\infty} I_n`, 且 :math:`x_n \to x`, 当 :math:`n \to \infty`.
+    由于 :math:`x_n \in P_0` 且 :math:`P_0` 是闭集, 所以 :math:`x \in P_0`. 另一方面, 由于 :math:`x_n \notin I_n`, 所以 :math:`x \neq x_n`, :math:`n \in \mathbb{N}`,
+    这说明 :math:`x` 不是 :math:`P_0` 中的点, 这与 :math:`x \in P_0` 矛盾, 所以 :math:`P_0` 不是可列集.
 
-    很容易计算 :math:`G_0` 的测度：
+    很容易计算 :math:`G_0` 的测度:
 
     .. math::
 
@@ -372,18 +372,18 @@
 
     所以 :math:`P_0` 的测度为 :math:`m P_0 = m ([0, 1]) - m G_0 = 1 - 1 = 0`.
 
-    (2). （ :math:`\Phi` 连续, 有几乎处处为0的导数, 但不是绝对连续函数，这三个结论每个2分，全对5分 ）
+    (2). （ :math:`\Phi` 连续, 有几乎处处为0的导数, 但不是绝对连续函数, 这三个结论每个2分, 全对5分 ）
 
-    首先，很容易观察到 Cantor 函数 :math:`\Phi` 在开集 :math:`G_0` 的每个构成区间 :math:`G_{k, i}` 上都是常值函数，这是因为任取 :math:`x_1, x_2 \in G_{k, i}`,
-    有集合的相等关系：
+    首先, 很容易观察到 Cantor 函数 :math:`\Phi` 在开集 :math:`G_0` 的每个构成区间 :math:`G_{k, i}` 上都是常值函数, 这是因为任取 :math:`x_1, x_2 \in G_{k, i}`,
+    有集合的相等关系:
 
     .. math::
 
         \{y \in P_0 ~ \colon y \leqslant x_1\} = \{y \in P_0 ~ \colon y \leqslant x_2\}
 
-    从而 :math:`\Phi` 在开集 :math:`G_0` 上连续。
+    从而 :math:`\Phi` 在开集 :math:`G_0` 上连续.
 
-    其次，对于 :math:`P_0` 中的任意两点 :math:`x_k = \displaystyle \sum\limits_{n=1}^{\infty} \dfrac{2a_n(k)}{3^n}, ~ k = 1, 2`, 若 :math:`x_1 < x_2`,
+    其次, 对于 :math:`P_0` 中的任意两点 :math:`x_k = \displaystyle \sum\limits_{n=1}^{\infty} \dfrac{2a_n(k)}{3^n}, ~ k = 1, 2`, 若 :math:`x_1 < x_2`,
     那么存在 :math:`N_0 \in \mathbb{N}` 使得 :math:`a_{N_0}(1) = 0, a_{N_0}(2) = 1`, 并且对任意的 :math:`n < N_0`, 有 :math:`a_n(1) = a_n(2)`. 于是
 
     .. math::
@@ -391,10 +391,10 @@
         \phi(x_2) - \phi(x_1) & = \sum\limits_{n=1}^{\infty} \dfrac{a_n(2)}{2^n} - \sum\limits_{n=1}^{\infty} \dfrac{a_n(1)}{2^n} \\
         & = \sum\limits_{n=N_0}^{\infty} \dfrac{a_n(2)}{2^n} - \sum\limits_{n=N_0}^{\infty} \dfrac{a_n(1)}{2^n} > 0,
 
-    所以 :math:`\Phi` 在 :math:`P_0` 上单调递增，从而在区间 :math:`[0, 1]` 上单调递增。
+    所以 :math:`\Phi` 在 :math:`P_0` 上单调递增, 从而在区间 :math:`[0, 1]` 上单调递增.
 
     对于任意的 :math:`\displaystyle x = \sum\limits_{n=1}^{\infty} \dfrac{2a_n(x)}{3^n} \in P_0`, 以及任意的 :math:`\varepsilon > 0`,
-    令 :math:`N = \lceil \log_2 \dfrac{1}{\varepsilon} \rceil + 1` (假设 :math:`\varepsilon` 充分小，使得 :math:`N \geqslant 1`),
+    令 :math:`N = \lceil \log_2 \dfrac{1}{\varepsilon} \rceil + 1` (假设 :math:`\varepsilon` 充分小, 使得 :math:`N \geqslant 1`),
     并取 :math:`\delta = \dfrac{1}{3^{N+1}}`, 那么
 
     .. math::
@@ -414,21 +414,21 @@
         \lvert \phi(x) - \phi(y) \rvert & = \left\lvert \sum\limits_{n=1}^{\infty} \dfrac{a_n(x)}{2^n} - \sum\limits_{n=1}^{\infty} \dfrac{a_n(y)}{2^n} \right\rvert = \left\lvert \sum\limits_{n=N+1}^{\infty} \dfrac{a_n(x)}{2^n} - \sum\limits_{n=N+1}^{\infty} \dfrac{a_n(y)}{2^n} \right\rvert \\
         & \leqslant \sum\limits_{n=N+1}^{\infty} \dfrac{1}{2^n} = \dfrac{1}{2^{N}} < \varepsilon.
 
-    这就证明了 :math:`\displaystyle \sup_{y \in B(x, \delta)} \lvert \Phi(x) - \Phi(y) \rvert \leqslant \varepsilon`, 即 :math:`\Phi` 在 :math:`P_0` 的每个点处都是连续的。
-    所以 :math:`\Phi` 在 :math:`[0, 1]` 的每个点处都是连续的。
+    这就证明了 :math:`\displaystyle \sup_{y \in B(x, \delta)} \lvert \Phi(x) - \Phi(y) \rvert \leqslant \varepsilon`, 即 :math:`\Phi` 在 :math:`P_0` 的每个点处都是连续的.
+    所以 :math:`\Phi` 在 :math:`[0, 1]` 的每个点处都是连续的.
 
-    由于 :math:`\Phi` 在开集 :math:`G_0` 的每个构成区间 :math:`G_{k, i}` 上都是常值函数，因此它在开集 :math:`G_0` 的每点处的导数值都是 :math:`0`.
-    又由于开集 :math:`G_0` 的测度为 :math:`m G_0 = 1 = m ([0, 1])`, 所以 :math:`\Phi` 几乎处处为0的导数。
+    由于 :math:`\Phi` 在开集 :math:`G_0` 的每个构成区间 :math:`G_{k, i}` 上都是常值函数, 因此它在开集 :math:`G_0` 的每点处的导数值都是 :math:`0`.
+    又由于开集 :math:`G_0` 的测度为 :math:`m G_0 = 1 = m ([0, 1])`, 所以 :math:`\Phi` 几乎处处为0的导数.
 
-    最后，我们证明 :math:`\Phi` 不是绝对连续函数。假设 :math:`\Phi` 是绝对连续函数，那么由于它有几乎处处为0的导数，所以它必须是常值函数。但是
+    最后, 我们证明 :math:`\Phi` 不是绝对连续函数. 假设 :math:`\Phi` 是绝对连续函数, 那么由于它有几乎处处为0的导数, 所以它必须是常值函数. 但是
 
     .. math::
 
         \Phi(0) = \phi(0) = 0, ~ \Phi(1) = \phi(1) = 1,
 
-    这与 :math:`\Phi` 是常值函数矛盾，所以 :math:`\Phi` 不是绝对连续函数。
+    这与 :math:`\Phi` 是常值函数矛盾, 所以 :math:`\Phi` 不是绝对连续函数.
 
-    :math:`\Phi` 不是绝对连续函数也可以利用定义进行证明。同样利用反证法，假设 :math:`\Phi` 是绝对连续的，
+    :math:`\Phi` 不是绝对连续函数也可以利用定义进行证明. 同样利用反证法, 假设 :math:`\Phi` 是绝对连续的,
     那么对于任意的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`, 使得对于任意有限多个互不相交的开区间 :math:`(a_i, b_i), i = 1, \dots, n`, 只要
 
     .. math::
@@ -441,10 +441,10 @@
 
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \sum\limits_{i=1}^{n} \lvert \Phi(b_i) - \Phi(a_i) \rvert < \varepsilon.
 
-    不妨把 :math:`\Phi` 延拓到 :math:`\mathbb{R}` 上，其中 :math:`\Phi(x) = 0` 当 :math:`x < 0`, :math:`\Phi(x) = 1` 当 :math:`x > 1`.
-    我们已经证明了 Cantor 三分集 :math:`P_0` 是一个零测集，也就是说对于 :math:`\delta`, 总存在开集 :math:`G`, 使得 :math:`m(G) < \delta`,
-    且 :math:`P_0 \subset G`. 令 :math:`G` 的结构表示为 :math:`G = \bigcup\limits_{i} I_i`, 其中 :math:`I_i = (a_i, b_i)` 是互不相交的开区间。
-    又由于 :math:`P_0` 是有界闭集，那么可以从它的开覆盖 :math:`G` 中选出有限个开区间 :math:`I_1, \dots, I_n`,
+    不妨把 :math:`\Phi` 延拓到 :math:`\mathbb{R}` 上, 其中 :math:`\Phi(x) = 0` 当 :math:`x < 0`, :math:`\Phi(x) = 1` 当 :math:`x > 1`.
+    我们已经证明了 Cantor 三分集 :math:`P_0` 是一个零测集, 也就是说对于 :math:`\delta`, 总存在开集 :math:`G`, 使得 :math:`m(G) < \delta`,
+    且 :math:`P_0 \subset G`. 令 :math:`G` 的结构表示为 :math:`G = \bigcup\limits_{i} I_i`, 其中 :math:`I_i = (a_i, b_i)` 是互不相交的开区间.
+    又由于 :math:`P_0` 是有界闭集, 那么可以从它的开覆盖 :math:`G` 中选出有限个开区间 :math:`I_1, \dots, I_n`,
     使得 :math:`P_0 \subset \bigcup\limits_{i=1}^{n} I_i`. 那么有
 
     .. math::
@@ -458,7 +458,7 @@
 
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) < \varepsilon.
 
-    另一方面，每一个闭区间 :math:`[b_i, a_{i+1}], i = 1, \dots, n-1`, 都包含于 :math:`G_0` 的某个构成区间中，而 Cantor 函数在这些构成区间上是常值函数，于是
+    另一方面, 每一个闭区间 :math:`[b_i, a_{i+1}], i = 1, \dots, n-1`, 都包含于 :math:`G_0` 的某个构成区间中, 而 Cantor 函数在这些构成区间上是常值函数, 于是
 
     .. math::
 
@@ -472,4 +472,4 @@
 
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \Phi(b_n) - \Phi(a_1) = 1.
 
-    这与式 :eq:`eq:cau-real-analysis-exam2024-4-2-1` 矛盾，因此 :math:`\Phi` 不是绝对连续的。
+    这与式 :eq:`eq:cau-real-analysis-exam2024-4-2-1` 矛盾, 因此 :math:`\Phi` 不是绝对连续的.

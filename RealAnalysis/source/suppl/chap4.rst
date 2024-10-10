@@ -5,24 +5,25 @@
 
 1. 令 :math:`\varphi = \chi_{(\alpha, \beta)}`, 其中 :math:`(\alpha, \beta) \subset E = [-\pi, \pi]`, 那么
 
-.. math::
+   .. math::
 
-    \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} \mathrm{d}u = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v
+        \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} \mathrm{d}u
+        = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v
 
-一致有界，即存在常数 :math:`C` 使得 :math:`\|\varphi_n\|_{\infty} \leq C` 对所有 :math:`n` 成立。
+   一致有界, 即存在常数 :math:`C` 使得 :math:`\|\varphi_n\|_{\infty} \leq C` 对所有 :math:`n` 成立.
 
 .. proof:proof::
 
-    由对称性，只需要考虑 :math:`0 \leqslant \alpha - x \leqslant \beta - x \leqslant \pi` 的情况。此时，
-    被积函数 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 的分母在被积区间 :math:`\left(\dfrac{\alpha-x}{2}, \dfrac{\beta-x}{2}\right)` 上非负，
-    且单调递增。有一个重要的观察是，令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`,
+    由对称性, 只需要考虑 :math:`0 \leqslant \alpha - x \leqslant \beta - x \leqslant \pi` 的情况. 此时,
+    被积函数 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 的分母在被积区间 :math:`\left(\dfrac{\alpha-x}{2}, \dfrac{\beta-x}{2}\right)` 上非负,
+    且单调递增. 有一个重要的观察是, 令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`,
     那么在相邻的区间 :math:`I_k` 和 :math:`I_{k+1}` 上有
 
     .. math::
 
         \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert,
 
-    但积分值的符号相反， :math:`k` 为奇数时为正， :math:`k` 为偶数时为负。那么令
+    但积分值的符号相反, :math:`k` 为奇数时为正, :math:`k` 为偶数时为负. 那么令
 
     .. math::
 
@@ -47,20 +48,20 @@
         \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \\
         & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
 
-    总之，有
+    总之, 有
 
     .. math::
 
         \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
 
-    我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`, 在 :math:`[0, \pi/(2n+1)]` 恒负，因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减，
-    于是有
+    我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`,
+    在 :math:`[0, \pi/(2n+1)]` 恒负, 因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
 
     .. math::
 
         \lvert \varphi_n (x) \rvert \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) \mathrm{d}v = \dfrac{2}{\pi} \cdot \dfrac{\pi}{2n+1} \cdot (2n+1) = 2.
 
-    这样就证明了 :math:`\varphi_n` 一致有界。
+    这样就证明了 :math:`\varphi_n` 一致有界.
 
     .. note::
 
@@ -74,23 +75,23 @@
 
 .. _thm-differentiation-under-integral-sign:
 
-2. 积分号下求导定理：设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上，
-且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有 :math:`f(x, t)` 关于 :math:`t` 处处可微。
-若存在 :math:`F(x) \in L_E` 使得
+2. 积分号下求导定理：设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上,
+   且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有 :math:`f(x, t)` 关于 :math:`t` 处处可微.
+   若存在 :math:`F(x) \in L_E` 使得
 
-.. math::
+   .. math::
 
-    \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall (x, t) \in E \times (\alpha, \beta),
+      \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall (x, t) \in E \times (\alpha, \beta),
 
-那么
+   那么
 
-.. math::
+   .. math::
 
-    \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} \mathrm{d}x.
+      \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} \mathrm{d}x.
 
 .. proof:proof::
 
-    由微分中值定理，有
+    由微分中值定理, 有
 
     .. math::
 
@@ -98,8 +99,8 @@
         & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h \mathrm{d}x \\
         & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x, \quad \theta(h) \in (0, 1).
 
-    那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族，
-    且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为 指标集 :math:`(0, 1)` 的聚点，由 Lebesgue 控制收敛定理，有
+    那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族,
+    且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为 指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
 
     .. math::
 
@@ -111,83 +112,83 @@
 
 3. 关于勒贝格积分与微分关系的图表
 
-约定一些集合（空间）的记号
+   约定一些集合（空间）的记号
 
-.. math::
+   .. math::
 
-    L_{[a, b]} & = [a, b] \text{ 区间上的 Lebesgue 可积函数}, \\
-    L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
-    B([a, b]) & = [a, b] \text{ 区间上处处有限的函数}, \\
-    AB([a, b]) & = [a, b] \text{ 区间上几乎处处有限的函数}, \\
-    BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
-    AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
+      L_{[a, b]} & = [a, b] \text{ 区间上的 Lebesgue 可积函数}, \\
+      L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
+      B([a, b]) & = [a, b] \text{ 区间上处处有限的函数}, \\
+      AB([a, b]) & = [a, b] \text{ 区间上几乎处处有限的函数}, \\
+      BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
+      AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
 
-以上都是线性空间。勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性）映射展开的，可以用下面的图表来表示：
+   以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性）映射展开的, 可以用下面的图表来表示：
 
-.. tikz::
-    :align: center
-    :xscale: 80
-    :libs: arrows.meta,positioning,calc,cd
+   .. tikz::
+      :align: center
+      :xscale: 80
+      :libs: arrows.meta,positioning,calc,cd
 
-    \node (L0) at (0, 0) {$L_0$};
-    \node (L) at (2, 0) {$L_{[a, b]}$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=2ex,yshift=1ex] L0) arc (90:270:0.5ex) -- (L);
+      \node (L0) at (0, 0) {$L_0$};
+      \node (L) at (2, 0) {$L_{[a, b]}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=2ex,yshift=1ex] L0) arc (90:270:0.5ex) -- (L);
 
-    \node (B) at (5, 0) {$B([a, b])$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}] (L) -- (B) node[midway,above] {$\int$};
+      \node (B) at (5, 0) {$B([a, b])$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}] (L) -- (B) node[midway,above] {$\int$};
 
-    \node (BV) at (5, -2) {$BV([a, b])$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] BV) arc (180:360:0.5ex) -- (B);
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- (BV) node[midway,right] {$\int$};
+      \node (BV) at (5, -2) {$BV([a, b])$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] BV) arc (180:360:0.5ex) -- (B);
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- (BV) node[midway,right] {$\int$};
 
-    \node (AC) at (5, -4) {$AC([a, b])$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=2ex] AC) arc (180:360:0.5ex) -- (BV);
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,right] {$\int$};
+      \node (AC) at (5, -4) {$AC([a, b])$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=2ex] AC) arc (180:360:0.5ex) -- (BV);
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,right] {$\int$};
 
-    \node (p1) at (2, -4) {$L_{[a, b]} / L_0$};
-    \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L) -- (p1) node[midway,left] {$\operatorname{pr}$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int$};
+      \node (p1) at (2, -4) {$L_{[a, b]} / L_0$};
+      \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L) -- (p1) node[midway,left] {$\operatorname{pr}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int$};
 
-    \node (AB) at (8, -2) {$AB([a, b])$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV) -- (AB) node[midway,above] {$\widetilde{\mathrm{d}}$};
+      \node (AB) at (8, -2) {$AB([a, b])$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV) -- (AB) node[midway,above] {$\widetilde{\mathrm{d}}$};
 
-    \node (L_again) at (8, -4) {$L_{[a, b]}$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] L_again) arc (180:360:0.5ex) -- (AB);
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{\mathrm{d}}$};
+      \node (L_again) at (8, -4) {$L_{[a, b]}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] L_again) arc (180:360:0.5ex) -- (AB);
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{\mathrm{d}}$};
 
-    \node (p2) at (11, -4) {$L_{[a, b]} / L_0$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
-    \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{\mathrm{d}}~\circ~\int = \operatorname{id}$} (p2);
+      \node (p2) at (11, -4) {$L_{[a, b]} / L_0$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{\mathrm{d}}~\circ~\int = \operatorname{id}$} (p2);
 
-以上的 :math:`\int` 表示勒贝格积分， :math:`\widetilde{\mathrm{d}}` 表示微分（几乎处处有定义，没有定义的集合是零测集，
-约定微分取值为 :math:`0`）， :math:`\hookrightarrow` 表示自然的嵌入（包含）映射， :math:`\operatorname{pr}` 表示商映射。
-虚线的箭头就是相关的定理。
+   以上的 :math:`\int` 表示勒贝格积分, :math:`\widetilde{\mathrm{d}}` 表示微分（几乎处处有定义, 没有定义的集合是零测集,
+   约定微分取值为 :math:`0`）, :math:`\hookrightarrow` 表示自然的嵌入（包含）映射, :math:`\operatorname{pr}` 表示商映射.
+   虚线的箭头就是相关的定理.
 
 .. _thm-tonelli:
 
-4. Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的非负可测函数，
-其中 :math:`E \subset \mathbb{R}^m`, :math:`F \subset \mathbb{R}^n` 都是可测集，那么有
+4. Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的非负可测函数,
+   其中 :math:`E \subset \mathbb{R}^m`, :math:`F \subset \mathbb{R}^n` 都是可测集, 那么有
 
-    * 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测， :math:`a.e. x \in E`;
-    * 截口 :math:`f^y(x)` 关于 :math:`x` 在 :math:`E` 上非负可测， :math:`a.e. y \in F`;
-    * 记 :math:`\displaystyle g(x) = \int_F f(x, y) \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
-    * 记 :math:`\displaystyle h(y) = \int_E f(x, y) \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
-    * 有如下的等式成立
+      * 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测, :math:`a.e. x \in E`;
+      * 截口 :math:`f^y(x)` 关于 :math:`x` 在 :math:`E` 上非负可测, :math:`a.e. y \in F`;
+      * 记 :math:`\displaystyle g(x) = \int_F f(x, y) \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
+      * 记 :math:`\displaystyle h(y) = \int_E f(x, y) \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
+      * 有如下的等式成立
 
-    .. math::
+      .. math::
 
-        \int_{E \times F} f(x, y) \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.
+         \int_{E \times F} f(x, y) \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.
 
-    .. note::
+      .. note::
 
-        与 Fubini 定理结合起来，可以得到 Fubini-Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数，那么
+         与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
 
-        .. math::
+         .. math::
 
-            \int_{E \times F} \lvert f(x, y) \rvert \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F \lvert f(x, y) \rvert \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E \lvert f(x, y) \rvert \mathrm{d}x \right) \mathrm{d}y.
+               \int_{E \times F} \lvert f(x, y) \rvert \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F \lvert f(x, y) \rvert \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E \lvert f(x, y) \rvert \mathrm{d}x \right) \mathrm{d}y.
 
-        若上式三项中的任意一项有限（即可积），那么进一步会有
+         若上式三项中的任意一项有限（即可积）, 那么进一步会有
 
-        .. math::
+         .. math::
 
-            \int_{E \times F} f(x, y) \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.
+               \int_{E \times F} f(x, y) \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.

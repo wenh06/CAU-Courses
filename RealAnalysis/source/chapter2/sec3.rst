@@ -23,7 +23,7 @@
 
       m (E_1 \cup E_2) = m (E_1 \setminus E_2) + m (E_2 \setminus E_1) + m (E_1 \cap E_2).
 
-   另一方面，:math:`E_1` 有互斥分解 :math:`E_1 = (E_1 \setminus E_2) \cup (E_1 \cap E_2)`，
+   另一方面，:math:`E_1` 有互斥分解 :math:`E_1 = (E_1 \setminus E_2) \cup (E_1 \cap E_2)`,
    所以根据测度的完全可加性有 :math:`m E_1 = m (E_1 \setminus E_2) + m (E_1 \cap E_2)`.
    同理 :math:`m E_2 = m (E_2 \setminus E_1) + m (E_1 \cap E_2)`，所以有
 
@@ -68,6 +68,39 @@
       m^* (E \cup A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
       m_* (E \cup A) + m_* (E \cap A) \geqslant m_* E + m_* A.
 
+.. _ex-2-11:
+
+11. 设 :math:`\{ E_n \}` 为 :math:`[0, 1]` 中的集列，满足
+
+    .. math::
+
+      \sum\limits_{n=1}^\infty m^* E_n = \infty,
+
+   问是否有 :math:`m^* \left( \varlimsup\limits_{n} E_n \right) > 0`?
+
+.. proof:solution::
+
+   不一定。反例如下：令 :math:`E_n = \left[ 0, \dfrac{1}{n} \right]`, 那么有 :math:`m^* E_n = \dfrac{1}{n}`, 从而有
+
+   .. math::
+
+      \sum\limits_{n=1}^\infty m^* E_n = \sum\limits_{n=1}^\infty \dfrac{1}{n} = \infty.
+
+   但是 :math:`\varlimsup\limits_{n} E_n = \{ 0 \}`, 从而有 :math:`m^* \left( \varlimsup\limits_{n} E_n \right) = 0`.
+
+.. _ex-2-12:
+
+12. 设 :math:`E` 为可测集，问二式 :math:`m \overline{E} = m E, m E^{\circ} = m E` 是否成立？这里 :math:`\overline{E}` 是 :math:`E` 的闭包，
+    :math:`E^{\circ}` 是由 :math:`E` 的一切内点所成的集 (即 :math:`E` 的内部).
+
+.. proof:solution::
+
+   不一定。反例如下：
+
+   令 :math:`E = \mathbb{Q} \cap [0, 1]`, 那么有 :math:`m E = 0`, 但是 :math:`\overline{E} = [0, 1]`, 从而有 :math:`m \overline{E} = 1`.
+
+   设 :math:`E` 为一个胖 Cantor 集 (具体构造见 :ref:`本节第 20 题 <ex-2-20>`), 那么有 :math:`m E > 0`, 但是 :math:`E^{\circ} = \emptyset`, 从而有 :math:`m E^{\circ} = 0`.
+
 .. _ex-2-13:
 
 13. 设 :math:`G` 是开集， :math:`E` 是零测度集，试证 :math:`\overline{G} = \overline{G \setminus E}`.
@@ -82,7 +115,7 @@
       \mathring{U} (x) \cap G \neq \emptyset \\
       \mathring{U} (x) \cap (G \setminus E) = \emptyset.
 
-   由于 :math:`G` 是开集，所以 :math:`\mathring{U} (x) \cap G` 也是开集。任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
+   由于 :math:`G` 是开集，所以 :math:`\mathring{U} (x) \cap G` 也是开集. 任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
    那么有 :math:`(a, b) \subset E`，这与 :math:`E` 是零测度集矛盾，所以 :math:`\overline{G} = \overline{G \setminus E}`.
 
 .. _ex-2-14:
@@ -149,7 +182,7 @@
       x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in [0, 1),
 
    并从 :math:`[0, 1) / \sim` 的每个等价类中取一个元素，构成集合 :math:`E`, 那么由本章第四节定理 4.1 知 :math:`E` 是一个不可测集，
-   从而有 :math:`m^* E > 0`, 否则它就是零测集，从而可测。令
+   从而有 :math:`m^* E > 0`, 否则它就是零测集，从而可测. 令
 
    .. math::
 
@@ -207,6 +240,45 @@
 
    矛盾，所以 :math:`m A = m \left( \bigcap\limits_{k=1}^n A_k \right) > 0`.
 
+.. _ex-2-19:
+
+19. 设 :math:`m^* E = q > 0`, 证明对任何数 :math:`c \in (0, q)`, 有子集 :math:`E_0 \subset E` 使得 :math:`m E_0 = c`.
+
+.. proof:proof::
+
+   对任意 :math:`c \in (0, q)`, 考虑函数
+
+   .. math::
+
+      \varphi: ~ \mathbb{R}_{\geqslant 0} \rightarrow \mathbb{R}, ~ \varphi (t) = m^* (E \cap [-t, t]).
+
+   对于 :math:`0 \leqslant t_1 < t_2`, 有
+
+   .. math::
+
+      \varphi (t_1) \leqslant \varphi (t_2) & = m^* (E \cap [-t_2, t_2])\\
+      & \leqslant m^* ((E \cap [-t_1, t_1]) \cup [-t_2, -t_1] \cup [t_1, t_2]) \\
+      & \leqslant m^* (E \cap [-t_1, t_1]) + 2 (t_2 - t_1) = \varphi (t_1) + 2 (t_2 - t_1),
+
+   从而知 :math:`\varphi` 是一个连续单调增函数.
+
+   我们断言可以取到 :math:`t_1 \in \mathbb{R}_{> 0}` 使得 :math:`\varphi (t_1) > c`.
+   这是因为如果这样的 :math:`t_1` 不存在，那么必然有 :math:`m^* E \leqslant c`，这与题设矛盾. 于是由连续函数的介值定理有
+
+   .. math::
+
+      \varphi([0, t_0]) \supset [\varphi(0), \varphi(t_0)] = [0, \varphi(t_0)].
+
+   特别地, 存在 :math:`t_0 \in [0, t_1]` 使得 :math:`\varphi(t_0) = c`. 令 :math:`E_0 = E \cap [-t_0, t_0]`，那么有 :math:`m E_0 = \varphi(t_0) = c`.
+
+   .. note::
+
+      若进一步利用 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`，可以找到 :math:`G_{\delta}`-集 :math:`A_0`, 即 :math:`E_0` 的等测包，使得
+
+      .. math::
+
+         m A_0 = m^* E_0 = c.
+
 .. _ex-2-20:
 
 20. 试作一闭集 :math:`F \subset [0, 1]`，使 :math:`F` 中不含任何开区间，而 :math:`m F = 1/2`.
@@ -221,10 +293,44 @@
 
       \sum\limits_{n=1}^\infty 2^{n-1} a^n = \dfrac{a}{1 - 2a}.
 
-   以上就是从 :math:`[0, 1]` 中挖去的开集的测度。那么得到的闭集的测度为
+   以上就是从 :math:`[0, 1]` 中挖去的开集的测度. 那么得到的闭集的测度为
 
    .. math::
 
       1 - \dfrac{a}{1 - 2a} = \dfrac{1 - 3a}{1 - 2a},
 
-   且不含任何开区间。当 :math:`a = 1/4` 时，闭集的测度为 :math:`1/2`.
+   且不含任何开区间. 当 :math:`a = 1/4` 时，闭集的测度为 :math:`1/2`. 这样的集合被称为胖 Cantor 集, 或者称为 Smith-Volterra-Cantor 集,
+   或者 :math:`\varepsilon`-Cantor 集.
+
+.. _ex-2-21:
+
+21. 试证定义在 :math:`(-\infty, \infty)` 上的单调函数的不连续点集至多可列, 因而为零测度集.
+
+.. proof:proof::
+
+   待写
+
+.. _ex-2-22:
+
+22. 设 :math:`\{ E_n \}` 为可测集列且 :math:`\displaystyle \sum\limits_{n=1}^\infty m E_n < \infty`,
+    证明 :math:`\displaystyle m \left( \varlimsup\limits_{n} E_n \right) = 0`.
+
+.. proof:proof::
+
+   由于 :math:`\displaystyle \sum\limits_{n=1}^\infty m E_n < \infty`, 所以对任意 :math:`\varepsilon > 0`, 存在 :math:`N \in \mathbb{N}`,
+   使得 :math:`\displaystyle \sum\limits_{n=N}^\infty m E_n < \varepsilon`. 那么有
+
+   .. math::
+
+      m \left( \varlimsup\limits_{n} E_n \right) & = m \left( \bigcap\limits_{n=1}^{\infty} \bigcup\limits_{k=n}^{\infty} E_k \right) \\
+      & \leqslant m \left( \bigcup\limits_{k=N}^{\infty} E_k \right) \leqslant \sum\limits_{k=N}^{\infty} m E_k < \varepsilon.
+
+   由于 :math:`\varepsilon` 是任意的，所以有 :math:`m \left( \varlimsup\limits_{n} E_n \right) = 0`.
+
+.. _ex-2-23:
+
+23. 试证: 若存在可测集 :math:`X \supset E`, 满足 :math:`m X < \infty` 与 :math:`m X = m^* E + m^* (X \setminus E)`, 则 :math:`E` 是可测的.
+
+.. proof:proof::
+
+   待写
