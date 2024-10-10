@@ -19,9 +19,13 @@
 
     .. math::
 
-        1 - x < x \left[ \dfrac{1}{x} \right] \leqslant 1.
+        \begin{cases}
+            1 - x < x \left[ \dfrac{1}{x} \right] \leqslant 1, & \text{若} x > 0, \\
+            1 \leqslant x \left[ \dfrac{1}{x} \right] < 1 - x, & \text{若} x < 0.
+        \end{cases}
 
-    由夹逼定理知 :math:`\lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] = 1`.
+    总之，有 :math:`1 - \lvert x \rvert < x \left[ \dfrac{1}{x} \right] < 1 + \lvert x \rvert`,
+    从而由夹逼定理知 :math:`\lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] = 1`.
 
 2. 求极限 :math:`\lim\limits_{x \to 1} x^{\frac{1}{1 - x}}`
 
