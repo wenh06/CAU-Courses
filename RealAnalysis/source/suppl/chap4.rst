@@ -65,7 +65,7 @@
 
     .. note::
 
-        Dirichlet 核 :math:`\dfrac{\sin\frac{2n+1}{2}v}{\sin\frac{1}{2}v}` 的图像如下所示：
+        Dirichlet 核 :math:`\dfrac{\sin\frac{2n+1}{2}v}{\sin\frac{1}{2}v}` 的图像如下所示:
 
         .. image:: ../_static/images/Dirichlet_kernels.svg
             :align: center
@@ -75,7 +75,7 @@
 
 .. _thm-differentiation-under-integral-sign:
 
-2. 积分号下求导定理：设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上,
+2. 积分号下求导定理: 设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上,
    且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有 :math:`f(x, t)` 关于 :math:`t` 处处可微.
    若存在 :math:`F(x) \in L_E` 使得
 
@@ -123,7 +123,7 @@
       BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
       AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
 
-   以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性）映射展开的, 可以用下面的图表来表示：
+   以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性）映射展开的, 可以用下面的图表来表示:
 
    .. tikz::
       :align: center
@@ -166,7 +166,7 @@
 
 .. _thm-tonelli:
 
-4. Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的非负可测函数,
+4. Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的非负可测函数,
    其中 :math:`E \subset \mathbb{R}^m`, :math:`F \subset \mathbb{R}^n` 都是可测集, 那么有
 
       * 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测, :math:`a.e. x \in E`;
@@ -181,7 +181,7 @@
 
       .. note::
 
-         与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理：设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
+         与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
 
          .. math::
 

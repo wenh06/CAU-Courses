@@ -9,7 +9,7 @@
 
       m^*(E) = \inf\limits_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
 
-    对于二维情形如何？
+    对于二维情形如何?
 
 .. proof:proof::
 

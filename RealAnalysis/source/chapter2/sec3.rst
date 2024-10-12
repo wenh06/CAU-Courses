@@ -39,7 +39,7 @@
 
       m^* (E \cup A) + m^* (E \cap A) = m E + m^* A;
 
-    :math:`E` 不可测时如何？
+    :math:`E` 不可测时如何?
 
 .. proof:proof::
 
@@ -80,7 +80,7 @@
 
 .. proof:solution::
 
-   不一定. 反例如下：令 :math:`E_n = \left[ 0, \dfrac{1}{n} \right]`, 那么有 :math:`m^* E_n = \dfrac{1}{n}`, 从而有
+   不一定. 反例如下: 令 :math:`E_n = \left[ 0, \dfrac{1}{n} \right]`, 那么有 :math:`m^* E_n = \dfrac{1}{n}`, 从而有
 
    .. math::
 
@@ -90,12 +90,12 @@
 
 .. _ex-2-12:
 
-12. 设 :math:`E` 为可测集, 问二式 :math:`m \overline{E} = m E, m E^{\circ} = m E` 是否成立？这里 :math:`\overline{E}` 是 :math:`E` 的闭包,
+12. 设 :math:`E` 为可测集, 问二式 :math:`m \overline{E} = m E, m E^{\circ} = m E` 是否成立?这里 :math:`\overline{E}` 是 :math:`E` 的闭包,
     :math:`E^{\circ}` 是由 :math:`E` 的一切内点所成的集 (即 :math:`E` 的内部).
 
 .. proof:solution::
 
-   不一定. 反例如下：
+   不一定. 反例如下:
 
    令 :math:`E = \mathbb{Q} \cap [0, 1]`, 那么有 :math:`m E = 0`, 但是 :math:`\overline{E} = [0, 1]`, 从而有 :math:`m \overline{E} = 1`.
 
@@ -316,7 +316,7 @@
 
 .. proof:solution::
 
-   按如下方法修改 Cantor 三分集的构造：第一次去掉中间的开区间, 长度为 :math:`0 < a \leqslant 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间,
+   按如下方法修改 Cantor 三分集的构造: 第一次去掉中间的开区间, 长度为 :math:`0 < a \leqslant 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间,
    长度为 :math:`a^2`; 依此构造, 第 :math:`n` 次去掉剩下 :math:`2^{n-1}` 个闭区间中间的开区间, 长度为 :math:`a^n`.
    这样, 被去掉的开区间的总长度为
 

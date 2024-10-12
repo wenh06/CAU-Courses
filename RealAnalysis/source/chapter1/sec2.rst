@@ -3,7 +3,7 @@
 
 .. _ex-1-7:
 
-7. 试作下列各题中集之间的一一对应：
+7. 试作下列各题中集之间的一一对应:
 
    (1). :math:`[0, 1)` 与 :math:`(0, 1)`;
 
@@ -17,7 +17,7 @@
 
 .. proof:solution::
 
-   (1). 由于 :math:`(0, 1)` 中有理数是可列的, 记为 :math:`\{ r_1, r_2, \dots, r_n, \dots \}`, 记 :math:`r_0 = 0`, 那么可以通过如下的映射给出一一对应：
+   (1). 由于 :math:`(0, 1)` 中有理数是可列的, 记为 :math:`\{ r_1, r_2, \dots, r_n, \dots \}`, 记 :math:`r_0 = 0`, 那么可以通过如下的映射给出一一对应:
 
    .. math::
 
@@ -35,7 +35,7 @@
    所以我们只要给出 :math:`\mathbb{R}` 与无理数集 :math:`\mathbb{R} \setminus \mathbb{Q}` 的一一对应即可.
    记集 :math:`A = \mathbb{Q} + \sqrt{2} = \{ r + \sqrt{2} : \ r \in \mathbb{Q} \} = \{ a_1, a_2, \dots, a_n, \dots \}`,
    那么集 :math:`A` 是可列集且 :math:`A \cap \mathbb{Q} = \emptyset`. 记 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`,
-   那么可以通过如下的映射给出一一对应：
+   那么可以通过如下的映射给出一一对应:
 
    .. math::
 
@@ -67,7 +67,7 @@
       \mathbb{H}_3 & = \{ (x, y) \in \mathbb{H} : \ x^2 + y^2 = 1 \}.
       \end{align*}
 
-   我们给出对应部分之间的一一映射：
+   我们给出对应部分之间的一一映射:
 
    .. math::
 
@@ -77,8 +77,8 @@
       \mathbb{D}_3 & \to \mathbb{H}_3: \quad (x, 0) \mapsto (x, \sqrt{1 - x^2}).
       \end{align*}
 
-   另解：将 :math:`\mathbb{R}^2` 与 :math:`\mathbb{C}` 对等, 那么 :math:`\mathbb{D} = \{ z \in \mathbb{C} : \ \lvert z \rvert < 1 \}` 到
-   :math:`\mathbb{H} = \{ z \in \mathbb{C} : \ \mathfrak{Im} (z) > 0 \}` 的一一对应可以通过 Möbius 变换给出：
+   另解: 将 :math:`\mathbb{R}^2` 与 :math:`\mathbb{C}` 对等, 那么 :math:`\mathbb{D} = \{ z \in \mathbb{C} : \ \lvert z \rvert < 1 \}` 到
+   :math:`\mathbb{H} = \{ z \in \mathbb{C} : \ \mathfrak{Im} (z) > 0 \}` 的一一对应可以通过 Möbius 变换给出:
 
    .. math::
 
@@ -115,7 +115,7 @@
 
 .. _ex-1-9:
 
-9. 问下列各集能否与自然数集或区间 :math:`[0, 1]` 构成一一对应：
+9. 问下列各集能否与自然数集或区间 :math:`[0, 1]` 构成一一对应:
 
    (1). 以有理数为端点的区间集；
 
@@ -127,11 +127,11 @@
 
    (1). 以有理数为端点的（开）区间集为 :math:`A = \left\{ (a, b) : \ a < b, a, b \in \mathbb{Q} \right\}`. 首先, :math:`A` 是 :math:`\mathbb{Q}^2` 的子集；
    另一方面, 可以通过单射 :math:`\mathbb{Q} \to A: \ a \mapsto (a, a + 1)` 将 :math:`\mathbb{Q}` 视为 :math:`A` 的子集, 从而集合 :math:`A` 是可列的.
-   令 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`, 那么 :math:`A` 到自然数集 :math:`\mathbb{N}` 的一一对应可以通过如下方式构造：
+   令 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`, 那么 :math:`A` 到自然数集 :math:`\mathbb{N}` 的一一对应可以通过如下方式构造:
 
    首先, 将集合 :math:`A` 改写为 :math:`A = \left\{ (a, d) : \ a \in \mathbb{Q}, d \in \mathbb{Q}^+ \right\}`, 其中 :math:`d` 为区间长度.
    那么 :math:`A \cong \mathbb{Q} \times \mathbb{Q}^+`. 我们可以定义 :math:`\mathbb{Q}^* = \mathbb{Q} \setminus \{ 0 \}` 上的高度函数
-   :math:`H: \mathbb{Q}^* \to \mathbb{N}` 如下：
+   :math:`H: \mathbb{Q}^* \to \mathbb{N}` 如下:
 
    .. math::
 
@@ -139,7 +139,7 @@
       \text{其中} \dfrac{p}{q} \text{ 是既约分数}, q > 0.
 
    那么 :math:`\mathbb{Q}` 以及 :math:`\mathbb{Q}^+` 中高度等于定值 :math:`h` 的元素全体是有限集, 于是可以通过如下的排序方式分别给出 :math:`\mathbb{Q}`
-   以及 :math:`\mathbb{Q}^+` 到 :math:`\mathbb{N}` 的一一对应：
+   以及 :math:`\mathbb{Q}^+` 到 :math:`\mathbb{N}` 的一一对应:
 
    .. math::
 
@@ -176,7 +176,7 @@
 
       见 :ref:`习题1.7 <ex-1-7>`.
 
-   (2). 这题是课本 §2 的例1, 做法如下：
+   (2). 这题是课本 §2 的例1, 做法如下:
 
    将 :math:`[0, 1]` 中的数写成二进制小数的形式 :math:`x = 0.x_1x_2 \cdots`, 相应的一一对应关系为
 
@@ -214,7 +214,7 @@
    相应的值 :math:`f(a_n) = (-1)^n` 不能对应于任何连续函数. 于是 :math:`C[0, 1]` 与 :math:`\mathbb{R}^{\mathbb{N}}` 的真子集对等.
    由 Cantor-Bernstein 定理, 有 :math:`C[0, 1]` 与 :math:`\mathbb{R}` 对等, 从而它的势为 :math:`\aleph`.
 
-   这里, 我们还需要说明 :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等, 或者等价地, :math:`(0, 1)^{\mathbb{N}}` 与 :math:`(0, 1)` 对等：
+   这里, 我们还需要说明 :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等, 或者等价地, :math:`(0, 1)^{\mathbb{N}}` 与 :math:`(0, 1)` 对等:
 
    .. math::
 
@@ -257,7 +257,7 @@
 
    .. note::
 
-      利用选择公理 (或者 Zorn 引理) 的证明方法：考虑集 :math:`A` 的所有满足如下条件的子集族
+      利用选择公理 (或者 Zorn 引理) 的证明方法: 考虑集 :math:`A` 的所有满足如下条件的子集族
 
       .. math::
 
@@ -267,7 +267,7 @@
       由包含关系定义偏序关系, 那么任一全序子集都是上界, 从而根据 Zorn 引理, 存在极大元素 :math:`\mathcal{S} = \{ S_i \}_{i \in I}`.
       那么 :math:`\bigcup_{i \in I} S_i` 要么等于 :math:`A`, 要么等于 :math:`A \setminus \{ x \}`, 其中 :math:`x` 是 :math:`A` 中的一个元素.
       由于 :math:`A` 与 :math:`A \setminus \{ x \}` 对等, 所以只要对 :math:`\bigcup_{i \in I} S_i = A` 的情况证明即可.
-      记 :math:`S_i = \{ a_{i0}, a_{i1} \}`, 那么可以通过如下的映射给出一个没有不动点的置换：
+      记 :math:`S_i = \{ a_{i0}, a_{i1} \}`, 那么可以通过如下的映射给出一个没有不动点的置换:
 
       .. math::
 
@@ -282,7 +282,7 @@
 
 .. _ex-1-14:
 
-14. 设 :math:`f: X \to Y` 是满射, :math:`A \subset X, B \subset Y`. 问下列四个关系中哪些是正确的, 哪些不是：
+14. 设 :math:`f: X \to Y` 是满射, :math:`A \subset X, B \subset Y`. 问下列四个关系中哪些是正确的, 哪些不是:
 
     (1). :math:`f^{-1}(f(A)) = A`;
 
@@ -338,5 +338,5 @@
 
 .. rubric:: 注
 
-.. [1] 这是根据本节例1的结论得到的：“设集 :math:`A` 与 :math:`[0, 1]` 对等, :math:`B` 是可列集, 则 :math:`A \cup B` 与 :math:`A \setminus B` 均与 :math:`[0, 1]` 对等. ”
+.. [1] 这是根据本节例1的结论得到的: “设集 :math:`A` 与 :math:`[0, 1]` 对等, :math:`B` 是可列集, 则 :math:`A \cup B` 与 :math:`A \setminus B` 均与 :math:`[0, 1]` 对等. ”
        而 :math:`[0, 1]` 又与 :math:`[0, 1)` 对等, 所以 :math:`A` 与 :math:`[0, 1)` 对等.

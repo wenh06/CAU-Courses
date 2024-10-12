@@ -27,7 +27,7 @@
 
    (2). 求极限 :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)`.
 
-   提示：利用带佩亚诺型余项的麦克劳林公式
+   提示: 利用带佩亚诺型余项的麦克劳林公式
 
    .. math::
 
@@ -59,7 +59,7 @@
         & = - \dfrac{t(1 - t + o(t)) - (t - \dfrac{t^2}{2} + o(t^2))}{t^2} \\
         & = \dfrac{1}{2} + o(1).
 
-    于是， :math:`\lim\limits_{t \to 0} \dfrac{y'(t)}{y(t)} = \dfrac{1}{2}`, 从而有 :math:`\lim\limits_{t \to 0} y'(t) = \dfrac{1}{2e}`.
+    于是, :math:`\lim\limits_{t \to 0} \dfrac{y'(t)}{y(t)} = \dfrac{1}{2}`, 从而有 :math:`\lim\limits_{t \to 0} y'(t) = \dfrac{1}{2e}`.
 
     (2). 由于
 
@@ -76,13 +76,13 @@
         = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - \left( \dfrac{1}{1 + t} \right)^{\frac{1}{t}}}{t}
         = \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - y(t)}{t}
 
-    化为了 :math:`\dfrac{0}{0}` 型的不定式。对上式利用洛必达法则可得
+    化为了 :math:`\dfrac{0}{0}` 型的不定式. 对上式利用洛必达法则可得
 
     .. math::
 
         \lim\limits_{t \to 0} \dfrac{\dfrac{1}{e} - y(t)}{t} = \lim\limits_{t \to 0} \dfrac{- y'(t)}{1} = - \dfrac{1}{2e}.
 
-    因此， :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right) = - \dfrac{1}{2e}`.
+    因此, :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right) = - \dfrac{1}{2e}`.
 
 4. 设 :math:`0 < a < b`, 证明存在 :math:`\xi \in (a, b)`, 使得
 
@@ -90,7 +90,7 @@
 
         a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
-   提示：两边同时除以 :math:`ab`, 构造辅助函数，并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
+   提示: 两边同时除以 :math:`ab`, 构造辅助函数, 并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
 
 .. proof:solution::
 
@@ -100,7 +100,7 @@
 
         \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
 
-    考虑函数 :math:`f(x) = x e^{\frac{1}{x}}`, 则 :math:`f'(x) = e^{\frac{1}{x}} \left(1 - \dfrac{1}{x}\right)`, 由拉格朗日中值定理可得，
+    考虑函数 :math:`f(x) = x e^{\frac{1}{x}}`, 则 :math:`f'(x) = e^{\frac{1}{x}} \left(1 - \dfrac{1}{x}\right)`, 由拉格朗日中值定理可得,
     存在 :math:`\tau \in \left( \dfrac{1}{b}, \dfrac{1}{a} \right)`, 使得
 
     .. math::
@@ -114,7 +114,7 @@
         \dfrac{e^b}{b} - \dfrac{e^a}{a} = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left(1 - \dfrac{1}{\tau}\right) e^{\frac{1}{\tau}}
         = \left(\dfrac{1}{a} - \dfrac{1}{b}\right) \left( 1 - \xi \right) e^\xi.
 
-    上式两边同时乘以 :math:`ab` 即可得到题目要证明的结论：
+    上式两边同时乘以 :math:`ab` 即可得到题目要证明的结论:
 
     .. math::
 
@@ -122,14 +122,14 @@
 
     .. note::
 
-        另一种方法：令 :math:`f(x) = \dfrac{e^x}{x}, g(x) = \dfrac{1}{x}`, 那么有
+        另一种方法: 令 :math:`f(x) = \dfrac{e^x}{x}, g(x) = \dfrac{1}{x}`, 那么有
 
         .. math::
 
             f'(x) = \dfrac{e^x}{x^2} \left(x - 1\right), \quad g'(x) = - \dfrac{1}{x^2}.
 
-        :math:`f(x), g(x)` 在闭区间 :math:`[a, b]` 上连续，且在开区间 :math:`(a, b)` 上可导，且 :math:`g(x) = \dfrac{1}{x}` 在闭区间 :math:`[a, b]` 上恒不为零，
-        那么根据柯西中值定理可知，存在 :math:`\xi \in (a, b)`, 使得
+        :math:`f(x), g(x)` 在闭区间 :math:`[a, b]` 上连续, 且在开区间 :math:`(a, b)` 上可导, 且 :math:`g(x) = \dfrac{1}{x}` 在闭区间 :math:`[a, b]` 上恒不为零,
+        那么根据柯西中值定理可知, 存在 :math:`\xi \in (a, b)`, 使得
 
         .. math::
 
@@ -159,7 +159,7 @@
 
         f''(e) = \dfrac{2 \ln e - 3}{e^3} = - \dfrac{1}{e^3} < 0.
 
-    所以 :math:`x = e` 是极大值点， :math:`y = e^{1 / e}` 是相应的极大值.
+    所以 :math:`x = e` 是极大值点, :math:`y = e^{1 / e}` 是相应的极大值.
 
     .. note::
 

@@ -11,7 +11,7 @@
 
    (2). 求极限 :math:`\lim\limits_{x \to \infty} x \left( \dfrac{1}{e} - \left( \dfrac{x}{x + 1} \right)^x \right)`.
 
-   提示：利用带佩亚诺型余项的麦克劳林公式
+   提示: 利用带佩亚诺型余项的麦克劳林公式
 
    .. math::
 
@@ -24,6 +24,6 @@
 
         a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
-   提示：两边同时除以 :math:`ab`, 构造辅助函数，并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
+   提示: 两边同时除以 :math:`ab`, 构造辅助函数, 并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.
 
 5. 求函数 :math:`y = x^{1/x}, x > 0` 的极大值.

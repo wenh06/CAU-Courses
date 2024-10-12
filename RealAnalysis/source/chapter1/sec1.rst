@@ -13,9 +13,9 @@
 
    (4). :math:`(A \setminus B) \setminus (C \setminus D) \subset (A \setminus C) \cup (D \setminus B).`
 
-   (5). :math:`(A \setminus B) \cup C = A \setminus (B \setminus C)` 成立的充要条件是什么？
+   (5). :math:`(A \setminus B) \cup C = A \setminus (B \setminus C)` 成立的充要条件是什么?
 
-   (6). :math:`A \cup (B \setminus C) = (A \cup B) \setminus C` 是否成立？
+   (6). :math:`A \cup (B \setminus C) = (A \cup B) \setminus C` 是否成立?
 
 .. proof:proof::
 
@@ -87,7 +87,7 @@
 
       E \cup \bigcap_{\alpha \in I} A_{\alpha} = \bigcap_{\alpha \in I} (E \cup A_{\alpha})
 
-是否恒成立？
+是否恒成立?
 
 .. proof:proof::
 

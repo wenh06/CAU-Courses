@@ -1,7 +1,7 @@
 第二章  导数与微分
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..  contents:: :local:
+.. contents:: :local:
 
 
 课后习题解答
@@ -27,7 +27,7 @@
 
 .. proof:solution::
 
-    :math:`y = 2^x` 的导函数为 :math:`y' = 2^x \ln 2`, 所以在点 :math:`(1, 2)` 处切线斜率，即该点处的导数值为 :math:`y'|_{x=1} = 2 \ln 2`.
+    :math:`y = 2^x` 的导函数为 :math:`y' = 2^x \ln 2`, 所以在点 :math:`(1, 2)` 处切线斜率, 即该点处的导数值为 :math:`y'|_{x=1} = 2 \ln 2`.
     所以切线方程为 :math:`y - 2 = 2 \ln 2 (x - 1)`, 即 :math:`y = 2 \ln 2 x - 2 \ln 2 + 2`.
 
     法线的斜率为 :math:`-\frac{1}{2 \ln 2}`, 所以法线方程为 :math:`y - 2 = -\frac{1}{2 \ln 2} (x - 1)`, 即 :math:`y = -\frac{1}{2 \ln 2} x + \frac{1}{2 \ln 2} + 2`.
@@ -40,7 +40,7 @@
 
     :math:`f'_{-}(0) = a \cos 0 = a`, :math:`f'_{+}(0) = e^0 = 1`, 所以 :math:`a = 1`.
 
-6. 已知函数可导，将下列极限用导数表示出来：
+6. 已知函数可导, 将下列极限用导数表示出来:
 
 (3). 设 :math:`f(0) = 0`, 求 :math:`\lim_{h \to 0} \frac{f(h)}{h}`.
 
@@ -50,14 +50,14 @@
 
         \lim_{h \to 0} \frac{f(h)}{h} = \lim_{h \to 0} \frac{f(h) - f(0)}{h - 0} = f'(0)
 
-7. 讨论函数在 :math:`x = 0` 处的可导性：
+7. 讨论函数在 :math:`x = 0` 处的可导性:
 
 (2). :math:`f(x) = \begin{cases} x^2 \cos \dfrac{1}{x}, & x \ne 0 \\ 0, & x = 0 \end{cases}`.
 
 .. proof:solution::
 
-    首先， :math:`f(x)` 在 :math:`x = 0` 处连续，因为 :math:`\lim\limits_{x \to 0} f(x) = \lim\limits_{x \to 0} x^2 \cos \dfrac{1}{x} = 0 = f(0)`.
-    接下来考虑 :math:`f(x)` 在 :math:`x = 0` 处的左右导数是否相等：
+    首先, :math:`f(x)` 在 :math:`x = 0` 处连续, 因为 :math:`\lim\limits_{x \to 0} f(x) = \lim\limits_{x \to 0} x^2 \cos \dfrac{1}{x} = 0 = f(0)`.
+    接下来考虑 :math:`f(x)` 在 :math:`x = 0` 处的左右导数是否相等:
 
     .. math::
 
@@ -76,7 +76,7 @@
 §2.2 函数的求导法则
 --------------------------------
 
-1. 求下列函数的导数：
+1. 求下列函数的导数:
 
 (2). :math:`y = x^5 \left( \dfrac{1}{x} + \sqrt{x} \right)`; (4) :math:`y = (1 + \tan x) \ln x`;
 
@@ -136,9 +136,9 @@
 
 (1). :math:`y = \sin x + \cos x`, 求 :math:`y'|_{x = \frac{\pi}{4}`;
 
-(3). :math:`y = \dfrac{x + \sqrt{x}}{1 + \sqrt{x}}`,  求 :math:`y'|_{x = 1}`;
+(3). :math:`y = \dfrac{x + \sqrt{x}}{1 + \sqrt{x}}`, 求 :math:`y'|_{x = 1}`;
 
-(5). 设 :math:`\varphi(x)` 是连续函数， :math:`f(x) = (1 - x^2) \varphi(x)`, 求 :math:`f'(1)`.
+(5). 设 :math:`\varphi(x)` 是连续函数, :math:`f(x) = (1 - x^2) \varphi(x)`, 求 :math:`f'(1)`.
 
 .. proof:solution::
 
@@ -146,7 +146,7 @@
 
     (3). :math:`y' = \left( \dfrac{\sqrt{x} (1 + \sqrt{x})}{1 + \sqrt{x}} \right)' = \left( \sqrt{x} \right)' = \dfrac{1}{2 \sqrt{x}}`, 所以 :math:`y'|_{x = 1} = \dfrac{1}{2}`.
 
-    (5). 由于 :math:`\varphi` 只是连续函数，不知道是否可导，所以需要用定义求 :math:`f(x) = (1 - x^2) \varphi(x)` 的导数
+    (5). 由于 :math:`\varphi` 只是连续函数, 不知道是否可导, 所以需要用定义求 :math:`f(x) = (1 - x^2) \varphi(x)` 的导数
 
     .. math::
 
@@ -163,13 +163,13 @@
 
 .. proof:solution::
 
-    先求曲线与坐标轴交点。由于曲线在 :math:`x = 0` 处无定义，即与 :math:`y` 轴无交点，所以只需求 :math:`x` 轴交点。曲线与 :math:`x` 轴交点为 :math:`x - \dfrac{1}{x} = 0`,
+    先求曲线与坐标轴交点. 由于曲线在 :math:`x = 0` 处无定义, 即与 :math:`y` 轴无交点, 所以只需求 :math:`x` 轴交点. 曲线与 :math:`x` 轴交点为 :math:`x - \dfrac{1}{x} = 0`,
     解得 :math:`x = \pm 1`, 所以曲线与坐标轴交点为 :math:`(-1, 0)` 和 :math:`(1, 0)`.
 
-    曲线 :math:`y = x - \dfrac{1}{x}` 的导函数为 :math:`y' = 1 + \dfrac{1}{x^2}`, 所以在点 :math:`(-1, 0)` 处切线斜率，即该点处的导数值为 :math:`y'|_{x=-1} = 1 + \dfrac{1}{(-1)^2} = 2`，
+    曲线 :math:`y = x - \dfrac{1}{x}` 的导函数为 :math:`y' = 1 + \dfrac{1}{x^2}`, 所以在点 :math:`(-1, 0)` 处切线斜率, 即该点处的导数值为 :math:`y'|_{x=-1} = 1 + \dfrac{1}{(-1)^2} = 2`,
     所以切线方程为 :math:`y - 0 = 2 (x + 1)`, 即 :math:`y = 2x + 2`; 法线的斜率为 :math:`-\dfrac{1}{2}`, 所以法线方程为 :math:`y - 0 = -\dfrac{1}{2} (x + 1)`, 即 :math:`y = -\dfrac{1}{2} x - \dfrac{1}{2}`. 类似可求得曲线在点 :math:`(1, 0)` 处的切线方程为 :math:`y = 2x - 2`, 法线方程为 :math:`y = -\dfrac{1}{2} x + \dfrac{1}{2}`.
 
-4. 求下列函数的导数：
+4. 求下列函数的导数:
 
 (2). :math:`y = \sin x^5`; (4). :math:`y = e^{\cos 2x}`;
 
@@ -194,7 +194,7 @@
 §2.3 高阶导数
 --------------------------------
 
-1. 求下列函数的二阶导数：
+1. 求下列函数的二阶导数:
 
 (2). :math:`y = \ln (x + \sqrt{x^2 + 4})`;
 
@@ -225,7 +225,7 @@
         y' & = 2 \cos 2x \\
         y'' & = -4 \sin 2x
 
-2. 若 :math:`f(x)` 的二阶导数存在，求下列函数 :math:`y` 的二阶导数 :math:`\dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2}`:
+2. 若 :math:`f(x)` 的二阶导数存在, 求下列函数 :math:`y` 的二阶导数 :math:`\dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2}`:
 
 (2). :math:`y = \ln f(x)`.
 
@@ -236,7 +236,7 @@
         y' & = \dfrac{1}{f(x)} \cdot f'(x) \\
         y'' & = \dfrac{1}{f(x)} \cdot f''(x) - \dfrac{1}{f^2(x)} \cdot (f'(x))^2 = \dfrac{f''(x) f(x) - (f'(x))^2}{f^2(x)}
 
-3. 验证函数关系式：
+3. 验证函数关系式:
 
 (2). :math:`y = \dfrac{x - 3}{x - 4}` 满足关系式 :math:`2y'^2 = (y - 1) y''`.
 
@@ -256,7 +256,7 @@
 
     所以 :math:`2y'^2 = (y - 1) y''`.
 
-4. 求下列函数的高阶导数：
+4. 求下列函数的高阶导数:
 
 (2). :math:`y = x (e^{x} + e^{-x})`, 求 :math:`y^{(99)}`.
 
@@ -268,7 +268,7 @@
         y'' & = e^x - e^{-x} + e^x - e^{-x} + x (e^x + e^{-x}) = 2(e^x - e^{-x}) + x (e^x + e^{-x}) \\
         y^{(3)} & = 2(e^x + e^{-x}) + e^x + e^{-x} + x (e^x - e^{-x}) = 3(e^x + e^{-x}) + x (e^x - e^{-x})
 
-    所以可以猜测 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`, 用数学归纳法证明：
+    所以可以猜测 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`, 用数学归纳法证明:
 
     .. math::
 
@@ -283,7 +283,7 @@
 
         y^{(99)} = 99(e^x + (-1)^{98} e^{-x}) + x (e^x + (-1)^{99} e^{-x}) = 99(e^x + e^{-x}) + x (e^x - e^{-x}).
 
-    另解：利用 Leibniz 公式 :math:`(uv)^{(n)} = \sum\limits_{k = 0}^n C_n^k u^{(k)} v^{(n - k)}`, 有
+    另解: 利用 Leibniz 公式 :math:`(uv)^{(n)} = \sum\limits_{k = 0}^n C_n^k u^{(k)} v^{(n - k)}`, 有
 
     .. math::
 
@@ -295,7 +295,7 @@
 §2.4 隐函数与参数方程所确定的函数的导数
 ------------------------------------------
 
-1. 求下列隐函数所确定的函数的导数：
+1. 求下列隐函数所确定的函数的导数:
 
 (1). :math:`x^3 + y^3 - 3xy = 0`;
 
@@ -371,11 +371,11 @@
 
     函数 :math:`y = x^2 + 1` 的微分为 :math:`\mathrm{d} y = 2x \mathrm{d} x`, 所以当 :math:`x = 1` 时 :math:`\mathrm{d} y = 2 \mathrm{d} x`.
 
-    当 :math:`\Delta x = 0.1` 时， :math:`\Delta y = f(1 + 0.1) - f(1) = 2.21 - 2 = 0.21, \mathrm{d} y = 2 \cdot 0.1 = 0.2`.
+    当 :math:`\Delta x = 0.1` 时, :math:`\Delta y = f(1 + 0.1) - f(1) = 2.21 - 2 = 0.21, \mathrm{d} y = 2 \cdot 0.1 = 0.2`.
 
-    当 :math:`\Delta x = 0.01` 时， :math:`\Delta y = f(1 + 0.01) - f(1) = 2.0201 - 2 = 0.0201, \mathrm{d} y = 2 \cdot 0.01 = 0.02`.
+    当 :math:`\Delta x = 0.01` 时, :math:`\Delta y = f(1 + 0.01) - f(1) = 2.0201 - 2 = 0.0201, \mathrm{d} y = 2 \cdot 0.01 = 0.02`.
 
-2. 求下列函数的微分：
+2. 求下列函数的微分:
 
 (1). :math:`y = x^2 + \sqrt{x}`;
 
@@ -401,7 +401,7 @@
     (9). 对等式两边求微分有 :math:`3x^2 \mathrm{d} x + 3y^2 \mathrm{d} y - 6xy \mathrm{d} x - 3x^2 \mathrm{d} y - 6xy \mathrm{d} y - 3y^2 \mathrm{d} x = 0`,
     所以 :math:`(y^2 - 2xy - x^2) \mathrm{d} y = (2xy - x^2 + y^2) \mathrm{d} x`, 即有 :math:`\mathrm{d} y = \dfrac{y^2 + 2xy - x^2}{y^2 - 2xy + x^2} \mathrm{d} x`.
 
-3. 将适当的函数填入括号中，使得下列等式成立：
+3. 将适当的函数填入括号中, 使得下列等式成立:
 
 (2). :math:`\mathrm{d} (\quad) = \dfrac{1}{x^2} \mathrm{d} x`;
 
@@ -417,11 +417,11 @@
 
     (6). 由于 :math:`\left( \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`, 所以 :math:`\mathrm{d} \left( \arctan^2 x + C \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
 
-    以上的 :math:`C` 为常数。
+    以上的 :math:`C` 为常数.
 
     .. note::
 
-        一般地，可以把 :math:`\mathrm{d} x` 变形，将整个表示式变成基本初等函数的微分。例如第 (6) 题：
+        一般地, 可以把 :math:`\mathrm{d} x` 变形, 将整个表示式变成基本初等函数的微分. 例如第 (6) 题:
 
         .. math::
 
@@ -429,7 +429,7 @@
             & = \arctan x \cdot \mathrm{d} (\arctan x) \\
             & = \mathrm{d} (\arctan^2 x + C)
 
-4. 求下列近似值：
+4. 求下列近似值:
 
 (2). :math:`e^{1.01}`.
 
@@ -438,7 +438,7 @@
     由于 :math:`e^x` 在 :math:`x = 1` 处的导数为 :math:`e^x`, 在 :math:`x = 1` 附近有 :math:`e^{x + \Delta x} \approx e^x + e^x \cdot \Delta x`,
     那么 :math:`e^{1.01} \approx e^1 + e^1 \cdot 0.01 \approx 2.71828 + 2.71828 \cdot 0.01 = 2.74546`.
 
-5. 当 :math:`x` 很小时，证明近似公式：
+5. 当 :math:`x` 很小时, 证明近似公式:
 
 (2). :math:`\ln (1 + \sin x) \approx x`.
 
@@ -447,14 +447,14 @@
     由于 :math:`\ln (1 + \sin x)` 在 :math:`x = 0` 处的值为 :math:`0`, 导数为 :math:`\left.\dfrac{\cos x}{1 + \sin x}\right|_{x = 0} = 1`,
     所以在 :math:`x = 0` 附近有 :math:`\ln (1 + \sin x) \approx 0 + 1 \cdot x = x`.
 
-7. 已知单摆的运动规律为 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}`, 其中 :math:`y` 是运动周期，:math:`g` 为重力加速度，:math:`x` 为摆长。如果摆长增加 :math:`1\%`, 单摆的运动周期约增加多少？
+7. 已知单摆的运动规律为 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}`, 其中 :math:`y` 是运动周期, :math:`g` 为重力加速度, :math:`x` 为摆长. 如果摆长增加 :math:`1\%`, 单摆的运动周期约增加多少?
 
 .. proof:solution::
 
-    单摆运动周期 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}` 关于摆长 :math:`x` 的导数为 :math:`\dfrac{\pi}{\sqrt{g x}}`, 那么当摆长增加 :math:`1\%` 时，单摆的运动周期增加约
+    单摆运动周期 :math:`y = 2\pi \sqrt{\dfrac{x}{g}}` 关于摆长 :math:`x` 的导数为 :math:`\dfrac{\pi}{\sqrt{g x}}`, 那么当摆长增加 :math:`1\%` 时, 单摆的运动周期增加约
     :math:`\dfrac{\pi}{\sqrt{g x}} \cdot 0.01 x = \pi \sqrt{\dfrac{x}{g}} \cdot 0.01 = \dfrac{y}{2} \cdot 0.01 = y \cdot 0.005`, 所以单摆的运动周期约 :math:`0.5\%`.
 
-    另解：直接利用弹性函数，当 :math:`x` 增加 :math:`1\%` 时， :math:`y` 增加比例为
+    另解: 直接利用弹性函数, 当 :math:`x` 增加 :math:`1\%` 时, :math:`y` 增加比例为
 
     .. math::
 
@@ -463,47 +463,47 @@
 §2.6 微分中值定理
 --------------------------------
 
-1. 验证函数 :math:`f(x) = x \sqrt{1 - x^2}` 在 :math:`[-1, 1]` 满足罗尔定理。
+1. 验证函数 :math:`f(x) = x \sqrt{1 - x^2}` 在 :math:`[-1, 1]` 满足罗尔定理.
 
 .. proof:solution::
 
-    (1). :math:`f(x) = x \sqrt{1 - x^2}` 是初等函数，在定义区间 :math:`[-1, 1]` 上连续。
+    (1). :math:`f(x) = x \sqrt{1 - x^2}` 是初等函数, 在定义区间 :math:`[-1, 1]` 上连续.
 
-    (2). :math:`f'(x) = \sqrt{1 - x^2} - \dfrac{x^2}{\sqrt{1 - x^2}}`, 其在开区间 :math:`(-1, 1)` 内有定义，所以 :math:`f(x)` 在开区间 :math:`(-1, 1)` 内可导。
+    (2). :math:`f'(x) = \sqrt{1 - x^2} - \dfrac{x^2}{\sqrt{1 - x^2}}`, 其在开区间 :math:`(-1, 1)` 内有定义, 所以 :math:`f(x)` 在开区间 :math:`(-1, 1)` 内可导.
 
     (3). :math:`f(-1) = f(1) = 0`.
 
-3. 设 :math:`f(x)` 在 :math:`[a, b]` 连续可微，在 :math:`(a, b)` 二阶可微，且 :math:`f(a) = f(b) = f'(a) = 0`, 证明 :math:`f''(x) = 0` 在 :math:`(a, b)` 内至少有一个根。
+3. 设 :math:`f(x)` 在 :math:`[a, b]` 连续可微, 在 :math:`(a, b)` 二阶可微, 且 :math:`f(a) = f(b) = f'(a) = 0`, 证明 :math:`f''(x) = 0` 在 :math:`(a, b)` 内至少有一个根.
 
 .. proof:proof::
 
-    由于 :math:`f(a) = f(b) = 0`, 所以根据罗尔定理，存在 :math:`\xi \in (a, b)` 使得 :math:`f'(\xi) = 0`.
+    由于 :math:`f(a) = f(b) = 0`, 所以根据罗尔定理, 存在 :math:`\xi \in (a, b)` 使得 :math:`f'(\xi) = 0`.
 
-    考察函数 :math:`f'(x)`, 它在闭区间 :math:`[a, \xi]` 上连续，在开区间 :math:`(a, \xi)` 内可导，且 :math:`f'(a) = f'(\xi) = 0`, 所以根据罗尔定理，
+    考察函数 :math:`f'(x)`, 它在闭区间 :math:`[a, \xi]` 上连续, 在开区间 :math:`(a, \xi)` 内可导, 且 :math:`f'(a) = f'(\xi) = 0`, 所以根据罗尔定理,
     存在 :math:`\eta \in (a, \xi)` 使得 :math:`f''(\eta) = 0`.
 
-    注意：这题用了两次罗尔定理。
+    注意: 这题用了两次罗尔定理.
 
-4. 已知 :math:`c_0 + \dfrac{c_1}{2} + \cdots + \dfrac{c_n}{n + 1} = 0`, 证明 :math:`p(x) = c_0 + c_1 x + \cdots + c_n x^n = 0` 至少有一正实根。
+4. 已知 :math:`c_0 + \dfrac{c_1}{2} + \cdots + \dfrac{c_n}{n + 1} = 0`, 证明 :math:`p(x) = c_0 + c_1 x + \cdots + c_n x^n = 0` 至少有一正实根.
 
 .. proof:proof::
 
-    考察函数 :math:`f(x) = c_0 x + \dfrac{c_1}{2} x^2 + \cdots + \dfrac{c_n}{n + 1} x^{n + 1}`, 它是一个多项式，因此在闭区间 :math:`[0, 1]` 上连续，在开区间 :math:`(0, 1)` 内可导，
-    而且 :math:`f(0) = f(1) = 0`, 所以根据罗尔定理，存在 :math:`\xi \in (0, 1)` 使得 :math:`0 = f'(\xi) = c_0 + c_1 \xi + \cdots + c_n \xi^n`, 即 :math:`p(\xi) = 0`.
-    因此， :math:`p(x)` 至少有一正实根 :math:`\xi`.
+    考察函数 :math:`f(x) = c_0 x + \dfrac{c_1}{2} x^2 + \cdots + \dfrac{c_n}{n + 1} x^{n + 1}`, 它是一个多项式, 因此在闭区间 :math:`[0, 1]` 上连续, 在开区间 :math:`(0, 1)` 内可导,
+    而且 :math:`f(0) = f(1) = 0`, 所以根据罗尔定理, 存在 :math:`\xi \in (0, 1)` 使得 :math:`0 = f'(\xi) = c_0 + c_1 \xi + \cdots + c_n \xi^n`, 即 :math:`p(\xi) = 0`.
+    因此, :math:`p(x)` 至少有一正实根 :math:`\xi`.
 
 6. 求证 :math:`\arcsin x + \arccos x \equiv \dfrac{\pi}{2} (\lvert x \rvert \leqslant 1)`.
 
 .. proof:proof::
 
     考虑函数 :math:`f(x) = \arcsin x + \arccos x, \lvert x \rvert \leqslant 1`. 它的导数为 :math:`f'(x) = \dfrac{1}{\sqrt{1 - x^2}} - \dfrac{1}{\sqrt{1 - x^2}} = 0`,
-    所以 :math:`f(x)` 在闭区间 :math:`[-1, 1]` 上是常数函数。易知 :math:`f(0) = \dfrac{\pi}{2}`, 所以 :math:`f(x) \equiv \dfrac{\pi}{2}`.
+    所以 :math:`f(x)` 在闭区间 :math:`[-1, 1]` 上是常数函数. 易知 :math:`f(0) = \dfrac{\pi}{2}`, 所以 :math:`f(x) \equiv \dfrac{\pi}{2}`.
 
-7. 证明：当 :math:`a > b > 0` 时， :math:`\dfrac{a - b}{a} < \ln \dfrac{a}{b} < \dfrac{a - b}{b}`.
+7. 证明: 当 :math:`a > b > 0` 时, :math:`\dfrac{a - b}{a} < \ln \dfrac{a}{b} < \dfrac{a - b}{b}`.
 
 .. proof:proof::
 
-    考虑函数 :math:`f(x) = \ln x, x > 0`. 它的导数为 :math:`f'(x) = \dfrac{1}{x}`. 对 函数 :math:`f(x)` 在区间 :math:`[b, a]` 上应用拉格朗日中值定理，存在 :math:`\xi \in (b, a)` 使得
+    考虑函数 :math:`f(x) = \ln x, x > 0`. 它的导数为 :math:`f'(x) = \dfrac{1}{x}`. 对 函数 :math:`f(x)` 在区间 :math:`[b, a]` 上应用拉格朗日中值定理, 存在 :math:`\xi \in (b, a)` 使得
 
     .. math::
 
@@ -515,14 +515,14 @@
 
         \dfrac{a - b}{a} = \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = a} < \ln \dfrac{a}{b} < \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = b} = \dfrac{a - b}{b}.
 
-9. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，且有 :math:`f(a) = f(b) = 0`. 利用 :math:`g(x) = e^{-x} f(x)` 证明存在 :math:`\xi \in (a, b)` 使得 :math:`f(\xi) - f'(\xi) = 0`.
+9. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续, 在 :math:`(a, b)` 内可导, 且有 :math:`f(a) = f(b) = 0`. 利用 :math:`g(x) = e^{-x} f(x)` 证明存在 :math:`\xi \in (a, b)` 使得 :math:`f(\xi) - f'(\xi) = 0`.
 
 .. proof:proof::
 
-    由于函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，那么函数 :math:`g(x) = e^{-x} f(x)` 也在区间 :math:`[a, b]` 上连续，在 :math:`(a, b)` 内可导，
-    而且 :math:`g(a) = g(b) = 0`. 根据罗尔定理，存在 :math:`\xi \in (a, b)` 使得 :math:`g'(\xi) = e^{-\xi}(f'(\xi) - f(\xi)) = 0`, 即有 :math:`f(\xi) - f'(\xi) = 0`.
+    由于函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续, 在 :math:`(a, b)` 内可导, 那么函数 :math:`g(x) = e^{-x} f(x)` 也在区间 :math:`[a, b]` 上连续, 在 :math:`(a, b)` 内可导,
+    而且 :math:`g(a) = g(b) = 0`. 根据罗尔定理, 存在 :math:`\xi \in (a, b)` 使得 :math:`g'(\xi) = e^{-\xi}(f'(\xi) - f(\xi)) = 0`, 即有 :math:`f(\xi) - f'(\xi) = 0`.
 
-10. 求证：设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续，在 :math:`(a, b)` 内可导，则存在 :math:`\xi \in (a, b)` 使得
+10. 求证: 设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续, 在 :math:`(a, b)` 内可导, 则存在 :math:`\xi \in (a, b)` 使得
 
 .. math::
 
@@ -530,8 +530,8 @@
 
 .. proof:proof::
 
-    考虑函数 :math:`g(u) = f(e^{u})`. 由于 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续，在 :math:`(a, b)` 内可导，那么函数 :math:`g(u)` 在 :math:`[\ln a, \ln b]` 上连续，
-    在 :math:`(\ln a, \ln b)` 内可导。那么根据拉格朗日中值定理，存在 :math:`\eta \in (\ln a, \ln b)` 使得
+    考虑函数 :math:`g(u) = f(e^{u})`. 由于 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续, 在 :math:`(a, b)` 内可导, 那么函数 :math:`g(u)` 在 :math:`[\ln a, \ln b]` 上连续,
+    在 :math:`(\ln a, \ln b)` 内可导. 那么根据拉格朗日中值定理, 存在 :math:`\eta \in (\ln a, \ln b)` 使得
 
     .. math::
 
@@ -546,7 +546,7 @@
 §2.7 洛必达法则
 --------------------------------
 
-1. 应用洛必达法则求下列 :math:`\dfrac{0}{0}` 或 :math:`\dfrac{\infty}{\infty}` 型未定式的极限：
+1. 应用洛必达法则求下列 :math:`\dfrac{0}{0}` 或 :math:`\dfrac{\infty}{\infty}` 型未定式的极限:
 
 (2). :math:`\lim\limits_{x \to 0} \dfrac{1 - \cos x^2}{x^3 \sin x}`;
 
@@ -590,14 +590,14 @@
 
         \lim\limits_{x \to \frac{\pi}{6}} \dfrac{1 - 2\sin x}{\cos 3x} = \lim\limits_{x \to \frac{\pi}{6}} \dfrac{2\cos x}{3\sin 3x} = \dfrac{\sqrt{3}}{3}.
 
-    (10). 若 :math:`b > 0` 为正整数，那么
+    (10). 若 :math:`b > 0` 为正整数, 那么
 
     .. math::
 
         \lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} & = \lim\limits_{x \to +\infty} \dfrac{bx^{b-1}}{ae^{ax}} = \cdots \\
         & = \lim\limits_{x \to +\infty} \dfrac{b!}{a^b e^{ax}} = 0.
 
-    若 :math:`b > 0` 不是正整数，那么
+    若 :math:`b > 0` 不是正整数, 那么
 
     .. math::
 
@@ -610,7 +610,7 @@
 
         \lim\limits_{x \to 0^+} \dfrac{\ln x}{\cot x} = \lim\limits_{x \to 0^+} \dfrac{\dfrac{1}{x}}{-\csc^2 x} = \lim\limits_{x \to 0^+} -x \sin^2 x = 0.
 
-2. 应用洛必达法则求下列极限：
+2. 应用洛必达法则求下列极限:
 
 (1). :math:`\lim\limits_{x \to \pi} (\pi - x) \tan \dfrac{x}{2}`;
 
@@ -675,7 +675,7 @@
 
     所以 :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x = 1`.
 
-3. 求 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 极限，并验证计算时不能应用洛必达法则。
+3. 求 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 极限, 并验证计算时不能应用洛必达法则.
 
 .. proof:solution::
 
@@ -686,18 +686,18 @@
 
         \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = 0.
 
-    如果使用洛必达法则，这是 :math:`\dfrac{0}{0}` 型未定式，那么有
+    如果使用洛必达法则, 这是 :math:`\dfrac{0}{0}` 型未定式, 那么有
 
     .. math::
 
         \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = \lim\limits_{x \to 0} \dfrac{2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}}{\cos x}.
 
-    上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限（当 :math:`x \to 0`）不存在，所以不能使用洛必达法则。
+    上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限（当 :math:`x \to 0`）不存在, 所以不能使用洛必达法则.
 
 §2.8 泰勒公式
 --------------------------------
 
-1. 求函数 :math:`f(x) = \dfrac{1}{3 - x}` 在指定点 :math:`x_0 = 2` 的泰勒展开式。
+1. 求函数 :math:`f(x) = \dfrac{1}{3 - x}` 在指定点 :math:`x_0 = 2` 的泰勒展开式.
 
 .. proof:solution::
 
@@ -714,10 +714,10 @@
 
         f(x) = \sum\limits_{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!} (x - x_0)^k + R_n = \sum\limits_{k=0}^{k} (x - 2)^n + R_n,
 
-    其中 :math:`R_n = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1} = \dfrac{(n+1)!}{(3 - \xi)^{n+2}} (x - 2)^{n+1}` 为拉格朗日余项，
-    :math:`\xi` 介于 :math:`x_0` 和 :math:`x` 之间。
+    其中 :math:`R_n = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1} = \dfrac{(n+1)!}{(3 - \xi)^{n+2}} (x - 2)^{n+1}` 为拉格朗日余项,
+    :math:`\xi` 介于 :math:`x_0` 和 :math:`x` 之间.
 
-    另解：
+    另解:
 
     由于 :math:`f(x) = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)}`, 所以可以利用 :math:`\dfrac{1}{1 - t}` 在 :math:`t = 0` 附近的泰勒展开式
 
@@ -732,7 +732,7 @@
         f(x) & = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)} \\
         & = 1 + (x - 2) + (x - 2)^2 + \cdots + (x - 2)^n + o((x - 2)^n).
 
-2. 将下面函数的麦克劳林展开式写出来：
+2. 将下面函数的麦克劳林展开式写出来:
 
 (1). :math:`f(x) = e^{x^2}`;
 
@@ -782,7 +782,7 @@
 §2.9 函数的单调性与曲线的凹凸性
 --------------------------------
 
-1. 确定下列函数的单调区间：
+1. 确定下列函数的单调区间:
 
 (2). :math:`y = \sqrt{2x - x^2}`;
 
@@ -791,14 +791,14 @@
 .. proof:solution::
 
     (2). :math:`y = \sqrt{2x - x^2}` 的定义域为 :math:`[0, 2]`, 导函数为 :math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}}`. 令 :math:`y' = 0` 解得 :math:`x = 1`.
-    当 :math:`0 \leqslant x \leqslant 1` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} > 0`, 所以 :math:`y` 在 :math:`[0, 1]` 上单调递增；
-    当 :math:`1 \leqslant x \leqslant 2` 时，:math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} < 0`, 所以 :math:`y` 在 :math:`[1, 2]` 上单调递减.
+    当 :math:`0 \leqslant x \leqslant 1` 时, :math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} > 0`, 所以 :math:`y` 在 :math:`[0, 1]` 上单调递增；
+    当 :math:`1 \leqslant x \leqslant 2` 时, :math:`y' = \dfrac{1 - x}{\sqrt{2x - x^2}} < 0`, 所以 :math:`y` 在 :math:`[1, 2]` 上单调递减.
 
     (4). :math:`y = x^n e^{-x} \quad (n > 0, x \geqslant 0)` 的导函数为 :math:`y' = x^{n-1} e^{-x} (n - x)`. 令 :math:`y' = 0` 解得 :math:`x = n`.
-    当 :math:`0 \leqslant x \leqslant n` 时，:math:`y' = x^{n-1} e^{-x} (n - x) > 0`, 所以 :math:`y` 在 :math:`[0, n]` 上单调递增；
-    当 :math:`n \leqslant x` 时，:math:`y' = x^{n-1} e^{-x} (n - x) < 0`, 所以 :math:`y` 在 :math:`[n, +\infty)` 上单调递减.
+    当 :math:`0 \leqslant x \leqslant n` 时, :math:`y' = x^{n-1} e^{-x} (n - x) > 0`, 所以 :math:`y` 在 :math:`[0, n]` 上单调递增；
+    当 :math:`n \leqslant x` 时, :math:`y' = x^{n-1} e^{-x} (n - x) < 0`, 所以 :math:`y` 在 :math:`[n, +\infty)` 上单调递减.
 
-2. 应用函数的单调性证明下列不等式：
+2. 应用函数的单调性证明下列不等式:
 
 (1). :math:`2 \sqrt{x} > 3 - \dfrac{1}{x}, \quad x > 1`;
 
@@ -811,17 +811,17 @@
 
     (3). 令 :math:`f(x) = \sin x - \dfrac{2}{\pi} x`, 那么 :math:`f(x)` 的导函数为 :math:`f'(x) = \cos x - \dfrac{2}{\pi}`. 令 :math:`f'(x) = 0`,
     解得 :math:`x = \arccos \dfrac{2}{\pi}`. 在区间 :math:`[0, \arccos \dfrac{2}{\pi})` 上有 :math:`f'(x) > 0`,
-    所以 :math:`f(x)` 在 :math:`[0, \arccos \dfrac{2}{\pi}]` 上单调递增，从而有 :math:`f(x) > f(0) = 0` 对一切 :math:`0 < x \leqslant \arccos \dfrac{2}{\pi}` 成立。
-    在区间 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2})` 上有 :math:`f'(x) < 0`, 所以 :math:`f(x)` 在 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2}]` 上单调递减，
-    从而有 :math:`f(x) > f(\dfrac{\pi}{2}) = 0` 对一切 :math:`\arccos \dfrac{2}{\pi} \leqslant x < \dfrac{\pi}{2}` 成立。
-    于是 :math:`f(x) > 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立。
+    所以 :math:`f(x)` 在 :math:`[0, \arccos \dfrac{2}{\pi}]` 上单调递增, 从而有 :math:`f(x) > f(0) = 0` 对一切 :math:`0 < x \leqslant \arccos \dfrac{2}{\pi}` 成立.
+    在区间 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2})` 上有 :math:`f'(x) < 0`, 所以 :math:`f(x)` 在 :math:`[\arccos \dfrac{2}{\pi}, \dfrac{\pi}{2}]` 上单调递减,
+    从而有 :math:`f(x) > f(\dfrac{\pi}{2}) = 0` 对一切 :math:`\arccos \dfrac{2}{\pi} \leqslant x < \dfrac{\pi}{2}` 成立.
+    于是 :math:`f(x) > 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立.
 
-    另一方面，令 :math:`g(x) = x - \sin x`, 那么 :math:`g(x)` 的导函数为 :math:`g'(x) = 1 - \cos x`. 在区间 :math:`(0, \dfrac{\pi}{2})` 上恒有 :math:`g'(x) > 0`,
-    所以 :math:`g(x)` 在 :math:`(0, \dfrac{\pi}{2})` 上单调递增，从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立。
+    另一方面, 令 :math:`g(x) = x - \sin x`, 那么 :math:`g(x)` 的导函数为 :math:`g'(x) = 1 - \cos x`. 在区间 :math:`(0, \dfrac{\pi}{2})` 上恒有 :math:`g'(x) > 0`,
+    所以 :math:`g(x)` 在 :math:`(0, \dfrac{\pi}{2})` 上单调递增, 从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`0 < x < \dfrac{\pi}{2}` 成立.
 
-    综上所述， :math:`\dfrac{2}{\pi} x < \sin x < x, \quad 0 < x < \dfrac{\pi}{2}` 成立.
+    综上所述, :math:`\dfrac{2}{\pi} x < \sin x < x, \quad 0 < x < \dfrac{\pi}{2}` 成立.
 
-3. 确定下列函数确定曲线的凹凸区间与拐点：
+3. 确定下列函数确定曲线的凹凸区间与拐点:
 
 (3). :math:`y = (x^2 + 2x - 1) e^{-x}`.
 
@@ -834,21 +834,21 @@
         y' & = (2x + 2) e^{-x} - (x^2 + 2x - 1) e^{-x} = (3 - x^2) e^{-x} \\
         y'' & = (-2x) e^{-x} - (3 - x^2) e^{-x} = (x^2 - 2x - 3) e^{-x}.
 
-    令 :math:`y'' = 0` 解得 :math:`x = -1, x = 3`, 相应函数值分别为 :math:`y(-1) = -2e, y(3) = 14e^{-3}`. 当 :math:`-\infty < x < -1` 时，:math:`y'' > 0`,
-    所以曲线 在 :math:`(-\infty, -1)` 上是凹的；当 :math:`-1 < x < 3` 时，:math:`y'' < 0`, 所以曲线 在 :math:`(-1, 3)` 上是凸的；当 :math:`3 < x < +\infty` 时，
-    :math:`y'' > 0`, 所以曲线 在 :math:`(3, +\infty)` 上是凹的. 相应地，拐点为 :math:`(-1, -2e), (3, 14e^{-3})`.
+    令 :math:`y'' = 0` 解得 :math:`x = -1, x = 3`, 相应函数值分别为 :math:`y(-1) = -2e, y(3) = 14e^{-3}`. 当 :math:`-\infty < x < -1` 时, :math:`y'' > 0`,
+    所以曲线 在 :math:`(-\infty, -1)` 上是凹的；当 :math:`-1 < x < 3` 时, :math:`y'' < 0`, 所以曲线 在 :math:`(-1, 3)` 上是凸的；当 :math:`3 < x < +\infty` 时,
+    :math:`y'' > 0`, 所以曲线 在 :math:`(3, +\infty)` 上是凹的. 相应地, 拐点为 :math:`(-1, -2e), (3, 14e^{-3})`.
 
 4. 求参数 :math:`h > 0`, 使曲线 :math:`y = \dfrac{h}{\pi} e^{-h^2x^2}` 在 :math:`x = \pm \sigma` (:math:`\sigma > 0` 为给定的常数) 处有拐点.
 
 .. proof:solution::
 
     函数 :math:`y = \dfrac{h}{\sqrt{\pi}} e^{-h^2x^2}` 的二阶导函数为 :math:`y'' = \dfrac{2h^3(2h^2x^2 - 1)}{\sqrt{\pi}} e^{-h^2x^2}`.
-    令 :math:`y'' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{2} h}`. 在 :math:`x \in (-\infty, -\dfrac{1}{\sqrt{2} h})` 时，:math:`y'' > 0`,
-    曲线 在 :math:`(-\infty, -\dfrac{1}{\sqrt{2} h})` 上是凹的；在 :math:`x \in (-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 时，:math:`y'' < 0`,
-    曲线 在 :math:`(-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 上是凸的；在 :math:`x \in (\dfrac{1}{\sqrt{2} h}, +\infty)` 时，:math:`y'' > 0`,
-    曲线 在 :math:`(\dfrac{1}{\sqrt{2} h}, +\infty)` 上是凹的. 因此，当 :math:`h = \dfrac{1}{\sqrt{2} \sigma}` 时，曲线在 :math:`x = \pm \sigma` 处有拐点.
+    令 :math:`y'' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{2} h}`. 在 :math:`x \in (-\infty, -\dfrac{1}{\sqrt{2} h})` 时, :math:`y'' > 0`,
+    曲线 在 :math:`(-\infty, -\dfrac{1}{\sqrt{2} h})` 上是凹的；在 :math:`x \in (-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 时, :math:`y'' < 0`,
+    曲线 在 :math:`(-\dfrac{1}{\sqrt{2} h}, \dfrac{1}{\sqrt{2} h})` 上是凸的；在 :math:`x \in (\dfrac{1}{\sqrt{2} h}, +\infty)` 时, :math:`y'' > 0`,
+    曲线 在 :math:`(\dfrac{1}{\sqrt{2} h}, +\infty)` 上是凹的. 因此, 当 :math:`h = \dfrac{1}{\sqrt{2} \sigma}` 时, 曲线在 :math:`x = \pm \sigma` 处有拐点.
 
-5. 证明：若 :math:`f(x)` 二阶可导，且 :math:`f''(x) > 0, f(0) = 0`, 则 :math:`F(x) = \dfrac{f(x)}{x}` 在 :math:`(0, +\infty)` 上单调递增.
+5. 证明: 若 :math:`f(x)` 二阶可导, 且 :math:`f''(x) > 0, f(0) = 0`, 则 :math:`F(x) = \dfrac{f(x)}{x}` 在 :math:`(0, +\infty)` 上单调递增.
 
 .. proof:proof::
 
@@ -858,14 +858,14 @@
 
         g'(x) = f''(x) x + f'(x) - f'(x) = f''(x) x > 0,
 
-    所以 :math:`g(x)` 在 :math:`(0, +\infty)` 上单调递增，从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`x > 0` 成立。因此 :math:`F'(x) > 0` 对一切 :math:`x > 0` 成立，
-    即知 :math:`F(x)` 在 :math:`(0, +\infty)` 上单调递增。
+    所以 :math:`g(x)` 在 :math:`(0, +\infty)` 上单调递增, 从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`x > 0` 成立. 因此 :math:`F'(x) > 0` 对一切 :math:`x > 0` 成立,
+    即知 :math:`F(x)` 在 :math:`(0, +\infty)` 上单调递增.
 
 
 §2.10 函数的极值与最大值最小值
 --------------------------------
 
-1. 求下列函数的极值：
+1. 求下列函数的极值:
 
 (1). :math:`y = 2x^3 - 3x^2 - 12x + 20`;
 
@@ -876,23 +876,23 @@
 .. proof:solution::
 
     (1). 函数 :math:`y = 2x^3 - 3x^2 - 12x + 20` 的导函数为 :math:`y' = 6x^2 - 6x - 12`. 令 :math:`y' = 0` 解得 :math:`x = -1, x = 2`.
-    函数 :math:`y = 2x^3 - 3x^2 - 12x + 20` 的二阶导函数为 :math:`y'' = 12x - 6`. 当 :math:`x = -1` 时， :math:`y'' = -18 < 0`, 所以 :math:`x = -1` 为极大值点，
-    相应的极大值为 :math:`y(-1) = 27`; 当 :math:`x = 2` 时， :math:`y'' = 18 > 0`, 所以 :math:`x = 2` 为极小值点，相应的极小值为 :math:`y(2) = 0`.
+    函数 :math:`y = 2x^3 - 3x^2 - 12x + 20` 的二阶导函数为 :math:`y'' = 12x - 6`. 当 :math:`x = -1` 时, :math:`y'' = -18 < 0`, 所以 :math:`x = -1` 为极大值点,
+    相应的极大值为 :math:`y(-1) = 27`; 当 :math:`x = 2` 时, :math:`y'' = 18 > 0`, 所以 :math:`x = 2` 为极小值点, 相应的极小值为 :math:`y(2) = 0`.
 
-    (3). 函数 :math:`y = 1 - (1 - x)^{\frac{2}{3}}` 的导函数为 :math:`y' = \dfrac{2}{3} (1 - x)^{-\frac{1}{3}}`, 其在 :math:`x_0 = 1` 处不存在。
+    (3). 函数 :math:`y = 1 - (1 - x)^{\frac{2}{3}}` 的导函数为 :math:`y' = \dfrac{2}{3} (1 - x)^{-\frac{1}{3}}`, 其在 :math:`x_0 = 1` 处不存在.
     在不可导点 :math:`x_0 = 1` 的左侧 (即 :math:`x \in (-\infty, 1)`) 有 :math:`y' > 0`; 在右侧 (即 :math:`x \in (1, +\infty)`) 有 :math:`y' < 0`.
-    于是 :math:`x_0 = 1` 为极大值点，相应的极大值为 :math:`y(1) = 1`.
+    于是 :math:`x_0 = 1` 为极大值点, 相应的极大值为 :math:`y(1) = 1`.
 
     (5). 函数 :math:`y = x - \ln x` 的导函数为 :math:`y' = 1 - \dfrac{1}{x}, x > 0`, 令 :math:`y' = 0` 解得 :math:`x = 1`.
-    函数 :math:`y = x - \ln x` 的二阶导函数为 :math:`y'' = \dfrac{1}{x^2}`. 当 :math:`x = 1` 时， :math:`y'' = 1 > 0`, 所以 :math:`x = 1` 为极小值点，
+    函数 :math:`y = x - \ln x` 的二阶导函数为 :math:`y'' = \dfrac{1}{x^2}`. 当 :math:`x = 1` 时, :math:`y'' = 1 > 0`, 所以 :math:`x = 1` 为极小值点,
     相应的极小值为 :math:`y(1) = 1`.
 
-2. 设 :math:`f(x) = a \ln x + bx^2 + x` 在 :math:`x_1 = 1, x_2 = 2` 处有极值，求 :math:`a, b` 的值，并确定是取得极大值还是极小值.
+2. 设 :math:`f(x) = a \ln x + bx^2 + x` 在 :math:`x_1 = 1, x_2 = 2` 处有极值, 求 :math:`a, b` 的值, 并确定是取得极大值还是极小值.
 
 .. proof:solution::
 
     函数 :math:`f(x) = a \ln x + bx^2 + x` 的定义域为 :math:`(0, +\infty)`, 导函数为 :math:`f'(x) = \dfrac{a}{x} + 2bx + 1, x > 0`.
-    因为 :math:`x_1 = 1, x_2 = 2` 是函数 :math:`f(x)` 的极值点，所以有 :math:`f'(x_1) = f'(x_2) = 0`, 即
+    因为 :math:`x_1 = 1, x_2 = 2` 是函数 :math:`f(x)` 的极值点, 所以有 :math:`f'(x_1) = f'(x_2) = 0`, 即
 
     .. math::
 
@@ -900,27 +900,27 @@
         \dfrac{a}{2} + 4b + 1 = 0
 
     解得 :math:`a = -\dfrac{2}{3}, b = -\dfrac{1}{6}`.那么函数 :math:`f(x) = -\dfrac{2}{3} \ln x - \dfrac{1}{6} x^2 + x`,
-    其二阶导函数为 :math:`f''(x) = \dfrac{2}{3x^2} - \dfrac{1}{3}`. 因为 :math:`f''(x_1) = \dfrac{1}{3} > 0`, 所以 :math:`x_1 = 1` 为极小值点，
-    相应的极小值为 :math:`f(1) = \dfrac{5}{6}`; :math:`f''(x_2) = -\dfrac{1}{6} < 0`, 所以 :math:`x_2 = 2` 为极大值点，
+    其二阶导函数为 :math:`f''(x) = \dfrac{2}{3x^2} - \dfrac{1}{3}`. 因为 :math:`f''(x_1) = \dfrac{1}{3} > 0`, 所以 :math:`x_1 = 1` 为极小值点,
+    相应的极小值为 :math:`f(1) = \dfrac{5}{6}`; :math:`f''(x_2) = -\dfrac{1}{6} < 0`, 所以 :math:`x_2 = 2` 为极大值点,
     相应的极大值为 :math:`f(2) = \dfrac{4 - 2 \ln 2}{3}`.
 
-3. 设 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的，证明：若 :math:`x_0 \in I` 为 :math:`f(x)` 的极小值点，则 :math:`x_0` 为 :math:`f(x)` 在 :math:`I` 上的最小值点.
+3. 设 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的, 证明: 若 :math:`x_0 \in I` 为 :math:`f(x)` 的极小值点, 则 :math:`x_0` 为 :math:`f(x)` 在 :math:`I` 上的最小值点.
 
 .. proof:proof::
 
-    由于函数 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的，所以在区间 :math:`I` 上任取两点 :math:`x, y` 有
+    由于函数 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的, 所以在区间 :math:`I` 上任取两点 :math:`x, y` 有
 
     .. math::
 
         \lambda f(x) + (1 - \lambda) f(y) \geqslant f(\lambda x + (1 - \lambda) y), \quad \lambda \in [0, 1].
 
-    特别地，取 :math:`y = x_0, t = \frac{1}{2}`, 那么有
+    特别地, 取 :math:`y = x_0, t = \frac{1}{2}`, 那么有
 
     .. math::
 
         f(x) \geqslant 2 f \left( \dfrac{x + x_0}{2} \right) - f(x_0) \geqslant 2 f(x_0) - f(x_0) = f(x_0).
 
-4. 求下列函数在指定区间上的最大值最小值：
+4. 求下列函数在指定区间上的最大值最小值:
 
 (3). :math:`y = \sqrt{x} \ln x, \quad (0, +\infty)`.
 
@@ -929,8 +929,8 @@
     函数 :math:`y = \sqrt{x} \ln x` 的导函数为 :math:`y' = \dfrac{1}{2 \sqrt{x}} \ln x + \dfrac{1}{\sqrt{x}}, x > 0`.
     令 :math:`y' = 0` 解得 :math:`x = e^{-2}`. 函数 :math:`y = \sqrt{x} \ln x` 的二阶导函数为
     :math:`y'' = -\dfrac{\ln x}{4x\sqrt{x}} + \dfrac{1}{2x\sqrt{x}} - \dfrac{1}{2x\sqrt{x}} = -\dfrac{\ln x}{4x\sqrt{x}}`.
-    因为 :math:`y''(e^{-2}) = \dfrac{1}{2e^{-3}} > 0`, 所以 :math:`x = e^{-2}` 为极小值点，
-    相应的极小值为 :math:`y(e^{-2}) = -\dfrac{1}{2e}`. 这是唯一的极值点，所以也是最小值点.
+    因为 :math:`y''(e^{-2}) = \dfrac{1}{2e^{-3}} > 0`, 所以 :math:`x = e^{-2}` 为极小值点,
+    相应的极小值为 :math:`y(e^{-2}) = -\dfrac{1}{2e}`. 这是唯一的极值点, 所以也是最小值点.
 
 7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \geqslant 0` 的矩形的最大面积.
 
@@ -943,7 +943,7 @@
 §2.11 函数作图
 --------------------------------
 
-1. 求下列曲线的渐近线：
+1. 求下列曲线的渐近线:
 
 (1). :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}`;
 
@@ -957,7 +957,7 @@
 
     (1). 由于 :math:`\lim\limits_{x \to 2} \dfrac{2x^3 - 3}{(x - 2)^2} = +\infty`, 所以 :math:`x = 2` 为 :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}` 的垂直渐近线.
 
-    接下来求斜渐近线。斜率
+    接下来求斜渐近线. 斜率
 
     .. math::
 
@@ -972,7 +972,7 @@
 
     所以 :math:`y = 2x + 8` 为 :math:`y = \dfrac{2x^3 - 3}{(x - 2)^2}` 的斜渐近线.
 
-    (2). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况。当 :math:`x \to +\infty` 时，有斜率
+    (2). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况. 当 :math:`x \to +\infty` 时, 有斜率
 
     .. math::
 
@@ -986,7 +986,7 @@
         & = \lim\limits_{x \to +\infty} \dfrac{4x^2 + 4x - 1 - 4x^2}{\sqrt{4x^2 + 4x - 1} + 2x} = \lim\limits_{x \to +\infty} \dfrac{4 - \frac{1}{x}}{\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} + 2} \\
         & = 1.
 
-    当 :math:`x \to -\infty` 时，有斜率
+    当 :math:`x \to -\infty` 时, 有斜率
 
     .. math::
 
@@ -1000,9 +1000,9 @@
         & = \lim\limits_{x \to -\infty} \dfrac{4x^2 + 4x - 1 + 4x^2}{\sqrt{4x^2 + 4x - 1} - 2x} = \lim\limits_{x \to -\infty} \dfrac{4 + \frac{4}{x}}{-\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} - 2} \\
         & = -1.
 
-    所以 :math:`y = \sqrt{4x^2 + 4x - 1}` 的斜渐近线有两条，分别为 :math:`y = 2x + 1` 和 :math:`y = -2x - 1`.
+    所以 :math:`y = \sqrt{4x^2 + 4x - 1}` 的斜渐近线有两条, 分别为 :math:`y = 2x + 1` 和 :math:`y = -2x - 1`.
 
-    (3). 由于 :math:`\lim\limits_{x \to 0^+} \ln x = -\infty`, 所以 :math:`y = x + \ln x` 的垂直渐近线为 :math:`x = 0`. 假设 :math:`y = x + \ln x` 有斜渐近线，那么斜率
+    (3). 由于 :math:`\lim\limits_{x \to 0^+} \ln x = -\infty`, 所以 :math:`y = x + \ln x` 的垂直渐近线为 :math:`x = 0`. 假设 :math:`y = x + \ln x` 有斜渐近线, 那么斜率
 
     .. math::
 
@@ -1017,7 +1017,7 @@
 
     所以 :math:`y = x + \ln x` 没有斜渐近线.
 
-    (4). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况。当 :math:`x \to -\infty` 时，有斜率
+    (4). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况. 当 :math:`x \to -\infty` 时, 有斜率
 
     .. math::
 
@@ -1033,7 +1033,7 @@
         & = \lim\limits_{x \to -\infty} \dfrac{e^x - \frac{1}{2} x e^x}{e^x + 2x} \\
         & = 0,
 
-    当 :math:`x \to +\infty` 时，有斜率
+    当 :math:`x \to +\infty` 时, 有斜率
 
     .. math::
 
@@ -1047,9 +1047,9 @@
         & = \lim\limits_{x \to +\infty} \dfrac{1 + \frac{x^2}{e^x}}{1 + \frac{2x}{e^x}} \\
         & = 1,
 
-    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的斜渐近线有两条，分别为 :math:`y = \dfrac{1}{2} x` 和 :math:`y = 1` (水平渐近线).
+    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的斜渐近线有两条, 分别为 :math:`y = \dfrac{1}{2} x` 和 :math:`y = 1` (水平渐近线).
 
-    此外，令 :math:`x_0` 为 :math:`e^x + 2x = 0` 的解，那么
+    此外, 令 :math:`x_0` 为 :math:`e^x + 2x = 0` 的解, 那么
 
     .. math::
 
@@ -1057,7 +1057,7 @@
 
     所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的垂直渐近线为 :math:`x = x_0`.
 
-2. 讨论函数性质并作图：
+2. 讨论函数性质并作图:
 
 (1). :math:`y = x^3 - x`;
 
@@ -1068,17 +1068,17 @@
 .. proof:solution::
 
     (1). 函数 :math:`y = x^3 - x` 的导函数为 :math:`y' = 3x^2 - 1`, 令 :math:`y' = 0` 解得 :math:`x = \pm \dfrac{1}{\sqrt{3}}`.
-    函数 :math:`y = x^3 - x` 的二阶导函数为 :math:`y'' = 6x`. 当 :math:`x = -\dfrac{1}{\sqrt{3}}` 时， :math:`y'' = -2\sqrt{3} < 0`,
-    所以 :math:`x = -\dfrac{1}{\sqrt{3}}` 为极大值点，相应的极大值为 :math:`y(-\dfrac{1}{\sqrt{3}}) = \dfrac{2}{3\sqrt{3}}`;
-    当 :math:`x = \dfrac{1}{\sqrt{3}}` 时， :math:`y'' = 2\sqrt{3} > 0`, 所以 :math:`x = \dfrac{1}{\sqrt{3}}` 为极小值点，
+    函数 :math:`y = x^3 - x` 的二阶导函数为 :math:`y'' = 6x`. 当 :math:`x = -\dfrac{1}{\sqrt{3}}` 时, :math:`y'' = -2\sqrt{3} < 0`,
+    所以 :math:`x = -\dfrac{1}{\sqrt{3}}` 为极大值点, 相应的极大值为 :math:`y(-\dfrac{1}{\sqrt{3}}) = \dfrac{2}{3\sqrt{3}}`;
+    当 :math:`x = \dfrac{1}{\sqrt{3}}` 时, :math:`y'' = 2\sqrt{3} > 0`, 所以 :math:`x = \dfrac{1}{\sqrt{3}}` 为极小值点,
     相应的极小值为 :math:`y(\dfrac{1}{\sqrt{3}}) = -\dfrac{2}{3\sqrt{3}}`.
 
     在区间 :math:`(-\infty, -\dfrac{1}{\sqrt{3}})` 上有 :math:`y' > 0`, 所以曲线在 :math:`(-\infty, -\dfrac{1}{\sqrt{3}})` 上单调递增；
     在区间 :math:`(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}})` 上有 :math:`y' < 0`, 所以曲线在 :math:`(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}})` 上单调递减；
     在区间 :math:`(\dfrac{1}{\sqrt{3}}, +\infty)` 上有 :math:`y' > 0`, 所以曲线在 :math:`(\dfrac{1}{\sqrt{3}}, +\infty)` 上单调递增.
 
-    令 :math:`y'' = 0` 解得 :math:`x = 0`, 相应的函数值为 :math:`y(0) = 0`. 当 :math:`x < 0` 时， :math:`y'' < 0`, 曲线在 :math:`(-\infty, 0)` 上是凸的；
-    当 :math:`x > 0` 时， :math:`y'' > 0`, 曲线在 :math:`(0, +\infty)` 上是凹的. 因此 :math:`x = 0` 为拐点.
+    令 :math:`y'' = 0` 解得 :math:`x = 0`, 相应的函数值为 :math:`y(0) = 0`. 当 :math:`x < 0` 时, :math:`y'' < 0`, 曲线在 :math:`(-\infty, 0)` 上是凸的；
+    当 :math:`x > 0` 时, :math:`y'' > 0`, 曲线在 :math:`(0, +\infty)` 上是凹的. 因此 :math:`x = 0` 为拐点.
 
     .. tikz:: 函数 :math:`y = x^3 - x` 的图像
         :align: center
@@ -1090,14 +1090,14 @@
 
     (2). 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的导函数为 :math:`y' = -\dfrac{1}{\sqrt{2\pi}} x e^{-\frac{x^2}{2}}`,
     令 :math:`y' = 0` 解得 :math:`x = 0`. 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的二阶导函数为
-    :math:`y'' = \dfrac{1}{\sqrt{2\pi}} (x^2 - 1) e^{-\frac{x^2}{2}}`. 当 :math:`x = 0` 时， :math:`y'' = -\dfrac{1}{\sqrt{2\pi}} < 0`,
-    所以 :math:`x = 0` 为极大值点，相应的极大值为 :math:`y(0) = \dfrac{1}{\sqrt{2\pi}}`.
+    :math:`y'' = \dfrac{1}{\sqrt{2\pi}} (x^2 - 1) e^{-\frac{x^2}{2}}`. 当 :math:`x = 0` 时, :math:`y'' = -\dfrac{1}{\sqrt{2\pi}} < 0`,
+    所以 :math:`x = 0` 为极大值点, 相应的极大值为 :math:`y(0) = \dfrac{1}{\sqrt{2\pi}}`.
 
     在区间 :math:`(-\infty, 0)` 上有 :math:`y' > 0`, 所以曲线在 :math:`(-\infty, 0)` 上单调递增；在区间 :math:`(0, +\infty)` 上有 :math:`y' < 0`,
     所以曲线在 :math:`(0, +\infty)` 上单调递减.
 
-    令 :math:`y'' = 0` 解得 :math:`x = \pm 1`. 当 :math:`x < -1` 时， :math:`y'' > 0`, 曲线在 :math:`(-\infty, -1)` 上是凹的；
-    当 :math:`-1 < x < 1` 时， :math:`y'' < 0`, 曲线在 :math:`(-1, 1)` 上是凸的；当 :math:`x > 1` 时， :math:`y'' > 0`, 曲线在 :math:`(1, +\infty)` 上是凹的.
+    令 :math:`y'' = 0` 解得 :math:`x = \pm 1`. 当 :math:`x < -1` 时, :math:`y'' > 0`, 曲线在 :math:`(-\infty, -1)` 上是凹的；
+    当 :math:`-1 < x < 1` 时, :math:`y'' < 0`, 曲线在 :math:`(-1, 1)` 上是凸的；当 :math:`x > 1` 时, :math:`y'' > 0`, 曲线在 :math:`(1, +\infty)` 上是凹的.
     因此 :math:`x = \pm 1` 为拐点.
 
     .. tikz:: 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的图像
@@ -1109,14 +1109,14 @@
         \draw[domain=-2:2, smooth, variable=\x, blue] plot ({\x}, {1/sqrt(2*pi) * exp(-\x*\x/2)});
 
     (3). 函数 :math:`y = x e^x` 的导函数为 :math:`y' = (x + 1) e^x`, 令 :math:`y' = 0` 解得 :math:`x = -1`.
-    函数 :math:`y = x e^x` 的二阶导函数为 :math:`y'' = (x + 2) e^x`. 当 :math:`x = -1` 时， :math:`y'' = e^{-1} > 0`,
-    所以 :math:`x = -1` 为极小值点，相应的极小值为 :math:`y(-1) = -\dfrac{1}{e}`.
+    函数 :math:`y = x e^x` 的二阶导函数为 :math:`y'' = (x + 2) e^x`. 当 :math:`x = -1` 时, :math:`y'' = e^{-1} > 0`,
+    所以 :math:`x = -1` 为极小值点, 相应的极小值为 :math:`y(-1) = -\dfrac{1}{e}`.
 
     在区间 :math:`(-\infty, -1)` 上有 :math:`y' < 0`, 所以曲线在 :math:`(-\infty, -1)` 上单调递减；在区间 :math:`(-1, +\infty)` 上有 :math:`y' > 0`,
     所以曲线在 :math:`(-1, +\infty)` 上单调递增.
 
-    令 :math:`y'' = 0` 解得 :math:`x = -2`. 当 :math:`x < -2` 时， :math:`y'' < 0`, 曲线在 :math:`(-\infty, -2)` 上是凸的；
-    当 :math:`x > -2` 时， :math:`y'' > 0`, 曲线在 :math:`(-2, +\infty)` 上是凹的. 因此 :math:`x = -2` 为拐点.
+    令 :math:`y'' = 0` 解得 :math:`x = -2`. 当 :math:`x < -2` 时, :math:`y'' < 0`, 曲线在 :math:`(-\infty, -2)` 上是凸的；
+    当 :math:`x > -2` 时, :math:`y'' > 0`, 曲线在 :math:`(-2, +\infty)` 上是凹的. 因此 :math:`x = -2` 为拐点.
 
     .. tikz:: 函数 :math:`y = x e^x` 的图像
         :align: center
@@ -1132,13 +1132,13 @@
 §2.3 高阶导数
 --------------------------------
 
-莱布尼茨公式 :math:`(uv)^{(n)} = \sum\limits_{k=0}^n C_n^k u^{(k)} v^{(n-k)}` 的证明：
+莱布尼茨公式 :math:`(uv)^{(n)} = \sum\limits_{k=0}^n C_n^k u^{(k)} v^{(n-k)}` 的证明:
 
 .. proof:proof::
 
-    用数学归纳法证明。当 :math:`n = 1` 时， :math:`(uv)' = u'v + uv'`, 成立。
+    用数学归纳法证明. 当 :math:`n = 1` 时, :math:`(uv)' = u'v + uv'`, 成立.
 
-    假设当 :math:`n = k` 时， :math:`(uv)^{(k)} = \sum\limits_{i=0}^k C_k^i u^{(i)} v^{(k-i)}` 成立，那么 :math:`n = k + 1` 时有
+    假设当 :math:`n = k` 时, :math:`(uv)^{(k)} = \sum\limits_{i=0}^k C_k^i u^{(i)} v^{(k-i)}` 成立, 那么 :math:`n = k + 1` 时有
 
     .. math::
 
@@ -1152,13 +1152,13 @@
                        & = C_{k+1}^{k+1} u^{(k+1)} v + \sum\limits_{i=0}^k C_{k+1}^i u^{(i)} v^{(k-i+1)} + C_{k+1}^0 u v^{(k+1)} \\
                        & = \sum\limits_{i=0}^{k+1} C_{k+1}^i u^{(i)} v^{((k+1)-i)}
 
-    于是当 :math:`n = k + 1` 时， :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立。根据数学归纳法原理，
-    对于任意的 :math:`n \in \mathbb{N}`, :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立。
+    于是当 :math:`n = k + 1` 时, :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立. 根据数学归纳法原理,
+    对于任意的 :math:`n \in \mathbb{N}`, :math:`(uv)^{(n)} = \sum\limits_{i=0}^n C_n^i u^{(i)} v^{(n-i)}` 成立.
 
 §2.6 微分中值定理
 --------------------------------
 
-设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上二阶可导，且 :math:`f(0) = f(1)`, 证明存在 :math:`\xi \in (0, 1)` 使得 :math:`f''(\xi) = \dfrac{2f'(\xi)}{1-\xi}`.
+设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上二阶可导, 且 :math:`f(0) = f(1)`, 证明存在 :math:`\xi \in (0, 1)` 使得 :math:`f''(\xi) = \dfrac{2f'(\xi)}{1-\xi}`.
 
 .. proof:proof::
 
@@ -1169,8 +1169,8 @@
         F(x) = (x - 1)^2 f'(x),
 
     那么 :math:`F(1) = 0`. 由于 :math:`f(0) = f(1)`, 由罗尔定理知存在 :math:`c \in (0, 1)` 使得 :math:`f'(c) = 0`,
-    从而有 :math:`F(c) = (c - 1)^2 f'(c) = 0`. 那么函数 :math:`F(x)` 就是 :math:`[c, 1]` 上连续， :math:`(c, 1)` 上可导的函数，并且满足 :math:`F(c) = F(1) = 0`.
-    再一次利用罗尔定理知，存在 :math:`\xi \in (c, 1) \subset (0, 1)`, 使得
+    从而有 :math:`F(c) = (c - 1)^2 f'(c) = 0`. 那么函数 :math:`F(x)` 就是 :math:`[c, 1]` 上连续, :math:`(c, 1)` 上可导的函数, 并且满足 :math:`F(c) = F(1) = 0`.
+    再一次利用罗尔定理知, 存在 :math:`\xi \in (c, 1) \subset (0, 1)`, 使得
 
     .. math::
 
@@ -1181,7 +1181,7 @@
 §2.7 洛必达法则
 --------------------------------
 
-:math:`\dfrac{\infty}{\infty}` 型未定式的洛必达法则证明：
+:math:`\dfrac{\infty}{\infty}` 型未定式的洛必达法则证明:
 
 由于有 :math:`\lim\limits_{x \to x_0} = f(x) = \lim\limits_{x \to x_0} = g(x) = \infty`, 所以可以假定在 :math:`x_0` 的某个小的去心邻域
 :math:`\mathring{U}(x_0, \delta)` 内有 :math:`f(x) \neq 0, g(x) \neq 0`. 对于包含于 :math:`\mathring{U}(x_0, \delta)`
@@ -1213,11 +1213,11 @@
     \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\tau} \left( \dfrac{f(y)}{g(x)} + \left( 1 - \dfrac{g(y)}{g(x)} \right) \dfrac{f'(\xi)}{g'(\xi)} \right) \\
     & = 0 + (1 - 0) \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} = \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)}.
 
-在极限过程 :math:`\tau` 中，同样有 :math:`\xi \to x_0`, 所以
+在极限过程 :math:`\tau` 中, 同样有 :math:`\xi \to x_0`, 所以
 
 .. math::
 
     \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)} \\
     \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)}.
 
-因此 :math:`\lim\limits_{x \to x_0} \dfrac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \dfrac{f'(x)}{g'(x)}` 成立。
+因此 :math:`\lim\limits_{x \to x_0} \dfrac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \dfrac{f'(x)}{g'(x)}` 成立.

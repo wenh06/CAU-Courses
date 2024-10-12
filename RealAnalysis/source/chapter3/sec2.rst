@@ -453,7 +453,7 @@
 .. _ex-3-30:
 
 30. 试作 :math:`E = [0, 1]` 上的可测函数 :math:`f`, 使对 :math:`E` 上任何连续函数 :math:`g` 有 :math:`m E( f \neq g ) \neq 0`.
-    此结果与 Luzin 定理有无矛盾？
+    此结果与 Luzin 定理有无矛盾?
 
 .. proof:solution::
 

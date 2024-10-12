@@ -3,7 +3,7 @@
 
 .. note::
 
-    此次随堂测验未进行。
+    此次随堂测验未进行.
 
 1. 求不定积分 :math:`\displaystyle \int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
 
@@ -58,13 +58,13 @@
 
     .. note::
 
-        一般地，如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
+        一般地, 如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
 
         .. math::
 
             f'(x) = g(\psi(x)) \psi'(x) - g(\varphi(x)) \varphi'(x).
 
-        可以直接使用这个公式求解上面的题目。
+        可以直接使用这个公式求解上面的题目.
 
 4. 求由曲线 :math:`y = \sqrt{x}` 与 :math:`y = x^2` 所围成的图形的面积.
 
@@ -81,7 +81,7 @@
 
 5. 证明 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}` 与 :math:`a` 无关.
 
-   提示：先证明积分收敛，然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
+   提示: 先证明积分收敛, 然后将积分区域分为 :math:`[0, 1]` 和 :math:`[1, +\infty)` 两部分.
 
 .. proof:proof::
 
@@ -91,7 +91,7 @@
 
         0 \leqslant \dfrac{1}{(1 + x^2)(1 + x^a)} \leqslant \dfrac{1}{1 + x^2},
 
-    而 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛。那么有
+    而 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛. 那么有
 
     .. math::
 

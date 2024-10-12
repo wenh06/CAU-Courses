@@ -4,7 +4,7 @@
 .. _ex-3-2:
 
 2. 证明 :math:`f(x)` 为 :math:`E` 上可测函数的充分必要条件是: 对于任一有理数 :math:`r`, 集 :math:`E(f > r)` 恒可测.
-   如果假设对任一有理数 :math:`r`, 集 :math:`E(f = r)` 恒可测, 问 :math:`f(x)` 是否可测？
+   如果假设对任一有理数 :math:`r`, 集 :math:`E(f = r)` 恒可测, 问 :math:`f(x)` 是否可测?
 
 .. proof:proof::
 

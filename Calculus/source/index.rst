@@ -9,14 +9,14 @@
 课程教材
 ------------------
 
-《`高等数学 <https://www.sinobook.com.cn/b2c/scrp/bookdetail.cfm?iBookNo=1099784>`_》，第2版，王来生，卢恩双，中国农业大学出版社，2019
+《`高等数学 <https://www.sinobook.com.cn/b2c/scrp/bookdetail.cfm?iBookNo=1099784>`_》, 第2版, 王来生, 卢恩双, 中国农业大学出版社, 2019
 
 任课教师联系方式
 ------------------
 
-- 邮箱：`wenh06 at cau.edu.cn`
+- 邮箱: `wenh06 at cau.edu.cn`
 
-- 微信二维码：|wx_qrcode|
+- 微信二维码: |wx_qrcode|
 
 .. |wx_qrcode| image:: _static/images/wx_qrcode.png
    :height: 16ex
