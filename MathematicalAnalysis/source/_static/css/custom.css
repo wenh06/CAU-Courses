@@ -38,3 +38,8 @@ tbody {
   max-height: 500px;
   overflow: auto;
 }
+
+/* fix: ship to main content while print webpage (pydata theme) */
+.skip-link {
+  position: absolute;
+}
