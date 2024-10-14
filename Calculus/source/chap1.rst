@@ -478,13 +478,19 @@
 
     .. math::
 
-        \dfrac{1}{x} - 1 < \left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x}
+        \dfrac{1}{x} - 1 < \left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x},
 
-    那么可以利用夹逼准则得到
+    从而有
 
     .. math::
 
-        1 = \lim\limits_{x \to 0} x \left( \dfrac{1}{x} - 1 \right) \leqslant \lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] \leqslant \lim\limits_{x \to 0} x \cdot \dfrac{1}{x} = 1
+        \begin{cases}
+            1 - x < x \left[ \dfrac{1}{x} \right] \leqslant 1, & \text{若} x > 0, \\
+            1 \leqslant x \left[ \dfrac{1}{x} \right] < 1 - x, & \text{若} x < 0.
+        \end{cases}
+
+    总之, 有 :math:`1 - \lvert x \rvert < x \left[ \dfrac{1}{x} \right] < 1 + \lvert x \rvert`,
+    从而由夹逼准则知 :math:`\lim\limits_{x \to 0} x \left[ \dfrac{1}{x} \right] = 1`.
 
 §1.6 函数的连续性与连续函数的运算
 --------------------------------------------
