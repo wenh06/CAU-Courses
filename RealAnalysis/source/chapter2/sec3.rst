@@ -61,12 +61,58 @@
 
       m^* (E \cup A) + m^* (E \cap A) = m E + m^* A.
 
-   当 :math:`E` 不可测时, 我们只能根据内测度以及外测度的半可加性得到
+   当 :math:`E` 不可测时, 由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 可以找到 :math:`G_{\delta}`-集 :math:`G_1, G_2`,
+   使得 :math:`E \subset G_1`, :math:`A \subset G_2`, 且 :math:`m G_1 = m^* E`, :math:`m G_2 = m^* A`. 那么有
 
    .. math::
 
-      m^* (E \cup A) + m^* (E \cap A) \leqslant m^* E + m^* A, \\
-      m_* (E \cup A) + m_* (E \cap A) \geqslant m_* E + m_* A.
+      m^* E + m^* A & = m G_1 + m G_2 = m (G_1 \cup G_2) + m (G_1 \cap G_2) \\
+      &\geqslant m^* (E \cup A) + m^* (E \cap A).
+
+   上式的不等号是因为有集合的包含关系 :math:`G_1 \cup G_2 \supset E \cup A`, :math:`G_1 \cap G_2 \supset E \cap A`.
+
+   另一方面, 由内测度定义, 对任意 :math:`\varepsilon > 0`, 存在闭集 :math:`F_1 \subset E`, :math:`F_2 \subset A`, 使得
+
+   .. math::
+
+      m F_1 > m_* E - \dfrac{\varepsilon}{2}, \quad m F_2 > m_* A - \dfrac{\varepsilon}{2},
+
+   从而有
+
+   .. math::
+
+      m_* E + m_* A & < m F_1 + m F_2 + \varepsilon = m (F_1 \cup F_2) + m (F_1 \cap F_2) + \varepsilon \\
+      & \leqslant m_* (E \cup A) + m_* (E \cap A) + \varepsilon.
+
+   由于 :math:`\varepsilon` 是任意的, 所以有 :math:`m_* E + m_* A \leqslant m_* (E \cup A) + m_* (E \cap A)`.
+
+   .. note::
+
+      当 :math:`E` 不可测时, 有可能成立严格不等式 :math:`m_* E + m_* A > m_* (E \cup A) + m_* (E \cap A)`.
+      例如, 取 :math:`[0, 1]` 中一个不可测集 :math:`E`, 以及 :math:`A = [0, 1] \setminus E`.
+      这样的 :math:`E` 的存在性可以参考 :ref:`本章第 28 题 <ex-2-28>`. 那么有
+
+      .. math::
+
+         E \cup A = [0, 1], \quad E \cap A = \emptyset,
+
+      从而有
+
+      .. math::
+
+         m_* (E \cup A) + m_* (E \cap A) = m_* [0, 1] + m_* \emptyset = 1.
+
+      另一方面, 由于 :math:`E` 是不可测集, 所以有 :math:`m_* E < m^* E`, 从而有
+
+      .. math::
+
+         m^* E + m^* A = m^* E + m^* ([0, 1] \setminus E) =  m^* E + (1 - m_* E) > 1.
+
+      类似可算得
+
+      .. math::
+
+         m_* E + m_* A = m_* E + m_* ([0, 1] \setminus E) =  m_* E + (1 - m^* E) < 1 = m_* (E \cup A) + m_* (E \cap A).
 
 .. _ex-2-11:
 

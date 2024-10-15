@@ -17,22 +17,11 @@
 
    .. math::
 
-      m^* E = \inf_{G \supset E} m G = \inf_{\cup I_k = G \supset E} \sum_k m I_k,
+      m^* E = \inf_{G \supset E} m G = \inf_{\cup J_k = G \supset E} \sum_k m I_k \geqslant \inf_{\cup I_k \supset E} \sum_k m I_k,
 
-   其中 :math:`G` 包含 :math:`E` 的开集, :math:`m G = \sum\limits_{k} m I_k` 为 :math:`G` 的测度,
-   :math:`G = \bigcup\limits_k I_k` 为 :math:`G` 的结构表示. 那么任取 :math:`\varepsilon > 0`,
-   由于 :math:`m^* E` 为下确界, 所以存在开集 :math:`\bigcup\limits_k I_k = G \supset E` 使得
-
-   .. math::
-
-      m^* E > m G - \varepsilon = \sum\limits_{k} m I_k - \varepsilon.
-
-   上式能推出 :math:`m^* E \geqslant \inf\limits_{\cup I_k \supset E} \sum\limits_{k} m I_k - \varepsilon`,
-   由于 :math:`\varepsilon` 是任意的正数, 所以有
-
-   .. math::
-
-      m^* E \geqslant \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
+   其中 :math:`G` 为包含 :math:`E` 的开集, :math:`m G = \sum\limits_{k} m J_k` 为 :math:`G` 的测度,
+   :math:`G = \bigcup\limits_k J_k` 为 :math:`G` 的结构表示.
+   最后的不等式成立是因为结构表示 :math:`\{J_k\}` 是任意区间集列 :math:`\{I_k\}` 的特例.
 
    另一方面, 由于外测度的次可加性, 对所有覆盖 :math:`E` 的区间集列 :math:`\{I_k\}` 有
 
@@ -150,6 +139,44 @@
       可以利用一般性的结论: 设 :math:`f: \mathbb{R}^n \to \mathbb{R}` 可测, :math:`T: \mathbb{R}^n \to \mathbb{R}^n` 为非奇异线性变换,
       那么 :math:`f \circ T` 为可测函数. 那么这题就归结为证明 :math:`\operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}` 为可测函数,
       以及在映射 :math:`\operatorname{pr}_1` 下, 零测集的原像仍为零测集.
+
+.. _ex-2-28:
+
+28. 设 :math:`A` 为一维可测集且 :math:`m A > 0`, 证明 :math:`A` 存在不可测子集.
+
+.. proof:proof::
+
+   令 :math:`E_n` 为 :ref:`本章第 15 题 <ex-2-15>` 中的集列, 每个 :math:`E_n \subset [0, 1)` 都不可测, 两两互不相交,
+   并且 :math:`\displaystyle \bigcup_{n=1}^{\infty} E_n = [0, 1)`. 对 :math:`n, k \in \mathbb{N}`, 令
+
+   .. math::
+
+      E_{n, k} = E_n + k = \{ x + k ~ : ~ x \in E_n \},
+
+   那么 :math:`E_{n, k}` 也是不可测集, 两两互不相交, 且 :math:`\displaystyle \bigcup_{n, k \in \mathbb{N}} E_{n, k} = \mathbb{R}`.
+   令 :math:`A_{n, k} = A \cap E_{n, k}`, 那么 :math:`A_{n, k}` 两两互不相交, 且 :math:`\displaystyle \bigcup_{n, k \in \mathbb{N}} A_{n, k} = A`.
+
+   若对所有 :math:`n, k \in \mathbb{N}`, 集 :math:`A_{n, k}` 都是可测的, 那么由测度的 :math:`\sigma`-可加性知
+
+   .. math::
+
+      m A = \sum\limits_{n, k \in \mathbb{N}} m A_{n, k}.
+
+   由于 :math:`m A > 0`, 那么至少存在一个 :math:`n_0, k_0 \in \mathbb{N}`, 使得 :math:`m A_{n_0, k_0} > 0`. 那么对每个 :math:`n \in \mathbb{N}`,
+   可以找到 :math:`E_{n, k_0}` 中的正测度的可测子集
+
+   .. math::
+
+      (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 = \{ x + k_0 ~ : ~ x \in A_{n_0, k_0} - k_0 + r_n \mod 1 \},
+
+   其中 :math:`\mathbb{Q} = \{ r_n \}_{n \in \mathbb{N}}` 是有理数集. 这些集合两两互不相交, 那么由测度的 :math:`\sigma`-可加性知
+
+   .. math::
+
+      1 = m [k, k + 1) \geqslant \sum_{n \in \mathbb{N}} m \left( (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 \right)
+      = \sum_{n \in \mathbb{N}} m A_{n_0, k_0} = \infty,
+
+   矛盾. 所以至少存在一个 :math:`n_0, k_0 \in \mathbb{N}`, 使得 :math:`A_{n_0, k_0}` 不可测.
 
 .. _ex-2-29:
 

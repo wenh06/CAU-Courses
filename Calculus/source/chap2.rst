@@ -134,7 +134,7 @@
 
 2. 求函数在给定点的导数
 
-(1). :math:`y = \sin x + \cos x`, 求 :math:`y'|_{x = \frac{\pi}{4}`;
+(1). :math:`y = \sin x + \cos x`, 求 :math:`y'|_{x = \frac{\pi}{4}}`;
 
 (3). :math:`y = \dfrac{x + \sqrt{x}}{1 + \sqrt{x}}`, 求 :math:`y'|_{x = 1}`;
 
