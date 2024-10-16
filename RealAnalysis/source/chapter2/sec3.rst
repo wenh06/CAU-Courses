@@ -88,6 +88,10 @@
 
    .. note::
 
+      本题虽然限定在了 :math:`\mathbb{R}` 上, 但是以上证明只利用了 Carathéodory 条件, 所以对于一般的测度空间也是成立的.
+
+   .. note::
+
       当 :math:`E` 不可测时, 有可能成立严格不等式 :math:`m_* E + m_* A > m_* (E \cup A) + m_* (E \cap A)`.
       例如, 取 :math:`[0, 1]` 中一个不可测集 :math:`E`, 以及 :math:`A = [0, 1] \setminus E`.
       这样的 :math:`E` 的存在性可以参考 :ref:`本章第 28 题 <ex-2-28>`. 那么有
@@ -112,7 +116,8 @@
 
       .. math::
 
-         m_* E + m_* A = m_* E + m_* ([0, 1] \setminus E) =  m_* E + (1 - m^* E) < 1 = m_* (E \cup A) + m_* (E \cap A).
+         m_* E + m_* A & = m_* E + m_* ([0, 1] \setminus E) =  m_* E + (1 - m^* E) \\
+         & < 1 = m_* (E \cup A) + m_* (E \cap A).
 
 .. _ex-2-11:
 
@@ -183,7 +188,7 @@
 
       \lim\limits_{n \to \infty} m^* E_n \leqslant m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
 
-   另一方面, 由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 即对于任意 :math:`E_n`, 存在开集 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
+   另一方面, 由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 即对于任意 :math:`E_n`, 存在 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
    使得 :math:`m A_n = m^* E_n`, 令
 
    .. math::
@@ -412,4 +417,41 @@
 
 .. proof:proof::
 
-   待写
+   由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 对于集合 :math:`E, X \setminus E`, 存在 :math:`G_{\delta}`-集 :math:`G_1 \supset E`,
+   :math:`G_2 \supset X \setminus E`, 使得
+
+   .. math::
+
+      m G_1 & = m^* E \leqslant m X < 0, \\
+      m G_2 & = m^* (X \setminus E) \leqslant m X < 0.
+
+   那么 :math:`G_1 \cup G_2 \supset X`, 并且有
+
+   .. math::
+
+      m X \leqslant m (G_1 \cup G_2) \leqslant m G_1 + m G_2 = m^* E + m^* (X \setminus E) = m X.
+
+   故上式中的不等号都必须是等号, 即有
+
+   .. math::
+
+      m X = m (G_1 \cup G_2) = m G_1 + m G_2`.
+
+   由 :math:`m (G_1 \cup G_2) = m G_1 + m G_2`, 以及他们测度都有限知 :math:`m (G_1 \cap G_2) = 0`, 从而 :math:`G_1 \cap G_2` 是零测度集.
+   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 由 :math:`m X = m (G_1 \cup G_2)` 有 :math:`G_1 \cup G_2 = X \cup F`,
+   其中 :math:`F = (G_1 \cup G_2) \setminus X` 为零测度集. 于是,
+
+   .. math::
+
+      G_1 \setminus E \subset ((G_1 \cup G_2) \setminus X) \cup (G_1 \cap G_2)
+
+   为零测度集, 从而 :math:`E = G_1 \setminus (G_1 \setminus E)` 为可测集.
+
+   .. note::
+
+      条件 :math:`m X < \infty` 是必要的, 否则, 任取 :math:`E \subset (a, b)` 为一个有界不可测集, :math:`X = (a, +\infty)`,
+      那么条件 :math:`m X = m^* E + m^* (X \setminus E)` 显然也是满足的, 因为左右两边都是无穷大, 但是 :math:`E` 是不可测的.
+
+   .. note::
+
+      本题本质上利用了 Lebesgue 测度的完备性, 即如果某个集合和某个可测集的对称差包含于零测度集, 那么这个集合也是可测的.
