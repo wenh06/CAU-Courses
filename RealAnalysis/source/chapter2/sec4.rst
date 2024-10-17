@@ -89,8 +89,8 @@
 
       f: \mathbb{R}^2 \to \mathbb{R}, \quad f(x, y) = x - y,
 
-   那么 :math:`f` 是一个线性映射, 从而是连续的. 令 :math:`\mathcal{B}` 为 :math:`\mathbb{R}` 中的 Borel 集构成的 :math:`\sigma` 代数,
-   那么由 :ref:`本节第 35 题 <ex-2-35>` 知 :math:`\{ f^{-1} (B) : B \in \mathcal{B} \}` 为 :math:`\mathbb{R}^2` 中的 :math:`\sigma` 代数.
+   那么 :math:`f` 是一个线性映射, 从而是连续的. 令 :math:`\mathscr{B}` 为 :math:`\mathbb{R}` 中的 Borel 集构成的 :math:`\sigma` 代数,
+   那么由 :ref:`本节第 35 题 <ex-2-35>` 知 :math:`\{ f^{-1} (B) : B \in \mathscr{B} \}` 为 :math:`\mathbb{R}^2` 中的 :math:`\sigma` 代数.
    由于开集在连续映射下的原像为开集, 所以这个 :math:`\sigma` 代数是 :math:`\mathbb{R}^2` 中的 Borel :math:`\sigma` 代数.
    由于 :math:`D(E) = f^{-1} (E) = f^{-1} (F) \cup f^{-1} (Z)`, 其中 :math:`f^{-1} (F)` 为 :math:`\mathbb{R}^2` 中的 Borel 集,
    只要证明 :math:`f^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集, 即有 :math:`D(E)` 为 :math:`\mathbb{R}^2` 中的可测集.
@@ -469,22 +469,22 @@
 
 .. _ex-2-35:
 
-35. 设 :math:`f` 为集 :math:`X \to Y` 的任一映射, :math:`\mathcal{A}, \mathcal{B}` 分别为 :math:`X, Y` 中的 :math:`\sigma` 代数, 证明
+35. 设 :math:`f` 为集 :math:`X \to Y` 的任一映射, :math:`\mathscr{A}, \mathscr{B}` 分别为 :math:`X, Y` 中的 :math:`\sigma` 代数, 证明
 
     .. math::
 
-      \{ f^{-1} (B) : B \in \mathcal{B} \}, \quad \{B : f^{-1} (B) \in \mathcal{A} \}
+      \{ f^{-1} (B) : B \in \mathscr{B} \}, \quad \{B : f^{-1} (B) \in \mathscr{A} \}
 
     分别为 :math:`X, Y` 中的 :math:`\sigma` 代数.
 
 .. proof:proof::
 
-   (1). 首先证明 :math:`\{ f^{-1} (B) : B \in \mathcal{B} \}` 为 :math:`X` 中的 :math:`\sigma` 代数:
+   (1). 首先证明 :math:`\{ f^{-1} (B) : B \in \mathscr{B} \}` 为 :math:`X` 中的 :math:`\sigma` 代数:
 
-   :math:`1^{\circ}`. 由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`Y \in \mathcal{B}`.
-   由于 :math:`f^{-1} (Y) = X`, 那么 :math:`X \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
+   :math:`1^{\circ}`. 由于 :math:`\mathscr{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`Y \in \mathscr{B}`.
+   由于 :math:`f^{-1} (Y) = X`, 那么 :math:`X \in \{ f^{-1} (B) : B \in \mathscr{B} \}`.
 
-   :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \{ f^{-1} (B) : B \in \mathcal{B} \}`, 那么存在 :math:`B_1, B_2 \in \mathcal{B}`,
+   :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \{ f^{-1} (B) : B \in \mathscr{B} \}`, 那么存在 :math:`B_1, B_2 \in \mathscr{B}`,
    使得 :math:`A_1 = f^{-1} (B_1), A_2 = f^{-1} (B_2)`. 那么有
 
    .. math::
@@ -492,57 +492,57 @@
       A_1 \setminus A_2 & = f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1) \cap \mathscr{C}_X f^{-1} (B_2) \\
       & = f^{-1} (B_1 \cap \mathscr{C}_Y B_2) = f^{-1} (B_1 \setminus B_2).
 
-   由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`B_1 \setminus B_2 \in \mathcal{B}`,
-   从而 :math:`A_1 \setminus A_2 \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
+   由于 :math:`\mathscr{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`B_1 \setminus B_2 \in \mathscr{B}`,
+   从而 :math:`A_1 \setminus A_2 \in \{ f^{-1} (B) : B \in \mathscr{B} \}`.
 
-   :math:`3^{\circ}`. 任取 :math:`\{A_n\}_{n \in \mathbb{N}} \subset \{ f^{-1} (B) : B \in \mathcal{B} \}`,
-   那么存在 :math:`\{B_n\}_{n \in \mathbb{N}} \subset \mathcal{B}`, 使得 :math:`A_n = f^{-1} (B_n), n \in \mathbb{N}`. 那么有
+   :math:`3^{\circ}`. 任取 :math:`\{A_n\}_{n \in \mathbb{N}} \subset \{ f^{-1} (B) : B \in \mathscr{B} \}`,
+   那么存在 :math:`\{B_n\}_{n \in \mathbb{N}} \subset \mathscr{B}`, 使得 :math:`A_n = f^{-1} (B_n), n \in \mathbb{N}`. 那么有
 
    .. math::
 
       \bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
-   由于 :math:`\mathcal{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \mathcal{B}`,
-   从而 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \{ f^{-1} (B) : B \in \mathcal{B} \}`.
+   由于 :math:`\mathscr{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \mathscr{B}`,
+   从而 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \{ f^{-1} (B) : B \in \mathscr{B} \}`.
 
-   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{ f^{-1} (B) : B \in \mathcal{B} \}` 为 :math:`X` 中的 :math:`\sigma` 代数.
+   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{ f^{-1} (B) : B \in \mathscr{B} \}` 为 :math:`X` 中的 :math:`\sigma` 代数.
 
-   (2). 再证明 :math:`\{B : f^{-1} (B) \in \mathcal{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数:
+   (2). 再证明 :math:`\{B : f^{-1} (B) \in \mathscr{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数:
 
-   :math:`1^{\circ}`. 由于 :math:`\mathcal{A}` 为 :math:`X` 中的 :math:`\sigma` 代数, 那么 :math:`f^{-1} (Y) = X \in \mathcal{A}`,
-   从而有 :math:`Y \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
+   :math:`1^{\circ}`. 由于 :math:`\mathscr{A}` 为 :math:`X` 中的 :math:`\sigma` 代数, 那么 :math:`f^{-1} (Y) = X \in \mathscr{A}`,
+   从而有 :math:`Y \in \{B : f^{-1} (B) \in \mathscr{A} \}`.
 
-   :math:`2^{\circ}`. 任取 :math:`B_1, B_2 \in \{B : f^{-1} (B) \in \mathcal{A} \}`, 那么有 :math:`f^{-1} (B_1), f^{-1} (B_2) \in \mathcal{A}`.
-   由于 :math:`\mathcal{A}` 为 :math:`X` 中的 :math:`\sigma` 代数, 那么
+   :math:`2^{\circ}`. 任取 :math:`B_1, B_2 \in \{B : f^{-1} (B) \in \mathscr{A} \}`, 那么有 :math:`f^{-1} (B_1), f^{-1} (B_2) \in \mathscr{A}`.
+   由于 :math:`\mathscr{A}` 为 :math:`X` 中的 :math:`\sigma` 代数, 那么
 
    .. math::
 
-      \mathcal{A} \ni f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1 \setminus B_2).
+      \mathscr{A} \ni f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1 \setminus B_2).
 
-   从而 :math:`B_1 \setminus B_2 \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
+   从而 :math:`B_1 \setminus B_2 \in \{B : f^{-1} (B) \in \mathscr{A} \}`.
 
-   :math:`3^{\circ}`. 任取 :math:`\{B_n\}_{n \in \mathbb{N}} \subset \{B : f^{-1} (B) \in \mathcal{A} \}`,
-   那么有 :math:`\{f^{-1} (B_n)\}_{n \in \mathbb{N}} \subset \mathcal{A}`. 由于 :math:`\mathcal{A}` 为 :math:`X` 中的 :math:`\sigma` 代数,
+   :math:`3^{\circ}`. 任取 :math:`\{B_n\}_{n \in \mathbb{N}} \subset \{B : f^{-1} (B) \in \mathscr{A} \}`,
+   那么有 :math:`\{f^{-1} (B_n)\}_{n \in \mathbb{N}} \subset \mathscr{A}`. 由于 :math:`\mathscr{A}` 为 :math:`X` 中的 :math:`\sigma` 代数,
    那么有
 
    .. math::
 
-      \mathcal{A} \ni \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
+      \mathscr{A} \ni \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
-   从而 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \{B : f^{-1} (B) \in \mathcal{A} \}`.
+   从而 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \{B : f^{-1} (B) \in \mathscr{A} \}`.
 
-   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathcal{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数.
+   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathscr{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数.
 
 .. _ex-2-36:
 
-36. 设 :math:`\mathcal{A}` 为由 :math:`\mathbb{R}` 中的一切这样的可测集 :math:`E` 构成:
-    或者 :math:`m E = 0` 或者 :math:`m \mathscr{C} E = 0`. 试证 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数.
+36. 设 :math:`\mathscr{A}` 为由 :math:`\mathbb{R}` 中的一切这样的可测集 :math:`E` 构成:
+    或者 :math:`m E = 0` 或者 :math:`m \mathscr{C} E = 0`. 试证 :math:`\mathscr{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数.
 
 .. proof:proof::
 
-   :math:`1^{\circ}`. 由于 :math:`\emptyset = \mathscr{C} \mathbb{R}` 且 :math:`m \emptyset = 0`, 那么 :math:`\mathbb{R} \in \mathcal{A}`.
+   :math:`1^{\circ}`. 由于 :math:`\emptyset = \mathscr{C} \mathbb{R}` 且 :math:`m \emptyset = 0`, 那么 :math:`\mathbb{R} \in \mathscr{A}`.
 
-   :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \mathcal{A}`, 那么有 :math:`m A_1 = 0` 或者 :math:`m \mathscr{C} A_1 = 0`;
+   :math:`2^{\circ}`. 任取 :math:`A_1, A_2 \in \mathscr{A}`, 那么有 :math:`m A_1 = 0` 或者 :math:`m \mathscr{C} A_1 = 0`;
    :math:`m A_2 = 0` 或者 :math:`m \mathscr{C} A_2 = 0`. 若 :math:`m A_1 = 0`, 那么
 
    .. math::
@@ -561,9 +561,9 @@
 
       m (A_1 \setminus A_2) = m (A_1 \cap \mathscr{C} A_2) \leqslant m \mathscr{C} A_2 = 0.
 
-   从而知 :math:`A_1 \setminus A_2 \in \mathcal{A}`.
+   从而知 :math:`A_1 \setminus A_2 \in \mathscr{A}`.
 
-   :math:`3^{\circ}`. 任取 :math:`\{A_n\}_{n \in \mathbb{N}} \subset \mathcal{A}`. 假设 :math:`m A_n = 0` 对所有 :math:`n \in \mathbb{N}` 成立,
+   :math:`3^{\circ}`. 任取 :math:`\{A_n\}_{n \in \mathbb{N}} \subset \mathscr{A}`. 假设 :math:`m A_n = 0` 对所有 :math:`n \in \mathbb{N}` 成立,
    那么有
 
    .. math::
@@ -577,6 +577,25 @@
       m \left( \mathscr{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right)
       = m \left( \bigcap_{n=1}^{\infty} \mathscr{C} A_n \right) \leqslant m \mathscr{C} A_{n_0} = 0.
 
-   即知 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \mathcal{A}`.
+   即知 :math:`\bigcup\limits_{n=1}^{\infty} A_n \in \mathscr{A}`.
 
-   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\mathcal{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数.
+   综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\mathscr{A}` 为 :math:`\mathbb{R}` 中的 :math:`\sigma` 代数.
+
+.. _ex-2-37:
+
+37. 设 :math:`\mathscr{S}` 为 :math:`X` 中任一非空子集族. 试证
+
+    .. math::
+
+      \sigma (f^{-1} (\mathscr{S})) = f^{-1} (\sigma (\mathscr{S})),
+
+    其中 :math:`f` 为 :math:`Y \to X` 的映射, :math:`\sigma (\mathscr{S})` 为 :math:`\mathscr{S}` 生成的 :math:`\sigma` 代数.
+
+.. proof:proof::
+
+   由于 :math:`\mathscr{S} \subset \sigma (\mathscr{S})`, 那么有 :math:`f^{-1} (\mathscr{S}) \subset f^{-1} (\sigma (\mathscr{S}))`.
+   由于 :math:`\sigma (f^{-1} (\mathscr{S}))` 为包含 :math:`f^{-1} (\mathscr{S})` 的最小的 :math:`\sigma` 代数,
+   并且由 :ref:`本章第 35 题 <ex-2-35>` 知 :math:`f^{-1} (\sigma (\mathscr{S}))` 为 :math:`Y` 中的 :math:`\sigma` 代数,
+   故 :math:`\sigma (f^{-1} (\mathscr{S})) \subset f^{-1} (\sigma (\mathscr{S}))`.
+
+   另一方面, 待写....

@@ -417,35 +417,35 @@
 
 .. proof:proof::
 
-   由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 对于集合 :math:`E, X \setminus E`, 存在 :math:`G_{\delta}`-集 :math:`G_1 \supset E`,
-   :math:`G_2 \supset X \setminus E`, 使得
+   由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 对于集合 :math:`E, X \setminus E`, 存在 :math:`G_{\delta}`-集 :math:`A_1 \supset E`,
+   :math:`A_2 \supset X \setminus E`, 使得
 
    .. math::
 
-      m G_1 & = m^* E \leqslant m X < 0, \\
-      m G_2 & = m^* (X \setminus E) \leqslant m X < 0.
+      m A_1 & = m^* E \leqslant m X < 0, \\
+      m A_2 & = m^* (X \setminus E) \leqslant m X < 0.
 
-   那么 :math:`G_1 \cup G_2 \supset X`, 并且有
+   那么 :math:`A_1 \cup A_2 \supset X`, 并且有
 
    .. math::
 
-      m X \leqslant m (G_1 \cup G_2) \leqslant m G_1 + m G_2 = m^* E + m^* (X \setminus E) = m X.
+      m X \leqslant m (A_1 \cup A_2) \leqslant m A_1 + m A_2 = m^* E + m^* (X \setminus E) = m X.
 
    故上式中的不等号都必须是等号, 即有
 
    .. math::
 
-      m X = m (G_1 \cup G_2) = m G_1 + m G_2`.
+      m X = m (A_1 \cup A_2) = m A_1 + m A_2.
 
-   由 :math:`m (G_1 \cup G_2) = m G_1 + m G_2`, 以及他们测度都有限知 :math:`m (G_1 \cap G_2) = 0`, 从而 :math:`G_1 \cap G_2` 是零测度集.
-   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 由 :math:`m X = m (G_1 \cup G_2)` 有 :math:`G_1 \cup G_2 = X \cup F`,
-   其中 :math:`F = (G_1 \cup G_2) \setminus X` 为零测度集. 于是,
+   由 :math:`m (A_1 \cup A_2) = m A_1 + m A_2`, 以及他们测度都有限知 :math:`m (A_1 \cap A_2) = 0`, 从而 :math:`A_1 \cap A_2` 是零测度集.
+   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 由 :math:`m X = m (A_1 \cup A_2)` 有 :math:`A_1 \cup A_2 = X \cup F`,
+   其中 :math:`F = (A_1 \cup A_2) \setminus X` 为零测度集. 于是,
 
    .. math::
 
-      G_1 \setminus E \subset ((G_1 \cup G_2) \setminus X) \cup (G_1 \cap G_2)
+      A_1 \setminus E \subset ((A_1 \cup A_2) \setminus X) \cup (A_1 \cap A_2)
 
-   为零测度集, 从而 :math:`E = G_1 \setminus (G_1 \setminus E)` 为可测集.
+   为零测度集, 从而 :math:`E = A_1 \setminus (A_1 \setminus E)` 为可测集.
 
    .. note::
 

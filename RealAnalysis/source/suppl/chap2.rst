@@ -37,20 +37,20 @@
 
 .. _sigma_ring:
 
-2. 设 :math:`\mathcal{E}` 为基本集 :math:`X` 的子集族, 那么它生成的环 :math:`\mathcal{R}(\mathcal{E})` 包含于
+2. 设 :math:`\mathscr{E}` 为基本集 :math:`X` 的子集族, 那么它生成的环 :math:`\mathscr{R}(\mathscr{E})` 包含于
 
    .. math::
 
-      \mathcal{R} :=
-      \left\{ E \subset X ~ : ~ E \subset \bigcup\limits_{k=1}^{n} E_k, ~ n \in \mathbb{N}, E_1, \dots, E_n \in \mathcal{E} \right\}.
+      \mathscr{R} :=
+      \left\{ E \subset X ~ : ~ E \subset \bigcup\limits_{k=1}^{n} E_k, ~ n \in \mathbb{N}, E_1, \dots, E_n \in \mathscr{E} \right\}.
 
-   首先, 验证 :math:`\mathcal{R}` 是一个环. 它关于有限并运算的封闭性显然, 只需验证它关于差运算的封闭性. 对任意 :math:`E \subset \bigcup\limits_{k=1}^{n} E_k`,
-   :math:`F \subset \bigcup\limits_{j=1}^{m} F_j \in \mathcal{R}`, 有
+   首先, 验证 :math:`\mathscr{R}` 是一个环. 它关于有限并运算的封闭性显然, 只需验证它关于差运算的封闭性. 对任意 :math:`E \subset \bigcup\limits_{k=1}^{n} E_k`,
+   :math:`F \subset \bigcup\limits_{j=1}^{m} F_j \in \mathscr{R}`, 有
 
    .. math::
 
       E \setminus F \subset E \subset \bigcup\limits_{k=1}^{n} E_k,
 
-   从而知 :math:`E \setminus F \in \mathcal{R}`.
+   从而知 :math:`E \setminus F \in \mathscr{R}`.
 
-   其次, 由于 :math:`\mathcal{R}(\mathcal{E})` 是包含 :math:`\mathcal{E}` 的最小环, 所以 :math:`\mathcal{R}(\mathcal{E}) \subset \mathcal{R}`.
+   其次, 由于 :math:`\mathscr{R}(\mathscr{E})` 是包含 :math:`\mathscr{E}` 的最小环, 所以 :math:`\mathscr{R}(\mathscr{E}) \subset \mathscr{R}`.
