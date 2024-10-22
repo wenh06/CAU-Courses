@@ -330,6 +330,31 @@
 
    将 :math:`y|_{x = 0} = 1` 和 :math:`y'|_{x = 0} = e` 代入上式得 :math:`y''|_{x = 0} = \dfrac{3 e^2 - e^2}{(1 - 0)^2} = 2 e^2`.
 
+4. 用对数求导法求下列导数:
+
+   (1). :math:`y = x^x`.
+
+   (2). :math:`\displaystyle y = \sqrt[\leftroot{-3}\uproot{15}3]{\dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2}}`.
+
+.. proof:solution::
+
+   (1). 由于 :math:`\ln y = \ln x^x = x \ln x`, 所以 :math:`y' = (x \ln x)' \cdot y = (\ln x + 1) x^x`.
+
+   (2). 由于
+
+   .. math::
+
+      \ln y & = \ln \left( \dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2} \right)^{1/3} = \dfrac{1}{3} \ln \left( \dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2} \right) \\
+      & = \dfrac{1}{3} \left( \ln (x + 1) + \ln (x^2 + 2) - \ln x - 2 \ln (2x - 1) \right),
+
+   所以
+
+   .. math::
+
+      y' & = \dfrac{1}{3} \left( \dfrac{1}{x + 1} + \dfrac{2x}{x^2 + 2} - \dfrac{1}{x} - \dfrac{2}{2x - 1} \right) \cdot y \\
+      & = \dfrac{1}{3} \left( \dfrac{1}{x + 1} + \dfrac{2x}{x^2 + 2} - \dfrac{1}{x} - \dfrac{2}{2x - 1} \right)
+          \cdot \sqrt[\leftroot{-3}\uproot{15}3]{\dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2}}.
+
 6. 设参数方程为 :math:`\begin{cases} x = e^t \sin t \\ y = e^t \cos t \end{cases}`,
 
    (1). 求曲线在 :math:`t = \dfrac{\pi}{3}` 处的切线方程和法线方程;
