@@ -1,6 +1,24 @@
 §1 可测函数的基本性质
 ------------------------------------------
 
+.. _ex-3-1:
+
+1. 设 :math:`f(x), g(x)` 为可测集 :math:`E` 上的可测函数, 试证 :math:`E(f > g)` 是可测集.
+
+.. proof:proof::
+
+   由于 :math:`f(x), g(x)` 都是可测函数, 那么 :math:`f - g` 也是可测函数, 于是由可测函数定义知 :math:`E(f > g) = E(f - g > 0)` 是可测集.
+
+   .. note::
+
+      也可以像证明 :math:`f - g` 是可测函数那样, 将 :math:`E(f > g)` 具体写出来:
+
+      .. math::
+
+         E(f > g) = \bigcup_{r \in \mathbb{Q}} \left( E(f > r) \cap E(g < r) \right).
+
+      以上集合的可测性需要用到 :ref:`下一题 <ex-3-2>` 的结论.
+
 .. _ex-3-2:
 
 2. 证明 :math:`f(x)` 为 :math:`E` 上可测函数的充分必要条件是: 对于任一有理数 :math:`r`, 集 :math:`E(f > r)` 恒可测.
@@ -58,6 +76,61 @@
       E(f \circ g \in G) = E(g \in f^{-1}(G)) = E(g \in f^{-1}(G))
 
    是可测集, 即 :math:`f \circ g` 是可测函数.
+
+.. _ex-3-8:
+
+8. 设 :math:`f(x)` 是可测集 :math:`E` 上的可测函数, :math:`B` 是 :math:`\mathbb{R}` 中的 Borel 集. 试证 :math:`f^{-1}(B)` 是可测集.
+   又当 :math:`B` 是任意可测集时, :math:`f^{-1}(B)` 是否可测?
+
+.. proof:proof::
+
+   记 :math:`\mathscr{B}` 为 :math:`\mathbb{R}` 中的 Borel 集族, 那么它是由半开闭区间组成的集族生成的 :math:`\sigma`-代数:
+
+   .. math::
+
+      \mathscr{B} = \mathscr{R}_{\sigma} (\mathscr{S}), \quad \mathscr{S} \left\{ [a, b) : a < b \in \mathbb{R} \right\}.
+
+   由 :ref:`上一章第 37 题 <ex-2-37>` 知
+
+   .. math::
+
+      f^{-1}(\mathscr{B}) = f^{-1}(\mathscr{R}_{\sigma} (\mathscr{S})) = \mathscr{R}_{\sigma} (f^{-1}(\mathscr{S})).
+
+   对任意半开闭区间 :math:`[a, b)`, 有 :math:`f^{-1}([a, b)) = E(a \leqslant f < b)`, 是可测集.
+   由于 :math:`\mathbb{R}` 中的可测集族 :math:`\mathscr{M}` 是 :math:`\sigma`-代数, 因此有
+
+   .. math::
+
+      \mathscr{M} \supset \mathscr{R}_{\sigma} (f^{-1}(\mathscr{S})) = f^{-1}(\mathscr{B}).
+
+   因此对于 :math:`B \in \mathscr{B}`, 有 :math:`f^{-1}(B) \in \mathscr{M}`, 是可测集.
+
+   当 :math:`B` 是任意可测集时, :math:`f^{-1}(B)` 不一定是可测集. 反例如下: 设 :math:`E = [0, 1]`,
+   令 :math:`\Phi` 为 Cantor 函数 (见 :ref:`第一章补充材料 <cantor-function>`), 并令 :math:`\displaystyle \Psi(x) = \dfrac{1}{2} (\Phi(x) + x)`,
+   那么 :math:`\Psi(x)` 是 :math:`E \to E` 的连续, 严格递增的双射, 从而有逆映射 :math:`f = \Psi^{-1}`.
+   :math:`f` 也是 是 :math:`E \to E` 的连续, 严格递增的函数, 从而是可测的.
+
+   记 Cantor 三分集为 :math:`P_0`, 它的补集为 :math:`G_0`, 那么 Cantor 函数 :math:`\Phi` 在 :math:`G_0` 的每个构成区间上是常值函数,
+   于是 :math:`\Psi` 在 :math:`G_0` 的每个构成区间上是线性函数, 每个构成区间在 :math:`\Psi` 下的像是一个开区间, 长度为原区间的一半,
+   因此 :math:`\Psi(G_0)` 是测度为 :math:`1/2` 的开集, :math:`\Psi(G_0)` 的补集 :math:`\Psi(P_0)` 是测度为 :math:`1/2` 的闭集.
+   令 :math:`W \subset \Psi(P_0)` 为不可测集, 并取 :math:`B = \Psi^{-1}(W) \subset P_0` 为零测集, 那么 :math:`B` 是可测集.
+   但 :math:`f^{-1}(B) = \Psi(B) = W` 是不可测集.
+
+.. _ex-3-9:
+
+9. 试在 :math:`\mathbb{R}` 上定义一个实函数, 使它在每个区间上的限制均不可测.
+
+.. proof:solution::
+
+   令 :math:`E = \mathbb{R} / \mathbb{Q}` 为 :math:`\mathbb{R}` 中等价关系
+
+   .. math::
+
+      x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in \mathbb{R},
+
+   的每个等价类中代表元素的集合. 之前已经证明过, :math:`E` 是不可测集, 且在 :math:`\mathbb{R}` 中稠密,
+   并且 :math:`E` 与每个区间的交集都是不可测集. 令 :math:`f = \chi_E` 为 :math:`\mathbb{R}` 上的特征函数,
+   那么 :math:`f` 在每个区间上的限制都是不可测函数.
 
 .. _ex-3-10:
 

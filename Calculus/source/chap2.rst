@@ -445,7 +445,8 @@
 
    (4). 由于 :math:`\left( -\dfrac{1}{2} e^{-2x} \right)' = e^{-2x}`, 所以 :math:`\mathrm{d} \left( -\dfrac{1}{2} e^{-2x} + C \right) = e^{-2x} \mathrm{d} x`.
 
-   (6). 由于 :math:`\left( \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`, 所以 :math:`\mathrm{d} \left( \arctan^2 x + C \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
+   (6). 由于 :math:`\left( \dfrac{1}{2} \arctan^2 x \right)' = \dfrac{\arctan x}{x^2 + 1}`,
+   所以 :math:`\mathrm{d} \left( \dfrac{1}{2} \arctan^2 x + C \right) = \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
 
    以上的 :math:`C` 为常数.
 
@@ -457,7 +458,7 @@
 
          \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \arctan x \cdot \dfrac{1}{x^2 + 1} \mathrm{d} x \\
          & = \arctan x \cdot \mathrm{d} (\arctan x) \\
-         & = \mathrm{d} (\arctan^2 x + C)
+         & = \mathrm{d} \left( \dfrac{1}{2} \arctan^2 x + C \right).
 
 4. 求下列近似值:
 
@@ -555,7 +556,7 @@
 
 10. 求证: 设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续, 在 :math:`(a, b)` 内可导, 则存在 :math:`\xi \in (a, b)` 使得
 
-   .. math::
+    .. math::
 
       f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
 
