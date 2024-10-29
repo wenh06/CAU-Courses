@@ -98,6 +98,45 @@
 
    为不可测集, 因此 :math:`\psi \circ \varphi` 不可测.
 
+.. _ex-3-15:
+
+15. 设 :math:`\{E_n\}` 为可测集列, :math:`\displaystyle E = \bigcup_{n=1}^\infty E_n`, 试证 :math:`f` 在 :math:`E` 上可测的充分必要条件是
+    :math:`f` 限制在每个 :math:`E_n` 上均可测, :math:`n \in \mathbb{N}`.
+
+.. proof:proof::
+
+   由于有
+
+   .. math::
+
+      E(f > \alpha) = E \cap f^{-1} (\alpha, \infty) = \bigcup_{n=1}^\infty E_n \cap f^{-1} (\alpha, \infty) = \bigcup_{n=1}^\infty E_n (f > \alpha),
+
+   所以若每个 :math:`E_n` 上 :math:`f` 可测, 即 :math:`E_n (f > \alpha)` 可测, 那么 :math:`E(f > \alpha)` 可测.
+
+   另一方面, 若 :math:`E(f > \alpha)` 可测, 那么对于任意的 :math:`n \in \mathbb{N}`, 由于 :math:`E_n \subset E`, 有
+
+   .. math::
+
+      E_n (f > \alpha) = E_n \cap f^{-1} (\alpha, \infty) = E_n \cap f^{-1} (\alpha, \infty) \cap E = E_n \cap E (f > \alpha),
+
+   从而可知 :math:`f` 限制在每个 :math:`E_n` 上均可测.
+
+.. _ex-3-16:
+
+16. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在有界集 :math:`E` 上近一致收敛于 :math:`f`, 试证 :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处收敛于 :math:`f`.
+
+.. proof:proof::
+
+   由于 :math:`\{f_n\}_{n \in \mathbb{N}}` 在有界集 :math:`E` 上近一致收敛于 :math:`f`, 那么对于任意给定的 :math:`k \in \mathbb{N}`,
+   存在有界集 :math:`E_k \subset E` 使得 :math:`m (E \setminus E_k) < \dfrac{1}{k}`, 且 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E_k` 上一致收敛于 :math:`f`.
+   取 :math:`\displaystyle E^* = \bigcup_{k=1}^\infty E_k`, 那么 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E^*` 上处处收敛于 :math:`f`, 且有
+
+   .. math::
+
+      m (E \setminus E^*) = m \left( \bigcap_{k=1}^\infty (E \setminus E_k) \right) \leqslant m (E \setminus E_k) < \dfrac{1}{k},
+
+   对所有的 :math:`k \in \mathbb{N}` 都成立, 从而必有 :math:`m (E \setminus E^*) = 0`, 即 :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处收敛于 :math:`f`.
+
 .. _ex-3-17:
 
 17. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且在 :math:`E` 上几乎处处有 :math:`f_n \leqslant g`,
@@ -156,6 +195,75 @@
       0 \leqslant m E (f > g) \leqslant m (E_0 \cup \widetilde{E} (f > g)) = m E_0 + m \widetilde{E} (f > g) = 0.
 
    最终我们有 :math:`m E (f > g) = 0`, 即 :math:`f \leqslant g` 几乎处处成立.
+
+.. _ex-3-18:
+
+18. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且几乎处处有 :math:`f_n \leqslant f_{n+1}`, :math:`n \in \mathbb{N}`,
+    证明 :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处收敛于 :math:`f`.
+
+.. proof:proof::
+
+   由 Riesz 定理, 存在 :math:`\{f_n\}_{n \in \mathbb{N}}` 的子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}` 几乎处处收敛于 :math:`f`,
+   记此集合为 :math:`E_1`, 有 :math:`m (E \setminus E_1) = 0`. 又由于几乎处处有 :math:`f_n \leqslant f_{n+1}`, :math:`n \in \mathbb{N}`,
+   记此集合为 :math:`E_2`, 有 :math:`m (E \setminus E_2) = 0`. 于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`.
+   那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_k} (x) \to f(x)`. 由于 :math:`\{f_n(x)\}_{n \in \mathbb{N}}` 是单调递增的,
+   其子列 :math:`\{f_{n_k}(x)\}_{k \in \mathbb{N}}` 也是单调递增的. 若 :math:`f(x) = \infty`, 那么对于任意的 :math:`M > 0`,
+   存在 :math:`K \in \mathbb{N}`, 使得 :math:`f_{n_k}(x) > M, \forall k \geqslant K`, 从而对任意的 :math:`n \geqslant n_K`,
+   有 :math:`f_n(x) \geqslant f_{n_K}(x) > M`, 这表明 :math:`f_n(x) \to \infty = f(x)`. 若 :math:`f(x) \in \mathbb{R}`,
+   那么 :math:`f(x)` 是数列 :math:`\{f_n(x)\}_{n \in \mathbb{N}}` 的一个上界, 从而由单调有界定理, 有 :math:`f_n(x) \to f(x)`.
+   综上所述, :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处 (在集合 :math:`E^*` 上) 收敛于 :math:`f`.
+
+.. _ex-3-19:
+
+19. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 而 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`,
+    证明 :math:`\{g_n\}_{n \in \mathbb{N}}` 也在 :math:`E` 上依测度收敛于 :math:`f`.
+
+.. proof:proof::
+
+   由 Riesz 定理, 对 :math:`\{f_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}`,
+   存在其子列 :math:`\{f_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`f_{n_{k_i}} \to f` 几乎处处成立, 记此集合为 :math:`E_1`,
+   有 :math:`m (E \setminus E_1) = 0`. 又由于 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`, 记此集合为 :math:`E_2`,
+   有 :math:`m (E \setminus E_2) = 0`. 于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`.
+   那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_{k_i}}(x) \to f(x)`, 且 :math:`f_{n_{k_i}}(x) = g_{n_{k_i}}(x)`,
+   从而 :math:`g_{n_{k_i}}(x) \to f(x)`. 所以, 对 :math:`\{g_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{g_{n_k}\}_{k \in \mathbb{N}}`,
+   我们找到了它的子列 :math:`\{g_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`g_{n_{k_i}} \to f` 几乎处处成立.
+   由 Riesz 定理, :math:`\{g_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`.
+
+.. _ex-3-20:
+
+20. 设 :math:`m E < \infty`, 在 :math:`E` 上几乎处处有限的可测函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 与 :math:`\{g_n\}_{n \in \mathbb{N}}`
+    分别依测度收敛于 :math:`f` 与 :math:`g`. 试证 :math:`\{f_n \cdot g_n\}_{n \in \mathbb{N}}` 依测度收敛于 :math:`f \cdot g`.
+
+.. proof:proof::
+
+   采用 Riesz 定理, 很容易验证 :math:`\{f_n^2\}_{n \in \mathbb{N}}`, :math:`\{g_n^2\}_{n \in \mathbb{N}}` 分别依测度收敛于 :math:`f^2`, :math:`g^2`.
+   (证明方法与 :ref:`本章第 18 题 <ex-3-18>` 以及 :ref:`本章第 19 题 <ex-3-19>` 类似)
+
+   由依测度收敛的定义, 对任意 :math:`\varepsilon > 0` 有
+
+   .. math::
+
+      & \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0, \\
+      & \lim_{n \to \infty} m (E (\lvert g_n - g \rvert > \varepsilon)) = 0.
+
+   由三角不等式
+
+   .. math::
+
+      \lvert f_n + g_n - f - g \rvert \leqslant \lvert f_n - f \rvert + \lvert g_n - g \rvert
+
+   可知 :math:`\displaystyle \lim_{n \to \infty} m (E (\lvert f_n + g_n - f - g \rvert > 2 \varepsilon)) = 0`,
+   即有 :math:`\{f_n + g_n\}_{n \in \mathbb{N}}` 依测度收敛于 :math:`f + g`. 进一步由 Riesz 定理有
+   :math:`\{(f_n + g_n)^2\}_{n \in \mathbb{N}}` 依测度收敛于 :math:`(f + g)^2`.
+
+   由于有恒等式
+
+   .. math::
+
+      f_n \cdot g_n = \dfrac{1}{4} \left( (f_n + g_n)^2 - f_n^2 - g_n^2 \right),
+
+   以及已证明的 :math:`\{f_n^2\}_{n \in \mathbb{N}}`, :math:`\{g_n^2\}_{n \in \mathbb{N}}`, :math:`\{(f_n + g_n)^2\}_{n \in \mathbb{N}}`
+   分别依测度收敛于 :math:`f^2`, :math:`g^2`, :math:`(f + g)^2`, 从而有 :math:`\{f_n \cdot g_n\}_{n \in \mathbb{N}}` 依测度收敛于 :math:`f \cdot g`.
 
 .. _ex-3-21:
 
@@ -483,7 +591,7 @@
       g(x) = \begin{cases}
          -1, & 0 \leqslant x < 1/2 - \varepsilon/2, \\
          1, & 1/2 + \varepsilon/2 < x \leqslant 1, \\
-         1 + \dfrac{2}{\varepsilon} (x - \dfrac{1 + \varepsilon}{2}), & 1/2 - \varepsilon/2 \leqslant x < 1/2 + \varepsilon/2.
+         1 + \dfrac{2}{\varepsilon} \left( x - \dfrac{1 + \varepsilon}{2} \right), & 1/2 - \varepsilon/2 \leqslant x < 1/2 + \varepsilon/2.
       \end{cases}
 
 .. _ex-3-32:
