@@ -15,16 +15,16 @@
 
    相应的证明:
 
-      考虑可测函数列 :math:`g_n = \dfrac{f_n}{1 + \lvert f_n \rvert}`, 那么 :math:`\{g_n\}` 是 :math:`E` 上处处有限的可测函数列,
+      考虑可测函数列 :math:`g_n = \dfrac{\lvert f_n \rvert}{1 + \lvert f_n \rvert}`, 那么 :math:`\{g_n\}` 是 :math:`E` 上处处有限的可测函数列,
       而且 :math:`\displaystyle \lim_{n \to \infty} g_n(x) = 1` 几乎处处成立. 由 Egorov 定理, 对于任意给定的 :math:`\delta > 0`,
       存在可测集 :math:`E_\delta \subset E` 使得 :math:`m (E \setminus E_\delta) < \delta`, 且 :math:`\{g_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`1`.
       也就是说, 对任意 :math:`\varepsilon > 0`, 存在自然数 :math:`N (\varepsilon) \in \mathbb{N}`, 使得当 :math:`n > N (\varepsilon)` 时,
-      有 :math:`0 < 1 - g_n(x) < \varepsilon, \forall x \in E_\delta`. 由于 :math:`g_n(x) = \dfrac{f_n(x)}{1 + \lvert f_n(x) \rvert}`,
+      有 :math:`0 < 1 - g_n(x) < \varepsilon, \forall x \in E_\delta`. 由于 :math:`g_n(x) = \dfrac{\lvert f_n(x) \rvert}{1 + \lvert f_n(x) \rvert}`,
       所以对任意 :math:`n > N (\varepsilon)` 以及任意的 :math:`x \in E_\delta`, 有
 
       .. math::
 
-         \dfrac{1}{1 + \lvert f_n(x) \rvert} \leqslant \dfrac{1 + \lvert f_n(x) \rvert - f_n(x)}{1 + \lvert f_n(x) \rvert} = 1 - g_n(x) < \varepsilon.
+         \dfrac{1}{1 + \lvert f_n(x) \rvert} = \dfrac{1 + \lvert f_n(x) \rvert - \lvert f_n(x) \rvert}{1 + \lvert f_n(x) \rvert} = 1 - g_n(x) < \varepsilon.
 
       这等价于
 
