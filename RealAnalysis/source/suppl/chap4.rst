@@ -81,7 +81,7 @@
 
    .. math::
 
-      \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall (x, t) \in E \times (\alpha, \beta),
+      \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall ~ (x, t) \in E \times (\alpha, \beta),
 
    那么
 

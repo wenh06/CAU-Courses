@@ -27,8 +27,8 @@
 .. proof:proof::
 
    由 :ref:`本章补充材料 <measurable-function-supp>` 知, 若存在 :math:`D` 为 :math:`\mathbb{R}` 中稠密集,
-   使得 :math:`\forall \alpha \in D`, :math:`E(f > \alpha)` 都是可测集, 则 :math:`f` 是可测函数.
-   特别地, 本题中取 :math:`D` 为有理数集 :math:`\mathbb{Q}`, 则 :math:`\forall r \in \mathbb{Q}`,
+   使得 :math:`\forall ~ \alpha \in D`, :math:`E(f > \alpha)` 都是可测集, 则 :math:`f` 是可测函数.
+   特别地, 本题中取 :math:`D` 为有理数集 :math:`\mathbb{Q}`, 则 :math:`\forall ~ r \in \mathbb{Q}`,
    :math:`E(f > r)` 都是可测集, 于是 :math:`f` 是可测函数. 反过来显然.
 
    集 :math:`E(f = r)` 恒可测, 不能推出 :math:`f` 是可测函数. 反例如下: 设 :math:`E = [0, 1]`,
@@ -242,7 +242,7 @@
 
    其中 :math:`[nx]` 表示 :math:`nx` 的整数部分.
 
-   首先, 证明每个 :math:`f_n(x, y)` 都是可测函数: :math:`\forall \alpha \in \mathbb{R}`, 有
+   首先, 证明每个 :math:`f_n(x, y)` 都是可测函数: :math:`\forall ~ \alpha \in \mathbb{R}`, 有
 
    .. math::
 
@@ -254,7 +254,7 @@
    于是 :math:`f_n(x, y)` 是可测函数.
 
    其次, 证明 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)`. 事实上, 由于 :math:`f(x, y)` 对每个固定的 :math:`y` 关于 :math:`x` 连续,
-   因此 :math:`\forall \varepsilon > 0`, 存在 :math:`\delta > 0`, 使得 :math:`\forall x' \in \mathbb{R}`, 当 :math:`\lvert x' - x \rvert < \delta` 时,
+   因此 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`\delta > 0`, 使得 :math:`\forall ~ x' \in \mathbb{R}`, 当 :math:`\lvert x' - x \rvert < \delta` 时,
    有 :math:`\lvert f(x', y) - f(x, y) \rvert < \varepsilon`. 又由于
 
    .. math::
@@ -262,11 +262,11 @@
       \lim_n \dfrac{[nx]}{n} = x
 
    对任意 :math:`x \in \mathbb{R}` 成立, 那么对取好的 :math:`\delta > 0`, 存在 :math:`N \in \mathbb{N}`, 使得
-   :math:`\forall n > N`, 有 :math:`\left\lvert \dfrac{[nx]}{n} - x \right\rvert < \delta`. 于是有
+   :math:`\forall ~ n > N`, 有 :math:`\left\lvert \dfrac{[nx]}{n} - x \right\rvert < \delta`. 于是有
 
    .. math::
 
-      \lvert f_n(x, y) - f(x, y) \rvert = \left\lvert f \left( \dfrac{[nx]}{n}, y \right) - f(x, y) \right\rvert < \varepsilon, \forall n > N.
+      \lvert f_n(x, y) - f(x, y) \rvert = \left\lvert f \left( \dfrac{[nx]}{n}, y \right) - f(x, y) \right\rvert < \varepsilon, \forall ~ n > N.
 
    这就证明了 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)` 对所有的 :math:`(x, y) \in \mathbb{R}^2` 成立.
    根据可测函数列的性质, :math:`\displaystyle f = \lim_n f_n` 也是可测函数.

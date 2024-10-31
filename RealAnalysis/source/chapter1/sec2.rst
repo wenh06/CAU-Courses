@@ -103,7 +103,7 @@
 .. proof:proof::
 
     令集合 :math:`B = \{ (a_1, a_2, \cdots, a_n, \cdots): \ a_n \in A, n \in \mathbb{N} \}`, 以及集合
-    :math:`B_0 = \{ (a_1, a_2, \cdots, a_n, \cdots) \in B: \ \exists n \in \mathbb{N}, s.t. \forall k \geqslant n, a_k = 1 \}`,
+    :math:`B_0 = \{ (a_1, a_2, \cdots, a_n, \cdots) \in B: \ \exists ~ n \in \mathbb{N}, s.t. \forall ~ k \geqslant n, a_k = 1 \}`,
     并考虑映射
 
     .. math::
@@ -262,7 +262,7 @@
       .. math::
 
          \{ S_i \}_{i \in I}: \quad S_i \subset A, \quad \lvert S_i \rvert = 2,
-         \quad \forall i \in I; \quad S_i \cap S_j = \emptyset, \quad i \neq j.
+         \quad \forall ~ i \in I; \quad S_i \cap S_j = \emptyset, \quad i \neq j.
 
       由包含关系定义偏序关系, 那么任一全序子集都是上界, 从而根据 Zorn 引理, 存在极大元素 :math:`\mathcal{S} = \{ S_i \}_{i \in I}`.
       那么 :math:`\bigcup_{i \in I} S_i` 要么等于 :math:`A`, 要么等于 :math:`A \setminus \{ x \}`, 其中 :math:`x` 是 :math:`A` 中的一个元素.
@@ -329,7 +329,7 @@
    那么对任意 :math:`\alpha \in I`, 都有 :math:`x \in f^{-1} (B_{\alpha})`, 于是有 :math:`f(x) \in B_{\alpha}`, 从而有
    :math:`f(x) \in \bigcap\limits_{\alpha \in I} B_{\alpha}`, 于是有 :math:`x \in f^{-1} \left( \bigcap\limits_{\alpha \in I} B_{\alpha} \right)`.
 
-   若 :math:`f^{-1} (\mathscr{C} B) = \emptyset`, 即 :math:`\forall x \in X, f(x) \not\in \mathscr{C} B`, 那么有 :math:`\forall x \in X, f(x) \in B`,
+   若 :math:`f^{-1} (\mathscr{C} B) = \emptyset`, 即 :math:`\forall ~ x \in X, f(x) \not\in \mathscr{C} B`, 那么有 :math:`\forall ~ x \in X, f(x) \in B`,
    这意味着 :math:`f^{-1} (B) = X`, 于是有 :math:`\mathscr{C} f^{-1} (B) = \emptyset`. 若 :math:`f^{-1} (\mathscr{C} B) \neq \emptyset`,
    任取 :math:`x \in f^{-1} (\mathscr{C} B)`, 那么有 :math:`f(x) \in \mathscr{C} B`, 于是有 :math:`f(x) \not\in B`, 从而有
    :math:`x \not\in f^{-1} (B)`, 于是有 :math:`x \in \mathscr{C} f^{-1} (B)`. 反过来, 任取 :math:`x \in \mathscr{C} f^{-1} (B)`,

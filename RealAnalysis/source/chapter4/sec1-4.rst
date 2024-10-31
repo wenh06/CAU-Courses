@@ -58,7 +58,7 @@
 
    .. math::
 
-      \sum_{k = 1}^n \chi_{E_k} (x) \geqslant p, \quad \forall x \in [0, 1],
+      \sum_{k = 1}^n \chi_{E_k} (x) \geqslant p, \quad \forall ~ x \in [0, 1],
 
    于是有
 
@@ -105,7 +105,7 @@
 
 .. proof:proof::
 
-   :math:`\forall n \in \mathbb{N}`, 令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 那么 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`. 令
+   :math:`\forall ~ n \in \mathbb{N}`, 令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 那么 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`. 令
 
    .. math::
 
@@ -219,7 +219,7 @@
 
 .. proof:proof::
 
-   对每个自然数 :math:`k \in \mathbb{N}`, 令 :math:`E_k = [-k, k]`, 那么 :math:`\forall x \in \mathbb{R}`,
+   对每个自然数 :math:`k \in \mathbb{N}`, 令 :math:`E_k = [-k, k]`, 那么 :math:`\forall ~ x \in \mathbb{R}`,
    有 :math:`\displaystyle \lim_{k \to \infty} f \cdot \chi_{E_k} (x) = f (x)`. 由于 :math:`f \in L_{\mathbb{R}}`,
    所以 :math:`\lvert f \rvert \in L_{\mathbb{R}}`, 并且 :math:`\lvert f \cdot \chi_{E_k} (x) \rvert \leqslant \lvert f (x) \rvert`
    对所有 :math:`x \in \mathbb{R}` 以及 :math:`k \in \mathbb{N}` 成立. 于是, 由 Lebesgue 控制收敛定理可得
@@ -229,7 +229,7 @@
       \lim_{k \to \infty} \int_{E_k} f \mathrm{d} m = \lim_{k \to \infty} \int_{\mathbb{R}} f \cdot \chi_{E_k} \mathrm{d} m
       = \int_{\mathbb{R}} \lim_{k \to \infty} f \cdot \chi_{E_k} \mathrm{d} m = \int_{\mathbb{R}} f \mathrm{d} m.
 
-   那么 :math:`\forall \varepsilon > 0`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时, 有
+   那么 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时, 有
 
    .. math::
 

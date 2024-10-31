@@ -424,7 +424,7 @@
 
       H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \leqslant \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (B) = H_{\alpha} (B).
 
-   设集列 :math:`\{E_k\}_{k \in \mathbb{N}}` 满足 :math:`d (E_k) < \varepsilon, \forall k \in \mathbb{N}`. 对于 :math:`\beta > \alpha`, 有
+   设集列 :math:`\{E_k\}_{k \in \mathbb{N}}` 满足 :math:`d (E_k) < \varepsilon, \forall ~ k \in \mathbb{N}`. 对于 :math:`\beta > \alpha`, 有
 
    .. math::
 
@@ -598,4 +598,27 @@
    并且由 :ref:`本章第 35 题 <ex-2-35>` 知 :math:`f^{-1} (\sigma (\mathscr{S}))` 为 :math:`Y` 中的 :math:`\sigma` 代数,
    故 :math:`\sigma (f^{-1} (\mathscr{S})) \subset f^{-1} (\sigma (\mathscr{S}))`.
 
-   另一方面, 待写....
+   另一方面, 我们需要注意到这样一个事实:
+
+      对于任意一个 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 有 :math:`f^{-1}(f(A)) = A`.
+
+   对于 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 有 :math:`f(A) \in \sigma (\mathscr{S})`, 从而存在 :math:`E_1, E_2, \dots \in \mathscr{S}`,
+   使得
+
+   .. math::
+
+      f(A) \subset \bigcup\limits_{n=1}^{\infty} E_n \subset \bigcup\limits_{n=1}^{\infty} f(f^{-1} (E_n)).
+
+   记 :math:`\widetilde{E}_n = f(f^{-1} (E_n)), E = \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A)`, 有
+
+   .. math::
+
+      f^{-1} (E) = f^{-1} \left( \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A) \right)
+      = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (\widetilde{E}_n) \right) \setminus A
+      = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (E_n) \right) \setminus A.
+
+   由于 :math:`\bigcup\limits_{n=1}^{\infty} f^{-1} (E_n) \in \sigma (f^{-1} (\mathscr{S})) \subset f^{-1} (\sigma (\mathscr{S}))`,
+   并且 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 那么有 :math:`f^{-1} (E) \in f^{-1} (\sigma (\mathscr{S}))`,
+   即 :math:`E \in \sigma (\mathscr{S})`.
+
+   未完。。。。

@@ -18,7 +18,7 @@
 
 .. proof:proof::
 
-   任取 :math:`f` 的连续点 :math:`x_0`, 那么对 :math:`\varepsilon = \dfrac{1}{3}`, 存在 :math:`\delta > 0`, 使得 :math:`\forall x \in U(x_0, \delta)`,
+   任取 :math:`f` 的连续点 :math:`x_0`, 那么对 :math:`\varepsilon = \dfrac{1}{3}`, 存在 :math:`\delta > 0`, 使得 :math:`\forall ~ x \in U(x_0, \delta)`,
    都有 :math:`\lvert f(x) - f(x_0) \rvert < \dfrac{1}{3}`. 由于 :math:`f` 只取整数值, 此时必须有 :math:`f(x) = f(x_0)`. 考察集合 :math:`U(x_0, \delta / 3)`,
    任取 :math:`\tilde{x} \in U(x_0, \delta / 3)`, 有 :math:`U(\tilde{x}, \delta / 3) \subset U(x_0, \delta)`, 从而有 :math:`f(\tilde{x}) = f(x_0)`,
    故 :math:`\tilde{x}` 也是 :math:`f` 的连续点. 这就证明了集合 :math:`U(x_0, \delta / 3)` 包含于 :math:`f` 的连续点集中, 从而 :math:`x_0` 是其内点.
@@ -54,11 +54,11 @@
 .. proof:proof::
 
    任取 :math:`y \in f \left( \bigcap\limits_{k=1}^{\infty} E_k \right)`, 那么存在 :math:`x \in \bigcap\limits_{k=1}^{\infty} E_k`,
-   使得 :math:`y = f(x)`. 由于 :math:`x \in \bigcap\limits_{k=1}^{\infty} E_k`, 所以 :math:`x \in E_k, \forall k \in \mathbb{N}`,
-   这说明了 :math:`y = f(x) \in f(E_k), \forall k \in \mathbb{N}`, 从而有 :math:`y \in \bigcap\limits_{k=1}^{\infty} f(E_k)`.
+   使得 :math:`y = f(x)`. 由于 :math:`x \in \bigcap\limits_{k=1}^{\infty} E_k`, 所以 :math:`x \in E_k, \forall ~ k \in \mathbb{N}`,
+   这说明了 :math:`y = f(x) \in f(E_k), \forall ~ k \in \mathbb{N}`, 从而有 :math:`y \in \bigcap\limits_{k=1}^{\infty} f(E_k)`.
    这样, 我们就证明了 :math:`f \left( \bigcap\limits_{k=1}^{\infty} E_k \right) \subset \bigcap\limits_{k=1}^{\infty} f(E_k)`.
 
-   反过来, 任取 :math:`y \in \bigcap\limits_{k=1}^{\infty} f(E_k)`, 那么 :math:`y \in f(E_k), \forall k \in \mathbb{N}`, 于是存在
+   反过来, 任取 :math:`y \in \bigcap\limits_{k=1}^{\infty} f(E_k)`, 那么 :math:`y \in f(E_k), \forall ~ k \in \mathbb{N}`, 于是存在
    :math:`x_k \in E_k`, 使得 :math:`y = f(x_k)`. 由于 :math:`\{ E_k \}` 是区间 :math:`[a, b]` 中的渐缩列, 所以 :math:`\{ x_k \}` 是有界数列,
    从而存在收敛子列 :math:`\{ x_{k_i} \}`, 令 :math:`\lim\limits_{i \to \infty} x_{k_i} = x_0 \in [a, b]`. 由于 :math:`f` 在 :math:`[a, b]` 上连续,
    所以有 :math:`\lim\limits_{i \to \infty} f(x_{k_i}) = f(x_0)`, 于是有 :math:`y = f(x_0)`. 可以断言 :math:`x_0 \in \bigcap\limits_{k=1}^{\infty} E_k`,

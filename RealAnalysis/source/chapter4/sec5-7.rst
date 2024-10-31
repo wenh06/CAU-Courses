@@ -125,9 +125,9 @@
 
       \sum_{i = 1}^k \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \leqslant K.
 
-   又由于 :math:`\forall x \in [a, b]`, 实数列 :math:`\{ f_n(x) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x)`,
+   又由于 :math:`\forall ~ x \in [a, b]`, 实数列 :math:`\{ f_n(x) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x)`,
    所以特别地对 :math:`x_i, i = 0, 1, \cdots, k`, 有 :math:`\{ f_n(x_i) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x_i)`.
-   于是 :math:`\forall \varepsilon > 0`, 存在正整数 :math:`N(\varepsilon, i)`, 使得当 :math:`n > N(\varepsilon, i)` 时, 有
+   于是 :math:`\forall ~ \varepsilon > 0`, 存在正整数 :math:`N(\varepsilon, i)`, 使得当 :math:`n > N(\varepsilon, i)` 时, 有
 
    .. math::
 
@@ -186,11 +186,11 @@
 
    设 :math:`E \subset \mathbb{R}` 为有有限测度的无界集, :math:`m (E) < \infty`,
    :math:`\mathscr{M}` 为 :math:`E` 的一个由有正测度的闭区间构成的 Vitali 覆盖.
-   要证明 :math:`\forall \varepsilon > 0`, 存在有限个互不相交的区间 :math:`d_1, d_2, \cdots, d_n \in \mathscr{M}`,
+   要证明 :math:`\forall ~ \varepsilon > 0`, 存在有限个互不相交的区间 :math:`d_1, d_2, \cdots, d_n \in \mathscr{M}`,
    使得 :math:`m (E \setminus \bigcup_{i = 1}^n d_i) < \varepsilon`.
 
    取开集 :math:`G` 使得 :math:`E \subset G`, 且 :math:`m G < \infty`. 可以不妨设 :math:`\mathscr{M}` 中的区间都包含于 :math:`G` 中.
-   这是因为 :math:`\forall x \in E \subset G`, :math:`x` 必然属于开集 :math:`G` 的某个构成区间 :math:`(a, b)`,
+   这是因为 :math:`\forall ~ x \in E \subset G`, :math:`x` 必然属于开集 :math:`G` 的某个构成区间 :math:`(a, b)`,
    而 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖, 对于所有的 :math:`x \in E`, 都存在闭区间列 :math:`\{ d_k \} \subset \mathscr{M}`,
    使得 :math:`x \in d_k`, 且 :math:`\displaystyle \lim_{k \to \infty} m (d_k) = 0`. 于是从某一项开始, :math:`d_k \subset (a, b) \subset G`.
    令 :math:`\mathscr{M}'` 为 :math:`\mathscr{M}` 中所有包含于 :math:`G` 的闭区间构成的子族, 那么 :math:`\mathscr{M}'` 也是 :math:`E` 的 Vitali 覆盖.
@@ -227,7 +227,7 @@
 
       \sum_{k = 1}^\infty m (d_k) = m \left( \bigcup_{k = 1}^\infty d_k \right) \leqslant m (G) < \infty.
 
-   于是由级数的 Cauchy 收敛准则知 :math:`\forall \varepsilon > 0`, 存在正整数 :math:`n`, 使得
+   于是由级数的 Cauchy 收敛准则知 :math:`\forall ~ \varepsilon > 0`, 存在正整数 :math:`n`, 使得
 
    .. math::
       :label: ex-4-38-5

@@ -15,7 +15,7 @@
 
       G_i = \bigcup_{x \in F_i} U(x, \delta), \quad i = 1, 2.
 
-   那么 :math:`G_1, G_2` 都是开集, 且 :math:`G_1 \cap G_2 = \emptyset`. 又由于 :math:`\forall x \in F_1`, 有 :math:`U(x, \delta) \subset G_1`,
+   那么 :math:`G_1, G_2` 都是开集, 且 :math:`G_1 \cap G_2 = \emptyset`. 又由于 :math:`\forall ~ x \in F_1`, 有 :math:`U(x, \delta) \subset G_1`,
    所以 :math:`F_1 \subset G_1`. 同理可证 :math:`F_2 \subset G_2`.
 
 .. _ex-1-23:
@@ -27,7 +27,7 @@
    首先证明, 对任意的 :math:`\mathbb{R}^n` 的子集 :math:`F`, 函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F)`
    是一致连续的:
 
-      任取 :math:`a, b \in \mathbb{R}^n`, 由于 :math:`\rho (a, F) := \inf\limits_{x \in F} \rho(a, x)`, 那么 :math:`\forall \varepsilon > 0`,
+      任取 :math:`a, b \in \mathbb{R}^n`, 由于 :math:`\rho (a, F) := \inf\limits_{x \in F} \rho(a, x)`, 那么 :math:`\forall ~ \varepsilon > 0`,
       存在 :math:`x_0 \in F`, 使得 :math:`\rho(a, x_0) < \rho(a, F) + \varepsilon`, 于是有
 
       .. math::
@@ -85,7 +85,7 @@
    那么 :math:`G_n` 是开集, 且 :math:`F \subset G_n`. 可以证明 :math:`F = \bigcap\limits_{n=1}^{\infty} G_n`. 证明如下:
 
    只要证明 :math:`F \supset \bigcap\limits_{n=1}^{\infty} G_n` 即可. 任取 :math:`x \in \bigcap\limits_{n=1}^{\infty} G_n`,
-   那么 :math:`x \in G_n, \forall n \in \mathbb{N}`, 从而存在 :math:`x_n \in F`, 使得 :math:`x \in U \left( x_n, \dfrac{1}{n} \right)`,
+   那么 :math:`x \in G_n, \forall ~ n \in \mathbb{N}`, 从而存在 :math:`x_n \in F`, 使得 :math:`x \in U \left( x_n, \dfrac{1}{n} \right)`,
    即有 :math:`\lvert x - x_n \rvert < \dfrac{1}{n}`. 于是 :math:`\{ x_n \}` 是 :math:`\mathbb{R}^n` 中的 Cauchy 列, 且收敛到 :math:`x`.
    由于 :math:`F` 是闭集, 所以 :math:`x \in F`. 于是有 :math:`\bigcap\limits_{n=1}^{\infty} G_n \subset F`.
 
@@ -117,10 +117,10 @@
 
    康托三分集的补集即为 :math:`G_0`, 其构成区间为 :math:`I_n`, 集合 :math:`E` 即由这些构成区间的中点所成的集.
 
-   任取康托三分集中的点 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 那么 :math:`x \in F_n, \forall n \in \mathbb{N}` 成立.
+   任取康托三分集中的点 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 那么 :math:`x \in F_n, \forall ~ n \in \mathbb{N}` 成立.
    对任意 :math:`\varepsilon > 0`, 取 :math:`n \in \mathbb{N}`, 使得 :math:`\dfrac{1}{3^{n}} < \varepsilon`,
    那么 :math:`x \in F_n`, 从而存在 :math:`k \in \{ 1, 2, \dots, 2^n \}`, 使得 :math:`x \in F_{nk}`. 闭区间 :math:`F_{nk}` 的长度为
-   :math:`\dfrac{1}{3^{n}}`, 所以 :math:`\forall y \in F_{nk}`, 都有 :math:`\lvert x - y \rvert \leqslant \varepsilon`. 同时,
+   :math:`\dfrac{1}{3^{n}}`, 所以 :math:`\forall ~ y \in F_{nk}`, 都有 :math:`\lvert x - y \rvert \leqslant \varepsilon`. 同时,
    闭区间 :math:`F_{nk}` 包含了 :math:`I_{n+1}` 中的某个开区间 :math:`I_{n+1, k}, 1 \leqslant k \leqslant 2^{n}`
    (即第 :math:`n+1` 步从闭区间 :math:`F_{nk}` 中去除的中间 :math:`\dfrac{1}{3}` 开区间), 进而包含了 :math:`I_{n+1, k}` 的中点,
    记其为 :math:`y_0`, 那么有 :math:`0 < \lvert x - y_0 \rvert < \varepsilon`, 即 :math:`y_0 \in \mathring{U}(x, \varepsilon) \cap E`.
