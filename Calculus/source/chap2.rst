@@ -704,9 +704,10 @@
 
    .. math::
 
-      \lim\limits_{x \to 0^+} x \cdot \left( \ln \dfrac{1}{x} \right) = \lim\limits_{x \to +\infty} \dfrac{\ln x}{x} = \lim\limits_{x \to +\infty} \dfrac{\dfrac{1}{x}}{1} = 0,
+      \lim\limits_{x \to 0^+} x \cdot \ln \left( \ln \dfrac{1}{x} \right) = \lim\limits_{x \to +\infty} \dfrac{\ln (\ln x)}{x}
+      = \lim\limits_{x \to +\infty} \dfrac{\dfrac{1}{\ln x} \cdot \dfrac{1}{x}}{1} = 0,
 
-   所以 :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x = 1`.
+   所以 :math:`\lim\limits_{x \to 0^+} \left( \ln \dfrac{1}{x} \right)^x = e^0 = 1`.
 
 3. 求 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 极限, 并验证计算时不能应用洛必达法则.
 
