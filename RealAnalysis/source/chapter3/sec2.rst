@@ -196,6 +196,14 @@
 
    最终我们有 :math:`m E (f > g) = 0`, 即 :math:`f \leqslant g` 几乎处处成立.
 
+   .. note::
+
+      这题可以用 Riesz 定理简化证明: 由于 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`,
+      那么存在子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}` 几乎处处收敛于 :math:`f`, 记此集合为 :math:`E_1`, 有 :math:`m (E \setminus E_1) = 0`.
+      又由于几乎处处有 :math:`f_n \leqslant g`, :math:`n \in \mathbb{N}`, 记此集合为 :math:`E_2`, 有 :math:`m (E \setminus E_2) = 0`.
+      于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`, 那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_k} (x) \to f(x)`,
+      且 :math:`f_{n_k}(x) \leqslant g(x)`, 从而 :math:`f(x) \leqslant g(x)`. 所以, :math:`f \leqslant g` 几乎处处成立.
+
 .. _ex-3-18:
 
 18. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且几乎处处有 :math:`f_n \leqslant f_{n+1}`, :math:`n \in \mathbb{N}`,
