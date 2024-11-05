@@ -7,7 +7,6 @@
 
    chap1
    chap2
-   chap3
 
 .. toctree::
    :maxdepth: 2
@@ -15,4 +14,3 @@
 
    chap1-sol
    chap2-sol
-   chap3-sol

@@ -59,10 +59,11 @@
 
    .. math::
 
-      f(x) & = e^{3x-x^2} = e^{2 + (x-1) - (x-1)^2} \\
-      & = e^2 \left( 1 + \left[(x-1) - (x-1)^2\right] + \dfrac{\left[(x-1) - (x-1)^2\right]^2}{2!}
-         + \dfrac{\left[(x-1) - (x-1)^2\right]^3}{3!} \right) + o((x-1)^3) \\
-      & = e^2 \left( 1 + (x-1) - \frac{1}{2}(x-1)^2 - \frac{5}{6}(x-1)^3 \right) + o((x-1)^3)
+      f(x) = & e^{3x-x^2} = e^{2 + (x-1) - (x-1)^2} \\
+      = & e^2 \left( 1 + \left[(x-1) - (x-1)^2\right] + \dfrac{\left[(x-1) - (x-1)^2\right]^2}{2!}
+          + \dfrac{\left[(x-1) - (x-1)^2\right]^3}{3!} \right) \\
+        & + o((x-1)^3) \\
+      = & e^2 \left( 1 + (x-1) - \frac{1}{2}(x-1)^2 - \frac{5}{6}(x-1)^3 \right) + o((x-1)^3)
 
 4. 设函数 :math:`f(x)` 是开区间 :math:`I = (a_0, b_0)` 上的函数且处处可导. 设闭区间 :math:`[a, b] \subset I` 包含于该开区间,
    即 :math:`a_0 < a < b < b_0`. 请证明 :math:`f(x)` 的导函数 :math:`f'(x)` (**注意, 导函数未必连续**),
@@ -83,7 +84,14 @@
 
    .. note::
 
-      这题如果假设 :math:`f'(a) > f'(b)`, 则相应地要取 :math:`\xi` 为 :math:`g(x)` 在闭区间 :math:`[a, b]` 上的最大值.
+      由于 :math:`\displaystyle g'(a) = g'_+(a) = \lim_{x \to a+} \dfrac{g(x) - g(a)}{x - a} < 0`, 由极限的保号性知, 存在足够小的正数 :math:`\delta_1 > 0`,
+      使得对任意 :math:`x \in (a, a + \delta_1)` 都有 :math:`g(x) < g(a)`, 所以 :math:`a` 不是最小值点.
+      同理, 由于 :math:`\displaystyle g'(b) = g'_-(b) = \lim_{x \to b-} \dfrac{g(x) - g(b)}{x - b} > 0`, 存在足够小的正数 :math:`\delta_2 > 0`,
+      使得对任意 :math:`x \in (b - \delta_2, b)` 都有 :math:`g(x) < g(b)`, 所以 :math:`b` 也不是最小值点.
+
+   .. note::
+
+      这题如果假设 :math:`f'(a) > f'(b)`, 则相应地要取 :math:`\xi` 为 :math:`g(x)` 在闭区间 :math:`[a, b]` 上的最大值点.
 
 5. 设 :math:`\displaystyle f(x) = \lvert x + 2 \rvert e^{-\frac{1}{x}}`, 求 :math:`f(x)` 的单调区间, 极值点, 凹凸区间, 拐点, 渐近线.
 
@@ -100,9 +108,11 @@
          \dfrac{x^2 + x + 2}{x^2} e^{-\frac{1}{x}}, & x > -2 ~ \text{且} ~ x \neq 0
          \end{cases}
 
-   当 :math:`x < -2` 时, :math:`f'(x) < 0`, :math:`f(x)` 单调递减;
-   当 :math:`-2 < x < 0` 时, :math:`f'(x) > 0`, :math:`f(x)` 单调递增;
-   当 :math:`x > 0` 时, :math:`f'(x) > 0`, :math:`f(x)` 单调递增.
+
+   - 当 :math:`x < -2` 时, :math:`f'(x) < 0`, :math:`f(x)` 单调递减;
+   - 当 :math:`-2 < x < 0` 时, :math:`f'(x) > 0`, :math:`f(x)` 单调递增;
+   - 当 :math:`x > 0` 时, :math:`f'(x) > 0`, :math:`f(x)` 单调递增.
+
    :math:`f(x)` 在 :math:`x = -2` 处取到极小值 :math:`f(-2) = 0`. 由于 :math:`f(x)` 取值恒非负, 所以 :math:`x = -2` 也是最小值点.
 
    :math:`f(x)` 的二阶导函数为
@@ -114,16 +124,17 @@
          \dfrac{2 - 3x}{x^4}  e^{-\frac{1}{x}}, & x > -2 ~ \text{且} ~ x \neq 0
          \end{cases}
 
-   当 :math:`x < -2` 时, :math:`f''(x) < 0`, :math:`f(x)` 上凸;
-   当 :math:`-2 < x < 0` 时, :math:`f''(x) > 0`, :math:`f(x)` 下凹;
-   当 :math:`0 < x < \dfrac{2}{3}` 时, :math:`f''(x) > 0`, :math:`f(x)` 下凸;
-   当 :math:`x > \dfrac{2}{3}` 时, :math:`f''(x) < 0`, :math:`f(x)` 上凹.
+   - 当 :math:`x < -2` 时, :math:`f''(x) < 0`, :math:`f(x)` 上凸;
+   - 当 :math:`-2 < x < 0` 时, :math:`f''(x) > 0`, :math:`f(x)` 下凸;
+   - 当 :math:`0 < x < \dfrac{2}{3}` 时, :math:`f''(x) > 0`, :math:`f(x)` 下凸;
+   - 当 :math:`x > \dfrac{2}{3}` 时, :math:`f''(x) < 0`, :math:`f(x)` 上凸.
+
    :math:`f''(x)` 在其零点 :math:`x = \dfrac{2}{3}` 附近符号变化, 所以 :math:`\left(\dfrac{2}{3}, f\left(\dfrac{2}{3}\right)\right)` 是拐点.
    在 :math:`f''(x)` 不存在的点 :math:`x = -2` 附近, :math:`f''(x)` 符号也发生变化, 所以 :math:`(-2, 0)` 是拐点.
 
-   由于 :math:`\displaystyle \lim_{x \to 0-} f(x) = +\infty`, 所以有垂直渐近线 :math:`x = 0`.
-   由于 :math:`\displaystyle \lim_{x \to +\infty} \dfrac{f(x)}{x} = 1`, 以及 :math:`\displaystyle \lim_{x \to -\infty} (f(x) - x) = 1`, 所以有斜渐近线 :math:`y = x + 1`.
-   又有 :math:`\displaystyle \lim_{x \to -\infty} f(x) = -1`, 以及 :math:`\displaystyle \lim_{x \to -2+} (f(x) + x) = -1`, 所以有斜渐近线 :math:`y = -x - 1`.
+   - 由于 :math:`\displaystyle \lim_{x \to 0-} f(x) = +\infty`, 所以有垂直渐近线 :math:`x = 0`.
+   - 由于 :math:`\displaystyle \lim_{x \to +\infty} \dfrac{f(x)}{x} = 1`, 以及 :math:`\displaystyle \lim_{x \to +\infty} (f(x) - x) = 1`, 所以有斜渐近线 :math:`y = x + 1`.
+   - 又有 :math:`\displaystyle \lim_{x \to -\infty} f(x) = -1`, 以及 :math:`\displaystyle \lim_{x \to -\infty} (f(x) + x) = -1`, 所以有斜渐近线 :math:`y = -x - 1`.
 
    .. tikz:: 函数 :math:`\lvert x + 2 \rvert e^{-\frac{1}{x}}` 的图像
       :align: center
