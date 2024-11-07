@@ -35,3 +35,11 @@
    :caption: 习题课:
 
    recitation
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 历年考题:
+
+   exams/2024-mid-1
+   exams/2024-mid-2
+   exams/2024-final

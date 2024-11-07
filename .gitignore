@@ -182,3 +182,4 @@ temp/
 
 !RealAnalysis/source/_static/final_exams/*.pdf
 !Calculus/source/_static/final_exams/*.pdf
+!MathematicalAnalysis/source/_static/exams/*.pdf
