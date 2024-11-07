@@ -968,7 +968,7 @@
    令 :math:`y' = 0` 解得 :math:`x = e^{-2}`. 函数 :math:`y = \sqrt{x} \ln x` 的二阶导函数为
    :math:`y'' = -\dfrac{\ln x}{4x\sqrt{x}} + \dfrac{1}{2x\sqrt{x}} - \dfrac{1}{2x\sqrt{x}} = -\dfrac{\ln x}{4x\sqrt{x}}`.
    因为 :math:`y''(e^{-2}) = \dfrac{1}{2e^{-3}} > 0`, 所以 :math:`x = e^{-2}` 为极小值点,
-   相应的极小值为 :math:`y(e^{-2}) = -\dfrac{1}{2e}`. 这是唯一的极值点, 所以也是最小值点.
+   相应的极小值为 :math:`y(e^{-2}) = -\dfrac{2}{e}`. 这是唯一的极值点, 所以也是最小值点.
 
 7. 求内接于上半椭圆 :math:`\dfrac{x^2}{3^2} + \dfrac{y^2}{4^2} = 1, y \geqslant 0` 的矩形的最大面积.
 
@@ -976,7 +976,7 @@
 
    设矩形在第一象限的顶点为 :math:`(x, y) = (3\cos t, 4\sin t), t \in (0, \dfrac{\pi}{2})`,
    那么矩形的面积为 :math:`S = 24 \sin t \cos t = 12 \sin 2t`. 容易看出 :math:`S` 在 :math:`t = \dfrac{\pi}{4}`,
-   即 :math:`(x, y) = (\dfrac{3}{\sqrt{2}}, \dfrac{4}{\sqrt{2}})` 处取得最大值 :math:`S = 6`.
+   即 :math:`(x, y) = (\dfrac{3}{\sqrt{2}}, \dfrac{4}{\sqrt{2}})` 处取得最大值 :math:`S = 12`.
 
 §2.11 函数作图
 --------------------------------
