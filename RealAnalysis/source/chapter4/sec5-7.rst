@@ -13,24 +13,24 @@
 
     .. math::
 
-      \int_{X \times Y} h \mathrm{d} (\mu \times \nu) = \int_X f \mathrm{d} \mu \int_Y g \mathrm{d} \nu.
+      \int_{X \times Y} h ~ \mathrm{d} (\mu \times \nu) = \int_X f ~ \mathrm{d} \mu \int_Y g ~ \mathrm{d} \nu.
 
 .. proof:proof::
 
    首先, 由于 :math:`f(x), g(x)` 分别是定义在集 :math:`X, Y` 上的 :math:`\mu, \nu` 可积函数, 从而可测,
    所以 :math:`h(x, y) = f(x) g(y)` 是乘积空间 :math:`X \times Y` 上的可测函数.
 
-   接下来, 需要证明 :math:`\int_{X \times Y} h \mathrm{d} (\mu \times \nu) < \infty`.
-   这等价于 :math:`\int_{X \times Y} \lvert h \rvert \mathrm{d} (\mu \times \nu) < \infty`.
+   接下来, 需要证明 :math:`\int_{X \times Y} h ~ \mathrm{d} (\mu \times \nu) < \infty`.
+   这等价于 :math:`\int_{X \times Y} \lvert h \rvert ~ \mathrm{d} (\mu \times \nu) < \infty`.
    由 :ref:`Tonelli 定理 <thm-tonelli>` 知
 
    .. math::
 
-      \int_{X \times Y} \lvert h \rvert \mathrm{d} (\mu \times \nu)
-      & = \int_X \left( \int_Y \lvert h(x, y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu
-        = \int_X \left( \int_Y \lvert f(x) g(y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu \\
-      & = \int_X \lvert f(x) \rvert \left( \int_Y \lvert g(y) \rvert \mathrm{d} \nu \right) \mathrm{d} \mu
-        = \int_X \lvert f(x) \rvert \mathrm{d} \mu \int_Y \lvert g(y) \rvert \mathrm{d} \nu < \infty.
+      \int_{X \times Y} \lvert h \rvert ~ \mathrm{d} (\mu \times \nu)
+      & = \int_X \left( \int_Y \lvert h(x, y) \rvert ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
+        = \int_X \left( \int_Y \lvert f(x) g(y) \rvert ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu \\
+      & = \int_X \lvert f(x) \rvert \left( \int_Y \lvert g(y) \rvert ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
+        = \int_X \lvert f(x) \rvert ~ \mathrm{d} \mu \int_Y \lvert g(y) \rvert ~ \mathrm{d} \nu < \infty.
 
    于是 :math:`h(x, y) = f(x) g(y)` 是乘积空间 :math:`X \times Y` 上的可积函数.
 
@@ -49,23 +49,23 @@
 
    .. math::
 
-      1 = m ([0, 1] \times [0, 1]) \geqslant m (E) = \int_{X \times Y} \chi_E \mathrm{d} (\mu \times \nu),
+      1 = m ([0, 1] \times [0, 1]) \geqslant m (E) = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu),
 
    即 :math:`\chi_E` 是 :math:`E` 上的可积函数, 从而由 Fubini 定理知
 
    .. math::
 
-         \int_X \nu(E_x) \mathrm{d} \mu = \int_X \left( \int_Y \chi_{E_x} \mathrm{d} \nu \right) \mathrm{d} \mu
-         = \int_{X \times Y} \chi_E \mathrm{d} (\mu \times \nu) = int_Y \left( \int_X \chi_{E^y} \mathrm{d} \mu \right) \mathrm{d} \nu
-         = \int_Y \mu (E^y) \mathrm{d} \nu.
+         \int_X \nu(E_x) ~ \mathrm{d} \mu = \int_X \left( \int_Y \chi_{E_x} ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
+         = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu) = int_Y \left( \int_X \chi_{E^y} ~ \mathrm{d} \mu \right) ~ \mathrm{d} \nu
+         = \int_Y \mu (E^y) ~ \mathrm{d} \nu.
 
    由于对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可列集, 而可列集都是零测集,
    所以 :math:`\nu(E_x) = 0`, :math:`\mu(E^y) = m(X) = 1`, 从而有
 
    .. math::
 
-      \int_X \nu(E_x) \mathrm{d} \mu & = \int_X 0 \mathrm{d} \mu = 0, \\
-      \int_Y \mu(E^y) \mathrm{d} \nu & = \int_Y 1 \mathrm{d} \nu = 1,
+      \int_X \nu(E_x) ~ \mathrm{d} \mu & = \int_X 0 ~ \mathrm{d} \mu = 0, \\
+      \int_Y \mu(E^y) ~ \mathrm{d} \nu & = \int_Y 1 ~ \mathrm{d} \nu = 1,
 
    这与上式矛盾, 所以 :math:`E` 不可测.
 
@@ -167,14 +167,14 @@
 
    .. math::
 
-      f(x) = f(a) + \int_{[a, x]} g \mathrm{d} m, \quad x \in [a, b],
+      f(x) = f(a) + \int_{[a, x]} g ~ \mathrm{d} m, \quad x \in [a, b],
 
    并且 :math:`f'(x) = g(x)` 几乎处处成立. 由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数, 即 :math:`g(x)` 几乎处处非负,
-   所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g \mathrm{d} m \geqslant 0`, 从而知
+   所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0`, 从而知
 
    .. math::
 
-      f(x_2) - f(x_1) = \int_{[x_1, x_2]} g \mathrm{d} m \geqslant 0,
+      f(x_2) - f(x_1) = \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0,
 
    这就证明了 :math:`f` 是增函数.
 

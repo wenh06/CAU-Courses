@@ -241,7 +241,7 @@
 
     由于 :math:`f_n` 是简单函数, 所以是可测函数. 函数列 :math:`\{f_n\}` 依测度收敛到函数 :math:`f(x) = 0`, 但在 :math:`[0, 1]` 上任何一点处都不收敛.
 
-4. 积分序列的 Levi 定理说的是: 对于定义在可测集 :math:`E \subset \mathbb{R}` 上的渐升非负可测函数列 :math:`\{f_n\}`, 若存在可测函数 :math:`f`, 使得 :math:`\lim\limits_{n\to\infty} f_n(x) = f(x)` 在 :math:`E` 上恒成立, 那么积分和极限可交换次序, 即 :math:`\displaystyle \int_E f \mathrm{d} m = \lim_{n \to \infty} \int_E f_n \mathrm{d} m`. 若去掉函数列 :math:`\{f_n\}` 非负性这一条件, 请问 Levi 定理是否仍成立? 若是, 请给出证明; 若否, 请给出反例, 并添加上一条使之成立的条件 (不能添加“渐升函数列 :math:`\{f_n\}` 从某一项开始都非负“的条件).
+4. 积分序列的 Levi 定理说的是: 对于定义在可测集 :math:`E \subset \mathbb{R}` 上的渐升非负可测函数列 :math:`\{f_n\}`, 若存在可测函数 :math:`f`, 使得 :math:`\lim\limits_{n\to\infty} f_n(x) = f(x)` 在 :math:`E` 上恒成立, 那么积分和极限可交换次序, 即 :math:`\displaystyle \int_E f ~ \mathrm{d} m = \lim_{n \to \infty} \int_E f_n ~ \mathrm{d} m`. 若去掉函数列 :math:`\{f_n\}` 非负性这一条件, 请问 Levi 定理是否仍成立? 若是, 请给出证明; 若否, 请给出反例, 并添加上一条使之成立的条件 (不能添加“渐升函数列 :math:`\{f_n\}` 从某一项开始都非负“的条件).
 
 .. proof:solution::
 
@@ -255,11 +255,11 @@
 
     .. math::
 
-        \int_E f \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n \mathrm{d} m.
+        \int_E f ~ \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n ~ \mathrm{d} m.
 
     可以添加的条件: （只要一条就可以, 2分）
 
-    - :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 \mathrm{d} m > - \infty`;
+    - :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 ~ \mathrm{d} m > - \infty`;
     - 存在可积函数 :math:`g` 使得 :math:`\lvert f_n \rvert \leqslant g`, :math:`n \in \mathbb{N}`;
     - 存在可积函数 :math:`g` 使得 :math:`g \geqslant f_n`, :math:`n \in \mathbb{N}`;
     - :math:`\cdots\cdots`
@@ -280,8 +280,8 @@
 
     .. math::
 
-        \int_E \lvert af + bg \rvert^p \mathrm{d} m & \leqslant \int_E \left( 2 \cdot \dfrac{\lvert af \rvert + \lvert bg \rvert}{2} \right)^p \mathrm{d} m \\
-        & \leqslant 2^p \int_E \left( \dfrac{\lvert af \rvert^p + \lvert bg \rvert^p}{2} \right) \mathrm{d} m < \infty,
+        \int_E \lvert af + bg \rvert^p ~ \mathrm{d} m & \leqslant \int_E \left( 2 \cdot \dfrac{\lvert af \rvert + \lvert bg \rvert}{2} \right)^p ~ \mathrm{d} m \\
+        & \leqslant 2^p \int_E \left( \dfrac{\lvert af \rvert^p + \lvert bg \rvert^p}{2} \right) ~ \mathrm{d} m < \infty,
 
     第二个不等式是由于定义在 :math:`\mathbb{R}_{\geqslant 0}` 上的函数 :math:`\phi(t) = t^p` 当 :math:`p \geqslant 1` 时是凸函数.
     所以 :math:`af + bg \in L^p`, 这说明 :math:`L^p` 是线性空间.
@@ -308,8 +308,8 @@
 
     .. math::
 
-        \int_E \lvert f \rvert^{p_1} \mathrm{d} m & = \int_A \lvert f \rvert^{p_1} \mathrm{d} m + \int_{E \setminus A} \lvert f \rvert^{p_1} \mathrm{d} m \\
-        & \leqslant \int_A \lvert f \rvert^{p_2} \mathrm{d} m + \int_{E \setminus A} \mathrm{d} m \leqslant \int_E \lvert f \rvert^{p_2} \mathrm{d} m + m E < \infty,
+        \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m & = \int_A \lvert f \rvert^{p_1} ~ \mathrm{d} m + \int_{E \setminus A} \lvert f \rvert^{p_1} ~ \mathrm{d} m \\
+        & \leqslant \int_A \lvert f \rvert^{p_2} ~ \mathrm{d} m + \int_{E \setminus A} ~ \mathrm{d} m \leqslant \int_E \lvert f \rvert^{p_2} ~ \mathrm{d} m + m E < \infty,
 
     所以 :math:`f \in L^{p_1}`, 从而 :math:`L^{p_2} \subset L^{p_1}`.
 
@@ -320,8 +320,8 @@
 
     .. math::
 
-        \int_E \lvert f \rvert^{p_1} \mathrm{d} m & = \int_Z \lvert f \rvert^{p_1} \mathrm{d} m + \int_{E \setminus Z} \lvert f \rvert^{p_1} \mathrm{d} m \\
-        & \leqslant 0 + \int_E \lvert f \rvert^{p_1} \mathrm{d} m \leqslant \int_E M^{p_1} \mathrm{d} m = M^{p_1} m E < \infty,
+        \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m & = \int_Z \lvert f \rvert^{p_1} ~ \mathrm{d} m + \int_{E \setminus Z} \lvert f \rvert^{p_1} ~ \mathrm{d} m \\
+        & \leqslant 0 + \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m \leqslant \int_E M^{p_1} ~ \mathrm{d} m = M^{p_1} m E < \infty,
 
     所以 :math:`f \in L^{p_1}`, 从而 :math:`L^\infty \subset L^{p_1}`.
 

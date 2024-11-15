@@ -7,8 +7,8 @@
 
    .. math::
 
-        \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} \mathrm{d}u
-        = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v
+        \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} ~ \mathrm{d}u
+        = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v
 
    一致有界, 即存在常数 :math:`C` 使得 :math:`\|\varphi_n\|_{\infty} \leq C` 对所有 :math:`n` 成立.
 
@@ -21,7 +21,7 @@
 
     .. math::
 
-        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \right\rvert,
+        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert,
 
     但积分值的符号相反, :math:`k` 为奇数时为正, :math:`k` 为偶数时为负. 那么令
 
@@ -38,28 +38,28 @@
 
     .. math::
 
-        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \\
-        & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v,
+        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v,
 
     同时
 
     .. math::
 
-        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \\
-        & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
+        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
     总之, 有
 
     .. math::
 
-        \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v.
+        \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
     我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`,
     在 :math:`[0, \pi/(2n+1)]` 恒负, 因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
 
     .. math::
 
-        \lvert \varphi_n (x) \rvert \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} \mathrm{d}v \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) \mathrm{d}v = \dfrac{2}{\pi} \cdot \dfrac{\pi}{2n+1} \cdot (2n+1) = 2.
+        \lvert \varphi_n (x) \rvert \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \dfrac{\pi}{2n+1} \cdot (2n+1) = 2.
 
     这样就证明了 :math:`\varphi_n` 一致有界.
 
@@ -87,7 +87,7 @@
 
    .. math::
 
-      \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} \mathrm{d}x.
+      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} ~ \mathrm{d}x.
 
 .. proof:proof::
 
@@ -95,18 +95,18 @@
 
     .. math::
 
-        \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) \mathrm{d}x \\
-        & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h \mathrm{d}x \\
-        & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x, \quad \theta(h) \in (0, 1).
+        \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) ~ \mathrm{d}x \\
+        & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h ~ \mathrm{d}x \\
+        & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x, \quad \theta(h) \in (0, 1).
 
     那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族,
     且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为 指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
 
     .. math::
 
-        \dfrac{\mathrm{d}}{\mathrm{d}t} \int_E f(x, t) \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
-        & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \mathrm{d}x \\
-        & = \int_E \dfrac{\partial}{\partial t} f(x, t) \mathrm{d}x.
+        \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
+        & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
+        & = \int_E \dfrac{\partial}{\partial t} f(x, t) ~ \mathrm{d}x.
 
 .. _diagram-of-lebesgue-integral-and-differential:
 
@@ -150,17 +150,17 @@
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int$};
 
       \node (AB) at (8, -2) {$AB([a, b])$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV) -- (AB) node[midway,above] {$\widetilde{\mathrm{d}}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV) -- (AB) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
 
       \node (L_again) at (8, -4) {$L_{[a, b]}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=2ex] L_again) arc (180:360:0.5ex) -- (AB);
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{\mathrm{d}}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
 
       \node (p2) at (11, -4) {$L_{[a, b]} / L_0$};
       \draw[arrows={- Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{\mathrm{d}}~\circ~\int = \operatorname{id}$} (p2);
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{~ \mathrm{d}}~\circ~\int = \operatorname{id}$} (p2);
 
-   以上的 :math:`\int` 表示勒贝格积分, :math:`\widetilde{\mathrm{d}}` 表示微分（几乎处处有定义, 没有定义的集合是零测集,
+   以上的 :math:`\int` 表示勒贝格积分, :math:`\widetilde{~ \mathrm{d}}` 表示微分（几乎处处有定义, 没有定义的集合是零测集,
    约定微分取值为 :math:`0`）, :math:`\hookrightarrow` 表示自然的嵌入（包含）映射, :math:`\operatorname{pr}` 表示商映射.
    虚线的箭头就是相关的定理.
 
@@ -171,13 +171,13 @@
 
       * 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测, :math:`a.e. x \in E`;
       * 截口 :math:`f^y(x)` 关于 :math:`x` 在 :math:`E` 上非负可测, :math:`a.e. y \in F`;
-      * 记 :math:`\displaystyle g(x) = \int_F f(x, y) \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
-      * 记 :math:`\displaystyle h(y) = \int_E f(x, y) \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
+      * 记 :math:`\displaystyle g(x) = \int_F f(x, y) ~ \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
+      * 记 :math:`\displaystyle h(y) = \int_E f(x, y) ~ \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
       * 有如下的等式成立
 
       .. math::
 
-         \int_{E \times F} f(x, y) \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.
+         \int_{E \times F} f(x, y) ~ \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
       .. note::
 
@@ -185,10 +185,10 @@
 
          .. math::
 
-               \int_{E \times F} \lvert f(x, y) \rvert \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F \lvert f(x, y) \rvert \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E \lvert f(x, y) \rvert \mathrm{d}x \right) \mathrm{d}y.
+               \int_{E \times F} \lvert f(x, y) \rvert ~ \mathrm{d} x \times ~ \mathrm{d} y = \int_E \left( \int_F \lvert f(x, y) \rvert ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E \lvert f(x, y) \rvert ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
          若上式三项中的任意一项有限（即可积）, 那么进一步会有
 
          .. math::
 
-               \int_{E \times F} f(x, y) \mathrm{d} x \times \mathrm{d} y = \int_E \left( \int_F f(x, y) \mathrm{d}y \right) \mathrm{d}x = \int_F \left( \int_E f(x, y) \mathrm{d}x \right) \mathrm{d}y.
+               \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
