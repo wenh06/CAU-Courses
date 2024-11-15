@@ -6,7 +6,7 @@
 import re
 from typing import Any, Dict
 
-import pydata_sphinx_theme
+import pydata_sphinx_theme  # noqa: F401
 import requests
 import sphinx_book_theme
 import sphinx_rtd_theme
@@ -57,14 +57,6 @@ extensions = [
 #     "python": ("https://docs.python.org/3", None),
 #     "numpy": ("https://numpy.org/doc/stable/", None),
 # }
-
-html_context = {
-    "display_github": True,  # Integrate GitHub
-    "github_user": "wenh06",  # Username
-    "github_repo": "CAU-Courses",  # Repo name
-    "github_version": "master",  # Version
-    "conf_py_path": "/Calculus/source/",  # Path in the checkout to the docs root
-}
 
 proof_theorem_types = {
     "theorem": "定理",
@@ -119,17 +111,25 @@ elif _theme_name == "sphinx_book_theme":
     }
 elif _theme_name == "pydata_sphinx_theme":
     html_theme = "pydata_sphinx_theme"
-    html_theme_path = [pydata_sphinx_theme.get_html_theme_path()]
+    # html_theme_path = [pydata_sphinx_theme.get_html_theme_path()]
     html_theme_options = {
         "collapse_navigation": False,
         "navigation_with_keys": True,  # https://github.com/pydata/pydata-sphinx-theme/issues/1492
-        "display_version": True,
+        # "display_version": True,
     }
 else:  # builtin themes: alabaster, etc.
     html_theme = _theme_name
 
+html_context = {
+    "display_github": True,  # Integrate GitHub
+    "github_user": "wenh06",  # Username
+    "github_repo": "CAU-Courses",  # Repo name
+    "github_version": "master",  # Version
+    "conf_py_path": "/Calculus/source/",  # Path in the checkout to the docs root
+}
+
 html_static_path = ["_static"]
-html_title = "CAU Calculus C"
+html_title = "CAU Calculus I"
 
 # favicons = [
 #     {"href": "favicon.png"},  # => use `_static/favicon.png`
