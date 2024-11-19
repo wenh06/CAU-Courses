@@ -21,7 +21,8 @@
 
     .. math::
 
-        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert,
+        \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert
+        > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert,
 
     但积分值的符号相反, :math:`k` 为奇数时为正, :math:`k` 为偶数时为负. 那么令
 
@@ -38,28 +39,40 @@
 
     .. math::
 
-        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
-        & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v,
+        \varphi_n(x)
+        & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right)
+            + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right)
+            \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v,
 
     同时
 
     .. math::
 
-        \varphi_n(x) & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right) + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
-        & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
+        \varphi_n(x)
+        & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right)
+            + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right)
+            \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
     总之, 有
 
     .. math::
 
-        \lvert \varphi_n (x) \rvert \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
+        \lvert \varphi_n (x) \rvert
+        & \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v \\
+        & = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
     我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`,
     在 :math:`[0, \pi/(2n+1)]` 恒负, 因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
 
     .. math::
 
-        \lvert \varphi_n (x) \rvert \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) ~ \mathrm{d}v = \dfrac{2}{\pi} \cdot \dfrac{\pi}{2n+1} \cdot (2n+1) = 2.
+        \lvert \varphi_n (x) \rvert
+        & \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+        & \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) ~ \mathrm{d}v \\
+        & = \dfrac{2}{\pi} \cdot \dfrac{\pi}{2n+1} \cdot (2n+1) = 2.
 
     这样就证明了 :math:`\varphi_n` 一致有界.
 
@@ -169,26 +182,29 @@
 4. Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的非负可测函数,
    其中 :math:`E \subset \mathbb{R}^m`, :math:`F \subset \mathbb{R}^n` 都是可测集, 那么有
 
-      * 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测, :math:`a.e. x \in E`;
-      * 截口 :math:`f^y(x)` 关于 :math:`x` 在 :math:`E` 上非负可测, :math:`a.e. y \in F`;
-      * 记 :math:`\displaystyle g(x) = \int_F f(x, y) ~ \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
-      * 记 :math:`\displaystyle h(y) = \int_E f(x, y) ~ \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
-      * 有如下的等式成立
+   - 截口 :math:`f_x(y)` 关于 :math:`y` 在 :math:`F` 上非负可测, :math:`a.e. x \in E`;
+   - 截口 :math:`f^y(x)` 关于 :math:`x` 在 :math:`E` 上非负可测, :math:`a.e. y \in F`;
+   - 记 :math:`\displaystyle g(x) = \int_F f(x, y) ~ \mathrm{d}y`, 那么 :math:`g(x)` 在 :math:`E` 上非负可测;
+   - 记 :math:`\displaystyle h(y) = \int_E f(x, y) ~ \mathrm{d}x`, 那么 :math:`h(y)` 在 :math:`F` 上非负可测;
+   - 有如下的等式成立
+
+   .. math::
+
+      \int_{E \times F} f(x, y) ~ \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x
+      = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
+
+   .. note::
+
+      与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
 
       .. math::
 
-         \int_{E \times F} f(x, y) ~ \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
+         \int_{E \times F} \lvert f(x, y) \rvert ~ \mathrm{d} x \times ~ \mathrm{d} y
+         = \int_E \left( \int_F \lvert f(x, y) \rvert ~ \mathrm{d}y \right) ~ \mathrm{d}x
+         = \int_F \left( \int_E \lvert f(x, y) \rvert ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
-      .. note::
+      若上式三项中的任意一项有限（即可积）, 那么进一步会有
 
-         与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
+      .. math::
 
-         .. math::
-
-               \int_{E \times F} \lvert f(x, y) \rvert ~ \mathrm{d} x \times ~ \mathrm{d} y = \int_E \left( \int_F \lvert f(x, y) \rvert ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E \lvert f(x, y) \rvert ~ \mathrm{d}x \right) ~ \mathrm{d}y.
-
-         若上式三项中的任意一项有限（即可积）, 那么进一步会有
-
-         .. math::
-
-               \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
+         \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
