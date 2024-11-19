@@ -1,6 +1,33 @@
 §1-4 勒贝格积分的引入、性质、积分序列的极限、与黎曼积分的关系
 -------------------------------------------------------------------------------------
 
+.. _ex-4-1:
+
+1. 设 :math:`f(x), g(x)` 都是 :math:`E` 上可测函数, :math:`g \in L_E`, 且在 :math:`E` 上几乎处处成立 :math:`f(x) \leqslant g(x)`.
+   问 :math:`f` 是否可积?
+
+.. proof:solution::
+
+   不一定. 例如 :math:`E = [0, 1]`, :math:`f(x) = -\dfrac{1}{x}`, :math:`g(x) = 1`, 那么 :math:`f(x) \leqslant g(x)` 处处成立,
+   但是 :math:`f` 在 :math:`E` 上不可积.
+
+   这是因为假设 :math:`f` 可积, 那么 :math:`\lvert f(x) \rvert = \dfrac{1}{x}` 也在 :math:`E` 上可积.
+   考虑 :math:`E = [0, 1]` 上的非负渐升函数列 :math:`\{ g_n = \lvert f \rvert \cdot \chi_{[1/n, 1]} \}`, 那么由 Levi 定理知
+
+   .. math::
+
+      \int_0^1 \lvert f \rvert ~ \mathrm{d} m
+      & = \lim_{n \to \infty} \int_0^1 g_n ~ \mathrm{d} m = \lim_{n \to \infty} \int_{1/n}^1 \lvert f \rvert ~ \mathrm{d} m \\
+      & = \lim_{n \to \infty} \int_{1/n}^1 \dfrac{1}{x} ~ \mathrm{d} x = \lim_{n \to \infty} \left( \ln x \right|_{1/n}^1) = \infty,
+
+   这与 :math:`\lvert f \rvert` 在 :math:`E` 上可积矛盾, 所以 :math:`f` 不可积.
+
+   更简单的例子可取 :math:`f \equiv - \infty`.
+
+   .. note::
+
+      这题主要是没有限定非负函数的条件, 所以可以取到 :math:`f` 不可积的情况.
+
 .. _ex-4-2:
 
 2. 设 :math:`f` 于 :math:`E` 上可积, 令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 证明 :math:`\displaystyle \lim_n m E_n = 0`.
@@ -145,6 +172,49 @@
 
    如果加上 :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 ~ \mathrm{d} m > - \infty` 这个条件, Levi 定理就成立了.
 
+.. _ex-4-12:
+
+12. 证明极限 :math:`\displaystyle \lim_{n \to \infty} \int_{(-n, n)} \left( 1 + \dfrac{x}{n} \right)^n e^{-x^2} ~ \mathrm{d} m` 存在，
+    并求其值.
+
+.. proof:proof::
+
+   令 :math:`f_n(x) = \left( 1 + \dfrac{x}{n} \right)^n e^{-x^2} \chi_{(-n, n)}`, 那么有
+
+   .. math::
+
+      \lvert f_n(x) \rvert \leqslant \left( 1 + \dfrac{\lvert x \rvert}{n} \right)^n e^{-x^2} \leqslant e^{-x^2 + \lvert x \rvert} =: g(x).
+
+   令 :math:`g_n(x) = g \cdot \chi_{[-n, n]}`, 那么 :math:`\{ g_n \}` 构成了 :math:`\mathbb{R}` 上的非负渐升函数列, 由 Levi 定理知
+
+   .. math::
+
+      \int_{\mathbb{R}} g ~ \mathrm{d} m
+      & = \lim_{n \to \infty} \int_{\mathbb{R}} g_n ~ \mathrm{d} m = \lim_{n \to \infty} \int_{(-n, n)} g ~ \mathrm{d} m \\
+      & = \lim_{n \to \infty} (R) \int_{-n}^n g ~ \mathrm{d} m = \int_{-\infty}^{+\infty} g(x) ~ \mathrm{d} x \\
+      & = \int_{-\infty}^{+\infty} e^{-x^2 + \lvert x \rvert} ~ \mathrm{d} x
+        = \int_{-\infty}^{+\infty} e^{-\left( \lvert x \rvert - \frac{1}{2} \right)^2 + \frac{1}{4}} ~ \mathrm{d} x < \infty.
+
+   上式中的 :math:`\displaystyle \int_{-\infty}^{+\infty} g(x) ~ \mathrm{d} x` 指的是广义积分.
+   故 :math:`g` 在 :math:`(-\infty, \infty)` 上是勒贝格可积的, 从而由控制收敛定理可得
+
+   .. math::
+
+      \lim_{n \to \infty} \int_{(-n, n)} \left( 1 + \dfrac{x}{n} \right)^n e^{-x^2} ~ \mathrm{d} m
+      = \int_{\mathbb{R}} \lim_{n \to \infty} f_n ~ \mathrm{d} m = \int_{\mathbb{R}} e^{-x^2 + x} ~ \mathrm{d} m.
+
+   令 :math:`f(x) = e^{-x^2 + x}`. 由于 :math:`0 < f \leqslant g`, 所以 :math:`f` 也是 :math:`(-\infty, \infty)` 上的勒贝格可积函数.
+   考虑 :math:`f \chi_{[-n, n]}`, 那么 :math:`f \chi_{[-n, n]}` 是 :math:`\mathbb{R}` 上的非负渐升函数列, 由 Levi 定理知
+
+   .. math::
+
+      \int_{\mathbb{R}} f ~ \mathrm{d} m
+      & = \lim_{n \to \infty} \int_{\mathbb{R}} f \chi_{[-n, n]} ~ \mathrm{d} m = \lim_{n \to \infty} \int_{-n}^n f ~ \mathrm{d} m \\
+      & = \lim_{n \to \infty} (R) \int_{-n}^n f(x) ~ \mathrm{d} x = \int_{-\infty}^{+\infty} f(x) ~ \mathrm{d} x
+        = \int_{-\infty}^{+\infty} e^{-x^2 + x} ~ \mathrm{d} x \\
+      & = \int_{-\infty}^{+\infty} e^{-\left( x - \frac{1}{2} \right)^2 + \frac{1}{4}} ~ \mathrm{d} x
+        = \pi^{1/2} e^{1/4}.
+
 .. _ex-4-14:
 
 14. 设 :math:`f` 是区间 :math:`[0, 1]` 上的可积函数, 若对任何 :math:`c \in (0, 1)` 恒有
@@ -191,6 +261,52 @@
       = \lim_{n \to \infty} \int_B f \cdot \chi_{B_n} ~ \mathrm{d} m = \lim_{n \to \infty} \int_{B_n} f ~ \mathrm{d} m = \lim_{n \to \infty} 0 = 0.
 
    但是由勒贝格积分的唯一性知, :math:`f = 0` a.e. :math:`x \in B`, 这与 :math:`m B > 0` 矛盾, 所以 :math:`f \sim 0`.
+
+.. _ex-4-15:
+
+15. 求极限
+
+    .. math::
+
+      \lim_{n \to \infty} (R) \int_0^1 \dfrac{nx^{1/2}}{1 + n^2 x^2} \sin^5 (nx) ~ \mathrm{d} x.
+
+.. proof:proof::
+
+   记 :math:`f_n(x) = \dfrac{nx^{1/2}}{1 + n^2 x} \sin^5 (nx)`, 那么对任意 :math:`x \in [0, 1]` 有
+
+   .. math::
+
+      \lvert f_n(x) \rvert \leqslant \dfrac{nx^{1/2}}{1 + n^2 x^2} \leqslant \dfrac{1}{2 \sqrt{x}} =: g(x).
+
+   如果能证明 :math:`g` 是勒贝格可积的, 那么由于对任意 :math:`x \in [0, 1]` 有
+
+   .. math::
+
+      \lim_{n \to \infty} f_n(x) = 0,
+
+   由控制收敛定理可知
+
+   .. math::
+
+      \lim_{n \to \infty} (R) \int_0^1 f_n(x) ~ \mathrm{d} x & = \lim_{n \to \infty} (L) \int_0^1 f_n(x) ~ \mathrm{d} x \\
+      & = (L) \int_0^1 \lim_{n \to \infty} f_n(x) ~ \mathrm{d} x = 0.
+
+   下面证明 :math:`g` 是勒贝格可积的. 令 :math:`g_n = g \cdot \chi_{[1/n, 1]}`, 那么 :math:`{g_n}` 构成了 :math:`[0, 1]` 上的非负渐升函数列,
+   且 :math:`\displaystyle \lim_{n \to \infty} g_n = g`. 由 Levi 定理知
+
+   .. math::
+
+      (L) \int_0^1 g ~ \mathrm{d} x
+      & = \lim_{n \to \infty} (L) \int_0^1 g_n ~ \mathrm{d} x = \lim_{n \to \infty} (L) \int_{1/n}^1 g ~ \mathrm{d} x \\
+      & = \lim_{n \to \infty} (L) \int_{1/n}^1 \dfrac{1}{2 \sqrt{x}} ~ \mathrm{d} x
+        = \lim_{n \to \infty} (R) \int_{1/n}^1 \dfrac{1}{2 \sqrt{x}} ~ \mathrm{d} x \\
+      & = \lim_{n \to \infty} \left( \left. x^{1/2} \right|_{1/n}^1 \right) = \lim_{n \to \infty} \left( 1 - \dfrac{1}{\sqrt{n}} \right) = 1 < \infty.
+
+   所以 :math:`g` 是勒贝格可积的, 从而有
+
+   .. math::
+
+      \lim_{n \to \infty} (R) \int_0^1 \dfrac{nx^{1/2}}{1 + n^2 x^2} \sin^5 (nx) ~ \mathrm{d} x = 0.
 
 .. _ex-4-19:
 
@@ -270,9 +386,9 @@
 
    .. math::
 
-      \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert ~ \mathrm{d} m \leqslant 2 M t \lvert h \rvert.
+      \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert ~ \mathrm{d} m \leqslant 4 M t \lvert h \rvert.
 
-   进一步缩小 :math:`\lvert h \rvert`, 使其满足 :math:`0 < \lvert h \rvert < \dfrac{\varepsilon}{36 M t}`, 那么有
+   进一步缩小 :math:`\lvert h \rvert`, 使其满足 :math:`0 < \lvert h \rvert < \dfrac{\varepsilon}{72 M t}`, 那么有
 
    .. math::
 
