@@ -422,8 +422,8 @@
 
    .. math::
 
-      m A_1 & = m^* E \leqslant m X < 0, \\
-      m A_2 & = m^* (X \setminus E) \leqslant m X < 0.
+      m A_1 & = m^* E \leqslant m X < \infty, \\
+      m A_2 & = m^* (X \setminus E) \leqslant m X < \infty.
 
    那么 :math:`A_1 \cup A_2 \supset X`, 并且有
 
@@ -437,9 +437,9 @@
 
       m X = m (A_1 \cup A_2) = m A_1 + m A_2.
 
-   由 :math:`m (A_1 \cup A_2) = m A_1 + m A_2`, 以及他们测度都有限知 :math:`m (A_1 \cap A_2) = 0`, 从而 :math:`A_1 \cap A_2` 是零测度集.
-   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 由 :math:`m X = m (A_1 \cup A_2)` 有 :math:`A_1 \cup A_2 = X \cup F`,
-   其中 :math:`F = (A_1 \cup A_2) \setminus X` 为零测度集. 于是,
+   由 :math:`m (A_1 \cup A_2) = m A_1 + m A_2`, 以及他们测度都有限知 :math:`m (A_1 \cap A_2) = 0`, 即 :math:`A_1 \cap A_2` 是零测度集.
+   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 又由 :math:`m X = m (A_1 \cup A_2)` 以及 :math:`X \subset A_1 \cup A_2`
+   有 :math:`A_1 \cup A_2 = X \cup F`, 其中 :math:`F = (A_1 \cup A_2) \setminus X` 为零测度集. 于是
 
    .. math::
 
