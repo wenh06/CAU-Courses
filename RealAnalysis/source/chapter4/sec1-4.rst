@@ -74,6 +74,40 @@
 
    因此 :math:`I = \dfrac{a}{2(1 - a)^2} = 3`.
 
+.. _ex-4-4:
+
+4. 设 :math:`f(x) \geqslant 0` 为可测函数, 令
+
+   .. math::
+
+      \{f(x)\}_n = \begin{cases}
+         f(x), & \text{ 若 } f(x) \leqslant n, \\
+         0, & \text{ 若 } f(x) > n,
+      \end{cases}
+
+   证明当 :math:`f(x)` 几乎处处有限时, 有
+
+   .. math::
+
+      \lim_{n \to \infty} \int_E \{f(x)\}_n ~ \mathrm{d} m = \int_E f(x) ~ \mathrm{d} m.
+
+.. proof:proof::
+
+   记 :math:`E^* = E(\lvert f \rvert < \infty)`, 由于 :math:`f(x)` 几乎处处有限, 所以 :math:`m E^* = m E`.
+   那么在 :math:`E^*` 上, 有 :math:`\{f(x)\}_n`, :math:`n \in \mathbb{N}`, 构成了非负渐升函数列, 且对任意 :math:`x \in E^*` 有
+   :math:`\displaystyle \lim_{n \to \infty} \{f(x)\}_n = f(x)`. 由 Levi 定理知
+
+   .. math::
+
+      \lim_{n \to \infty} \int_{E^*} \{f(x)\}_n ~ \mathrm{d} m = \int_{E^*} f(x) ~ \mathrm{d} m.
+
+   由于 :math:`E \setminus E^*` 是零测集, 所以 :math:`\displaystyle \int_{E^*} \{f(x)\}_n ~ \mathrm{d} m = \int_{E} \{f(x)\}_n ~ \mathrm{d} m`,
+   :math:`\displaystyle \int_{E^*} f(x) ~ \mathrm{d} m = \int_{E} f(x) ~ \mathrm{d} m`, 于是
+
+   .. math::
+
+      \lim_{n \to \infty} \int_E \{f(x)\}_n ~ \mathrm{d} m = \int_E f(x) ~ \mathrm{d} m.
+
 .. _ex-4-5:
 
 5. 设由 :math:`[0, 1]` 中取 :math:`n` 个可测子集 :math:`E_1, E_2, \dots, E_n`. 假定 :math:`[0, 1]` 中任一点至少属于这 :math:`n` 个集合中的 :math:`p` 个,
@@ -171,6 +205,69 @@
       \int_E f ~ \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n ~ \mathrm{d} m.
 
    如果加上 :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 ~ \mathrm{d} m > - \infty` 这个条件, Levi 定理就成立了.
+
+.. _ex-4-10:
+
+10. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上可积函数, :math:`f(0) = 0` 且 :math:`f(x)` 在 :math:`x = 0` 处可微,
+    试证函数 :math:`f(x) / x \in L(\mathbb{R})`.
+
+.. proof:proof::
+
+   由于 :math:`f(0) = 0` 且 :math:`f(x)` 在 :math:`x = 0` 处可微, 即存在实数 :math:`A \in \mathbb{R}`,
+   使得 :math:`\displaystyle \lim_{x \to 0} \dfrac{f(x) - f(0)}{x} = A`. 那么对任意 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`,
+   使得当 :math:`0 < \lvert x \rvert < \delta` 时有 :math:`\lvert f(x) / x - A \rvert < \varepsilon`,
+   也即 :math:`\lvert f(x) / x \rvert \leqslant \lvert A \rvert + \varepsilon`, 这表明
+
+   .. math::
+
+      \int_{(-\delta, \delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m < \infty.
+
+   另一方面, 由于 :math:`f(x)` 是 :math:`\mathbb{R}` 上可积函数, 所以 :math:`\lvert f(x) \rvert` 也是 :math:`\mathbb{R}` 上可积函数.
+   在 :math:`(-\infty, -\delta)` 上以及在 :math:`(\delta, +\infty)` 上, 有 :math:`\lvert f(x) / x \rvert \leqslant \lvert f(x) \rvert / \delta`,
+   于是
+
+   .. math::
+
+      \int_{(-\infty, -\delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m + \int_{(\delta, +\infty)} \lvert f(x) / x \rvert ~ \mathrm{d} m
+      \leqslant \dfrac{1}{\delta} \int_{(-\infty, -\delta)} \lvert f(x) \rvert ~ \mathrm{d} m
+          + \dfrac{1}{\delta} \int_{(\delta, +\infty)} \lvert f(x) \rvert ~ \mathrm{d} m
+      < \infty.
+
+   综上有
+
+   .. math::
+
+      \int_{\mathbb{R}} \lvert f(x) / x \rvert ~ \mathrm{d} m
+      = \int_{(-\infty, -\delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m
+          + \int_{(-\delta, \delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m
+          + \int_{(\delta, +\infty)} \lvert f(x) / x \rvert ~ \mathrm{d} m
+      < \infty,
+
+   也即 :math:`\lvert f(x) / x \rvert \in L(\mathbb{R})`, 从而 :math:`f(x) / x \in L(\mathbb{R})`.
+
+.. _ex-4-11:
+
+11. 设 :math:`f(x)` 为 :math:`[0, 1]` 上有限可测函数, 试证
+    :math:`\displaystyle \lim_{n \to \infty} \int_{(0, 1)} \lvert \cos (\pi f(x)) \rvert^n ~ \mathrm{d} x` 存在为有限, 并求此极限值.
+
+.. proof:proof::
+
+   令 :math:`f_n(x) = \lvert \cos (\pi f(x)) \rvert^n`, 那么对任意 :math:`x \in (0, 1)` 有
+
+   .. math::
+
+      \lim_{n \to \infty} f_n(x) = \begin{cases}
+         1, & f(x) \in \mathbb{Z}, \\
+         0, & f(x) \not\in \mathbb{Z}
+      \end{cases} =: g(x).
+
+   记 :math:`I = [0, 1]`, :math:`E = I(f \in \mathbb{Z})`, 那么 :math:`E` 是可测集, 且 :math:`g = \chi_E`. 由有界收敛定理有
+
+   .. math::
+
+      \lim_{n \to \infty} \int_{(0, 1)} f_n ~ \mathrm{d} m
+      & = \int_{(0, 1)} \lim_{n \to \infty} f_n ~ \mathrm{d} m = \int_{(0, 1)} g ~ \mathrm{d} m \\
+      & = \int_{(0, 1)} \chi_E ~ \mathrm{d} m = m E = m I(f \in \mathbb{Z}).
 
 .. _ex-4-12:
 
