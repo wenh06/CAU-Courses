@@ -312,6 +312,66 @@
       & = \int_{-\infty}^{+\infty} e^{-\left( x - \frac{1}{2} \right)^2 + \frac{1}{4}} ~ \mathrm{d} x
         = \pi^{1/2} e^{1/4}.
 
+.. _ex-4-13:
+
+13. 试证: 若 :math:`f \in L(\mathbb{R})`, 则对任意的常数 :math:`\alpha > 0` 有
+    :math:`\displaystyle n^{-\alpha} f(nx) \xrightarrow{\text{~a.e.~}} 0 ~ (n \to \infty)`.
+
+.. proof:proof::
+
+   由于 :math:`f \in L(\mathbb{R})` 当且仅当 :math:`\lvert f \rvert \in L(\mathbb{R})`,
+   并且 :math:`\displaystyle n^{-\alpha} f(nx) \xrightarrow{\text{~a.e.~}} 0 ~ (n \to \infty)` 等价于
+   :math:`\displaystyle n^{-\alpha} \lvert f(nx) \rvert \xrightarrow{\text{~a.e.~}} 0 ~ (n \to \infty)`. 所以不妨设 :math:`f \geqslant 0`.
+
+   考虑 :math:`\mathbb{R} \to \mathbb{R}` 的非奇异线性变换 :math:`x \mapsto y = nx`, 那么 :math:`\mathrm{d} y = n \mathrm{d} x`
+   (参见 :ref:`第二章第 32 题 <ex-2-32>`), 于是对于 :math:`\displaystyle \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x` 有
+
+   .. math::
+
+      \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x = n^{-\alpha} \int_{\mathbb{R}} f(y) ~ \dfrac{1}{n} ~ \mathrm{d} y
+      = \dfrac{1}{n^{1 + \alpha}} \int_{\mathbb{R}} f ~ \mathrm{d} m.
+
+   对上式关于 :math:`n` 求和, 有
+
+   .. math::
+
+      \sum_{n = 1}^\infty \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x
+      = \sum_{n = 1}^\infty \dfrac{1}{n^{1 + \alpha}} \int_{\mathbb{R}} f ~ \mathrm{d} m
+      = \left( \int_{\mathbb{R}} f ~ \mathrm{d} m \right) \sum_{n = 1}^\infty \dfrac{1}{n^{1 + \alpha}}.
+
+   由于 :math:`\alpha > 0`, 上述等式右边的级数收敛, 记这个级数的和为 :math:`C`. 对于上述等式左边的级数, 由逐项积分定理知
+
+   .. math::
+
+      C = \sum_{n = 1}^\infty \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x
+      = \int_{\mathbb{R}} \sum_{n = 1}^\infty n^{-\alpha} f(nx) ~ \mathrm{d} x.
+
+   于是, :math:`\displaystyle g(x) := \sum_{n = 1}^\infty n^{-\alpha} f(nx)` 是 :math:`\mathbb{R}` 上的非负可积函数,
+   从而几乎处处有限, 在这些点上, 非负项级数 :math:`\displaystyle \sum_{n = 1}^\infty n^{-\alpha} f(nx)` 的通项必须趋于零,
+   即 :math:`\displaystyle n^{-\alpha} f(nx) \xrightarrow{\text{~a.e.~}} 0 ~ (n \to \infty)`.
+
+   .. note::
+
+      可以用 Fatou 引理来证明稍弱一些的结论.
+
+      记 :math:`g_n = n^{-\alpha} f(nx)`, :math:`\displaystyle g = \varliminf_{n \to \infty} g_n`,
+      那么 :math:`g, g_n` 都是 :math:`\mathbb{R}` 上的非负可测函数, 由 Fatou 引理知
+
+      .. math::
+
+         \int_{\mathbb{R}} g ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_{\mathbb{R}} g_n ~ \mathrm{d} m
+         = \varliminf_{n \to \infty} n^{-\alpha} \int_{\mathbb{R}} f(nx) ~ \mathrm{d} x.
+
+      所以
+
+      .. math::
+
+         0 \leqslant \int_{\mathbb{R}} g ~ \mathrm{d} m
+         \leqslant \varliminf_{n \to \infty} n^{-\alpha - 1} \int_{\mathbb{R}} f(y) ~ \mathrm{d} y = 0.
+
+      即有 :math:`\displaystyle \int_{\mathbb{R}} g ~ \mathrm{d} m = 0`. 由勒贝格积分的唯一性知, :math:`g = 0` a.e. :math:`x \in \mathbb{R}`,
+      也即 :math:`\displaystyle \varliminf_{n \to \infty} n^{-\alpha} f(nx) = 0` a.e. :math:`x \in \mathbb{R}`.
+
 .. _ex-4-14:
 
 14. 设 :math:`f` 是区间 :math:`[0, 1]` 上的可积函数, 若对任何 :math:`c \in (0, 1)` 恒有
