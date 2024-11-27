@@ -140,7 +140,7 @@
 
    .. tikz::
       :align: center
-      :xscale: 80
+      :xscale: 100
       :libs: arrows.meta,positioning,calc,cd
 
       \node (L0) at (0, 0) {$L_0$};

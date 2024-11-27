@@ -289,3 +289,66 @@
    上式 :eq:`ex-4-38-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-10` 的方法将闭区间 :math:`d_k` 分别往左右两边延伸 :math:`2 m (d_k)`,
    得到的长度为 :math:`5 m (d_k)` 的闭区间；第一个不等式成立是由集合的包含关系 :math:`\displaystyle B \subset \bigcup_{x \in B} d_{n_1(x)}'`;
    第二个不等式成立是因为集合 :math:`\{ n_1(x) ~:~ x \in B \}` 显然是集合 :math:`\{ k \in \mathbb{N} ~:~ k = n + 1, n + 2, \cdots \}` 的子集.
+
+
+.. _ex-4-39:
+
+39. 试作一增函数, 使它的不连续点处处稠密.
+
+.. proof:solution::
+
+   记 :math:`\mathbb{Q} = \{ r_n \}` 为有理数集, 令
+
+   .. math::
+
+      f(x) = \sum_{r_n < x} 2^{-n}.
+
+   由于级数 :math:`\displaystyle \sum_{n = 1}^\infty 2^{-n}` 收敛, 所以 :math:`f(x)` 是良定义的.
+
+   对任意两个实数 :math:`x_1 < x_2`, 存在有理数 :math:`r_k` 使得 :math:`x_1 < r_k < x_2`, 从而有
+
+   .. math::
+
+      f(x_2) - f(x_1) = \sum_{r_n < x_2} 2^{-n} - \sum_{r_n < x_1} 2^{-n} = \sum_{x_1 \leqslant r_n < x_2} 2^{-n} \geqslant 2^{-k} > 0.
+
+   于是 :math:`f(x)` 是增函数.
+
+   任取有理数 :math:`a = r_{n(a)} \in \mathbb{Q}`, 对任意实数 :math:`x < a`, 有
+
+   .. math::
+
+      f(a) - f(x) = \sum_{r_n < a} 2^{-n} - \sum_{r_n < x} 2^{-n} = \sum_{x \leqslant r_n < a} 2^{-n} \geqslant 2^{-n(a)},
+
+   于是有
+
+   .. math::
+
+      \lim_{x \to a^-} \left( f(a) - f(x) \right) \geqslant 2^{-n(a)} > 0.
+
+   由此可知 :math:`f(x)` 在 :math:`a` 处不 (左) 连续. 由于有理数集是稠密的, 所以 :math:`f(x)` 的不连续点处处稠密.
+
+.. _ex-4-40:
+
+40. 试作 :math:`[0, 1]` 上的一有界可测函数, 使序列 :math:`f_n(x) = f(x + \alpha_n)` 不几乎处处收敛于 :math:`f(x)`,
+    这里 :math:`\{ \alpha_n \}` 是给定的趋于 :math:`0` 的正数列 (:math:`n \to \infty`).
+
+.. proof:solution::
+
+   由于 :math:`\displaystyle \lim_{n \to \infty} \alpha_n = 0`, 即 :math:`\displaystyle \lim_{n \to \infty} x - \alpha_n = x`,
+   若函数 :math:`f(x)` 在点 :math:`x` 处连续, 则必有 :math:`\displaystyle \lim_{n \to \infty} f(x - \alpha_n) = f(x)`.
+   于是, 需要构造一个不连续点集有正测度的有界可测函数.
+
+   未完....
+
+.. _ex-4-42:
+
+42. 设 :math:`f(x) = x^{-1/2}`, 对 :math:`0 < x < 1`; :math:`f(x) = 0`, 其余情形. 令
+
+    .. math::
+
+      g(x) = \sum_{n = 1}^\infty 2^{-n} f(x - r_n),
+
+    这里 :math:`\{ r_n \}` 为有理数集. 试证 :math:`g \in L(\mathbb{R})`, :math:`g` 处处不连续且在任一子区间上有无界,
+    而 :math:`g^2` 在任一子区间上不可积.
+
+.. proof:proof::

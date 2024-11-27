@@ -206,6 +206,48 @@
 
    如果加上 :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 ~ \mathrm{d} m > - \infty` 这个条件, Levi 定理就成立了.
 
+.. _ex-4-9:
+
+9. 证明下列等式
+
+   .. math::
+
+      \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m = \sum_{n = 1}^\infty \dfrac{1}{(p + n)^2}, \quad p > -1.
+
+.. proof:proof::
+
+   在 :math:`(0, 1)` 上有 :math:`\displaystyle \dfrac{x^p}{1 - x} = \sum_{n = 1}^\infty x^{p + n - 1}`, 于是
+
+   .. math::
+
+      \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m
+      = \int_{(0, 1)} \sum_{n = 1}^\infty \left( - x^{p + n - 1} \ln x \right) ~ \mathrm{d} m.
+
+   由非负可测函数列的逐项积分定理知
+
+   .. math::
+      :label: ex-4-9-eq-1
+
+      \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m
+      = \sum_{n = 1}^\infty \int_{(0, 1)} - x^{p + n - 1} \ln x ~ \mathrm{d} m.
+
+   对于非负可测函数 :math:`f_n(x) := - x^{p + n - 1} \ln x`, 若其在 :math:`(0, 1)` 上的 (反常) 积分收敛, 那么它在 :math:`(0, 1)` 上是勒贝格可积的,
+   且勒贝格积分值等于反常积分值. 由于 :math:`p > -1`, 于是
+
+   .. math::
+      :label: ex-4-9-eq-2
+
+      \int_0^1 f_n(x) ~ \mathrm{d} x & = - \int_0^1 x^{p + n - 1} \ln x ~ \mathrm{d} x = - \dfrac{1}{p + n} \int_0^1 \ln x ~ \mathrm{d} x^{p + n} \\
+      & = - \dfrac{1}{p + n} \left( x^{p + n} \cdot \ln x \bigg|_0^1 - \int_0^1 x^{p + n} ~ \mathrm{d} \ln x \right) \\
+      & = - \dfrac{1}{p + n} \left( 0 - 0 - \int_0^1 x^{p + n - 1} ~ \mathrm{d} x \right) = \dfrac{1}{(p + n)^2}.
+
+   将 :eq:`ex-4-9-eq-2` 代入 :eq:`ex-4-9-eq-1` 中, 即有
+
+   .. math::
+
+      \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m = \sum_{n = 1}^\infty \int_{(0, 1)} f_n ~ \mathrm{d} m
+      = \sum_{n = 1}^\infty \dfrac{1}{(p + n)^2}.
+
 .. _ex-4-10:
 
 10. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上可积函数, :math:`f(0) = 0` 且 :math:`f(x)` 在 :math:`x = 0` 处可微,
@@ -464,6 +506,47 @@
    .. math::
 
       \lim_{n \to \infty} (R) \int_0^1 \dfrac{nx^{1/2}}{1 + n^2 x^2} \sin^5 (nx) ~ \mathrm{d} x = 0.
+
+.. _ex-4-16:
+
+16. 设 :math:`f(x)` 在有限区间 :math:`[a, b]` 上可积, 试证: 对每个 :math:`n \in \mathbb{N}`, :math:`[nf(x)]` 可测且有等式
+
+    .. math::
+
+      \lim_{n \to \infty} \dfrac{1}{n} \int_{(a, b)} [nf(x)] ~ \mathrm{d} m = \int_{(a, b)} f(x) ~ \mathrm{d} m,
+
+    其中 :math:`[y]` 表示实数 :math:`y` 的整部 (即不超过 :math:`y` 的最大整数).
+
+.. proof:proof::
+
+   记 :math:`f_n(x) = [nf(x)]`. 对任意 :math:`\alpha \in \mathbb{R}`, 有
+
+   .. math::
+
+      [nf(x)] > \alpha ~ \Leftrightarrow ~ nf(x) \geqslant [\alpha] + 1 ~ \Leftrightarrow ~ f(x) \geqslant \dfrac{[\alpha] + 1}{n}.
+
+   记 :math:`E = [a, b]`, 那么
+
+   .. math::
+
+      E(f_n > \alpha) = E \left( f \geqslant \dfrac{[\alpha] + 1}{n} \right)
+
+   是可测集, 故 :math:`f_n(x)` 是可测函数.
+
+   记 :math:`g_n(x) = \dfrac{1}{n}[nf(x)]`, 容易证明 :math:`\displaystyle \lim_{n \to \infty} g_n(x) = f(x)`. 又由于有
+
+   .. math::
+
+      f(x) - 1 \leqslant \dfrac{nf(x) - 1}{n} \leqslant g_n(x) \leqslant \dfrac{nf(x)}{n} = f(x),
+
+   所以 :math:`\lvert g_n(x) \rvert \leqslant \lvert f(x) \rvert + 1`. 由于 :math:`f` 在 :math:`[a, b]` 上可积, 且 :math:`[a, b]` 是有限测度集,
+   所以 :math:`\lvert f \rvert + 1` 在 :math:`[a, b]` 上可积. 于是由控制收敛定理知
+
+   .. math::
+
+      \lim_{n \to \infty} \dfrac{1}{n} \int_{(a, b)} [nf(x)] ~ \mathrm{d} m = \lim_{n \to \infty} \int_{(a, b)} g_n ~ \mathrm{d} m
+      = \int_{(a, b)} \lim_{n \to \infty} g_n ~ \mathrm{d} m
+      = \int_{(a, b)} f ~ \mathrm{d} m.
 
 .. _ex-4-19:
 
