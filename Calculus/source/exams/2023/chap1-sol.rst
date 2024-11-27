@@ -43,7 +43,7 @@
 
     .. note::
 
-        我们可以进一步求出这个极限的值（将其记为 :math:`a \in [0, 1]`）: 在 :math:`a_{n+1} = \sin a_n` 两边同时对 :math:`n` 取极限,
+        我们可以进一步求出这个极限的值 (将其记为 :math:`a \in [0, 1]`): 在 :math:`a_{n+1} = \sin a_n` 两边同时对 :math:`n` 取极限,
         得到 :math:`\lim\limits_{n \to \infty} a_{n+1} = \lim\limits_{n \to \infty} \sin a_n`,
         即有 :math:`a = \sin a`, 于是必须有 :math:`a = 0`.
 

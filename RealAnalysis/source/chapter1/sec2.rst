@@ -125,7 +125,7 @@
 
 .. proof:solution::
 
-   (1). 以有理数为端点的（开）区间集为 :math:`A = \left\{ (a, b) : \ a < b, a, b \in \mathbb{Q} \right\}`. 首先, :math:`A` 是 :math:`\mathbb{Q}^2` 的子集；
+   (1). 以有理数为端点的 (开）区间集为 :math:`A = \left\{ (a, b) : \ a < b, a, b \in \mathbb{Q} \right\}`. 首先, :math:`A` 是 :math:`\mathbb{Q}^2` 的子集；
    另一方面, 可以通过单射 :math:`\mathbb{Q} \to A: \ a \mapsto (a, a + 1)` 将 :math:`\mathbb{Q}` 视为 :math:`A` 的子集, 从而集合 :math:`A` 是可列的.
    令 :math:`\mathbb{Q} = \{ r_1, r_2, \dots, r_n, \dots \}`, 那么 :math:`A` 到自然数集 :math:`\mathbb{N}` 的一一对应可以通过如下方式构造:
 

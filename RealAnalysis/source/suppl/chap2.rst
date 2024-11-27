@@ -10,7 +10,7 @@
 
     由外测度定义, 对任意自然数 :math:`n \in \mathbb{N}`, 存在开集 :math:`G_n` 使得 :math:`E \subset G_n`,
     且 :math:`m G_n \leqslant m^* E + \frac{1}{n}`. 令 :math:`A = \bigcap\limits_{n=1}^{\infty} G_n`,
-    则 :math:`A` 为一个 :math:`G_{\delta}`-集, 且 :math:`E \subset A`. 由（外）测度的单调性, 有
+    则 :math:`A` 为一个 :math:`G_{\delta}`-集, 且 :math:`E \subset A`. 由 (外）测度的单调性, 有
 
     .. math::
 

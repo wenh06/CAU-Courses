@@ -99,7 +99,7 @@
 
 .. proof:solution::
 
-   :math:`\mathbb{R} \to \mathbb{R}` 的开映射（将任一开集映为开集）不一定连续. 反例如下: 定义 :math:`\mathbb{R}` 上的一个等价关系为
+   :math:`\mathbb{R} \to \mathbb{R}` 的开映射 (将任一开集映为开集) 不一定连续. 反例如下: 定义 :math:`\mathbb{R}` 上的一个等价关系为
 
    .. math::
 
@@ -120,7 +120,7 @@
 
    任取 :math:`\mathbb{R}` 中开集 :math:`U`. 对值域 :math:`\mathbb{R}` 中的任意元素 :math:`y`, 令它在商集 :math:`\mathcal{E}` 中的双射 :math:`f` 下的原像为
    :math:`C \in \mathcal{E}`, 即 :math:`y = f(C)`. 由于每一个 :math:`C` 的形式都如式 :eq:`ex-1-21-eq-1` 所示, 所以满足 :math:`g(x) = y` 的 :math:`x`
-   在 :math:`\mathbb{R}` 中稠密（包含 :math:`C` 作为陪集的每一个元素）, 故与开集 :math:`U` 相交非空, 从而有 :math:`y \in g(U)`.
+   在 :math:`\mathbb{R}` 中稠密 (包含 :math:`C` 作为陪集的每一个元素), 故与开集 :math:`U` 相交非空, 从而有 :math:`y \in g(U)`.
    由于 :math:`y` 是任意取自 :math:`\mathbb{R}` 的元素, 所以 :math:`g(U) = \mathbb{R}`, 这就证明了 :math:`g` 将任一开集映为开集 :math:`\mathbb{R}`,
    同时这也说明了 :math:`g` 在任何一点都不连续.
 
@@ -188,7 +188,7 @@
 
       任取 :math:`\mathbb{R}` 中开集 :math:`U`, 若 :math:`U \cap P \neq \emptyset`, 那么从上面的证明过程可以看出 :math:`f(U) = \mathbb{R}`.
       若 :math:`U \cap P = \emptyset`, 那么 :math:`U \subset G`. 令 :math:`U` 的构成区间为 :math:`\{ U_s \}_{s \in S}`,
-      那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中（见本章 :ref:`第 24 题 <ex-1-24>`）. 由于
+      那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中 (见本章 :ref:`第 24 题 <ex-1-24>`) . 由于
 
       .. math::
 
@@ -200,4 +200,4 @@
 
       需要注意的是, 将 :math:`f` 的定义式 :eq:`ex-1-21-eq-2` 中的
       :math:`\tan \left( \dfrac{1}{2} - \dfrac{\beta_t - x}{\beta_t - \alpha_t} \pi \right)`
-      替换为任意的非平凡的开映射（例如单调连续函数）, 都可以得到开映射不连续的例子.
+      替换为任意的非平凡的开映射 (例如单调连续函数), 都可以得到开映射不连续的例子.

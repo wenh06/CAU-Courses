@@ -3,7 +3,7 @@
 
 .. _ex-2-24:
 
-24. 设 :math:`E` 是一维有界集, :math:`I_1, I_2, \dots` 是任意区间集列（可以相交）, 其并覆盖 :math:`E`, 试证
+24. 设 :math:`E` 是一维有界集, :math:`I_1, I_2, \dots` 是任意区间集列 (可以相交）, 其并覆盖 :math:`E`, 试证
 
     .. math::
 
@@ -41,7 +41,7 @@
 
       m^* E = \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
 
-   对于二维（或更高维）情形, 需要将区间集列改为矩体集列.
+   对于二维 (或更高维）情形, 需要将区间集列改为矩体集列.
 
 .. _ex-2-25:
 
@@ -103,7 +103,7 @@
       & \operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}, \quad \operatorname{pr}_1 (x, y) = x,
 
    即 :math:`f = \operatorname{pr}_1 \circ T`. 由于 :math:`T` 是一个非奇异线性变换, 对任意 :math:`A \subset \mathbb{R}^2` 有
-   （这个结论参见 :ref:`本节第 32 题 <ex-2-32>` ）
+   (这个结论参见 :ref:`本节第 32 题 <ex-2-32>`)
 
    .. math::
 
@@ -205,7 +205,7 @@
 
       m \left( \mathscr{C} E \cap J \right) > \alpha m J = \left( 1 - \frac{c'}{2} \right) m J.
 
-   可以假设 :math:`m J < \delta`, 否则可以将 :math:`J` 平均分割成若干个长度小于 :math:`\delta` 的开区间（有限个区间端点对测度不影响）,
+   可以假设 :math:`m J < \delta`, 否则可以将 :math:`J` 平均分割成若干个长度小于 :math:`\delta` 的开区间 (有限个区间端点对测度不影响）,
    那么其中至少有一个开区间 :math:`J'` 满足 :math:`m \left( \mathscr{C} E \cap J' \right) > \alpha m J'`,
    否则上述不等式不成立. 那么由式 :eq:`ex-2-29-eq-1` 知
 
@@ -257,7 +257,7 @@
       m^* \left( \bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} m^* E_n,
 
    这与题设已知的 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) < \sum\limits_{n=1}^\infty m^* E_n` 矛盾.
-   所以存在（最小的）自然数 :math:`N \geqslant 2` 使得
+   所以存在 (最小的）自然数 :math:`N \geqslant 2` 使得
 
    .. math::
 

@@ -161,7 +161,7 @@
 
       0.\cdots 0 2 2 \cdots, 0.\cdots 1 2 2 \cdots, 0.\cdots 2 2 2 \cdots, \cdots
 
-   因此有（不交并表示）
+   因此有 (不交并表示）
 
    .. math::
 

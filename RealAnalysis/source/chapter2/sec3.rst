@@ -195,7 +195,7 @@
 
       C_n = \bigcap\limits_{k=n}^{\infty} A_k, \quad n \in \mathbb{N}.
 
-   那么 :math:`C_n` 也是 :math:`G_{\delta}`-集, 从而可测, 而且 :math:`\{C_n\}` 构成（可测集的）渐张列, 那么有
+   那么 :math:`C_n` 也是 :math:`G_{\delta}`-集, 从而可测, 而且 :math:`\{C_n\}` 构成 (可测集的）渐张列, 那么有
 
    .. math::
 

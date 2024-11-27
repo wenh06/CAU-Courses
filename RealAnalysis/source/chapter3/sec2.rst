@@ -342,11 +342,11 @@
 22. 设 :math:`f, f_n (n \in \mathbb{N})` 是定义在区间 :math:`E = [a, b]` 上的实函数, :math:`r` 为自然数,
     用记号 :math:`E(\lvert f_n - f \rvert \leqslant 1 / r)` 表示 :math:`E` 中满足 :math:`\lvert f_n (x) - f (x) \rvert \leqslant 1 / r` 的点所成的集.
     试证集 :math:`\displaystyle \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r)` 是 :math:`E` 中使
-    :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集.
+    :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` (当 :math:`n \to \infty`) 的点集.
 
 .. proof:proof::
 
-   :math:`E` 中使 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` （当 :math:`n \to \infty` ）的点集为
+   :math:`E` 中使 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` (当 :math:`n \to \infty`) 的点集为
 
    .. math::
 
@@ -461,7 +461,7 @@
 .. proof:proof::
 
    由于 :math:`\{f_n\}` 是 :math:`E` 上几乎处处有限的可测函数列, 那么 :math:`\displaystyle Z_0 = \bigcup_{n=1}^\infty E (\lvert f_n \rvert = \infty)`
-   是零测集. 又由于 :math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛（ 注意: 收敛指的是收敛到一个有限的值, 不包括 :math:`\pm\infty` ）,
+   是零测集. 又由于 :math:`\{f_n\}` 在 :math:`E` 上几乎处处收敛 (注意: 收敛指的是收敛到一个有限的值, 不包括 :math:`\pm\infty`),
    那么存在零测集 :math:`Z_1 \subset E` 使得 :math:`\{f_n\}` 在 :math:`E \setminus Z_1` 上处处收敛. 令 :math:`E_1 = E \setminus (Z_0 \cup Z_1)`,
    那么 :math:`\displaystyle f(x) := \lim_{n \to \infty} f_n(x)` 是 :math:`E_1` 上处处有限的可测函数, 且 :math:`m E_1 > 0`. 由于
 
@@ -655,7 +655,7 @@
    由于 :math:`1 > a_{n_k} \geqslant 1 - \dfrac{1}{n_k+1}, 0 < \alpha_{n_k + 1} < \dfrac{1}{n_k + 1}`, 因此 :math:`\forall ~ x \in (0, 1)`,
    存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时, 有 :math:`x < 1 - \dfrac{1}{n_k+1} < a_{n_k}` 且 :math:`x > \dfrac{1}{n_k + 1} > \alpha_{n_k + 1}`,
    即 :math:`x \not \in I_{n_k}`. 因此 :math:`\{f_{n_k}\}` 在 :math:`(0, 1)` 上处处收敛于 :math:`0`. 由于 :math:`0 \in I_{n_k}, \forall ~ k \in \mathbb{N}`,
-   所以 :math:`\displaystyle \lim_{k \to \infty} f_{n_k}(0) = 1`, 总之, :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上几乎处处（除了 :math:`x = 0` 这一点）收敛于 :math:`0`,
+   所以 :math:`\displaystyle \lim_{k \to \infty} f_{n_k}(0) = 1`, 总之, :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上几乎处处 (除了 :math:`x = 0` 这一点) 收敛于 :math:`0`,
    离想要的结果还差一点.
 
    更进一步: 将所有满足 :math:`a_n \geqslant 1 - \dfrac{1}{n+1}` 的 :math:`n` 挑出来, 按从小到大的顺序排列, 得到下标的序列记为 :math:`\{m_k\}_{k \in \mathbb{N}}`.
