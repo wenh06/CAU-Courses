@@ -69,6 +69,77 @@
 
    这与上式矛盾, 所以 :math:`E` 不可测.
 
+.. _ex-4-29:
+
+29. 设 :math:`\varphi` 为 :math:`\mathbb{R}` 上的一个复值连续映射, 满足
+
+    .. math::
+
+      \varphi(x + y) = \varphi(x) \varphi(y) ~ \text{且} ~ \lvert \varphi(x) \rvert = 1 \quad (x, y \in \mathbb{R}).
+
+    试证: :math:`\varphi(x)` 取 :math:`e^{i \lambda x} ~ (x \in \mathbb{R})` 的形式, :math:`\lambda` 为实参数.
+
+.. proof:proof::
+
+   任意复值函数 :math:`\varphi(x)` 可以写成 :math:`\varphi(x) = \rho(x) e^{i \theta(x)}`, 其中 :math:`\rho(x), \theta(x)` 为实值函数.
+   由题设条件 :math:`\rho(x) = \lvert \varphi(x) \rvert = 1` 知 :math:`\varphi(x) = e^{i \theta(x)}`.
+   又由题设条件 :math:`\varphi(x + y) = \varphi(x) \varphi(y)`, 有
+
+   .. math::
+
+      e^{i \theta(x + y)} = e^{i \theta(x)} e^{i \theta(y)}.
+
+   于是有
+
+   .. math::
+
+      \theta(x + y) = \theta(x) + \theta(y).
+
+   这里不写 :math:`+ 2 \pi k` 是因为 :math:`e^{2 \pi i k} = 1`. 令 :math:`\lambda = \theta(1)`.
+   首先有 :math:`\theta(0) = \theta(0 + 0) = \theta(0) + \theta(0)`, 从而 :math:`\theta(0) = 0`. 对于 :math:`n \in \mathbb{N}`, 有
+
+   .. math::
+
+      \theta(n) = \theta(\underbrace{1 + \cdots + 1}_{n ~ \text{个}}) = n \theta(1) = n \lambda.
+
+   对于 :math:`-n`, 有 :math:`\theta(-n) = \theta(0) - \theta(n) = - n \lambda`. 由此可知, 对于任意整数 :math:`n \in \mathbb{Z}`,
+   有 :math:`\theta(n) = n \lambda`. 对于有理数 :math:`r = \dfrac{m}{n}`, :math:`m, n \in \mathbb{Z}^*`, 有
+
+   .. math::
+
+      \theta(r) & = \theta \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{m ~ \text{个}} \bigg) = m \theta \left( \dfrac{1}{n} \right), \\
+      \lambda = \theta(1) & = \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{n ~ \text{个}} \bigg) = n \theta \left( \dfrac{1}{n} \right),
+
+   从而 :math:`\theta(r) = \dfrac{m}{n} \lambda = r \lambda`. 对于实数 :math:`x`, 由于有理数集在实数集中稠密, 所以存在有理数列 :math:`\{ r_n \}`,
+   使得 :math:`r_n \to x ~ (n \to \infty)`, 从而由 :math:`\theta` 的连续性 (可由 :math:`\varphi` 的连续性推得) 知
+
+   .. math::
+
+      \theta(x) = \theta \left( \lim_{n \to \infty} r_n \right) = \lim_{n \to \infty} \theta(r_n) = \lim_{n \to \infty} r_n \lambda = x \lambda.
+
+   于是 :math:`\varphi(x) = e^{i \theta(x)} = e^{i \lambda x}`.
+
+   .. note::
+
+      由 :math:`\varphi` 的连续性推导 :math:`\theta` 的连续性:
+
+      .. math::
+
+         \lvert \varphi(x + h) - \varphi(x) \rvert
+         & = \lvert \varphi(x) \varphi(h) - \varphi(x) \rvert = \lvert \varphi(x) \rvert \lvert \varphi(h) - 1 \rvert \\
+         & = \rvert \lvert \varphi(h) - 1 \rvert = \lvert e^{i \theta(h)} - 1 \rvert = \lvert \cos \theta(h) + i \sin \theta(h) - 1 \rvert \\
+         & = \sqrt{(\cos \theta(h) - 1)^2 + \sin^2 \theta(h)} = \sqrt{2 - 2 \cos \theta(h)} \\
+         & = 2 \left\lvert \sin \dfrac{\theta(h)}{2} \right\rvert.
+
+      于是由 :math:`\displaystyle \lim_{h \to 0} \lvert \varphi(x + h) - \varphi(x) \rvert = 0`,
+      知 :math:`\displaystyle \lim_{h \to 0} \sin \dfrac{\theta(h)}{2} = 0`, 从而有
+
+      .. math::
+
+         \lim_{h \to 0} (\theta(x + h) - \theta(x)) = \lim_{h \to 0} \theta(h) = 0,
+
+      即 :math:`\theta` 是连续的.
+
 .. _ex-4-30:
 
 30. 设 :math:`\theta(x)` 为区间 :math:`[0, 1]` 上的 Cantor 函数, 令 :math:`f(x) = \theta(x) + x`, :math:`0 \leqslant x \leqslant 1`;
@@ -352,3 +423,64 @@
     而 :math:`g^2` 在任一子区间上不可积.
 
 .. proof:proof::
+
+   由非负可测函数列的逐项积分定理, 有
+
+   .. math::
+      :label: ex-4-42-1
+
+      \int_{\mathbb{R}} g ~ \mathrm{d} m = \sum_{n = 1}^\infty 2^{-n} \int_{\mathbb{R}} f(x - r_n) ~ \mathrm{d} m
+      = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m.
+
+   对于定义在 :math:`(r_n, r_n + 1)` 上的非负可测函数 :math:`f_n(x) = \dfrac{1}{\sqrt{x - r_n}}`,
+   若反常积分 :math:`\displaystyle \int_{r_n}^{r_n + 1} f_n(x) ~ \mathrm{d} x` 收敛, 则 :math:`f_n` 在 :math:`(r_n, r_n + 1)` 上勒贝格可积,
+   并且积分值相等, 即
+
+   .. math::
+      :label: ex-4-42-2
+
+      \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m = \int_{r_n}^{r_n + 1} f_n(x) ~ \mathrm{d} x
+      = 2 \sqrt{x - r_n} \bigg|_{r_n}^{r_n + 1} = 2.
+
+   将式 :eq:`ex-4-42-2` 代入式 :eq:`ex-4-42-1`, 有
+
+   .. math::
+
+      \int_{\mathbb{R}} g ~ \mathrm{d} m = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m
+      = \sum_{n = 1}^\infty 2^{-n} \cdot 2 = 1 < \infty,
+
+   于是 :math:`g \in L(\mathbb{R})`. 由于勒贝格可积函数几乎处处有限, 所以 :math:`g` 几乎处处有限, 即正项级数
+   :math:`\displaystyle \sum_{n = 1}^\infty 2^{-n} f(x - r_n)` 几乎处处收敛.
+
+   对任意非平凡区间 :math:`(\alpha, \beta)`, 存在有理数 :math:`r_k \in (\alpha, \beta)`. 对于 :math:`r_k`,
+   可以在区间 :math:`(\alpha, \beta)` 取到实数列 :math:`\{ x_m \}` 使得 :math:`\displaystyle \lim_{m \to \infty} x_m = r_k`.
+   可以不妨设 :math:`x_m - r_k \in (0, 1)` 对所有 :math:`m \in \mathbb{N}` 成立, 从而有
+
+   .. math::
+
+      g(x_m) = \sum_{n = 1}^\infty 2^{-n} f(x_m - r_n) \geqslant 2^{-k} f(x_m - r_k) = 2^{-k} (x_m - r_k)^{-1/2}.
+
+   由此可知
+
+   .. math::
+
+      \lim_{m \to \infty} g(x_m) = \lim_{m \to \infty} 2^{-k} (x_m - r_k)^{-1/2} = \infty,
+
+   即 :math:`g(x)` 在区间 :math:`(\alpha, \beta)` 上无界. 由此也可见, 若 :math:`g(x) < \infty`, 则 :math:`g` 在点 :math:`x` 处不连续.
+
+   考虑 :math:`g^2` 在任意非平凡开区间 :math:`(\alpha, \beta)` 上的勒贝格积分, 有
+
+   .. math::
+
+      \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m & = \int_{(\alpha, \beta)} \left( \sum_{n = 1}^\infty 2^{-n} f(x - r_n) \right)^2 ~ \mathrm{d} m \\
+      & \geqslant \int_{(\alpha, \beta)} \sum_{n = 1}^\infty 4^{-n} f^2(x - r_n) ~ \mathrm{d} m \\
+      & \geqslant 4^{-k} \int_{(\alpha, \beta)} f^2(x - r_k) ~ \mathrm{d} m \\
+      & = 4^{-k} \int_{(r_k, \beta_0)} \dfrac{1}{x - r_k} ~ \mathrm{d} m,
+
+   其中 :math:`\beta_0 = \min\{r_k + 1, \beta\}`. 由于 :math:`(r_k, \beta_0)` 上的非负可测函数 :math:`\displaystyle \dfrac{1}{x - r_k}` 的反常积分发散:
+
+   .. math::
+
+      \int_{r_k}^{\beta_0} \dfrac{1}{x - r_k} ~ \mathrm{d} x = \ln (x - r_k) \bigg|_{r_k}^{\beta_0} = \infty,
+
+   所以 :math:`\displaystyle \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m = \infty`, 即 :math:`g^2` 在区间 :math:`(\alpha, \beta)` 上不可积.
