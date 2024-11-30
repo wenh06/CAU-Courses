@@ -681,6 +681,38 @@
 
       以上性质称作是 Lebesgue 积分的平均连续性.
 
+      以下是来自《实变函数论》(周民强) 的简化证明:
+
+      任给 :math:`\varepsilon > 0`, 做分解
+
+      .. math::
+
+         f = f_1 + f_2,
+
+      其中 :math:`f_1` 是 :math:`\mathbb{R}` 上具有紧支集的连续函数, :math:`f_2` 满足
+
+      .. math::
+
+         \int_{\mathbb{R}} \lvert f_2 \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{4}.
+
+      由于连续函数 :math:`f_1` 具有紧支集, 从而一致连续, 所以存在 :math:`\delta > 0`, 使得当 :math:`\lvert h \rvert < \delta` 时有
+
+      .. math::
+
+         \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{2}.
+
+      于是, 当 :math:`\lvert h \rvert < \delta` 时有
+
+      .. math::
+
+         \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
+         & \leqslant \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
+         & < \dfrac{\varepsilon}{2} + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
+         & \leqslant \dfrac{\varepsilon}{2} + \int_{\mathbb{R}} \lvert f_2(x + h) \rvert  ~ \mathrm{d} m + \int_{\mathbb{R}} \lvert f_2(x) \rvert ~ \mathrm{d} m \\
+         & < \dfrac{\varepsilon}{2} + 2 \cdot \dfrac{\varepsilon}{4} = \varepsilon.
+
+      本质上, 我们原来的证明是在具体地构造分解 :math:`f = f_1 + f_2`.
+
 .. _ex-4-23:
 
 23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数, 试证
