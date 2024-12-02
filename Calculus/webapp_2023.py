@@ -237,4 +237,4 @@ if st.session_state.is_admin:
                 # st.success("表格已重新加载")
 
 # command to run:
-# nohup streamlit run webapp.py --server.port 8501 > .logs/webapp.log 2>&1 & echo $! > .logs/webapp.pid
+# nohup streamlit run webapp_2023.py --server.port 8501 > .logs/webapp_2023.log 2>&1 & echo $! > .logs/webapp_2023.pid
