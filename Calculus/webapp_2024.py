@@ -14,6 +14,7 @@ Path(__file__).parent.joinpath(".logs").mkdir(exist_ok=True)
 def load_table():
     path = "./data/2024选课名单.csv"
     table = pd.read_csv(path)
+    table["学号"] = table["学号"].astype(int)
     table = table.set_index("学号")
     table = table[list(map(str, range(1, 10)))]
     return table

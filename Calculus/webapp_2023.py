@@ -104,7 +104,7 @@ def consult():
 
 consult_button = st.button("查询", help="查询成绩")
 
-if consult_button:
+if consult_button or student_id:
     consult()
 
 

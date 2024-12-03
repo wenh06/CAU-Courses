@@ -178,6 +178,7 @@ tmp/
 temp/
 
 Calculus/data/*
+!Calculus/data/.keep
 
 
 *ipynb
