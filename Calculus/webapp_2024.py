@@ -9,11 +9,13 @@ st.set_page_config(page_title="2024秋微积分作业缺交情况查询", page_i
 
 Path(__file__).parent.joinpath(".logs").mkdir(exist_ok=True)
 
+db_file = Path(__file__).parent.joinpath("data/2024选课名单.csv")
+
 
 @st.cache_resource
 def load_table():
-    path = "./data/2024选课名单.csv"
-    table = pd.read_csv(path)
+    # path = "./data/2024选课名单.csv"
+    table = pd.read_csv(db_file)
     table["学号"] = table["学号"].astype(int)
     table = table.set_index("学号")
     table = table[list(map(str, range(1, 10)))]
@@ -21,6 +23,17 @@ def load_table():
 
 
 table = load_table()
+
+
+if "db_last_update_time" not in st.session_state:
+    # set the last update time to the last modified time of the database file
+    st.session_state["db_last_update_time"] = db_file.stat().st_mtime
+elif db_file.stat().st_mtime > st.session_state["db_last_update_time"]:
+    # clear the cache if the database file has been modified
+    st.cache_resource.clear()
+    # reload the table if the database file has been modified
+    table = load_table()
+    st.session_state["db_last_update_time"] = db_file.stat().st_mtime
 
 
 st.title("2024秋微积分作业缺交情况查询")
