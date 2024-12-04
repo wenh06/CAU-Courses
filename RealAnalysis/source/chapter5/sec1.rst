@@ -98,3 +98,16 @@
 3. 设在 :math:`L^2` 中 :math:`f_n \xrightarrow{\text{强}} f`, 又 :math:`f_n \xrightarrow{\text{a.e.}} g`, 证明 :math:`f \sim g`.
 
 .. proof:proof::
+
+   设 :math:`f_n \to g ~ (n \to \infty)` 对任意 :math:`x \in F = E \setminus e` 成立, 其中 :math:`e` 是零测集.
+   那么由 Fatou 引理有
+
+   .. math::
+
+      \int_E |f - g|^2 ~ \mathrm{d} m
+      & = \int_F |f - g|^2 ~ \mathrm{d} m = \int_F \lim_{n \to \infty} |f - f_n|^2 ~ \mathrm{d} m \\
+      & \leqslant \varliminf_{n \to \infty} \int_F |f - f_n|^2 ~ \mathrm{d} m
+        = \varliminf_{n \to \infty} \int_E |f - f_n|^2 ~ \mathrm{d} m \\
+      & = \varliminf_{n \to \infty} \lVert f - f_n \rVert_2^2 = 0.
+
+   由勒贝格积分的唯一性知 :math:`|f - g|^2 \sim 0`, 即 :math:`f \sim g`.
