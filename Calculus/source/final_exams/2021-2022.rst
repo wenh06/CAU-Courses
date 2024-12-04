@@ -10,3 +10,8 @@
 --------
 
 :pdfembed:`src:../_static/final_exams/2021秋高等数学C试卷及解答.pdf, height:800, width:100%, align:middle`
+
+勘误
+--------
+
+- 第 18 题中的 :math:`\displaystyle y\bigr|_{x=0}=1` 应为 :math:`\displaystyle y\bigr|_{x=0}=0`.

@@ -10,3 +10,17 @@
 --------
 
 :pdfembed:`src:../_static/final_exams/2020秋高等数学C试卷及解答.pdf, height:800, width:100%, align:middle`
+
+勘误
+--------
+- 第 13 题解答过程有错误, 请参考下面的解答过程:
+
+  .. math::
+      :label: 2020-2021-final-exam-13
+
+      \int \dfrac{\sqrt{1 - x^2}}{x} ~ \mathrm{d} x & = \int \dfrac{\sqrt{1 - x^2}}{x^2} x ~ \mathrm{d} x
+      \xlongequal{u = \sqrt{1 - x^2}} \int \dfrac{u^2}{u^2 - 1} ~ \mathrm{d} u \\
+      & = \int \left( 1 + \dfrac{1}{u^2 - 1} \right) ~ \mathrm{d} u = u + \dfrac{1}{2} \ln \left| \dfrac{u - 1}{u + 1} \right| + C \\
+      & = \sqrt{1 - x^2} + \dfrac{1}{2} \ln \left| \dfrac{\sqrt{1 - x^2} - 1}{\sqrt{1 - x^2} + 1} \right| + C \\
+      & = \sqrt{1 - x^2} + \ln \left| \dfrac{\sqrt{1 - x^2} - 1}{x} \right| + C \\
+      & = \sqrt{1 - x^2} + \ln \dfrac{1 - \sqrt{1 - x^2}}{\left| x \right|} + C.
