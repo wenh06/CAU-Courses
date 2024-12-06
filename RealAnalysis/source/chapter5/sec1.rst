@@ -167,7 +167,37 @@
 
    综合 :eq:`ex-5-5-eq-2` 与 :eq:`ex-5-5-eq-4`, 得到 :math:`\lVert f_n \rVert_p \to \lVert f \rVert_p`.
 
-   充分性: 由于零测集不影响可积性与积分值, 故不妨设 :math:`f_n \to f ~ (n \to \infty)` 对任意 :math:`x \in E` 成立. 未完....
+   充分性: 由于零测集不影响可积性与积分值, 故不妨设 :math:`f_n \to f ~ (n \to \infty)` 对任意 :math:`x \in E` 成立.
+   对于任意 :math:`1 \leqslant p < \infty`, 由于 :math:`\varphi(t) = t^p` 是凸函数, 故
+
+   .. math::
+
+      | f_n - f |^p = 2^p \left\lvert \dfrac{f_n - f}{2} \right\rvert^p \leqslant 2^{p - 1} \left( |f_n|^p + |f|^p \right).
+
+   令 :math:`g_n = 2^{p - 1} \left( |f_n|^p + |f|^p \right) - | f_n - f |^p` 为非负可测函数. 由于 :math:`f_n \to f ~ (n \to \infty)`,
+   故有 :math:`g_n \to 2^p |f|^p` 对任意 :math:`x \in E` 成立. 由 Fatou 引理知
+
+   .. math::
+
+      \int_E \lim_{n \to \infty} g_n ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_E g_n ~ \mathrm{d} m,
+
+   即有
+
+   .. math::
+
+      \int_E 2^p |f|^p ~ \mathrm{d} m
+      & \leqslant \varliminf_{n \to \infty} \int_E 2^{p - 1} \left( |f_n|^p + |f|^p - | f_n - f |^p \right) ~ \mathrm{d} m \\
+      & = \int_E 2^{p - 1} |f|^p ~ \mathrm{d} m + \lim_{n \to \infty} 2^{p - 1} \int_E |f_n|^p ~ \mathrm{d} m
+          - \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m \\
+      & = \int_E 2^p |f|^p ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m.
+
+   由上式可得
+
+   .. math::
+
+      \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m \leqslant 0,
+
+   这表明有 :math:`\lVert f_n - f \rVert_p \to 0`, 即 :math:`f_n \xrightarrow{\text{强}} f`.
 
 .. _ex-5-6:
 
@@ -261,7 +291,7 @@
 
 .. _ex-5-10:
 
-10. 设 :math:`F(x)` 是 :math:`L^p ~ (p > 1)` 中某个元的不定积分, 证明渐进式
+10. 设 :math:`F(x)` 是 :math:`L^p ~ (p > 1)` 中某个元的不定积分, 证明渐近式
 
     .. math::
 
