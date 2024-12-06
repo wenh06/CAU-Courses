@@ -18,7 +18,7 @@
 
       \int_0^1 \lvert f \rvert ~ \mathrm{d} m
       & = \lim_{n \to \infty} \int_0^1 g_n ~ \mathrm{d} m = \lim_{n \to \infty} \int_{1/n}^1 \lvert f \rvert ~ \mathrm{d} m \\
-      & = \lim_{n \to \infty} \int_{1/n}^1 \dfrac{1}{x} ~ \mathrm{d} x = \lim_{n \to \infty} \left( \ln x \right|_{1/n}^1) = \infty,
+      & = \lim_{n \to \infty} \int_{1/n}^1 \dfrac{1}{x} ~ \mathrm{d} x = \lim_{n \to \infty} ( \ln x \bigr|_{1/n}^1 ) = \infty,
 
    这与 :math:`\lvert f \rvert` 在 :math:`E` 上可积矛盾, 所以 :math:`f` 不可积.
 
@@ -575,6 +575,65 @@
       & = \int_E \lvert f \rvert ~ \mathrm{d} m.
 
    所以 :math:`\lvert f \rvert` 在 :math:`E` 上可积, 从而知 :math:`f` 可积.
+
+.. _ex-4-20:
+
+20. 设 :math:`f(x), f_n(x) ~ (n \in \mathbb{N})` 均是 :math:`E` 上可积函数, :math:`f_n(x)` 几乎处处收敛于 :math:`f(x)`, :math:`n \to \infty`, 且
+
+    .. math::
+
+      \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_E \lvert f(x) \rvert ~ \mathrm{d} m.
+
+    试证: 对任意可测子集 :math:`e \subset E`, 有
+
+    .. math::
+
+      \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_e \lvert f(x) \rvert ~ \mathrm{d} m.
+
+    提示: 对序列 :math:`\lvert f_n \rvert` 分别在 :math:`e` 与 :math:`E \setminus e` 上的积分应用 Fatou 引理.
+
+.. proof:proof::
+
+   由于零测集对于可积性与积分值没有影响, 所以不妨设 :math:`f_n(x)` 处处收敛于 :math:`f(x)`, :math:`n \to \infty`.
+   对非负可测函数列 :math:`\{ \lvert f_n \rvert \}` 分别在 :math:`e` 与 :math:`E \setminus e` 上的积分应用 Fatou 引理, 有
+
+   .. math::
+      :label: ex-4-20-eq-1
+
+      \begin{gathered}
+      \int_e \lvert f(x) \rvert ~ \mathrm{d} m = \int_e \lim_{n \to \infty} \lvert f_n(x) \rvert ~ \mathrm{d} m
+      \leqslant \varliminf_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m \\
+      \int_{E \setminus e} \lvert f(x) \rvert ~ \mathrm{d} m = \int_{E \setminus e} \lim_{n \to \infty} \lvert f_n(x) \rvert ~ \mathrm{d} m
+      \leqslant \varliminf_{n \to \infty} \int_{E \setminus e} \lvert f_n(x) \rvert ~ \mathrm{d} m.
+      \end{gathered}
+
+   由于有
+
+   .. math::
+
+      \varliminf_{n \to \infty} \int_{E \setminus e} \lvert f_n(x) \rvert ~ \mathrm{d} m
+      & = \varliminf_{n \to \infty} \left( \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m \right) \\
+      & = \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m,
+
+   所以 :eq:`ex-4-20-eq-1` 中两个不等式相加, 有
+
+   .. math::
+
+      \int_E \lvert f(x) \rvert ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m
+      + \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
+
+   将条件 :math:`\displaystyle \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_E \lvert f(x) \rvert ~ \mathrm{d} m` 代入上式, 可得
+
+   .. math::
+
+      \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
+
+   这表明极限 :math:`\displaystyle \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m` 存在, 且不等号都必须取等号,
+   反代回 :eq:`ex-4-20-eq-1` 的第一个不等式, 即有
+
+   .. math::
+
+      \int_e \lvert f(x) \rvert ~ \mathrm{d} m = \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
 
 .. _ex-4-21:
 
