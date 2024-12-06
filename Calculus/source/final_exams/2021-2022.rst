@@ -14,4 +14,14 @@
 勘误
 --------
 
+- 第 2 题求 :math:`y = \arcsin \sqrt{1 - 4x^2}` 微分的正确解答应该为
+
+  .. math::
+
+    \mathrm{d} y = - \dfrac{2x}{|x| \sqrt{1 - 4x^2}} \mathrm{d} x.
+
+  .. note::
+
+    :math:`\sqrt{x^2} = |x|` 而不是 :math:`x`.
+
 - 第 18 题中的 :math:`\displaystyle y\bigr|_{x=0}=1` 应为 :math:`\displaystyle y\bigr|_{x=0}=0`.
