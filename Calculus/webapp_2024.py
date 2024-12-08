@@ -30,7 +30,7 @@ def load_contest_result():
     contest_result["学号"] = contest_result["学号"].astype(int)
     contest_result = contest_result.set_index("学号")
     contest_result = contest_result[["10", "11"]]
-    contest_result["单元测验"] = contest_result.mean(axis=1)
+    contest_result["单元测验"] = contest_result.max(axis=1)  # 取最高分作为单元测验成绩
     contest_result = contest_result.drop(columns=["10", "11"])
     return contest_result
 
