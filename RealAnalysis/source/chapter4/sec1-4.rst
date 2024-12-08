@@ -811,6 +811,59 @@
       \dfrac{~ \mathrm{d}}{~ \mathrm{d} t} \int_{\mathbb{R}} g(x, t) ~ \mathrm{d} x
       = \int_{\mathbb{R}} \dfrac{\partial}{\partial t} g(x, t) ~ \mathrm{d} x = \int_{\mathbb{R}} e^{-itx} f(x) ~ \mathrm{d} x = \hat{f} (t).
 
+.. _ex-4-24:
+
+24. 设 :math:`f(x)` 是 :math:`(a, b)` 上的可积函数, 试证
+
+    .. math::
+
+      \lim_{t \to \infty} \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x = 0.
+
+    提示: 先对特殊的 :math:`f(x)` 证明结论, 再利用极限过程. 这个结果称为 Riemann-Lebesgue 引理.
+
+.. proof:proof::
+
+   对于 :math:`f(x) = \chi_{(c, d)} (x)`, 其中 :math:`a < c < d < b`, 有
+
+   .. math::
+
+      \int_{(a, b)} \chi_{(c, d)} (x) e^{itx} ~ \mathrm{d} x = \int_c^d e^{itx} ~ \mathrm{d} x = \dfrac{e^{itd} - e^{itc}}{it} \to 0, \quad t \to \infty.
+
+   于是, 利用积分关于被积函数的线性性, 对于任意简单函数 :math:`\displaystyle \varphi = \sum_{i=1}^n r_i \chi_{(c_i, d_i)}`, 有
+
+   .. math::
+      :label: ex-4-24-eq-1
+
+      \lim_{t \to \infty} \int_{(a, b)} \varphi(x) e^{itx} ~ \mathrm{d} x = \lim_{t \to \infty} \sum_{i=1}^n r_i \int_{(c_i, d_i)} e^{itx} ~ \mathrm{d} x
+      = \sum_{i=1}^n r_i \lim_{t \to \infty} \int_{(c_i, d_i)} e^{itx} ~ \mathrm{d} x = 0.
+
+   对于非负可积函数 :math:`f(x)`, 存在渐升的简单函数列 :math:`\{ \varphi_n \}` 使得 :math:`\varphi_n \uparrow f`,
+   且 :math:`\displaystyle \lim_{n \to \infty} \int_{(a, b)} \varphi_n(x) ~ \mathrm{d} x = \int_{(a, b)} f(x) ~ \mathrm{d} x`.
+   那么对于任意 :math:`\varepsilon > 0`, 存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n > N` 时有
+
+   .. math::
+
+      \int_{(a, b)} \lvert f - \varphi_n \rvert ~ \mathrm{d} x < \dfrac{\varepsilon}{2}.
+
+   同时, 由 :eq:`ex-4-24-eq-1` 知, 对于取好的 :math:`\varepsilon`, 存在 :math:`M \in \mathbb{N}`, 使得当 :math:`t > M` 时有
+
+   .. math::
+
+      \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert < \dfrac{\varepsilon}{2}.
+
+   于是, 当 :math:`t > M` 且 :math:`n > N` 时有
+
+   .. math::
+
+      \left\lvert \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x \right\rvert
+      & = \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x + \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
+      & \leqslant \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x \right\rvert
+        + \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
+      & \leqslant \int_{(a, b)} \lvert f(x) - \varphi_n(x) \rvert ~ \mathrm{d} x + \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
+      & < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon.
+
+   上式即表明 :math:`\displaystyle \lim_{t \to \infty} \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x = 0`.
+
 .. _ex-4-25:
 
 25. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可测函数, 令 :math:`\mu (\alpha) = m \mathbb{R}(\lvert f \rvert > \alpha)`, 试证
