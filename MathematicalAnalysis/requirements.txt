@@ -13,7 +13,7 @@ sphinx-design
 sphinx-favicon
 sphinx-emoji-favicon
 sphinxcontrib-napoleon
-sphinxcontrib-tikz
 sphinxcontrib-bibtex
 sphinxcontrib-proof
 sphinxcontrib-xlsxtable
+git+https://github.com/wenh06/tikz.git@extra-packages

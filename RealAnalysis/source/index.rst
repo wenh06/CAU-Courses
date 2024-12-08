@@ -9,7 +9,7 @@
 课程教材
 ------------------
 
-《`实变函数与泛函分析概要 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c338eb3f18f967ee7f37d02>`_》 (第5版 第1册）, 郑维行, 王声望, 高等教育出版社, 2019年
+《`实变函数与泛函分析概要 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c338eb3f18f967ee7f37d02>`_》 (第5版 第1册), 郑维行, 王声望, 高等教育出版社, 2019年
 
 参考书籍
 ------------------
@@ -51,6 +51,7 @@
    suppl/chap2
    suppl/chap3
    suppl/chap4
+   suppl/chap5
 
 .. toctree::
    :maxdepth: 2
