@@ -173,7 +173,7 @@
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
 
       \node (p2) at (17, -4) {$L_{[a, b]} / L_0$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
+      \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right = 15] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{~ \mathrm{d}}~\circ~\int_{[a, x]} = \operatorname{id}$} (p2);
 
    以上的 :math:`\int_{[a, x]}` 表示变上限勒贝格积分, :math:`\widetilde{~ \mathrm{d}}` 表示微分 (几乎处处有定义, 没有定义的集合是零测集,

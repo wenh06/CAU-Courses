@@ -74,6 +74,9 @@ def consult():
         st.write("作业全部交齐")
     else:
         st.write(f"缺交第{', '.join(map(str, indices + 1))}次作业")
+        indices = np.array([i if i < 3 else i + 1 for i in indices], dtype=int)
+        extra_str = "分别" if len(indices) > 1 else ""
+        st.write(f"以上{extra_str}对应第{', '.join(map(str, indices + 1))}周的作业")
 
 
 def compute_final_exam_score(contest_ratio, final_exam_ratio):
