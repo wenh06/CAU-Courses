@@ -16,4 +16,4 @@ sphinxcontrib-napoleon
 sphinxcontrib-bibtex
 sphinxcontrib-proof
 sphinxcontrib-xlsxtable
-git+https://github.com/wenh06/tikz.git@extra-packages
+git+https://github.com/wenh06/tikz2.git
