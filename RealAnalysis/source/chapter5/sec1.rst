@@ -312,7 +312,8 @@
       & = \left( \int_{E_h} |f|^p ~ \mathrm{d} m \right)^{1/p} \cdot |h|^{1/q} \\
       & = \left( \int_{E_h} |f|^p ~ \mathrm{d} m \right)^{1/p} \cdot |h|^{1 - 1/p}.
 
-   由勒贝格积分的绝对连续性知, 对任意给定的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`, 使得对任意满足 :math:`m E_h < \delta` 的区间 :math:`E_h` 有
+   由勒贝格积分的绝对连续性知, 对任意给定的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`,
+   使得对任意满足 :math:`m E_h < \delta` (即满足 :math:`|h| < \dleta`) 的区间 :math:`E_h` 有
 
    .. math::
 
@@ -321,7 +322,9 @@
    代入 :eq:`ex-5-10-eq-1` 即得
 
    .. math::
+      :label: ex-5-10-eq-2
 
       \lvert F(x + h) - F(x) \rvert < \varepsilon^{1/p} \cdot |h|^{1 - 1/p},
 
-   即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`.
+   即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`. 从 :eq:`ex-5-10-eq-2` 可可以看出,
+   我们实际证明了一个更强的结论, 即 :math:`F(x + h) - F(x) = o(h^{1 - 1/p})`.
