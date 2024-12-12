@@ -7,3 +7,157 @@
     :math:`K` 为常数, 证明 :math:`f_n \xrightarrow{\text{弱}} f` (:math:`n \to \infty`).
 
 .. proof:proof::
+
+
+.. _ex-5-23:
+
+23. 问在 :math:`L^2` 中弱收敛于 :math:`f` 的序列 :math:`\{ f_n \}` 是否依测度收敛?
+
+.. proof:solution::
+
+   不一定.
+
+   反例: 取 :math:`E = (0, \pi)`, :math:`f_n(x) = \sin(nx)`, :math:`n \in \mathbb{N}`. 容易验证 :math:`f_n(x) \in L^2(E)`.
+   由 :ref:`Riemann-Lebesgue 引理 <ex-4-24>`, 对任意可积函数 (特别地, :math:`L^2(E)` 中的函数) :math:`g(x)`, 都有
+
+   .. math::
+
+      \lim_{n \to \infty} \int_{(0, \pi)} f_n g ~ \mathrm{d} m = 0.
+
+   因此 :math:`f_n(x)` 弱收敛到 :math:`0`. 但是对足够小的 :math:`\varepsilon > 0`, 有
+
+   .. math::
+
+      E(|f_n| > \varepsilon) = \bigcup_{k = 0}^{n - 1}
+      \left( \dfrac{k\pi + \arcsin \varepsilon}{n}, \dfrac{k\pi + \pi - \arcsin \varepsilon}{n} \right),
+
+   于是
+
+   .. math::
+
+      E(|f_n| > \varepsilon) = \sum_{k = 0}^{n - 1} \dfrac{\pi - 2 \arcsin \varepsilon}{n} = \pi - 2 \arcsin \varepsilon,
+
+   由此可知 :math:`f_n` 不依测度收敛到 :math:`0`.
+
+.. _ex-5-27:
+
+27. 设 :math:`E` 为可测集, :math:`m E < \infty`, :math:`f \in L^{\infty}(E)` 且 :math:`\lVert f \rVert_{\infty} > 0`.
+    令 :math:`\displaystyle C_n = \int_E |f|^n ~ \mathrm{d} m`,
+    证明 :math:`\displaystyle \lVert f \rVert_{\infty} = \lim_{n \to \infty} C_{n + 1} / C_n`.
+
+.. proof:proof::
+
+   由于 :math:`m E < \infty`, :math:`f \in L^{\infty}(E)`, 且 :math:`\lVert f \rVert_{\infty} > 0`,
+   可以考虑 :math:`g = f / \lVert f \rVert_{\infty}`,
+   则有 :math:`\displaystyle C_n = \lVert f \rVert_{\infty}^n \int_E |g|^n ~ \mathrm{d} m`.
+   故可以不妨设 :math:`\lVert f \rVert_{\infty} = 1`, 并证明 :math:`\displaystyle 1 = \lim_{n \to \infty} C_{n + 1} / C_n`.
+
+   首先, 由 Hölder 不等式, 对任意 :math:`n \in \mathbb{N}`, 有
+
+   .. math::
+
+      C_{n + 1} & = \int_E |f|^{n + 1} ~ \mathrm{d} m = \int_E |f|^n |f| ~ \mathrm{d} m \\
+      & \leqslant \lVert |f|^n \rVert_1 \lVert f \rVert_{\infty} = \int_E |f|^n ~ \mathrm{d} m = C_n,
+
+   于是
+
+   .. math::
+      :label: ex-5-27-eq-1
+
+      \varlimsup_{n \to \infty} \dfrac{C_{n + 1}}{C_n} \leqslant 1.
+
+   另一方面, 由于 :math:`1` 为 :math:`f` 的本性上确界, 故对任意 :math:`0 < r < 1`, 集合
+
+   .. math::
+
+      A_r = E(|f| > r)
+
+   有正测度, 即 :math:`m A_r > 0`. 那么
+
+   .. math::
+
+      C_{n + 1} = \int_E |f|^{n+1} ~ \mathrm{d} m
+      & \geqslant \int_{A_r} |f|^{n+1} ~ \mathrm{d} m \geqslant r \int_{A_r} |f|^n ~ \mathrm{d} m \\
+      & = r C_n - r \int_{E \setminus A_r} |f|^n ~ \mathrm{d} m \\
+      & \geqslant r C_n - r \cdot r^n m (E \setminus A_r) \\
+      & = r C_n - r^{n + 1} m (E \setminus A_r),
+
+   即有不等式
+
+   .. math::
+      :label: ex-5-27-eq-2
+
+      \dfrac{C_{n + 1}}{C_n} \geqslant r - r^{n + 1} \dfrac{m (E \setminus A_r)}{C_n}.
+
+   取实数 :math:`s` 满足 :math:`r < s < 1`, 那么集合
+
+   .. math::
+
+      A_s = E(|f| > s)
+
+   也有正测度, 即 :math:`m A_s > 0,` 并且有
+
+   .. math::
+
+      C_n = \int_E |f|^n ~ \mathrm{d} m \geqslant \int_{A_s} |f|^n ~ \mathrm{d} m \geqslant s^n \cdot m A_s.
+
+   将上式代入 :eq:`ex-5-27-eq-2` 即有
+
+   .. math::
+
+      \dfrac{C_{n + 1}}{C_n} \geqslant r - r \dfrac{m (E \setminus A_r)}{m A_s} \left(\dfrac{r}{s}\right)^n
+
+   对上式关于 :math:`n \to \infty` 取下极限, 即有
+
+   .. math::
+
+      \varliminf_{n \to \infty} \dfrac{C_{n + 1}}{C_n} \geqslant r.
+
+   由于上式对任意的 :math:`0 < r < 1` 都成立 (或者说对上式取极限 :math:`r \to 1-`), 所以有
+
+   .. math::
+      :label: ex-5-27-eq-3
+
+      \varliminf_{n \to \infty} \dfrac{C_{n + 1}}{C_n} \geqslant 1.
+
+   :eq:`ex-5-27-eq-1`, :eq:`ex-5-27-eq-3` 两式相结合即有 :math:`\displaystyle \lim_{n \to \infty} C_{n + 1} / C_n = 1`.
+
+   .. note::
+
+      当 :math:`m E < \infty` 且 :math:`f \in L^{\infty}(E)` 时, 成立
+
+      .. math::
+
+         \lim_{p \to \infty} \lVert f \rVert_p = \lVert f \rVert_{\infty},
+
+      特别地对 :math:`n \in \mathbb{N}` 有
+
+      .. math::
+         :label: ex-5-27-eq-4
+
+         \lim_{n \to \infty} \lVert f \rVert_n = \lVert f \rVert_{\infty}.
+
+      本题添加了条件 :math:`\lVert f \rVert_{\infty} > 0`, 进而得到的结论
+
+      .. math::
+         :label: ex-5-27-eq-5
+
+         \lVert f \rVert_{\infty} = \lim_{n \to \infty} \dfrac{C_{n + 1}}{C_n}
+         = \lim_{n \to \infty} \dfrac{\lVert f \rVert_{n+1}^{n+1}}{\lVert f \rVert_n}
+
+      是要强于 :eq:`ex-5-27-eq-4` 的. 实际上, 令 :math:`a_n = \ln C_{n + 1} - \ln C_n`, 并约定 :math:`a_n = \ln C_1`.
+      那么 :eq:`ex-5-27-eq-4` 实际上说的是
+
+      .. math::
+         :label: ex-5-27-eq-6
+
+         \dfrac{1}{n} \sum_{k = 1}^n a_k \to \ln \lVert f \rVert_{\infty}, \quad n \to \infty.
+
+      而 :eq:`ex-5-27-eq-5` 实际上说的是
+
+      .. math::
+         :label: ex-5-27-eq-7
+
+         a_n \to \ln \lVert f \rVert_{\infty}, \quad n \to \infty.
+
+      对一般的数列 :math:`\{ a_n \}` 来说, :eq:`ex-5-27-eq-7` 是要严格强于 :eq:`ex-5-27-eq-6` 的.

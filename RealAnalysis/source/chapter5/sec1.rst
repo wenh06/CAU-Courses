@@ -313,7 +313,7 @@
       & = \left( \int_{E_h} |f|^p ~ \mathrm{d} m \right)^{1/p} \cdot |h|^{1 - 1/p}.
 
    由勒贝格积分的绝对连续性知, 对任意给定的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`,
-   使得对任意满足 :math:`m E_h < \delta` (即满足 :math:`|h| < \dleta`) 的区间 :math:`E_h` 有
+   使得对任意满足 :math:`m E_h < \delta` (即满足 :math:`|h| < \delta`) 的区间 :math:`E_h` 有
 
    .. math::
 
