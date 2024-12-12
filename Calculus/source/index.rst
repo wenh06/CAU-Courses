@@ -44,3 +44,4 @@
    final_exams/2021-2022
    final_exams/2022-2023
    final_exams/2023-2024
+   final_exams/2024-2025
