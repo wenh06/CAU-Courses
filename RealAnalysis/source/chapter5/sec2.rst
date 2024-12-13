@@ -213,3 +213,109 @@
          a_n \to \ln \lVert f \rVert_{\infty}, \quad n \to \infty.
 
       对一般的数列 :math:`\{ a_n \}` 来说, :eq:`ex-5-27-eq-7` 是要严格强于 :eq:`ex-5-27-eq-6` 的.
+      相关知识可查阅级数的 Cesàro 求和法.
+
+.. _ex-5-31:
+
+31. 设 :math:`I` 为实轴上的一区间, :math:`\varphi` 为 :math:`I` 上的实函数. 称 :math:`\varphi` 为 :math:`I` 上凸函数,
+    如果对任何 :math:`x, y \in I` 和任意 :math:`t \in (0, 1)` 有
+
+    .. math::
+
+      \varphi(tx + (1 - t)y) \leqslant t\varphi(x) + (1 - t)\varphi(y).
+
+    试证:
+
+    (1) :math:`\varphi` 在 :math:`I` 的每个内点处连续;
+
+    (2) 设 :math:`(X, \mathscr{R}, \mu)` 为有限测度空间, 若 :math:`f` 为 :math:`X` 上实可积函数且 :math:`f` 的值域含于 :math:`I`,
+        则有延森 (B. Jensen) 不等式
+
+        .. math::
+
+            \varphi \left( \dfrac{1}{\mu X} \int_X f ~ \mathrm{d} \mu \right)
+            \leqslant \dfrac{1}{\mu X} \int_X \varphi(f) ~ \mathrm{d} \mu.
+
+.. proof:proof::
+
+   (1) 任取 :math:`x \in I` 为 :math:`I` 的内点, 于是存在区间 :math:`[a, b] \subset I` 使得 :math:`x \in (a, b)`.
+   任取点列 :math:`\{ x_n \} \subset (x, b)` 使得 :math:`x_n \to x +`, 并记 :math:`t_n = (x_n - x) / (b - x)`, 则有
+
+   .. math::
+
+      x_n = t_n b + (1 - t_n) x,
+
+   并且
+
+   .. math::
+
+      t_n \to 0 (n \to \infty).
+
+   由于 :math:`\varphi` 为凸函数, 有
+
+   .. math::
+
+      \varphi(x_n) \leqslant t_n \varphi(b) + (1 - t_n) \varphi(x) = \varphi(x) + t_n (\varphi(b) - \varphi(x)).
+
+   对上式两边关于 :math:`n \to \infty` 取上极限, 有
+
+   .. math::
+      :label: ex-5-31-eq-1
+
+      \varlimsup_{n \to \infty} \varphi(x_n) \leqslant \varphi(x).
+
+   另一方面, 记 :math:`s_n = (x_n - x) / (x_n - a)`, 则有
+
+   .. math::
+
+      x = s_n a + (1 - s_n) x_n,
+
+   并且
+
+   .. math::
+
+      s_n \to 0 (n \to \infty).
+
+   由于 :math:`\varphi` 为凸函数, 有
+
+   .. math::
+
+      \varphi(x) \leqslant s_n \varphi(x_n) + (1 - s_n) \varphi(a) = \varphi(a) + s_n (\varphi(x_n) - \varphi(a)).
+
+   对上式两边关于 :math:`n \to \infty` 取下极限, 有
+
+   .. math::
+      :label: ex-5-31-eq-2
+
+      \varphi(x) \leqslant \varliminf_{n \to \infty} \varphi(x_n).
+
+   由 :eq:`ex-5-31-eq-1`, :eq:`ex-5-31-eq-2` 两式相结合即有
+
+   .. math::
+
+      \varphi(x) = \lim_{n \to \infty} \varphi(x_n).
+
+   由于点列 :math:`\{ x_n \}` 的任意性, 知 :math:`\varphi` 在 :math:`x` 右连续. 同理可证 :math:`\varphi` 在 :math:`x` 左连续.
+
+   (2) 由于 :math:`f` 为 :math:`X` 上实可积函数, 取简单函数列 :math:`\{ g_n \}` 使得
+
+   .. math::
+
+      \lim_{n \to \infty} \int_X g_n ~ \mathrm{d} \mu = \int_X f ~ \mathrm{d} \mu.
+
+   对于 :math:`\displaystyle g_n = \sum_{k = 1}^{N_n} a_{nk} \chi_{E_{nk}}`, :math:`\displaystyle X = \bigcup_{k = 1}^{N_n} E_{nk}`,
+   且 :math:`E_{nk}` 两两不交, 有
+
+   .. math::
+
+      \varphi \left( \dfrac{1}{\mu X} \int_X g_n ~ \mathrm{d} \mu \right)
+      & = \varphi \left( \sum_{k = 1}^{N_n} \dfrac{\mu E_{nk}}{\mu X} a_{nk} \right) \\
+      & \leqslant \sum_{k = 1}^{N_n} \dfrac{\mu E_{nk}}{\mu X} \varphi \left( a_{nk} \right)
+        = \dfrac{1}{\mu X} \int_X \varphi(g_n) ~ \mathrm{d} \mu.
+
+   由 :math:`\varphi` 的连续性, 两边取极限即有
+
+   .. math::
+
+      \varphi \left( \dfrac{1}{\mu X} \int_X f ~ \mathrm{d} \mu \right)
+      \leqslant \dfrac{1}{\mu X} \int_X \varphi(f) ~ \mathrm{d} \mu.
