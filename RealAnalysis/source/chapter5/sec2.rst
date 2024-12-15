@@ -99,6 +99,17 @@
 
 .. proof:proof::
 
+   .. note::
+
+      首先要注意的是, 我们事先是不知道数列 :math:`\{ C_{n + 1} / C_n \}` 是否收敛的 (或者说是否有极限的).
+      如果事先知道了这个数列是收敛的, 那么这个题目的结论就是平凡的, 直接能从
+
+      .. math::
+
+         \lim_{n \to \infty} C_n^{1/n} = \lVert f \rVert_{\infty}
+
+      得到.
+
    由于 :math:`m E < \infty`, :math:`f \in L^{\infty}(E)`, 且 :math:`\lVert f \rVert_{\infty} > 0`,
    可以考虑 :math:`g = f / \lVert f \rVert_{\infty}`,
    则有 :math:`\displaystyle C_n = \lVert f \rVert_{\infty}^n \int_E |g|^n ~ \mathrm{d} m`.

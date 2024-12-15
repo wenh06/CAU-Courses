@@ -328,3 +328,68 @@
 
    即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`. 从 :eq:`ex-5-10-eq-2` 可可以看出,
    我们实际证明了一个更强的结论, 即 :math:`F(x + h) - F(x) = o(h^{1 - 1/p})`.
+
+.. _ex-5-11:
+
+11. 设 :math:`f(x)` 是平方可积函数, 且存在 :math:`\alpha > 0` 满足
+
+    .. math::
+
+      \lVert f(x + h) - f(x) \rVert_2 = O(h^{1 + \alpha}), \quad h \to 0,
+
+    试证 :math:`f(x)` 几乎处处为常数.
+
+.. proof:proof::
+
+   由 :math:`\lVert f(x + h) - f(x) \rVert_2 = O(h^{1 + \alpha})` 知存在常数 :math:`C > 0`, 以及 :math:`\delta > 0`,
+   使得对任意满足 :math:`0 < |h| < \delta` 的 :math:`h` 有
+
+   .. math::
+
+      \int_E |f(x + h) - f(x)|^2 ~ \mathrm{d} m < C |h|^{2 + 2\alpha},
+
+   即
+
+   .. math::
+
+      \int_E \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert^2 ~ \mathrm{d} m < C |h|^{2\alpha}.
+
+   对任意有限区间 :math:`I \subset E`, 由 Hölder 不等式有
+
+   .. math::
+
+      \int_I \left\lvert f \right\rvert ~ \mathrm{d} m \leqslant
+      \left( \int_I 1 ~ \mathrm{d} m \right)^{1/2} \left( \int_I |f|^2 ~ \mathrm{d} m \right)^{1/2} \leqslant \sqrt{m I} \cdot \lVert f \rVert_2.
+
+   由此可知 :math:`f(x)` 在 :math:`I` 上可积, 从而在 :math:`I` 上, 进而在 :math:`E` 上, 几乎处处都是 :math:`f(x)` 的勒贝格点.
+   任取一个勒贝格点 :math:`a`, 任取 :math:`x_0 \in E`, 记 :math:`E_0` 为以 :math:`a, x_0` 为端点的区间, 那么有
+
+   .. math::
+
+      \left\lvert \int_{E_0} \dfrac{f(x + h) - f(x)}{h} ~ \mathrm{d} m \right\rvert
+      & \leqslant \int_{E_0} \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert ~ \mathrm{d} m \\
+      & \leqslant \left( \int_{E} \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert^2 ~ \mathrm{d} m \right)^{1/2} \cdot \sqrt{m E_0} \\
+      & < C |h|^\alpha \cdot \sqrt{m E_0}.
+
+   由于 :math:`\alpha > 0`, 令 :math:`h \to 0` 即得
+
+   .. math::
+
+      0 = \lim_{h \to 0} \int_{E_0} \dfrac{f(x + h) - f(x)}{h} ~ \mathrm{d} m
+      = \lim_{h \to 0} \left( \int_{E_{0,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m - \int_{E_{a,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m \right),
+
+   其中 :math:`E_{0,h}` 为以 :math:`a, x_0 + h` 为端点的区间, :math:`E_{a,h}` 为以 :math:`a, a + h` 为端点的区间.
+   由于 :math:`a` 是 :math:`f(x)` 的勒贝格点, 故有 :math:`\displaystyle \lim_{h \to 0} \int_{E_{a,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m = f(a)`.
+   又由于 :math:`E` 上 几乎处处都是 :math:`f(x)` 的勒贝格点, 从而知
+
+   .. math::
+
+      \lim_{h \to 0} \int_{E_{0,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m = f(x_0), \quad \text{a.e.} ~ x_0 \in E,
+
+   进而有
+
+   .. math::
+
+      f(x_0) = f(a), \quad \text{a.e.} ~ x_0 \in E,
+
+   即 :math:`f(x)` 几乎处处为常数.
