@@ -393,3 +393,124 @@
       f(x_0) = f(a), \quad \text{a.e.} ~ x_0 \in E,
 
    即 :math:`f(x)` 几乎处处为常数.
+
+   .. note::
+
+      此解答由数学221的邵军奥同学提供.
+
+.. _ex-5-12:
+
+12. 设 :math:`f \in L^p(\mathbb{R})`, :math:`p > 0`. 证明对任何 :math:`p_1, p_2 > 0`, :math:`p_1 < p < p_2`,
+    恒有分解 :math:`f = f_1 + f_2`, 其中 :math:`f_1 \in L^{p_1}(\mathbb{R})`, :math:`f_2 \in L^{p_2}(\mathbb{R})`.
+    并给出这种分解的一个应用.
+
+.. proof:proof::
+
+   令 :math:`A = \mathbb{R}(|f| > 1)`, :math:`B = \mathbb{R}(|f| \leqslant 1)`, 那么 :math:`f = f \chi_A + f \chi_B = f_1 + f_2`.
+   由于 :math:`f \in L^p(\mathbb{R})`, 即 :math:`\lVert f \rVert_p < \infty`, 所以
+
+   .. math::
+
+      \begin{gathered}
+      \int_{\mathbb{R}} |f_1|^{p_1} ~ \mathrm{d} m = \int_A |f|^{p_1} ~ \mathrm{d} m \leqslant \int_A |f|^p ~ \mathrm{d} m
+      \leqslant \int_{\mathbb{R}} |f|^p ~ \mathrm{d} m = \lVert f \rVert_p^p < \infty, \\
+      \int_{\mathbb{R}} |f_2|^{p_2} ~ \mathrm{d} m = \int_B |f|^{p_2} ~ \mathrm{d} m \leqslant \int_B |f|^p ~ \mathrm{d} m
+      \leqslant \int_{\mathbb{R}} |f|^p ~ \mathrm{d} m = \lVert f \rVert_p^p < \infty.
+      \end{gathered}
+
+   由此可知 :math:`f_1 \in L^{p_1}(\mathbb{R})`, :math:`f_2 \in L^{p_2}(\mathbb{R})`.
+
+.. _ex-5-13:
+
+13. 设 :math:`f, g` 为 :math:`E = (0, 1)` 上非负可测函数, 满足 :math:`f(x)g(x) \geqslant x^{-1}`, a.e., 试证
+
+    .. math::
+
+      \int_E f(x) ~ \mathrm{d} m \int_E g(x) ~ \mathrm{d} m \geqslant 4,
+
+    并问式中等号可否成立?
+
+.. proof:proof::
+
+   由于 :math:`f, g` 为 :math:`E = (0, 1)` 上非负可测函数, 满足 :math:`f(x)g(x) \geqslant x^{-1}`, a.e., 故有
+
+   .. math::
+
+      g(x) \geqslant \dfrac{1}{x f(x)}, \quad \text{a.e.} ~ x \in E.
+
+   由 Hölder 不等式知
+
+   .. math::
+
+      \int_E f(x) ~ \mathrm{d} m \int_E g(x) ~ \mathrm{d} m
+      & \geqslant \int_E f(x) ~ \mathrm{d} m \int_E \dfrac{1}{x f(x)} ~ \mathrm{d} m \\
+      & = \left( \left( \int_E \left( (f(x))^{1/2} \right)^2 ~ \mathrm{d} m \right)^{1/2}
+                 \left( \int_E \left( \left(\dfrac{1}{x f(x)}\right)^{1/2} \right)^2 ~ \mathrm{d} m \right)^{1/2} \right)^2 \\
+      & \geqslant \left( \int_E (f(x))^{1/2} \cdot \left(\dfrac{1}{x f(x)}\right)^{1/2} ~ \mathrm{d} m \right)^2 \\
+      & = \left( \int_E x^{-1/2} ~ \mathrm{d} m \right)^2 = \left( 2 x^{1/2} \bigg|_0^1 \right)^2 \\
+      & = 4.
+
+   上式中等号成立当且仅当 :math:`f(x) = g(x) = x^{-1/2}`, a.e. :math:`x \in E`.
+
+.. _ex-5-15:
+
+15. 设 :math:`p, q, r` 为满足 :math:`1/p + 1/q = 1 + 1/r` 的三个正数, 证明对任何可测函数 :math:`f, g, h` 有
+
+    .. math::
+
+      \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
+
+.. proof:proof::
+
+   令 :math:`\displaystyle s = \dfrac{pq}{p + q}`, 那么有 :math:`1/s + 1/r = 1/p + 1/ q + 1/r = 1`. 由 Hölder 不等式知
+
+   .. math::
+      :label: ex-5-15-eq-1
+
+      \int_E |fgh| ~ \mathrm{d} m
+      \leqslant \lVert fg \rVert_s \lVert h \rVert_r = \left( \int_E |fg|^s ~ \mathrm{d} m \right)^{1/s} \lVert h \rVert_r.
+
+   又由 :math:`\displaystyle \dfrac{1}{p/s} + \dfrac{1}{q/s} = 1`, 由 Hölder 不等式知
+
+   .. math::
+      :label: ex-5-15-eq-2
+
+      \int_E |fg|^s ~ \mathrm{d} m \leqslant
+      \left( \int_E \left(|f|^s\right)^{p/s} ~ \mathrm{d} m \right)^{s/p} \left( \int_E \left(|g|^s\right)^{q/s} ~ \mathrm{d} m \right)^{s/q}
+      = \lVert f \rVert_p^s \lVert g \rVert_q^s.
+
+   将 :eq:`ex-5-15-eq-2` 代入 :eq:`ex-5-15-eq-1` 即得
+
+   .. math::
+
+      \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p^s \lVert g \rVert_q^s \lVert h \rVert_r
+      = \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
+
+.. _ex-5-16:
+
+16. 设 :math:`f \in L^p(E)`, :math:`e` 为 :math:`E` 的可测子集, 证明
+
+    .. math::
+
+      \left( \int_E |f|^p ~ \mathrm{d} m \right)^{1/p} \leqslant
+      \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} + \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p}.
+
+.. proof:proof::
+
+   注意到
+
+   .. math::
+
+      \begin{gathered}
+      \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} = \left( \int_E |f|^p \chi_e ~ \mathrm{d} m \right)^{1/p} = \lVert f \chi_e \rVert_p, \\
+      \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p} = \left( \int_E |f|^p (1 - \chi_e) ~ \mathrm{d} m \right)^{1/p} = \lVert f (1 - \chi_e) \rVert_p, \\
+      f = f \chi_e + f (1 - \chi_e),
+      \end{gathered}
+
+   于是由 Minkowski 不等式知
+
+   .. math::
+
+      \left( \int_E |f|^p ~ \mathrm{d} m \right)^{1/p} & = \lVert f \rVert_p \\
+      & \leqslant \lVert f \chi_e \rVert_p + \lVert f (1 - \chi_e) \rVert_p \\
+      & = \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} + \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p}.
