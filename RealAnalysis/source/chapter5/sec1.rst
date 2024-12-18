@@ -326,8 +326,11 @@
 
       \lvert F(x + h) - F(x) \rvert < \varepsilon^{1/p} \cdot |h|^{1 - 1/p},
 
-   即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`. 从 :eq:`ex-5-10-eq-2` 可可以看出,
-   我们实际证明了一个更强的结论, 即 :math:`F(x + h) - F(x) = o(h^{1 - 1/p})`.
+   即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`.
+
+   .. note::
+
+      从 :eq:`ex-5-10-eq-2` 式可以看出, 我们实际证明了一个更强的结论, 即 :math:`F(x + h) - F(x) = o(h^{1 - 1/p})`.
 
 .. _ex-5-11:
 
