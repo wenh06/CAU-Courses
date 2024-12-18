@@ -3,8 +3,8 @@
 
 .. _ex-5-39:
 
-39. 设 :math:`f, f_n \in L^1(\mathbb{R}), n \in \mathbb{N},` 且 :math:`f_n \xrightarrow{\text{强}} f` (在 :math:`L^1(\mathbb{R})` 中),
-    证明在 :math:`\mathbb{R}` 上一致地有 :math:`\displaystyle \lim_{n \to \infty} \hat{f}_n(t) = \hat{f}(t).`
+39. 设 :math:`f, f_n \in L^1(\mathbb{R}), n \in \mathbb{N}`, 且 :math:`f_n \xrightarrow{\text{强}} f` (在 :math:`L^1(\mathbb{R})` 中),
+    证明在 :math:`\mathbb{R}` 上一致地有 :math:`\displaystyle \lim_{n \to \infty} \hat{f}_n(t) = \hat{f}(t)`.
     问在 :math:`L^2(\mathbb{R})` 中相应的命题是否成立?
 
 .. proof:proof::

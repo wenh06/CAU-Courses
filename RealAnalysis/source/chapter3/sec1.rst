@@ -32,7 +32,7 @@
    :math:`E(f > r)` 都是可测集, 于是 :math:`f` 是可测函数. 反过来显然.
 
    集 :math:`E(f = r)` 恒可测, 不能推出 :math:`f` 是可测函数. 反例如下: 设 :math:`E = [0, 1]`,
-   集合 :math:`A \subset E` 是不可测集, 函数 :math:`f(x) = \chi_A(x) + \alpha`, 其中 :math:`\alpha` 任一无理数,
+   集合 :math:`A \subset E` 是不可测集, 函数 :math:`f(x) = \chi_A(x) + \alpha`, 其中 :math:`\alpha` 为某个无理数,
    那么任取 :math:`r \in \mathbb{Q}`, 有 :math:`E(f = r) = \emptyset`, 是可测集, 但 :math:`f` 不是可测函数.
 
 .. _ex-3-4:
