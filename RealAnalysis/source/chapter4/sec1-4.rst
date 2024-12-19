@@ -190,6 +190,17 @@
    由于 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`, 所以 :math:`\displaystyle m \left( \bigcap_{n = 1}^\infty E_n \right) = 0`,
    那么 :math:`f(x) = 0` a.e. :math:`x \in E`.
 
+   另一种证法:
+
+   令 :math:`\varphi = \operatorname{sgn} f` (约定 :math:`\varphi(x) = 0` 当 :math:`f(x) = \pm \infty`), 那么 :math:`\varphi` 是有界可测函数,
+   且 :math:`\varphi f = \lvert f \rvert`, 于是
+
+   .. math::
+
+      0 = \int_E f \varphi ~ \mathrm{d} m = \int_E \lvert f \rvert ~ \mathrm{d} m,
+
+   由勒贝格积分的唯一性定理知 :math:`f \sim 0`.
+
 .. _ex-4-8:
 
 8. Levi 定理中去掉函数列的非负性假定, 结论是否成立?
@@ -547,6 +558,45 @@
       \lim_{n \to \infty} \dfrac{1}{n} \int_{(a, b)} [nf(x)] ~ \mathrm{d} m = \lim_{n \to \infty} \int_{(a, b)} g_n ~ \mathrm{d} m
       = \int_{(a, b)} \lim_{n \to \infty} g_n ~ \mathrm{d} m
       = \int_{(a, b)} f ~ \mathrm{d} m.
+
+.. _ex-4-17:
+
+17. 设 :math:`f(x) \in L(\mathbb{R})` 且 :math:`\displaystyle \int_{-\infty}^{\infty} f(x) ~ \mathrm{d} x \neq 0`,
+    :math:`a` 是一确定的实数, 令
+
+    .. math::
+
+         F(x) = \dfrac{1}{2x} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t, \quad x \in \mathbb{R}.
+
+    试证 :math:`F(x) \not\in L(\mathbb{R})`.
+
+.. proof:proof::
+
+   由于
+
+   .. math::
+
+      \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t = \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t,
+
+   所以由控制收敛定理有
+
+   .. math::
+
+      \lim_{x \to \infty} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t
+      & = \lim_{x \to \infty} \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
+      & = \int_{-\infty}^{\infty} \lim_{x \to \infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
+      & = \int_{-\infty}^{\infty} f(t) ~ \mathrm{d} t.
+
+   记 :math:`\displaystyle A = \int_{-\infty}^{\infty} f(t) ~ \mathrm{d} t`, 不妨设 :math:`A > 0`, 否则考虑 :math:`-F` 即可.
+   那么对任意 :math:`A/2 > \varepsilon > 0`, 存在 :math:`M > 0`, 使得对任意 :math:`x > M` 有
+   :math:`\displaystyle \left\lvert \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t - A \right\rvert < \varepsilon`, 即
+
+   .. math::
+
+      A - \varepsilon < \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t < A + \varepsilon.
+
+   那么在 :math:`(M, +\infty)` 上有 :math:`\displaystyle F(x) > \dfrac{A}{4x}`, 后者在 :math:`(M, +\infty)` 不是勒贝格可积的,
+   从而知 :math:`F(x) \not\in L(\mathbb{R})`.
 
 .. _ex-4-19:
 
