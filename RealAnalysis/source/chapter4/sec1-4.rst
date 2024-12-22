@@ -598,6 +598,91 @@
    那么在 :math:`(M, +\infty)` 上有 :math:`\displaystyle F(x) > \dfrac{A}{4x}`, 后者在 :math:`(M, +\infty)` 不是勒贝格可积的,
    从而知 :math:`F(x) \not\in L(\mathbb{R})`.
 
+.. _ex-4-18:
+
+18. 设 :math:`f(x)` 是以 :math:`2\pi` 为周期的实有限可测函数, 若 :math:`f(x)` 又有周期 :math:`1`,
+    试证 :math:`f(x)` 几乎处处为常数. 这样的函数是否必为常数?
+
+.. proof:proof::
+
+   记 :math:`\omega_1 = 2\pi`, :math:`\omega_2 = 1`, :math:`\displaystyle \omega = \dfrac{\omega_1}{\omega_2}` 以及
+
+   .. math::
+
+      & \Lambda = \mathbb{Z} \omega_1 + \mathbb{Z} \omega_2 = \omega_2 \left( \mathbb{Z} + \mathbb{Z} \omega \right)
+      = \{ k_1 \omega_1 + k_2 \omega_2 ~ : ~ k_1, k_2 \in \mathbb{Z} \}. \\
+      & \Lambda_{\omega} = \mathbb{Z} + \mathbb{Z} \omega.
+
+   由于 :math:`\omega` 是无理数, 所以 :math:`\Lambda_{\omega} = \mathbb{Z} + \mathbb{Z} \omega` 在 :math:`\mathbb{R}` 中稠密,
+   从而有 :math:`\Lambda = \omega_2 \Lambda_{\omega}` 在 :math:`\mathbb{R}` 中稠密.
+
+   .. note::
+
+      :math:`\mathbb{Z} + \mathbb{Z} \omega` 在 :math:`\mathbb{R}` 中稠密的证明如下.
+
+      用反证法, 假设 :math:`\mathbb{Z} + \mathbb{Z} \omega` 在 :math:`\mathbb{R}` 中不稠密, 那么存在 :math:`[0, 1]` 中的某个开区间
+      :math:`(a, b)` 使得 :math:`\mathbb{Z} + \mathbb{Z} \omega` 在 :math:`(a, b)` 中不相交. 取 :math:`N \in \mathbb{N}` 使得
+      :math:`1/N < b - a`, 并考虑
+
+      .. math::
+
+         \{ \{ k \omega \} ~ : ~ k \in \mathbb{Z} \},
+
+      其中 :math:`\{ x \}` 表示 :math:`x` 的小数部分. 由于 :math:`\omega` 是无理数, 所以这个集合不是有限集, 从而可由抽屉原理知,
+      至少存在两个数 :math:`k_1, k_2`, 使得 :math:`\{ k_1 \omega \}` 与 :math:`\{ k_2 \omega \}` 落在同一个区间 :math:`(n/N, (n + 1)/N)` 中,
+      其中 :math:`0 \leqslant n < N`. 于是有
+
+      .. math::
+
+         \lvert \{ k_1 \omega - k_2 \omega \} \rvert < \dfrac{1}{N} < b - a,
+
+      于是 :math:`\mathbb{Z} \cdot \{(k_1 - k_2) \omega\} \subset \mathbb{Z} + \mathbb{Z} \omega` 与 :math:`(a, b)` 交集非空, 矛盾.
+
+   任取 :math:`a \in \mathbb{R}`, 记 :math:`E_a = E(f > a) = \{ x \in \mathbb{R} ~ : ~ f(x) > a \}`, 那么可以证明,
+   对于 :math:`E_a`, 或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0`.
+
+   .. note::
+
+      对于 :math:`E_a`, 或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0` 的证明如下.
+
+      由于 :math:`f` 以 :math:`1` 为周期, 所以只要考察 :math:`E_a \cap [0, 1]` 即可. 以下记 :math:`E_{a,1} = E_a \cap [0, 1]`.
+
+      若 :math:`m E_{a,1} > 0`, 那么 :math:`E_{a,1}` 在 :math:`[0, 1]` 中有正测度, 从而对任意 :math:`0 < \varepsilon < 1` 存在开区间
+      :math:`I \subset [0, 1]` 使得 :math:`m (E_{a,1} \cap I) > \varepsilon m I`. 那么对任意 :math:`\lambda \in \Lambda` 有
+
+      .. math::
+
+         m (E_{a,1} \cap (I + \lambda)) = m (E_{a,1} \cap I) > \varepsilon m I.
+
+      由于 :math:`\Lambda` 在 :math:`[0, 1]` 中稠密, 由上式可以推出 :math:`m E_{a,1} \geqslant \varepsilon m ([0, 1]) = \varepsilon`.
+      进一步令 :math:`\varepsilon \to 1-`, 可得 :math:`m E_{a,1} = 1`, 这表明 :math:`m E_{a,1}^c = 0`.
+
+   令
+
+   .. math::
+
+      d = \inf \{ a ~ : ~ m E_a = 0 \}.
+
+   由于 :math:`f` 为有限可测函数, 所以 :math:`\displaystyle \mathbb{R} = \bigcup_{n \in \mathbb{Z}} E_n`,
+   故存在 :math:`n` 使得 :math:`m E_n > 0`, 从而 :math:`d` 是有限的. 取递减数列 :math:`a_n \to d`, 那么 :math:`\{ E_{a_n} \}` 构成渐张可测集列,
+   且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{a_n} = E_d = E(f > d)`. 于是
+
+   .. math::
+      :label: ex-4-18-eq-1
+
+      m E \left( f > d \right) = m E_d = \lim_{n \to \infty} m E_{a_n} = \lim_{n \to \infty} 0 = 0.
+
+   另一方面, 取递增数列 :math:`b_n \to d`, 那么 :math:`\{ E_{b_n}^c \}` 也构成渐张可测集列, 且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{b_n}^c = E(f < d)`. 于是
+
+   .. math::
+      :label: ex-4-18-eq-2
+
+      m E \left( f < d \right) = \lim_{n \to \infty} m E_{b_n}^c = \lim_{n \to \infty} 0 = 0.
+
+   由 :eq:`ex-4-18-eq-1` 与 :eq:`ex-4-18-eq-2` 知 :math:`f` 几乎处处为常数 :math:`d`.
+
+   这样的函数不必为常数, 例如 :math:`f(x) = \chi_{\Lambda} (x)` 为 :math:`\Lambda` 的特征函数.
+
 .. _ex-4-19:
 
 19. 设对每个 :math:`n \in \mathbb{N}`, :math:`f_n` 在 :math:`E` 上可积, 序列 :math:`\{f_n\}` 几乎处处收敛于 :math:`f, n \to \infty`,
