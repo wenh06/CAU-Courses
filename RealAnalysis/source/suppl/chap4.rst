@@ -212,3 +212,45 @@
 
          \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y
          = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
+
+.. _improper-integral-and-lebesgue-integral:
+
+4. 广义积分 (反常积分) 与勒贝格积分的关系
+
+   广义积分与勒贝格积分的都是黎曼积分的推广, 二者之间的既有联系又有区别, 不是简单的包含关系.
+
+   对于定义在 :math:`[a, c)` 上的非负可测函数 :math:`f(x)`, 假设 :math:`c` 是 :math:`f(x)` 的奇点, 或者 :math:`c = \infty`,
+   那么 :math:`f(x)` 的广义积分定义为 (若收敛)
+
+   .. math::
+
+      \int_a^c f(x) ~ \mathrm{d}x = \lim_{b \to c-} (R) \int_a^b f(x) ~ \mathrm{d}x.
+
+   而 :math:`\{ f \cdot \chi_{[a, b]} \}_{b \in (a, c)}` 构成一个非负渐升可测函数族, 于是有
+
+   .. math::
+
+      \int_{[a, c)} f ~ \mathrm{d} m
+      & = \int_{[a, c)} \lim_{b \to c^-} f \cdot \chi_{[a, b]} ~ \mathrm{d} m = \lim_{b \to c^-} \int_{[a, b]} f ~ \mathrm{d} m \\
+      & = \lim_{b \to c-} (R) \int_a^b f(x) ~ \mathrm{d} x = \int_a^c f(x) ~ \mathrm{d}x.
+
+   也就是说, 对于定义在 :math:`[a, c)` 上的非负可测函数, 当广义积分收敛时, 它也是勒贝格可积的, 且两者的值相等.
+
+   若去掉非负的条件, 对于定义在 :math:`[a, c)` 上的一般可测函数 :math:`f(x)`, 就没有这样的结论了. 例如, 考虑
+
+   .. math::
+
+      E_n = [n, n + 1), \quad f = \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} \chi_{E_n},
+
+   那么反常积分
+
+   .. math::
+
+      \int_0^{\infty} f(x) ~ \mathrm{d}x = \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} = \ln (1 + x) \bigg|_{x=1} = \ln 2.
+
+   但是 :math:`f` 不是勒贝格可积的, 因为
+
+   .. math::
+
+      \int_{[0, \infty)} |f| ~ \mathrm{d} m = \int_{[0, \infty)} \sum_{n=1}^{\infty} \dfrac{1}{n} \chi_{E_n} ~ \mathrm{d} m
+      = \sum_{n=1}^{\infty} \dfrac{1}{n} \int_{E_n} ~ \mathrm{d} m = \sum_{n=1}^{\infty} \dfrac{1}{n} = \infty.
