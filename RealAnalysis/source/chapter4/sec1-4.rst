@@ -140,11 +140,13 @@
 
 .. proof:proof::
 
-   由于可积函数 :math:`f, g` 满足 :math:`f < g`, 所以 :math:`\lvert g - f \rvert = g - f`. 假设 :math:`\displaystyle \int_E f ~ \mathrm{d} m = \int_E g ~ \mathrm{d} m`, 那么
+   由于可积函数 :math:`f, g` 满足 :math:`f < g`, 所以 :math:`\lvert g - f \rvert = g - f`.
+   假设 :math:`\displaystyle \int_E f ~ \mathrm{d} m = \int_E g ~ \mathrm{d} m`, 那么
 
    .. math::
 
-      \int_E \lvert g - f \rvert ~ \mathrm{d} m = \int_E (g - f) ~ \mathrm{d} m = \int_E g ~ \mathrm{d} m - \int_E f ~ \mathrm{d} m = 0.
+      \int_E \lvert g - f \rvert ~ \mathrm{d} m = \int_E (g - f) ~ \mathrm{d} m
+      = \int_E g ~ \mathrm{d} m - \int_E f ~ \mathrm{d} m = 0.
 
    由唯一性定理可知 :math:`g - f \sim 0`, 也即 :math:`g(x) = f(x)` a.e. :math:`x \in E`. 这意味着
 
@@ -670,7 +672,8 @@
 
          \varphi(x) = m (E \cap [\alpha, x]), \quad \alpha \in \mathbb{R},
 
-      那么容易看出 :math:`\varphi(x)` 是绝对连续的单调增函数, 于是 :math:`\varphi(x)` 几乎处处可导, 并且有牛顿-莱布尼茨公式成立, 即
+      那么容易看出 :math:`\displaystyle \varphi(x) = \int_{[\alpha, x]} \chi_E ~ \mathrm{d} m` 是绝对连续的单调增函数,
+      于是 :math:`\varphi(x)` 几乎处处可导, 并且有牛顿-莱布尼茨公式成立, 即
 
       .. math::
 
@@ -700,7 +703,8 @@
 
       .. math::
 
-         \dfrac{\varphi(x + p_n) - \varphi(x) + \varphi(x) - \varphi(x - p_n)}{2p_n} = \dfrac{\varphi(y + p_n) - \varphi(y) + \varphi(y) - \varphi(y - p_n)}{2p_n}.
+         \dfrac{\varphi(x + p_n) - \varphi(x) + \varphi(x) - \varphi(x - p_n)}{2p_n}
+         = \dfrac{\varphi(y + p_n) - \varphi(y) + \varphi(y) - \varphi(y - p_n)}{2p_n}.
 
       令 :math:`n \to \infty`, 即有 :math:`\varphi'(x)` 几乎处处为常数 (注意, 我们已经证明了 :math:`\varphi'(x)` 几乎处处存在). 记这个常数为 :math:`c`,
       即有 :math:`\varphi'(x) \sim c`. 于是对任意区间 :math:`[a, b]` 有
@@ -744,7 +748,8 @@
 
       m E \left( f > d \right) = m E_d = \lim_{n \to \infty} m E_{a_n} = \lim_{n \to \infty} 0 = 0.
 
-   另一方面, 取递增数列 :math:`b_n \to d`, 那么 :math:`\{ E_{b_n}^c \}` 也构成渐张可测集列, 且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{b_n}^c = E(f < d)`. 于是
+   另一方面, 取递增数列 :math:`b_n \to d`, 那么 :math:`\{ E_{b_n}^c \}` 也构成渐张可测集列,
+   且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{b_n}^c = E(f < d)`. 于是
 
    .. math::
       :label: ex-4-18-eq-3
@@ -775,8 +780,10 @@
 
    .. math::
 
-      K \geqslant \varliminf_{n \to \infty} \int_E \lvert f_n \rvert ~ \mathrm{d} m \geqslant \int_E \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m
-      & = \int_{E_0} \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m + \int_{E \setminus E_0} \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m \\
+      K \geqslant \varliminf_{n \to \infty} \int_E \lvert f_n \rvert ~ \mathrm{d} m
+        \geqslant \int_E \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m
+      & = \int_{E_0} \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m
+          + \int_{E \setminus E_0} \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m \\
       & = 0 + \int_{E \setminus E_0} \lvert f \rvert ~ \mathrm{d} m \\
       & = \int_{E_0} \lvert f \rvert ~ \mathrm{d} m + \int_{E \setminus E_0} \lvert f \rvert ~ \mathrm{d} m \\
       & = \int_E \lvert f \rvert ~ \mathrm{d} m.
@@ -881,7 +888,8 @@
 
    .. math::
 
-      \lvert f(x + h) - f(x) \rvert \leqslant \lvert f(x + h) - \varphi(x + h) \rvert + \lvert \varphi(x + h) - \varphi(x) \rvert + \lvert \varphi(x) - f(x) \rvert.
+      \lvert f(x + h) - f(x) \rvert \leqslant
+      \lvert f(x + h) - \varphi(x + h) \rvert + \lvert \varphi(x + h) - \varphi(x) \rvert + \lvert \varphi(x) - f(x) \rvert.
 
    对于简单函数 :math:`\varphi`, 令 :math:`M = \displaystyle \sup_{x \in E_{k+1}} \lvert \varphi(x) \rvert = \max_{1 \leqslant i \leqslant n} \lvert c_i \rvert`.
    对所有 :math:`1 \leqslant i \leqslant n`, 可以选取开集 :math:`G_i \supset e_i` 使得 :math:`m G_i < m e_i + \dfrac{\varepsilon}{72nM}`.
@@ -937,7 +945,8 @@
 
       \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
       & = \left( \int_{E_k} + \int_{\mathbb{R} \setminus E_k} \right) \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m \\
-      & \leqslant \int_{E_k} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m + \int_{\mathbb{R} \setminus E_k} \lvert f(x + h) \rvert + \lvert f(x) \rvert ~ \mathrm{d} m \\
+      & \leqslant \int_{E_k} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
+        + \int_{\mathbb{R} \setminus E_k} \lvert f(x + h) \rvert + \lvert f(x) \rvert ~ \mathrm{d} m \\
       & \leqslant \dfrac{\varepsilon}{3} + \int_{\mathbb{R} \setminus E_{k-1}} 2 \lvert f(x) \rvert ~ \mathrm{d} m \\
       & \leqslant \dfrac{\varepsilon}{3} + 2 \cdot \dfrac{\varepsilon}{3} = \varepsilon.
 
@@ -972,9 +981,11 @@
       .. math::
 
          \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
-         & \leqslant \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
+         & \leqslant \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m
+           + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
          & < \dfrac{\varepsilon}{2} + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
-         & \leqslant \dfrac{\varepsilon}{2} + \int_{\mathbb{R}} \lvert f_2(x + h) \rvert  ~ \mathrm{d} m + \int_{\mathbb{R}} \lvert f_2(x) \rvert ~ \mathrm{d} m \\
+         & \leqslant \dfrac{\varepsilon}{2} + \int_{\mathbb{R}} \lvert f_2(x + h) \rvert  ~ \mathrm{d} m
+           + \int_{\mathbb{R}} \lvert f_2(x) \rvert ~ \mathrm{d} m \\
          & < \dfrac{\varepsilon}{2} + 2 \cdot \dfrac{\varepsilon}{4} = \varepsilon.
 
       本质上, 我们原来的证明是在具体地构造分解 :math:`f = f_1 + f_2`.
@@ -1034,14 +1045,16 @@
 
    .. math::
 
-      \int_{(a, b)} \chi_{(c, d)} (x) e^{itx} ~ \mathrm{d} x = \int_c^d e^{itx} ~ \mathrm{d} x = \dfrac{e^{itd} - e^{itc}}{it} \to 0, \quad t \to \infty.
+      \int_{(a, b)} \chi_{(c, d)} (x) e^{itx} ~ \mathrm{d} x
+      = \int_c^d e^{itx} ~ \mathrm{d} x = \dfrac{e^{itd} - e^{itc}}{it} \to 0, \quad t \to \infty.
 
    于是, 利用积分关于被积函数的线性性, 对于任意简单函数 :math:`\displaystyle \varphi = \sum_{i=1}^n r_i \chi_{(c_i, d_i)}`, 有
 
    .. math::
       :label: ex-4-24-eq-1
 
-      \lim_{t \to \infty} \int_{(a, b)} \varphi(x) e^{itx} ~ \mathrm{d} x = \lim_{t \to \infty} \sum_{i=1}^n r_i \int_{(c_i, d_i)} e^{itx} ~ \mathrm{d} x
+      \lim_{t \to \infty} \int_{(a, b)} \varphi(x) e^{itx} ~ \mathrm{d} x
+      = \lim_{t \to \infty} \sum_{i=1}^n r_i \int_{(c_i, d_i)} e^{itx} ~ \mathrm{d} x
       = \sum_{i=1}^n r_i \lim_{t \to \infty} \int_{(c_i, d_i)} e^{itx} ~ \mathrm{d} x = 0.
 
    对于非负可积函数 :math:`f(x)`, 存在渐升的简单函数列 :math:`\{ \varphi_n \}` 使得 :math:`\varphi_n \uparrow f`,
@@ -1063,10 +1076,12 @@
    .. math::
 
       \left\lvert \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x \right\rvert
-      & = \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x + \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
+      & = \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x
+        + \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
       & \leqslant \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x \right\rvert
         + \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
-      & \leqslant \int_{(a, b)} \lvert f(x) - \varphi_n(x) \rvert ~ \mathrm{d} x + \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
+      & \leqslant \int_{(a, b)} \lvert f(x) - \varphi_n(x) \rvert ~ \mathrm{d} x
+        + \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
       & < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon.
 
    上式即表明 :math:`\displaystyle \lim_{t \to \infty} \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x = 0`.
@@ -1077,7 +1092,8 @@
 
     .. math::
 
-      \int_{\mathbb{R}} \lvert f \rvert^p ~ \mathrm{d} m = p \int_0^\infty \alpha^{p-1} \mu (\alpha) ~ \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
+      \int_{\mathbb{R}} \lvert f \rvert^p ~ \mathrm{d} m
+      = p \int_0^\infty \alpha^{p-1} \mu (\alpha) ~ \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
 
 .. proof:proof::
 
@@ -1085,7 +1101,8 @@
 
    .. math::
 
-      \lvert f(x) \rvert^p & = \int_0^{\lvert f(x) \rvert^p} ~ \mathrm{d} t = \int_0^{\infty} \chi_{[0, \lvert f(x) \rvert^p]} (t) ~ \mathrm{d} t \\
+      \lvert f(x) \rvert^p & = \int_0^{\lvert f(x) \rvert^p} ~ \mathrm{d} t
+      = \int_0^{\infty} \chi_{[0, \lvert f(x) \rvert^p]} (t) ~ \mathrm{d} t \\
       & = \int_0^\infty \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) ~ \mathrm{d} t.
 
    对上式两端在 :math:`\mathbb{R}` 上积分, 由 Fubini 定理可得
@@ -1116,7 +1133,8 @@
 
 .. _ex-4-26:
 
-26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛.
+26. 设 :math:`m E < \infty`, 证明函数 :math:`f` 在 :math:`E` 上可积的充分必要条件是级数
+    :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛.
     当 :math:`m E = \infty` 时, 结论是否成立?
 
 .. proof:proof::
@@ -1128,8 +1146,9 @@
 
    .. math::
 
-      \int_E \lvert f \rvert ~ \mathrm{d} m & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
-      = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
+      \int_E \lvert f \rvert ~ \mathrm{d} m
+      & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
+        = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
       & \leqslant \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} n ~ \mathrm{d} m \\
       & = \sum_{n=1}^\infty n \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = \sum_{n=1}^\infty m E (n - 1 \leqslant \lvert f \rvert < n) + \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
@@ -1143,8 +1162,9 @@
 
    .. math::
 
-      \infty > \int_E \lvert f \rvert ~ \mathrm{d} m & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
-      = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
+      \infty > \int_E \lvert f \rvert ~ \mathrm{d} m
+      & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
+        = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
       & \geqslant \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} (n - 1) ~ \mathrm{d} m \\
       & = \sum_{n=1}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\

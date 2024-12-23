@@ -55,9 +55,10 @@
 
    .. math::
 
-         \int_X \nu(E_x) ~ \mathrm{d} \mu = \int_X \left( \int_Y \chi_{E_x} ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
-         = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu) = int_Y \left( \int_X \chi_{E^y} ~ \mathrm{d} \mu \right) ~ \mathrm{d} \nu
-         = \int_Y \mu (E^y) ~ \mathrm{d} \nu.
+         \int_X \nu(E_x) ~ \mathrm{d} \mu
+         & = \int_X \left( \int_Y \chi_{E_x} ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
+           = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu) \\
+         & = \int_Y \left( \int_X \chi_{E^y} ~ \mathrm{d} \mu \right) ~ \mathrm{d} \nu = \int_Y \mu (E^y) ~ \mathrm{d} \nu.
 
    由于对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可列集, 而可列集都是零测集,
    所以 :math:`\nu(E_x) = 0`, :math:`\mu(E^y) = m(X) = 1`, 从而有
