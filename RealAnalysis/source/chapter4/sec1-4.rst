@@ -657,6 +657,78 @@
       由于 :math:`\Lambda` 在 :math:`[0, 1]` 中稠密, 由上式可以推出 :math:`m E_{a,1} \geqslant \varepsilon m ([0, 1]) = \varepsilon`.
       进一步令 :math:`\varepsilon \to 1-`, 可得 :math:`m E_{a,1} = 1`, 这表明 :math:`m E_{a,1}^c = 0`.
 
+   .. note::
+
+      对于或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0` 这一论断, 有更一般的结论: 对于可测集 :math:`E \subset \mathbb{R}`,
+      若 :math:`E` 有任意小的周期, 即存在正数列 :math:`p_n`, 使得 :math:`\displaystyle \lim_{n \to \infty} p_n = 0` 且 :math:`E = E + p_n`,
+      那么或者有 :math:`m E = 0` 或者有 :math:`m E^c = 0`. 这个结论的证明如下.
+
+      考察函数
+
+      .. math::
+         :label: ex-4-18-eq-1
+
+         \varphi(x) = m (E \cap [\alpha, x]), \quad \alpha \in \mathbb{R},
+
+      那么容易看出 :math:`\varphi(x)` 是绝对连续的单调增函数, 于是 :math:`\varphi(x)` 几乎处处可导, 并且有牛顿-莱布尼茨公式成立, 即
+
+      .. math::
+
+         m (E \cap [a, b]) = \varphi(b) - \varphi(a) = \int_{[a, b]} \varphi'(x) ~ \mathrm{d} m.
+
+      另一方面, 对任意满足 :math:`\alpha + p_n < x < y` 的 :math:`x, y`, 有
+
+      .. math::
+
+         \varphi(x + p_n) - \varphi(x - p_n) & = m (E \cap [\alpha, x + p_n]) - m (E \cap [\alpha, x - p_n]) \\
+         & = m (E \cap [\alpha, x + p_n] - p_n) - m (E \cap [\alpha, x - p_n] + p_n)\\
+         & = m (E \cap [\alpha - p_n, \alpha + p_n]).
+
+      类似地, 有
+
+      .. math::
+
+         \varphi(y + p_n) - \varphi(y - p_n) = m (E \cap [\alpha - p_n, \alpha + p_n]),
+
+      从而
+
+      .. math::
+
+         \varphi(x + p_n) - \varphi(x - p_n) = \varphi(y + p_n) - \varphi(y - p_n),
+
+      等价地
+
+      .. math::
+
+         \dfrac{\varphi(x + p_n) - \varphi(x) + \varphi(x) - \varphi(x - p_n)}{2p_n} = \dfrac{\varphi(y + p_n) - \varphi(y) + \varphi(y) - \varphi(y - p_n)}{2p_n}.
+
+      令 :math:`n \to \infty`, 即有 :math:`\varphi'(x)` 几乎处处为常数 (注意, 我们已经证明了 :math:`\varphi'(x)` 几乎处处存在). 记这个常数为 :math:`c`,
+      即有 :math:`\varphi'(x) \sim c`. 于是对任意区间 :math:`[a, b]` 有
+
+      .. math::
+
+         m (E \cap [a, b]) = \int_{[a, b]} \varphi'(x) ~ \mathrm{d} m = c (b - a).
+
+      假如 :math:`m E > 0`, 那么对任意 :math:`0 < \varepsilon < 1`, 存在开区间 :math:`I = (a_0, b_0)` 使得 :math:`m (E \cap I) > \varepsilon m I`,
+      在 :eq:`ex-4-18-eq-1` 中取 :math:`\alpha < a_0`, 即有
+
+      .. math::
+
+         m (E \cap [a_0, b_0]) = \varphi(b_0) - \varphi(a_0) = \int_{[a_0, b_0]} \varphi'(x) ~ \mathrm{d} m = c (b_0 - a_0) > \varepsilon m I,
+
+      即有 :math:`c > \varepsilon`. 令 :math:`\varepsilon \to 1-`, 即有 :math:`c \geqslant 1`. 另一方面显然有 :math:`c \leqslant 1`, 从而 :math:`c = 1`.
+      由此可推出, 对任意 :math:`n \in \mathbb{N}`, 有
+
+      .. math::
+
+         m (E^c \cap (-n ,n)) = 2n - m (E \cap (-n, n)) = 2n - 2n = 0.
+
+      :math:`\displaystyle \left\{ E^c \cap (-n, n) \right\}_{n \in \mathbb{N}}` 构成了渐张可测集列, 从而有
+
+      .. math::
+
+         m E^c = \lim_{n \to \infty} m (E^c \cap (-n, n)) = \lim_{n \to \infty} 0 = 0.
+
    令
 
    .. math::
@@ -668,18 +740,18 @@
    且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{a_n} = E_d = E(f > d)`. 于是
 
    .. math::
-      :label: ex-4-18-eq-1
+      :label: ex-4-18-eq-2
 
       m E \left( f > d \right) = m E_d = \lim_{n \to \infty} m E_{a_n} = \lim_{n \to \infty} 0 = 0.
 
    另一方面, 取递增数列 :math:`b_n \to d`, 那么 :math:`\{ E_{b_n}^c \}` 也构成渐张可测集列, 且 :math:`\displaystyle \bigcup_{n = 1}^\infty E_{b_n}^c = E(f < d)`. 于是
 
    .. math::
-      :label: ex-4-18-eq-2
+      :label: ex-4-18-eq-3
 
       m E \left( f < d \right) = \lim_{n \to \infty} m E_{b_n}^c = \lim_{n \to \infty} 0 = 0.
 
-   由 :eq:`ex-4-18-eq-1` 与 :eq:`ex-4-18-eq-2` 知 :math:`f` 几乎处处为常数 :math:`d`.
+   由 :eq:`ex-4-18-eq-2` 与 :eq:`ex-4-18-eq-3` 知 :math:`f` 几乎处处为常数 :math:`d`.
 
    这样的函数不必为常数, 例如 :math:`f(x) = \chi_{\Lambda} (x)` 为 :math:`\Lambda` 的特征函数.
 
