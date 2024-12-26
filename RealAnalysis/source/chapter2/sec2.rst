@@ -45,7 +45,15 @@
 
 .. proof:solution::
 
-   不合理. 因为闭集的闭包仍然是闭集, 以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例, 对于任何一个包含 :math:`G` 的闭集 :math:`F` 来说,
+   不合理.
+
+   假设我们定义有界集 :math:`E` 的外测度为包含 :math:`E` 的闭集的测度的下确界, 即
+
+   .. math::
+
+      m^* E = \inf \{ m F ~ : ~ F \supset E, F \text{ 为闭集} \},
+
+   因为闭集的闭包仍然是闭集, 以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例, 对于任何一个包含 :math:`G` 的闭集 :math:`F` 来说,
    都有 :math:`\overline{G} \subset \overline{F} = F`, 所以 :math:`1 = m \overline{G} \leqslant m F`, 取下确界, 得到 :math:`1 \leqslant m^* G`.
    而对每一个开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})` 来说, 包含它的最小闭集为
    :math:`\overline{G_n} = [a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}}]`,
@@ -60,8 +68,8 @@
 
    .. note::
 
-      事实上, 对于 :ref:`上题 <ex-2-4>` 中的 :math:`G`, 由于 :math:`\overline{G}` 是包含 :math:`G` 的闭集, 所以又有 :math:`m^* G \leqslant m \overline{G} = 1`,
-      结合我们已经得到的 :math:`1 \leqslant m^* G` 的结论, 可以得到 :math:`m^* G = 1`.
+      事实上, 对于 :ref:`上题 <ex-2-4>` 中的 :math:`G`, 由于 :math:`\overline{G}` 是包含 :math:`G` 的闭集, 所以又有 :math:`m^* G \leqslant m \overline{G} = m [0, 1] = 1`,
+      结合本题假设下我们已经得到的 :math:`1 \leqslant m^* G` 的结论, 可以得到 :math:`m^* G = 1`, 我们具体求得了集合 :math:`G` 的外测度 (虽然不是良定义的).
 
 .. _ex-2-6:
 
