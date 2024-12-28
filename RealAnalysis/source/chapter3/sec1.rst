@@ -128,8 +128,8 @@
 
       x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in \mathbb{R},
 
-   的每个等价类中代表元素的集合. 之前已经证明过, :math:`E` 是不可测集, 且在 :math:`\mathbb{R}` 中稠密,
-   并且 :math:`E` 与每个区间的交集都是不可测集. 令 :math:`f = \chi_E` 为 :math:`\mathbb{R}` 上的特征函数,
+   的每个等价类中代表元素的集合. 之前已经证明过, :math:`E` 是不可测集, 并且可以选取 :math:`E`, 使得它与每个区间的交集都是不可测集
+   (从而在 :math:`\mathbb{R}` 中稠密). 令 :math:`f = \chi_E` 为 :math:`\mathbb{R}` 上的特征函数,
    那么 :math:`f` 在每个区间上的限制都是不可测函数.
 
 .. _ex-3-10:

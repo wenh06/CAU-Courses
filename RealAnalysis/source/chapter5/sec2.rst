@@ -353,7 +353,7 @@
       & = \dfrac{2}{\sqrt{3} k} \arctan \dfrac{2t - 1}{\sqrt{3}} + C \\
       & = \dfrac{2}{\sqrt{3} k} \arctan \dfrac{2 \tan \dfrac{kx}{2} - 1}{\sqrt{3}} + C.
 
-   注意, 由于 :math:`\tan \dfrac{kx}{2}` 的周期性, 实际上在不同的周期内, 常数 :math:`C` 的值是不同的. 在 :math:`f_k(x)` 的每个最小正周期内,
+   注意, 由于 :math:`\tan \dfrac{kx}{2}` 的周期性, 实际上在不同的周期内, 常数 :math:`C` 的值是不同的. 在 :math:`f_k(x)` 的每个最小正周期 :math:`T_k = \dfrac{2\pi}{k}` 内,
    其积分值 :math:`I_{k, 0} = \displaystyle \int_{-\pi/k}^{\pi/k} f_k(x) ~ \mathrm{d} x = \dfrac{2\pi}{\sqrt{3} k}`.
 
    由于 :math:`1/3 \leqslant |f_k| \leqslant 1`, 且 :math:`m E < \infty`, 那么对任意 :math:`\varepsilon > 0`, 可选取开集 :math:`G \supset E` 使得
@@ -368,14 +368,24 @@
 
    设开集 :math:`G` 的结构表示为 :math:`\displaystyle G = \bigcup_{s = 1}^{\infty} (a_s, b_s)`.
 
-   对于一个一般的固定的区间 :math:`(a, b)`, 注意到 :math:`|f_k| \leqslant 1`, 从而有
+   对于一个一般的固定的区间 :math:`(a, b)`, 记 :math:`N_{a, b} = \left[\dfrac{(b-a)k}{2\pi} \right]`, 其中 :math:`[ x ]` 表示 :math:`x` 的整数部分.
+   注意到 :math:`|f_k| \leqslant 1`, 有
 
    .. math::
 
-      \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert
-      \leqslant \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k},
+      \int_{(a, b)} f_k(x) ~ \mathrm{d} x
+      & = \int_{(a, a + N_{a, b}T_k)} f_k(x) ~ \mathrm{d} x + \int_{(a + N_{a, b}T_k, b)} f_k(x) ~ \mathrm{d} x \\
+      & = N_{a, b} \cdot I_{k, 0} + \int_{(a + N_{a, b}T_k, b)} f_k(x) ~ \mathrm{d} x,
 
-   其中 :math:`[ x ]` 表示 :math:`x` 的整数部分, :math:`\{ x \}` 表示 :math:`x` 的小数部分, 从而有
+   从而有
+
+   .. math::
+
+      & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert \\
+      \leqslant & \int_{(a + N_{a, b}T_k, b)} 1 ~ \mathrm{d} x = b - a - N_{a, b}T_k
+      = \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k},
+
+   其中 :math:`\{ x \}` 表示 :math:`x` 的小数部分, 从而有
 
    .. math::
       :label: ex-5-38-eq-2

@@ -86,9 +86,9 @@
 
    (5). :math:`f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto 2^{m-1} (2n - 1)`, 或者
 
-      .. math::
+   .. math::
 
-         f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto \dfrac{(m + n - 2)(m + n - 1)}{2} + m.
+      f: \mathbb{N}^2 \rightarrow \mathbb{N}: \quad (m, n) \mapsto \dfrac{(m + n - 2)(m + n - 1)}{2} + m.
 
 .. _ex-1-8:
 
