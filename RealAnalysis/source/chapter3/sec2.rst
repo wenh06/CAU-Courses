@@ -221,6 +221,11 @@
    那么 :math:`f(x)` 是数列 :math:`\{f_n(x)\}_{n \in \mathbb{N}}` 的一个上界, 从而由单调有界定理, 有 :math:`f_n(x) \to f(x)`.
    综上所述, :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处 (在集合 :math:`E^*` 上) 收敛于 :math:`f`.
 
+   .. note::
+
+      注意, 虽然 Riesz 定理中要求了 :math:`m E < \infty`, 但是在这里, 本题的证明仅使用了 Riesz 定理中, 由依测度收敛推存在几乎处处收敛子列的结论,
+      这部分是不需要 :math:`m E < \infty` 的条件的.
+
 .. _ex-3-19:
 
 19. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 而 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`,
@@ -228,14 +233,48 @@
 
 .. proof:proof::
 
-   由 Riesz 定理, 对 :math:`\{f_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}`,
-   存在其子列 :math:`\{f_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`f_{n_{k_i}} \to f` 几乎处处成立, 记此集合为 :math:`E_1`,
-   有 :math:`m (E \setminus E_1) = 0`. 又由于 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`, 记此集合为 :math:`E_2`,
-   有 :math:`m (E \setminus E_2) = 0`. 于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`.
-   那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_{k_i}}(x) \to f(x)`, 且 :math:`f_{n_{k_i}}(x) = g_{n_{k_i}}(x)`,
-   从而 :math:`g_{n_{k_i}}(x) \to f(x)`. 所以, 对 :math:`\{g_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{g_{n_k}\}_{k \in \mathbb{N}}`,
-   我们找到了它的子列 :math:`\{g_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`g_{n_{k_i}} \to f` 几乎处处成立.
-   由 Riesz 定理, :math:`\{g_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`.
+   依定义, 由于函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 那么对于任意 :math:`\varepsilon > 0`,
+
+   .. math::
+
+      \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0.
+
+   由于 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`, 那么 :math:`E_n := E (f_n \neq g_n)` 是零测集. 令
+
+   .. math::
+
+      E_0 = E \setminus \bigcup_{n=1}^\infty E_n,
+
+   那么有 :math:`m (E \setminus E_0) = 0`, 并且在 :math:`E_0` 上有 :math:`f_n = g_n`, :math:`n \in \mathbb{N}`. 于是有
+
+   .. math::
+
+      m (E (\lvert g_n - f \rvert > \varepsilon)) & \leqslant m (E_0 (\lvert f_n - f \rvert > \varepsilon)) + m (E \setminus E_0) \\
+      & = m (E_0 (\lvert f_n - f \rvert > \varepsilon)) \\
+      & \leqslant m (E (\lvert f_n - f \rvert > \varepsilon)).
+
+   对上式取极限 :math:`n \to \infty`, 有
+
+   .. math::
+
+      \lim_{n \to \infty} m (E (\lvert g_n - f \rvert > \varepsilon)) \leqslant \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0,
+
+   从而有 :math:`\displaystyle \lim_{n \to \infty} m (E (\lvert g_n - f \rvert > \varepsilon)) = 0`,
+   即 :math:`\{g_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`.
+
+   .. note::
+
+      以下是原答案, 适用于 :math:`m E < \infty` 的情形. 这是由于 Riesz 定理中, 由任意子列存在几乎处处收敛子列而推出原序列依测度收敛的结论,
+      :math:`m E < \infty` 这一条件是必不可少的.
+
+      由 Riesz 定理, 对 :math:`\{f_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}`,
+      存在其子列 :math:`\{f_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`f_{n_{k_i}} \to f` 几乎处处成立, 记此集合为 :math:`E_1`,
+      有 :math:`m (E \setminus E_1) = 0`. 又由于 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`, 记此集合为 :math:`E_2`,
+      有 :math:`m (E \setminus E_2) = 0`. 于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`.
+      那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_{k_i}}(x) \to f(x)`, 且 :math:`f_{n_{k_i}}(x) = g_{n_{k_i}}(x)`,
+      从而 :math:`g_{n_{k_i}}(x) \to f(x)`. 所以, 对 :math:`\{g_n\}_{n \in \mathbb{N}}` 的任意子列 :math:`\{g_{n_k}\}_{k \in \mathbb{N}}`,
+      我们找到了它的子列 :math:`\{g_{n_{k_i}}\}_{i \in \mathbb{N}}`, 使得 :math:`g_{n_{k_i}} \to f` 几乎处处成立.
+      由 Riesz 定理, :math:`\{g_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`.
 
 .. _ex-3-20:
 

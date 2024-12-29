@@ -385,7 +385,7 @@
       \leqslant & \int_{(a + N_{a, b}T_k, b)} 1 ~ \mathrm{d} x = b - a - N_{a, b}T_k
       = \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k},
 
-   其中 :math:`\{ x \}` 表示 :math:`x` 的小数部分, 从而有
+   其中 :math:`\{ x \}` 表示 :math:`x` 的小数部分. 于是进一步有
 
    .. math::
       :label: ex-5-38-eq-2
