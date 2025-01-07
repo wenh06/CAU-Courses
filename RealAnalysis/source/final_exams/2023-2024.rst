@@ -1,9 +1,12 @@
-实变函数 2023-2024 学年秋季学期期末考试试卷
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+实变函数 2023-2024 学年秋季学期期末考试试卷及解答
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+试卷
+---------
 
 :pdfembed:`src:../_static/final_exams/实变函数2023-2024学年秋季学期（文豪-CAU-数学21).pdf, height:800, width:100%, align:middle`
 
-答案解析
+解答
 ---------
 
 一、证明题（第1题7分, 第2题8分, 共15分）
@@ -473,3 +476,8 @@
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \Phi(b_n) - \Phi(a_1) = 1.
 
     这与式 :eq:`eq:cau-real-analysis-exam2024-4-2-1` 矛盾, 因此 :math:`\Phi` 不是绝对连续的.
+
+Source Code
+------------
+
+`GitHub <https://github.com/wenh06/MathExams-Release/blob/master/content/实变函数/2023-秋-期末.tex>`_  | `gitee <https://gitee.com/wenh06/MathExams-Release/blob/master/content/实变函数/2023-秋-期末.tex>`_
