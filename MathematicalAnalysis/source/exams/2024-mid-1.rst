@@ -1,4 +1,9 @@
-数学分析II 2023-2024 学年春季学期第一次期中考试试卷
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+数学分析II 2023-2024 学年春季学期第一次期中考试试卷及解答
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :pdfembed:`src:../_static/exams/2024春数学分析II第一次期中考试试题及答案.pdf, height:800, width:100%, align:middle`
+
+Source Code
+------------
+
+`GitHub <https://github.com/wenh06/MathExams-Release/blob/master/content/数学分析/2024-春-期中考试-1.tex>`_  | `gitee <https://gitee.com/wenh06/MathExams-Release/blob/master/content/数学分析/2024-春-期中考试-1.tex>`_

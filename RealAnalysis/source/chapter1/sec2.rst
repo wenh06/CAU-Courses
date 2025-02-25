@@ -108,7 +108,7 @@
 
     .. math::
 
-        f: B \setminus B_0 \to [0, 1), \quad (a_1, a_2, \cdots, a_n, \cdots) \mapsto \sum_{n=1}^{\infty} a_n 2^n.
+        f: B \setminus B_0 \to [0, 1), \quad (a_1, a_2, \cdots, a_n, \cdots) \mapsto \sum_{n=1}^{\infty} a_n 2^{-n}.
 
     以上映射给出了集合 :math:`B \setminus B_0` 与区间 :math:`[0, 1)` 之间的一一对应, 而 :math:`B_0` 是可列集,
     所以集合 :math:`B = (B \setminus B_0) \cup B_0` 也与区间 :math:`[0, 1)` 对等 [1]_ , 从而它的势为 :math:`\aleph`.
