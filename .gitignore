@@ -186,6 +186,7 @@ RealAnalysis/data/*
 
 
 *ipynb
+!misc/*.ipynb
 
 !RealAnalysis/source/_static/final_exams/*.pdf
 !Calculus/source/_static/final_exams/*.pdf
