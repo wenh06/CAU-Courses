@@ -9,7 +9,7 @@
 课程教材
 ------------------
 
-《`数学分析 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c7eb04bf18f967ee7f37ffc>`_》 (第3版）, 陈纪修, 於崇华, 金路, 高等教育出版社, 2019年
+《`数学分析 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c7eb04bf18f967ee7f37ffc>`_》 (第3版), 陈纪修, 於崇华, 金路, 高等教育出版社, 2019年
 
 任课教师联系方式
 ------------------
