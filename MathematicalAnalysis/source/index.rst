@@ -30,6 +30,8 @@
    :maxdepth: 2
    :caption: 补充材料:
 
+   suppl/chap7
+
 .. toctree::
    :maxdepth: 2
    :caption: 习题课:
