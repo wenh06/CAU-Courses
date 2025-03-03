@@ -26,7 +26,7 @@
 
 也就是说, 函数列 :math:`\{f_n\}` 在闭区间 :math:`[0, 1]` 上的逐点极限函数是狄利克雷函数, 是一个黎曼不可积函数.
 
-2. 闭区间上处处可导, 且导函数有界, 但导函数不一定黎曼可积的函数:
+2. 闭区间上处处可导, 且导函数有界, 但导函数黎曼不可积的函数:
 
 首先, 构造闭区间 :math:`[0, 1]` 内的特殊子集, 类 Cantor 集: 取定一个常数 :math:`c`, 满足 :math:`0 < c \leqslant 1/3`.
 在构造的第 :math:`1` 步, 从闭区间 :math:`[0, 1]` 的正中间挖掉长为 :math:`c` 的开区间; 此后的第 :math:`n` 步,
@@ -47,7 +47,7 @@
 
 当 :math:`c` 满足 :math:`0 < c < 1/3` 时, 这个集合的测度是正的, 也就是说它不是零测集. 以下都假设 :math:`0 < c < 1/3`.
 
-接下来, 构造满足导函数有界, 但导函数不一定黎曼可积的定义在 :math:`[0, 1]` 上的所谓的 Volterra 函数:
+接下来, 构造满足导函数有界, 但导函数黎曼不可积的, 定义在 :math:`[0, 1]` 上的所谓的 Volterra 函数:
 考虑定义在 :math:`\mathbb{R}` 上的函数
 
 .. math::
@@ -94,3 +94,43 @@
 注意, :math:`f(x)` 在 :math:`[0, 1]` 之外取值为零, 并且对任意 :math:`x \in [0, 1]`, 上述和式中实际上至多只有一项是非零的, 因此是良定义的.
 :math:`f(x)` 在 :math:`[0, 1]` 上处处可导, 并且其导函数 :math:`f'(x)` 正好在类 Cantor 集上 (也就是挖去开区间的端点) 不连续,
 因此由函数黎曼可积的勒贝格判别法, 知 :math:`f'(x)` 在 :math:`[0, 1]` 上黎曼不可积.
+
+3. :math:`[a, b]` 区间上的连续函数 :math:`f(x)` 的 :math:`p` 范数的极限等于其无穷范数:
+
+设 :math:`f(x)` 是定义在 :math:`[a, b]` 上的连续函数, 那么 :math:`|f(x)|` 可以取到最大值 :math:`M`, 即 :math:`f(x)` 的无穷范数.
+
+首先, 由积分的保序性, 有
+
+.. math::
+
+    \left( \int_{a}^{b} |f(x)|^p ~ \mathrm{d}x \right)^{1/p}
+    \leqslant \left( \int_{a}^{b} M^p ~ \mathrm{d}x \right)^{1/p} = M (b - a)^{1/p}.
+
+另一方面, 设 :math:`f(x_0) = M`, 那么对于任意 :math:`\varepsilon > 0`, 由连续性存在 :math:`\delta > 0`,
+使得当 :math:`|x - x_0| < \delta` 时, 有 :math:`|f(x) - M| < \varepsilon`. 于是
+
+.. math::
+
+    \left( \int_{a}^{b} |f(x)|^p ~ \mathrm{d}x \right)^{1/p}
+    \geqslant \left( \int_{x_0 - \delta}^{x_0 + \delta} (M - \varepsilon)^p ~ \mathrm{d}x \right)^{1/p}
+    = (M - \varepsilon) (2\delta)^{1/p}.
+
+综上有
+
+.. math::
+
+    (M - \varepsilon) (2\delta)^{1/p} \leqslant \left( \int_{a}^{b} |f(x)|^p ~ \mathrm{d}x \right)^{1/p} \leqslant M (b - a)^{1/p},
+
+对 :math:`p` 取极限 :math:`p \to \infty`, 即有
+
+.. math::
+
+    M - \varepsilon \leqslant \lim_{p \to \infty} \lVert f \rVert_p \leqslant M,
+
+再对 :math:`\varepsilon` 取极限 :math:`\varepsilon \to 0+`, 即有
+
+.. math::
+
+    M \leqslant \lim_{p \to \infty} \lVert f \rVert_p \leqslant M,
+
+即 :math:`\displaystyle \lim_{p \to \infty} \lVert f \rVert_p = M`.
