@@ -17,7 +17,7 @@
 
 .. proof:proof::
 
-    (1). 首先来证明 :math:`\varphi` 是连续的 (甚至是一致连续的）:
+    (1). 首先来证明 :math:`\varphi` 是连续的 (甚至是一致连续的):
     不妨设 :math:`x < y, x = \sum\limits_{i=1}^{\infty} \dfrac{a_i}{3^i}, y = \sum\limits_{i=1}^{\infty} \dfrac{b_i}{3^i}`,
     其中 :math:`a_i, b_i \in \{0, 1, 2\}`. 令 :math:`k(x) = \min \{ i \mid a_i = 1 \}`, :math:`k(y) = \min \{ i \mid b_i =1 \}`,
     并约定 :math:`k(x) = +\infty` 当 :math:`x \in P_0`; :math:`k(y) = +\infty` 当 :math:`y \in P_0`. 那么

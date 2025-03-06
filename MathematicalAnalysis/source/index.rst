@@ -3,13 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-数学分析 Mathematical Analysis）习题解答
+数学分析 (Mathematical Analysis) 习题解答
 ============================================
 
 课程教材
 ------------------
 
-《`数学分析 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c7eb04bf18f967ee7f37ffc>`_》 (第3版), 陈纪修, 於崇华, 金路, 高等教育出版社, 2019年
+《`数学分析(上册) <https://www.hep.com.cn/book/show/0a11ff88-10f2-4a3a-8780-c45c4cbe2187>`_》 (第3版), 陈纪修, 於崇华, 金路, 高等教育出版社, 2019年
+《`数学分析(下册) <https://www.hep.com.cn/book/show/c02b721f-7269-462e-9af2-8e5d12af173e>`_》 (第3版), 陈纪修, 於崇华, 金路, 高等教育出版社, 2019年
+
+参考书籍
+------------------
+
+- 《数学分析(第一卷) <https://www.hep.com.cn/book/show/b84288b0-b931-47ea-b5d1-0d5a444476b9>`_》 (第7版), B. A. 卓里奇 著, 李植 译, 高等教育出版社, 2019年
+- 《数学分析(第二卷) <https://www.hep.com.cn/book/show/9cd95af0-f479-469d-bc60-2b9f6e4fc9b7>`_》 (第7版), B. A. 卓里奇 著, 李植 译, 高等教育出版社, 2019年
+- 《数学分析中的典型问题与方法 <https://www.hep.com.cn/book/show/994fdd92-deaf-474e-8f0e-43c68dd64834>`_》 (第3版), 裴礼文, 高等教育出版社, 2021年
 
 任课教师联系方式
 ------------------

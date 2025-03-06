@@ -308,7 +308,7 @@
 
    (1). 假设 :math:`a < b`.
 
-   定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示 :math:`x` 从 :math:`a` 到 :math:`b` 曲线 :math:`y = x` 与 :math:`x` 轴之间 (带正负号）的面积.
+   定积分 :math:`\displaystyle \int_a^b x \mathrm{d} x` 表示 :math:`x` 从 :math:`a` 到 :math:`b` 曲线 :math:`y = x` 与 :math:`x` 轴之间 (带正负号) 的面积.
    当 :math:`a, b` 同号时, 这是一个底边长 :math:`|a|, |b|`, 高为 :math:`|a - b|` 的梯形, 面积为 :math:`\dfrac{|a| + |b|}{2} |a - b|`.
    当 :math:`a, b > 0` 时, 面积为正的, 当 :math:`a, b < 0` 时, 面积为负的. 值为 :math:`\dfrac{b^2 - a^2}{2}`.
 
@@ -316,9 +316,9 @@
    这是两个等腰直角三角形, 直角边长分别为 :math:`-a, b`, 面积之差为 :math:`\dfrac{b^2 - a^2}{2}`.
 
    (3). :math:`\sin x` 在 :math:`(-\pi, 0)` 取值为负, :math:`(0, \pi)` 取值为正, 因此定积分 :math:`\displaystyle \int_{-\pi}^{\pi} \sin x \mathrm{d} x`
-   表示 这两部分曲线与 :math:`x` 轴围成 (带正负号）的面积之和. 正两部分面积正好绝对值相等, 符号相反, 因此定积分的值为 :math:`0`.
+   表示 这两部分曲线与 :math:`x` 轴围成 (带正负号) 的面积之和. 正两部分面积正好绝对值相等, 符号相反, 因此定积分的值为 :math:`0`.
 
-   (5). :math:`\displaystyle \int_0^4 (2 - x) \mathrm{d} x` 表示 :math:`x` 从 :math:`0` 到 :math:`4` 曲线 :math:`y = 2 - x` 与 :math:`x` 轴之间 (带正负号）的面积.
+   (5). :math:`\displaystyle \int_0^4 (2 - x) \mathrm{d} x` 表示 :math:`x` 从 :math:`0` 到 :math:`4` 曲线 :math:`y = 2 - x` 与 :math:`x` 轴之间 (带正负号) 的面积.
    :math:`x` 从 :math:`0` 到 :math:`2` 时, :math:`y = 2 - x` 在 :math:`x` 轴上方, 面积为正, :math:`x` 从 :math:`2` 到 :math:`4` 时,
    :math:`y = 2 - x` 在 :math:`x` 轴下方, 面积为负. 这两部分面积绝对值相等, 符号相反, 因此定积分的值为 :math:`0`.
 

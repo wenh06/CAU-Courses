@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-实变函数 (Real Analysis）课程资料
+实变函数 (Real Analysis) 课程资料
 ============================================
 
 课程教材
 ------------------
 
-《`实变函数与泛函分析概要 <https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=5c338eb3f18f967ee7f37d02>`_》 (第5版 第1册), 郑维行, 王声望, 高等教育出版社, 2019年
+《`实变函数与泛函分析概要 (第1册) <https://www.hep.com.cn/book/show/5621a725-23ef-481d-aa96-8f4686171683>`_》 (第5版), 郑维行, 王声望, 高等教育出版社, 2019年
 
 参考书籍
 ------------------

@@ -726,7 +726,7 @@
 
       \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = \lim\limits_{x \to 0} \dfrac{2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}}{\cos x}.
 
-   上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限 (当 :math:`x \to 0`）不存在, 所以不能使用洛必达法则.
+   上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限 (当 :math:`x \to 0`) 不存在, 所以不能使用洛必达法则.
 
 §2.8 泰勒公式
 --------------------------------

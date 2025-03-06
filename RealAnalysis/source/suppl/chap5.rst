@@ -14,7 +14,7 @@
       \node (uniform) at (-12, -4) {$\text{({\color{cyan}近})一致收敛}$};
       \node (ae) at (-7,0) {$\text{({\color{magenta}子列})几乎处处收敛}$};
       \node (measure) at (5, 0) {$\text{依测度收敛}$};
-      \node (norm) at (-3, -4) {$\text{强收敛（依范数收敛）}$};
+      \node (norm) at (-3, -4) {$\text{强收敛 (依范数收敛)}$};
       \node (weak) at (-3, -8) {$\text{弱收敛}$};
 
       \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={xshift=0.5em}] (uniform) -- (ae) node[sloped, anchor=center, midway, below] {$\checkmark$};
