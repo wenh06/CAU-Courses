@@ -134,3 +134,58 @@
     M \leqslant \lim_{p \to \infty} \lVert f \rVert_p \leqslant M,
 
 即 :math:`\displaystyle \lim_{p \to \infty} \lVert f \rVert_p = M`.
+
+4. 定积分连续性 :math:`\displaystyle \lim_{h \to 0} \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x = 0` 的证明：
+
+不妨设 :math:`|h| < 1`, 以及 :math:`f(x)` 在 :math:`[a-1, b+1]` 上黎曼可积. 那么由振幅判别法, 对任意 :math:`\varepsilon > 0`,
+总存在 :math:`\delta > 0`, 使得对 :math:`[a-1, b+1]` 区间上任意满足 :math:`\lambda(P) < \delta` 的划分 :math:`P`, 总有
+
+.. math::
+
+    \sum_{i=1}^n \omega(f; [x_{i-1}, x_i]) \cdot (x_i - x_{i-1}) < \varepsilon,
+    \quad \omega(f; [x_{i-1}, x_i]) := \sup_{t_1, t_2 \in [x_{i-1}, x_i]} |f(t_2) - f(t_1)|.
+
+任取 :math:`h` 满足 :math:`|h| < \delta / 2`, 并取 :math:`[a, b]` 的划分
+
+.. math::
+
+    a < a + |h| < a + 2|h| < \cdots < a + k |h| < b, \quad k = \left\lceil \frac{b-a}{|h|} \right\rceil - 1.
+
+为了记号方便, 以下不妨设 :math:`h > 0`. 那么在区间 :math:`[a + (i-1)h, a + ih]` 上恒有
+
+.. math::
+
+    |f(x+h) - f(x)| \leqslant \omega(f; [a + (i-1)h, a + (i+1)h]),
+
+从而有
+
+.. math::
+
+    \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x
+    & = \sum_{i=1}^k \int_{a + (i-1)h}^{a + ih} |f(x+h) - f(x)| ~ \mathrm{d} x
+        + \int_{a + kh}^{b} |f(x+h) - f(x)| ~ \mathrm{d} x \\
+    & \leqslant \sum_{i=1}^{k+1} \int_{a + (i-1)h}^{a + ih} |f(x+h) - f(x)| ~ \mathrm{d} x \\
+    & \leqslant \sum_{i=1}^{k+1} \int_{a + (i-1)h}^{a + ih} \omega(f; [a + (i-1)h, a + (i+1)h]) ~ \mathrm{d} x \\
+    & = \sum_{i=1}^{k+1} \omega(f; [a + (i-1)h, a + (i+1)h]) \cdot h \\
+    & = \dfrac{1}{2} \sum_{i=1}^{k+1} \omega(f; [a + (i-1)h, a + (i+1)h]) \cdot ((a + (i+1)h) - a + (i-1)h) \\
+    & < \dfrac{1}{2} \cdot 2\varepsilon = \varepsilon.
+
+最后一行的不等式是因为, 分点 :math:`a, a + 2h, a + 4h, \dots` 以及 :math:`a + h, a + 3h, \dots` 都分别可以扩充成
+:math:`[a-1, b+1]` 区间上的划分 :math:`P_1, P_2`, 满足 :math:`\lambda(P_1), \lambda(P_2) < \delta`,
+从而上述和式是相应振幅和的部分和.
+所以 :math:`\displaystyle \lim_{h \to 0} \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x = 0`
+
+.. note::
+
+    这题可以从更高的层次来看：以后会学到闭区间上黎曼可积的函数都是勒贝格可积的, 那么就可以利用勒贝格积分理论中的有界收敛定理,
+    即若函数族 :math:`g_h(x)` (勒贝格, 下同) 可积, :math:`h` 是某个指标集 (例如 :math:`\mathbb{N}` 或 :math:`(-1, 1)` 区间等),
+    并且存在正的常数 :math:`M`, 使得 :math:`|g_h(x)| \leqslant M` 恒成立, 那么积分和取极限能交换次序, 即
+
+    .. math::
+
+        \lim_{h \to h_0} \int_a^b g_h(x) ~ \mathrm{d} x = \int_a^b \lim_{h \to h_0} g_h(x) ~ \mathrm{d} x,
+
+    这里的 :math:`h_0` 是指标集的聚点 (例如若指标集是 :math:`\mathbb{N}`, :math:`h_0` 是 :math:`+\infty`;
+    指标集是 :math:`(-1, 1)` 区间 :math:`h_0` 是 :math:`0` 等情况).
+
+    在这题里, 就可以取 :math:`g_h(x) = |f(x+h) - f(x)|`, 相应的极限函数 :math:`\lim_{h \to h_0} g_h(x)` 常值函数 :math:`0`.
