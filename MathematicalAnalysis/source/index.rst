@@ -48,6 +48,12 @@
 
 .. toctree::
    :maxdepth: 2
+   :caption: 加分项:
+
+   bonus
+
+.. toctree::
+   :maxdepth: 2
    :caption: 历年考题:
 
    exams/2024-mid-1
