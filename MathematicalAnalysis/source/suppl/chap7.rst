@@ -188,4 +188,76 @@
     这里的 :math:`h_0` 是指标集的聚点 (例如若指标集是 :math:`\mathbb{N}`, :math:`h_0` 是 :math:`+\infty`;
     指标集是 :math:`(-1, 1)` 区间 :math:`h_0` 是 :math:`0` 等情况).
 
-    在这题里, 就可以取 :math:`g_h(x) = |f(x+h) - f(x)|`, 相应的极限函数 :math:`\lim_{h \to h_0} g_h(x)` 常值函数 :math:`0`.
+    在这题里, 就可以取 :math:`g_h(x) = |f(x+h) - f(x)|`, 相应的极限函数 :math:`\displaystyle \lim_{h \to h_0} g_h(x)` 几乎处处等于 :math:`0`,
+    其勒贝格积分就等于 :math:`0`. 当然, 几乎处处等于 :math:`0` 的函数未必黎曼可积, 这是要注意的.
+
+5. :math:`n` 步 Newton-Cotes 求积公式中的 Cotes 系数:
+
+Cotes 系数依定义为
+
+.. math::
+
+    c_i^{(n)} = \dfrac{1}{n} \cdot \dfrac{(-1)^{n-i}}{i!(n-i)!} \int_0^n
+                \prod_{\substack{j = 0 \\ j \neq i}}^n (t - j) ~ \mathrm{d} t.
+
+考虑如下的 :math:`n` 次多项式序列:
+
+.. math::
+
+    \ell_i^{(n)}(t) = \dfrac{(-1)^{n-i}}{i!(n-i)!} \prod_{\substack{j = 0 \\ j \neq i}}^n (t - j),
+
+它们满足
+
+.. math::
+
+    \ell_i^{(n)}(j) = \begin{cases}
+    1, & j = i, \\
+    0, & j \neq i.
+    \end{cases}
+
+这 :math:`n + 1` 个 :math:`n` 次多项式构成了 :math:`n + 1` 维线性空间
+
+.. math::
+
+    \mathbb{R}_n [t] := \{ f \in \mathbb{R}[t] ~ : ~ \deg f \leqslant n \}
+
+的一组基, 其中 :math:`\mathbb{R}[t]` 是 :math:`\mathbb{R}` 系数多项式全体. 这是因为假设
+
+.. math::
+
+    \lambda_0 \ell_0^{(n)}(t) + \lambda_1 \ell_1^{(n)}(t) + \cdots + \lambda_n \ell_n^{(n)}(t) = 0,
+
+分别代 :math:`t = 0, 1, \dots, n`, 可对应推出 :math:`\lambda_0 = 0, \lambda_1 = 0, \dots, \lambda_n = 0`.
+:math:`\mathbb{R}_n [t]` 另外还有一组基是 :math:`1, t, t^2, \dots, t^n`, 于是有可逆阵
+:math:`A \in M_{n+1}(\mathbb{R})` 使得
+
+.. math::
+
+    \begin{pmatrix} 1 \\ t \\ \vdots \\ t^n \end{pmatrix}
+    = A \begin{pmatrix} \ell_0^{(n)}(t) \\ \ell_1^{(n)}(t) \\ \vdots \\ \ell_n^{(n)}(t) \end{pmatrix}.
+
+在上式中分别取 :math:`t = 0, 1, \dots, n` 可得
+
+.. math::
+
+    \begin{pmatrix}
+    1 & 1 & 1 & \cdots & 1 \\ 0 & 1 & 2 & \cdots & n \\ 0 & 1 & 2^2 & \cdots & n^2 \\
+    \vdots & \vdots & \vdots & & \vdots \\ 0 & 1 & 2^n & \cdots & n^n
+    \end{pmatrix}
+    = A \begin{pmatrix}
+    1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1
+    \end{pmatrix} = A.
+
+记 :math:`A` 的逆矩阵 :math:`A^{-1} = B = (b_{ij})_{0 \leqslant i,j \leqslant n}`, 那么
+
+.. math::
+
+    \ell_i^{(n)}(t) = b_{i0} + b_{i1} t + \cdots + b_{in} t^n,
+
+从而有
+
+.. math::
+
+    c_i^{(n)}
+    & = \dfrac{1}{n} \int_0^n \left( b_{i0} + b_{i1} t + \cdots + b_{in} t^n \right) ~ \mathrm{d} t \\
+    & = \dfrac{1}{n} \sum_{j = 0}^n b_{ij} \dfrac{n^{j+1}}{j+1}.
