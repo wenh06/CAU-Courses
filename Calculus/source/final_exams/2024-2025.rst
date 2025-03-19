@@ -10,3 +10,8 @@
 --------
 
 :pdfembed:`src:../_static/final_exams/2024秋微积分1试卷及解答.pdf, height:800, width:100%, align:middle`
+
+Source Code
+------------
+
+`GitHub <https://github.com/wenh06/MathExams-Release/blob/master/content/微积分/2024-秋-期末考试.tex>`_  | `gitee <https://gitee.com/wenh06/MathExams-Release/blob/master/content/微积分/2024-秋-期末考试.tex>`_
