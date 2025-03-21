@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-数学分析 (Mathematical Analysis) 习题解答
+数学分析 (Mathematical Analysis) 课程资料
 ============================================
 
 课程教材
