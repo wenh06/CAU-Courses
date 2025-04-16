@@ -17,7 +17,9 @@
 
 - 《`数学分析(第一卷) <https://www.hep.com.cn/book/show/b84288b0-b931-47ea-b5d1-0d5a444476b9>`_》 (第7版), B. A. 卓里奇 著, 李植 译, 高等教育出版社, 2019年
 - 《`数学分析(第二卷) <https://www.hep.com.cn/book/show/9cd95af0-f479-469d-bc60-2b9f6e4fc9b7>`_》 (第7版), B. A. 卓里奇 著, 李植 译, 高等教育出版社, 2019年
+- 《`数学分析原理 <http://www.cmpedu.com/books/book/2010985.htm>`_》 (原书第3版), Walter Rudin 著，赵慈庚，蒋铎 译, 机械工业出版社, 2019年
 - 《`数学分析中的典型问题与方法 <https://www.hep.com.cn/book/show/994fdd92-deaf-474e-8f0e-43c68dd64834>`_》 (第3版), 裴礼文, 高等教育出版社, 2021年
+- 还有很多, 这里不一列举了.
 
 任课教师联系方式
 ------------------
@@ -39,6 +41,7 @@
    :caption: 补充材料:
 
    suppl/chap7
+   suppl/chap9
 
 .. toctree::
    :maxdepth: 2
