@@ -123,28 +123,42 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
   .. math::
 
     \left\lvert \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k) \right\rvert
-    \leqslant \dfrac{1}{n-m} (n-m) \dfrac{n-m-1}{m+1} M = \dfrac{n-m-1}{m+1} M.
+    \leqslant \dfrac{1}{n-m} (n-m) \dfrac{n-m-1}{m+1} M < \dfrac{n-m}{m} M.
 
-  我们希望有 :math:`\dfrac{n-m-1}{m+1} < \varepsilon` 可推出 :math:`m > \dfrac{n}{1 + \varepsilon} - 1`. 取
+  我们希望有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`m > \dfrac{n}{1 + \frac{\varepsilon}{2M}}`.
+  取 :math:`n` 足够大, 使得 :math:`n - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2`, 或者等价地,
+  取 :math:`n > \dfrac{2(2M + \varepsilon)}{\varepsilon}`, 即可确保能取到整数
 
   .. math::
 
-    m = \left[ \dfrac{n}{1 + \varepsilon} \right] < n,
+    m \in \left[ \dfrac{n}{1 + \frac{\varepsilon}{2M}}, n \right],
 
-  即有 :math:`\lvert \text{第二部分} \rvert < M \varepsilon`.
+  即有 :math:`\lvert \text{第二部分} \rvert < \dfrac{\varepsilon}{2}`.
 
   对于 :math:`\text{第一部分} = \dfrac{m}{n - m}(\sigma_n - \sigma_m)`,
-  从 :math:`m = \left[ \dfrac{n}{1 + \varepsilon} \right] \leqslant \dfrac{n}{1 + \varepsilon}` 有
-  :math:`m \varepsilon + m \leqslant n`, 从而有 :math:`\dfrac{m}{n - m} \leqslant \dfrac{1}{\varepsilon}`. 于是
+  由于已有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`\dfrac{m}{n-m} > \dfrac{2M}{\varepsilon}`,
+  进一步要求 :math:`\dfrac{2M}{\varepsilon} < \dfrac{m}{n-m} < \dfrac{4M}{\varepsilon}`, 即
+  :math:`m < \dfrac{n}{1 + \frac{\varepsilon}{4M}}`. 这样的整数 :math:`m` 总是可以取到的,
+  只要保证 :math:`\dfrac{n}{1 + \frac{\varepsilon}{4M}} - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2` 即可,
+  即 :math:`n > \dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`.
+  于是
 
   .. math::
 
     \lvert \text{第一部分} \rvert = \left\lvert \dfrac{m}{n - m}(\sigma_n - \sigma_m) \right\rvert
-    \leqslant \dfrac{1}{\varepsilon} \left\lvert \sigma_n - \sigma_m \right\rvert.
+    \leqslant \dfrac{4M}{\varepsilon} \left\lvert \sigma_n - \sigma_m \right\rvert.
 
   若取 :math:`N` 充分大, 使得 :math:`\forall n > m > N` 都有
-  :math:`\left\lvert \sigma_n - \sigma_m \right\rvert < ~ \varepsilon^2`, 那么
+  :math:`\left\lvert \sigma_n - \sigma_m \right\rvert < \dfrac{\varepsilon^2}{8M}`, 那么
 
   .. math::
 
-    \left\lvert s_n - \sigma_n \right\rvert \leqslant \lvert \text{第一部分} \rvert + \lvert \text{第二部分} \rvert < \varepsilon + M \varepsilon = (M+1)\varepsilon.
+    \left\lvert s_n - \sigma_n \right\rvert \leqslant \lvert \text{第一部分} \rvert + \lvert \text{第二部分} \rvert < \varepsilon.
+
+  注意我们的取法: :math:`N` 充分大
+  (大于 :math:`\dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`),
+  :math:`m, n` 满足关系:
+
+  .. math::
+
+    \dfrac{n}{1 + \frac{\varepsilon}{2M}} < m < \dfrac{n}{1 + \frac{\varepsilon}{4M}} < n.
