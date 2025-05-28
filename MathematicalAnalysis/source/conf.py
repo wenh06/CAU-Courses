@@ -181,8 +181,12 @@ linkcheck_ignore = [
 
 
 # -- Options for TikZ -------------------------------------------------
-tikz_extra_packages = "[slantfont,boldfont]xeCJK, amsfonts, pifont"
-tikz_tikzlibraries = "calc,cd,positioning,shapes,arrows.meta"
+tikz_extra_packages = "[slantfont,boldfont]xeCJK, amsfonts, amssymb, amssymb, pifont, relsize"
+tikz_tikzlibraries = "calc, cd, positioning, shapes, arrows.meta"
+
+latex_elements = {
+    "preamble": r"\newcommand*{\nroot}[2][2]{\sqrt[\leftroot{-3}\uproot{3}#1]{#2}}",
+}
 
 
 # -------------------------------------------------

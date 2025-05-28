@@ -8,7 +8,7 @@
    .. tikz::
       :align: center
       :xscale: 100
-      :libs: arrows.meta,positioning,calc,cd
+      :libs: arrows.meta, positioning, calc, cd
       :packages: amsfonts, [slantfont,boldfont]xeCJK, pifont, relsize
 
       \node (uniform) at (-12, -4) {$\text{({\color{cyan}近})一致收敛}$};
