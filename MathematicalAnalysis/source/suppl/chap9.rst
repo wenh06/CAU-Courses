@@ -26,139 +26,139 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
 
 .. proof:proof::
 
-  a. 若 :math:`\sum\limits_{n=1}^{\infty} a_n` 在通常意义下收敛到有限实数 :math:`A`, 那么
+   a. 若 :math:`\sum\limits_{n=1}^{\infty} a_n` 在通常意义下收敛到有限实数 :math:`A`, 那么
 
-  .. math::
+   .. math::
 
-    A = \lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)},
+      A = \lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)},
 
-  于是根据 Stolz 公式 (Stolz–Cesàro 定理), 有
+   于是根据 Stolz 公式 (Stolz–Cesàro 定理), 有
 
-  .. math::
+   .. math::
 
-    \lim\limits_{n \to \infty} \sigma_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n}{n}
-    = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)} = A.
+      \lim\limits_{n \to \infty} \sigma_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n}{n}
+      = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)} = A.
 
-  这表明了 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`.
+   这表明了 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`.
 
-  b. 我们考察 :math:`s_n - \sigma_n`, 有
+   b. 我们考察 :math:`s_n - \sigma_n`, 有
 
-  .. math::
+   .. math::
 
-    s_n - \sigma_n & = \sum\limits_{k=1}^n a_k - \sum\limits_{k=1}^n \left( 1 - \dfrac{k-1}{n} \right) a_k \\
-    & = \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}.
+      s_n - \sigma_n & = \sum\limits_{k=1}^n a_k - \sum\limits_{k=1}^n \left( 1 - \dfrac{k-1}{n} \right) a_k \\
+      & = \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}.
 
-  由于 :math:`n \to \infty` 时有 :math:`a_n = \mathrm{o}\left( \dfrac{1}{n} \right)`,
-  那么 :math:`\lim\limits_{n \to \infty} n a_n = 0`, 这也等价于
+   由于 :math:`n \to \infty` 时有 :math:`a_n = \mathrm{o}\left( \dfrac{1}{n} \right)`,
+   那么 :math:`\lim\limits_{n \to \infty} n a_n = 0`, 这也等价于
 
-  .. math::
+   .. math::
 
-    \lim_{n \to \infty} (n - 1) a_n = 0.
+      \lim_{n \to \infty} (n - 1) a_n = 0.
 
-  于是对 :math:`\dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}` 使用 Stolz 公式有:
+   于是对 :math:`\dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}` 使用 Stolz 公式有:
 
-  .. math::
+   .. math::
 
-    \lim\limits_{n \to \infty} (s_n - \sigma_n) & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n} \\
-    & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k - \sum\limits_{k=1}^{n-1} (k-1)a_k}{n - (n-1)} \\
-    & = \lim\limits_{n \to \infty} \dfrac{(n-1)a_n}{1} = 0.
+      \lim\limits_{n \to \infty} (s_n - \sigma_n) & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n} \\
+      & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k - \sum\limits_{k=1}^{n-1} (k-1)a_k}{n - (n-1)} \\
+      & = \lim\limits_{n \to \infty} \dfrac{(n-1)a_n}{1} = 0.
 
-  这表明 :math:`\sum\limits_{n=1}^{\infty} a_n = \lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty} \sigma_n = A`.
+   这表明 :math:`\sum\limits_{n=1}^{\infty} a_n = \lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty} \sigma_n = A`.
 
-  c. 除了已知条件:当 :math:`n\to\infty` 时 :math:`a_n = \mathrm{O} \left( \dfrac{1}{n} \right)`,
-  即存在正实数 :math:`M`. 使得对任意自然数 :math:`n` 有 :math:`\rvert n a_n \rvert \leqslant M` 之外,
-  我们所拥有的条件是 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 即 :math:`\lim\limits_{n\to\infty} \sigma_n = A`,
-  这等价于 :math:`\forall \varepsilon > 0`, 存在自然数 :math:`N` 使得
-  :math:`\forall n > m > N, \lvert \sigma_n - \sigma_m \vert < \varepsilon`.
+   c. 除了已知条件:当 :math:`n\to\infty` 时 :math:`a_n = \mathrm{O} \left( \dfrac{1}{n} \right)`,
+   即存在正实数 :math:`M`. 使得对任意自然数 :math:`n` 有 :math:`\rvert n a_n \rvert \leqslant M` 之外,
+   我们所拥有的条件是 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 即 :math:`\lim\limits_{n\to\infty} \sigma_n = A`,
+   这等价于 :math:`\forall \varepsilon > 0`, 存在自然数 :math:`N` 使得
+   :math:`\forall n > m > N, \lvert \sigma_n - \sigma_m \vert < \varepsilon`.
 
-  之前 b. 的时候, 我们导出了 :math:`s_n` 与 :math:`\sigma_n` 的关系
+   之前 b. 的时候, 我们导出了 :math:`s_n` 与 :math:`\sigma_n` 的关系
 
-  .. math::
+   .. math::
 
-    s_n = \sigma_n + \sum\limits_{k = 1}^n \dfrac{(k-1)a_k}{n}.
+      s_n = \sigma_n + \sum\limits_{k = 1}^n \dfrac{(k-1)a_k}{n}.
 
-  由于我们只有 :math:`\rvert n a_n \rvert \leqslant M`, 所以 Stolz 公式不能再用了, 得另想办法.
+   由于我们只有 :math:`\rvert n a_n \rvert \leqslant M`, 所以 Stolz 公式不能再用了, 得另想办法.
 
-  想法: 将 :math:`s_n - \sigma_n` 与 :math:`\sigma_n - \sigma_m` 联系上, 并用它控制余项的大小. 假设 :math:`n > m`, 那么有
+   想法: 将 :math:`s_n - \sigma_n` 与 :math:`\sigma_n - \sigma_m` 联系上, 并用它控制余项的大小. 假设 :math:`n > m`, 那么有
 
-  .. math::
+   .. math::
 
-    \sigma_n - \sigma_m & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{m} s_k \\
-    & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{n} s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k \\
-    & = \dfrac{m - n}{nm} \sum\limits_{k=1}^n s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k.
+      \sigma_n - \sigma_m & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{m} s_k \\
+      & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{n} s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k \\
+      & = \dfrac{m - n}{nm} \sum\limits_{k=1}^n s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k.
 
-  另一方面, 有
+   另一方面, 有
 
-  .. math::
+   .. math::
 
-    s_n - \sigma_n = s_n - \dfrac{1}{n} \sum\limits_{k = 1}^n s_k.
+      s_n - \sigma_n = s_n - \dfrac{1}{n} \sum\limits_{k = 1}^n s_k.
 
-  两式通分相减, 有
+   两式通分相减, 有
 
-  .. math::
+   .. math::
 
-    & (s_n - \sigma_n) - \dfrac{m}{n - m}(\sigma_n - \sigma_m) \\
-    & = s_n - \cancel{\dfrac{1}{n} \sum\limits_{k = 1}^n s_k} + \cancel{\dfrac{1}{n} \sum\limits_{k=1}^n s_k}
-        - \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} s_k \\
-    & = s_n - \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} s_k = \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k).
+      & (s_n - \sigma_n) - \dfrac{m}{n - m}(\sigma_n - \sigma_m) \\
+      & = s_n - \cancel{\dfrac{1}{n} \sum\limits_{k = 1}^n s_k} + \cancel{\dfrac{1}{n} \sum\limits_{k=1}^n s_k}
+         - \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} s_k \\
+      & = s_n - \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} s_k = \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k).
 
-  整理一下, 有
+   整理一下, 有
 
-  .. math::
+   .. math::
 
-    s_n - \sigma_n = \underbrace{\dfrac{m}{n - m}(\sigma_n - \sigma_m)}_{\text{第一部分}} +
-                     \underbrace{\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)}_{\text{第二部分}}.
+      s_n - \sigma_n = \underbrace{\dfrac{m}{n - m}(\sigma_n - \sigma_m)}_{\text{第一部分}} +
+                       \underbrace{\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)}_{\text{第二部分}}.
 
-  对于第二部分 :math:`\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)` 和式中的每一项, 我们有估计
+   对于第二部分 :math:`\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)` 和式中的每一项, 我们有估计
 
-  .. math::
+   .. math::
 
-    \begin{multline*}
-    \lvert s_n - s_k \rvert = \lvert a_{k+1} + \cdots + a_n \rvert \\
-    \leqslant \dfrac{M}{k+1} + \cdots \dfrac{M}{n} \leqslant \dfrac{(n-k)M}{k+1} \leqslant \dfrac{(n-m-1)M}{m+1}
-    \end{multline*}
+      \begin{multline*}
+      \lvert s_n - s_k \rvert = \lvert a_{k+1} + \cdots + a_n \rvert \\
+      \leqslant \dfrac{M}{k+1} + \cdots \dfrac{M}{n} \leqslant \dfrac{(n-k)M}{k+1} \leqslant \dfrac{(n-m-1)M}{m+1}
+      \end{multline*}
 
-  于是
+   于是
 
-  .. math::
+   .. math::
 
-    \left\lvert \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k) \right\rvert
-    \leqslant \dfrac{1}{n-m} (n-m) \dfrac{n-m-1}{m+1} M < \dfrac{n-m}{m} M.
+      \left\lvert \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k) \right\rvert
+      \leqslant \dfrac{1}{n-m} (n-m) \dfrac{n-m-1}{m+1} M < \dfrac{n-m}{m} M.
 
-  我们希望有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`m > \dfrac{n}{1 + \frac{\varepsilon}{2M}}`.
-  取 :math:`n` 足够大, 使得 :math:`n - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2`, 或者等价地,
-  取 :math:`n > \dfrac{2(2M + \varepsilon)}{\varepsilon}`, 即可确保能取到整数
+   我们希望有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`m > \dfrac{n}{1 + \frac{\varepsilon}{2M}}`.
+   取 :math:`n` 足够大, 使得 :math:`n - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2`, 或者等价地,
+   取 :math:`n > \dfrac{2(2M + \varepsilon)}{\varepsilon}`, 即可确保能取到整数
 
-  .. math::
+   .. math::
 
-    m \in \left[ \dfrac{n}{1 + \frac{\varepsilon}{2M}}, n \right],
+      m \in \left[ \dfrac{n}{1 + \frac{\varepsilon}{2M}}, n \right],
 
-  即有 :math:`\lvert \text{第二部分} \rvert < \dfrac{\varepsilon}{2}`.
+   即有 :math:`\lvert \text{第二部分} \rvert < \dfrac{\varepsilon}{2}`.
 
-  对于 :math:`\text{第一部分} = \dfrac{m}{n - m}(\sigma_n - \sigma_m)`,
-  由于已有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`\dfrac{m}{n-m} > \dfrac{2M}{\varepsilon}`,
-  进一步要求 :math:`\dfrac{2M}{\varepsilon} < \dfrac{m}{n-m} < \dfrac{4M}{\varepsilon}`, 即
-  :math:`m < \dfrac{n}{1 + \frac{\varepsilon}{4M}}`. 这样的整数 :math:`m` 总是可以取到的,
-  只要保证 :math:`\dfrac{n}{1 + \frac{\varepsilon}{4M}} - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2` 即可,
-  即 :math:`n > \dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`.
-  于是
+   对于 :math:`\text{第一部分} = \dfrac{m}{n - m}(\sigma_n - \sigma_m)`,
+   由于已有 :math:`\dfrac{n-m}{m} < \dfrac{\varepsilon}{2M}`, 即 :math:`\dfrac{m}{n-m} > \dfrac{2M}{\varepsilon}`,
+   进一步要求 :math:`\dfrac{2M}{\varepsilon} < \dfrac{m}{n-m} < \dfrac{4M}{\varepsilon}`, 即
+   :math:`m < \dfrac{n}{1 + \frac{\varepsilon}{4M}}`. 这样的整数 :math:`m` 总是可以取到的,
+   只要保证 :math:`\dfrac{n}{1 + \frac{\varepsilon}{4M}} - \dfrac{n}{1 + \frac{\varepsilon}{2M}} > 2` 即可,
+   即 :math:`n > \dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`.
+   于是
 
-  .. math::
+   .. math::
 
-    \lvert \text{第一部分} \rvert = \left\lvert \dfrac{m}{n - m}(\sigma_n - \sigma_m) \right\rvert
-    \leqslant \dfrac{4M}{\varepsilon} \left\lvert \sigma_n - \sigma_m \right\rvert.
+      \lvert \text{第一部分} \rvert = \left\lvert \dfrac{m}{n - m}(\sigma_n - \sigma_m) \right\rvert
+      \leqslant \dfrac{4M}{\varepsilon} \left\lvert \sigma_n - \sigma_m \right\rvert.
 
-  若取 :math:`N` 充分大, 使得 :math:`\forall n > m > N` 都有
-  :math:`\left\lvert \sigma_n - \sigma_m \right\rvert < \dfrac{\varepsilon^2}{8M}`, 那么
+   若取 :math:`N` 充分大, 使得 :math:`\forall n > m > N` 都有
+   :math:`\left\lvert \sigma_n - \sigma_m \right\rvert < \dfrac{\varepsilon^2}{8M}`, 那么
 
-  .. math::
+   .. math::
 
-    \left\lvert s_n - \sigma_n \right\rvert \leqslant \lvert \text{第一部分} \rvert + \lvert \text{第二部分} \rvert < \varepsilon.
+      \left\lvert s_n - \sigma_n \right\rvert \leqslant \lvert \text{第一部分} \rvert + \lvert \text{第二部分} \rvert < \varepsilon.
 
-  注意我们的取法: :math:`N` 充分大
-  (大于 :math:`\dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`),
-  :math:`m, n` 满足关系:
+   注意我们的取法: :math:`N` 充分大
+   (大于 :math:`\dfrac{8M}{\varepsilon}\left(1 + \frac{\varepsilon}{4M}\right)\left(1 + \frac{\varepsilon}{2M}\right)`),
+   :math:`m, n` 满足关系:
 
-  .. math::
+   .. math::
 
-    \dfrac{n}{1 + \frac{\varepsilon}{2M}} < m < \dfrac{n}{1 + \frac{\varepsilon}{4M}} < n.
+      \dfrac{n}{1 + \frac{\varepsilon}{2M}} < m < \dfrac{n}{1 + \frac{\varepsilon}{4M}} < n.

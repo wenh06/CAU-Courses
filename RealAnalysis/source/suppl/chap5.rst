@@ -57,7 +57,7 @@
    - 依测度收敛但不几乎处处收敛的例子: :math:`E = [0, 1]`,
 
      .. math::
-      :label: modes-of-convergence-eg-1
+         :label: modes-of-convergence-eg-1
 
          f_n(x) = \chi_{\left[ \frac{i}{2^k}, \frac{i + 1}{2^k} \right]}(x), \quad n = 2^k + i, \quad 0 \leqslant i < 2^k.
 
