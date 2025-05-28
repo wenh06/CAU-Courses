@@ -107,15 +107,16 @@
 进而可以归纳定义 Cesàro :math:`(c, r), ~ r \geqslant 1,` 意义下的可和性, 即极限
 :math:`\displaystyle \lim_{n \to \infty} \sigma_n^{(r)} = \lim_{n \to \infty} \dfrac{1}{n} \sum_{k=1}^{n} \sigma_k^{(r-1)}` 存在.
 
-最后是通常意义下的可和, 也就是部分和极限 :math:`\displaystyle \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} a_k` 存在.
+最后是通常意义下的可和, 也就是部分和极限 :math:`\displaystyle \lim_{n \to \infty} s_n = \lim_{n \to \infty} \sum_{k=1}^{n} a_k` 存在.
 
 这三种意义下可和的级数之间有如下关系:
 
-.. tikz::
+.. tikz:: 三种意义下可和的级数关系图
    :align: center
    :xscale: 100
    :libs: arrows.meta, positioning, decorations.pathmorphing
    :packages: amsfonts, amsmath, amssymb, [slantfont,boldfont]xeCJK
+   :label: fig-summable-series
 
    \tikzset{
       baseline=(current bounding box.center),
@@ -132,20 +133,20 @@
    \node (D) [right=.5cm of C1] {$\{\text{通常可和}\}$};
 
    \draw[arrow, dashed] (A) to[bend left=40]
-      node[midway, above] {$a_n = o\left(\frac{1}{n}\right)$} (D);
-   \draw[arrow, dashed] (C) to[bend left=20]
-      node[near start, above] {$a_n = o\left(\frac{1}{n}\right)$} (D);
+    node[midway, above] {$a_n = o\left(\frac{1}{n}\right)$} node[midway, below] {\smaller T1} (D);
+   \draw[arrow, dashed] (C) to[bend left=30]
+      node[near start, above] {$a_n = o\left(\frac{1}{n}\right)$} node[midway, below] {\smaller T2} (D);
    \draw[arrow, dashed] (C) to[bend right=40]
-      node[midway, below] {$a_n = O\left(\frac{1}{n}\right)$} (D);
+      node[midway, below] {$a_n = O\left(\frac{1}{n}\right)$} node[midway, above] {\smaller T3} (D);
 
 上图虚线表示的是添加了相应“正则性”条件的 Tauber 型定理. 后两个包含关系可以用 Stolz 公式证明. 第一个包含关系的证明如下:
 
-假设 :math:`\displaystyle \sigma_n = \dfrac{1}{n} \sum_{k=1}^{n} S_k` 极限为 :math:`A` 所以
+假设 :math:`\displaystyle \sigma_n = \dfrac{1}{n} \sum_{k=1}^{n} s_k` 极限为 :math:`A`, 那么
 
 .. math::
 
    \varlimsup_{n\to\infty} \sqrt[\leftroot{-3}\uproot{3}n]{|n \sigma_n|}
-   = \sqrt[\leftroot{-1}\uproot{18}n]{\sum_{k=1}^{n} S_k} = 1,
+   = \sqrt[\leftroot{-1}\uproot{18}n]{\sum_{k=1}^{n} s_k} = 1,
 
 即幂级数 :math:`\displaystyle \sum_{n=1}^{\infty} n \sigma_n x^n` 收敛半径为 1.
 对于任意的 :math:`|x| < 1`, 上述幂级数绝对收敛, 因此有
@@ -153,17 +154,17 @@
 .. math::
 
    \sum_{n=1}^{\infty} n \sigma_n x^n
-   & = \sum_{n=1}^{\infty} \left( \sum_{k=1}^{n} S_k \right) x^n
-      = \sum_{n=1}^{\infty} \left( S_1 + S_2 + \cdots + S_n \right) x^n \\
+   & = \sum_{n=1}^{\infty} \left( \sum_{k=1}^{n} s_k \right) x^n
+      = \sum_{n=1}^{\infty} \left( S_1 + S_2 + \cdots + s_n \right) x^n \\
    & = S_1 x (1 + x + x^2 + \cdots) + S_2 x^2 (1 + x + x^2 + \cdots) + \cdots \\
-   & = \sum_{n=1}^{\infty} S_n x^n \dfrac{1}{1-x}
+   & = \sum_{n=1}^{\infty} s_n x^n \dfrac{1}{1-x}
 
-上式也表明了 :math:`\displaystyle \sum_{n=1}^{\infty} S_n x^n` 收敛半径 :math:`\geqslant 1`,
+上式也表明了 :math:`\displaystyle \sum_{n=1}^{\infty} s_n x^n` 收敛半径 :math:`\geqslant 1`,
 故在 :math:`|x| < 1` 范围内绝对收敛. 于是类似地有
 
 .. math::
 
-   \sum_{n=1}^{\infty} S_n x^n
+   \sum_{n=1}^{\infty} s_n x^n
    & = \sum_{n=1}^{\infty} \left( a_1 + a_2 + \cdots + a_n \right) x^n
       = \sum_{n=1}^{\infty} a_n x^n (1 + x + x^2 + \cdots) \\
    & = \sum_{n=1}^{\infty} a_n x^n \dfrac{1}{1-x}.
@@ -224,11 +225,14 @@
    \sum_{n=1}^{\infty} (-1)^{n+1} (n+1) x^n = \left( \sum_{n=1}^{\infty} (-x)^{n+1} \right)'
    = \left( \dfrac{x^2}{1 + x} \right)' = \dfrac{2x + x^2}{(1+x)^2} \to \dfrac{3}{4} ~~ (x \to 1-).
 
-但 :math:`S_n = \begin{cases} k + 1, & n = 2k - 1, \\ -k, & n = 2k, \end{cases}`
-故 :math:`\displaystyle \lim_{n \to \infty} \dfrac{S_n}{n}` 极限不存在,
-不满足级数 Cesàro $(c, 1)$ 可和的必要条件 :math:`\displaystyle \lim_{n \to \infty} \dfrac{S_n}{n} = 0`.
+但 :math:`s_n = \begin{cases} k + 1, & n = 2k - 1, \\ -k, & n = 2k, \end{cases}`
+故 :math:`\displaystyle \lim_{n \to \infty} \dfrac{s_n}{n}` 极限不存在,
+不满足级数 Cesàro $(c, 1)$ 可和的必要条件 :math:`\displaystyle \lim_{n \to \infty} \dfrac{s_n}{n} = 0`.
 
 第三个严格包含关系的例子: :math:`a_n = (-1)^{n+1}`.
-容易算得 :math:`S_n = \begin{cases} 1, & n = 2k - 1, \\ 0, & n = 2k, \end{cases}`
+容易算得 :math:`s_n = \begin{cases} 1, & n = 2k - 1, \\ 0, & n = 2k, \end{cases}`
 于是 :math:`\sigma_{n} \to \dfrac{1}{2} ~~ (n \to \infty)`.
 即通常意义下发散的级数 :math:`\displaystyle \sum_{n=1}^{\infty} (-1)^{n+1}` 是 Cesàro $(c, 1)$ 可和的.
+
+Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定理 T3 的证明稍微复杂一些,
+具体见 :ref:`第九章补充材料 <cesaro-tauber>`.

@@ -349,17 +349,14 @@
 
    .. math::
 
-      \varphi([0, t_0]) \supset [\varphi(0), \varphi(t_0)] = [0, \varphi(t_0)].
+      \varphi([0, t_1]) \supset [\varphi(0), \varphi(t_1)] = [0, \varphi(t_1)].
 
-   特别地, 存在 :math:`t_0 \in [0, t_1]` 使得 :math:`\varphi(t_0) = c`. 令 :math:`E_0 = E \cap [-t_0, t_0]`, 那么有 :math:`m E_0 = \varphi(t_0) = c`.
+   特别地, 存在 :math:`t_0 \in [0, t_1]` 使得 :math:`\varphi(t_0) = c`. 令 :math:`\widetilde{E_0} = E \cap [-t_0, t_0]`,
+   那么有 :math:`m^* \widetilde{E_0} = \varphi(t_0) = c`.
 
-   .. note::
-
-      若进一步利用 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 可以找到 :math:`G_{\delta}`-集 :math:`A_0`, 即 :math:`E_0` 的等测包, 使得
-
-      .. math::
-
-         m A_0 = m^* E_0 = c.
+   接下来是 :math:`E_0` 的构造. 由于 :math:`\widetilde{E_0} = E \cap [-t_0, t_0]` 不一定可测,
+   所以不能直接取 :math:`E_0 = \widetilde{E_0}`. 另一方面, 也不能取 :math:`E_0` 为 :math:`\widetilde{E_0}` 的等测包,
+   因为这样不能保证 :math:`E_0` 是 :math:`E` 的子集.
 
 .. _ex-2-20:
 

@@ -1,6 +1,8 @@
 第九章补充材料
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _cesaro-tauber:
+
 1. 级数的 Cesàro 求和法及 Tauber 型定理:
 
 设 :math:`s_n = \sum\limits_{k=1}^{n} a_k` 是数项级数 :math:`\sum\limits_{n=1}^{\infty} a_n` 的前 :math:`n` 项和,
@@ -13,7 +15,6 @@
 a. 设级数 :math:`\sum\limits_{n=1}^{\infty} a_n` 在通常意义下收敛到有限实数 :math:`A`,
    即 :math:`\lim\limits_{n \to \infty} s_n = A`, 那么级数 :math:`\sum\limits_{n=1}^{\infty} a_n` 是 :math:`(c, 1)` 可和的,
    而且有 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`.
-
 b. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\to\infty` 时,
    :math:`a_n = \mathrm{o} \left( \dfrac{1}{n} \right)`, 那么该级数在通常意义下可和,
    且 :math:`\sum\limits_{n=1}^{\infty} a_n = A`.
