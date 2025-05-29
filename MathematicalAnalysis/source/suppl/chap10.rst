@@ -1,6 +1,8 @@
 第十章补充材料
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _generalized-vanderwaerden-tagaki-function:
+
 1. Generalized Van der Waerden-Takagi 函数定义如下
 
 .. math::
@@ -98,6 +100,8 @@
 容易看出, 当 :math:`b` 为正偶数, 或者 :math:`ab = 1` 时, 上式当 :math:`n \to \infty` 时发散.
 :math:`b` 为奇数且 :math:`ab > 1` 的情况需进一步讨论.
 
+.. _summable-series:
+
 2. 三种意义下可和 (summable) 的 (数项) 级数 :math:`\displaystyle \sum_{n=1}^{\infty} a_n`:
 
 首先是 Abel 意义下的可和, 也就是极限 :math:`\displaystyle \lim_{x \to 1^-} \sum_{n=1}^{\infty} a_n x^n` 存在.
@@ -116,7 +120,6 @@
    :xscale: 100
    :libs: arrows.meta, positioning, decorations.pathmorphing
    :packages: amsfonts, amsmath, amssymb, [slantfont,boldfont]xeCJK
-   :label: fig-summable-series
 
    \tikzset{
       baseline=(current bounding box.center),
@@ -236,3 +239,110 @@
 
 Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定理 T3 的证明稍微复杂一些,
 具体见 :ref:`第九章补充材料 <cesaro-tauber>`.
+
+.. _power-series-tanx:
+
+3. :math:`f(x) = \tan x` 在 :math:`x = 0` 附近的幂级数展开及其收敛半径:
+
+方法一: 直接利用泰勒公式展开:
+
+.. math::
+
+   \tan x = \sum_{n=0}^{\infty} c_n x^n = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(0)}{n!} x^n,
+
+接下来计算 :math:`f(x) = \tan x` 的各阶导函数及其在 :math:`x = 0` 处的值即可.
+这种方法较难求出 :math:`c_n` 的通项, 以及相应的收敛半径.
+
+方法二: 利用待定系数法, 令 :math:`\displaystyle f(x) = \tan x = \sum_{n=0}^\infty c_n x^n`, 那么
+由 :math:`\sin x = \tan x \cos x` 有
+
+.. math::
+
+   \sum_{n=0}^\infty \dfrac{(-1)^n}{(2n+1)!} x^{2n+1}
+   = \left( \sum_{n=0}^\infty c_n x^n \right) \cdot \left( \dfrac{(-1)^n}{(2n)!} x^{2n} \right)
+
+通过比较上式两边系数可以对 :math:`c_n` 进行递归求解. 这种方法还是难以求出 :math:`c_n` 的通项, 以及相应的收敛半径.
+
+方法三: 利用三角函数作为复函数的表达:
+
+.. math::
+
+   \sin x = \dfrac{e^{ix} - e^{-ix}}{2i}, \quad \cos x = \dfrac{e^{ix} + e^{-ix}}{2},
+
+那么有
+
+.. math::
+
+   x \cot x = x \dfrac{\cos x}{\sin x} = ix \dfrac{e^{2ix} + 1}{e^{2ix} - 1}
+   = ix \left( \dfrac{2}{e^{2ix} - 1} + 1 \right)
+   = ix + \dfrac{2}{e^{2ix} - 1}.
+
+由 :math:`\displaystyle \dfrac{z}{e^z - 1} = \sum_{n=0}^\infty \dfrac{B_n z^n}{n!}`,
+其中 :math:`B_n` 为 Bernoulli 数, 代入 :math:`z = 2ix` 即有
+
+.. math::
+
+   x \cot x = \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n},
+
+或等价地有
+
+.. math::
+
+   \cot x = \dfrac{1}{x} + \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n-1}.
+
+接下来, 利用 :math:`\tan x = \cot x - 2 \cot 2x,` 将上式代入, 有
+
+.. math::
+
+   \tan x
+   & = \dfrac{1}{x} + \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n-1}
+       - 2\dfrac{1}{2x} + 2\sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} (2x)^{2n-1} \\
+   & = \sum_{n=1}^\infty \dfrac{(-4)^n (1 - 4^n) B_{2n}}{(2n)!} x^{2n-1}.
+
+利用这种方法, 我们可以求得 :math:`\tan x` 幂级数展开的通项表达, 但收敛半径还是不方便计算.
+
+方法四: 利用 :math:`\displaystyle \dfrac{\sin \pi x}{\pi x}` 的在 :math:`|x| < 1` 范围内的无穷乘积展开
+
+.. math::
+
+   \dfrac{\sin \pi x}{\pi x} = \prod_{n=1}^\infty \left( 1 - \dfrac{x^2}{n^2} \right),
+
+两边取对数导数 :math:`\displaystyle \dfrac{1}{\pi} \cdot \dfrac{\mathrm{d}}{\mathrm{d} x} \left( \ln (\cdot) \right)` 有
+
+.. math::
+
+   \dfrac{\cos \pi x}{\sin \pi x} - \dfrac{1}{\pi x}
+   = -\dfrac{1}{\pi} \sum_{n=1}^\infty \dfrac{2x}{n^2} \cdot \left( 1 - \dfrac{x^2}{n^2} \right)^{-1},
+
+从而有
+
+.. math::
+
+   \pi x \cot \pi x
+   & = 1 - 2 \sum_{n=1}^\infty \dfrac{x^2}{n^2} \cdot \left( 1 - \dfrac{x^2}{n^2} \right)^{-1} \\
+   & = 1 - 2 \sum_{n=1}^\infty \dfrac{x^2}{n^2} \cdot \left( \sum_{k=0}^\infty \left( \dfrac{x^2}{n^2} \right)^k \right) \\
+   & = 1 - 2 \sum_{n=1}^\infty \sum_{k=1}^\infty \left( \dfrac{x^2}{n^2} \right)^k \\
+   & = 1 - 2 \sum_{k=1}^\infty \left( \sum_{n=1}^\infty \dfrac{1}{n^{2k}} \right) x^{2k} \\
+   & = 1 - 2 \sum_{k=1}^\infty \zeta(2k) x^{2k}.
+
+其中 :math:`\displaystyle \zeta(s) := \sum_{n=1}^\infty \dfrac{1}{n^{s}}` 为 Riemann zeta 函数. 由此可求得
+
+.. math::
+
+   \cot x = \dfrac{1}{x} - 2 \sum_{k=1}^\infty \dfrac{\zeta(2k)}{\pi^{2k}} x^{2k-1},
+
+代入 :math:`\tan x = \cot x - 2 \cot 2x` 可得
+
+.. math::
+
+   \tan x = 2 \sum_{k=1}^\infty \dfrac{(4^k - 1)\zeta(2k)}{\pi^{2k}} x^{2k-1}.
+
+进一步利用 :math:`\displaystyle \lim_{n\to\infty} \zeta(n) = 1`, 可得
+
+.. math::
+
+   \dfrac{1}{R^2} = \lim_{k\to\infty} \dfrac{(4^{k+1} - 1)\zeta(2k+2)}{\pi^{2k+2}}
+      \cdot \dfrac{\pi^{2k}}{(4^k - 1)\zeta(2k)}
+   = \dfrac{4}{\pi^2},
+
+从而知 :math:`\tan x` 的收敛半径 :math:`\displaystyle R = \dfrac{\pi}{2}`.
