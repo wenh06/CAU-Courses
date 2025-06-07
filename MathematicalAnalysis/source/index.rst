@@ -43,6 +43,7 @@
    suppl/chap7
    suppl/chap9
    suppl/chap10
+   suppl/chap11
 
 .. toctree::
    :maxdepth: 2
