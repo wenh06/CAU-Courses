@@ -113,7 +113,7 @@
       & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x, \quad \theta(h) \in (0, 1).
 
    那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族,
-   且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为 指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
+   且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
 
    .. math::
 

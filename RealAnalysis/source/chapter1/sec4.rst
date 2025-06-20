@@ -100,7 +100,6 @@
    .. math::
       :label: cantor-set-chap1-sec4-ex26
 
-      \begin{align*}
       F_1 & = F_{11} \cup F_{12} = \left[ 0, \dfrac{1}{3} \right] \cup \left[ \dfrac{2}{3}, 1 \right], \\
       I_1 & = I_{11} = \left( \dfrac{1}{3}, \dfrac{2}{3} \right), \\
       F_2 & = F_{21} \cup F_{22} \cup F_{23} \cup F_{24} = \left[ 0, \dfrac{1}{9} \right] \cup
@@ -112,8 +111,7 @@
       I_n & = I_{n1} \cup I_{n2} \cup \cdots \cup I_{n2^{n-1}}, \\
       & \vdots \\
       G_0 & = \bigcup_{n=1}^{\infty} I_n, \\
-      P_0 & = \mathscr{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}. \\
-      \end{align*}
+      P_0 & = \mathscr{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}.
 
    康托三分集的补集即为 :math:`G_0`, 其构成区间为 :math:`I_n`, 集合 :math:`E` 即由这些构成区间的中点所成的集.
 
