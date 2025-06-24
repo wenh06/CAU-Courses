@@ -66,3 +66,4 @@
    exams/2024-final
    exams/2025-mid-1
    exams/2025-mid-2
+   exams/2025-final
