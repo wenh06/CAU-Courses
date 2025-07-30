@@ -181,7 +181,7 @@ linkcheck_ignore = [
 
 
 # -- Options for TikZ -------------------------------------------------
-tikz_extra_packages = "[slantfont,boldfont]xeCJK, amsfonts, amssymb, amssymb, pifont, relsize"
+tikz_extra_packages = "[slantfont,boldfont]xeCJK, amsfonts, amssymb, amssymb, mathrsfs, pifont, relsize"
 tikz_tikzlibraries = "calc, cd, positioning, shapes, arrows.meta"
 
 
