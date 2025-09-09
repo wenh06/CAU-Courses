@@ -9,6 +9,11 @@
 课程教材
 ------------------
 
+待添加
+
+旧版教材
+------------------
+
 《`高等数学 <https://www.sinobook.com.cn/b2c/scrp/bookdetail.cfm?iBookNo=1099784>`_》, 第2版, 王来生, 卢恩双, 中国农业大学出版社, 2019
 
 任课教师联系方式
@@ -24,11 +29,14 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: 课后习题解答:
+   :caption: 课后习题解答及补充材料:
 
    chap1
    chap2
    chap3
+   chap4
+   chap5
+   chap6
 
 .. toctree::
    :maxdepth: 2
@@ -45,3 +53,11 @@
    final_exams/2022-2023
    final_exams/2023-2024
    final_exams/2024-2025
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 旧版教材 (王来生等《高等数学》) 课后习题解答:
+
+   legacy/chap1
+   legacy/chap2
+   legacy/chap3
