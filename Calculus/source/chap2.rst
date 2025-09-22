@@ -10,6 +10,44 @@
 §2.1 数列的极限
 --------------------------------
 
+1. 依据 :math:`\varepsilon - N` 定义证明:
+
+(6). :math:`\lim\limits_{n \to \infty} \sqrt[n]{n} = 1`.
+
+.. proof:proof::
+
+   需要证明对任意 :math:`\varepsilon > 0`, 存在正整数 :math:`N`, 使得当 :math:`n > N` 时,
+   有 :math:`\lvert \sqrt[n]{n} - 1 \rvert < \varepsilon`, 即 :math:`n < (1 + \varepsilon)^n`.
+   利用二项式展开右端, 有
+
+   .. math::
+      :label: binomial-expansion
+
+      (1 + \varepsilon)^n =
+      1 + n \varepsilon + \dfrac{n(n-1)}{2} \varepsilon^2 + \cdots + \varepsilon^n
+      > \dfrac{n(n-1)}{2} \varepsilon^2.
+
+   因此只需找到 :math:`N` 使得 :math:`n < \dfrac{n(n-1)}{2} \varepsilon^2` 对所有 :math:`n > N` 都成立.
+   于是, 只需要取 :math:`N = \max \left\{ 2, \left\lceil \dfrac{2}{\varepsilon^2} + 1 \right\rceil \right\}` 即可.
+   这里 :math:`\lceil x \rceil` 表示不小于 :math:`x` 的最小整数. 让 :math:`N` 至少为 2,
+   是为了保证二项式展开式 :eq:`binomial-expansion` 中的 :math:`\dfrac{n(n-1)}{2} \varepsilon^2` 项存在.
+
+7. 设 :math:`\lim\limits_{n \to \infty} x_n = 0`, :math:`y_n` 是一个有界数列, 即存在常数 :math:`M > 0`,
+   使得 :math:`|y_n| < M (n = 1, 2, \dots)`. 证明 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
+
+.. proof:proof::
+
+   由于 :math:`\lim\limits_{n \to \infty} x_n = 0`, 那么对任意 :math:`\varepsilon > 0`, 存在正整数 :math:`N`,
+   使得当 :math:`n > N` 时, 有 :math:`|x_n - 0| < \dfrac{\varepsilon}{M}`, 即 :math:`|x_n| < \dfrac{\varepsilon}{M}`.
+   又因为数列 :math:`y_n` 有界, 存在常数 :math:`M > 0`, 使得对所有 :math:`n` 都有 :math:`|y_n| < M`.
+   因此当 :math:`n > N` 时, 有
+
+   .. math::
+
+      |x_n y_n - 0| = |x_n y_n| = |x_n| |y_n| < \dfrac{\varepsilon}{M} \cdot M = \varepsilon.
+
+   这就证明了 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
+
 §2.2 函数的极限
 --------------------------------
 
