@@ -9,12 +9,12 @@
 课程教材
 ------------------
 
-《`高等数学 <https://www.caupress.cn/website/#/bookStore/detail?id=6257&cmsPath=14506>`_》, 侯松波，吴养会，杨云雁，王灯山, 中国农业大学出版社, 2025
+《`高等数学 <https://www.caupress.cn/website/#/bookStore/detail?id=6257&cmsPath=14506>`__》, 侯松波，吴养会，杨云雁，王灯山, 中国农业大学出版社, 2025
 
 旧版教材
 ------------------
 
-《`高等数学 <https://www.sinobook.com.cn/b2c/scrp/bookdetail.cfm?iBookNo=1099784>`_》, 第2版, 王来生, 卢恩双, 中国农业大学出版社, 2019
+《`高等数学 <https://www.sinobook.com.cn/b2c/scrp/bookdetail.cfm?iBookNo=1099784>`__》, 第2版, 王来生, 卢恩双, 中国农业大学出版社, 2019
 
 任课教师联系方式
 ------------------

@@ -9,18 +9,18 @@
 课程教材
 ------------------
 
-《`实变函数与泛函分析概要 (第1册) <https://www.hep.com.cn/book/show/5621a725-23ef-481d-aa96-8f4686171683>`_》 (第5版), 郑维行, 王声望, 高等教育出版社, 2019年
+《`实变函数与泛函分析概要 (第1册) <https://www.hep.com.cn/book/show/5621a725-23ef-481d-aa96-8f4686171683>`__》 (第5版), 郑维行, 王声望, 高等教育出版社, 2019年
 
 参考书籍
 ------------------
 
-- 《`实变函数论 <https://www.pup.cn/bookDetail?name=%25E5%25AE%259E%25E5%258F%2598%25E5%2587%25BD%25E6%2595%25B0%25E8%25AE%25BA%25EF%25BC%2588%25E7%25AC%25AC3%25E7%2589%2588%25EF%25BC%2589&id=b704116d9e6f49fc8e823977ed41c1d4&0.6244459417253918>`_》 (第3版), 周民强, 北京大学出版社, 2021年
+- 《`实变函数论 <https://www.pup.cn/bookDetail?name=%25E5%25AE%259E%25E5%258F%2598%25E5%2587%25BD%25E6%2595%25B0%25E8%25AE%25BA%25EF%25BC%2588%25E7%25AC%25AC3%25E7%2589%2588%25EF%25BC%2589&id=b704116d9e6f49fc8e823977ed41c1d4&0.6244459417253918>`__》 (第3版), 周民强, 北京大学出版社, 2021年
 
-- 《`Real Analysis: Modern Techniques and Their Applications <https://item.jd.com/12620006.html>`_》, Gerald B. Folland, 世界图书出版社, 2019
+- 《`Real Analysis: Modern Techniques and Their Applications <https://item.jd.com/12620006.html>`__》, Gerald B. Folland, 世界图书出版社, 2019
 
-- 《`Real Analysis <https://item.jd.com/12568759.html>`_》, H.L. Royden, P.M. Fitzpatrick, 机械工业出版社, 2019
+- 《`Real Analysis <https://item.jd.com/12568759.html>`__》, H.L. Royden, P.M. Fitzpatrick, 机械工业出版社, 2019
 
-- 《`Real and Complex Analysis <https://item.jd.com/12573988.html>`_》, Walter Rudin, 机械工业出版社, 2019
+- 《`Real and Complex Analysis <https://item.jd.com/12573988.html>`__》, Walter Rudin, 机械工业出版社, 2019
 
 任课教师联系方式
 ------------------
