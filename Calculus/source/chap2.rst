@@ -32,6 +32,23 @@
    这里 :math:`[ x ]` 表示 :math:`x` 的整数部分. 这里让 :math:`N` 至少为 2,
    是为了保证二项式展开式 :eq:`binomial-expansion` 中的 :math:`\dfrac{n(n-1)}{2} \varepsilon^2` 项存在.
 
+4. 设 :math:`x_n = \begin{cases} \dfrac{n-1}{n}, & n ~ \text{为偶数}, \\ \dfrac{\sqrt{n^2+1}}{n}, & n ~ \text{为奇数}, \end{cases}`
+   证明 :math:`\lim\limits_{n \to \infty} x_n = 1`.
+
+.. proof:proof::
+
+   需要证明对任意 :math:`\varepsilon > 0`, 存在正整数 :math:`N`, 使得当 :math:`n > N` 时,
+   有 :math:`|x_n - 1| < \varepsilon`. 可以算得
+
+   .. math::
+
+      |x_n - 1| = \begin{cases}
+         \dfrac{1}{n}, & n ~ \text{为偶数}, \\
+         \dfrac{\sqrt{n^2 + 1} - n}{n} = \dfrac{1}{n(\sqrt{n^2 + 1} + n)} < \dfrac{1}{n}, & n ~ \text{为奇数}.
+      \end{cases}
+
+   因此只需取 :math:`N = \left[ \dfrac{1}{\varepsilon} \right] + 1` 即可.
+
 7. 设 :math:`\lim\limits_{n \to \infty} x_n = 0`, :math:`y_n` 是一个有界数列, 即存在常数 :math:`M > 0`,
    使得 :math:`|y_n| < M (n = 1, 2, \dots)`. 证明 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
 
