@@ -28,8 +28,8 @@
       > \dfrac{n(n-1)}{2} \varepsilon^2.
 
    因此只需找到 :math:`N` 使得 :math:`n < \dfrac{n(n-1)}{2} \varepsilon^2` 对所有 :math:`n > N` 都成立.
-   于是, 只需要取 :math:`N = \max \left\{ 2, \left\lceil \dfrac{2}{\varepsilon^2} + 1 \right\rceil \right\}` 即可.
-   这里 :math:`\lceil x \rceil` 表示不小于 :math:`x` 的最小整数. 让 :math:`N` 至少为 2,
+   于是, 只需要取 :math:`N = \max \left\{ 2, \left[ \dfrac{2}{\varepsilon^2} + 1 \right] \right\}` 即可.
+   这里 :math:`[ x ]` 表示 :math:`x` 的整数部分. 这里让 :math:`N` 至少为 2,
    是为了保证二项式展开式 :eq:`binomial-expansion` 中的 :math:`\dfrac{n(n-1)}{2} \varepsilon^2` 项存在.
 
 7. 设 :math:`\lim\limits_{n \to \infty} x_n = 0`, :math:`y_n` 是一个有界数列, 即存在常数 :math:`M > 0`,

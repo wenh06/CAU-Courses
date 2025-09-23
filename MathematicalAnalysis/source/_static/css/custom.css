@@ -43,3 +43,10 @@ tbody {
 .skip-link {
   position: absolute;
 }
+
+
+/* 增加证明环境上下间距 */
+div.proof-content {
+  padding-top: 1em;  /* 调整文字到框顶的距离 */
+  padding-bottom: 1em; /* 调整文字到框底的距离 */
+}

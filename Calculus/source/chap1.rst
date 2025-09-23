@@ -175,10 +175,12 @@
    \draw[covercosColor, ultra thick, |<->|] ($(G) + (-0.65, 0.008)$) -- ($(L) + (-0.65, -0.008)$) node[midway, yshift=-4ex, right] {$\mathrm{covercos}$};
 
 其中主要需要掌握的是带框的 6 个三角函数:
+
 - 正弦函数 :math:`\sin`
 - 余弦函数 :math:`\cos`
 - 正切函数 :math:`\tan`
 - 余切函数 :math:`\cot`
 - 正割函数 :math:`\sec`
 - 余割函数 :math:`\csc`
+
 其他函数如 :math:`\mathrm{versin}, \mathrm{exsec}` 等大部分已经很少使用, 本课程不做要求.

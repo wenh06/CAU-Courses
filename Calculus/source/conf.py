@@ -261,6 +261,6 @@ def html_page_context(
 
 def setup(app):
     app.add_css_file("css/custom.css")
-    app.add_css_file("css/proof.css")
+    # app.add_css_file("css/proof.css")
     app.add_role("pdfembed", pdfembed_role)
     app.connect("html-page-context", html_page_context)
