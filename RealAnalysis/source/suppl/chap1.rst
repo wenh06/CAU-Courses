@@ -116,3 +116,59 @@
 
         对于 Cantor 函数 :math:`\Phi` 的非绝对连续性, 如果学了第四章关于积分与微分的内容, 证明可以得到简化:
         用反证法, 假设 :math:`\Phi` 是绝对连续的, 由于它的导数几乎处处为零, 那么它只能是一个常值函数, 这与 :math:`\Phi` 的定义矛盾.
+
+.. _no_where_dense_vs_sparse:
+
+2. 无处稠密集与稀疏集的关系: 无处稠密集一定是稀疏集, 但稀疏集不一定是无处稠密集. 这里我们给出它们的定义:
+
+一个集合 :math:`A` 被称作是无处稠密集, 指的是它的闭包的内部是空集, 即
+
+.. math::
+
+    \mathring{\overline{A}} := \{ x \in \overline{A} ~:~ x ~ \text{为} ~ \overline{A} ~ \text{的内点} \} = \emptyset.
+
+一个集合 :math:`A` 被称作是稀疏集, 指的是它的余集是稠密集, 即它的余集的闭包等于全集 :math:`X` (一般我们考虑 :math:`\mathbb{R}`):
+
+.. math::
+
+    \overline{ X \setminus A } = X.
+
+.. proof:proof::
+
+    :math:`1^\circ` 证明无处稠密集一定是稀疏集: 设 :math:`A` 是无处稠密集, 那么对于任意的 :math:`x \in X`,
+    :math:`x` 不是 :math:`A` 的内点, 否则 :math:`A` 本身的内部就非空, 它的闭包的内部也必然不是空集.
+    于是, 对于 :math:`x` 的任意邻域 :math:`U(x)`, 总有 :math:`U(x) \cap A^c \neq \emptyset`,
+    也就是说, :math:`x` 是 :math:`A^c` 的闭包中的点. 由于 :math:`x` 的任意性, 可知 :math:`\overline{A^c} = X`.
+    这就证明了 :math:`A` 是稀疏集.
+
+    :math:`2^\circ` 稀疏集不一定是无处稠密集: 可以举一个简单的反例. 取 :math:`A = \mathbb{Q}`,
+    那么 :math:`X \setminus A` 是所有无理数构成的集合, 其闭包就是 :math:`X = \mathbb{R}`,
+    因此 :math:`A = \mathbb{Q}` 是一个稀疏集. 但是它不是无处稠密集, 因为它的闭包 :math:`\overline{\mathbb{Q}} = \mathbb{R}`,
+    内部显然是非空的.
+
+    .. note::
+
+        虽然 :math:`\mathbb{Q}` 不是无处稠密集, 但它是第一纲集, 也就是说可以表示为至多可列多个无处稠密集的并.
+        这样的表示可以取为 (不唯一) :math:`\mathbb{Q} = \bigcup\limits_{x \in \mathbb{Q}} \{x\}`, 或者
+
+        .. math::
+            :label: rational-first-cate
+
+            \mathbb{Q} =
+            \left( \bigcup_{n=1}^{\infty} \{ x \in \mathbb{Q} ~:~ x ~ \text{的高度} H(x) = n \} \right) \cup \{ 0 \}.
+
+        这里, 一个写为既约分数形式的非零有理数 :math:`x = \pm \dfrac{p}{q}` 的高度定义为
+
+        .. math::
+
+            H(x) = \max\{ p, q \}.
+
+        式 :eq:`rational-first-cate` 右边每个集合都是有限集, 都是无处稠密的.
+
+        在完备度量空间 :math:`\mathbb{R}` 中, 有如下的关系:
+
+        .. math::
+
+            \{ \text{稀疏集} \} \supsetneqq \{ \text{第一纲集} \} \supsetneqq \{ \text{无处稠密集} \}.
+
+        注意, 以上第一个包含关系并不是对一般拓扑空间都成立的.
