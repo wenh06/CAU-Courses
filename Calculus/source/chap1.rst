@@ -184,3 +184,13 @@
 - 余割函数 :math:`\csc`
 
 其他函数如 :math:`\mathrm{versin}, \mathrm{exsec}` 等大部分已经很少使用, 本课程不做要求.
+这些被称作 Obsolete Trigonometric Functions, 大多出现在中世纪阿拉伯数学和 16–18 世纪欧洲数学中,
+后来因为不如 :math:`\sin,\cos,\tan` 等直观，逐渐被淘汰. 这些函数列举如下:
+
+- 正矢函数 :math:`\mathrm{versin} \theta = 1 - \cos \theta`
+- 余矢函数 :math:`\mathrm{cvs} \theta = 1 - \sin \theta`
+- 正余矢函数 :math:`\mathrm{vercos} \theta = 1 + \cos \theta`
+- 余余矢函数 :math:`\mathrm{covercos} \theta = 1 + \sin \theta`
+- 外割函数 :math:`\mathrm{exsec} \theta = \sec \theta - 1`
+- 外余割函数 :math:`\mathrm{excsc} \theta = \csc \theta - 1`
+- 弦函数 :math:`\mathrm{crd} \theta = 2 \sin \dfrac{\theta}{2}`
