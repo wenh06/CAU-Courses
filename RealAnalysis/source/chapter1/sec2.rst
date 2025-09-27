@@ -149,8 +149,8 @@
       \end{align*}
 
    对于 :math:`k \in \mathbb{N}`, :math:`\mathcal{H}_{1k}` 表示 :math:`\mathbb{Q}` 中高度为 :math:`k` 的元素全体；:math:`\mathcal{H}_{2k}`
-   表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体. 在每一个 :math:`\mathcal{H}_{1k}` 以及 :math:`\mathcal{H}_{2k}` 中, 将元素按其作为有理数的大小排序.
-   这样, 我们就给出了 :math:`\mathbb{Q} \times \mathbb{Q}^+` 到 :math:`\mathbb{N} \times \mathbb{N}` 的一一对应
+   表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体. 在每一个 :math:`\mathcal{H}_{1k}` 以及 :math:`\mathcal{H}_{2k}` 中,
+   将元素按其作为有理数的大小排序. 这样, 我们就给出了 :math:`\mathbb{Q} \times \mathbb{Q}^+` 到 :math:`\mathbb{N} \times \mathbb{N}` 的一一对应
    :math:`(r_1, r_2): \mathbb{Q} \times \mathbb{Q}^+ \to \mathbb{N} \times \mathbb{N}`.
 
    类似地, 可以通过如下的排序方式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
@@ -338,5 +338,5 @@
 
 .. rubric:: 注
 
-.. [1] 这是根据本节例1的结论得到的: “设集 :math:`A` 与 :math:`[0, 1]` 对等, :math:`B` 是可列集, 则 :math:`A \cup B` 与 :math:`A \setminus B` 均与 :math:`[0, 1]` 对等. ”
-       而 :math:`[0, 1]` 又与 :math:`[0, 1)` 对等, 所以 :math:`A` 与 :math:`[0, 1)` 对等.
+.. [1] 这是根据本节例1的结论得到的: “设集 :math:`A` 与 :math:`[0, 1]` 对等, :math:`B` 是可列集, 则 :math:`A \cup B` 与 :math:`A \setminus B`
+       均与 :math:`[0, 1]` 对等. ” 而 :math:`[0, 1]` 又与 :math:`[0, 1)` 对等, 所以 :math:`A` 与 :math:`[0, 1)` 对等.

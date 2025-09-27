@@ -126,29 +126,29 @@
 .. _l-inf-non-separable:
 
 2. 设 :math:`E` 是有正测度的可测集, 那么 :math:`L^{\infty}(E)` 是不可分的.
-不妨设 :math:`E` 的测度有限, :math:`m E = q \in \mathbb{R}_{>0}`, 否则只要考虑 :math:`E \cap [-M, M]` 即可.
-那么, 由 :ref:`第二章第19题 <ex-2-19>` 知, 对任何数 :math:`c \in (0, q)`,
-存在可测子集 :math:`E_c \subset E` 使得 :math:`m E_c = c`. 考虑可测集族
+   不妨设 :math:`E` 的测度有限, :math:`m E = q \in \mathbb{R}_{>0}`, 否则只要考虑 :math:`E \cap [-M, M]` 即可.
+   那么, 由 :ref:`第二章第19题 <ex-2-19>` 知, 对任何数 :math:`c \in (0, q)`,
+   存在可测子集 :math:`E_c \subset E` 使得 :math:`m E_c = c`. 考虑可测集族
 
-.. math::
+   .. math::
 
-   \mathcal{T} = \{ E_c ~ : ~ c \in (0, q) \},
+      \mathcal{T} = \{ E_c ~ : ~ c \in (0, q) \},
 
-那么 :math:`\mathcal{T}` 不可列, 并且任取 :math:`c_1 \neq c_2 \in (0, q)`,
-对称差 :math:`E_{c_1} \triangle E_{c_2}` 不是零测集, 从而知
+   那么 :math:`\mathcal{T}` 不可列, 并且任取 :math:`c_1 \neq c_2 \in (0, q)`,
+   对称差 :math:`E_{c_1} \triangle E_{c_2}` 不是零测集, 从而知
 
-.. math::
+   .. math::
 
-   d(\chi_{E_{c_1}}, \chi_{E_{c_2}})
-   := \inf_{m e = 0} \sup_{x \in E\setminus e} |\chi_{E_{c_1}}(x) - \chi_{E_{c_2}}(x)| = 1.
+      d(\chi_{E_{c_1}}, \chi_{E_{c_2}})
+      := \inf_{m e = 0} \sup_{x \in E\setminus e} |\chi_{E_{c_1}}(x) - \chi_{E_{c_2}}(x)| = 1.
 
-考虑 :math:`L^{\infty}(E)` 中的开球族
+   考虑 :math:`L^{\infty}(E)` 中的开球族
 
-.. math::
+   .. math::
 
-   \{ B(\chi_{E_{c}}, 1/3) ~ : ~ c \in (0, q) \},
+      \{ B(\chi_{E_{c}}, 1/3) ~ : ~ c \in (0, q) \},
 
-它不可列, 并且其中任意开球都是不交的. 于是对 :math:`L^{\infty}(E)` 中任意可列子集 :math:`\{ f_1, f_2, \dots \}`,
-总存在某个开球 :math:`B(\chi_{E_{c}}, 1/3)` 不含有该可列子集的任何一个元素. 于是, :math:`\chi_{E_{c}} \in L^{\infty}(E)`
-与 :math:`\{ f_1, f_2, \dots \}` 中任意元素的距离都大于等于 1/3, 从而不可能被其中任意子列逼近.
-这就证明了 :math:`L^{\infty}(E)` 是不可分的.
+   它不可列, 并且其中任意开球都是不交的. 于是对 :math:`L^{\infty}(E)` 中任意可列子集 :math:`\{ f_1, f_2, \dots \}`,
+   总存在某个开球 :math:`B(\chi_{E_{c}}, 1/3)` 不含有该可列子集的任何一个元素. 于是, :math:`\chi_{E_{c}} \in L^{\infty}(E)`
+   与 :math:`\{ f_1, f_2, \dots \}` 中任意元素的距离都大于等于 1/3, 从而不可能被其中任意子列逼近.
+   这就证明了 :math:`L^{\infty}(E)` 是不可分的.

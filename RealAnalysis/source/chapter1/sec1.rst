@@ -87,7 +87,7 @@
 
       E \cup \bigcap_{\alpha \in I} A_{\alpha} = \bigcap_{\alpha \in I} (E \cup A_{\alpha})
 
-是否恒成立?
+   是否恒成立?
 
 .. proof:proof::
 
