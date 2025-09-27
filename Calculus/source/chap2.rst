@@ -12,7 +12,7 @@
 
 1. 依据 :math:`\varepsilon - N` 定义证明:
 
-(6). :math:`\lim\limits_{n \to \infty} \sqrt[n]{n} = 1`.
+   (6). :math:`\lim\limits_{n \to \infty} \sqrt[n]{n} = 1`.
 
 .. proof:proof::
 
@@ -68,8 +68,91 @@
 §2.2 函数的极限
 --------------------------------
 
+6. 证明: 若 :math:`\lim\limits_{x\to\infty} f(x) = a > 0`, 则存在 :math:`X > 0`,
+   使得当 :math:`|x| > X` 时, :math:`f(x) > 0`.
+
+.. proof:proof::
+
+   由于 :math:`\lim\limits_{x \to \infty} f(x) = a > 0`, 那么对于 :math:`\varepsilon = \dfrac{a}{2} > 0`,
+   存在 :math:`X > 0`, 使得当 :math:`|x| > X` 时, :math:`|f(x) - a| < \varepsilon = \dfrac{a}{2}`.
+   也就是说有
+
+   .. math::
+
+      0 < \dfrac{a}{2} < f(x) < \dfrac{3a}{2}.
+
 §2.3 极限运算法则
 --------------------------------
+
+5. 设 :math:`f(x)` 是一个函数, 若直线 :math:`y = kx + b` 满足
+
+   .. math::
+
+      \lim_{x \to +\infty} \left [ f (x) - kx - b \right] = 0 \quad
+      (\text {或者} ~ \lim_{x \to -\infty} \left [ f (x) - kx - b \right] = 0),
+
+   则称直线 :math:`y = kx + b` 是函数 :math:`f(x)` 在正无穷 (或者负无穷) 处的渐近线,
+   当 :math:`k = 0` 时, 称为水平渐近线; 当 :math:`k \neq 0` 时, 称为斜渐近线. 若
+
+   .. math::
+
+      \lim_{x \to x_0^+} f (x) = \infty \quad \text {或者} \quad \lim_{x \to x_0^-} f (x) = \infty,
+
+   记函数 :math:`f(x)` 在 :math:`x_0` 某一侧趋于无穷, 则称直线 :math:`x = x_0` 是函数 :math:`f(x)` 的垂直渐近线.
+
+   (1). 证明：若直线 :math:`y = kx + b` 是 :math:`f(x)` 在正无穷处的渐近线, 则
+
+   .. math::
+
+      k = \lim_{x \to +\infty} \dfrac{f(x)}{x}, \quad b = \lim_{x \to +\infty} \left[ f(x) - kx \right];
+
+   (2). 求函数 :math:`f(x) = \dfrac{x^3}{(x - 1)^2}` 的所有渐近线.
+
+.. proof:solution::
+
+   (1). 由题意, 有
+
+   .. math::
+
+      \lim_{x \to +\infty} \left [ f (x) - kx - b \right] = 0,
+
+   利用极限四则运算 (这里是加法) 法则有
+
+   .. math::
+
+      b = \lim_{x \to +\infty} \left[ (f(x) - kx - b) + b \right] = 0 + b = b.
+
+   利用上式, 也可以知道 :math:`\lim\limits_{x \to +\infty} \left[ f(x) - kx \right] = b`, 于是
+
+   .. math::
+
+      0 = \lim_{x \to +\infty} \dfrac{b}{x} = \lim_{x \to +\infty} \dfrac{f(x) - kx}{x}
+        = \lim_{x \to +\infty} \dfrac{f(x)}{x} - k,
+
+   从而有 :math:`k = \lim\limits_{x \to +\infty} \dfrac{f(x)}{x}`.
+
+   (2). 首先, 函数 :math:`f(x) = \dfrac{x^3}{(x - 1)^2}` 在 :math:`x = 1` 无定义, 且
+
+   .. math::
+
+      \lim_{x \to 1} f(x) = \lim_{x \to 1} \dfrac{x^3}{(x - 1)^2} = \infty,
+
+   因此 :math:`x = 1` 是 :math:`f(x)` 的垂直渐近线.
+
+   接下来计算斜渐近线以及水平渐近线: 有
+
+   .. math::
+
+      \dfrac{f(x)}{x} = \dfrac{x^3}{x(x - 1)^2} \to 1 \quad ( x \to \infty ),
+
+   于是, 斜率 :math:`k = 1`. 又有
+
+   .. math::
+
+      f(x) - x = \dfrac{x^3}{(x - 1)^2} - x = \dfrac{x^3 - x(x - 1)^2}{(x - 1)^2}
+      = \dfrac{2x^2 - x}{(x - 1)^2} \to 2 \quad ( x \to \infty ).
+
+   于是, 截距 :math:`b = 2`. 这样就算得 :math:`f(x)` 还有斜渐近线 :math:`y = x + 2`.
 
 §2.4 极限存在准则与重要极限
 --------------------------------
