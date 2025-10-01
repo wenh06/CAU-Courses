@@ -8,15 +8,35 @@
 
 .. proof:proof::
 
-   由于 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的非空闭集, 且 :math:`F_1 \cap F_2 = \emptyset`, 所以 :math:`\rho(F_1, F_2) > 0`.
-   取 :math:`\delta = \dfrac{\rho(F_1, F_2)}{3}`, 并令
+   不妨设 :math:`F_1, F_2` 非空，否则取相应的 :math:`G_i = F_i = \emptyset` 命题显然.
+
+   构造如下集合，下面说明即为题目所求.
 
    .. math::
+      G_1 := \{x \in \mathbb {R}^n \mid \rho (x, F_1) < \rho (x, F_2) \},
+      \quad G_2 := \{ x \in \mathbb {R}^n \mid \rho (x, F_2) < \rho (x, F_1) \}
 
-      G_i = \bigcup_{x \in F_i} U(x, \delta), \quad i = 1, 2.
+   显然 :math:`G_1 \cap G_2 = \emptyset`.
 
-   那么 :math:`G_1, G_2` 都是开集, 且 :math:`G_1 \cap G_2 = \emptyset`. 又由于 :math:`\forall ~ x \in F_1`, 有 :math:`U(x, \delta) \subset G_1`,
-   所以 :math:`F_1 \subset G_1`. 同理可证 :math:`F_2 \subset G_2`.
+   首先证明 :math:`F_i \subset G_i`: 设 :math:`x \in F_1`, 则 :math:`\rho(x, F_1) = 0`.
+   若 :math:`\rho(x, F_2) = 0`, 利用 :math:`F_2` 为闭集，知道存在 :math:`y \in F_2`, 使得
+
+   .. math::
+      \rho (x, F_2) = \rho (x, y) = 0 \implies x = y
+
+   这与 :math:`F_1 \cap F_2 = \emptyset` 矛盾. 故 :math:`\rho(x, F_2) > 0`, 从而 :math:`F_1 \subset G_1`.
+   同理 :math:`F_2 \subset G_2`. 下只需证 :math:`G_1, G_2` 为开集.
+
+   由 :math:`\rho(x, F_1) - \rho(x, F_2) =: f(x)` 关于 :math:`x` 一致连续, 知
+
+   .. math::
+      G_1 = f^{-1}((-\infty, 0)), \quad G_2 = f^{-1}((0, +\infty))
+
+   为开集，因此命题得证.
+
+   .. note::
+
+      此题解答由数学232班闫宇涵提供.
 
 .. _ex-1-23:
 
