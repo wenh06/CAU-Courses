@@ -162,7 +162,7 @@ def _get_mathjax_latest_version() -> str:
             # search for the version number in r.url
             # which will be redirected to the latest version with version number
             # e.g. https://unpkg.com/mathjax@3.2.2/es5/tex-chtml-full.js
-            return re.search("mathjax@([\\w\\.\\-]+)", r.url).group(1)
+            return re.search("mathjax@([\\w\\.\\-]+)", r.url).group(1)  # type: ignore
         else:
             return defalut_mathjax_latest_version
     except Exception:

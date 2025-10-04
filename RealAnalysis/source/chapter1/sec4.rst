@@ -38,6 +38,19 @@
 
       此题解答由数学232班闫宇涵提供.
 
+   .. note::
+
+      原解答必须加上 :math:`F_1, F_2` 至少有一个有界的条件，否则不成立. 下面是原解答:
+
+         由于 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的非空闭集, 且 :math:`F_1 \cap F_2 = \emptyset`,
+         所以 :math:`\rho(F_1, F_2) > 0`. 取 :math:`\delta = \dfrac{\rho(F_1, F_2)}{3}`, 并令
+
+         .. math::
+            G_i = \bigcup_{x \in F_i} U(x, \delta), \quad i = 1, 2.
+
+         那么 :math:`G_1, G_2` 都是开集, 且 :math:`G_1 \cap G_2 = \emptyset`. 又由于 :math:`\forall ~ x \in F_1`,
+         有 :math:`U(x, \delta) \subset G_1`, 所以 :math:`F_1 \subset G_1`. 同理可证 :math:`F_2 \subset G_2`.
+
 .. _ex-1-23:
 
 23. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}^n` 中的闭集, 其中之一有界, 试证存在两点 :math:`a_1 \in F_1, a_2 \in F_2` 使 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
