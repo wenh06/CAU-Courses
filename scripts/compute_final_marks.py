@@ -55,7 +55,6 @@ def select_k(
         The indices of the selected values along each axis.
 
     .. note::
-
         For integer k, this function has the same functionality as :func:`torch.topk`.
 
     """
@@ -109,7 +108,6 @@ def np_topk(arr: np.ndarray, k: int, dim: int = -1, largest: bool = True, sorted
         The indices of the k largest values along each axis.
 
     .. note::
-
         This function has the same functionality as :func:`torch.topk`,
         but is implemented using only numpy.
 

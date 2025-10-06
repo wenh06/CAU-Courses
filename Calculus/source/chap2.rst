@@ -41,7 +41,6 @@
    有 :math:`|x_n - 1| < \varepsilon`. 可以算得
 
    .. math::
-
       |x_n - 1| = \begin{cases}
          \dfrac{1}{n}, & n ~ \text{为偶数}, \\
          \dfrac{\sqrt{n^2 + 1} - n}{n} = \dfrac{1}{n(\sqrt{n^2 + 1} + n)} < \dfrac{1}{n}, & n ~ \text{为奇数}.
@@ -60,7 +59,6 @@
    因此当 :math:`n > N` 时, 有
 
    .. math::
-
       |x_n y_n - 0| = |x_n y_n| = |x_n| |y_n| < \dfrac{\varepsilon}{M} \cdot M = \varepsilon.
 
    这就证明了 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
@@ -78,7 +76,6 @@
    也就是说有
 
    .. math::
-
       0 < \dfrac{a}{2} < f(x) < \dfrac{3a}{2}.
 
 §2.3 极限运算法则
@@ -87,7 +84,6 @@
 5. 设 :math:`f(x)` 是一个函数, 若直线 :math:`y = kx + b` 满足
 
    .. math::
-
       \lim_{x \to +\infty} \left [ f (x) - kx - b \right] = 0 \quad
       (\text {或者} ~ \lim_{x \to -\infty} \left [ f (x) - kx - b \right] = 0),
 
@@ -95,7 +91,6 @@
    当 :math:`k = 0` 时, 称为水平渐近线; 当 :math:`k \neq 0` 时, 称为斜渐近线. 若
 
    .. math::
-
       \lim_{x \to x_0^+} f (x) = \infty \quad \text {或者} \quad \lim_{x \to x_0^-} f (x) = \infty,
 
    记函数 :math:`f(x)` 在 :math:`x_0` 某一侧趋于无穷, 则称直线 :math:`x = x_0` 是函数 :math:`f(x)` 的垂直渐近线.
@@ -103,7 +98,6 @@
    (1). 证明：若直线 :math:`y = kx + b` 是 :math:`f(x)` 在正无穷处的渐近线, 则
 
    .. math::
-
       k = \lim_{x \to +\infty} \dfrac{f(x)}{x}, \quad b = \lim_{x \to +\infty} \left[ f(x) - kx \right];
 
    (2). 求函数 :math:`f(x) = \dfrac{x^3}{(x - 1)^2}` 的所有渐近线.
@@ -113,19 +107,16 @@
    (1). 由题意, 有
 
    .. math::
-
       \lim_{x \to +\infty} \left [ f (x) - kx - b \right] = 0,
 
    利用极限四则运算 (这里是加法) 法则有
 
    .. math::
-
       b = \lim_{x \to +\infty} \left[ (f(x) - kx - b) + b \right] = 0 + b = b.
 
    利用上式, 也可以知道 :math:`\lim\limits_{x \to +\infty} \left[ f(x) - kx \right] = b`, 于是
 
    .. math::
-
       0 = \lim_{x \to +\infty} \dfrac{b}{x} = \lim_{x \to +\infty} \dfrac{f(x) - kx}{x}
         = \lim_{x \to +\infty} \dfrac{f(x)}{x} - k,
 
@@ -134,7 +125,6 @@
    (2). 首先, 函数 :math:`f(x) = \dfrac{x^3}{(x - 1)^2}` 在 :math:`x = 1` 无定义, 且
 
    .. math::
-
       \lim_{x \to 1} f(x) = \lim_{x \to 1} \dfrac{x^3}{(x - 1)^2} = \infty,
 
    因此 :math:`x = 1` 是 :math:`f(x)` 的垂直渐近线.
@@ -142,13 +132,11 @@
    接下来计算斜渐近线以及水平渐近线: 有
 
    .. math::
-
       \dfrac{f(x)}{x} = \dfrac{x^3}{x(x - 1)^2} \to 1 \quad ( x \to \infty ),
 
    于是, 斜率 :math:`k = 1`. 又有
 
    .. math::
-
       f(x) - x = \dfrac{x^3}{(x - 1)^2} - x = \dfrac{x^3 - x(x - 1)^2}{(x - 1)^2}
       = \dfrac{2x^2 - x}{(x - 1)^2} \to 2 \quad ( x \to \infty ).
 
@@ -181,13 +169,11 @@
    使得 :math:`\forall k > K(\varepsilon)` 有 :math:`|a_{n_k} - 0| < \varepsilon / c`, 由于 :math:`a_n > 0` 对所有 :math:`n` 成立, 我们可以得到
 
    .. math::
-
       0 < a_{n_k} < \varepsilon / c
 
    由于 :math:`\forall n > m > 1` 有 :math:`a_n \leqslant c \cdot a_m`, 那么 :math:`\forall n > n_{K(\varepsilon)+1}` 有
 
    .. math::
-
       0 < a_n < c \cdot a_{n_{K(\varepsilon)+1}} < c \cdot \varepsilon / c = \varepsilon
 
    由于 :math:`\varepsilon` 是任意的, 所以 :math:`\lim\limits_{n \to \infty} a_n = 0`.
@@ -202,20 +188,17 @@
    取整函数的定义为
 
    .. math::
-
       [x] = \max \{ n \in \mathbb{Z} | n \leqslant x \} = n \text{ 若 } n \leqslant x < n + 1, n \in \mathbb{Z}
 
    那么对于 :math:`\left[ \dfrac{1}{x} \right]` 来说, 有 :math:`\left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x} < \left[ \dfrac{1}{x} \right] + 1`
    (将上式的 :math:`x, n` 分别替换为 :math:`\dfrac{1}{x}, \left[ \dfrac{1}{x} \right]` 即可), 那么
 
    .. math::
-
       \dfrac{1}{x} - 1 < \left[ \dfrac{1}{x} \right] \leqslant \dfrac{1}{x},
 
    从而有
 
    .. math::
-
       \begin{cases}
          1 - x < x \left[ \dfrac{1}{x} \right] \leqslant 1, & \text{若} x > 0, \\
          1 \leqslant x \left[ \dfrac{1}{x} \right] < 1 - x, & \text{若} x < 0.
@@ -230,7 +213,6 @@
 Riemann 函数定义为
 
 .. math::
-
    R(x) = \begin{cases}
       0, & x \text{ 为无理数} \\
       \dfrac{1}{q}, & x = \dfrac{p}{q} \text{ 为有理数, 且 } p, q \text{ 互素, } q > 0
@@ -267,7 +249,6 @@ Riemann 函数定义为
    对于任意的 :math:`\delta > 0`, 总存在无理数 :math:`x_1 \in U(x_0, \delta)`, 这时有 :math:`R(x_1) = 0`, 从而有
 
    .. math::
-
       \lvert R(x_1) - R(x_0) \rvert = \dfrac{1}{q_0} > \varepsilon
 
    这说明了 Riemann 函数 :math:`R(x)` 当自变量 :math:`x` 趋于有理点 :math:`x_0` 时, 函数值 :math:`R(x)` 不可能以这点的函数值 :math:`R(x_0)` 为极限,

@@ -11,7 +11,6 @@
    使得对任意 :math:`x \in E \setminus e` 有 :math:`|f(x)| \leqslant M`. 于是
 
    .. math::
-
       \int_E |f|^r ~ \mathrm{d} m = \int_{E \setminus e} |f|^r ~ \mathrm{d} m \leqslant M^r m E < \infty,
 
    即 :math:`f \in L^r`. 因此 :math:`L^\infty \subset L^r`.
@@ -20,7 +19,6 @@
    令 :math:`A = E(|f| \geqslant 1)`, 由于 :math:`1 \leqslant r < p`, 故对任意 :math:`x \in A` 有 :math:`|f(x)|^r \leqslant |f(x)|^p`. 于是
 
    .. math::
-
       \int_E |f|^r ~ \mathrm{d} m & = \int_A |f|^r ~ \mathrm{d} m + \int_{E \setminus A} |f|^r ~ \mathrm{d} m \\
       & \leqslant \int_A |f|^p ~ \mathrm{d} m + m E \leqslant \int_E |f|^p ~ \mathrm{d} m + m E < \infty,
 
@@ -50,14 +48,12 @@
    由于在 :math:`L^p` 中 :math:`f_n \xrightarrow{\text{强}} f`, 即有
 
    .. math::
-
       \lim_{n \to \infty} \lVert f_n - f \rVert_p = 0.
 
    取实数 :math:`q > 1`, 使得 :math:`1/p + 1/q = 1/r`, 对一般的 :math:`E` 上可测函数 :math:`g_1, g_2`,
    考虑函数 :math:`|g_1|^r` 与 :math:`|g_2|^r`, 以及 :math:`1/(\frac{p}{r}) + 1/(\frac{q}{r}) = 1`, 由 Hölder 不等式知
 
    .. math::
-
       \int_E |g_1 g_2|^r ~ \mathrm{d} m
       \leqslant \left( \int_E (|g_1|^r)^{p/r} ~ \mathrm{d} m \right)^{r/p} \left( \int_E (|g_2|^r)^{q/r} ~ \mathrm{d} m \right)^{r/q}
       = \lVert g_1 \rVert_p^r \lVert g_2 \rVert_q^r.
@@ -65,13 +61,11 @@
    对上式两边开 r 次方, 有
 
    .. math::
-
       \lVert g_1 g_2 \rVert_r \leqslant \lVert g_1 \rVert_p \lVert g_2 \rVert_q.
 
    由于 :math:`E` 的测度有限, 取 :math:`g_1 = f_n - f`, :math:`g_2 = 1`, 有
 
    .. math::
-
       \lVert f_n - f \rVert_r \leqslant \lVert f_n - f \rVert_p \cdot \lVert 1 \rVert_q
       = \lVert f_n - f \rVert_p \cdot m E^{1/q} \to 0 \quad (n \to \infty).
 
@@ -82,13 +76,11 @@
    也就是说存在零测集 :math:`e_n \subset E`, 使得对任意 :math:`x \in E \setminus e_n` 有 :math:`|f_n(x) - f(x)| < 2\varepsilon`. 于是
 
    .. math::
-
       \int_E |f_n - f|^r ~ \mathrm{d} m = \int_{E \setminus e_n} |f_n - f|^r ~ \mathrm{d} m  \leqslant 2^r \varepsilon^r m E.
 
    对上式两边开 r 次方, 可得对任意 :math:`n > N` 有
 
    .. math::
-
       \lVert f_n - f \rVert_r \leqslant 2 \varepsilon (m E)^{1/r}.
 
    这就表明了 :math:`\displaystyle \lim_{n \to \infty} \lVert f_n - f \rVert_r = 0`, 即 :math:`f_n \xrightarrow{\text{强}} f` 在 :math:`L^r` 中成立.
@@ -103,7 +95,6 @@
    那么由 Fatou 引理有
 
    .. math::
-
       \int_E |f - g|^2 ~ \mathrm{d} m
       & = \int_F |f - g|^2 ~ \mathrm{d} m = \int_F \lim_{n \to \infty} |f - f_n|^2 ~ \mathrm{d} m \\
       & \leqslant \varliminf_{n \to \infty} \int_F |f - f_n|^2 ~ \mathrm{d} m
@@ -117,13 +108,11 @@
 4. 设 :math:`f, f_n \in L^p ~ (p \geqslant 1)`, :math:`f_n \xrightarrow{\text{a.e.}} f`, 又设
 
    .. math::
-
       \int_E |f_n|^p ~ \mathrm{d} m \to \int_E |f|^p ~ \mathrm{d} m.
 
    证明对任何可测子集 :math:`e \subset E`, 有
 
    .. math::
-
       \int_e |f_n|^p ~ \mathrm{d} m \to \int_e |f|^p ~ \mathrm{d} m.
 
 .. proof:proof::
@@ -171,20 +160,17 @@
    对于任意 :math:`1 \leqslant p < \infty`, 由于 :math:`\varphi(t) = t^p` 是凸函数, 故
 
    .. math::
-
       | f_n - f |^p = 2^p \left\lvert \dfrac{f_n - f}{2} \right\rvert^p \leqslant 2^{p - 1} \left( |f_n|^p + |f|^p \right).
 
    令 :math:`g_n = 2^{p - 1} \left( |f_n|^p + |f|^p \right) - | f_n - f |^p` 为非负可测函数. 由于 :math:`f_n \to f ~ (n \to \infty)`,
    故有 :math:`g_n \to 2^p |f|^p` 对任意 :math:`x \in E` 成立. 由 Fatou 引理知
 
    .. math::
-
       \int_E \lim_{n \to \infty} g_n ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_E g_n ~ \mathrm{d} m,
 
    即有
 
    .. math::
-
       \int_E 2^p |f|^p ~ \mathrm{d} m
       & \leqslant \varliminf_{n \to \infty} \int_E 2^{p - 1} \left( |f_n|^p + |f|^p - | f_n - f |^p \right) ~ \mathrm{d} m \\
       & = \int_E 2^{p - 1} |f|^p ~ \mathrm{d} m + \lim_{n \to \infty} 2^{p - 1} \int_E |f_n|^p ~ \mathrm{d} m
@@ -194,7 +180,6 @@
    由上式可得
 
    .. math::
-
       \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m \leqslant 0,
 
    这表明有 :math:`\lVert f_n - f \rVert_p \to 0`, 即 :math:`f_n \xrightarrow{\text{强}} f`.
@@ -221,7 +206,6 @@
 8. 设 :math:`f \in L^p(0, \pi/2)`, :math:`1 \leqslant p < \infty`. 试证
 
    .. math::
-
       \left( \int_{(0, \pi/2)} |f(x)| \cos x ~ \mathrm{d} m \right)^p \leqslant \int_{(0, \pi/2)} |f(x)|^p \cos x ~ \mathrm{d} m.
 
 .. proof:proof::
@@ -232,7 +216,6 @@
    由于在 :math:`(0, \pi/2)` 上有 :math:`0 < \cos x < 1`, 故 :math:`\cos x` 及其任意正次幂都是可积函数. 由 Hölder 不等式知
 
    .. math::
-
       \int_{(0, \pi/2)} |f(x)| \cos x ~ \mathrm{d} m
       & = \int_{(0, \pi/2)} \left( |f(x)| (\cos x)^{1/p} \right) \cdot (\cos x)^{1/q} ~ \mathrm{d} m \\
       & \leqslant \left( \int_{(0, \pi/2)} |f(x)|^p \cos x ~ \mathrm{d} m \right)^{1/p} \left( \int_{(0, \pi/2)} \cos x ~ \mathrm{d} m \right)^{1/q} \\
@@ -243,7 +226,6 @@
    上式两边取 p 次幂即得
 
    .. math::
-
       \left( \int_{(0, \pi/2)} |f(x)| \cos x ~ \mathrm{d} m \right)^p \leqslant \int_{(0, \pi/2)} |f(x)|^p \cos x ~ \mathrm{d} m.
 
 .. _ex-5-9:
@@ -256,14 +238,12 @@
    若对任意 :math:`1 \leqslant p < \infty` 均有 :math:`f \in L^p(E)`, :math:`f \in L^\infty(E)` 不一定成立. 例如, 取 :math:`E = (0, 1)`, 以及函数
 
    .. math::
-
       f(x) = \ln \left( \dfrac{1}{x} \right),
 
    由于 :math:`\displaystyle \lim_{x \to 0^+} f(x) = +\infty`, 故 :math:`f \not\in L^\infty(E)`.
    另一方面, 对任意 :math:`1 \leqslant p < \infty`, 有
 
    .. math::
-
       \lim_{x \to 0^+} \dfrac{\left( \ln \left( \frac{1}{x} \right) \right)^p}{x^{-1/2}} = \lim_{t \to +\infty} \dfrac{t^p}{e^{t/2}} = 0,
 
    而 :math:`\displaystyle \int_{(0, 1)} x^{-1/2} ~ \mathrm{d} x = 2 < \infty`, 故 :math:`f \in L^p(E)`.
@@ -271,20 +251,17 @@
    若对任意 :math:`0 < p < 1` 均有 :math:`f \in L^p(E)`, :math:`f \in L^1(E)` 也不一定成立. 例如, 取 :math:`E = (0, 1)`, 以及函数
 
    .. math::
-
       f(x) = \dfrac{1}{x}.
 
    对任意 :math:`0 < p < 1`, 有
 
    .. math::
-
       \int_{(0, 1)} \dfrac{1}{x^p} ~ \mathrm{d} m = (R) \int_0^1 x^{-p} ~ \mathrm{d} x
       = \dfrac{1}{1 - p} x^{1 - p} \bigg|_0^1 = \dfrac{1}{1 - p} < \infty,
 
    故 :math:`f \in L^p(E)`. 但是 :math:`(0, 1)` 上的非负函数 :math:`f(x)` 的反常积分
 
    .. math::
-
       \int_0^1 x^{-1} ~ \mathrm{d} x = \ln x \bigg|_0^1 = +\infty,
 
    故 :math:`f \not\in L^1(E)`.
@@ -294,7 +271,6 @@
 10. 设 :math:`F(x)` 是 :math:`L^p ~ (p > 1)` 中某个元的不定积分, 证明渐近式
 
     .. math::
-
       F(x + h) - F(x) = O(h^{1 - 1/p}) \quad (h \to 0)
 
     成立.
@@ -316,7 +292,6 @@
    使得对任意满足 :math:`m E_h < \delta` (即满足 :math:`|h| < \delta`) 的区间 :math:`E_h` 有
 
    .. math::
-
       \left( \int_{E_h} |f|^p ~ \mathrm{d} m \right)^{1/p} < \varepsilon,
 
    代入 :eq:`ex-5-10-eq-1` 即得
@@ -329,7 +304,6 @@
    即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`.
 
    .. note::
-
       从 :eq:`ex-5-10-eq-2` 式可以看出, 我们实际证明了一个更强的结论, 即 :math:`F(x + h) - F(x) = o(h^{1 - 1/p})`.
 
 .. _ex-5-11:
@@ -337,7 +311,6 @@
 11. 设 :math:`f(x)` 是平方可积函数, 且存在 :math:`\alpha > 0` 满足
 
     .. math::
-
       \lVert f(x + h) - f(x) \rVert_2 = O(h^{1 + \alpha}), \quad h \to 0,
 
     试证 :math:`f(x)` 几乎处处为常数.
@@ -348,19 +321,16 @@
    使得对任意满足 :math:`0 < |h| < \delta` 的 :math:`h` 有
 
    .. math::
-
       \int_E |f(x + h) - f(x)|^2 ~ \mathrm{d} m < C |h|^{2 + 2\alpha},
 
    即
 
    .. math::
-
       \int_E \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert^2 ~ \mathrm{d} m < C |h|^{2\alpha}.
 
    对任意有限区间 :math:`I \subset E`, 由 Hölder 不等式有
 
    .. math::
-
       \int_I \left\lvert f \right\rvert ~ \mathrm{d} m \leqslant
       \left( \int_I 1 ~ \mathrm{d} m \right)^{1/2} \left( \int_I |f|^2 ~ \mathrm{d} m \right)^{1/2} \leqslant \sqrt{m I} \cdot \lVert f \rVert_2.
 
@@ -368,7 +338,6 @@
    任取一个勒贝格点 :math:`a`, 任取 :math:`x_0 \in E`, 记 :math:`E_0` 为以 :math:`a, x_0` 为端点的区间, 那么有
 
    .. math::
-
       \left\lvert \int_{E_0} \dfrac{f(x + h) - f(x)}{h} ~ \mathrm{d} m \right\rvert
       & \leqslant \int_{E_0} \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert ~ \mathrm{d} m \\
       & \leqslant \left( \int_{E} \left\lvert \dfrac{f(x + h) - f(x)}{h} \right\rvert^2 ~ \mathrm{d} m \right)^{1/2} \cdot \sqrt{m E_0} \\
@@ -377,7 +346,6 @@
    由于 :math:`\alpha > 0`, 令 :math:`h \to 0` 即得
 
    .. math::
-
       0 = \lim_{h \to 0} \int_{E_0} \dfrac{f(x + h) - f(x)}{h} ~ \mathrm{d} m
       = \lim_{h \to 0} \left( \int_{E_{0,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m - \int_{E_{a,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m \right),
 
@@ -386,19 +354,16 @@
    又由于 :math:`E` 上 几乎处处都是 :math:`f(x)` 的勒贝格点, 从而知
 
    .. math::
-
       \lim_{h \to 0} \int_{E_{0,h}} \dfrac{f(x)}{h} ~ \mathrm{d} m = f(x_0), \quad \text{a.e.} ~ x_0 \in E,
 
    进而有
 
    .. math::
-
       f(x_0) = f(a), \quad \text{a.e.} ~ x_0 \in E,
 
    即 :math:`f(x)` 几乎处处为常数.
 
    .. note::
-
       此解答由数学221的邵军奥同学提供.
 
 .. _ex-5-12:
@@ -413,7 +378,6 @@
    由于 :math:`f \in L^p(\mathbb{R})`, 即 :math:`\lVert f \rVert_p < \infty`, 所以
 
    .. math::
-
       \begin{gathered}
       \int_{\mathbb{R}} |f_1|^{p_1} ~ \mathrm{d} m = \int_A |f|^{p_1} ~ \mathrm{d} m \leqslant \int_A |f|^p ~ \mathrm{d} m
       \leqslant \int_{\mathbb{R}} |f|^p ~ \mathrm{d} m = \lVert f \rVert_p^p < \infty, \\
@@ -428,7 +392,6 @@
 13. 设 :math:`f, g` 为 :math:`E = (0, 1)` 上非负可测函数, 满足 :math:`f(x)g(x) \geqslant x^{-1}`, a.e., 试证
 
     .. math::
-
       \int_E f(x) ~ \mathrm{d} m \int_E g(x) ~ \mathrm{d} m \geqslant 4,
 
     并问式中等号可否成立?
@@ -438,13 +401,11 @@
    由于 :math:`f, g` 为 :math:`E = (0, 1)` 上非负可测函数, 满足 :math:`f(x)g(x) \geqslant x^{-1}`, a.e., 故有
 
    .. math::
-
       g(x) \geqslant \dfrac{1}{x f(x)}, \quad \text{a.e.} ~ x \in E.
 
    由 Hölder 不等式知
 
    .. math::
-
       \int_E f(x) ~ \mathrm{d} m \int_E g(x) ~ \mathrm{d} m
       & \geqslant \int_E f(x) ~ \mathrm{d} m \int_E \dfrac{1}{x f(x)} ~ \mathrm{d} m \\
       & = \left( \left( \int_E \left( (f(x))^{1/2} \right)^2 ~ \mathrm{d} m \right)^{1/2}
@@ -460,7 +421,6 @@
 15. 设 :math:`p, q, r` 为满足 :math:`1/p + 1/q = 1 + 1/r` 的三个正数, 证明对任何可测函数 :math:`f, g, h` 有
 
     .. math::
-
       \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
 
 .. proof:proof::
@@ -485,7 +445,6 @@
    将 :eq:`ex-5-15-eq-2` 代入 :eq:`ex-5-15-eq-1` 即得
 
    .. math::
-
       \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p^s \lVert g \rVert_q^s \lVert h \rVert_r
       = \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
 
@@ -494,7 +453,6 @@
 16. 设 :math:`f \in L^p(E)`, :math:`e` 为 :math:`E` 的可测子集, 证明
 
     .. math::
-
       \left( \int_E |f|^p ~ \mathrm{d} m \right)^{1/p} \leqslant
       \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} + \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p}.
 
@@ -503,7 +461,6 @@
    注意到
 
    .. math::
-
       \begin{gathered}
       \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} = \left( \int_E |f|^p \chi_e ~ \mathrm{d} m \right)^{1/p} = \lVert f \chi_e \rVert_p, \\
       \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p} = \left( \int_E |f|^p (1 - \chi_e) ~ \mathrm{d} m \right)^{1/p} = \lVert f (1 - \chi_e) \rVert_p, \\
@@ -513,7 +470,6 @@
    于是由 Minkowski 不等式知
 
    .. math::
-
       \left( \int_E |f|^p ~ \mathrm{d} m \right)^{1/p} & = \lVert f \rVert_p \\
       & \leqslant \lVert f \chi_e \rVert_p + \lVert f (1 - \chi_e) \rVert_p \\
       & = \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} + \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p}.

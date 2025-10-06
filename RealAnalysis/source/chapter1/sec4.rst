@@ -35,11 +35,9 @@
    为开集，因此命题得证.
 
    .. note::
-
       此题解答由数学232班闫宇涵提供.
 
    .. note::
-
       原解答必须加上 :math:`F_1, F_2` 至少有一个有界的条件，否则不成立. 下面是原解答:
 
          由于 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的非空闭集, 且 :math:`F_1 \cap F_2 = \emptyset`,
@@ -64,7 +62,6 @@
       存在 :math:`x_0 \in F`, 使得 :math:`\rho(a, x_0) < \rho(a, F) + \varepsilon`, 于是有
 
       .. math::
-
          \rho(b, F) \leqslant \rho(b, x_0) \leqslant \rho(b, a) + \rho(a, x_0) < \rho(b, a) + \rho(a, F) + \varepsilon.
 
       由于 :math:`\varepsilon` 是任意的, 所以有 :math:`\rho(b, F) \leqslant \rho(b, a) + \rho(a, F)`. 同理可证 :math:`\rho(a, F) \leqslant \rho(a, b) + \rho(b, F)`.
@@ -94,7 +91,6 @@
    令它包含于 :math:`G_2` 中的构成区间 :math:`I_2 = (a_2, b_2)`. 那么由构成区间的构造有
 
    .. math::
-
       a_2 = \inf \{ x : \ (x, x_0) \subset G_2 \}, \quad b_2 = \sup \{ x : \ (x_0, x) \subset G_2 \}.
 
    又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \geqslant a_2`.
@@ -111,7 +107,6 @@
    任取 :math:`\mathbb{R}^n` 中的闭集 :math:`F`, 对任意的 :math:`n \in \mathbb{N}`, 令
 
    .. math::
-
       G_n = \bigcup_{x \in F} U \left( x, \dfrac{1}{n} \right),
       \quad U \left( x, \dfrac{1}{n} \right) := \left\{ y \in \mathbb{R}^n : \ \lvert x - y \rvert < \dfrac{1}{n} \right\}.
 

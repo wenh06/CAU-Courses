@@ -33,7 +33,6 @@
 .. proof:solution::
 
    .. math::
-
       \int_{-1}^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x & = \left(\int_{-1}^0 + \int_0^1 \right) \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
       & = \int_{1}^0 \dfrac{e^{-x} + e^{x}}{1 + 3^{-x}} \mathrm{d}(-x) + \int_0^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
       & = \int_0^1 3^x \cdot \dfrac{e^{-x} + e^{x}}{1 + 3^x} \mathrm{d}x + \int_0^1 \dfrac{e^x + e^{-x}}{1 + 3^x} \mathrm{d}x \\
@@ -43,7 +42,6 @@
       & = e - \dfrac{1}{e}.
 
    .. note::
-
       被积函数 :math:`\dfrac{e^x + e^{-x}}{1 + 3^x}` 分母里的 :math:`3` 替换为任何正实数, 定积分的值都是 :math:`e - \dfrac{1}{e}`.
 
 2. 极坐标下曲线 :math:`r = r(\theta)` 求曲线长公式推导.
@@ -54,19 +52,16 @@
    :math:`\mathrm{d} \ell` 三者构成一个三角形, 由余弦定理有
 
    .. math::
-
       (\mathrm{d} \ell)^2 = r^2(\theta) + r^2(\theta + \mathrm{d} \theta) - 2 r(\theta) r(\theta + \mathrm{d} \theta) \cos \mathrm{d} \theta.
 
    假设 :math:`r(\theta)` 在 :math:`[\alpha, \beta]` 上足够光滑 (连续可导), 那么
 
    .. math::
-
       r(\theta + \mathrm{d} \theta) = r(\theta) + r'(\theta) \mathrm{d} \theta + o(\mathrm{d} \theta),
 
    于是有
 
    .. math::
-
       (\mathrm{d} \ell)^2
       & = r^2(\theta) + r^2(\theta + \mathrm{d} \theta) - 2 r(\theta) r(\theta + \mathrm{d} \theta) \cos \mathrm{d} \theta \\
       & = (r(\theta) - r(\theta + \mathrm{d} \theta))^2 + 2 r(\theta) r(\theta + \mathrm{d} \theta) (1 - \cos \mathrm{d} \theta) \\
@@ -84,19 +79,16 @@
    第三个等式用到了 :math:`\cos \mathrm{d} \theta` 的麦克劳林展开式 (的变形)
 
    .. math::
-
       2(1 - \cos \mathrm{d} \theta) = (\mathrm{d} \theta)^2 + o((\mathrm{d} \theta)^2),
 
    所以有
 
    .. math::
-
       \mathrm{d} \ell = \sqrt{r'(\theta)^2 + r^2(\theta)} \mathrm{d} \theta.
 
    我们也可以发现, 对于以 :math:`r(\theta)` 为半径, :math:`\mathrm{d} \theta` 为角度的圆弧, 其弧长平方 :math:`r^2(\theta) (\mathrm{d} \theta)^2` 与折线平方的误差为
 
    .. math::
-
       r'(\theta)^2) (\mathrm{d} \theta)^2.
 
    究其原因, 就是因为圆弧, 折线, 以及 :math:`r(\theta + \mathrm{d} \theta)` 相对于 :math:`r(\theta)` 的增量 (或减量) :math:`r'(\theta) \mathrm{d} \theta`

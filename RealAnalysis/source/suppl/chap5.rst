@@ -49,7 +49,6 @@
    - 几乎处处收敛但不依测度收敛的例子 (注意, 这里必须有 :math:`m E = \infty`):
 
      .. math::
-
          f_n(x) = \chi_{[n, n + 1]}(x), \quad n \in \mathbb{N}.
 
      可以验证 :math:`f_n(x)` 处处收敛到 :math:`0` 但不依测度收敛到 :math:`0`.
@@ -89,7 +88,6 @@
      但是
 
      .. math::
-
          \int_{\mathbb{R}} f_n(x) g(x) ~ \mathrm{d} x = \dfrac{1}{n} \int_{1}^{e^n} \dfrac{1}{x} ~ \mathrm{d} x = 1.
 
      因此, :math:`f_n` 不弱收敛到 :math:`0`, 因此也不强收敛到 :math:`0`.
@@ -97,13 +95,11 @@
    - 弱收敛但不一致收敛的例子: :math:`E = [0, 1)`,
 
      .. math::
-
          f_n(x) = x^n, \quad n \in \mathbb{N}.
 
      容易验证 :math:`f_n(x) \in L^p(E)` 且由控制收敛定理知, 对任意 :math:`g \in L^q(E) \subset L^1(E)`, 都有
 
      .. math::
-
          \lim_{n \to \infty} \int_{E} f_n(x) g(x) ~ \mathrm{d} m = \int_{E} \lim_{n \to \infty} f_n(x) g(x) ~ \mathrm{d} m = 0.
 
      故 :math:`f_n(x)` 弱收敛到 :math:`0`, 但不一致收敛到 :math:`0`.
@@ -111,14 +107,12 @@
    - 弱收敛但不强收敛的例子: :math:`E = (0, \pi)`,
 
      .. math::
-
          f_n(x) = \sin(nx), \quad n \in \mathbb{N}.
 
      容易验证 :math:`f_n(x) \in L^2(E)`. 由 :ref:`Riemann-Lebesgue 引理 <ex-4-24>`, 对任意可积函数 (特别地, :math:`L^2(E)` 中的函数) :math:`g(x)`,
      都有 :math:`\displaystyle \int_{0}^{\pi} f_n(x) g(x) ~ \mathrm{d} x \to 0`, 因此 :math:`f_n(x)` 弱收敛到 :math:`0`. 但是
 
      .. math::
-
          \lVert f_n \rVert_2^2 = \int_{0}^{\pi} \sin^2(nx) ~ \mathrm{d} x = \dfrac{\pi}{2},
 
      因此 :math:`f_n(x)` 不强收敛到 :math:`0`. 此外, :math:`f_n(x)` 也不几乎处处收敛到 :math:`0`.
@@ -131,21 +125,18 @@
    存在可测子集 :math:`E_c \subset E` 使得 :math:`m E_c = c`. 考虑可测集族
 
    .. math::
-
       \mathcal{T} = \{ E_c ~ : ~ c \in (0, q) \},
 
    那么 :math:`\mathcal{T}` 不可列, 并且任取 :math:`c_1 \neq c_2 \in (0, q)`,
    对称差 :math:`E_{c_1} \triangle E_{c_2}` 不是零测集, 从而知
 
    .. math::
-
       d(\chi_{E_{c_1}}, \chi_{E_{c_2}})
       := \inf_{m e = 0} \sup_{x \in E\setminus e} |\chi_{E_{c_1}}(x) - \chi_{E_{c_2}}(x)| = 1.
 
    考虑 :math:`L^{\infty}(E)` 中的开球族
 
    .. math::
-
       \{ B(\chi_{E_{c}}, 1/3) ~ : ~ c \in (0, q) \},
 
    它不可列, 并且其中任意开球都是不交的. 于是对 :math:`L^{\infty}(E)` 中任意可列子集 :math:`\{ f_1, f_2, \dots \}`,

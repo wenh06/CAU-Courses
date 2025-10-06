@@ -24,7 +24,6 @@
    (2).
 
    .. math::
-
       \int \left( \dfrac{1}{\sqrt{x}} - \dfrac{2}{\sqrt{1-x^2}} + 3e^x \right) \mathrm{d} x
       & = \int x^{-\frac{1}{2}} \mathrm{d} x - 2\int (1-x^2)^{-\frac{1}{2}} \mathrm{d} x + 3 \int e^x \mathrm{d} x \\
       & = 2\sqrt{x} - 2\arcsin x + 3e^x + C.
@@ -32,7 +31,6 @@
    (4).
 
    .. math::
-
       \int \dfrac{e^{2x} - 1}{e^x + 1} \mathrm{d} x & = \int \dfrac{(e^x + 1)(e^x - 1)}{e^x + 1} \mathrm{d} x \\
       & = \int (e^x - 1) \mathrm{d} x \\
       & = e^x - x + C.
@@ -40,7 +38,6 @@
    (6).
 
    .. math::
-
       \int (2^xe^x + 1) \mathrm{d} x & = \int (2e)^x \mathrm{d} x + \int \mathrm{d} x \\
       & = \dfrac{(2e)^x}{\ln (2e)} + x + C \\
       & = \dfrac{2^xe^x}{\ln 2 + 1} + x + C.
@@ -48,7 +45,6 @@
    (8).
 
    .. math::
-
       \int \dfrac{1 - x + x^2}{x + x^3} \mathrm{d} x & = \int \dfrac{1 + x^2}{x + x^3} \mathrm{d} x - \int \dfrac{x}{x + x^3} \mathrm{d} x \\
       & = \int \dfrac{1}{x} \mathrm{d} x - \int \dfrac{1}{x^2 + 1} \mathrm{d} x \\
       & = \ln |x| - \arctan x + C.
@@ -56,7 +52,6 @@
    (10).
 
    .. math::
-
       \int \dfrac{\cos 2x}{\cos^2 x \sin^2 x} \mathrm{d} x & = \int \dfrac{\cos 2x}{(\frac{1}{2} \sin 2x)^2} \mathrm{d} x \\
       & = 2 \int \dfrac{\mathrm{d} \sin 2x}{\sin^2 2x}  \\
       & = 2 \cdot \dfrac{-1}{\sin 2x} + C \\
@@ -76,7 +71,6 @@
    由题设知 :math:`f'(e^x) = 1 + e^{3x}`, 从而 :math:`f'(x) = 1 + x^3`, 那么
 
    .. math::
-
       f(x) = \int (1 + x^3) \mathrm{d} x = x + \dfrac{x^4}{4} + C
 
    由 :math:`f(0) = 1` 知 :math:`C = 1`, 因此 :math:`f(x) = x + \dfrac{x^4}{4} + 1`.
@@ -106,7 +100,6 @@
    (1). 令 :math:`u = 2x - 5`, 则 :math:`\mathrm{d} u = 2 \mathrm{d} x`, 从而有
 
    .. math::
-
       \int \dfrac{1}{(2x - 5)^{10}} \mathrm{d} x & = \dfrac{1}{2} \int u^{-10} \mathrm{d} u = \dfrac{1}{2} \cdot \dfrac{u^{-9}}{-9} + C \\
       & = -\dfrac{1}{18(2x - 5)^9} + C.
 
@@ -115,25 +108,21 @@
    (3).
 
    .. math::
-
       \int \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x = \int \dfrac{\sqrt{1 + x^2}}{2} \mathrm{d} (1 + x^2) = \sqrt{1 + x^2} + C.
 
    (5).
 
    .. math::
-
       \int x^2 e^{2x^3} \mathrm{d} x = \dfrac{1}{6} \int e^{2x^3} \mathrm{d} (2x^3) = \dfrac{1}{6} e^{2x^3} + C.
 
    (7).
 
    .. math::
-
       \int \dfrac{\sqrt{1 + 3\ln x}}{x} \mathrm{d} x = \int \sqrt{1 + 3\ln x} \mathrm{d} (\ln x) = \dfrac{2}{9} (1 + 3\ln x)^{\frac{3}{2}} + C.
 
    (9).
 
    .. math::
-
       \int \dfrac{2x - 1}{\sqrt{1 - x^2}} \mathrm{d} x & = \int \dfrac{2x}{\sqrt{1 - x^2}} \mathrm{d} x - \int \dfrac{1}{\sqrt{1 - x^2}} \mathrm{d} x \\
       & = -\int \dfrac{1}{\sqrt{1 - x^2}} \mathrm{d} (1 - x^2) - \arcsin x + C \\
       & = -2 \sqrt{1 - x^2} - \arcsin x + C.
@@ -141,7 +130,6 @@
    (11).
 
    .. math::
-
       \int \dfrac{1}{4 + 9x^2} \mathrm{d} x
       = \dfrac{2}{3} \cdot \dfrac{1}{4} \int \dfrac{1}{1 + \left( \frac{3}{2} x \right)^2} \mathrm{d} \left( \frac{3}{2} x \right)
       = \dfrac{1}{6} \arctan \dfrac{3}{2} x + C.
@@ -149,14 +137,12 @@
    (13).
 
    .. math::
-
       \int \sin^2 x \cos^2 x \mathrm{d} x & = \dfrac{1}{4} \int \sin^2 2x \mathrm{d} x = \dfrac{1}{8} \int (1 - \cos 4x) \mathrm{d} x \\
       & = \dfrac{1}{32} \int (1 - \cos 4x) \mathrm{d} (4x) = \dfrac{1}{32} (4x - \sin 4x) + C.
 
    (15).
 
    .. math::
-
       \int x (2x - 3)^{10} \mathrm{d} x & = \int \dfrac{1}{2} (2x - 3)^{11} \mathrm{d} x + \int \dfrac{3}{2} (2x - 3)^{10} \mathrm{d} x \\
       & = \dfrac{1}{4} \int (2x - 3)^{11} \mathrm{d} (2x - 3) + \dfrac{3}{4} \int (2x - 3)^{10} \mathrm{d} (2x - 3) \\
       & = \dfrac{1}{4} \cdot \dfrac{(2x - 3)^{12}}{12} + \dfrac{3}{4} \cdot \dfrac{(2x - 3)^{11}}{11} + C \\
@@ -165,7 +151,6 @@
    (17).
 
    .. math::
-
       \int \dfrac{1}{x^2 \sqrt{1 + x^2}} \mathrm{d} x
       & = -\int \dfrac{1}{\sqrt{1 + x^2}} \mathrm{d} \left( \dfrac{1}{x} \right)
         = -\int \dfrac{1}{x} \cdot \dfrac{1}{\sqrt{1 + \left(\frac{1}{x}\right)^2}} \mathrm{d} \left( \dfrac{1}{x} \right) \\
@@ -190,7 +175,6 @@
    (2). 采用分部积分法:
 
    .. math::
-
       \int x \cos (5x + 2) \mathrm{d} x
       & = \dfrac{1}{5} \int x \mathrm{d} \left( \sin (5x + 2) \right) = \dfrac{1}{5} x \sin (5x + 2) - \dfrac{1}{5} \int \sin (5x + 2) \mathrm{d} x \\
       & = \dfrac{1}{5} x \sin (5x + 2) + \dfrac{1}{25} \cos (5x + 2) + C.
@@ -198,7 +182,6 @@
    (4). 令 :math:`x = t^2, t > 0`, 则 :math:`\mathrm{d} x = 2t \mathrm{d} t`, 从而有
 
    .. math::
-
       \int \dfrac{\ln x}{\sqrt{x}} \mathrm{d} x & = \int \dfrac{2t \ln t^2}{t} \mathrm{d} t = 4 \int \ln t \mathrm{d} t \\
       & = 4t \ln t - 4 \int t \mathrm{d} (\ln t) = 4t \ln t - 4 \int t \cdot \dfrac{1}{t} \mathrm{d} t \\
       & = 4t \ln t - 4t + C = 4 \sqrt{x} \ln \sqrt{x} - 4 \sqrt{x} + C \\
@@ -207,7 +190,6 @@
    也可以直接采用分部积分法:
 
    .. math::
-
       \int \dfrac{\ln x}{\sqrt{x}} \mathrm{d} x & = 2 \int \ln x \mathrm{d} \left( \sqrt{x} \right) = 2 \sqrt{x} \ln x - 2 \int \sqrt{x} \mathrm{d} (\ln x) \\
       & = 2 \sqrt{x} \ln x - 2 \int \sqrt{x} \cdot \dfrac{1}{x} \mathrm{d} x \\
       & = 2 \sqrt{x} \ln x - 2 \int \dfrac{1}{\sqrt{x}} \mathrm{d} x \\
@@ -216,7 +198,6 @@
    (6). 采用分部积分法:
 
    .. math::
-
       \int \ln(1 + x^2) \mathrm{d} x & = x \ln(1 + x^2) - \int x \mathrm{d} (\ln(1 + x^2)) = x \ln(1 + x^2) - \int x \cdot \dfrac{2x}{1 + x^2} \mathrm{d} x \\
       & = x \ln(1 + x^2) - 2 \int \dfrac{x^2}{1 + x^2} \mathrm{d} x = x \ln(1 + x^2) - 2 \int \left( 1 - \dfrac{1}{1 + x^2} \right) \mathrm{d} x \\
       & = x \ln(1 + x^2) - 2x + 2 \arctan x + C.
@@ -224,7 +205,6 @@
    (8). 采用分部积分法:
 
    .. math::
-
       \int x f'(x) \mathrm{d} x & = \int x \mathrm{d} f(x) = x f(x) - \int f(x) \mathrm{d} x \\
       & = x (x \cos x)' - x \cos x + C = x \cos x - x^2 \sin x - x \cos x + C \\
       &= -x^2 \sin x + C.
@@ -244,7 +224,6 @@
    (1).
 
    .. math::
-
       \int \dfrac{1}{3 + \sin^2 x} \mathrm{d} x
       & = \int \dfrac{1}{3\cos^2 x + 4\sin^2 x} \mathrm{d} x = \int \dfrac{\sec^2x \mathrm{d} x}{3 + 4\tan^2 x} \\
       & = \int \dfrac{\mathrm{d} \tan x}{3 + 4\tan^2 x}
@@ -254,14 +233,12 @@
    (3). 利用和差化积公式 :math:`\cos x \cos 5x = \dfrac{1}{2} (\cos 4x + \cos 6x)`, 从而有
 
    .. math::
-
       \int \cos x \cos 5x \mathrm{d} x & = \dfrac{1}{2} \int \cos 4x \mathrm{d} x + \dfrac{1}{2} \int \cos 6x \mathrm{d} x \\
       & = \dfrac{1}{8} \sin 4x + \dfrac{1}{12} \sin 6x + C.
 
    (5).
 
    .. math::
-
       \int \dfrac{2x + 5}{x^2 + 4x + 8} \mathrm{d} x & = \int \dfrac{2(x + 2) + 1}{(x + 2)^2 + 4} \mathrm{d} (x + 2) \\
       & = 2 \int \dfrac{x + 2}{(x + 2)^2 + 4} \mathrm{d} (x + 2) + \int \dfrac{1}{(x + 2)^2 + 4} \mathrm{d} (x + 2) \\
       & = \int \dfrac{1}{(x + 2)^2 + 4} \mathrm{d} (x + 2)^2 + \dfrac{1}{2} \int \dfrac{1}{(\frac{x + 2}{2})^2 + 1} \mathrm{d} \left(\dfrac{x + 2}{2}\right) \\
@@ -271,7 +248,6 @@
    (7). 令 :math:`u = \sqrt{3 + 4x}`, 那么 :math:`\mathrm{d} x = \dfrac{u \mathrm{d} u}{2}`, 从而有
 
    .. math::
-
       \int \dfrac{x}{\sqrt{3 + 4x}} \mathrm{d} x & = \int \dfrac{u^2 - 3}{4u} \cdot \dfrac{u \mathrm{d} u}{2} = \dfrac{1}{8} \int (u^2 - 3) \mathrm{d} u \\
       & = \dfrac{1}{8} \cdot \dfrac{u^3}{3} - \dfrac{3}{8} u + C \\
       & = \dfrac{1}{24} (3 + 4x)^{\frac{3}{2}} - \dfrac{3}{8} \sqrt{3 + 4x} + C \\
@@ -290,7 +266,6 @@
    设细棒的质量为 :math:`m`, 则有
 
    .. math::
-
       m = \int_a^b \rho(x) \mathrm{d} x.
 
 3. 利用定积分的几何意义, 给出下列定积分的值:
@@ -337,7 +312,6 @@
    最大值为 :math:`e^2`, 因此有
 
    .. math::
-
       2 e^{-\frac{1}{4}} = \int_0^2 e^{-\frac{1}{4}} \mathrm{d} x < \int_0^2 e^{x^2 - x} \mathrm{d} x < \int_0^2 e^2 \mathrm{d} x = 2 e^2.
 
 6. 设函数 :math:`f(x)` 在区间 :math:`[1, 3]` 上的平均值为 :math:`6`, 求定积分 :math:`\displaystyle \int_1^3 f(x) \mathrm{d} x`.
@@ -347,7 +321,6 @@
    函数 :math:`f(x)` 在区间 :math:`[1, 3]` 上的平均值为 :math:`6`, 也就是说有
 
    .. math::
-
       \dfrac{\int_1^3 f(x) \mathrm{d} x}{3 - 1} = 6,
 
    从而有 :math:`\displaystyle \int_1^3 f(x) \mathrm{d} x = 12`.
@@ -372,7 +345,6 @@
    (5).
 
    .. math::
-
       \displaystyle \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{\int_x^0 \ln (1 + t^2) \mathrm{d} t}
       & = \lim_{x \to 0} \dfrac{\int_0^x t(t + \sin t) \mathrm{d} t}{-\int_0^x \ln (1 + t^2) \mathrm{d} t} = -\lim_{x \to 0} \dfrac{x(x + \sin x)}{\ln (1 + x^2)} \\
       & = -\lim_{x \to 0} \dfrac{2x + x \cos x + \sin x}{\frac{2x}{1 + x^2}} \\
@@ -380,11 +352,9 @@
       & = -2.
 
    .. note::
-
       一般地, 如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
 
       .. math::
-
          f'(x) = g(\psi(x)) \psi'(x) - g(\varphi(x)) \varphi'(x).
 
 2. 设 :math:`y = f(x)` 是由方程 :math:`\displaystyle x^2 y = \int_0^y \sqrt{1 + t^2} \mathrm{d} t` 所确定的隐函数,
@@ -395,19 +365,16 @@
    对方程两边求微分, 有
 
    .. math::
-
       2x y \mathrm{d} x + x^2 \mathrm{d} y = \sqrt{1 + y^2} \mathrm{d} y,
 
    移项之后有
 
    .. math::
-
       \mathrm{d} y = \dfrac{2x y}{\sqrt{1 + y^2} - x^2} \mathrm{d} x.
 
 3. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加, 令
 
    .. math::
-
       F(x) = \dfrac{1}{x - a} \int_a^x f(t) \mathrm{d} t \quad (a < x \leqslant b),
 
    试证明在区间 :math:`(a, b]` 上恒有 :math:`F'(x) \geqslant 0`.
@@ -417,13 +384,11 @@
    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加, 所以有
 
    .. math::
-
       F'(x) = \dfrac{1}{x - a} \cdot f(x) - \dfrac{1}{(x - a)^2} \int_a^x f(t) \mathrm{d} t.
 
    进一步由积分中值定理, 存在 :math:`\xi \in (a, x)` 使得 :math:`\displaystyle \int_a^x f(t) \mathrm{d} t = f(\xi) (x - a)`, 因此有
 
    .. math::
-
       F'(x) = \dfrac{1}{x - a} \cdot f(x) - \dfrac{f(\xi) (x - a)}{(x - a)^2} = \dfrac{1}{x - a} \cdot \left( f(x) - f(\xi) \right).
 
    由于 :math:`f(x)` 在区间 :math:`[a, b]` 上连续且单调增加, 因此有 :math:`f(x) \geqslant f(\xi)`, 从而有 :math:`F'(x) \geqslant 0`.
@@ -446,7 +411,6 @@
    (1). 令 :math:`t = \sqrt{x}`, 那么 :math:`x = t^2, \mathrm{d} x = 2t \mathrm{d} t`, 从而有
 
    .. math::
-
       \int_0^4 (2 - \sqrt{x})^2 \mathrm{d} x & = \int_0^2 (2 - t)^2 \cdot 2t \mathrm{d} t = 2 \int_0^2 (4 - 4t + t^2) t \mathrm{d} t \\
       & = 2 \int_0^2 (4t - 4t^2 + t^3) \mathrm{d} t = 2 \left. \left[ 2t^2 - \dfrac{4}{3} t^3 + \dfrac{1}{4} t^4 \right] \right|_0^2 \\
       & = 2 \left( 8 - \dfrac{32}{3} + 4 \right) = \dfrac{8}{3}.
@@ -454,7 +418,6 @@
    (3). 令 :math:`u = 2 \sin \varphi`, 那么 :math:`\mathrm{d} u = 2 \cos \varphi \mathrm{d} \varphi`, 从而有
 
    .. math::
-
       \int_0^1 \dfrac{1}{\sqrt{4-u^2}} \mathrm{d} u & = \int_0^{\frac{\pi}{6}} \dfrac{1}{\sqrt{4 - 4 \sin^2 \varphi}} \cdot 2 \cos \varphi \mathrm{d} \varphi \\
       & = \int_0^{\frac{\pi}{6}} \dfrac{1}{\sqrt{4 \cos^2 \varphi}} \cdot 2 \cos \varphi \mathrm{d} \varphi = \int_0^{\frac{\pi}{6}} \dfrac{1}{2 \cos \varphi}\
           \cdot 2 \cos \varphi \mathrm{d} \varphi \\
@@ -463,7 +426,6 @@
    (5). 根据定积分对积分区间的可加性, 有
 
    .. math::
-
       \int_0^3 f(x) \mathrm{d} x
       & = \int_0^2 f(x) \mathrm{d} x + \int_2^3 f(x) \mathrm{d} x = \int_0^2 \left( \dfrac{x}{2} + 1 \right) \mathrm{d} x + \int_2^3 x \mathrm{d} x \\
       & = \left. \left( \dfrac{x^2}{4} + x \right) \right|_0^2 + \left. \dfrac{x^2}{2} \right|_2^3 = 3 + \dfrac{9}{2} - 2 = \dfrac{11}{2}.
@@ -471,7 +433,6 @@
    (7).
 
    .. math::
-
       \int_0^2 (2 - x)^2 (2 + x) \mathrm{d} x & = \int_2^0 x^2 (4 - x) \mathrm{d} (2-x) = \int_0^2 x^2 (4 - x) \mathrm{d} x \\
       & = \int_0^2 (4x^2 - x^3) \mathrm{d} x = \left. \left( \dfrac{4}{3} x^3 - \dfrac{1}{4} x^4 \right) \right|_0^2 \\
       & = \dfrac{32}{3} - 4 = \dfrac{20}{3}.
@@ -479,7 +440,6 @@
    (9). 由于 :math:`\sin^3 \varphi = \dfrac{3}{4} \sin \varphi - \dfrac{1}{4} \sin 3\varphi`, 因此有
 
    .. math::
-
       \int_0^{\pi} (1 - \sin^3 \varphi) \mathrm{d} \varphi
       & = \int_0^{\pi} \left( 1 - \dfrac{3}{4} \sin \varphi + \dfrac{1}{4} \sin 3\varphi \right) \mathrm{d} \varphi \\
       & = \left. \left( \varphi + \dfrac{3}{4} \cos \varphi - \dfrac{1}{12} \cos 3\varphi \right) \right|_0^{\pi} \\
@@ -501,7 +461,6 @@
    (2).
 
    .. math::
-
       \int_0^{\pi} \dfrac{\sin x}{1 + \cos^2 x} \mathrm{d} x
       & = - \int_0^{\pi} \dfrac{\mathrm{d} \cos x}{1 + \cos^2 x} = - \left. \arctan \cos x \right|_0^{\pi} \\
       & = - \left( \arctan (-1) - \arctan 1 \right) = - \left( -\dfrac{\pi}{4} - \dfrac{\pi}{4} \right) = \dfrac{\pi}{2}.
@@ -509,7 +468,6 @@
    (4).
 
    .. math::
-
       \int_0^1 x^2 \sqrt{1 - x^2} \mathrm{d} x
       & = \dfrac{1}{2} \int_0^1 \sqrt{x^2 (1 - x^2)} \mathrm{d} x^2 = \dfrac{1}{2} \int_0^1 \sqrt{x (1 - x)} \mathrm{d} x \\
       & = \dfrac{1}{2} \int_0^1 \sqrt{\dfrac{1}{4} - \left( x - \dfrac{1}{2} \right)^2} \mathrm{d} \left( x - \dfrac{1}{2} \right) \\
@@ -525,7 +483,6 @@
    另解: 令 :math:`x = \sin t`, 积分区域变为 :math:`[0, \frac{\pi}{2}]`, 从而有
 
    .. math::
-
       \int_0^1 x^2 \sqrt{1 - x^2} \mathrm{d} x
       & = \int_0^{\frac{\pi}{2}} \sin^2 t \cos t \mathrm{d} \sin t = \int_0^{\frac{\pi}{2}} \sin^2 t \cos^2 t \mathrm{d} t \\
       & = \dfrac{1}{4} \int_0^{\frac{\pi}{2}} \sin^2 2t \mathrm{d} t \\
@@ -537,7 +494,6 @@
    (6). 令 :math:`x = \sec \varphi`, 积分区域变为 :math:`[0, \frac{\pi}{3}]`, 从而有
 
    .. math::
-
       \int_1^2 \dfrac{\sqrt{x^2 - 1}}{x} \mathrm{d} x
       & = \int_{0}^{\frac{\pi}{3}} \dfrac{\tan \varphi}{\sec \varphi} \cdot \sec \varphi \tan \varphi \mathrm{d} \varphi \\
       & = \int_{0}^{\frac{\pi}{3}} \tan^2 \varphi \mathrm{d} \varphi \\
@@ -548,7 +504,6 @@
    (8). 令 :math:`t = \sqrt{5 - 4x}`, 那么 :math:`x = \dfrac{5 - t^2}{4}`, :math:`\mathrm{d} x = -\dfrac{t}{2} \mathrm{d} t`, 从而有
 
    .. math::
-
       \int_{-1}^1 \dfrac{x}{\sqrt{5 - 4x}} \mathrm{d} x
       & = \int_{3}^1 \dfrac{\frac{5 - t^2}{4}}{t} \cdot \left( -\dfrac{t}{2} \right) \mathrm{d} t = \dfrac{1}{8} \int_1^{3} \left( 5 - t^2 \right) \mathrm{d} t \\
       & = \dfrac{1}{8} \left. \left( 5t - \dfrac{t^3}{3} \right) \right|_1^{3} = \dfrac{1}{8} \left( 15 - \dfrac{27}{3} - 5 + \dfrac{1}{3} \right) \\
@@ -569,7 +524,6 @@
    (1).
 
    .. math::
-
       \int_0^1 x \ln(1 + x) \mathrm{d} x
       & = \dfrac{1}{2} \int_0^1 \ln(1 + x) \mathrm{d} x^2
         = \left. \dfrac{1}{2} \ln(1 + x) \cdot x^2 \right|_0^1 - \dfrac{1}{2} \int_0^1 \dfrac{x^2}{1 + x} \mathrm{d} x \\
@@ -581,7 +535,6 @@
    (3).
 
    .. math::
-
       \int_0^{\sqrt{3}} \ln \left( x + \sqrt{1 + x^2} \right) \mathrm{d} x
       & = \left. x \ln \left( x + \sqrt{1 + x^2} \right) \right|_0^{\sqrt{3}}
           - \int_0^{\sqrt{3}} x \dfrac{1 + \dfrac{x}{\sqrt{1 + x^2}}}{x + \sqrt{1 + x^2}} \mathrm{d} x \\
@@ -594,7 +547,6 @@
    (5).
 
    .. math::
-
       \int_0^{\frac{\sqrt{2}}{2}} \arccos x \mathrm{d} x
       & = \left. x \arccos x \right|_0^{\frac{\sqrt{2}}{2}} - \int_0^{\frac{\sqrt{2}}{2}} \dfrac{x}{-\sqrt{1 - x^2}} \mathrm{d} x \\
       & = \dfrac{\pi}{4} \cdot \dfrac{\sqrt{2}}{2} - \left. \sqrt{1 - x^2} \right|_0^{\frac{\sqrt{2}}{2}} \\
@@ -603,7 +555,6 @@
    (7). 因为 :math:`\dfrac{x^2 \sin^5 x}{1 + x^2}` 是奇函数, 所以 :math:`\displaystyle \int_{-1}^1 \dfrac{x^2 \sin^5 x}{1 + x^2} \mathrm{d} x = 0`, 因此有
 
    .. math::
-
       \int_{-1}^1 \dfrac{x^2 \sin^5 x + 1}{1 + x^2} \mathrm{d} x & = \int_{-1}^1 \dfrac{1}{1 + x^2} \mathrm{d} x = \left. \arctan x \right|_{-1}^1 \\
       & = \arctan 1 - \arctan (-1) = \dfrac{\pi}{2}.
 
@@ -614,7 +565,6 @@
    令 :math:`t = a + b - x`, 那么 :math:`x = a + b - t, \mathrm{d} t = -\mathrm{d} x`, 积分区间变为 :math:`[a + b - b, a + b - a] = [a, b]`, 从而有
 
    .. math::
-
       \int_a^b f(a + b - x) \mathrm{d} x & = -\int_{a + b - a}^{a + b - b} f(t) \mathrm{d} t \\
       & = -\int_b^a f(t) \mathrm{d} t = \int_a^b f(t) \mathrm{d} t \\
       & = \int_a^b f(x) \mathrm{d} x.
@@ -632,14 +582,12 @@
    令 :math:`t = x - \dfrac{\pi}{2}`, 那么 :math:`x = t + \dfrac{\pi}{2}`, :math:`\mathrm{d} t = \mathrm{d} x`, 积分区间变为 :math:`[-\dfrac{\pi}{2}, \dfrac{\pi}{2}]`, 从而有
 
    .. math::
-
       \int_0^{\pi} \sin^n x \mathrm{d} x = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^n \left( t + \dfrac{\pi}{2} \right) \mathrm{d} t
       = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^n t \mathrm{d} t.
 
    由于 :math:`\cos^n t` 是偶函数, 因此有
 
    .. math::
-
       \int_0^{\pi} \sin^n x \mathrm{d} x = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^n t \mathrm{d} t
       = 2 \int_0^{\frac{\pi}{2}} \cos^n t \mathrm{d} t = 2 \int_0^{\frac{\pi}{2}} \sin^n x \mathrm{d} x.
 
@@ -661,28 +609,24 @@
    (1). :math:`y = 9 - x^2` 与 :math:`y = 0` 的交点为 :math:`x = \pm 3`, 因此所围成的图形的面积 :math:`S` 为
 
    .. math::
-
       S = \int_{-3}^3 (9 - x^2) \mathrm{d} x = \left. \left( 9x - \dfrac{x^3}{3} \right) \right|_{-3}^3 = 36.
 
    (3). :math:`y = x^3, x = 0, y = 1` 所围成的图形为正方形 :math:`[0, 1] \times [0, 1]` 内, 位于曲线 :math:`y = x^3` 之上的部分,
    因此所围成的图形的面积 :math:`S` 为
 
    .. math::
-
       S = \int_0^1 (1 - x^3) \mathrm{d} x = \left. \left( x - \dfrac{x^4}{4} \right) \right|_0^1 = \dfrac{3}{4}.
 
    (5). :math:`y = \sin x, x = -\pi, x = \dfrac{\pi}{2}, y = 0` 所围成的图形分为两部分, 一部分为 :math:`[-\pi, 0] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之上的部分;
    另一部分为 :math:`[0, \frac{\pi}{2}] \times [0, 1]` 内在曲线 :math:`y = \sin x` 之下的部分, 因此所围成的图形的面积 :math:`S` 为
 
    .. math::
-
       S = \int_{-\pi}^0 (0 - \sin x) \mathrm{d} x + \int_0^{\frac{\pi}{2}} (\sin x - 0) \mathrm{d} x
       = \left. \left( \cos x \right) \right|_{-\pi}^0 - \left. \cos x \right|_0^{\frac{\pi}{2}} = 3.
 
    (7). :math:`r = 2a (2 + \cos \theta)` 所围成的图形为 :math:`\theta` 从 :math:`0` 增加到 :math:`2\pi` 形成的闭合曲线所围成的图形, 因此所围成的图形的面积 :math:`S` 为
 
    .. math::
-
       S & = \int_0^{2\pi} \dfrac{1}{2} r^2 \mathrm{d} \theta = \int_0^{2\pi} \dfrac{1}{2} \cdot 4a^2 (2 + \cos \theta)^2 \mathrm{d} \theta \\
       & = 2a^2 \int_0^{2\pi} \left( 4 + 4 \cos \theta + \cos^2 \theta \right) \mathrm{d} \theta \\
       & = 2a^2 \int_0^{2\pi} \left( 4 + 4 \cos \theta + \dfrac{1 + \cos 2\theta}{2} \right) \mathrm{d} \theta \\
@@ -699,7 +643,6 @@
     因此所围成的图形的面积 :math:`S` 为
 
     .. math::
-
         S & = \int_0^{3/2} (4x - 3 - (-x^2 + 4x - 3)) \mathrm{d} x + \int_{3/2}^3 (-2x + 6 - (-x^2 + 4x - 3)) \mathrm{d} x \\
         & = \int_0^{3/2} x^2 \mathrm{d} x + \int_{3/2}^3 (x^2 - 6x + 9) \mathrm{d} x \\
         & = \left. \left( \dfrac{x^3}{3} \right) \right|_0^{3/2} + \left. \left( \dfrac{x^3}{3} - 3x^2 + 9x \right) \right|_{3/2}^3 \\
@@ -713,7 +656,6 @@
     摆线长 :math:`\displaystyle \ell = \int_0^{2\pi} \sqrt{\left( \dfrac{\mathrm{d} x}{\mathrm{d} t} \right)^2 + \left( \dfrac{\mathrm{d} y}{\mathrm{d} t} \right)^2} \mathrm{d} t`, 因此有
 
     .. math::
-
         \ell & = \int_0^{2\pi} \sqrt{a^2 \left( 1 - \cos t \right)^2 + a^2 \sin^2 t} \mathrm{d} t = \int_0^{2\pi} a \sqrt{2 - 2 \cos t} \mathrm{d} t \\
         & = \int_0^{2\pi} a \sqrt{4 \sin^2 \frac{t}{2}} \mathrm{d} t = 2a \int_0^{2\pi} \sin \frac{t}{2} \mathrm{d} t = -4a \left. \cos \frac{t}{2} \right|_0^{2\pi} \\
         & = 8a.
@@ -731,7 +673,6 @@
    以 :math:`y` 为自变量, 那么所围成的图形的面积 :math:`S` 为直线 :math:`x = y + 4` 之下, 抛物线 :math:`x = \dfrac{y^2}{2}` 之上的部分:
 
    .. math::
-
       S_D & = \int_{-2}^4 \left( y + 4 - \dfrac{y^2}{2} \right) \mathrm{d} y = \left. \left( \dfrac{y^2}{2} + 4y - \dfrac{y^3}{6} \right) \right|_{-2}^4 \\
       & = 8 + 16 - \dfrac{64}{6} - \left( 2 - 8 + \dfrac{8}{6} \right) = 18.
 
@@ -739,7 +680,6 @@
    :math:`x` 轴旋转一周所形成的旋转体的体积, 减去以 :math:`EF` 为高的圆锥的体积, 即
 
    .. math::
-
       V & = \pi \int_0^8 \left( \sqrt{2x} \right)^2 \mathrm{d} x - \dfrac{1}{3} \pi \cdot 4^2 \cdot 4 \\
       & = 2 \pi \int_0^8 x \mathrm{d} x - \dfrac{64}{3} \pi = \left. \pi x^2 \right|_0^8 - \dfrac{64}{3} \pi \\
       & = 64 \pi - \dfrac{64}{3} \pi = \dfrac{128}{3} \pi.
@@ -753,7 +693,6 @@
    :math:`y` 轴旋转一周所形成的旋转体减去矩形 :math:`[0, 1] \times [\frac{1}{2}, 1]` 绕 :math:`y` 轴旋转一周所形成的旋转体, 其体积为
 
    .. math::
-
       S_1 & = \pi \int_{\frac{1}{2}}^1 \left( \dfrac{1}{y} \right)^2 \mathrm{d} y - \left( 1 - \dfrac{1}{2} \right) \cdot \pi \cdot 1^2 \\
       & = \pi \int_{\frac{1}{2}}^1 \dfrac{1}{y^2} \mathrm{d} y - \dfrac{\pi}{2} = \left. -\dfrac{\pi}{y} \right|_{\frac{1}{2}}^1 - \dfrac{\pi}{2} \\
       & = -\pi + 2 \pi - \dfrac{\pi}{2} \\
@@ -762,7 +701,6 @@
    第二部分为矩形 :math:`[1, 2] \times [0, \frac{1}{2}]` 绕 :math:`y` 轴旋转一周所形成的旋转体, 其体积为
 
    .. math::
-
       S_2 = \dfrac{1}{2} \cdot \pi \cdot 2^2 - \dfrac{1}{2} \cdot \pi \cdot 1^2 = \dfrac{3\pi}{2}.
 
    所以所围成的图形的面积 :math:`S = S_1 + S_2 = \dfrac{\pi}{2} + \dfrac{3\pi}{2} = 2\pi`.
@@ -775,7 +713,6 @@
    水深 :math:`h` 处闸门宽 :math:`w` 为 :math:`w = 6 - \dfrac{4}{10} h`, 因此闸门所受的水压力
 
    .. math::
-
       F & = \int_0^{10} \rho g h \cdot \left( 6 - \dfrac{4}{10} h \right) \mathrm{d} h = \rho g \int_0^{10} \left( 6h - \dfrac{4}{10} h^2 \right) \mathrm{d} h \\
       & = \rho g \left. \left( 3h^2 - \dfrac{4}{30} h^3 \right) \right|_0^{10} = \rho g \left( 300 - \dfrac{400}{3} \right) \\
       & = \dfrac{500}{3} \rho g.
@@ -796,7 +733,6 @@
    (2).
 
    .. math::
-
       \int_2^{+\infty} \dfrac{x}{\sqrt{1 + x^2}} \mathrm{d} x & = \dfrac{1}{2} \int_2^{+\infty} \dfrac{\mathrm{d} (1 + x^2)}{\sqrt{1 + x^2}} \\
       & = \left. \sqrt{1 + x^2} \right|_2^{+\infty} = +\infty.
 
@@ -805,7 +741,6 @@
    (4).
 
    .. math::
-
       \int_1^{+\infty} \dfrac{1}{\sqrt{x}(1 + x)} \mathrm{d} x
       & = 2 \int_1^{+\infty} \dfrac{\mathrm{d} \sqrt{x}}{1 + \left( \sqrt{x} \right)^2} = 2 \cdot \left. \arctan \sqrt{x} \right|_1^{+\infty} \\
       & = 2 \cdot \left( \dfrac{\pi}{2} - \dfrac{\pi}{4} \right) = \dfrac{\pi}{2}.
@@ -813,7 +748,6 @@
    (6).
 
    .. math::
-
       \int_0^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x & = \int_0^1 \dfrac{1}{(1 - x)^2} \mathrm{d} x + \int_1^2 \dfrac{1}{(1 - x)^2} \mathrm{d} x \\
       & = \left. \dfrac{1}{1 - x} \right|_0^1 + \left. \dfrac{1}{1 - x} \right|_1^2.
 
@@ -826,7 +760,6 @@
    由于
 
    .. math::
-
       \int_2^{+\infty} \dfrac{1}{x (\ln x)^k} \mathrm{d} x = \int_2^{+\infty} \dfrac{\mathrm{d} (\ln x)}{(\ln x)^k}
       = \begin{cases} \left. \dfrac{1}{(1 - k)(\ln x)^{k - 1}} \right|_2^{+\infty}, & k \neq 1 \\ \left. \dfrac{1}{\ln x} \right|_2^{+\infty}, & k = 1 \end{cases}
 
@@ -835,7 +768,6 @@
    令 :math:`f(k) = (k - 1)(\ln 2)^{k - 1}, k > 1`, 那么
 
    .. math::
-
       f'(k) = (\ln 2)^{k - 1} + (k - 1)(\ln 2)^{k - 1} \cdot \ln \ln 2 = (\ln 2)^{k - 1} \left( 1 + (k - 1) \ln \ln 2 \right).
 
    由于 :math:`\ln 2 \in (0, 1)`, :math:`\ln \ln 2 < 0`, 令 :math:`f'(k) = 0` 解得 :math:`k = 1 - \dfrac{1}{\ln \ln 2}`.
@@ -849,13 +781,11 @@
 .. proof:solution::
 
    .. math::
-
       \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x & = \int_0^{+\infty} x \cdot \lambda e^{-\lambda x} \mathrm{d} x = - \int_0^{+\infty} x \mathrm{d} e^{-\lambda x} \\
       & = - \left. x e^{-\lambda x} \right|_0^{+\infty} + \int_0^{+\infty} e^{-\lambda x} \mathrm{d} x \\
       & = \left. - \dfrac{1}{\lambda} e^{-\lambda x} \right|_0^{+\infty} = \dfrac{1}{\lambda}.
 
    .. math::
-
       \int_{-\infty}^{+\infty} x^2 f(x) \mathrm{d} x & = \int_0^{+\infty} x^2 \cdot \lambda e^{-\lambda x} \mathrm{d} x = - \int_0^{+\infty} x^2 \mathrm{d} e^{-\lambda x} \\
       & = - \left. x^2 e^{-\lambda x} \right|_0^{+\infty} + \int_0^{+\infty} 2x e^{-\lambda x} \mathrm{d} x \\
       & = \dfrac{2}{\lambda} \int_{-\infty}^{+\infty} xf(x) \mathrm{d} x \\

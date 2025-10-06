@@ -2,7 +2,6 @@
 =======================
 
 .. note::
-
     此次随堂测验未进行.
 
 1. 求不定积分 :math:`\displaystyle\int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.

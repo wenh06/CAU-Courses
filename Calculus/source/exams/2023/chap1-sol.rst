@@ -12,7 +12,6 @@
     那么必须有 :math:`T = \dfrac{\pi}{2} + k \pi, k \in \mathbb{N}`. 将 :math:`T` 的表达式代入 :math:`f(x) = f(x + T)` 中, 得到
 
     .. math::
-
         x \cos x = (x + \dfrac{\pi}{2} + k \pi) \cos (x + \dfrac{\pi}{2} + k \pi) = \pm (x + \dfrac{\pi}{2} + k \pi) \sin x
 
     上式显然不是对所有 :math:`x` 成立, 例如 :math:`x = -\dfrac{\pi}{2} + t \pi, t \in \mathbb{N}` 时, 上式左边为 :math:`0`,
@@ -23,7 +22,6 @@
 .. proof:solution::
 
     .. math::
-
         \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x}
         & = \lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{x} \cdot \dfrac{\sqrt{1 + x} + \sqrt{1 - x}}{\sqrt{1 + x} + \sqrt{1 - x}} \\
         & = \lim\limits_{x \to 0} \dfrac{1 + x - (1 - x)}{x \left( \sqrt{1 + x} + \sqrt{1 - x} \right)} \\
@@ -42,7 +40,6 @@
     那么由单调有界原理知数列 :math:`\{a_n\}_{n\in\mathbb{N}}` 收敛, 即极限 :math:`\lim\limits_{n \to \infty} a_n` 存在.
 
     .. note::
-
         我们可以进一步求出这个极限的值 (将其记为 :math:`a \in [0, 1]`): 在 :math:`a_{n+1} = \sin a_n` 两边同时对 :math:`n` 取极限,
         得到 :math:`\lim\limits_{n \to \infty} a_{n+1} = \lim\limits_{n \to \infty} \sin a_n`,
         即有 :math:`a = \sin a`, 于是必须有 :math:`a = 0`.
@@ -55,14 +52,12 @@
     当 :math:`x \to 0` 时, :math:`(1 - \cos x) \cdot \ln (1 + x^2)` 是比 :math:`x \sin x^n` 高阶的无穷小, 这说明
 
     .. math::
-
         \lim\limits_{x \to 0} \dfrac{(1 - \cos x) \cdot \ln (1 + x^2)}{x \sin x^n} = 0
 
     :math:`(1 - \cos x)` 的等价无穷小是 :math:`\dfrac{x^2}{2}`, :math:`\ln (1 + x^2)` 的等价无穷小是 :math:`x^2`, :math:`\sin x^n` 的等价无穷小是 :math:`x^n`,
     上式可以改写为
 
     .. math::
-
         \lim\limits_{x \to 0} \dfrac{\dfrac{x^2}{2} \cdot x^2}{x \cdot x^n} = \lim\limits_{x \to 0} \dfrac{x^{3-n}}{2} = 0
 
     于是有 :math:`3 - n > 0`, 即 :math:`n < 3`.
@@ -70,13 +65,11 @@
     另一方面, 有当 :math:`x \to 0` 时, :math:`x \sin x^n` 是比 :math:`e^{x^2} - 1` 高阶的无穷小, 即
 
     .. math::
-
         \lim\limits_{x \to 0} \dfrac{x \sin x^n}{e^{x^2} - 1} = 0
 
     :math:`e^{x^2} - 1` 的等价无穷小是 :math:`x^2`, 上式可以改写为
 
     .. math::
-
         \lim\limits_{x \to 0} \dfrac{x \cdot x^n}{x^2} = \lim\limits_{x \to 0} x^{n-1} = 0
 
     于是有 :math:`n - 1 > 0`, 即 :math:`n > 1`.
@@ -95,7 +88,6 @@
     在 :math:`x = 1` 处, 函数 :math:`f(x)` 的分子 :math:`(x - 1) \sin(x - 2)` 取值为 :math:`0`, 所以需要进一步考察 :math:`f(x)` 在 :math:`x = 1` 处的左右极限:
 
     .. math::
-
         \lim\limits_{x \to 1^-} f(x) & = \lim\limits_{x \to 1^-} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
             = \lim\limits_{x \to 1^-} \dfrac{-\sin(x - 2)}{ x (x - 2)} = -\sin 1 \\
         \lim\limits_{x \to 1^+} f(x) & = \lim\limits_{x \to 1^+} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
@@ -106,7 +98,6 @@
     在 :math:`x = 2` 处, 函数 :math:`f(x)` 的分子 :math:`(x - 1) \sin(x - 2)` 取值为 :math:`0`, 所以需要进一步考察 :math:`f(x)` 在 :math:`x = 2` 处的左右极限:
 
     .. math::
-
         \lim\limits_{x \to 2} f(x) = \lim\limits_{x \to 2} \dfrac{(x - 1) \sin(x - 2)}{ x \lvert x - 1 \rvert (x - 2)}
         = \lim\limits_{x \to 2} \dfrac{(x - 1)}{ x \lvert x - 1 \rvert} = \dfrac{1}{2}
 

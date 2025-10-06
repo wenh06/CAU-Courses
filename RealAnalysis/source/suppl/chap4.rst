@@ -6,7 +6,6 @@
 1. 令 :math:`\varphi = \chi_{(\alpha, \beta)}`, 其中 :math:`(\alpha, \beta) \subset E = [-\pi, \pi]`, 那么
 
    .. math::
-
       \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} ~ \mathrm{d}u
       = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v
 
@@ -20,14 +19,12 @@
    那么在相邻的区间 :math:`I_k` 和 :math:`I_{k+1}` 上有
 
    .. math::
-
       \left\lvert \int_{I_k} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert
       > \left\lvert \int_{I_{k+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \right\rvert,
 
    但积分值的符号相反, :math:`k` 为奇数时为正, :math:`k` 为偶数时为负. 那么令
 
    .. math::
-
       k_{\alpha} & = \min \{ k \ :\ \dfrac{k}{2n+1} \geqslant \dfrac{\alpha-x}{2} \}, \\
       k_{\alpha, 0} & = \min \{ k \ :\ k \geqslant k_{\alpha}, \text{ 且 } k \text{为偶数} \}, \\
       k_{\alpha, 1} & = \min \{ k \ :\ k \geqslant k_{\alpha}, \text{ 且 } k \text{为奇数} \}, \\
@@ -38,7 +35,6 @@
    有
 
    .. math::
-
       \varphi_n(x)
       & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right)
          + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
@@ -48,7 +44,6 @@
    同时
 
    .. math::
-
       \varphi_n(x)
       & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right)
          + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
@@ -58,7 +53,6 @@
    总之, 有
 
    .. math::
-
       \lvert \varphi_n (x) \rvert
       & \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v \\
       & = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
@@ -68,7 +62,6 @@
    在 :math:`[0, \pi/(2n+1)]` 恒负, 因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
 
    .. math::
-
       \lvert \varphi_n (x) \rvert
       & \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
       & \leqslant \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} (2n+1) ~ \mathrm{d}v \\
@@ -77,7 +70,6 @@
    这样就证明了 :math:`\varphi_n` 一致有界.
 
    .. note::
-
       Dirichlet 核 :math:`\dfrac{\sin\frac{2n+1}{2}v}{\sin\frac{1}{2}v}` 的图像如下所示:
 
       .. image:: ../_static/images/Dirichlet_kernels.svg
@@ -93,13 +85,11 @@
    若存在 :math:`F(x) \in L_E` 使得
 
    .. math::
-
       \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall ~ (x, t) \in E \times (\alpha, \beta),
 
    那么
 
    .. math::
-
       \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} ~ \mathrm{d}x.
 
 .. proof:proof::
@@ -107,7 +97,6 @@
    由微分中值定理, 有
 
    .. math::
-
       \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) ~ \mathrm{d}x \\
       & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h ~ \mathrm{d}x \\
       & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x, \quad \theta(h) \in (0, 1).
@@ -116,7 +105,6 @@
    且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
 
    .. math::
-
       \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
       & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
       & = \int_E \dfrac{\partial}{\partial t} f(x, t) ~ \mathrm{d}x.
@@ -128,7 +116,6 @@
    约定一些集合 (空间) 的记号
 
    .. math::
-
       L_{[a, b]} & = [a, b] \text{ 区间上的 Lebesgue 可积函数}, \\
       L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
       C([a, b]) & = [a, b] \text{ 区间上的连续函数}, \\
@@ -192,16 +179,13 @@
    - 有如下的等式成立
 
    .. math::
-
       \int_{E \times F} f(x, y) ~ \mathrm{d}(x, y) = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x
       = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
    .. note::
-
       与 Fubini 定理结合起来, 可以得到 Fubini-Tonelli 定理: 设 :math:`f(x, y)` 是定义在 :math:`E \times F` 上的可测函数, 那么
 
       .. math::
-
          \int_{E \times F} \lvert f(x, y) \rvert ~ \mathrm{d} x \times ~ \mathrm{d} y
          = \int_E \left( \int_F \lvert f(x, y) \rvert ~ \mathrm{d}y \right) ~ \mathrm{d}x
          = \int_F \left( \int_E \lvert f(x, y) \rvert ~ \mathrm{d}x \right) ~ \mathrm{d}y.
@@ -209,7 +193,6 @@
       若上式三项中的任意一项有限（即可积), 那么进一步会有
 
       .. math::
-
          \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y
          = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
@@ -223,13 +206,11 @@
    那么 :math:`f(x)` 的广义积分定义为 (若收敛)
 
    .. math::
-
       \int_a^c f(x) ~ \mathrm{d}x = \lim_{b \to c-} (R) \int_a^b f(x) ~ \mathrm{d}x.
 
    而 :math:`\{ f \cdot \chi_{[a, b]} \}_{b \in (a, c)}` 构成一个非负渐升可测函数族, 于是有
 
    .. math::
-
       \int_{[a, c)} f ~ \mathrm{d} m
       & = \int_{[a, c)} \lim_{b \to c^-} f \cdot \chi_{[a, b]} ~ \mathrm{d} m = \lim_{b \to c^-} \int_{[a, b]} f ~ \mathrm{d} m \\
       & = \lim_{b \to c-} (R) \int_a^b f(x) ~ \mathrm{d} x = \int_a^c f(x) ~ \mathrm{d}x.
@@ -239,18 +220,15 @@
    若去掉非负的条件, 对于定义在 :math:`[a, c)` 上的一般可测函数 :math:`f(x)`, 就没有这样的结论了. 例如, 考虑
 
    .. math::
-
       E_n = [n, n + 1), \quad f = \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} \chi_{E_n},
 
    那么反常积分
 
    .. math::
-
       \int_0^{\infty} f(x) ~ \mathrm{d}x = \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} = \ln (1 + x) \bigg|_{x=1} = \ln 2.
 
    但是 :math:`f` 不是勒贝格可积的, 因为
 
    .. math::
-
       \int_{[0, \infty)} |f| ~ \mathrm{d} m = \int_{[0, \infty)} \sum_{n=1}^{\infty} \dfrac{1}{n} \chi_{E_n} ~ \mathrm{d} m
       = \sum_{n=1}^{\infty} \dfrac{1}{n} \int_{E_n} ~ \mathrm{d} m = \sum_{n=1}^{\infty} \dfrac{1}{n} = \infty.

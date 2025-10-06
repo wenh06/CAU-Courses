@@ -15,7 +15,6 @@
    考虑 :math:`E = [0, 1]` 上的非负渐升函数列 :math:`\{ g_n = \lvert f \rvert \cdot \chi_{[1/n, 1]} \}`, 那么由 Levi 定理知
 
    .. math::
-
       \int_0^1 \lvert f \rvert ~ \mathrm{d} m
       & = \lim_{n \to \infty} \int_0^1 g_n ~ \mathrm{d} m = \lim_{n \to \infty} \int_{1/n}^1 \lvert f \rvert ~ \mathrm{d} m \\
       & = \lim_{n \to \infty} \int_{1/n}^1 \dfrac{1}{x} ~ \mathrm{d} x = \lim_{n \to \infty} ( \ln x \bigr|_{1/n}^1 ) = \infty,
@@ -25,7 +24,6 @@
    更简单的例子可取 :math:`f \equiv - \infty`.
 
    .. note::
-
       这题主要是没有限定非负函数的条件, 所以可以取到 :math:`f` 不可积的情况.
 
 .. _ex-4-2:
@@ -40,7 +38,6 @@
    使得当 :math:`n \geqslant N` 时, 有 :math:`m E_n \geqslant \dfrac{\alpha}{2}`, 于是
 
    .. math::
-
       \int_E \lvert f \rvert ~ \mathrm{d} m \geqslant \int_{E_n} \lvert f \rvert ~ \mathrm{d} m \geqslant n \cdot m E_n \geqslant \frac{n \alpha}{2}
 
    对任意 :math:`n \geqslant N` 成立, 这与 :math:`\displaystyle \int_E \lvert f \rvert ~ \mathrm{d} m < \infty` 矛盾, 所以 :math:`\alpha = 0`.
@@ -56,20 +53,17 @@
    记为 :math:`I_{n, k}, k = 1, 2, \dots, 2^{n - 1}`. 于是
 
    .. math::
-
       f = \sum_{n = 1}^\infty \sum_{k = 1}^{2^{n - 1}} n \cdot \chi_{I_{n, k}}.
 
    :math:`f` 以及 :math:`\chi_{I_{n, k}}` 都是非负可测函数, 所以由逐项积分定理可得
 
    .. math::
-
       \int_E f ~ \mathrm{d} m = \sum_{n = 1}^\infty \sum_{k = 1}^{2^{n - 1}} n \cdot m I_{n, k}
       = \sum_{n = 1}^\infty \dfrac{n \cdot 2^{n - 1}}{3^n} = \dfrac{1}{2} \sum_{n = 1}^\infty n \cdot \left( \dfrac{2}{3} \right)^n.
 
    以上级数是收敛的, 所以 :math:`f \in L_E`. 记 :math:`I = \displaystyle \int_E f ~ \mathrm{d} m, a = \dfrac{2}{3}`, 那么
 
    .. math::
-
       I - a I = \dfrac{1}{2} \sum_{n = 1}^\infty a^n = \dfrac{a}{2(1 - a)},
 
    因此 :math:`I = \dfrac{a}{2(1 - a)^2} = 3`.
@@ -79,7 +73,6 @@
 4. 设 :math:`f(x) \geqslant 0` 为可测函数, 令
 
    .. math::
-
       \{f(x)\}_n = \begin{cases}
          f(x), & \text{ 若 } f(x) \leqslant n, \\
          0, & \text{ 若 } f(x) > n,
@@ -88,7 +81,6 @@
    证明当 :math:`f(x)` 几乎处处有限时, 有
 
    .. math::
-
       \lim_{n \to \infty} \int_E \{f(x)\}_n ~ \mathrm{d} m = \int_E f(x) ~ \mathrm{d} m.
 
 .. proof:proof::
@@ -98,14 +90,12 @@
    :math:`\displaystyle \lim_{n \to \infty} \{f(x)\}_n = f(x)`. 由 Levi 定理知
 
    .. math::
-
       \lim_{n \to \infty} \int_{E^*} \{f(x)\}_n ~ \mathrm{d} m = \int_{E^*} f(x) ~ \mathrm{d} m.
 
    由于 :math:`E \setminus E^*` 是零测集, 所以 :math:`\displaystyle \int_{E^*} \{f(x)\}_n ~ \mathrm{d} m = \int_{E} \{f(x)\}_n ~ \mathrm{d} m`,
    :math:`\displaystyle \int_{E^*} f(x) ~ \mathrm{d} m = \int_{E} f(x) ~ \mathrm{d} m`, 于是
 
    .. math::
-
       \lim_{n \to \infty} \int_E \{f(x)\}_n ~ \mathrm{d} m = \int_E f(x) ~ \mathrm{d} m.
 
 .. _ex-4-5:
@@ -118,13 +108,11 @@
    由于 :math:`[0, 1]` 中任一点至少属于 :math:`E_1, E_2, \dots, E_n` 的 :math:`p` 个, 所以
 
    .. math::
-
       \sum_{k = 1}^n \chi_{E_k} (x) \geqslant p, \quad \forall ~ x \in [0, 1],
 
    于是有
 
    .. math::
-
       \sum_{k = 1}^n m E_k = \sum_{k = 1}^n \int_{[0, 1]} \chi_{E_k} (x) ~ \mathrm{d} m
       = \int_{[0, 1]} \sum_{k = 1}^n \chi_{E_k} (x) ~ \mathrm{d} m \geqslant \int_{[0, 1]} p ~ \mathrm{d} m = p.
 
@@ -135,7 +123,6 @@
 6. 设 :math:`m E > 0`, 又设 :math:`E` 上可积函数 :math:`f, g` 满足 :math:`f < g`, 试证
 
    .. math::
-
       \int_E f ~ \mathrm{d} m < \int_E g ~ \mathrm{d} m.
 
 .. proof:proof::
@@ -144,14 +131,12 @@
    假设 :math:`\displaystyle \int_E f ~ \mathrm{d} m = \int_E g ~ \mathrm{d} m`, 那么
 
    .. math::
-
       \int_E \lvert g - f \rvert ~ \mathrm{d} m = \int_E (g - f) ~ \mathrm{d} m
       = \int_E g ~ \mathrm{d} m - \int_E f ~ \mathrm{d} m = 0.
 
    由唯一性定理可知 :math:`g - f \sim 0`, 也即 :math:`g(x) = f(x)` a.e. :math:`x \in E`. 这意味着
 
    .. math::
-
       0 = m E (g \neq f) = m E,
 
    这与 :math:`m E > 0` 矛盾, 所以必有 :math:`\displaystyle \int_E f ~ \mathrm{d} m < \int_E g ~ \mathrm{d} m`.
@@ -161,7 +146,6 @@
 7. 设 :math:`f` 为 :math:`E` 上可积函数, 如果对任何有界可测函数 :math:`\varphi`, 都有
 
    .. math::
-
       \int_E f \varphi ~ \mathrm{d} m = 0,
 
    证明 :math:`f \sim 0`.
@@ -171,7 +155,6 @@
    :math:`\forall ~ n \in \mathbb{N}`, 令 :math:`E_n = E( \lvert f \rvert \geqslant n)`, 那么 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`. 令
 
    .. math::
-
       \varphi_n (x) = f(x) \cdot \chi_{E \setminus E_n} = \begin{cases}
          f(x), & x \in E \setminus E_n, \\
          0, & x \in E_n,
@@ -180,13 +163,11 @@
    那么 :math:`\varphi_n` 是 :math:`E` 上有界可测函数 (:math:`\lvert \varphi_n \rvert \leqslant n`), 且依题意有
 
    .. math::
-
       0 = \int_E f \varphi_n ~ \mathrm{d} m = \int_{E \setminus E_n} f^2 ~ \mathrm{d} m.
 
    那么有 :math:`f(x) = 0` a.e. :math:`x \in E \setminus E_n`, 进而有
 
    .. math::
-
       f(x) = 0, \quad a.e. ~ x \in \bigcup_{n = 1}^\infty (E \setminus E_n) = E \setminus \bigcap_{n = 1}^\infty E_n.
 
    由于 :math:`\displaystyle \lim_{n \to \infty} m E_n = 0`, 所以 :math:`\displaystyle m \left( \bigcap_{n = 1}^\infty E_n \right) = 0`,
@@ -198,7 +179,6 @@
    且 :math:`\varphi f = \lvert f \rvert`, 于是
 
    .. math::
-
       0 = \int_E f \varphi ~ \mathrm{d} m = \int_E \lvert f \rvert ~ \mathrm{d} m,
 
    由勒贝格积分的唯一性定理知 :math:`f \sim 0`.
@@ -214,7 +194,6 @@
    则 :math:`f_n` 的积分为 :math:`- \infty`, 但是 :math:`f_n` 逐点收敛于 :math:`f = 0`, :math:`f` 的积分为 :math:`0`, 此时
 
    .. math::
-
       \int_E f ~ \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n ~ \mathrm{d} m.
 
    如果加上 :math:`f_n` 的积分都有定义, 且 :math:`\displaystyle \int_E f_1 ~ \mathrm{d} m > - \infty` 这个条件, Levi 定理就成立了.
@@ -224,7 +203,6 @@
 9. 证明下列等式
 
    .. math::
-
       \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m = \sum_{n = 1}^\infty \dfrac{1}{(p + n)^2}, \quad p > -1.
 
 .. proof:proof::
@@ -232,7 +210,6 @@
    在 :math:`(0, 1)` 上有 :math:`\displaystyle \dfrac{x^p}{1 - x} = \sum_{n = 1}^\infty x^{p + n - 1}`, 于是
 
    .. math::
-
       \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m
       = \int_{(0, 1)} \sum_{n = 1}^\infty \left( - x^{p + n - 1} \ln x \right) ~ \mathrm{d} m.
 
@@ -257,7 +234,6 @@
    将 :eq:`ex-4-9-eq-2` 代入 :eq:`ex-4-9-eq-1` 中, 即有
 
    .. math::
-
       \int_{(0, 1)} \dfrac{x^p}{1 - x} \ln \dfrac{1}{x} ~ \mathrm{d} m = \sum_{n = 1}^\infty \int_{(0, 1)} f_n ~ \mathrm{d} m
       = \sum_{n = 1}^\infty \dfrac{1}{(p + n)^2}.
 
@@ -274,7 +250,6 @@
    也即 :math:`\lvert f(x) / x \rvert \leqslant \lvert A \rvert + \varepsilon`, 这表明
 
    .. math::
-
       \int_{(-\delta, \delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m < \infty.
 
    另一方面, 由于 :math:`f(x)` 是 :math:`\mathbb{R}` 上可积函数, 所以 :math:`\lvert f(x) \rvert` 也是 :math:`\mathbb{R}` 上可积函数.
@@ -282,7 +257,6 @@
    于是
 
    .. math::
-
       \int_{(-\infty, -\delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m + \int_{(\delta, +\infty)} \lvert f(x) / x \rvert ~ \mathrm{d} m
       \leqslant \dfrac{1}{\delta} \int_{(-\infty, -\delta)} \lvert f(x) \rvert ~ \mathrm{d} m
           + \dfrac{1}{\delta} \int_{(\delta, +\infty)} \lvert f(x) \rvert ~ \mathrm{d} m
@@ -291,7 +265,6 @@
    综上有
 
    .. math::
-
       \int_{\mathbb{R}} \lvert f(x) / x \rvert ~ \mathrm{d} m
       = \int_{(-\infty, -\delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m
           + \int_{(-\delta, \delta)} \lvert f(x) / x \rvert ~ \mathrm{d} m
@@ -310,7 +283,6 @@
    令 :math:`f_n(x) = \lvert \cos (\pi f(x)) \rvert^n`, 那么对任意 :math:`x \in (0, 1)` 有
 
    .. math::
-
       \lim_{n \to \infty} f_n(x) = \begin{cases}
          1, & f(x) \in \mathbb{Z}, \\
          0, & f(x) \not\in \mathbb{Z}
@@ -319,7 +291,6 @@
    记 :math:`I = [0, 1]`, :math:`E = I(f \in \mathbb{Z})`, 那么 :math:`E` 是可测集, 且 :math:`g = \chi_E`. 由有界收敛定理有
 
    .. math::
-
       \lim_{n \to \infty} \int_{(0, 1)} f_n ~ \mathrm{d} m
       & = \int_{(0, 1)} \lim_{n \to \infty} f_n ~ \mathrm{d} m = \int_{(0, 1)} g ~ \mathrm{d} m \\
       & = \int_{(0, 1)} \chi_E ~ \mathrm{d} m = m E = m I(f \in \mathbb{Z}).
@@ -334,13 +305,11 @@
    令 :math:`f_n(x) = \left( 1 + \dfrac{x}{n} \right)^n e^{-x^2} \chi_{(-n, n)}`, 那么有
 
    .. math::
-
       \lvert f_n(x) \rvert \leqslant \left( 1 + \dfrac{\lvert x \rvert}{n} \right)^n e^{-x^2} \leqslant e^{-x^2 + \lvert x \rvert} =: g(x).
 
    令 :math:`g_n(x) = g \cdot \chi_{[-n, n]}`, 那么 :math:`\{ g_n \}` 构成了 :math:`\mathbb{R}` 上的非负渐升函数列, 由 Levi 定理知
 
    .. math::
-
       \int_{\mathbb{R}} g ~ \mathrm{d} m
       & = \lim_{n \to \infty} \int_{\mathbb{R}} g_n ~ \mathrm{d} m = \lim_{n \to \infty} \int_{(-n, n)} g ~ \mathrm{d} m \\
       & = \lim_{n \to \infty} (R) \int_{-n}^n g ~ \mathrm{d} m = \int_{-\infty}^{+\infty} g(x) ~ \mathrm{d} x \\
@@ -351,7 +320,6 @@
    故 :math:`g` 在 :math:`(-\infty, \infty)` 上是勒贝格可积的, 从而由控制收敛定理可得
 
    .. math::
-
       \lim_{n \to \infty} \int_{(-n, n)} \left( 1 + \dfrac{x}{n} \right)^n e^{-x^2} ~ \mathrm{d} m
       = \int_{\mathbb{R}} \lim_{n \to \infty} f_n ~ \mathrm{d} m = \int_{\mathbb{R}} e^{-x^2 + x} ~ \mathrm{d} m.
 
@@ -359,7 +327,6 @@
    考虑 :math:`f \chi_{[-n, n]}`, 那么 :math:`f \chi_{[-n, n]}` 是 :math:`\mathbb{R}` 上的非负渐升函数列, 由 Levi 定理知
 
    .. math::
-
       \int_{\mathbb{R}} f ~ \mathrm{d} m
       & = \lim_{n \to \infty} \int_{\mathbb{R}} f \chi_{[-n, n]} ~ \mathrm{d} m = \lim_{n \to \infty} \int_{-n}^n f ~ \mathrm{d} m \\
       & = \lim_{n \to \infty} (R) \int_{-n}^n f(x) ~ \mathrm{d} x = \int_{-\infty}^{+\infty} f(x) ~ \mathrm{d} x
@@ -382,14 +349,12 @@
    (参见 :ref:`第二章第 32 题 <ex-2-32>`), 于是对于 :math:`\displaystyle \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x` 有
 
    .. math::
-
       \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x = n^{-\alpha} \int_{\mathbb{R}} f(y) ~ \dfrac{1}{n} ~ \mathrm{d} y
       = \dfrac{1}{n^{1 + \alpha}} \int_{\mathbb{R}} f ~ \mathrm{d} m.
 
    对上式关于 :math:`n` 求和, 有
 
    .. math::
-
       \sum_{n = 1}^\infty \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x
       = \sum_{n = 1}^\infty \dfrac{1}{n^{1 + \alpha}} \int_{\mathbb{R}} f ~ \mathrm{d} m
       = \left( \int_{\mathbb{R}} f ~ \mathrm{d} m \right) \sum_{n = 1}^\infty \dfrac{1}{n^{1 + \alpha}}.
@@ -397,7 +362,6 @@
    由于 :math:`\alpha > 0`, 上述等式右边的级数收敛, 记这个级数的和为 :math:`C`. 对于上述等式左边的级数, 由逐项积分定理知
 
    .. math::
-
       C = \sum_{n = 1}^\infty \int_{\mathbb{R}} n^{-\alpha} f(nx) ~ \mathrm{d} x
       = \int_{\mathbb{R}} \sum_{n = 1}^\infty n^{-\alpha} f(nx) ~ \mathrm{d} x.
 
@@ -406,21 +370,18 @@
    即 :math:`\displaystyle n^{-\alpha} f(nx) \xrightarrow{\text{~a.e.~}} 0 ~ (n \to \infty)`.
 
    .. note::
-
       可以用 Fatou 引理来证明稍弱一些的结论.
 
       记 :math:`g_n = n^{-\alpha} f(nx)`, :math:`\displaystyle g = \varliminf_{n \to \infty} g_n`,
       那么 :math:`g, g_n` 都是 :math:`\mathbb{R}` 上的非负可测函数, 由 Fatou 引理知
 
       .. math::
-
          \int_{\mathbb{R}} g ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_{\mathbb{R}} g_n ~ \mathrm{d} m
          = \varliminf_{n \to \infty} n^{-\alpha} \int_{\mathbb{R}} f(nx) ~ \mathrm{d} x.
 
       所以
 
       .. math::
-
          0 \leqslant \int_{\mathbb{R}} g ~ \mathrm{d} m
          \leqslant \varliminf_{n \to \infty} n^{-\alpha - 1} \int_{\mathbb{R}} f(y) ~ \mathrm{d} y = 0.
 
@@ -432,7 +393,6 @@
 14. 设 :math:`f` 是区间 :math:`[0, 1]` 上的可积函数, 若对任何 :math:`c \in (0, 1)` 恒有
 
     .. math::
-
       \int_0^c f(x) ~ \mathrm{d} m = 0,
 
 证明 :math:`f \sim 0`.
@@ -446,20 +406,17 @@
    不失一般性, 可以设 :math:`f(1) = 0`, 那么由控制收敛定理有
 
    .. math::
-
       \int_0^1 f ~ \mathrm{d} m = \int_0^1 \left( \lim_{c \to 1 -} f \cdot \chi_{[0, c]} \right) ~ \mathrm{d} m
       = \lim_{c \to 1 -} \int_0^1 f \cdot \chi_{[0, c]} ~ \mathrm{d} m = \lim_{c \to 1 -} \int_0^c f ~ \mathrm{d} m = 0.
 
    于是, 对于任意闭集 :math:`F \subset [0, 1]`, 有
 
    .. math::
-
       \int_F f ~ \mathrm{d} m = \int_{[0, 1]} f ~ \mathrm{d} m - \int_{[0, 1] \setminus F} f ~ \mathrm{d} m = 0 - 0 = 0.
 
    假设 :math:`f \not\sim 0`, 记 :math:`I = [0, 1]`, 那么集合
 
    .. math::
-
       E = I(f \neq 0) = I(f > 0) \cup I(f < 0) = E_+ \cup E_-
 
    有正测度, 即 :math:`0 < m E = m E_+ + m E_-`. 因此, :math:`E_+` 或者 :math:`E_-` 至少有一个有正测度, 不妨设 :math:`m E_+ > 0`,
@@ -468,7 +425,6 @@
    且 :math:`\displaystyle \bigcup_{n = 1}^\infty B_n = B`. 注意到 :math:`f` 在集合 :math:`B \subset E_+` 上恒正, 所以由 Levi 定理知
 
    .. math::
-
       \int_B f ~ \mathrm{d} m = \int_B \left( \lim_{n \to \infty} f \cdot \chi_{B_n} \right) ~ \mathrm{d} m
       = \lim_{n \to \infty} \int_B f \cdot \chi_{B_n} ~ \mathrm{d} m = \lim_{n \to \infty} \int_{B_n} f ~ \mathrm{d} m = \lim_{n \to \infty} 0 = 0.
 
@@ -479,7 +435,6 @@
 15. 求极限
 
     .. math::
-
       \lim_{n \to \infty} (R) \int_0^1 \dfrac{nx^{1/2}}{1 + n^2 x^2} \sin^5 (nx) ~ \mathrm{d} x.
 
 .. proof:proof::
@@ -487,19 +442,16 @@
    记 :math:`f_n(x) = \dfrac{nx^{1/2}}{1 + n^2 x} \sin^5 (nx)`, 那么对任意 :math:`x \in [0, 1]` 有
 
    .. math::
-
       \lvert f_n(x) \rvert \leqslant \dfrac{nx^{1/2}}{1 + n^2 x^2} \leqslant \dfrac{1}{2 \sqrt{x}} =: g(x).
 
    如果能证明 :math:`g` 是勒贝格可积的, 那么由于对任意 :math:`x \in [0, 1]` 有
 
    .. math::
-
       \lim_{n \to \infty} f_n(x) = 0,
 
    由控制收敛定理可知
 
    .. math::
-
       \lim_{n \to \infty} (R) \int_0^1 f_n(x) ~ \mathrm{d} x & = \lim_{n \to \infty} (L) \int_0^1 f_n(x) ~ \mathrm{d} x \\
       & = (L) \int_0^1 \lim_{n \to \infty} f_n(x) ~ \mathrm{d} x = 0.
 
@@ -507,7 +459,6 @@
    且 :math:`\displaystyle \lim_{n \to \infty} g_n = g`. 由 Levi 定理知
 
    .. math::
-
       (L) \int_0^1 g ~ \mathrm{d} x
       & = \lim_{n \to \infty} (L) \int_0^1 g_n ~ \mathrm{d} x = \lim_{n \to \infty} (L) \int_{1/n}^1 g ~ \mathrm{d} x \\
       & = \lim_{n \to \infty} (L) \int_{1/n}^1 \dfrac{1}{2 \sqrt{x}} ~ \mathrm{d} x
@@ -517,7 +468,6 @@
    所以 :math:`g` 是勒贝格可积的, 从而有
 
    .. math::
-
       \lim_{n \to \infty} (R) \int_0^1 \dfrac{nx^{1/2}}{1 + n^2 x^2} \sin^5 (nx) ~ \mathrm{d} x = 0.
 
 .. _ex-4-16:
@@ -525,7 +475,6 @@
 16. 设 :math:`f(x)` 在有限区间 :math:`[a, b]` 上可积, 试证: 对每个 :math:`n \in \mathbb{N}`, :math:`[nf(x)]` 可测且有等式
 
     .. math::
-
       \lim_{n \to \infty} \dfrac{1}{n} \int_{(a, b)} [nf(x)] ~ \mathrm{d} m = \int_{(a, b)} f(x) ~ \mathrm{d} m,
 
     其中 :math:`[y]` 表示实数 :math:`y` 的整部 (即不超过 :math:`y` 的最大整数).
@@ -535,13 +484,11 @@
    记 :math:`f_n(x) = [nf(x)]`. 对任意 :math:`\alpha \in \mathbb{R}`, 有
 
    .. math::
-
       [nf(x)] > \alpha ~ \Leftrightarrow ~ nf(x) \geqslant [\alpha] + 1 ~ \Leftrightarrow ~ f(x) \geqslant \dfrac{[\alpha] + 1}{n}.
 
    记 :math:`E = [a, b]`, 那么
 
    .. math::
-
       E(f_n > \alpha) = E \left( f \geqslant \dfrac{[\alpha] + 1}{n} \right)
 
    是可测集, 故 :math:`f_n(x)` 是可测函数.
@@ -549,14 +496,12 @@
    记 :math:`g_n(x) = \dfrac{1}{n}[nf(x)]`, 容易证明 :math:`\displaystyle \lim_{n \to \infty} g_n(x) = f(x)`. 又由于有
 
    .. math::
-
       f(x) - 1 \leqslant \dfrac{nf(x) - 1}{n} \leqslant g_n(x) \leqslant \dfrac{nf(x)}{n} = f(x),
 
    所以 :math:`\lvert g_n(x) \rvert \leqslant \lvert f(x) \rvert + 1`. 由于 :math:`f` 在 :math:`[a, b]` 上可积, 且 :math:`[a, b]` 是有限测度集,
    所以 :math:`\lvert f \rvert + 1` 在 :math:`[a, b]` 上可积. 于是由控制收敛定理知
 
    .. math::
-
       \lim_{n \to \infty} \dfrac{1}{n} \int_{(a, b)} [nf(x)] ~ \mathrm{d} m = \lim_{n \to \infty} \int_{(a, b)} g_n ~ \mathrm{d} m
       = \int_{(a, b)} \lim_{n \to \infty} g_n ~ \mathrm{d} m
       = \int_{(a, b)} f ~ \mathrm{d} m.
@@ -567,7 +512,6 @@
     :math:`a` 是一确定的实数, 令
 
     .. math::
-
          F(x) = \dfrac{1}{2x} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t, \quad x \in \mathbb{R}.
 
     试证 :math:`F(x) \not\in L(\mathbb{R})`.
@@ -577,13 +521,11 @@
    由于
 
    .. math::
-
       \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t = \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t,
 
    所以由控制收敛定理有
 
    .. math::
-
       \lim_{x \to \infty} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t
       & = \lim_{x \to \infty} \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
       & = \int_{-\infty}^{\infty} \lim_{x \to \infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
@@ -594,7 +536,6 @@
    :math:`\displaystyle \left\lvert \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t - A \right\rvert < \varepsilon`, 即
 
    .. math::
-
       A - \varepsilon < \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t < A + \varepsilon.
 
    那么在 :math:`(M, +\infty)` 上有 :math:`\displaystyle F(x) > \dfrac{A}{4x}`, 后者在 :math:`(M, +\infty)` 不是勒贝格可积的,
@@ -610,7 +551,6 @@
    记 :math:`\omega_1 = 2\pi`, :math:`\omega_2 = 1`, :math:`\displaystyle \omega = \dfrac{\omega_1}{\omega_2}` 以及
 
    .. math::
-
       & \Lambda = \mathbb{Z} \omega_1 + \mathbb{Z} \omega_2 = \omega_2 \left( \mathbb{Z} + \mathbb{Z} \omega \right)
       = \{ k_1 \omega_1 + k_2 \omega_2 ~ : ~ k_1, k_2 \in \mathbb{Z} \}. \\
       & \Lambda_{\omega} = \mathbb{Z} + \mathbb{Z} \omega.
@@ -619,7 +559,6 @@
    从而有 :math:`\Lambda = \omega_2 \Lambda_{\omega}` 在 :math:`\mathbb{R}` 中稠密.
 
    .. note::
-
       :math:`\mathbb{Z} + \mathbb{Z} \omega` 在 :math:`\mathbb{R}` 中稠密的证明如下.
 
       用反证法, 假设 :math:`\mathbb{Z} + \mathbb{Z} \omega` 在 :math:`\mathbb{R}` 中不稠密, 那么存在 :math:`[0, 1]` 中的某个开区间
@@ -627,7 +566,6 @@
       :math:`1/N < b - a`, 并考虑
 
       .. math::
-
          \{ \{ k \omega \} ~ : ~ k \in \mathbb{Z} \},
 
       其中 :math:`\{ x \}` 表示 :math:`x` 的小数部分. 由于 :math:`\omega` 是无理数, 所以这个集合不是有限集, 从而可由抽屉原理知,
@@ -635,7 +573,6 @@
       其中 :math:`0 \leqslant n < N`. 于是有
 
       .. math::
-
          \lvert \{ k_1 \omega - k_2 \omega \} \rvert < \dfrac{1}{N} < b - a,
 
       于是 :math:`\mathbb{Z} \cdot \{(k_1 - k_2) \omega\} \subset \mathbb{Z} + \mathbb{Z} \omega` 与 :math:`(a, b)` 交集非空, 矛盾.
@@ -644,7 +581,6 @@
    对于 :math:`E_a`, 或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0`.
 
    .. note::
-
       对于 :math:`E_a`, 或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0` 的证明如下.
 
       由于 :math:`f` 以 :math:`1` 为周期, 所以只要考察 :math:`E_a \cap [0, 1]` 即可. 以下记 :math:`E_{a,1} = E_a \cap [0, 1]`.
@@ -653,14 +589,12 @@
       :math:`I \subset [0, 1]` 使得 :math:`m (E_{a,1} \cap I) > \varepsilon m I`. 那么对任意 :math:`\lambda \in \Lambda` 有
 
       .. math::
-
          m (E_{a,1} \cap (I + \lambda)) = m (E_{a,1} \cap I) > \varepsilon m I.
 
       由于 :math:`\Lambda` 在 :math:`[0, 1]` 中稠密, 由上式可以推出 :math:`m E_{a,1} \geqslant \varepsilon m ([0, 1]) = \varepsilon`.
       进一步令 :math:`\varepsilon \to 1-`, 可得 :math:`m E_{a,1} = 1`, 这表明 :math:`m E_{a,1}^c = 0`.
 
    .. note::
-
       对于或者有 :math:`m E_a = 0` 或者有 :math:`m E_a^c = 0` 这一论断, 有更一般的结论: 对于可测集 :math:`E \subset \mathbb{R}`,
       若 :math:`E` 有任意小的周期, 即存在正数列 :math:`p_n`, 使得 :math:`\displaystyle \lim_{n \to \infty} p_n = 0` 且 :math:`E = E + p_n`,
       那么或者有 :math:`m E = 0` 或者有 :math:`m E^c = 0`. 这个结论的证明如下.
@@ -676,13 +610,11 @@
       于是 :math:`\varphi(x)` 几乎处处可导, 并且有牛顿-莱布尼茨公式成立, 即
 
       .. math::
-
          m (E \cap [a, b]) = \varphi(b) - \varphi(a) = \int_{[a, b]} \varphi'(x) ~ \mathrm{d} m.
 
       另一方面, 对任意满足 :math:`\alpha + p_n < x < y` 的 :math:`x, y`, 有
 
       .. math::
-
          \varphi(x + p_n) - \varphi(x - p_n) & = m (E \cap [\alpha, x + p_n]) - m (E \cap [\alpha, x - p_n]) \\
          & = m (E \cap [\alpha, x + p_n] - p_n) - m (E \cap [\alpha, x - p_n] + p_n)\\
          & = m (E \cap [\alpha - p_n, \alpha + p_n]).
@@ -690,19 +622,16 @@
       类似地, 有
 
       .. math::
-
          \varphi(y + p_n) - \varphi(y - p_n) = m (E \cap [\alpha - p_n, \alpha + p_n]),
 
       从而
 
       .. math::
-
          \varphi(x + p_n) - \varphi(x - p_n) = \varphi(y + p_n) - \varphi(y - p_n),
 
       等价地
 
       .. math::
-
          \dfrac{\varphi(x + p_n) - \varphi(x) + \varphi(x) - \varphi(x - p_n)}{2p_n}
          = \dfrac{\varphi(y + p_n) - \varphi(y) + \varphi(y) - \varphi(y - p_n)}{2p_n}.
 
@@ -710,33 +639,28 @@
       即有 :math:`\varphi'(x) \sim c`. 于是对任意区间 :math:`[a, b]` 有
 
       .. math::
-
          m (E \cap [a, b]) = \int_{[a, b]} \varphi'(x) ~ \mathrm{d} m = c (b - a).
 
       假如 :math:`m E > 0`, 那么对任意 :math:`0 < \varepsilon < 1`, 存在开区间 :math:`I = (a_0, b_0)` 使得 :math:`m (E \cap I) > \varepsilon m I`,
       在 :eq:`ex-4-18-eq-1` 中取 :math:`\alpha < a_0`, 即有
 
       .. math::
-
          m (E \cap [a_0, b_0]) = \varphi(b_0) - \varphi(a_0) = \int_{[a_0, b_0]} \varphi'(x) ~ \mathrm{d} m = c (b_0 - a_0) > \varepsilon m I,
 
       即有 :math:`c > \varepsilon`. 令 :math:`\varepsilon \to 1-`, 即有 :math:`c \geqslant 1`. 另一方面显然有 :math:`c \leqslant 1`, 从而 :math:`c = 1`.
       由此可推出, 对任意 :math:`n \in \mathbb{N}`, 有
 
       .. math::
-
          m (E^c \cap (-n ,n)) = 2n - m (E \cap (-n, n)) = 2n - 2n = 0.
 
       :math:`\displaystyle \left\{ E^c \cap (-n, n) \right\}_{n \in \mathbb{N}}` 构成了渐张可测集列, 从而有
 
       .. math::
-
          m E^c = \lim_{n \to \infty} m (E^c \cap (-n, n)) = \lim_{n \to \infty} 0 = 0.
 
    令
 
    .. math::
-
       d = \inf \{ a ~ : ~ m E_a = 0 \}.
 
    由于 :math:`f` 为有限可测函数, 所以 :math:`\displaystyle \mathbb{R} = \bigcup_{n \in \mathbb{Z}} E_n`,
@@ -766,7 +690,6 @@
     且一致地有
 
     .. math::
-
       \int_E \lvert f_n \rvert ~ \mathrm{d} m \leqslant K, \quad K \text{ 为常数},
 
     证明 :math:`f` 可积.
@@ -779,7 +702,6 @@
    对 :math:`E` 上的非负可测函数列 :math:`\{ f_n \}` 应用 Fatou 引理, 有
 
    .. math::
-
       K \geqslant \varliminf_{n \to \infty} \int_E \lvert f_n \rvert ~ \mathrm{d} m
         \geqslant \int_E \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m
       & = \int_{E_0} \varliminf_{n \to \infty} \lvert f_n \rvert ~ \mathrm{d} m
@@ -795,13 +717,11 @@
 20. 设 :math:`f(x), f_n(x) ~ (n \in \mathbb{N})` 均是 :math:`E` 上可积函数, :math:`f_n(x)` 几乎处处收敛于 :math:`f(x)`, :math:`n \to \infty`, 且
 
     .. math::
-
       \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_E \lvert f(x) \rvert ~ \mathrm{d} m.
 
     试证: 对任意可测子集 :math:`e \subset E`, 有
 
     .. math::
-
       \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_e \lvert f(x) \rvert ~ \mathrm{d} m.
 
     提示: 对序列 :math:`\lvert f_n \rvert` 分别在 :math:`e` 与 :math:`E \setminus e` 上的积分应用 Fatou 引理.
@@ -824,7 +744,6 @@
    由于有
 
    .. math::
-
       \varliminf_{n \to \infty} \int_{E \setminus e} \lvert f_n(x) \rvert ~ \mathrm{d} m
       & = \varliminf_{n \to \infty} \left( \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m \right) \\
       & = \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m,
@@ -832,21 +751,18 @@
    所以 :eq:`ex-4-20-eq-1` 中两个不等式相加, 有
 
    .. math::
-
       \int_E \lvert f(x) \rvert ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m
       + \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
 
    将条件 :math:`\displaystyle \lim_{n \to \infty} \int_E \lvert f_n(x) \rvert ~ \mathrm{d} m = \int_E \lvert f(x) \rvert ~ \mathrm{d} m` 代入上式, 可得
 
    .. math::
-
       \varlimsup_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
 
    这表明极限 :math:`\displaystyle \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m` 存在, 且不等号都必须取等号,
    反代回 :eq:`ex-4-20-eq-1` 的第一个不等式, 即有
 
    .. math::
-
       \int_e \lvert f(x) \rvert ~ \mathrm{d} m = \lim_{n \to \infty} \int_e \lvert f_n(x) \rvert ~ \mathrm{d} m.
 
 .. _ex-4-21:
@@ -854,7 +770,6 @@
 21. 设 :math:`f` 在 :math:`(-\infty, \infty)` 上可积, 证明
 
     .. math::
-
       \lim_{h \to 0} \int_{-\infty}^\infty \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m = 0.
 
 .. proof:proof::
@@ -865,14 +780,12 @@
    对所有 :math:`x \in \mathbb{R}` 以及 :math:`k \in \mathbb{N}` 成立. 于是, 由 Lebesgue 控制收敛定理可得
 
    .. math::
-
       \lim_{k \to \infty} \int_{E_k} f ~ \mathrm{d} m = \lim_{k \to \infty} \int_{\mathbb{R}} f \cdot \chi_{E_k} ~ \mathrm{d} m
       = \int_{\mathbb{R}} \lim_{k \to \infty} f \cdot \chi_{E_k} ~ \mathrm{d} m = \int_{\mathbb{R}} f ~ \mathrm{d} m.
 
    那么 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`K \in \mathbb{N}`, 使得当 :math:`k > K` 时, 有
 
    .. math::
-
       0 \leqslant \int_{\mathbb{R} \setminus E_{k-1}} \lvert f \rvert ~ \mathrm{d} m
       = \int_{\mathbb{R}} \lvert f \rvert ~ \mathrm{d} m - \int_{E_{k-1}} \lvert f \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{3}.
 
@@ -887,7 +800,6 @@
    在 :math:`E_{k+1}` 上有
 
    .. math::
-
       \lvert f(x + h) - f(x) \rvert \leqslant
       \lvert f(x + h) - \varphi(x + h) \rvert + \lvert \varphi(x + h) - \varphi(x) \rvert + \lvert \varphi(x) - f(x) \rvert.
 
@@ -899,19 +811,16 @@
    那么当 :math:`\displaystyle 0 < h < \min_{1 \leqslant j \leqslant t} m I_j`, 总有
 
    .. math::
-
       \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert ~ \mathrm{d} m \leqslant 4 M t \lvert h \rvert.
 
    进一步缩小 :math:`\lvert h \rvert`, 使其满足 :math:`0 < \lvert h \rvert < \dfrac{\varepsilon}{72 M t}`, 那么有
 
    .. math::
-
       \int_{E_{k+1}} \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{18}.
 
    另一方面有
 
    .. math::
-
       \lvert \varphi(x + h) - \varphi(x) \rvert \leqslant \lvert \varphi(x + h) - \widetilde{\varphi}(x + h) \rvert
       + \lvert \widetilde{\varphi} (x + h) - \widetilde{\varphi} (x) \rvert + \lvert \widetilde{\varphi}(x) - \varphi(x) \rvert,
 
@@ -931,7 +840,6 @@
    综合式 :eq:`ex-4-21-eq-1` 和 :eq:`ex-4-21-eq-2`, 有
 
    .. math::
-
       & \int_{E_k} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m \\
       & \leqslant \int_{E_k} \leqslant \lvert f(x + h) - \varphi(x + h) \rvert ~ \mathrm{d} m + \int_{E_k} \lvert \varphi(x + h)
         - \varphi(x) \rvert ~ \mathrm{d} m + \int_{E_k} \lvert \varphi(x) - f(x) \rvert  ~ \mathrm{d} m \\
@@ -942,7 +850,6 @@
    于是有
 
    .. math::
-
       \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
       & = \left( \int_{E_k} + \int_{\mathbb{R} \setminus E_k} \right) \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m \\
       & \leqslant \int_{E_k} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
@@ -953,7 +860,6 @@
    这便证明了 :math:`\displaystyle \lim_{h \to 0} \int_{-\infty}^\infty \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m = 0.`
 
    .. note::
-
       以上性质称作是 Lebesgue 积分的平均连续性.
 
       以下是来自《实变函数论》(周民强) 的简化证明:
@@ -961,25 +867,21 @@
       任给 :math:`\varepsilon > 0`, 做分解
 
       .. math::
-
          f = f_1 + f_2,
 
       其中 :math:`f_1` 是 :math:`\mathbb{R}` 上具有紧支集的连续函数, :math:`f_2` 满足
 
       .. math::
-
          \int_{\mathbb{R}} \lvert f_2 \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{4}.
 
       由于连续函数 :math:`f_1` 具有紧支集, 从而一致连续, 所以存在 :math:`\delta > 0`, 使得当 :math:`\lvert h \rvert < \delta` 时有
 
       .. math::
-
          \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m < \dfrac{\varepsilon}{2}.
 
       于是, 当 :math:`\lvert h \rvert < \delta` 时有
 
       .. math::
-
          \int_{\mathbb{R}} \lvert f(x + h) - f(x) \rvert ~ \mathrm{d} m
          & \leqslant \int_{\mathbb{R}} \lvert f_1(x + h) - f_1(x) \rvert ~ \mathrm{d} m
            + \int_{\mathbb{R}} \lvert f_2(x + h) - f_2(x) \rvert ~ \mathrm{d} m \\
@@ -995,13 +897,11 @@
 23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数, 试证
 
     .. math::
-
       \hat{f} (t) = \int_{\mathbb{R}} e^{-itx} f(x) ~ \mathrm{d} x.
 
     是 :math:`\mathbb{R}` 上的连续函数, 且
 
     .. math::
-
       \hat{f} (t) = \dfrac{~ \mathrm{d}}{~ \mathrm{d} t} \int_{\mathbb{R}} \dfrac{e^{-itx} - 1}{-ix} f(x) ~ \mathrm{d} x.
 
 .. proof:proof::
@@ -1010,7 +910,6 @@
    对任意 :math:`t_0 \in \mathbb{R}` 有
 
    .. math::
-
       \lim_{t \to t_0} \hat{f} (t) = \lim_{t \to t_0} \int_{\mathbb{R}} e^{-itx} f(x) ~ \mathrm{d} x
       = \int_{\mathbb{R}} \lim_{t \to t_0} e^{-itx} f(x) ~ \mathrm{d} x = \int_{\mathbb{R}} e^{-it_0x} f(x) ~ \mathrm{d} x = \hat{f} (t_0).
 
@@ -1019,13 +918,11 @@
    令 :math:`g(x, t) = \dfrac{e^{-itx} - 1}{-ix} f(x)`, 那么
 
    .. math::
-
       \left\lvert \dfrac{\partial}{\partial t} g(x, t) \right\rvert = \left\lvert e^{-itx} f(x) \right\rvert = \lvert f(x) \rvert,
 
    由 :ref:`积分号下求导定理 <thm-differentiation-under-integral-sign>` 可得
 
    .. math::
-
       \dfrac{~ \mathrm{d}}{~ \mathrm{d} t} \int_{\mathbb{R}} g(x, t) ~ \mathrm{d} x
       = \int_{\mathbb{R}} \dfrac{\partial}{\partial t} g(x, t) ~ \mathrm{d} x = \int_{\mathbb{R}} e^{-itx} f(x) ~ \mathrm{d} x = \hat{f} (t).
 
@@ -1034,7 +931,6 @@
 24. 设 :math:`f(x)` 是 :math:`(a, b)` 上的可积函数, 试证
 
     .. math::
-
       \lim_{t \to \infty} \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x = 0.
 
     提示: 先对特殊的 :math:`f(x)` 证明结论, 再利用极限过程. 这个结果称为 Riemann-Lebesgue 引理.
@@ -1044,7 +940,6 @@
    对于 :math:`f(x) = \chi_{(c, d)} (x)`, 其中 :math:`a < c < d < b`, 有
 
    .. math::
-
       \int_{(a, b)} \chi_{(c, d)} (x) e^{itx} ~ \mathrm{d} x
       = \int_c^d e^{itx} ~ \mathrm{d} x = \dfrac{e^{itd} - e^{itc}}{it} \to 0, \quad t \to \infty.
 
@@ -1062,19 +957,16 @@
    那么对于任意 :math:`\varepsilon > 0`, 存在 :math:`N \in \mathbb{N}`, 使得当 :math:`n > N` 时有
 
    .. math::
-
       \int_{(a, b)} \lvert f - \varphi_n \rvert ~ \mathrm{d} x < \dfrac{\varepsilon}{2}.
 
    同时, 由 :eq:`ex-4-24-eq-1` 知, 对于取好的 :math:`\varepsilon`, 存在 :math:`M \in \mathbb{N}`, 使得当 :math:`t > M` 时有
 
    .. math::
-
       \left\lvert \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert < \dfrac{\varepsilon}{2}.
 
    于是, 当 :math:`t > M` 且 :math:`n > N` 时有
 
    .. math::
-
       \left\lvert \int_{(a, b)} f(x) e^{itx} ~ \mathrm{d} x \right\rvert
       & = \left\lvert \int_{(a, b)} (f(x) - \varphi_n(x)) e^{itx} ~ \mathrm{d} x
         + \int_{(a, b)} \varphi_n(x) e^{itx} ~ \mathrm{d} x \right\rvert \\
@@ -1091,7 +983,6 @@
 25. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可测函数, 令 :math:`\mu (\alpha) = m \mathbb{R}(\lvert f \rvert > \alpha)`, 试证
 
     .. math::
-
       \int_{\mathbb{R}} \lvert f \rvert^p ~ \mathrm{d} m
       = p \int_0^\infty \alpha^{p-1} \mu (\alpha) ~ \mathrm{d} \alpha, \quad 1 \leqslant p < \infty.
 
@@ -1100,7 +991,6 @@
    对任意 :math:`x \in \mathbb{R}`, 有
 
    .. math::
-
       \lvert f(x) \rvert^p & = \int_0^{\lvert f(x) \rvert^p} ~ \mathrm{d} t
       = \int_0^{\infty} \chi_{[0, \lvert f(x) \rvert^p]} (t) ~ \mathrm{d} t \\
       & = \int_0^\infty \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) ~ \mathrm{d} t.
@@ -1108,7 +998,6 @@
    对上式两端在 :math:`\mathbb{R}` 上积分, 由 Fubini 定理可得
 
    .. math::
-
       \int_{\mathbb{R}} \lvert f \rvert^p ~ \mathrm{d} m
       & = \int_{\mathbb{R}} \left( \int_0^\infty \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) ~ \mathrm{d} t \right) ~ \mathrm{d} x \\
       & = \int_0^{\infty} \left( \int_{\mathbb{R}} \chi_{\left\{ y \in \mathbb{R} ~:~ \lvert f(y) \rvert^p > t \right\}} (x) ~ \mathrm{d} x \right) ~ \mathrm{d} t \\
@@ -1118,17 +1007,14 @@
       & = p \int_0^\infty \alpha^{p-1} \mu (\alpha) ~ \mathrm{d} \alpha.
 
    .. note::
-
       这题的结论是所谓的 layer cake representation, 可以推广到一般的测度空间 :math:`(X, \mathscr{R}, \mu)` 上的非负可测函数 :math:`f` 上:
 
       .. math::
-
          f(x) = \int_0^{\infty} \chi_{\left\{ y\in X ~:~ f(y) > t \right\}}(x) ~ \mathrm{d} t.
 
       进一步有
 
       .. math::
-
          \int_X f ~ \mathrm{d} \mu = \int_0^{\infty} \mu (\left\{ x\in X ~:~ f(x) > t \right\}) ~ \mathrm{d} t.
 
 .. _ex-4-26:
@@ -1145,7 +1031,6 @@
    即 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n) < \infty`, 那么由逐项积分定理可得
 
    .. math::
-
       \int_E \lvert f \rvert ~ \mathrm{d} m
       & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
         = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
@@ -1161,7 +1046,6 @@
    必要性: 由于 :math:`f` 在 :math:`E` 上可积, 所以 :math:`\lvert f \rvert` 在 :math:`E` 上可积. 类似于充分性的证明, 有
 
    .. math::
-
       \infty > \int_E \lvert f \rvert ~ \mathrm{d} m
       & = \int_E \sum_{n=1}^\infty \lvert f \rvert \cdot \chi_{E(n - 1 \leqslant \lvert f \rvert < n)} ~ \mathrm{d} m
         = \sum_{n=1}^\infty \int_{E(n - 1 \leqslant \lvert f \rvert < n)} \lvert f \rvert ~ \mathrm{d} m \\
@@ -1174,11 +1058,9 @@
    这说明 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛.
 
    .. note::
-
       实际上, 本题使用了如下的不等式:
 
       .. math::
-
          \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n) \leqslant \int_E \lvert f \rvert ~ \mathrm{d} m
          \leqslant m E + \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n).
 

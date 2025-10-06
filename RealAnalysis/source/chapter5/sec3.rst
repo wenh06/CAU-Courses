@@ -12,7 +12,6 @@
    对任意 :math:`t \in \mathbb{R}`, 有
 
    .. math::
-
       \left\lvert \hat{f}_n(t) - \hat{f}(t) \right\rvert
       & = \dfrac{1}{2\pi} \left\lvert \int_{\mathbb{R}} f_n(x) e^{-itx} ~ \mathrm{d} x - \int_{\mathbb{R}} f(x) e^{-itx} ~ \mathrm{d} x \right\rvert \\
       & \leqslant \dfrac{1}{2\pi} \int_{\mathbb{R}} \left\lvert f_n(x) - f(x) \right\rvert ~ \mathrm{d} x \\
@@ -28,7 +27,6 @@
    有 :math:`f_n \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})`. 那么有
 
    .. math::
-
       \begin{gathered}
       \hat{f}(t) = \hat{\varphi}(t) = \dfrac{\sin t}{2\pi t}, \\
       \hat{f}_n(t) = (2\pi)^{n-1} \hat{\varphi}^n(t) = \dfrac{\sin^n t}{2\pi t^n}.
@@ -37,7 +35,6 @@
    那么由帕塞瓦尔 (Parseval) 公式知
 
    .. math::
-
       \lim_{n \to \infty} \lVert f_n \rVert_2^2
       & = \lim_{n \to \infty} 2 \pi \int_{\mathbb{R}} \lvert \hat{f}_n(t) \rvert^2 ~ \mathrm{d} t
       = \lim_{n \to \infty} \dfrac{1}{2\pi} \int_{\mathbb{R}} \dfrac{\sin^{2n} t}{t^{2n}} ~ \mathrm{d} t \\
@@ -58,7 +55,6 @@
    反例: 考虑如下定义的奇函数 :math:`g`:
 
    .. math::
-
       g(t) = \begin{cases}
       1 / \ln t, & t > e, \\
       t / e, & 0 \leqslant t \leqslant e, \\
@@ -93,13 +89,11 @@
    事实上, 由 :eq:`ex-5-40-eq-2` 式已看出, 若 :math:`\hat{f}(t)` 为奇函数, 则有
 
    .. math::
-
       \hat{f}(t) = i \dfrac{1}{2\pi} \int_{\mathbb{R}} f(x) \sin tx ~ \mathrm{d} x.
 
    于是
 
    .. math::
-
       \left\lvert \int_a^c \dfrac{\hat{f}(t)}{t} ~ \mathrm{d} t \right\rvert
       = \dfrac{1}{2\pi} \left\lvert \int_a^c \int_{\mathbb{R}} f(x) \dfrac{\sin tx}{t} ~ \mathrm{d} x ~ \mathrm{d} t \right\rvert.
 
@@ -116,7 +110,6 @@
    由于 :math:`\displaystyle \varphi(s) = \int_0^s \dfrac{\sin t}{t} ~ \mathrm{d} t` 为有界函数, 设它的一个上界为 :math:`M_0`. 又有
 
    .. math::
-
       \begin{gathered}
       \int_a^c \dfrac{\sin tx}{t} ~ \mathrm{d} t = \int_{ax}^{cx} \dfrac{\sin t}{t} ~ \mathrm{d} t = \varphi(cx) - \varphi(ax), \quad x > 0, \\
       \int_a^c \dfrac{\sin tx}{t} ~ \mathrm{d} t = -\int_{-ax}^{-cx} \dfrac{\sin t}{t} ~ \mathrm{d} t = \varphi(-ax) - \varphi(-cx), \quad x < 0,
@@ -125,7 +118,6 @@
    故 :math:`\displaystyle \left\lvert \int_a^c \dfrac{\sin tx}{t} ~ \mathrm{d} t \right\rvert \leqslant 2M_0`. 代入 :eq:`ex-5-40-eq-4` 式有
 
    .. math::
-
       \left\lvert \int_a^c \dfrac{\hat{f}(t)}{t} ~ \mathrm{d} t \right\rvert \leqslant \dfrac{1}{2\pi} \int_{\mathbb{R}} \lvert f(x) \rvert 2M_0 ~ \mathrm{d} x = \dfrac{M_0}{\pi} \lVert f \rVert_1.
 
    于是取 :math:`\displaystyle M = \dfrac{M_0}{\pi} \lVert f \rVert_1` 即可.
@@ -139,7 +131,6 @@
    由于 :math:`\hat{f} = 0 \in L^1(\mathbb{R})`, 故当 :math:`f \in L^1(\mathbb{R})` 时, 由反演公式
 
    .. math::
-
       f(x) = \int_{\mathbb{R}} \hat{f}(t) e^{itx} ~ \mathrm{d} t = 0, \quad \text{a.e.} ~ x \in \mathbb{R},
 
    即有 :math:`f \sim 0`.
@@ -147,7 +138,6 @@
    当 :math:`f \in L^2(\mathbb{R})` 时, 由普朗席奈定理 (Plancherel 定理), 相应的反演公式为
 
    .. math::
-
       f(x) = \dfrac{\mathrm{d}}{\mathrm{d} x} \left( \int_{\mathbb{R}} \hat{f}(t) \dfrac{e^{itx} - 1}{it} ~ \mathrm{d} t \right) = 0,
       \quad \text{a.e.} ~ x \in \mathbb{R},
 

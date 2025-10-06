@@ -6,7 +6,6 @@
 1. Generalized Van der Waerden-Takagi 函数定义如下
 
 .. math::
-
    & \varphi(x) = d(x, \mathbb{Z}) = \min_{n \in \mathbb{Z}} |x - n|, \quad x \in \mathbb{R}, \\
    & f(x) = \sum_{n=0}^{\infty} a^n \varphi(b^n x).
 
@@ -23,14 +22,12 @@
 希望可以选取序列 :math:`u_n \rightarrow x \leftarrow v_n`, 使得
 
 .. math::
-
    \dfrac{f(u_n) - f(v_n)}{u_n - v_n}
    = \dfrac{\sum\limits_{m=0}^{\infty} a^m (\varphi(b^m u_n) - \varphi(b^m v_n))}{u_n - v_n}
 
 发散. 由于 :math:`2 b^n x` 是非负实数, 所以存在非负整数 :math:`k_n`, 使得 :math:`k_n \leqslant 2 b^n x < k_n + 1`, 即
 
 .. math::
-
    \dfrac{k_n}{2 b^n} \leqslant x < \dfrac{k_n + 1}{2 b^n}.
 
 取 :math:`u_n = \dfrac{k_n}{2 b^n}, v_n = \dfrac{k_n + 1}{2 b^n}`.
@@ -39,19 +36,16 @@
 :math:`1^{\circ}` 当 :math:`0 \leqslant m < n` 时, 由于
 
 .. math::
-
    b^m u_n = \dfrac{k_n}{2} \cdot \dfrac{1}{b^{n-m}}, ~~ b^m v_n = \dfrac{k_n + 1}{2} \cdot \dfrac{1}{b^{n-m}},
 
 从而存在非负整数 :math:`z`, 使得 :math:`b^m u_n, b^m v_n` 同时属于 :math:`[z, z+1/2]` 或 :math:`[z+1/2, z+1]`, 那么
 
 .. math::
-
    \varphi(b^m u_n) - \varphi(b^m v_n) = \pm (b^m u_n - b^m v_n) = \pm \dfrac{1}{2 b^{n-m}},
 
 从而有
 
 .. math::
-
    \dfrac{a^m (\varphi(b^m u_n) - \varphi(b^m v_n))}{u_n - v_n}
    = \pm a^m \dfrac{1}{2 b^{n-m}} \left/ \left( \dfrac{1}{2 b^n}\right) \right.
    = \pm (ab)^m.
@@ -59,7 +53,6 @@
 :math:`2^{\circ}` 当 :math:`m \geqslant n` 时, 有
 
 .. math::
-
    b^m u_n = \dfrac{b^{m-n} \cdot k_n}{2}, ~~ b^m v_n = \dfrac{b^{m-n} \cdot (k_n+1)}{2}.
 
 :math:`2.1^{\circ}` 当 :math:`b` 为偶数时, 若 :math:`m > n`, 则 :math:`b^m u_n, b^m v_n` 都是整数;
@@ -67,7 +60,6 @@
 另一个为半整数 (即 :math:`\dfrac{1}{2} +` 整数). 于是
 
 .. math::
-
    \dfrac{a^m (\varphi(b^m u_n) - \varphi(b^m v_n))}{u_n - v_n}
    = \begin{cases}
       0, & \text{当 } m > n \text{ 时}, \\
@@ -78,14 +70,12 @@
 所以 :math:`b^m u_n, b^m v_n` 其中一个为整数, 另一个为半整数, 所以
 
 .. math::
-
    \dfrac{a^m (\varphi(b^m u_n) - \varphi(b^m v_n))}{u_n - v_n}
    = \dfrac{\pm a^m / 2}{1 / (2 b^{n})} = \pm a^m b^n,
 
 上述符号 :math:`\pm` 固定, 只与 :math:`k_n` 的奇偶性有关, 与 :math:`m` 无关. 于是
 
 .. math::
-
    \dfrac{f(u_n) - f(v_n)}{u_n - v_n}
    & = \dfrac{\sum\limits_{m=0}^{\infty} a^m (\varphi(b^m u_n) - \varphi(b^m v_n))}{u_n - v_n} \\
    & = \begin{cases}
@@ -147,7 +137,6 @@
 假设 :math:`\displaystyle \sigma_n = \dfrac{1}{n} \sum_{k=1}^{n} s_k` 极限为 :math:`A`, 那么
 
 .. math::
-
    \varlimsup_{n\to\infty} \sqrt[\leftroot{-3}\uproot{3}n]{|n \sigma_n|}
    = \sqrt[\leftroot{-1}\uproot{18}n]{\sum_{k=1}^{n} s_k} = 1,
 
@@ -155,7 +144,6 @@
 对于任意的 :math:`|x| < 1`, 上述幂级数绝对收敛, 因此有
 
 .. math::
-
    \sum_{n=1}^{\infty} n \sigma_n x^n
    & = \sum_{n=1}^{\infty} \left( \sum_{k=1}^{n} s_k \right) x^n
       = \sum_{n=1}^{\infty} \left( S_1 + S_2 + \cdots + s_n \right) x^n \\
@@ -166,7 +154,6 @@
 故在 :math:`|x| < 1` 范围内绝对收敛. 于是类似地有
 
 .. math::
-
    \sum_{n=1}^{\infty} s_n x^n
    & = \sum_{n=1}^{\infty} \left( a_1 + a_2 + \cdots + a_n \right) x^n
       = \sum_{n=1}^{\infty} a_n x^n (1 + x + x^2 + \cdots) \\
@@ -178,14 +165,12 @@
 接下来, 我们要证明
 
 .. math::
-
    \lim_{x\to 1-} (1-x)^2 \sum_{n=1}^{\infty} n \sigma_n x^n = \lim_{x\to 1-} \sum_{n=1}^{\infty} a_n x^n = A.
 
 对定义在 :math:`|x| < 1` 上的幂级数展开 :math:`\displaystyle (1-x)^{-1} = \sum_{n=0}^\infty x^n` 用应用逐项求导定理,
 有 :math:`\displaystyle (1-x)^{-2} = \sum_{n=0}^\infty (n+1) x^n`, 那么
 
 .. math::
-
    (1-x)^2 \sum_{n=1}^{\infty} n \sigma_n x^n - A
    & = (1-x)^2 \sum_{n=1}^{\infty} n \sigma_n x^n - (1-x)^2 \sum_{n=0}^\infty (n+1) x^n A \\
    & = (1-x)^2 \sum_{n=1}^{\infty} (n \sigma_n - (n+1)A) x^n - (1-x)^2 A \\
@@ -200,7 +185,6 @@
 记 :math:`\displaystyle M = \max_{1 \leqslant n \leqslant N} n |\sigma_n - A|`, 那么有
 
 .. math::
-
    \left\lvert (1-x)^2 \sum_{n=1}^{\infty} n (\sigma_n - A) x^n \right\rvert
    & \leqslant \sum_{n=1}^{\infty} n |\sigma_n - A| (1-x)^2x^n \\
    & = \sum_{n=1}^{N} n |\sigma_n - A| (1-x)^2x^n + \sum_{n=N+1}^{\infty} n |\sigma_n - A|(1-x)^2x^n \\
@@ -211,20 +195,17 @@
 对取定的 :math:`\varepsilon`, 任取 :math:`1 - \dfrac{\varepsilon}{2M} < x < 1`, 即有
 
 .. math::
-
    \left\lvert (1-x)^2 \sum_{n=1}^{\infty} n (\sigma_n - A) x^n \right\rvert
    \leqslant M(1 - x) + \dfrac{\varepsilon}{2} < \varepsilon,
 
 这样, 我们就证明了
 
 .. math::
-
    \lim_{x\to 1-} \sum_{n=1}^{\infty} a_n x^n = \lim_{x\to 1-} (1-x)^2 \sum_{n=1}^{\infty} n \sigma_n x^n = A.
 
 第一个严格包含关系的例子: :math:`a_n = (-1)^{n+1} (n+1)`. 由逐项求导定理, 容易看出
 
 .. math::
-
    \sum_{n=1}^{\infty} (-1)^{n+1} (n+1) x^n = \left( \sum_{n=1}^{\infty} (-x)^{n+1} \right)'
    = \left( \dfrac{x^2}{1 + x} \right)' = \dfrac{2x + x^2}{(1+x)^2} \to \dfrac{3}{4} ~~ (x \to 1-).
 
@@ -247,7 +228,6 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 方法一: 直接利用泰勒公式展开:
 
 .. math::
-
    \tan x = \sum_{n=0}^{\infty} c_n x^n = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(0)}{n!} x^n,
 
 接下来计算 :math:`f(x) = \tan x` 的各阶导函数及其在 :math:`x = 0` 处的值即可.
@@ -257,7 +237,6 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 由 :math:`\sin x = \tan x \cos x` 有
 
 .. math::
-
    \sum_{n=0}^\infty \dfrac{(-1)^n}{(2n+1)!} x^{2n+1}
    = \left( \sum_{n=0}^\infty c_n x^n \right) \cdot \left( \dfrac{(-1)^n}{(2n)!} x^{2n} \right)
 
@@ -266,13 +245,11 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 方法三: 利用三角函数作为复函数的表达:
 
 .. math::
-
    \sin x = \dfrac{e^{ix} - e^{-ix}}{2i}, \quad \cos x = \dfrac{e^{ix} + e^{-ix}}{2},
 
 那么有
 
 .. math::
-
    x \cot x = x \dfrac{\cos x}{\sin x} = ix \dfrac{e^{2ix} + 1}{e^{2ix} - 1}
    = ix \left( \dfrac{2}{e^{2ix} - 1} + 1 \right)
    = ix + \dfrac{2}{e^{2ix} - 1}.
@@ -281,19 +258,16 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 其中 :math:`B_n` 为 Bernoulli 数, 代入 :math:`z = 2ix` 即有
 
 .. math::
-
    x \cot x = \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n},
 
 或等价地有
 
 .. math::
-
    \cot x = \dfrac{1}{x} + \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n-1}.
 
 接下来, 利用 :math:`\tan x = \cot x - 2 \cot 2x,` 将上式代入, 有
 
 .. math::
-
    \tan x
    & = \dfrac{1}{x} + \sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} x^{2n-1}
        - 2\dfrac{1}{2x} + 2\sum_{n=1}^\infty \dfrac{(-4)^n B_{2n}}{(2n)!} (2x)^{2n-1} \\
@@ -304,20 +278,17 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 方法四: 利用 :math:`\displaystyle \dfrac{\sin \pi x}{\pi x}` 的在 :math:`|x| < 1` 范围内的无穷乘积展开
 
 .. math::
-
    \dfrac{\sin \pi x}{\pi x} = \prod_{n=1}^\infty \left( 1 - \dfrac{x^2}{n^2} \right),
 
 两边取对数导数 :math:`\displaystyle \dfrac{1}{\pi} \cdot \dfrac{\mathrm{d}}{\mathrm{d} x} \left( \ln (\cdot) \right)` 有
 
 .. math::
-
    \dfrac{\cos \pi x}{\sin \pi x} - \dfrac{1}{\pi x}
    = -\dfrac{1}{\pi} \sum_{n=1}^\infty \dfrac{2x}{n^2} \cdot \left( 1 - \dfrac{x^2}{n^2} \right)^{-1},
 
 从而有
 
 .. math::
-
    \pi x \cot \pi x
    & = 1 - 2 \sum_{n=1}^\infty \dfrac{x^2}{n^2} \cdot \left( 1 - \dfrac{x^2}{n^2} \right)^{-1} \\
    & = 1 - 2 \sum_{n=1}^\infty \dfrac{x^2}{n^2} \cdot \left( \sum_{k=0}^\infty \left( \dfrac{x^2}{n^2} \right)^k \right) \\
@@ -328,19 +299,16 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
 其中 :math:`\displaystyle \zeta(s) := \sum_{n=1}^\infty \dfrac{1}{n^{s}}` 为 Riemann zeta 函数. 由此可求得
 
 .. math::
-
    \cot x = \dfrac{1}{x} - 2 \sum_{k=1}^\infty \dfrac{\zeta(2k)}{\pi^{2k}} x^{2k-1},
 
 代入 :math:`\tan x = \cot x - 2 \cot 2x` 可得
 
 .. math::
-
    \tan x = 2 \sum_{k=1}^\infty \dfrac{(4^k - 1)\zeta(2k)}{\pi^{2k}} x^{2k-1}.
 
 进一步利用 :math:`\displaystyle \lim_{n\to\infty} \zeta(n) = 1`, 可得
 
 .. math::
-
    \dfrac{1}{R^2} = \lim_{k\to\infty} \dfrac{(4^{k+1} - 1)\zeta(2k+2)}{\pi^{2k+2}}
       \cdot \dfrac{\pi^{2k}}{(4^k - 1)\zeta(2k)}
    = \dfrac{4}{\pi^2},

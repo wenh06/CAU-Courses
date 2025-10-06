@@ -12,7 +12,6 @@
 .. proof:solution::
 
    .. math::
-
       f'(x) &= \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \\
             &= \lim_{\Delta x \to 0} \frac{a(x + \Delta x)^2 + b(x + \Delta x) + c - (ax^2 + bx + c)}{\Delta x} \\
             &= \lim_{\Delta x \to 0} \frac{a(x^2 + 2x\Delta x + \Delta x^2) + bx + b\Delta x + c - ax^2 - bx - c}{\Delta x} \\
@@ -44,7 +43,6 @@
 .. proof:solution::
 
    .. math::
-
       \lim_{h \to 0} \frac{f(h)}{h} = \lim_{h \to 0} \frac{f(h) - f(0)}{h - 0} = f'(0)
 
 7. 讨论函数在 :math:`x = 0` 处的可导性:
@@ -57,13 +55,11 @@
    接下来考虑 :math:`f(x)` 在 :math:`x = 0` 处的左右导数是否相等:
 
    .. math::
-
       f'_{-}(0) &= \lim_{h \to 0^{-}} \dfrac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^{-}} \dfrac{h^2 \cos \dfrac{1}{h}}{h} \\
                &= \lim_{h \to 0^{-}} h \cos \dfrac{1}{h} \\
                &= 0
 
    .. math::
-
       f'_{+}(0) &= \lim_{h \to 0^{+}} \dfrac{f(0 + h) - f(0)}{h} = \lim_{h \to 0^{+}} \dfrac{h^2 \cos \dfrac{1}{h}}{h} \\
                &= \lim_{h \to 0^{+}} h \cos \dfrac{1}{h} \\
                &= 0
@@ -88,7 +84,6 @@
    (2).
 
    .. math::
-
       y' &= 5x^4 \left( \dfrac{1}{x} + \sqrt{x} \right) + x^5 \left( -\dfrac{1}{x^2} + \dfrac{1}{2 \sqrt{x}} \right) \\
          &= 5x^3 + 5x^{9/2} - x^3 + \dfrac{1}{2} x^{9/2} \\
          &= 4x^3 + \dfrac{11}{2} x^{9/2}
@@ -96,37 +91,31 @@
    (4).
 
    .. math::
-
       y' = \dfrac{1}{\cos^2 x} \ln x + (1 + \tan x) \cdot \dfrac{1}{x}
 
    (6).
 
    .. math::
-
       y' = e^x (x^3 - 3x^2 + 6x - 6) + e^x (3x^2 - 6x + 6) = e^x x^3
 
    (8).
 
    .. math::
-
       y' = \dfrac{-\sin x}{1 + \ln x} - \dfrac{\cos x}{(1 + \ln x)^2} \cdot \dfrac{1}{x} = - \dfrac{\cos x + x \sin x (1 + \ln x)}{x(1 + \ln x)^2}
 
    (10).
 
    .. math::
-
       y' = \dfrac{\dfrac{1}{x} \cdot x^2 - (1 + \ln x) \cdot 2x}{x^4} = \dfrac{1 - 2 - 2 \ln x}{x^3} = - \dfrac{2 \ln x + 1}{x^3}
 
    (12).
 
    .. math::
-
       y' = \dfrac{-1 \cdot (1 + x) - (1 - x) \cdot 1}{(1 + x)^2} = - \dfrac{2}{(1 + x)^2}
 
    (14).
 
    .. math::
-
       y' = \dfrac{2 (\sec x \tan x) \cdot (1 + x^2) - 2 \sec x \cdot 2x}{(1 + x^2)^2} = 2 \sec x \left( \dfrac{(1 + x^2) \tan x - 2x}{(1 + x^2)^2} \right)
 
 2. 求函数在给定点的导数
@@ -146,7 +135,6 @@
    (5). 由于 :math:`\varphi` 只是连续函数, 不知道是否可导, 所以需要用定义求 :math:`f(x) = (1 - x^2) \varphi(x)` 的导数
 
    .. math::
-
       f'(x) & = \lim_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\
             & = \lim_{\Delta x \to 0} \dfrac{(1 - (x + \Delta x)^2) \varphi(x + \Delta x) - (1 - x^2) \varphi(x)}{\Delta x} \\
             & = \lim_{\Delta x \to 0} \dfrac{(1 - x^2 - 2x \Delta x - \Delta x^2) \varphi(x + \Delta x) - (1 - x^2) \varphi(x)}{\Delta x} \\
@@ -182,7 +170,6 @@
    (6).
 
    .. math::
-
       y' & = n \cos (nx) \sin^n x + \sin (nx) \cdot n \sin^{n-1} x \cdot \cos x \\
          & = n \sin^{n-1} x (\cos (nx) \sin x + \sin (nx) \cos x) \\
          & = n \sin^{n-1} x \sin (nx + x).
@@ -205,7 +192,6 @@
    (2).
 
    .. math::
-
       y' & = \dfrac{1}{x + \sqrt{x^2 + 4}} \cdot (1 + \dfrac{1}{2 \sqrt{x^2 + 4}} \cdot 2x)
            = \dfrac{1}{x + \sqrt{x^2 + 4}} \cdot \dfrac{x + \sqrt{x^2 + 4}}{\sqrt{x^2 + 4}} = \dfrac{1}{\sqrt{x^2 + 4}} \\
       y'' & = -\dfrac{1}{2} (x^2 + 4)^{-3/2} \cdot 2x = -\dfrac{x}{(x^2 + 4)^{3/2}}
@@ -213,14 +199,12 @@
    (4).
 
    .. math::
-
       y' & = \dfrac{2x}{x^2 + 1} \\
       y'' & = \dfrac{2(x^2 + 1) - 2x \cdot 2x}{(x^2 + 1)^2} = \dfrac{2(1 - x^2)}{(x^2 + 1)^2}
 
    (6).
 
    .. math::
-
       y' & = 2 \cos 2x \\
       y'' & = -4 \sin 2x
 
@@ -231,7 +215,6 @@
 .. proof:solution::
 
    .. math::
-
       y' & = \dfrac{1}{f(x)} \cdot f'(x) \\
       y'' & = \dfrac{1}{f(x)} \cdot f''(x) - \dfrac{1}{f^2(x)} \cdot (f'(x))^2 = \dfrac{f''(x) f(x) - (f'(x))^2}{f^2(x)}
 
@@ -242,14 +225,12 @@
 .. proof:proof::
 
    .. math::
-
       y' & = \dfrac{(x - 4) - (x - 3)}{(x - 4)^2} = -\dfrac{1}{(x - 4)^2} \\
       y'' & = 2(x - 4)^{-3} = \dfrac{2}{(x - 4)^3}
 
    所以
 
    .. math::
-
       2y'^2 & = 2 \cdot \dfrac{1}{(x - 4)^4} = \dfrac{2}{(x - 4)^4} \\
       (y - 1) y'' & = \dfrac{(x - 3) - (x - 4)}{x - 4} \cdot \dfrac{2}{(x - 4)^3} = \dfrac{2}{(x - 4)^4}
 
@@ -262,7 +243,6 @@
 .. proof:solution::
 
    .. math::
-
       y' & = e^x + e^{-x} + x (e^x - e^{-x}) \\
       y'' & = e^x - e^{-x} + e^x - e^{-x} + x (e^x + e^{-x}) = 2(e^x - e^{-x}) + x (e^x + e^{-x}) \\
       y^{(3)} & = 2(e^x + e^{-x}) + e^x + e^{-x} + x (e^x - e^{-x}) = 3(e^x + e^{-x}) + x (e^x - e^{-x})
@@ -270,7 +250,6 @@
    所以可以猜测 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`, 用数学归纳法证明:
 
    .. math::
-
       y^{(n + 1)} & = \dfrac{d \left( n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x}) \right)}{\mathrm{d} x} \\
       & = n(e^x + (-1)^{n} e^{-x}) + (e^x + (-1)^n e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
       & = (n + 1)(e^x + (-1)^{n} e^{-x}) + x (e^x + (-1)^{n + 1} e^{-x}) \\
@@ -279,13 +258,11 @@
    所以 :math:`y^{(n)} = n(e^x + (-1)^{n - 1} e^{-x}) + x (e^x + (-1)^n e^{-x})`. 令 :math:`n = 99` 有
 
    .. math::
-
       y^{(99)} = 99(e^x + (-1)^{98} e^{-x}) + x (e^x + (-1)^{99} e^{-x}) = 99(e^x + e^{-x}) + x (e^x - e^{-x}).
 
    另解: 利用 Leibniz 公式 :math:`(uv)^{(n)} = \sum\limits_{k = 0}^n C_n^k u^{(k)} v^{(n - k)}`, 有
 
    .. math::
-
       y^{(n)} & = (x (e^{x} + e^{-x}))^{(n)} = C_n^0 x^{(0)} (e^{x} + e^{-x})^{(n)} + C_n^1 x^{(1)} (e^{x} + e^{-x})^{(n - 1)} + 0 + \cdots + 0 \\
       & = x (e^{x} + (-1)^n e^{-x}) + n (e^{x} + (-1)^{n - 1} e^{-x}).
 
@@ -321,7 +298,6 @@
    :math:`y' = \dfrac{e^y}{1 - x e^y} = \dfrac{e^y}{2 - y}` 两边对 :math:`x` 求二阶导有
 
    .. math::
-
       y'' & = \dfrac{e^y y' (2 - y) - e^y (-y')}{(2 - y)^2} = \dfrac{e^y y' (2 - y) + e^y y'}{(2 - y)^2} \\
          & = \dfrac{3 e^y y' - y y' e^y}{(2 - y)^2}
 
@@ -340,14 +316,12 @@
    (2). 由于
 
    .. math::
-
       \ln y & = \ln \left( \dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2} \right)^{1/3} = \dfrac{1}{3} \ln \left( \dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2} \right) \\
       & = \dfrac{1}{3} \left( \ln (x + 1) + \ln (x^2 + 2) - \ln x - 2 \ln (2x - 1) \right),
 
    所以
 
    .. math::
-
       y' & = \dfrac{1}{3} \left( \dfrac{1}{x + 1} + \dfrac{2x}{x^2 + 2} - \dfrac{1}{x} - \dfrac{2}{2x - 1} \right) \cdot y \\
       & = \dfrac{1}{3} \left( \dfrac{1}{x + 1} + \dfrac{2x}{x^2 + 2} - \dfrac{1}{x} - \dfrac{2}{2x - 1} \right)
           \cdot \sqrt[\leftroot{-3}\uproot{15}3]{\dfrac{(x + 1) (x^2 + 2)}{x (2x - 1)^2}}.
@@ -372,7 +346,6 @@
    (2). 由于 :math:`\dfrac{\mathrm{d} y}{\mathrm{d} x} = \dfrac{\cos t - \sin t}{\cos t + \sin t}`, 所以
 
    .. math::
-
       \dfrac{d^2 y}{\mathrm{d} x^2}
       & = \dfrac{\dfrac{d}{\mathrm{d} t} \left( \dfrac{\mathrm{d} y}{\mathrm{d} x} \right)}{\dfrac{\mathrm{d} x}{\mathrm{d} t}}
         = \dfrac{\dfrac{d}{\mathrm{d} t} \left( \dfrac{\cos t - \sin t}{\cos t + \sin t} \right)}{e^t \sin t + e^t \cos t} \\
@@ -382,7 +355,6 @@
    所以
 
    .. math::
-
       \dfrac{d^2 y}{\mathrm{d} x^2} (x + y)^2 & = \dfrac{-2}{e^t (\sin t + \cos t)^3} \cdot (e^t \sin t + e^t \cos t)^2 = - \dfrac{2 e^t}{\sin t + \cos t} \\
       2 \left( x \dfrac{\mathrm{d} y}{\mathrm{d} x} - y \right) & = 2 \left( e^t \sin t \cdot \dfrac{\cos t - \sin t}{\cos t + \sin t} - e^t \cos t \right)
       = - \dfrac{2 e^t}{\sin t + \cos t}
@@ -448,11 +420,9 @@
    以上的 :math:`C` 为常数.
 
    .. note::
-
       一般地, 可以把 :math:`\mathrm{d} x` 变形, 将整个表示式变成基本初等函数的微分. 例如第 (6) 题:
 
       .. math::
-
          \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \arctan x \cdot \dfrac{1}{x^2 + 1} \mathrm{d} x \\
          & = \arctan x \cdot \mathrm{d} (\arctan x) \\
          & = \mathrm{d} \left( \dfrac{1}{2} \arctan^2 x + C \right).
@@ -485,7 +455,6 @@
    另解: 直接利用弹性函数, 当 :math:`x` 增加 :math:`1\%` 时, :math:`y` 增加比例为
 
    .. math::
-
       y'\dfrac{x}{y}\% = \left( \dfrac{\pi}{\sqrt{g x}} \cdot \dfrac{x}{2\pi \sqrt{\dfrac{x}{g}}} \right)\% = \dfrac{1}{2} \% = 0.5\%.
 
 §2.6 微分中值定理
@@ -534,13 +503,11 @@
    考虑函数 :math:`f(x) = \ln x, x > 0`. 它的导数为 :math:`f'(x) = \dfrac{1}{x}`. 对 函数 :math:`f(x)` 在区间 :math:`[b, a]` 上应用拉格朗日中值定理, 存在 :math:`\xi \in (b, a)` 使得
 
    .. math::
-
       \ln a - \ln b = \dfrac{1}{\xi} (a - b).
 
    所以
 
    .. math::
-
       \dfrac{a - b}{a} = \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = a} < \ln \dfrac{a}{b} < \left. \dfrac{1}{\xi} (a - b) \right|_{\xi = b} = \dfrac{a - b}{b}.
 
 9. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上连续, 在 :math:`(a, b)` 内可导, 且有 :math:`f(a) = f(b) = 0`.
@@ -554,7 +521,6 @@
 10. 求证: 设 :math:`f(x)` 在 :math:`[a, b] (b > a > 0)` 上连续, 在 :math:`(a, b)` 内可导, 则存在 :math:`\xi \in (a, b)` 使得
 
     .. math::
-
       f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
 
 .. proof:proof::
@@ -563,13 +529,11 @@
    在 :math:`(\ln a, \ln b)` 内可导. 那么根据拉格朗日中值定理, 存在 :math:`\eta \in (\ln a, \ln b)` 使得
 
    .. math::
-
       \dfrac{g(\ln b) - g(\ln a)}{\ln b - \ln a} = g'(\eta) = f'(e^{\eta}) e^{\eta}.
 
    令 :math:`\xi = e^{\eta}`, 那么 :math:`\xi \in (a, b)`, 且
 
    .. math::
-
       f(b) - f(a) = \xi f'(\xi) \ln \dfrac{b}{a}.
 
 §2.7 洛必达法则
@@ -594,7 +558,6 @@
    (2).
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{1 - \cos x^2}{x^3 \sin x}
       & = \lim\limits_{x \to 0} \dfrac{2x \sin x^2}{3x^2 \sin x + x^3 \cos x} = \lim\limits_{x \to 0} \dfrac{2 \sin x^2}{3x \sin x + x^2 \cos x} \\
       & = \lim\limits_{x \to 0} \dfrac{4x \cos x^2}{3 \sin x + 3 x \cos x + 2x \cos x - x^2 \sin x} \\
@@ -604,40 +567,34 @@
    (4).
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{\tan x - x}{x - \sin x} & = \lim\limits_{x \to 0} \dfrac{\sec^2 x - 1}{1 - \cos x} = \lim\limits_{x \to 0} \dfrac{ 2 \sec x \cdot (\sec x \tan x)}{\sin x} \\
       & = \lim\limits_{x \to 0} \dfrac{ 2 \sec^2 x}{\cos x} = \dfrac{2}{1} = 2.
 
    (6).
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{e^{-2x} - e^{-5x}}{x} = \lim\limits_{x \to 0} \dfrac{-2e^{-2x} + 5e^{-5x}}{1} = -2 + 5 = 3.
 
    (8).
 
    .. math::
-
       \lim\limits_{x \to \frac{\pi}{6}} \dfrac{1 - 2\sin x}{\cos 3x} = \lim\limits_{x \to \frac{\pi}{6}} \dfrac{2\cos x}{3\sin 3x} = \dfrac{\sqrt{3}}{3}.
 
    (10). 若 :math:`b > 0` 为正整数, 那么
 
    .. math::
-
       \lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} & = \lim\limits_{x \to +\infty} \dfrac{bx^{b-1}}{ae^{ax}} = \cdots \\
       & = \lim\limits_{x \to +\infty} \dfrac{b!}{a^b e^{ax}} = 0.
 
    若 :math:`b > 0` 不是正整数, 那么
 
    .. math::
-
       \lim\limits_{x \to +\infty} \dfrac{x^b}{e^{ax}} & = \lim\limits_{x \to +\infty} \dfrac{b x^{b-1}}{a e^{ax}} = \cdots \\
       & = \lim\limits_{x \to +\infty} \dfrac{b(b-1)\cdots(b-[b])}{a^{[b]} e^{ax} x^{[b]+1-b}} = 0.
 
    (12).
 
    .. math::
-
       \lim\limits_{x \to 0^+} \dfrac{\ln x}{\cot x} = \lim\limits_{x \to 0^+} \dfrac{\dfrac{1}{x}}{-\csc^2 x} = \lim\limits_{x \to 0^+} -x \sin^2 x = 0.
 
 2. 应用洛必达法则求下列极限:
@@ -659,7 +616,6 @@
    (1).
 
    .. math::
-
       \lim\limits_{x \to \pi} (\pi - x) \tan \dfrac{x}{2} & = \lim\limits_{x \to \pi} \dfrac{(\pi - x) \sin \dfrac{x}{2}}{\cos \dfrac{x}{2}} \\
       & = \lim\limits_{x \to \pi} \dfrac{-\sin \dfrac{x}{2} + (\pi - x) \cdot \dfrac{1}{2} \cos \dfrac{x}{2}}{-\dfrac{1}{2}\sin \dfrac{x}{2}} \\
       & = \dfrac{-1}{-\dfrac{1}{2}} = 2
@@ -667,7 +623,6 @@
    (3).
 
    .. math::
-
       \lim\limits_{x \to 0^+} \sin x \ln x & = \lim\limits_{x \to 0^+} \dfrac{\ln x}{\csc x} = \lim\limits_{x \to 0^+} \dfrac{\dfrac{1}{x}}{-\csc x \cot x} \\
       & = - \lim\limits_{x \to 0^+} \dfrac{\sin^2 x}{x \cos x} = - \lim\limits_{x \to 0^+} \dfrac{2 \sin x \cos x}{\cos x - x \sin x} \\
       & = 0
@@ -675,7 +630,6 @@
    (5).
 
    .. math::
-
       \lim\limits_{x \to 1} \left(\dfrac{1}{\ln x} - \dfrac{1}{x - 1} \right) & = \lim\limits_{x \to 1} \dfrac{x - \ln x - 1}{(x - 1) \ln x} = \lim\limits_{x \to 1} \dfrac{1 - \dfrac{1}{x}}{\ln x + \dfrac{x - 1}{x}} \\
       & = \lim\limits_{x \to 1} \dfrac{x - 1}{x \ln x + x - 1} = \lim\limits_{x \to 1} \dfrac{1}{\ln x + 2} \\
       & = \dfrac{1}{2}
@@ -683,7 +637,6 @@
    (7).
 
    .. math::
-
       \lim\limits_{x \to +\infty} \left( \sqrt[3]{x^3 + 3x^2} - \sqrt{x^2 - 2x} \right) & = \lim\limits_{x \to +\infty} x \left( \sqrt[3]{1 + 3\dfrac{1}{x}} - \sqrt{1 - 2\dfrac{1}{x}} \right) \\
       & = \lim\limits_{x \to 0^+} \dfrac{\sqrt[3]{1 + 3x} - \sqrt{1 - 2x}}{x} \\
       & = \lim\limits_{x \to 0^+} \dfrac{(1 + 3x)^{-\frac{2}{3}} + (1 - 2x)^{-\frac{1}{2}}}{1} \\
@@ -692,7 +645,6 @@
    (9). 因为
 
    .. math::
-
       \lim\limits_{x \to 1} \dfrac{1}{1-x} \cdot \ln x = \lim\limits_{x \to 1} \frac{\dfrac{1}{x}}{-1} = -1,
 
    所以 :math:`\lim\limits_{x \to 1} x^{\frac{1}{1-x}} = e^{-1}`.
@@ -700,7 +652,6 @@
    (11). 因为
 
    .. math::
-
       \lim\limits_{x \to 0^+} x \cdot \ln \left( \ln \dfrac{1}{x} \right) = \lim\limits_{x \to +\infty} \dfrac{\ln (\ln x)}{x}
       = \lim\limits_{x \to +\infty} \dfrac{\dfrac{1}{\ln x} \cdot \dfrac{1}{x}}{1} = 0,
 
@@ -714,13 +665,11 @@
    由于 :math:`\lim\limits_{x \to 0} \dfrac{x}{\sin x} = 1`, :math:`\lim\limits_{x \to 0} x \sin \dfrac{1}{x} = 0`, 所以有
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = 0.
 
    如果使用洛必达法则, 这是 :math:`\dfrac{0}{0}` 型未定式, 那么有
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x} = \lim\limits_{x \to 0} \dfrac{2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}}{\cos x}.
 
    上式分子 :math:`2x \sin \dfrac{1}{x} - \cos \dfrac{1}{x}` 极限 (当 :math:`x \to 0`) 不存在, 所以不能使用洛必达法则.
@@ -736,13 +685,11 @@
    将 :math:`x_0 = 2` 代入有
 
    .. math::
-
       f^{(k)}(x_0) = - (-1)^k k! (2 - 3)^{-k-1} = k!,
 
    所以在点 :math:`x_0 = 2` 处函数 :math:`f(x) = \dfrac{1}{3 - x}` 的 :math:`n` 阶泰勒展开式为
 
    .. math::
-
       f(x) = \sum\limits_{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!} (x - x_0)^k + R_n = \sum\limits_{k=0}^{k} (x - 2)^n + R_n,
 
    其中 :math:`R_n = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1} = \dfrac{(n+1)!}{(3 - \xi)^{n+2}} (x - 2)^{n+1}` 为拉格朗日余项,
@@ -753,13 +700,11 @@
    由于 :math:`f(x) = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)}`, 所以可以利用 :math:`\dfrac{1}{1 - t}` 在 :math:`t = 0` 附近的泰勒展开式
 
    .. math::
-
       \dfrac{1}{1 - t} = 1 + t + t^2 + \cdots + t^n + o(t^n),
 
    通过间接法求得 :math:`f(x)` 带佩亚诺型余项的泰勒展开式为
 
    .. math::
-
       f(x) & = \dfrac{1}{3 - x} = \dfrac{1}{1 - (x - 2)} \\
       & = 1 + (x - 2) + (x - 2)^2 + \cdots + (x - 2)^n + o((x - 2)^n).
 
@@ -776,20 +721,17 @@
    (1). 因为函数 :math:`g(x) = e^x` 的泰勒展开前 :math:`n` 项和为
 
    .. math::
-
       1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \cdots + \dfrac{x^n}{n!}
 
    所以函数 :math:`f(x) = e^{x^2}` 的麦克劳林展开式为
 
    .. math::
-
       e^{x^2} = 1 + x^2 + \dfrac{x^4}{2!} + \dfrac{x^6}{3!} + \cdots + \dfrac{x^{2n}}{n!} + o(x^{2n}).
 
    (2). 因为函数 :math:`f(x) = \sin^2 x = \dfrac{1 - \cos 2x}{2}` 的 :math:`k` 阶导函数为 :math:`f^{(k)}(x) = -2^{k-1} \cos (2x + \dfrac{k\pi}{2})`,
    所以 :math:`f(x)` 的麦克劳林展开式为
 
    .. math::
-
       \sin^2 x & = \dfrac{1}{2} - \dfrac{1}{2} \cos 2x \\
       & = \dfrac{1}{2} - \dfrac{1}{2} \left( 1 - \dfrac{(2x)^2}{2!} + \dfrac{(2x)^4}{4!} - \cdots + (-1)^n \dfrac{(2x)^{2n}}{(2n)!} \right) + o(x^{2n}) \\
       & = x^2 - \dfrac{x^4}{3} + \cdots + (-1)^{n+1} \dfrac{x^{2n}}{(2n+1)!} + o(x^{2n}).
@@ -798,14 +740,12 @@
    又有
 
    .. math::
-
       \dfrac{1}{1 - x} & = 1 + x + x^2 + x^3 + \cdots + x^n + o(x^n) \\
       \dfrac{1}{1 + 2x} & = 1 - 2x + 4x^2 - 8x^3 + \cdots + (-2)^{n} x^n + o(x^n),
 
    所以 :math:`f(x)` 的麦克劳林展开式为
 
    .. math::
-
       f(x) & = \dfrac{1}{3} \cdot \dfrac{1}{1 - x} - \dfrac{1}{3} \cdot \dfrac{2}{1 + 2x} \\
       & = \dfrac{1}{3} \left( 1 + x + x^2 + \cdots + x^n \right) - \dfrac{1}{3} \left( 1 - 2x + 4x^2 \cdots + (-2)^{n} x^n \right) + o(x^n) \\
       & = x - x^2 + \cdots + \dfrac{1 - (-2)^{n}}{3} x^n + o(x^n).
@@ -814,7 +754,6 @@
 --------------------------------
 
 .. note::
-
    课本中定义的凹凸性与目前主流教材与科研文献中的凹凸性是正好相反的. 以下跟随课本, 凹指的是下凸, 凸指的是上凸.
 
 1. 确定下列函数的单调区间:
@@ -865,7 +804,6 @@
    :math:`y = (x^2 + 2x - 1) e^{-x}` 的定义域为 :math:`(-\infty, +\infty)`, 导函数以及二阶导函数分别为
 
    .. math::
-
       y' & = (2x + 2) e^{-x} - (x^2 + 2x - 1) e^{-x} = (3 - x^2) e^{-x} \\
       y'' & = (-2x) e^{-x} - (3 - x^2) e^{-x} = (x^2 - 2x - 3) e^{-x}.
 
@@ -890,7 +828,6 @@
    函数 :math:`F(x) = \dfrac{f(x)}{x}` 的导函数为 :math:`F'(x) = \dfrac{f'(x) x - f(x)}{x^2}`. 令 :math:`g(x) = f'(x) x - f(x)`, 那么
 
    .. math::
-
       g'(x) = f''(x) x + f'(x) - f'(x) = f''(x) x > 0,
 
    所以 :math:`g(x)` 在 :math:`(0, +\infty)` 上单调递增, 从而有 :math:`g(x) > g(0) = 0` 对一切 :math:`x > 0` 成立. 因此 :math:`F'(x) > 0` 对一切 :math:`x > 0` 成立,
@@ -930,7 +867,6 @@
    因为 :math:`x_1 = 1, x_2 = 2` 是函数 :math:`f(x)` 的极值点, 所以有 :math:`f'(x_1) = f'(x_2) = 0`, 即
 
    .. math::
-
       a + 2b + 1 = 0 \\
       \dfrac{a}{2} + 4b + 1 = 0
 
@@ -946,13 +882,11 @@
    由于函数 :math:`f(x)` 对应的曲线为区间 :math:`I` 上的凹的, 所以在区间 :math:`I` 上任取两点 :math:`x, y` 有
 
    .. math::
-
       \lambda f(x) + (1 - \lambda) f(y) \geqslant f(\lambda x + (1 - \lambda) y), \quad \lambda \in [0, 1].
 
    特别地, 取 :math:`y = x_0, t = \frac{1}{2}`, 那么有
 
    .. math::
-
       f(x) \geqslant 2 f \left( \dfrac{x + x_0}{2} \right) - f(x_0) \geqslant 2 f(x_0) - f(x_0) = f(x_0).
 
 4. 求下列函数在指定区间上的最大值最小值:
@@ -995,13 +929,11 @@
    接下来求斜渐近线. 斜率
 
    .. math::
-
       k = \lim\limits_{x \to \infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{2x^3 - 3}{(x - 2)^2 x} = 2,
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to \infty} (y - kx) = \lim\limits_{x \to \infty} \dfrac{2x^3 - 3}{(x - 2)^2} - 2x \\
       & = \lim\limits_{x \to \infty} \dfrac{2x^3 - 3 - 2x^3 + 8x^2 - 8x}{(x - 2)^2} = 8,
 
@@ -1010,13 +942,11 @@
    (2). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况. 当 :math:`x \to +\infty` 时, 有斜率
 
    .. math::
-
       k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{\sqrt{4x^2 + 4x - 1}}{x} = \lim\limits_{x \to +\infty} \sqrt{4 + \dfrac{4}{x} - \dfrac{1}{x^2}} = 2,
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} \sqrt{4x^2 + 4x - 1} - 2x \\
       & = \lim\limits_{x \to +\infty} \dfrac{4x^2 + 4x - 1 - 4x^2}{\sqrt{4x^2 + 4x - 1} + 2x} = \lim\limits_{x \to +\infty} \dfrac{4 - \frac{1}{x}}{\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} + 2} \\
       & = 1.
@@ -1024,13 +954,11 @@
    当 :math:`x \to -\infty` 时, 有斜率
 
    .. math::
-
       k = \lim\limits_{x \to -\infty} \dfrac{y}{x} = \lim\limits_{x \to -\infty} \dfrac{\sqrt{4x^2 + 4x - 1}}{x} = \lim\limits_{x \to -\infty} - \sqrt{4 + \dfrac{4}{x} - \dfrac{1}{x^2}} = -2,
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to -\infty} (y - kx) = \lim\limits_{x \to -\infty} \sqrt{4x^2 + 4x - 1} + 2x \\
       & = \lim\limits_{x \to -\infty} \dfrac{4x^2 + 4x - 1 + 4x^2}{\sqrt{4x^2 + 4x - 1} - 2x} = \lim\limits_{x \to -\infty} \dfrac{4 + \frac{4}{x}}{-\sqrt{4 + 4\frac{1}{x} - \frac{1}{x^2}} - 2} \\
       & = -1.
@@ -1040,13 +968,11 @@
    (3). 由于 :math:`\lim\limits_{x \to 0^+} \ln x = -\infty`, 所以 :math:`y = x + \ln x` 的垂直渐近线为 :math:`x = 0`. 假设 :math:`y = x + \ln x` 有斜渐近线, 那么斜率
 
    .. math::
-
       k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{x + \ln x}{x} = \lim\limits_{x \to +\infty} \left( 1 + \dfrac{\ln x}{x} \right) = 1,
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} (x + \ln x - x) \\
       & = \lim\limits_{x \to +\infty} \ln x = +\infty,
 
@@ -1055,13 +981,11 @@
    (4). 需要区分 :math:`x \to +\infty` 和 :math:`x \to -\infty` 两种情况. 当 :math:`x \to -\infty` 时, 有斜率
 
    .. math::
-
       k = \lim\limits_{x \to -\infty} \dfrac{y}{x} = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2}{xe^x + 2x^2} = \lim\limits_{x \to -\infty} \dfrac{1 + \frac{e^x}{x^2}}{2 + \frac{e^x}{x}} = \dfrac{1}{2},
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to -\infty} (y - kx) = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2}{e^x + 2x} - \dfrac{1}{2} x \\
       & = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2 - \frac{1}{2} x (e^x + 2x)}{e^x + 2x} \\
       & = \lim\limits_{x \to -\infty} \dfrac{e^x + x^2 - \frac{1}{2} x e^x - x^2}{e^x + 2x} \\
@@ -1071,13 +995,11 @@
    当 :math:`x \to +\infty` 时, 有斜率
 
    .. math::
-
       k = \lim\limits_{x \to +\infty} \dfrac{y}{x} = \lim\limits_{x \to +\infty} \dfrac{e^x + x^2}{xe^x + 2x^2} = \lim\limits_{x \to +\infty} \dfrac{\frac{1}{x} + \frac{x}{e^x}}{1 + \frac{2x}{e^x}} = 0,
 
    截距
 
    .. math::
-
       b & = \lim\limits_{x \to +\infty} (y - kx) = \lim\limits_{x \to +\infty} \dfrac{e^x + x^2}{e^x + 2x} \\
       & = \lim\limits_{x \to +\infty} \dfrac{1 + \frac{x^2}{e^x}}{1 + \frac{2x}{e^x}} \\
       & = 1,
@@ -1087,7 +1009,6 @@
    此外, 令 :math:`x_0` 为 :math:`e^x + 2x = 0` 的解, 那么
 
    .. math::
-
       \lim\limits_{x \to x_0} \dfrac{e^x + x^2}{e^x + 2x} = \infty,
 
    所以 :math:`y = \dfrac{e^x + x^2}{e^x + 2x}` 的垂直渐近线为 :math:`x = x_0`.

@@ -24,7 +24,6 @@
    (1). 有
 
    .. math::
-
       \begin{align*}
       & (A \setminus B) \cap (C \setminus D) \\
       = & (A \cap \mathscr{C} B) \cap (C \cap \mathscr{C} D) = (A \cap C) \cap (\mathscr{C} B \cap \mathscr{C} D) \\
@@ -36,7 +35,6 @@
    (3). 有
 
    .. math::
-
       \begin{align*}
       & A \setminus (B \setminus C) \\
       = & A \cap \mathscr{C} (B \cap \mathscr{C} C) = A \cap (\mathscr{C} B \cup C) \\
@@ -46,7 +44,6 @@
    (4). 有
 
    .. math::
-
       \begin{align*}
       & (A \setminus B) \setminus (C \setminus D) \\
       = & (A \cap \mathscr{C} B) \cap \mathscr{C}(C \cap \mathscr{C} D) = (A \cap \mathscr{C} B) \cap (\mathscr{C} C \cup D) \\
@@ -84,7 +81,6 @@
 3. 设给出集 :math:`E` 与任一集族 :math:`A_{\alpha}, \alpha \in I`, 问关系式
 
    .. math::
-
       E \cup \bigcap_{\alpha \in I} A_{\alpha} = \bigcap_{\alpha \in I} (E \cup A_{\alpha})
 
    是否恒成立?
@@ -118,7 +114,6 @@
    (2). 容易知道, 对任意两个集合 :math:`A, B`, 总有 :math:`A \cup (B \setminus A) = A \cup B`, 于是有
 
    .. math::
-
       \begin{align*}
       & (A \cap B) \cup (A \triangle B) \\
       = & (A \cap B) \cup \Bigl((A \setminus B) \cup (B \setminus A)\Bigr) \\
@@ -179,9 +174,7 @@
    综上所述, 有 :math:`\varlimsup\limits_{n} E_n = \mathbb{Q}`.
 
    .. note::
-
       我们通常可将 :math:`E_n` 简写为 :math:`\dfrac{1}{n} \mathbb{Z}`, 那么这题的结论可以用数学符号更简洁地表达为
 
       .. math::
-
          \varliminf\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Z}, \quad \varlimsup\limits_{n} \dfrac{1}{n} \mathbb{Z} = \mathbb{Q}.

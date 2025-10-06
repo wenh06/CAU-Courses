@@ -14,14 +14,12 @@
    提示: 利用带佩亚诺型余项的麦克劳林公式
 
    .. math::
-
         & \dfrac{1}{1 - t} = 1 + t + t^2 + o(t^2), \\
         & \ln (1 + t) = t - \dfrac{t^2}{2} + o(t^2).
 
 4. 设 :math:`0 < a < b`, 证明存在 :math:`\xi \in (a, b)`, 使得
 
    .. math::
-
         a e^b - b e^a = (a - b) (1 - \xi)e^\xi.
 
    提示: 两边同时除以 :math:`ab`, 构造辅助函数, 并在区间 :math:`\left[ \dfrac{1}{b}, \dfrac{1}{a} \right]` 上利用拉格朗日中值定理.

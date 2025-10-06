@@ -40,7 +40,6 @@
    :math:`u = g(x) = \ln x`, 那么
 
    .. math::
-
       f[g(x)] = \begin{cases} 2\ln x, & 1 \leqslant x \leqslant e \\ (\ln x)^2, & e < u \leqslant e^2. \end{cases}
 
    这里关键是定义域要计算清楚.
@@ -57,7 +56,6 @@
    将原式变形:
 
    .. math::
-
       f\left( x - \dfrac{1}{x} \right) = x^2 + \dfrac{1}{x^2}
       = x^2 + \dfrac{1}{x^2} - 2 + 2 = \left( x - \dfrac{1}{x} \right)^2 + 2,
 

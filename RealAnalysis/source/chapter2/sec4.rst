@@ -6,7 +6,6 @@
 24. 设 :math:`E` 是一维有界集, :math:`I_1, I_2, \dots` 是任意区间集列 (可以相交), 其并覆盖 :math:`E`, 试证
 
     .. math::
-
       m^*(E) = \inf\limits_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
 
     对于二维情形如何?
@@ -16,7 +15,6 @@
    在一维有界集的情况, :math:`E` 的外测度定义为
 
    .. math::
-
       m^* E = \inf_{G \supset E} m G = \inf_{\cup J_k = G \supset E} \sum_k m I_k \geqslant \inf_{\cup I_k \supset E} \sum_k m I_k,
 
    其中 :math:`G` 为包含 :math:`E` 的开集, :math:`m G = \sum\limits_{k} m J_k` 为 :math:`G` 的测度,
@@ -26,19 +24,16 @@
    另一方面, 由于外测度的次可加性, 对所有覆盖 :math:`E` 的区间集列 :math:`\{I_k\}` 有
 
    .. math::
-
       m^* E \leqslant \sum\limits_{k=1}^\infty m^* I_k = \sum\limits_{k=1}^\infty m I_k,
 
    从而有
 
    .. math::
-
       m^* E \leqslant \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
 
    综上, 有
 
    .. math::
-
       m^* E = \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
 
    对于二维 (或更高维) 情形, 需要将区间集列改为矩体集列.
@@ -57,13 +52,11 @@
    可以选出 :math:`\{E_{n_k}\}_{k \in \mathbb{N}}` 的子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 使得
 
    .. math::
-
       m \mathscr{C} E_{n_{k_i}} < \frac{\varepsilon}{2^i}, \quad i \in \mathbb{N}.
 
    那么有
 
    .. math::
-
       m \left( \bigcap_{i = 1}^{\infty} E_{n_{k_i}} \right) = 1 - m \left( \bigcup_{i = 1}^{\infty} \mathscr{C} E_{n_{k_i}} \right)
       \geqslant 1 - \sum_{i = 1}^{\infty} m \mathscr{C} E_{n_{k_i}} \geqslant 1 - \varepsilon.
 
@@ -80,13 +73,11 @@
    使得 :math:`F \subset E` 且 :math:`m F = m E`. 记 :math:`Z = E \setminus F`, 那么 :math:`Z` 是零测集, 且
 
    .. math::
-
       E = F \cup Z
 
    为一个 Borel 集与零测集的不交并. 令
 
    .. math::
-
       f: \mathbb{R}^2 \to \mathbb{R}, \quad f(x, y) = x - y,
 
    那么 :math:`f` 是一个线性映射, 从而是连续的. 令 :math:`\mathscr{B}` 为 :math:`\mathbb{R}` 中的 Borel 集构成的 :math:`\sigma` 代数,
@@ -98,7 +89,6 @@
    下证 :math:`f^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集. 事实上, :math:`f` 可以视为如下两个映射的复合:
 
    .. math::
-
       & T: \mathbb{R}^2 \to \mathbb{R}^2, \quad T(x, y) = (x - y, y), \\
       & \operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}, \quad \operatorname{pr}_1 (x, y) = x,
 
@@ -106,20 +96,17 @@
    (这个结论参见 :ref:`本节第 32 题 <ex-2-32>`)
 
    .. math::
-
       m^* (T^{-1}(A)) = \lvert \det T^{-1} \rvert m^* A,
 
    所以只要证明 :math:`\operatorname{pr}_1^{-1} (Z)` 为 :math:`\mathbb{R}^2` 中的零测集即可. 事实上任取 :math:`\varepsilon > 0`, 有
 
    .. math::
-
       \operatorname{pr}_1^{-1} (Z) = \{ (x, y) \in \mathbb{R}^2 : x \in Z \} = Z \times \mathbb{R} \subset \bigcup_{k = 1}^{\infty} G_k \times (-k, k),
 
    其中 :math:`Z \subset G_k \subset \mathbb{R}` 是开集, 且 :math:`m G_k < \dfrac{\varepsilon}{k \cdot 2^{k+1}}`.
    这样的 :math:`G_k` 总可以取到, 因为 :math:`Z` 是零测集. 那么有
 
    .. math::
-
       m^* \left( \operatorname{pr}_1^{-1} (Z) \right) \leqslant \sum_{k = 1}^{\infty} m^* \left( G_k \times (-k, k) \right)
       = \sum_{k = 1}^{\infty} m G_k \cdot 2k < \sum_{k = 1}^{\infty} \frac{\varepsilon}{k \cdot 2^{k+1}} \cdot 2k = \varepsilon.
 
@@ -129,13 +116,11 @@
    综上所述,
 
    .. math::
-
       D(E) = f^{-1} (F) \cup f^{-1} (Z) = f^{-1} (F) \cup T^{-1} (\operatorname{pr}_1^{-1} (Z))
 
    为 :math:`\mathbb{R}^2` 中的可测集.
 
    .. note::
-
       可以利用一般性的结论: 设 :math:`f: \mathbb{R}^n \to \mathbb{R}` 可测, :math:`T: \mathbb{R}^n \to \mathbb{R}^n` 为非奇异线性变换,
       那么 :math:`f \circ T` 为可测函数. 那么这题就归结为证明 :math:`\operatorname{pr}_1: \mathbb{R}^2 \to \mathbb{R}` 为可测函数,
       以及在映射 :math:`\operatorname{pr}_1` 下, 零测集的原像仍为零测集.
@@ -150,7 +135,6 @@
    并且 :math:`\displaystyle \bigcup_{n=1}^{\infty} E_n = [0, 1)`. 对 :math:`n, k \in \mathbb{N}`, 令
 
    .. math::
-
       E_{n, k} = E_n + k = \{ x + k ~ : ~ x \in E_n \},
 
    那么 :math:`E_{n, k}` 也是不可测集, 两两互不相交, 且 :math:`\displaystyle \bigcup_{n, k \in \mathbb{N}} E_{n, k} = \mathbb{R}`.
@@ -159,20 +143,17 @@
    若对所有 :math:`n, k \in \mathbb{N}`, 集 :math:`A_{n, k}` 都是可测的, 那么由测度的 :math:`\sigma`-可加性知
 
    .. math::
-
       m A = \sum\limits_{n, k \in \mathbb{N}} m A_{n, k}.
 
    由于 :math:`m A > 0`, 那么至少存在一个 :math:`n_0, k_0 \in \mathbb{N}`, 使得 :math:`m A_{n_0, k_0} > 0`. 那么对每个 :math:`n \in \mathbb{N}`,
    可以找到 :math:`E_{n, k_0}` 中的正测度的可测子集
 
    .. math::
-
       (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 = \{ x + k_0 ~ : ~ x \in A_{n_0, k_0} - k_0 + r_n \mod 1 \},
 
    其中 :math:`\mathbb{Q} = \{ r_n \}_{n \in \mathbb{N}}` 是有理数集. 这些集合两两互不相交, 那么由测度的 :math:`\sigma`-可加性知
 
    .. math::
-
       1 = m [k, k + 1) \geqslant \sum_{n \in \mathbb{N}} m \left( (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 \right)
       = \sum_{n \in \mathbb{N}} m A_{n_0, k_0} = \infty,
 
@@ -217,7 +198,6 @@
    式 :eq:`ex-2-29-eq-3` 与式 :eq:`ex-2-29-eq-2` 相加, 有
 
    .. math::
-
       m J = m \left( \mathscr{C} E \cap J \right) + m \left( E \cap J \right)
       > \left( 1 - \frac{c'}{2} \right) m J + c' m J = \left( 1 + \frac{c'}{2} \right) m J,
 
@@ -253,28 +233,24 @@
    式 :eq:`ex-2-30-eq-1` 与式 :eq:`ex-2-30-eq-2` 结合即得
 
    .. math::
-
       m^* \left( \bigcup_{n=1}^{\infty} E_n \right) = \sum_{n=1}^{\infty} m^* E_n,
 
    这与题设已知的 :math:`m^* \left( \bigcup\limits_{n=1}^\infty E_n \right) < \sum\limits_{n=1}^\infty m^* E_n` 矛盾.
    所以存在 (最小的) 自然数 :math:`N \geqslant 2` 使得
 
    .. math::
-
       m^* \left( \bigcup\limits_{n=1}^N E_n \right) < \sum\limits_{n=1}^N m^* E_n.
 
    假设 :math:`E_N` 是可测的, 那么由 Carathéodory 定理, 取 :math:`\displaystyle A_N = \bigcup_{k=1}^{N} E_k` 为测试集,
    再注意到 :math:`E_1, \dots, E_N` 互不相交, 有
 
    .. math::
-
       \sum_{n=1}^{N} m^* E_n > m^* A_N & = m^* \left( A_N \cap E_N \right) + m^* \left( A_N \cap \mathscr{C} E_N \right) \\
       & = m^* E_N + m^* A_{N-1}.
 
    上式两边同时消去 :math:`m^* E_{N}`, 有
 
    .. math::
-
       m^* \left( \bigcup\limits_{n=1}^{N-1} E_n \right) = m^* A_{N-1} < \sum\limits_{n=1}^{N-1} m^* E_n,
 
    这与 :math:`N` 的最小性矛盾. 所以 :math:`E_N` 是不可测的.
@@ -284,7 +260,6 @@
 32. 设 :math:`T` 是 :math:`\mathbb{R}^n` 上的非奇异线性变换, 证明对任一 :math:`E \subset \mathbb{R}^n` 有
 
     .. math::
-
       m^* (T(E)) = \lvert \det T \rvert m^* E.
 
 .. proof:proof::
@@ -307,7 +282,6 @@
    :math:`\det T = -1`, 有
 
    .. math::
-
       m T(I) = (b_1 - a_1) \cdots (b_j - a_j) \cdots (b_i - a_i) \cdots (b_n - a_n) = m I = \lvert \det T \rvert m I.
 
    对于第二类变换, 若 :math:`c > 0`, 则 :math:`T(I) = [a_1, b_1) \times \cdots \times [c a_i, c b_i) \times \cdots \times [a_n, b_n)`,
@@ -315,7 +289,6 @@
    :math:`\det T = c`. 那么有
 
    .. math::
-
       m T(I) & = (b_1 - a_1) \cdots \lvert c b_i - c a_i \rvert \cdots (b_n - a_n) = c (b_1 - a_1) \cdots (b_i - a_i) \cdots (b_n - a_n) \\
       & = \lvert c \rvert m I = \lvert \det T \rvert m I.
 
@@ -324,7 +297,6 @@
    :math:`\det T = 1`,
 
    .. math::
-
       m T(I) & = (b_1 - a_1) \cdots (b_i + c (b_j - a_j) - a_i - c (b_j - a_j)) \cdots (b_j - a_j) \cdots (b_n - a_n) \\
       & = (b_1 - a_1) \cdots (b_i - a_i) \cdots (b_j - a_j) \cdots (b_n - a_n) \\
       & = m I = \lvert \det T \rvert m I.
@@ -336,14 +308,12 @@
 33. 设 :math:`E` 为 :math:`\mathbb{R}^n` 中任一子集, :math:`\alpha` 为给定正数. 对任意的 :math:`\varepsilon > 0`, 令
 
     .. math::
-
       H_{\alpha, \varepsilon} (E) = \inf \sum_k d (E_k)^{\alpha},
 
     其中 :math:`d (E_k)` 表示 :math:`E_k` 的直径, 下确界对一切满足 :math:`E \subset \bigcup\limits_{k} E_k`
     而 :math:`d (E_k) < \varepsilon, k \in \mathbb{N}` 的集列 :math:`\{E_k\}` 而取. 再令
 
     .. math::
-
       H_{\alpha} (E) = \lim\limits_{\varepsilon \to 0} H_{\alpha, \varepsilon} (E) = \sup\limits_{\varepsilon > 0} H_{\alpha, \varepsilon} (E).
 
     试证 :math:`H_{\alpha}` 为基本集 :math:`\mathbb{R}^n` 上的外测度并满足条件: 若 :math:`H_{\alpha} (E) < \infty`,
@@ -359,7 +329,6 @@
    使得其直径 :math:`d (E_n) < \varepsilon / n`, 例如直径为 :math:`\varepsilon / 2n` 的闭球. 那么有 :math:`E \subset E_n`, 以及
 
    .. math::
-
       H_{\alpha, \varepsilon} (E) \leqslant \inf_{n \in \mathbb{N}} d (E_n)^{\alpha} \leqslant \inf_{n \in \mathbb{N}} \left( \frac{\varepsilon}{n} \right)^{\alpha} = 0,
 
    从而有 :math:`H_{\alpha} (\emptyset) = 0`.
@@ -368,7 +337,6 @@
    记 :math:`\displaystyle A = \bigcup_{n=1}^{\infty} A_n`, 那么依定义
 
    .. math::
-
       H_{\alpha}\left( A \right) = \sup_{\varepsilon > 0} \inf \sum_{k = 1}^{\infty} d (E_{k})^{\alpha},
 
    其中下确界对一切满足 :math:`A \subset \bigcup\limits_{k = 1}^{\infty} E_{k}` 且 :math:`d (E_{k}) < \varepsilon, k \in \mathbb{N}`
@@ -379,33 +347,28 @@
    并不一定具有以上的 :math:`\{E^{(n)}_k\}_{n, k \in \mathbb{N}}` 的形式, 即集合
 
    .. math::
-
       \left\{ \{E^{(n)}_k\}_{n, k \in \mathbb{N}} \ :\ A \subset
       \bigcup_{n=1}^{\infty} \bigcup_{k=1}^{\infty} E^{(n)}_k, d (E^{(n)}_k) < \varepsilon, n, k \in \mathbb{N} \right\}
 
    是集合
 
    .. math::
-
       \left\{ \{E_k\}_{k \in \mathbb{N}} \ :\ A \subset \bigcup_{k=1}^{\infty} E_k, d (E_k) < \varepsilon, k \in \mathbb{N} \right\}
 
    的子集. 所以有
 
    .. math::
-
       H_{\alpha, \varepsilon} (A) \leqslant \inf \sum_{n = 1}^{\infty} \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha}.
 
    对于不同的 :math:`n`, 即不同的 :math:`A_n`, 覆盖的选取是独立无关的, 所以实际上有
 
    .. math::
-
       \inf \sum_{n = 1}^{\infty} \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha}
       = \sum_{n = 1}^{\infty} \inf \sum_{k = 1}^{\infty} d (E^{(n)}_k)^{\alpha} = \sum_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n),
 
    即有 :math:`H_{\alpha, \varepsilon} (A) \leqslant \sum\limits_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n)`, 进而有
 
    .. math::
-
       H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A)
       \leqslant \sup_{\varepsilon > 0} \sum_{n = 1}^{\infty} H_{\alpha, \varepsilon} (A_n)
       \leqslant \sum_{n = 1}^{\infty} \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A_n)
@@ -415,25 +378,21 @@
    同时也是覆盖 :math:`A` 的集列, 但反过来不一定成立. 所以有
 
    .. math::
-
       H_{\alpha, \varepsilon} (A) \leqslant H_{\alpha, \varepsilon} (B).
 
    对 :math:`\varepsilon > 0` 取上确界, 有
 
    .. math::
-
       H_{\alpha} (A) = \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (A) \leqslant \sup_{\varepsilon > 0} H_{\alpha, \varepsilon} (B) = H_{\alpha} (B).
 
    设集列 :math:`\{E_k\}_{k \in \mathbb{N}}` 满足 :math:`d (E_k) < \varepsilon, \forall ~ k \in \mathbb{N}`. 对于 :math:`\beta > \alpha`, 有
 
    .. math::
-
       \sum_{k} d (E_k)^{\beta} = \sum_{k} d (E_k)^{\alpha} \cdot d (E_k)^{\beta - \alpha} \leqslant \varepsilon^{\beta - \alpha} \sum_{k} d (E_k)^{\alpha}.
 
    于是有
 
    .. math::
-
       H_{\beta, \varepsilon} (E) = \inf \sum_{k} d (E_k)^{\beta}
       \leqslant \varepsilon^{\beta - \alpha} \inf \sum_{k} d (E_k)^{\alpha}
       = \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E).
@@ -443,7 +402,6 @@
    所以上式右边的极限为 :math:`0`. 对上式两边同时令 :math:`\varepsilon \to 0`, 有
 
    .. math::
-
       H_{\beta} (E) = \lim_{\varepsilon \to 0} H_{\beta, \varepsilon} (E)
       \leqslant \lim_{\varepsilon \to 0} \varepsilon^{\beta - \alpha} H_{\alpha, \varepsilon} (E) = 0.
 
@@ -462,7 +420,6 @@
    令 :math:`c = \dfrac{\pi^{n/2}}{\Gamma (n/2 + 1)}`, 那么有
 
    .. math::
-
       N \cdot c (ar)^n \leqslant c ((1+b)r)^n,
 
    从而有 :math:`N \leqslant (1+b)^n a^{-n}`.
@@ -472,7 +429,6 @@
 35. 设 :math:`f` 为集 :math:`X \to Y` 的任一映射, :math:`\mathscr{A}, \mathscr{B}` 分别为 :math:`X, Y` 中的 :math:`\sigma` 代数, 证明
 
     .. math::
-
       \{ f^{-1} (B) : B \in \mathscr{B} \}, \quad \{B : f^{-1} (B) \in \mathscr{A} \}
 
     分别为 :math:`X, Y` 中的 :math:`\sigma` 代数.
@@ -488,7 +444,6 @@
    使得 :math:`A_1 = f^{-1} (B_1), A_2 = f^{-1} (B_2)`. 那么有
 
    .. math::
-
       A_1 \setminus A_2 & = f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1) \cap \mathscr{C}_X f^{-1} (B_2) \\
       & = f^{-1} (B_1 \cap \mathscr{C}_Y B_2) = f^{-1} (B_1 \setminus B_2).
 
@@ -499,7 +454,6 @@
    那么存在 :math:`\{B_n\}_{n \in \mathbb{N}} \subset \mathscr{B}`, 使得 :math:`A_n = f^{-1} (B_n), n \in \mathbb{N}`. 那么有
 
    .. math::
-
       \bigcup_{n=1}^{\infty} A_n = \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
    由于 :math:`\mathscr{B}` 为 :math:`Y` 中的 :math:`\sigma` 代数, 那么 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \mathscr{B}`,
@@ -516,7 +470,6 @@
    由于 :math:`\mathscr{A}` 为 :math:`X` 中的 :math:`\sigma` 代数, 那么
 
    .. math::
-
       \mathscr{A} \ni f^{-1} (B_1) \setminus f^{-1} (B_2) = f^{-1} (B_1 \setminus B_2).
 
    从而 :math:`B_1 \setminus B_2 \in \{B : f^{-1} (B) \in \mathscr{A} \}`.
@@ -526,7 +479,6 @@
    那么有
 
    .. math::
-
       \mathscr{A} \ni \bigcup_{n=1}^{\infty} f^{-1} (B_n) = f^{-1} \left( \bigcup_{n=1}^{\infty} B_n \right).
 
    从而 :math:`\bigcup\limits_{n=1}^{\infty} B_n \in \{B : f^{-1} (B) \in \mathscr{A} \}`.
@@ -546,19 +498,16 @@
    :math:`m A_2 = 0` 或者 :math:`m \mathscr{C} A_2 = 0`. 若 :math:`m A_1 = 0`, 那么
 
    .. math::
-
       m (A_1 \setminus A_2) \leqslant m A_1 = 0;
 
    若 :math:`m \mathscr{C} A_1 = 0`, 那么考虑到 :math:`\mathscr{C}(A_1 \setminus A_2) = \mathscr{C} A_1 \cup A_2`, 当 :math:`m A_2 = 0` 时有
 
    .. math::
-
       m (\mathscr{C}(A_1 \setminus A_2)) = m (\mathscr{C} A_1 \cup A_2) \leqslant m \mathscr{C} A_1 + m A_2 = 0;
 
    当 :math:`m \mathscr{C} A_2 = 0` 时有
 
    .. math::
-
       m (A_1 \setminus A_2) = m (A_1 \cap \mathscr{C} A_2) \leqslant m \mathscr{C} A_2 = 0.
 
    从而知 :math:`A_1 \setminus A_2 \in \mathscr{A}`.
@@ -567,13 +516,11 @@
    那么有
 
    .. math::
-
       m \left( \bigcup_{n=1}^{\infty} A_n \right) \leqslant \sum_{n=1}^{\infty} m A_n = 0.
 
    若存在 :math:`A_{n_0} \in \{A_n\}_{n \in \mathbb{N}}`, 使得 :math:`m \mathscr{C} A_{n_0} = 0`, 那么有
 
    .. math::
-
       m \left( \mathscr{C} \left( \bigcup_{n=1}^{\infty} A_n \right) \right)
       = m \left( \bigcap_{n=1}^{\infty} \mathscr{C} A_n \right) \leqslant m \mathscr{C} A_{n_0} = 0.
 
@@ -586,7 +533,6 @@
 37. 设 :math:`\mathscr{S}` 为 :math:`X` 中任一非空子集族. 试证
 
     .. math::
-
       \sigma (f^{-1} (\mathscr{S})) = f^{-1} (\sigma (\mathscr{S})),
 
     其中 :math:`f` 为 :math:`Y \to X` 的映射, :math:`\sigma (\mathscr{S})` 为 :math:`\mathscr{S}` 生成的 :math:`\sigma` 代数.
@@ -606,13 +552,11 @@
    使得
 
    .. math::
-
       f(A) \subset \bigcup\limits_{n=1}^{\infty} E_n \subset \bigcup\limits_{n=1}^{\infty} f(f^{-1} (E_n)).
 
    记 :math:`\widetilde{E}_n = f(f^{-1} (E_n)), E = \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A)`, 有
 
    .. math::
-
       f^{-1} (E) = f^{-1} \left( \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A) \right)
       = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (\widetilde{E}_n) \right) \setminus A
       = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (E_n) \right) \setminus A.

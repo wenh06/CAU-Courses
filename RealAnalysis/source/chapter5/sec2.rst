@@ -11,7 +11,6 @@
    由可积函数空间关于依测度收敛的完备性, 可知 :math:`f \in L^2`. 又由 Minkowski 不等式
 
    .. math::
-
       \lVert f_n - f \rVert_2 \leqslant \lVert f_n \rVert_2 + \lVert f \rVert_2,
 
    可以用函数列 :math:`f_n - f` 代替 :math:`f_n` 证明相关结论. 以下假设 :math:`f = 0`.
@@ -37,25 +36,21 @@
    由 :math:`\{ f_n \}` 依测度收敛于 :math:`f = 0` 知, 对取好的 :math:`\varepsilon > 0` 有
 
    .. math::
-
       \lim_{n \to \infty} m E_n := \lim_{n \to \infty} m E(|f_n| > \varepsilon) = 0,
 
    也就是说, 对已经取好的 :math:`\delta > 0`, 可以选取 :math:`N > 0`, 使得对任意 :math:`n > N` 有
 
    .. math::
-
       m E_n < \delta.
 
    于是由 :eq:`ex-5-22-eq-2` 知
 
    .. math::
-
       \int_{E_n} |g|^2 ~ \mathrm{d} m \leqslant \varepsilon^2,
 
    代入 :eq:`ex-5-22-eq-1` 中有
 
    .. math::
-
       \int_E | f_n g | ~ \mathrm{d} m \leqslant (K + \lVert g \rVert_1) \cdot \varepsilon.
 
    以上表明了 :math:`\displaystyle \lim_{n \to \infty} \int_E | f_n g | ~ \mathrm{d} m = 0`,
@@ -73,20 +68,17 @@
    由 :ref:`Riemann-Lebesgue 引理 <ex-4-24>`, 对任意可积函数 (特别地, :math:`L^2(E)` 中的函数) :math:`g(x)`, 都有
 
    .. math::
-
       \lim_{n \to \infty} \int_{(0, \pi)} f_n g ~ \mathrm{d} m = 0.
 
    因此 :math:`f_n(x)` 弱收敛到 :math:`0`. 但是对足够小的 :math:`\varepsilon > 0`, 有
 
    .. math::
-
       E(|f_n| > \varepsilon) = \bigcup_{k = 0}^{n - 1}
       \left( \dfrac{k\pi + \arcsin \varepsilon}{n}, \dfrac{k\pi + \pi - \arcsin \varepsilon}{n} \right),
 
    于是
 
    .. math::
-
       E(|f_n| > \varepsilon) = \sum_{k = 0}^{n - 1} \dfrac{\pi - 2 \arcsin \varepsilon}{n} = \pi - 2 \arcsin \varepsilon,
 
    由此可知 :math:`f_n` 不依测度收敛到 :math:`0`.
@@ -100,12 +92,10 @@
 .. proof:proof::
 
    .. note::
-
       首先要注意的是, 我们事先是不知道数列 :math:`\{ C_{n + 1} / C_n \}` 是否收敛的 (或者说是否有极限的).
       如果事先知道了这个数列是收敛的, 那么这个题目的结论就是平凡的, 直接能从
 
       .. math::
-
          \lim_{n \to \infty} C_n^{1/n} = \lVert f \rVert_{\infty}
 
       得到.
@@ -118,7 +108,6 @@
    首先, 由 Hölder 不等式, 对任意 :math:`n \in \mathbb{N}`, 有
 
    .. math::
-
       C_{n + 1} & = \int_E |f|^{n + 1} ~ \mathrm{d} m = \int_E |f|^n |f| ~ \mathrm{d} m \\
       & \leqslant \lVert |f|^n \rVert_1 \lVert f \rVert_{\infty} = \int_E |f|^n ~ \mathrm{d} m = C_n,
 
@@ -132,13 +121,11 @@
    另一方面, 由于 :math:`1` 为 :math:`f` 的本性上确界, 故对任意 :math:`0 < r < 1`, 集合
 
    .. math::
-
       A_r = E(|f| > r)
 
    有正测度, 即 :math:`m A_r > 0`. 那么
 
    .. math::
-
       C_{n + 1} = \int_E |f|^{n+1} ~ \mathrm{d} m
       & \geqslant \int_{A_r} |f|^{n+1} ~ \mathrm{d} m \geqslant r \int_{A_r} |f|^n ~ \mathrm{d} m \\
       & = r C_n - r \int_{E \setminus A_r} |f|^n ~ \mathrm{d} m \\
@@ -155,25 +142,21 @@
    取实数 :math:`s` 满足 :math:`r < s < 1`, 那么集合
 
    .. math::
-
       A_s = E(|f| > s)
 
    也有正测度, 即 :math:`m A_s > 0,` 并且有
 
    .. math::
-
       C_n = \int_E |f|^n ~ \mathrm{d} m \geqslant \int_{A_s} |f|^n ~ \mathrm{d} m \geqslant s^n \cdot m A_s.
 
    将上式代入 :eq:`ex-5-27-eq-2` 即有
 
    .. math::
-
       \dfrac{C_{n + 1}}{C_n} \geqslant r - r \dfrac{m (E \setminus A_r)}{m A_s} \left(\dfrac{r}{s}\right)^n
 
    对上式关于 :math:`n \to \infty` 取下极限, 即有
 
    .. math::
-
       \varliminf_{n \to \infty} \dfrac{C_{n + 1}}{C_n} \geqslant r.
 
    由于上式对任意的 :math:`0 < r < 1` 都成立 (或者说对上式取极限 :math:`r \to 1-`), 所以有
@@ -186,11 +169,9 @@
    :eq:`ex-5-27-eq-1`, :eq:`ex-5-27-eq-3` 两式相结合即有 :math:`\displaystyle \lim_{n \to \infty} C_{n + 1} / C_n = 1`.
 
    .. note::
-
       当 :math:`m E < \infty` 且 :math:`f \in L^{\infty}(E)` 时, 成立
 
       .. math::
-
          \lim_{p \to \infty} \lVert f \rVert_p = \lVert f \rVert_{\infty},
 
       特别地对 :math:`n \in \mathbb{N}` 有
@@ -232,7 +213,6 @@
     如果对任何 :math:`x, y \in I` 和任意 :math:`t \in (0, 1)` 有
 
     .. math::
-
       \varphi(tx + (1 - t)y) \leqslant t\varphi(x) + (1 - t)\varphi(y).
 
     试证:
@@ -243,7 +223,6 @@
         则有延森 (B. Jensen) 不等式
 
         .. math::
-
             \varphi \left( \dfrac{1}{\mu X} \int_X f ~ \mathrm{d} \mu \right)
             \leqslant \dfrac{1}{\mu X} \int_X \varphi(f) ~ \mathrm{d} \mu.
 
@@ -253,19 +232,16 @@
    任取点列 :math:`\{ x_n \} \subset (x, b)` 使得 :math:`x_n \to x +`, 并记 :math:`t_n = (x_n - x) / (b - x)`, 则有
 
    .. math::
-
       x_n = t_n b + (1 - t_n) x,
 
    并且
 
    .. math::
-
       t_n \to 0 (n \to \infty).
 
    由于 :math:`\varphi` 为凸函数, 有
 
    .. math::
-
       \varphi(x_n) \leqslant t_n \varphi(b) + (1 - t_n) \varphi(x) = \varphi(x) + t_n (\varphi(b) - \varphi(x)).
 
    对上式两边关于 :math:`n \to \infty` 取上极限, 有
@@ -278,19 +254,16 @@
    另一方面, 记 :math:`s_n = (x_n - x) / (x_n - a)`, 则有
 
    .. math::
-
       x = s_n a + (1 - s_n) x_n,
 
    并且
 
    .. math::
-
       s_n \to 0 (n \to \infty).
 
    由于 :math:`\varphi` 为凸函数, 有
 
    .. math::
-
       \varphi(x) \leqslant s_n \varphi(x_n) + (1 - s_n) \varphi(a) = \varphi(a) + s_n (\varphi(x_n) - \varphi(a)).
 
    对上式两边关于 :math:`n \to \infty` 取下极限, 有
@@ -303,7 +276,6 @@
    由 :eq:`ex-5-31-eq-1`, :eq:`ex-5-31-eq-2` 两式相结合即有
 
    .. math::
-
       \varphi(x) = \lim_{n \to \infty} \varphi(x_n).
 
    由于点列 :math:`\{ x_n \}` 的任意性, 知 :math:`\varphi` 在 :math:`x` 右连续. 同理可证 :math:`\varphi` 在 :math:`x` 左连续.
@@ -311,14 +283,12 @@
    (2) 由于 :math:`f` 为 :math:`X` 上实可积函数, 取简单函数列 :math:`\{ g_n \}` 使得
 
    .. math::
-
       \lim_{n \to \infty} \int_X g_n ~ \mathrm{d} \mu = \int_X f ~ \mathrm{d} \mu.
 
    对于 :math:`\displaystyle g_n = \sum_{k = 1}^{N_n} a_{nk} \chi_{E_{nk}}`, :math:`\displaystyle X = \bigcup_{k = 1}^{N_n} E_{nk}`,
    且 :math:`E_{nk}` 两两不交, 有
 
    .. math::
-
       \varphi \left( \dfrac{1}{\mu X} \int_X g_n ~ \mathrm{d} \mu \right)
       & = \varphi \left( \sum_{k = 1}^{N_n} \dfrac{\mu E_{nk}}{\mu X} a_{nk} \right) \\
       & \leqslant \sum_{k = 1}^{N_n} \dfrac{\mu E_{nk}}{\mu X} \varphi \left( a_{nk} \right)
@@ -327,7 +297,6 @@
    由 :math:`\varphi` 的连续性, 两边取极限即有
 
    .. math::
-
       \varphi \left( \dfrac{1}{\mu X} \int_X f ~ \mathrm{d} \mu \right)
       \leqslant \dfrac{1}{\mu X} \int_X \varphi(f) ~ \mathrm{d} \mu.
 
@@ -340,13 +309,11 @@
    首先来求被积函数 :math:`f_k(x) = (2 - \sin kx)^{-1}` 的不定积分. 令 :math:`t = \tan \dfrac{kx}{2}`, 则有
 
    .. math::
-
       \sin kx = \dfrac{2t}{1 + t^2}, \quad \mathrm{d} x = \dfrac{2}{k} \dfrac{\mathrm{d} t}{1 + t^2},
 
    从而有
 
    .. math::
-
       \int \dfrac{1}{2 - \sin kx} ~ \mathrm{d} x & = \int \dfrac{1}{2 - \dfrac{2t}{1 + t^2}} \dfrac{2}{k} \dfrac{\mathrm{d} t}{1 + t^2} \\
       & = \dfrac{1}{k} \int \dfrac{1}{(1 + t^2) - t} ~ \mathrm{d} t \\
       & = \dfrac{1}{k} \int \dfrac{1}{(t - 1/2)^2 + 3/4} ~ \mathrm{d} (t - 1/2) \\
@@ -372,7 +339,6 @@
    注意到 :math:`|f_k| \leqslant 1`, 有
 
    .. math::
-
       \int_{(a, b)} f_k(x) ~ \mathrm{d} x
       & = \int_{(a, a + N_{a, b}T_k)} f_k(x) ~ \mathrm{d} x + \int_{(a + N_{a, b}T_k, b)} f_k(x) ~ \mathrm{d} x \\
       & = N_{a, b} \cdot I_{k, 0} + \int_{(a + N_{a, b}T_k, b)} f_k(x) ~ \mathrm{d} x,
@@ -380,7 +346,6 @@
    从而有
 
    .. math::
-
       & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert \\
       \leqslant & \int_{(a + N_{a, b}T_k, b)} 1 ~ \mathrm{d} x = b - a - N_{a, b}T_k
       = \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k},
@@ -417,7 +382,6 @@
    综合 :eq:`ex-5-38-eq-1`, :eq:`ex-5-38-eq-3`, :eq:`ex-5-38-eq-4` 三式, 可知对充分大的 :math:`k` 有
 
    .. math::
-
       & \left\lvert \int_E f_k(x) ~ \mathrm{d} x - m E / \sqrt{3} \right\rvert \\
       \leqslant & \left\lvert \int_E f_k(x) ~ \mathrm{d} x - \int_{G} f_k(x) ~ \mathrm{d} x \right\rvert
         + \left\lvert \int_G f_k(x) ~ \mathrm{d} x - \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x \right\rvert \\
@@ -429,6 +393,5 @@
    于是有
 
    .. math::
-
       \lim_{k \to \infty} \int_E (2 - \sin kx)^{-1} ~ \mathrm{d} x
       = \lim_{k \to \infty} \int_E f_k(x) ~ \mathrm{d} x = m E / \sqrt{3}.

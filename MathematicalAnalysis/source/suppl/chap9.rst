@@ -30,13 +30,11 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    a. 若 :math:`\sum\limits_{n=1}^{\infty} a_n` 在通常意义下收敛到有限实数 :math:`A`, 那么
 
    .. math::
-
       A = \lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)},
 
    于是根据 Stolz 公式 (Stolz–Cesàro 定理), 有
 
    .. math::
-
       \lim\limits_{n \to \infty} \sigma_n = \lim\limits_{n \to \infty} \dfrac{n\sigma_n}{n}
       = \lim\limits_{n \to \infty} \dfrac{n\sigma_n - (n-1)\sigma_{n-1}}{n - (n-1)} = A.
 
@@ -45,7 +43,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    b. 我们考察 :math:`s_n - \sigma_n`, 有
 
    .. math::
-
       s_n - \sigma_n & = \sum\limits_{k=1}^n a_k - \sum\limits_{k=1}^n \left( 1 - \dfrac{k-1}{n} \right) a_k \\
       & = \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}.
 
@@ -53,13 +50,11 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    那么 :math:`\lim\limits_{n \to \infty} n a_n = 0`, 这也等价于
 
    .. math::
-
       \lim_{n \to \infty} (n - 1) a_n = 0.
 
    于是对 :math:`\dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n}` 使用 Stolz 公式有:
 
    .. math::
-
       \lim\limits_{n \to \infty} (s_n - \sigma_n) & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k}{n} \\
       & = \lim\limits_{n \to \infty} \dfrac{\sum\limits_{k=1}^n (k-1)a_k - \sum\limits_{k=1}^{n-1} (k-1)a_k}{n - (n-1)} \\
       & = \lim\limits_{n \to \infty} \dfrac{(n-1)a_n}{1} = 0.
@@ -75,7 +70,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    之前 b. 的时候, 我们导出了 :math:`s_n` 与 :math:`\sigma_n` 的关系
 
    .. math::
-
       s_n = \sigma_n + \sum\limits_{k = 1}^n \dfrac{(k-1)a_k}{n}.
 
    由于我们只有 :math:`\rvert n a_n \rvert \leqslant M`, 所以 Stolz 公式不能再用了, 得另想办法.
@@ -83,7 +77,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    想法: 将 :math:`s_n - \sigma_n` 与 :math:`\sigma_n - \sigma_m` 联系上, 并用它控制余项的大小. 假设 :math:`n > m`, 那么有
 
    .. math::
-
       \sigma_n - \sigma_m & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{m} s_k \\
       & = \dfrac{1}{n} \sum\limits_{k=1}^n s_k - \dfrac{1}{m} \sum\limits_{k=1}^{n} s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k \\
       & = \dfrac{m - n}{nm} \sum\limits_{k=1}^n s_k + \dfrac{1}{m} \sum\limits_{k=m+1}^{n} s_k.
@@ -91,13 +84,11 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    另一方面, 有
 
    .. math::
-
       s_n - \sigma_n = s_n - \dfrac{1}{n} \sum\limits_{k = 1}^n s_k.
 
    两式通分相减, 有
 
    .. math::
-
       & (s_n - \sigma_n) - \dfrac{m}{n - m}(\sigma_n - \sigma_m) \\
       & = s_n - \cancel{\dfrac{1}{n} \sum\limits_{k = 1}^n s_k} + \cancel{\dfrac{1}{n} \sum\limits_{k=1}^n s_k}
          - \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} s_k \\
@@ -106,14 +97,12 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    整理一下, 有
 
    .. math::
-
       s_n - \sigma_n = \underbrace{\dfrac{m}{n - m}(\sigma_n - \sigma_m)}_{\text{第一部分}} +
                        \underbrace{\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)}_{\text{第二部分}}.
 
    对于第二部分 :math:`\dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k)` 和式中的每一项, 我们有估计
 
    .. math::
-
       \begin{multline*}
       \lvert s_n - s_k \rvert = \lvert a_{k+1} + \cdots + a_n \rvert \\
       \leqslant \dfrac{M}{k+1} + \cdots \dfrac{M}{n} \leqslant \dfrac{(n-k)M}{k+1} \leqslant \dfrac{(n-m-1)M}{m+1}
@@ -122,7 +111,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    于是
 
    .. math::
-
       \left\lvert \dfrac{1}{n-m} \sum\limits_{k=m+1}^{n} (s_n - s_k) \right\rvert
       \leqslant \dfrac{1}{n-m} (n-m) \dfrac{n-m-1}{m+1} M < \dfrac{n-m}{m} M.
 
@@ -131,7 +119,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    取 :math:`n > \dfrac{2(2M + \varepsilon)}{\varepsilon}`, 即可确保能取到整数
 
    .. math::
-
       m \in \left[ \dfrac{n}{1 + \frac{\varepsilon}{2M}}, n \right],
 
    即有 :math:`\lvert \text{第二部分} \rvert < \dfrac{\varepsilon}{2}`.
@@ -145,7 +132,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    于是
 
    .. math::
-
       \lvert \text{第一部分} \rvert = \left\lvert \dfrac{m}{n - m}(\sigma_n - \sigma_m) \right\rvert
       \leqslant \dfrac{4M}{\varepsilon} \left\lvert \sigma_n - \sigma_m \right\rvert.
 
@@ -153,7 +139,6 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    :math:`\left\lvert \sigma_n - \sigma_m \right\rvert < \dfrac{\varepsilon^2}{8M}`, 那么
 
    .. math::
-
       \left\lvert s_n - \sigma_n \right\rvert \leqslant \lvert \text{第一部分} \rvert + \lvert \text{第二部分} \rvert < \varepsilon.
 
    注意我们的取法: :math:`N` 充分大
@@ -161,5 +146,4 @@ c. 若级数 :math:`\sum\limits_{n=1}^{\infty} a_n = A~(c, 1)`, 且当 :math:`n\
    :math:`m, n` 满足关系:
 
    .. math::
-
       \dfrac{n}{1 + \frac{\varepsilon}{2M}} < m < \dfrac{n}{1 + \frac{\varepsilon}{4M}} < n.

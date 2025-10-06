@@ -13,7 +13,6 @@
     且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有
 
     .. math::
-
         E(f > r) = \bigcup_{k \in \mathbb{N}} E(f > \alpha_k).
 
     首先, 由于 :math:`\alpha_k > r`, 所以 :math:`E(f > r) \supset E(f > \alpha_k)`, 从而知上式左边包含右边.

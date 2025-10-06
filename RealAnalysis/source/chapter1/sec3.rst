@@ -41,7 +41,6 @@
    :math:`[a, b] \subset \mathscr{C} \left( \bigcap\limits_{i=1}^{N} E_{k_i} \right)` 成立. 于是有
 
    .. math::
-
       E_{k_N} = \bigcap_{i=1}^{N} E_{k_i} = \emptyset,
 
    这与题设矛盾. 所以交集 :math:`\bigcap\limits_{k=1}^{\infty} E_k` 非空.
@@ -80,7 +79,6 @@
    这样的 :math:`f` 在无理点集上不一定有界, 在 :math:`[0, 1]` 上也不一定一致连续. 反例如下: 定义 :math:`f` 如下:
 
    .. math::
-
       f(x) = \begin{cases}
       0, & x = 0, \\
       \frac{1}{x^{\alpha}}, & x \in (0, 1].
@@ -90,7 +88,6 @@
    但是 :math:`f` 在无理点集上不是有界的, 在 :math:`[0, 1]` 上也不是一致连续的.
 
    .. note::
-
       这里的反例在数学分析中经常被作为黎曼不可积, 但反常积分收敛的例子.
 
 .. _ex-1-21:
@@ -102,7 +99,6 @@
    :math:`\mathbb{R} \to \mathbb{R}` 的开映射 (将任一开集映为开集) 不一定连续. 反例如下: 定义 :math:`\mathbb{R}` 上的一个等价关系为
 
    .. math::
-
       x \sim y \Longleftrightarrow x - y \in \mathbb{Q}, \quad x, y \in \mathbb{R},
 
    并令 :math:`\mathcal{E} = \mathbb{R} / \sim` 表示商集, 其中的元素记为
@@ -115,7 +111,6 @@
    :math:`x` 为代表元. 可以验证, 集合 :math:`\mathcal{E}` 与 :math:`\mathbb{R}` 对等, 那么可以做双射 :math:`f: \mathcal{E} \to \mathbb{R}`. 定义
 
    .. math::
-
       g: \mathbb{R} \to \mathbb{R}, \quad x \mapsto f([x]).
 
    任取 :math:`\mathbb{R}` 中开集 :math:`U`. 对值域 :math:`\mathbb{R}` 中的任意元素 :math:`y`, 令它在商集 :math:`\mathcal{E}` 中的双射 :math:`f` 下的原像为
@@ -129,7 +124,6 @@
    连续映射不一定将开集映为开集. 反例为 :math:`f(x) = x^2`, 它将开区间 :math:`(-1, 1)` 映左闭右开区间 :math:`[0, 1)`.
 
    .. note::
-
       开映射不连续的其他例子 (来自作业):
 
       和教材一致, 记 Cantor 三分集为 :math:`P_0`, 其补集 (在区间 :math:`[0, 1]` 内的补集) 记为 :math:`G_0`,
@@ -154,7 +148,6 @@
       对于任意 :math:`m \in \mathbb{Z}^*`, 考虑集合
 
       .. math::
-
          G_m & := m + G_0 = \left\{ m + x : x \in G_0 \right\}, \\
          G & := \bigcup_{m \in \mathbb{Z}} G_m, \\
          P & := \mathscr{C} G = \mathbb{R} \setminus G.
@@ -162,7 +155,6 @@
       容易看出,
 
       .. math::
-
          I_{nk}^{(m)} := \left\{ m + x : x \in I_{nk} \right\}, m \in \mathbb{Z}, n \in \mathbb{N}, k = 1, 2, \cdots, 2^{n-1},
 
       两两不相交, 是 :math:`G` 的构成区间. 将这些区间重新排列, 得到新的开区间列 :math:`\{ J_t = (\alpha_t, \beta_t) \}_{t \in \mathbb{N}}`.
@@ -189,7 +181,6 @@
       那么每个 :math:`U_s` 都包含于某个 :math:`J_t` 中 (见本章 :ref:`第 24 题 <ex-1-24>`) . 由于
 
       .. math::
-
          f \left( \bigcup_{s \in S} U_s \right) = \bigcup_{s \in S} f(U_s)
 
       对一般的函数以及集合的并都是成立的, 而 :math:`f` 在每个 :math:`J_t` 上都是开映射, 所以

@@ -6,13 +6,11 @@
 27. 设 :math:`f(x), g(x)` 分别是定义在集 :math:`X, Y` 上的 :math:`\mu, \nu` 可积函数. 证明
 
     .. math::
-
       h(x, y) = f(x) g(y)
 
     是乘积空间 :math:`X \times Y` 上的可积函数, 且有
 
     .. math::
-
       \int_{X \times Y} h ~ \mathrm{d} (\mu \times \nu) = \int_X f ~ \mathrm{d} \mu \int_Y g ~ \mathrm{d} \nu.
 
 .. proof:proof::
@@ -25,7 +23,6 @@
    由 :ref:`Tonelli 定理 <thm-tonelli>` 知
 
    .. math::
-
       \int_{X \times Y} \lvert h \rvert ~ \mathrm{d} (\mu \times \nu)
       & = \int_X \left( \int_Y \lvert h(x, y) \rvert ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
         = \int_X \left( \int_Y \lvert f(x) g(y) \rvert ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu \\
@@ -35,7 +32,6 @@
    于是 :math:`h(x, y) = f(x) g(y)` 是乘积空间 :math:`X \times Y` 上的可积函数.
 
    .. note::
-
       本题结论即为 Fubini-Tonelli 定理的一种特殊情形.
 
 .. _ex-4-28:
@@ -48,13 +44,11 @@
    假设 :math:`E` 可测, 那么
 
    .. math::
-
       1 = m ([0, 1] \times [0, 1]) \geqslant m (E) = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu),
 
    即 :math:`\chi_E` 是 :math:`E` 上的可积函数, 从而由 Fubini 定理知
 
    .. math::
-
          \int_X \nu(E_x) ~ \mathrm{d} \mu
          & = \int_X \left( \int_Y \chi_{E_x} ~ \mathrm{d} \nu \right) ~ \mathrm{d} \mu
            = \int_{X \times Y} \chi_E ~ \mathrm{d} (\mu \times \nu) \\
@@ -64,7 +58,6 @@
    所以 :math:`\nu(E_x) = 0`, :math:`\mu(E^y) = m(X) = 1`, 从而有
 
    .. math::
-
       \int_X \nu(E_x) ~ \mathrm{d} \mu & = \int_X 0 ~ \mathrm{d} \mu = 0, \\
       \int_Y \mu(E^y) ~ \mathrm{d} \nu & = \int_Y 1 ~ \mathrm{d} \nu = 1,
 
@@ -75,7 +68,6 @@
 29. 设 :math:`\varphi` 为 :math:`\mathbb{R}` 上的一个复值连续映射, 满足
 
     .. math::
-
       \varphi(x + y) = \varphi(x) \varphi(y) ~ \text{且} ~ \lvert \varphi(x) \rvert = 1 \quad (x, y \in \mathbb{R}).
 
     试证: :math:`\varphi(x)` 取 :math:`e^{i \lambda x} ~ (x \in \mathbb{R})` 的形式, :math:`\lambda` 为实参数.
@@ -87,27 +79,23 @@
    又由题设条件 :math:`\varphi(x + y) = \varphi(x) \varphi(y)`, 有
 
    .. math::
-
       e^{i \theta(x + y)} = e^{i \theta(x)} e^{i \theta(y)}.
 
    于是有
 
    .. math::
-
       \theta(x + y) = \theta(x) + \theta(y).
 
    这里不写 :math:`+ 2 \pi k` 是因为 :math:`e^{2 \pi i k} = 1`. 令 :math:`\lambda = \theta(1)`.
    首先有 :math:`\theta(0) = \theta(0 + 0) = \theta(0) + \theta(0)`, 从而 :math:`\theta(0) = 0`. 对于 :math:`n \in \mathbb{N}`, 有
 
    .. math::
-
       \theta(n) = \theta(\underbrace{1 + \cdots + 1}_{n ~ \text{个}}) = n \theta(1) = n \lambda.
 
    对于 :math:`-n`, 有 :math:`\theta(-n) = \theta(0) - \theta(n) = - n \lambda`. 由此可知, 对于任意整数 :math:`n \in \mathbb{Z}`,
    有 :math:`\theta(n) = n \lambda`. 对于有理数 :math:`r = \dfrac{m}{n}`, :math:`m, n \in \mathbb{Z}^*`, 有
 
    .. math::
-
       \theta(r) & = \theta \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{m ~ \text{个}} \bigg) = m \theta \left( \dfrac{1}{n} \right), \\
       \lambda = \theta(1) & = \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{n ~ \text{个}} \bigg) = n \theta \left( \dfrac{1}{n} \right),
 
@@ -115,17 +103,14 @@
    使得 :math:`r_n \to x ~ (n \to \infty)`, 从而由 :math:`\theta` 的连续性 (可由 :math:`\varphi` 的连续性推得) 知
 
    .. math::
-
       \theta(x) = \theta \left( \lim_{n \to \infty} r_n \right) = \lim_{n \to \infty} \theta(r_n) = \lim_{n \to \infty} r_n \lambda = x \lambda.
 
    于是 :math:`\varphi(x) = e^{i \theta(x)} = e^{i \lambda x}`.
 
    .. note::
-
       由 :math:`\varphi` 的连续性推导 :math:`\theta` 的连续性:
 
       .. math::
-
          \lvert \varphi(x + h) - \varphi(x) \rvert
          & = \lvert \varphi(x) \varphi(h) - \varphi(x) \rvert = \lvert \varphi(x) \rvert \lvert \varphi(h) - 1 \rvert \\
          & = \rvert \lvert \varphi(h) - 1 \rvert = \lvert e^{i \theta(h)} - 1 \rvert = \lvert \cos \theta(h) + i \sin \theta(h) - 1 \rvert \\
@@ -136,7 +121,6 @@
       知 :math:`\displaystyle \lim_{h \to 0} \sin \dfrac{\theta(h)}{2} = 0`, 从而有
 
       .. math::
-
          \lim_{h \to 0} (\theta(x + h) - \theta(x)) = \lim_{h \to 0} \theta(h) = 0,
 
       即 :math:`\theta` 是连续的.
@@ -155,7 +139,6 @@
    有如下的互逆的连续一一映射
 
    .. math::
-
       [0, 1] \overset{f}{\underset{g}\rightleftarrows} [0, 2]
 
    (1). 任取 :math:`[0, 1]` 上 Cantor 三分集 :math:`P_0` 的补集 :math:`G_0` 的构成区间 :math:`I = (a, b)`,
@@ -164,13 +147,11 @@
    依据测度的可列可加性, 有
 
    .. math::
-
       m (f(G_0)) = \sum_{n = 1}^\infty m (f(I_n)) = \sum_{n = 1}^\infty m (I_n) = m (G_0) = 1
 
    成立, 从而知
 
    .. math::
-
       m (f (P_0)) = m ([0, 2]) - m (f (G_0)) = 2 - 1 = 1.
 
    于是可以从正测度集 :math:`f (P_0)` 中取出不可测集 :math:`B_0`, 并令 :math:`B = g (B_0) = f^{-1} (B_0) \subset P_0`.
@@ -188,13 +169,11 @@
    任取区间 :math:`[a, b]` 的一个划分
 
    .. math::
-
       \mathscr{P}: ~ a = x_0 < x_1 < \cdots < x_k = b,
 
    由于 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`, 所以对任意 :math:`n \in \mathbb{N}`, 有
 
    .. math::
-
       \sum_{i = 1}^k \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \leqslant K.
 
    又由于 :math:`\forall ~ x \in [a, b]`, 实数列 :math:`\{ f_n(x) \}_{n \in \mathbb{N}}` 收敛于 :math:`f(x)`,
@@ -202,20 +181,17 @@
    于是 :math:`\forall ~ \varepsilon > 0`, 存在正整数 :math:`N(\varepsilon, i)`, 使得当 :math:`n > N(\varepsilon, i)` 时, 有
 
    .. math::
-
       \lvert f_n(x_i) - f(x_i) \rvert < \dfrac{\varepsilon}{2k}, \quad i = 0, 1, \cdots, k.
 
    取 :math:`N(\varepsilon, \mathscr{P}) = \max \{ N(\varepsilon, 0), N(\varepsilon, 1), \cdots, N(\varepsilon, k) \}`,
    那么当 :math:`n > N(\varepsilon, \mathscr{P})` 时, 有
 
    .. math::
-
       \lvert f_n(x_i) - f(x_i) \rvert < \dfrac{\varepsilon}{2k}, \quad i = 0, 1, \cdots, k.
 
    考察 :math:`f` 在这个划分上的变差, 有
 
    .. math::
-
       \sum_{i = 1}^k \lvert f(x_i) - f(x_{i - 1}) \rvert
       & \leqslant \sum_{i = 1}^k \left( \lvert f(x_i) - f_n(x_i) \rvert + \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert + \lvert f_n(x_{i - 1}) - f(x_{i - 1}) \rvert \right) \\
       & \leqslant \sum_{i = 1}^k \dfrac{\varepsilon}{2k} + \sum_{i = 1}^k \left( \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \right) + \sum_{i = 1}^k \dfrac{\varepsilon}{2k} \\
@@ -224,7 +200,6 @@
    其中 :math:`n` 是任意大于 :math:`N(\varepsilon, \mathscr{P})` 的正整数. 由于 :math:`\varepsilon` 的任意性, 所以有
 
    .. math::
-
       \sum_{i = 1}^k \lvert f(x_i) - f(x_{i - 1}) \rvert \leqslant K.
 
    由于上式对任意划分成立, 所以 :math:`f` 是有界变差函数, 且有 :math:`\displaystyle \bigvee_a^b (f) \leqslant K`.
@@ -238,14 +213,12 @@
    由于函数 :math:`f` 在 :math:`[a, b]` 上绝对连续, 所以存在 :math:`[a, b]` 上可积函数 :math:`g` 使得
 
    .. math::
-
       f(x) = f(a) + \int_{[a, x]} g ~ \mathrm{d} m, \quad x \in [a, b],
 
    并且 :math:`f'(x) = g(x)` 几乎处处成立. 由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数, 即 :math:`g(x)` 几乎处处非负,
    所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0`, 从而知
 
    .. math::
-
       f(x_2) - f(x_1) = \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0,
 
    这就证明了 :math:`f` 是增函数.
@@ -372,7 +345,6 @@
    记 :math:`\mathbb{Q} = \{ r_n \}` 为有理数集, 令
 
    .. math::
-
       f(x) = \sum_{r_n < x} 2^{-n}.
 
    由于级数 :math:`\displaystyle \sum_{n = 1}^\infty 2^{-n}` 收敛, 所以 :math:`f(x)` 是良定义的.
@@ -380,7 +352,6 @@
    对任意两个实数 :math:`x_1 < x_2`, 存在有理数 :math:`r_k` 使得 :math:`x_1 < r_k < x_2`, 从而有
 
    .. math::
-
       f(x_2) - f(x_1) = \sum_{r_n < x_2} 2^{-n} - \sum_{r_n < x_1} 2^{-n} = \sum_{x_1 \leqslant r_n < x_2} 2^{-n} \geqslant 2^{-k} > 0.
 
    于是 :math:`f(x)` 是增函数.
@@ -388,13 +359,11 @@
    任取有理数 :math:`a = r_{n(a)} \in \mathbb{Q}`, 对任意实数 :math:`x < a`, 有
 
    .. math::
-
       f(a) - f(x) = \sum_{r_n < a} 2^{-n} - \sum_{r_n < x} 2^{-n} = \sum_{x \leqslant r_n < a} 2^{-n} \geqslant 2^{-n(a)},
 
    于是有
 
    .. math::
-
       \lim_{x \to a^-} \left( f(a) - f(x) \right) \geqslant 2^{-n(a)} > 0.
 
    由此可知 :math:`f(x)` 在 :math:`a` 处不 (左) 连续. 由于有理数集是稠密的, 所以 :math:`f(x)` 的不连续点处处稠密.
@@ -417,7 +386,6 @@
 42. 设 :math:`f(x) = x^{-1/2}`, 对 :math:`0 < x < 1`; :math:`f(x) = 0`, 其余情形. 令
 
     .. math::
-
       g(x) = \sum_{n = 1}^\infty 2^{-n} f(x - r_n),
 
     这里 :math:`\{ r_n \}` 为有理数集. 试证 :math:`g \in L(\mathbb{R})`, :math:`g` 处处不连续且在任一子区间上有无界,
@@ -446,7 +414,6 @@
    将式 :eq:`ex-4-42-2` 代入式 :eq:`ex-4-42-1`, 有
 
    .. math::
-
       \int_{\mathbb{R}} g ~ \mathrm{d} m = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m
       = \sum_{n = 1}^\infty 2^{-n} \cdot 2 = 1 < \infty,
 
@@ -458,13 +425,11 @@
    可以不妨设 :math:`x_m - r_k \in (0, 1)` 对所有 :math:`m \in \mathbb{N}` 成立, 从而有
 
    .. math::
-
       g(x_m) = \sum_{n = 1}^\infty 2^{-n} f(x_m - r_n) \geqslant 2^{-k} f(x_m - r_k) = 2^{-k} (x_m - r_k)^{-1/2}.
 
    由此可知
 
    .. math::
-
       \lim_{m \to \infty} g(x_m) = \lim_{m \to \infty} 2^{-k} (x_m - r_k)^{-1/2} = \infty,
 
    即 :math:`g(x)` 在区间 :math:`(\alpha, \beta)` 上无界. 由此也可见, 若 :math:`g(x) < \infty`, 则 :math:`g` 在点 :math:`x` 处不连续.
@@ -472,7 +437,6 @@
    考虑 :math:`g^2` 在任意非平凡开区间 :math:`(\alpha, \beta)` 上的勒贝格积分, 有
 
    .. math::
-
       \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m & = \int_{(\alpha, \beta)} \left( \sum_{n = 1}^\infty 2^{-n} f(x - r_n) \right)^2 ~ \mathrm{d} m \\
       & \geqslant \int_{(\alpha, \beta)} \sum_{n = 1}^\infty 4^{-n} f^2(x - r_n) ~ \mathrm{d} m \\
       & \geqslant 4^{-k} \int_{(\alpha, \beta)} f^2(x - r_k) ~ \mathrm{d} m \\
@@ -481,7 +445,6 @@
    其中 :math:`\beta_0 = \min\{r_k + 1, \beta\}`. 由于 :math:`(r_k, \beta_0)` 上的非负可测函数 :math:`\displaystyle \dfrac{1}{x - r_k}` 的反常积分发散:
 
    .. math::
-
       \int_{r_k}^{\beta_0} \dfrac{1}{x - r_k} ~ \mathrm{d} x = \ln (x - r_k) \bigg|_{r_k}^{\beta_0} = \infty,
 
    所以 :math:`\displaystyle \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m = \infty`, 即 :math:`g^2` 在区间 :math:`(\alpha, \beta)` 上不可积.

@@ -23,13 +23,11 @@
       所以对任意 :math:`n > N (\varepsilon)` 以及任意的 :math:`x \in E_\delta`, 有
 
       .. math::
-
          \dfrac{1}{1 + \lvert f_n(x) \rvert} = \dfrac{1 + \lvert f_n(x) \rvert - \lvert f_n(x) \rvert}{1 + \lvert f_n(x) \rvert} = 1 - g_n(x) < \varepsilon.
 
       这等价于
 
       .. math::
-
          \lvert f_n(x) \rvert > \dfrac{1}{\varepsilon} - 1,
 
       这意味着 :math:`\{f_n\}` 在 :math:`E_\delta` 上一致收敛于 :math:`\infty`.
@@ -41,7 +39,6 @@
     再取 :math:`[0, 1)` 的一不可测子集 :math:`E`, 并在 :math:`\mathbb{R}` 上定义函数
 
     .. math::
-
       \psi (x) = \begin{cases}
          1, & x \in \varphi (E), \\
          0, & \text{其余情形}.
@@ -57,14 +54,12 @@
    于是有
 
    .. math::
-
       \varphi (x) = \sum_{i=1}^\infty \frac{2x_i}{3^i} < \sum_{i=1}^\infty \frac{2y_i}{3^i} = \varphi (y).
 
    所以 :math:`\varphi` 是严格单调递增的, 为单射, 并且其值域为 Cantor 三分集 :math:`P_0`. 记 :math:`I = [0, 1)`,
    那么对于 :math:`\alpha \in \mathbb{R}` 有
 
    .. math::
-
       I (\varphi > \alpha) = \begin{cases}
          \emptyset, & \alpha \geqslant 1, \\
          (\varphi^{-1} (\alpha), 1), & \alpha \in P_0, \\
@@ -79,7 +74,6 @@
    :math:`\forall ~ \alpha \in \mathbb{R}`, 对于函数 :math:`\psi` 有
 
    .. math::
-
       I (\psi > \alpha) = \begin{cases}
          \emptyset, & \alpha \geqslant 1, \\
          \varphi (E), & \alpha \in [0, 1), \\
@@ -92,7 +86,6 @@
    对于 :math:`\psi \circ \varphi` 来说, 取 :math:`\alpha \in [0, 1)` 有
 
    .. math::
-
       I (\psi \circ \varphi > \alpha) = \left\{ x \in [0, 1) : \psi (\varphi (x)) > \alpha \right\}
       = \left\{ x \in [0, 1) : \varphi (x) \in \varphi (E) \right\} = E,
 
@@ -108,7 +101,6 @@
    由于有
 
    .. math::
-
       E(f > \alpha) = E \cap f^{-1} (\alpha, \infty) = \bigcup_{n=1}^\infty E_n \cap f^{-1} (\alpha, \infty) = \bigcup_{n=1}^\infty E_n (f > \alpha),
 
    所以若每个 :math:`E_n` 上 :math:`f` 可测, 即 :math:`E_n (f > \alpha)` 可测, 那么 :math:`E(f > \alpha)` 可测.
@@ -116,7 +108,6 @@
    另一方面, 若 :math:`E(f > \alpha)` 可测, 那么对于任意的 :math:`n \in \mathbb{N}`, 由于 :math:`E_n \subset E`, 有
 
    .. math::
-
       E_n (f > \alpha) = E_n \cap f^{-1} (\alpha, \infty) = E_n \cap f^{-1} (\alpha, \infty) \cap E = E_n \cap E (f > \alpha),
 
    从而可知 :math:`f` 限制在每个 :math:`E_n` 上均可测.
@@ -132,7 +123,6 @@
    取 :math:`\displaystyle E^* = \bigcup_{k=1}^\infty E_k`, 那么 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E^*` 上处处收敛于 :math:`f`, 且有
 
    .. math::
-
       m (E \setminus E^*) = m \left( \bigcap_{k=1}^\infty (E \setminus E_k) \right) \leqslant m (E \setminus E_k) < \dfrac{1}{k},
 
    对所有的 :math:`k \in \mathbb{N}` 都成立, 从而必有 :math:`m (E \setminus E^*) = 0`, 即 :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处收敛于 :math:`f`.
@@ -150,28 +140,24 @@
    且函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`\widetilde{E}` 上也依测度收敛于 :math:`f`. 我们有
 
    .. math::
-
       \widetilde{E} (f > g) = \bigcup_{k=1}^\infty \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right).
 
    由于 :math:`\left\{ \widetilde{E} \left( f - g > \dfrac{1}{k} \right) \right\}_{k \in \mathbb{N}}` 构成了渐张可测集列,
    因此
 
    .. math::
-
       m \widetilde{E} (f > g) = m \left( \bigcup_{k=1}^\infty \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right) \right)
       = \lim_{k \to \infty} m \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right).
 
    由于 :math:`f - g = (f - f_n) + (f_n - g)`, 所以 :math:`\forall ~ n \in \mathbb{N}` 有
 
    .. math::
-
       \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right) \subset \widetilde{E} \left( f - f_n \geqslant \dfrac{1}{k} \right)
       \subset \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right),
 
    从而有
 
    .. math::
-
       m \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right)
       \leqslant \inf_{n \in \mathbb{N}} m \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right).
 
@@ -179,25 +165,21 @@
    那么对于任意给定的 :math:`k \in \mathbb{N}` 有
 
    .. math::
-
       \lim_{n \to \infty} m \widetilde{E} \left( \lvert f_n - f \rvert > \dfrac{1}{k} \right) = 0,
 
    因此, :math:`m \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right) = 0, \forall ~ k \in \mathbb{N}`, 从而有
 
    .. math::
-
       m \widetilde{E} (f > g) = \lim_{k \to \infty} m \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right) = 0,
 
    以及
 
    .. math::
-
       0 \leqslant m E (f > g) \leqslant m (E_0 \cup \widetilde{E} (f > g)) = m E_0 + m \widetilde{E} (f > g) = 0.
 
    最终我们有 :math:`m E (f > g) = 0`, 即 :math:`f \leqslant g` 几乎处处成立.
 
    .. note::
-
       这题可以用 Riesz 定理简化证明: 由于 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`,
       那么存在子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}` 几乎处处收敛于 :math:`f`, 记此集合为 :math:`E_1`, 有 :math:`m (E \setminus E_1) = 0`.
       又由于几乎处处有 :math:`f_n \leqslant g`, :math:`n \in \mathbb{N}`, 记此集合为 :math:`E_2`, 有 :math:`m (E \setminus E_2) = 0`.
@@ -222,7 +204,6 @@
    综上所述, :math:`\{f_n\}_{n \in \mathbb{N}}` 几乎处处 (在集合 :math:`E^*` 上) 收敛于 :math:`f`.
 
    .. note::
-
       注意, 虽然 Riesz 定理中要求了 :math:`m E < \infty`, 但是在这里, 本题的证明仅使用了 Riesz 定理中, 由依测度收敛推存在几乎处处收敛子列的结论,
       这部分是不需要 :math:`m E < \infty` 的条件的.
 
@@ -236,19 +217,16 @@
    依定义, 由于函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 那么对于任意 :math:`\varepsilon > 0`,
 
    .. math::
-
       \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0.
 
    由于 :math:`f_n \sim g_n`, :math:`n \in \mathbb{N}`, 那么 :math:`E_n := E (f_n \neq g_n)` 是零测集. 令
 
    .. math::
-
       E_0 = E \setminus \bigcup_{n=1}^\infty E_n,
 
    那么有 :math:`m (E \setminus E_0) = 0`, 并且在 :math:`E_0` 上有 :math:`f_n = g_n`, :math:`n \in \mathbb{N}`. 于是有
 
    .. math::
-
       m (E (\lvert g_n - f \rvert > \varepsilon)) & \leqslant m (E_0 (\lvert f_n - f \rvert > \varepsilon)) + m (E \setminus E_0) \\
       & = m (E_0 (\lvert f_n - f \rvert > \varepsilon)) \\
       & \leqslant m (E (\lvert f_n - f \rvert > \varepsilon)).
@@ -256,14 +234,12 @@
    对上式取极限 :math:`n \to \infty`, 有
 
    .. math::
-
       \lim_{n \to \infty} m (E (\lvert g_n - f \rvert > \varepsilon)) \leqslant \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0,
 
    从而有 :math:`\displaystyle \lim_{n \to \infty} m (E (\lvert g_n - f \rvert > \varepsilon)) = 0`,
    即 :math:`\{g_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`.
 
    .. note::
-
       以下是原答案, 适用于 :math:`m E < \infty` 的情形. 这是由于 Riesz 定理中, 由任意子列存在几乎处处收敛子列而推出原序列依测度收敛的结论,
       :math:`m E < \infty` 这一条件是必不可少的.
 
@@ -289,14 +265,12 @@
    由依测度收敛的定义, 对任意 :math:`\varepsilon > 0` 有
 
    .. math::
-
       & \lim_{n \to \infty} m (E (\lvert f_n - f \rvert > \varepsilon)) = 0, \\
       & \lim_{n \to \infty} m (E (\lvert g_n - g \rvert > \varepsilon)) = 0.
 
    由三角不等式
 
    .. math::
-
       \lvert f_n + g_n - f - g \rvert \leqslant \lvert f_n - f \rvert + \lvert g_n - g \rvert
 
    可知 :math:`\displaystyle \lim_{n \to \infty} m (E (\lvert f_n + g_n - f - g \rvert > 2 \varepsilon)) = 0`,
@@ -306,7 +280,6 @@
    由于有恒等式
 
    .. math::
-
       f_n \cdot g_n = \dfrac{1}{4} \left( (f_n + g_n)^2 - f_n^2 - g_n^2 \right),
 
    以及已证明的 :math:`\{f_n^2\}_{n \in \mathbb{N}}`, :math:`\{g_n^2\}_{n \in \mathbb{N}}`, :math:`\{(f_n + g_n)^2\}_{n \in \mathbb{N}}`
@@ -324,14 +297,12 @@
    取 :math:`\delta = \dfrac{1}{2}`, 对于每个 :math:`r_k \in A`, 取
 
    .. math::
-
       I_k & = (a_k, b_k) = \left( r_k - \dfrac{\delta}{2^{k+1}}, r_k + \dfrac{\delta}{2^{k+1}} \right), \\
       d_k & = \dfrac{\lvert I_k \rvert}{2} = \dfrac{\delta}{2^{k+1}}.
 
    对 :math:`r \in A`, 约定 :math:`q(r)` 表示 :math:`r` 的既约分数表示的分母. 对每个 :math:`t \in \mathbb{N}`, 令
 
    .. math::
-
       \varphi_{k, t} (x) = \begin{cases}
          \dfrac{1}{q(r_k)} \cdot \left( 1 - \dfrac{2^{t+1}}{d_k} \lvert x - r_k \rvert \right), & x \in \left[ r_k - \dfrac{d_k}{2^{t+1}}, r_k + \dfrac{d_k}{2^{t+1}} \right], \\
          0, & \text{其余情形}.
@@ -340,7 +311,6 @@
    通过如下的一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
 
    .. math::
-
       s: \mathbb{N} \times \mathbb{N} \to \mathbb{N}, \quad (k, t) \mapsto \dfrac{(k + t - 2)(k + t - 1)}{2} + k,
 
    令 :math:`n = s(k, t)`, 以及 :math:`f_n = \varphi_{k, t}`, 那么 :math:`\{f_n\}_{n \in \mathbb{N}}` 是 :math:`[0, 1]` 上的连续函数列.
@@ -350,21 +320,18 @@
    使得 :math:`\dfrac{1}{q_0} < \varepsilon`, 令
 
    .. math::
-
       k_0 = \min \left\{ k \in \mathbb{N} : q(r_k) \geqslant q_0 \right\},
 
    那么对任意 :math:`k > k_0, t \in \mathbb{N}`, 有 :math:`q(r_k) \geqslant q_0`, 从而 :math:`\varphi_{k, t} (x) < \varepsilon`.
    对于 :math:`k \leqslant k_0`, 令
 
    .. math::
-
       d & = \min \left\{ \lvert x - r_k \rvert : k \leqslant k_0 \right\} > 0, \\
       t_0 & = \min \left\{ t \in \mathbb{N} : \dfrac{d_k}{2^{t+1}} < \dfrac{d}{2}, ~ \forall ~ k \leqslant k_0 \right\},
 
    那么对任意 :math:`t > t_0, k \leqslant k_0`, 有 :math:`\varphi_{k, t} (x) = 0 < \varepsilon`. 因此取
 
    .. math::
-
       N_0 = s(k_0 + 1, t_0 + 1) = \dfrac{(k_0 + t_0 + 1)(k_0 + t_0 + 2)}{2} + k_0 + 1,
 
    必有 :math:`f_n (x) < \varepsilon, \forall ~ n > N_0`. 这就证明了在 :math:`[0, 1]` 区间的所有无理点上,
@@ -388,7 +355,6 @@
    :math:`E` 中使 :math:`\{f_n\}_{n \in \mathbb{N}}` 收敛于 :math:`f` (当 :math:`n \to \infty`) 的点集为
 
    .. math::
-
       A = \{ x \in E : \forall ~ \varepsilon > 0, \exists ~ N (x, \varepsilon) \in \mathbb{N}, \forall ~ n > N (x, \varepsilon), \lvert f_n (x) - f(x) \rvert < \varepsilon \}.
 
    任取 :math:`x \in A`, 那么 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`N (x, \varepsilon) \in \mathbb{N}`,
@@ -398,13 +364,11 @@
    从而知 :math:`\displaystyle x \in \bigcap_{n=N (x, \varepsilon)+1}^\infty E(\lvert f_n - f \rvert \leqslant 1 / r)`, 因此
 
    .. math::
-
       x \in \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r) = \bigcup_{k=1}^\infty \bigcap_{n=k}^\infty E(\lvert f_n - f \rvert \leqslant 1 / r).
 
    由于上式对任意的 :math:`r \in \mathbb{N}` 都成立, 因此
 
    .. math::
-
       x \in \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r).
 
    因此 :math:`\displaystyle A \subset \bigcap_{r=1}^\infty \varliminf\limits_{n} E(\lvert f_n - f \rvert \leqslant 1 / r)`.
@@ -425,7 +389,6 @@
 23. 用 :math:`\chi_E` 表示集 :math:`E` 的特征函数, 试证对于任一集列 :math:`\{E_n\}_{n \in \mathbb{N}}` 有
 
     .. math::
-
       \chi_{\varlimsup\limits_{n} E_n} = \varlimsup\limits_{n} \chi_{E_n}, \quad \chi_{\varliminf\limits_{n} E_n} = \varliminf\limits_{n} \chi_{E_n}.
 
     从而集列 :math:`\{E_n\}_{n \in \mathbb{N}}` 的极限存在等价于函数列 :math:`\{\chi_{E_n}\}_{n \in \mathbb{N}}` 的极限存在 (:math:`n \to \infty`).
@@ -435,7 +398,6 @@
    对于任意的 :math:`x \in E`, 有
 
    .. math::
-
       x \in \varlimsup\limits_{n} E_n & \Longleftrightarrow \forall ~ n \in \mathbb{N}, \exists ~ k \geqslant n, ~\text{有}~ x \in E_k \\
       & \Longleftrightarrow \forall ~ n \in \mathbb{N}, \exists ~ k \geqslant n, ~\text{有}~ \chi_{E_k} (x) = 1 \\
       & \Longleftrightarrow \varlimsup\limits_{n} \chi_{E_n} (x) = 1 ~ (\text{由于还有} ~ \chi_{E_n}(x) \leqslant 1 ~ \text{恒成立}).
@@ -445,7 +407,6 @@
    对于任意的 :math:`x \in E`, 有
 
    .. math::
-
       x \in \varliminf\limits_{n} E_n & \Longleftrightarrow \exists ~ n \in \mathbb{N}, \forall ~ k \geqslant n, ~\text{有}~ x \in E_k \\
       & \Longleftrightarrow \exists ~ n \in \mathbb{N}, \forall ~ k \geqslant n, ~\text{有}~ \chi_{E_k} (x) = 1 \\
       & \Longleftrightarrow \varliminf\limits_{n} \chi_{E_n} (x) = 1.
@@ -461,14 +422,12 @@
    记 :math:`\{f_n\}_{n \in \mathbb{N}}` 的收敛点集为 :math:`A`. 任取 :math:`x \in A`, 由于数列 :math:`\{ f_n(x) \}` 收敛, 那么它是 :math:`\mathbb{R}` 中柯西列, 即有
 
    .. math::
-
       \forall ~ k \in \mathbb{N}, \exists ~ N \in \mathbb{N}, \text{ 使得 } \forall ~ n, m \geqslant N,
       ~ \text{有} ~ \lvert f_n(x) - f_m(x) \rvert \leqslant \dfrac{1}{k},
 
    这表明
 
    .. math::
-
       x \in \bigcap_{k = 1}^{\infty} \left(
          \bigcup_{N=1}^{\infty} \left(
             \bigcap_{n = N}^{\infty} \bigcap_{m = N}^{\infty} E \left( \lvert f_n - f_m \rvert \leqslant \dfrac{1}{k} \right)
@@ -478,7 +437,6 @@
    反之, 从以上集合中任取一个元素 :math:`x,` 它也满足之前提到的 :math:`\{ f_n(x) \}` 是 :math:`\mathbb{R}` 中柯西列的条件, 于是有
 
    .. math::
-
       A = \bigcap_{k = 1}^{\infty} \left(
          \bigcup_{N=1}^{\infty} \left(
             \bigcap_{n = N}^{\infty} \bigcap_{m = N}^{\infty} E \left( \lvert f_n - f_m \rvert \leqslant \dfrac{1}{k} \right)
@@ -505,13 +463,11 @@
    那么 :math:`\displaystyle f(x) := \lim_{n \to \infty} f_n(x)` 是 :math:`E_1` 上处处有限的可测函数, 且 :math:`m E_1 > 0`. 由于
 
    .. math::
-
       E_1 = E_1 (\lvert f \rvert < \infty) = \bigcup_{k=1}^\infty \left( E_1 (\lvert f \rvert < k) \cap \{ x \in E_1 : \lvert x \rvert < k \} \right),
 
    那么存在 :math:`k_0 \in \mathbb{N}`, 使得 :math:`m \left( E_1 (\lvert f \rvert < k_0) \cap \{ x \in E_1 : \lvert x \rvert < k_0 \} \right) > 0`. 令
 
    .. math::
-
       E_2 = E_1 (\lvert f \rvert < k_0) \cap \{ x \in E_1 : \lvert x \rvert < k_0 \},
 
    那么 :math:`0 < m E_2 < \infty` 且 :math:`\lvert f \rvert < k_0` 在 :math:`E_2` 上处处成立. 由 Egorov 定理, 对于 :math:`\delta = \dfrac{m E_2}{2} > 0`,
@@ -520,26 +476,22 @@
    那么对于所有的 :math:`n > N`, 有
 
    .. math::
-
       E_3(\lvert f_n \rvert \leqslant k_0 + 1) = E_3.
 
    另一方面, 令 :math:`E_{30} = E_3`, 有 :math:`m E_{30} > 0`, 且
 
    .. math::
-
       E_{30} = E_{30} (\lvert f_1 \rvert < \infty) = \bigcup_{k=1}^\infty E_{30} (\lvert f_1 \rvert < k),
 
    于是可以选取 :math:`k_1 \in \mathbb{N}`, 使得
 
    .. math::
-
       m E_{31} = m E_{30} (\lvert f_1 \rvert < k_1) > 0.
 
    于是对于 :math:`1 \leqslant n \leqslant N`, 可以归纳地选取 :math:`k_n \in \mathbb{N}` 以及集合 :math:`E_{3n} \subset E_{3(n-1)}` 使得 :math:`m E_{3n} > 0`,
    且 :math:`f_n(x) < k_n` 在 :math:`E_{3n}` 上处处成立. 那么令
 
    .. math::
-
       & c = \max \{ k_1, \cdots, k_N, k_0 + 1 \}, \\
       & E_0 = E_{3N},
 
@@ -559,19 +511,16 @@
    且 :math:`f_n` 在 :math:`E_k` 上一致收敛于 :math:`f`, 且有
 
    .. math::
-
       m \left( [-k, k] \setminus E_k \right) \leqslant m \left( [-k, k] \setminus F_k \right) < \varepsilon / 2^k.
 
    进一步考虑可测集列
 
    .. math::
-
       G_d := [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right), \quad d \in \mathbb{N},
 
    那么 :math:`\{ G_d \}_{d \in \mathbb{N}}` 是渐张可测集列, 且对任意 :math:`d \in \mathbb{N}`, 有
 
    .. math::
-
       G_d & = [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) = [-d, d] \cap \left( \bigcap_{k=1}^\infty \mathscr{C} (E_k) \right) \\
       & = \left( \bigcap_{k=1}^\infty \left( [-d, d] \cap \mathscr{C} (E_k) \right) \right) \\
       & \subset [-k, k] \setminus E_k, \quad \forall ~ k \geqslant d,
@@ -580,7 +529,6 @@
    另一方面, 由于
 
    .. math::
-
       \bigcup_{d=1}^\infty G_d = \bigcup_{d=1}^\infty \left( [-d, d] \cap \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right)
       = \left( \bigcup_{d=1}^\infty [-d, d] \right) \cap \mathscr{C} \left( \bigcup_{k=1}^\infty E_k \right)
       = \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right),
@@ -588,15 +536,12 @@
    因此有
 
    .. math::
-
       m \left( \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = m \left( \bigcup_{d=1}^\infty G_d \right) \leqslant \sum_{d=1}^\infty m G_d = 0.
 
    .. note::
-
       这里要注意的是, 尽管 :math:`\mathscr{C} E_k, k \in \mathbb{N}` 构成了一个渐缩可测集列, 但其中每一个集合的测度都是无穷大的, 因此关于渐缩可测集列的性质
 
       .. math::
-
          m \left( \mathscr{C} \left(\bigcup_{k=1}^\infty E_k \right) \right) = m \left( \bigcap_{k=1}^\infty \mathscr{C} E_k \right)
          = \lim_{k \to \infty} m \left( \mathscr{C} E_k \right)
 
@@ -612,19 +557,16 @@
    令 :math:`E_n = E(f_n \neq f)`, 那么 :math:`m E_n < \dfrac{1}{2^n}`, 考虑该可测集列的上限集
 
    .. math::
-
       E^* = \varlimsup_{n} E_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \{ x \in E ~ : ~ x \in E_k, ~ \text{对无穷多个} ~ k \}.
 
    由于有渐缩可测集列
 
    .. math::
-
       \bigcup_{k=1}^\infty E_k \supset \bigcup_{k=2}^\infty E_k \supset \cdots,
 
    那么有
 
    .. math::
-
       m E^* & = m \left( \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k \right) = \lim_{n \to \infty} m \left( \bigcup_{k=n}^\infty E_k \right) \\
       & \leqslant \lim_{n \to \infty} \sum_{k=n}^\infty m E_k = \lim_{n \to \infty} \sum_{k=n}^\infty \dfrac{1}{2^k} = \lim_{n \to \infty} \dfrac{1}{2^{n-1}} \\
       & = 0,
@@ -632,14 +574,12 @@
    从而 :math:`m E^* = 0`. 任取 :math:`x \in E \setminus E^*`, 由于
 
    .. math::
-
       E \setminus E^* & = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty \left( E \setminus E_k \right) = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E(f_k = f) \\
       & = \{ x \in E ~ : ~ \exists ~ n \in \mathbb{N}, ~ \forall ~ k \geqslant n, ~ f_k(x) = f(x) \},
 
    那么有 :math:`f_n(x) \to f(x) ~ (n \to \infty)`, 即有 :math:`f_n \xrightarrow{a.e.} f ~ (n \to \infty)`.
 
    .. note::
-
       这题是所谓的 Borel-Cantelli 引理的一个应用. Borel-Cantelli 引理说的是, 如果 :math:`\displaystyle \sum_{n=1}^\infty m E_n < \infty`,
       那么 :math:`\displaystyle m \left( \varlimsup\limits_{n} E_n \right) = 0`.
 
@@ -649,13 +589,11 @@
 29. 对 :math:`n \in \mathbb{N}`, 令
 
     .. math::
-
       \alpha_n = 1 + \dfrac{1}{2} + \cdots + \dfrac{1}{n} - \left[ 1 + \dfrac{1}{2} + \cdots + \dfrac{1}{n} \right],
 
     其中 :math:`[\alpha]` 表示数 :math:`\alpha` 的整部. 定义区间列
 
     .. math::
-
       I_n = \begin{cases}
          \left[ \alpha_n, \alpha_{n+1} \right), & \text{ 若 } \alpha_n \leqslant \alpha_{n+1}, \\
          \\ % add some vertical space
@@ -671,7 +609,6 @@
    我们有
 
    .. math::
-
       \alpha_{n+1} = \begin{cases}
          \alpha_n + \dfrac{1}{n + 1}, & \text{ 若 } \alpha_n < 1 - \dfrac{1}{n+1}, \\
          \alpha_n + \dfrac{1}{n + 1} - 1 = \alpha_n - \dfrac{n}{n + 1}, & \text{ 若 } \alpha_n \geqslant 1 - \dfrac{1}{n+1}.
@@ -688,7 +625,6 @@
    由于 :math:`r_n \to + \infty (n \to \infty)`, 得到的序列也是一个无穷序列 :math:`\{n_k\}_{k \in \mathbb{N}}`. 在这种情况下, 有
 
    .. math::
-
       I_{n_k} = [\alpha_{n_k}, 1) \cup [0, \alpha_{n_k + 1}).
 
    由于 :math:`1 > a_{n_k} \geqslant 1 - \dfrac{1}{n_k+1}, 0 < \alpha_{n_k + 1} < \dfrac{1}{n_k + 1}`, 因此 :math:`\forall ~ x \in (0, 1)`,
@@ -701,13 +637,11 @@
    令 :math:`n_k = m_k - 1, k \in \mathbb{N}`, 即上一种取法的每一项在原序列中的前一项, 那么有
 
    .. math::
-
       1 - \dfrac{1}{n_k + 1 + 1} \leqslant a_{n_k + 1} = a_{n_k} + \dfrac{1}{n_k + 1},
 
    即
 
    .. math::
-
       1 - \dfrac{1}{n_k + 2} - \dfrac{1}{n_k + 1} \leqslant a_{n_k}, \quad 1 - \dfrac{1}{n_k + 2} \leqslant a_{n_k + 1} < 1,
 
    而且 :math:`I_{n_k} = [\alpha_{n_k}, \alpha_{n_k + 1})`. 可以看到, 当 :math:`k \to \infty` 时, :math:`a_{n_k} \to 1, a_{n_k + 1} \to 1`,
@@ -715,7 +649,6 @@
    即 :math:`x \not \in I_{n_k}`. 因此 :math:`\{f_{n_k}\}` 在 :math:`[0, 1)` 上处处收敛于 :math:`0`.
 
    .. note::
-
       我们这里取的区间 :math:`I_{n_k}` 是随着 :math:`k` 的增大, 逐渐向 :math:`1` 靠近, 而且区间长度逐渐趋于 :math:`0`.
 
 .. _ex-3-30:
@@ -728,7 +661,6 @@
    取
 
    .. math::
-
       f(x) = \begin{cases} -1, & 0 \leqslant x < 1/2, \\ 1, & 1/2 \leqslant x \leqslant 1. \end{cases}.
 
    假设存在连续函数 :math:`g` 使得 :math:`m E( f \neq g ) = 0`, 则 :math:`m E(g = -1) = m E(f = -1) = 1/2`,
@@ -738,7 +670,6 @@
    即 :math:`m E (-1 < g < 1) > 0`. 这会导致
 
    .. math::
-
       1 = m E \geqslant m E(g = -1) + m E(g = 1) + m E (-1 < g < 1) > 1,
 
    矛盾. 因此不存在这样的连续函数 :math:`g`, 也就是说 :math:`m E( f \neq g ) \neq 0` 对任何连续函数 :math:`g` 都成立.
@@ -747,7 +678,6 @@
    在我们的例子中, :math:`\forall ~ \varepsilon > 0`, 可以取区间 :math:`(1/2 - \varepsilon/2, 1/2 + \varepsilon/2)`, 并令
 
    .. math::
-
       g(x) = \begin{cases}
          -1, & 0 \leqslant x < 1/2 - \varepsilon/2, \\
          1, & 1/2 + \varepsilon/2 < x \leqslant 1, \\

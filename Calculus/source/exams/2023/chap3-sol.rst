@@ -2,7 +2,6 @@
 =========================
 
 .. note::
-
     此次随堂测验未进行.
 
 1. 求不定积分 :math:`\displaystyle \int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x`.
@@ -10,7 +9,6 @@
 .. proof:solution::
 
     .. math::
-
         \int \dfrac{\arctan x}{x^2 + 1} \mathrm{d} x & = \int \arctan x \mathrm{d} (\arctan x) \\
         & = \dfrac{1}{2} \arctan^2 x + C.
 
@@ -21,13 +19,11 @@
     在区间 :math:`[0, 1]` 上有不等式
 
     .. math::
-
         0 \leqslant \dfrac{x^n}{1 + \sqrt{x}} \leqslant x^n.
 
     所以
 
     .. math::
-
         0 \leqslant \lim\limits_{n \to \infty} \int_0^1 \dfrac{x^n}{1 + \sqrt{x}} \mathrm{d} x
         & \leqslant \lim\limits_{n \to \infty} \int_0^1 x^n \mathrm{d} x \\
         & = \lim\limits_{n \to \infty} \dfrac{1}{n + 1} \\
@@ -42,7 +38,6 @@
     由导数的定义有
 
     .. math::
-
         f'(x) & = \lim\limits_{h \to 0} \dfrac{f(x + h) - f(x)}{h} \\
         & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{(x + h)^3} e^{t^2} \mathrm{d} t - \lim\limits_{h \to 0} \dfrac{1}{h} \int_1^{x^3} e^{t^2} \mathrm{d} t \\
         & = \lim\limits_{h \to 0} \int_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
@@ -50,18 +45,15 @@
     那么由积分中值定理有
 
     .. math::
-
         f'(x) & = \lim\limits_{h \to 0} \int_{x^3}^{(x + h)^3} e^{t^2} \mathrm{d} t \\
         & = \lim\limits_{h \to 0} e^{\xi^2} \int_{x^3}^{(x + h)^3} \mathrm{d} t \\
         & = \lim\limits_{h \to 0} e^{\xi^2} \cdot 3h(x + h)^2 \\
         & = 3x^2 e^{x^6}.
 
     .. note::
-
         一般地, 如果 :math:`\displaystyle f(x) = \int_{\varphi(x)}^{\psi(x)} g(t) \mathrm{d} t`, 那么
 
         .. math::
-
             f'(x) = g(\psi(x)) \psi'(x) - g(\varphi(x)) \varphi'(x).
 
         可以直接使用这个公式求解上面的题目.
@@ -74,7 +66,6 @@
     那么所求面积为
 
     .. math::
-
         S & = \int_0^1 (\sqrt{x} - x^2) \mathrm{d} x \\
         & = \left.\left( \dfrac{2}{3} x^{\frac{3}{2}} - \dfrac{1}{3} x^3 \right) \right|_0^1 \\
         & = \dfrac{2}{3} - \dfrac{1}{3} = \dfrac{1}{3}.
@@ -88,13 +79,11 @@
     由于
 
     .. math::
-
         0 \leqslant \dfrac{1}{(1 + x^2)(1 + x^a)} \leqslant \dfrac{1}{1 + x^2},
 
     而 :math:`\displaystyle \int_0^{+\infty} \dfrac{\mathrm{d} x}{1 + x^2} = \dfrac{\pi}{2}` 收敛, 由比较判别法知原积分收敛. 那么有
 
     .. math::
-
         \int_0^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)}
         & = \int_0^1 \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\
         & = \int_{+\infty}^1 \dfrac{\mathrm{d} \frac{1}{x}}{(1 + \frac{1}{x^2})(1 + \frac{1}{x^a})} + \int_1^{+\infty} \dfrac{\mathrm{d} x}{(1 + x^2)(1 + x^a)} \\

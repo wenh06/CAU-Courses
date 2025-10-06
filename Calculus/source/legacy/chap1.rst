@@ -19,13 +19,11 @@
    进而知 :math:`y = -1 + \dfrac{1}{1-x}` 单调递增.
 
    .. note::
-
       也可以直接求导数 :math:`y' = \dfrac{1}{(1-x)^2}`, 由于 :math:`(1-x)^2 > 0`, 所以 :math:`y' > 0`, 从而知 :math:`y` 单调递增.
 
    (2). 由于 :math:`y = e^u` 单调递增, 而 :math:`u = \dfrac{1}{x}` 在 :math:`x \in (0, +\infty)` 上单调递减, 所以 :math:`y = e^{\frac{1}{x}}` 单调递减.
 
    .. note::
-
       也可以直接求导数 :math:`y' = -\dfrac{1}{x^2} e^{\frac{1}{x}}`, 由于 :math:`x > 0`, 所以 :math:`y' < 0`, 从而知 :math:`y` 单调递减.
 
 2. 确定函数奇偶性
@@ -39,7 +37,6 @@
    (1). :math:`f(x)` 的定义域为 :math:`(-\infty, +\infty)`, 关于原点对称. 由于
 
    .. math::
-
       f(-x) & = \ln (-x + \sqrt{1 + (-x)^2}) = \ln (-x + \sqrt{1 + x^2}) = \ln \dfrac{1}{x + \sqrt{1 + x^2}} \\
       & = - \ln (x + \sqrt{1 + x^2}) = - f(x),
 
@@ -48,7 +45,6 @@
    (2). :math:`f(x)` 的定义域为 :math:`(-\infty, +\infty)`, 关于原点对称. 由于
 
    .. math::
-
       f(-x) = \dfrac{a^{-x} + a^x}{2} = \dfrac{a^x + a^{-x}}{2} = f(x),
 
    所以 :math:`f(x)` 是偶函数.
@@ -66,7 +62,6 @@
    将其代入 :math:`f(x + T) = f(x)` 有
 
    .. math::
-
       (x + k \pi) \sin (x + k \pi) = (x + k \pi) (\pm \sin x) = f(x + T) = f(x) = x \sin x
 
    在 :math:`x \neq k \pi` 处, 能从上式得到 :math:`x = \pm (x + k \pi)`, 进而有 :math:`k \pi = 0` 或者 :math:`x = -\dfrac{k \pi}{2}`, 这都是当 :math:`x \neq k \pi` 时不可能成立,
@@ -84,7 +79,6 @@
    现任取 :math:`-\ell < x_1 < x_2 < 0`, 那么有 :math:`0 < -x_2 < -x_1 < \ell`, 由于 :math:`f(x)` 是奇函数, 所以有
 
    .. math::
-
       f(x_2) = -f(-x_2) \leqslant -f(-x_1) = f(x_1),
 
    由于 :math:`x_1, x_2` 的任意性, 所以 :math:`f(x)` 在 :math:`(-\ell, 0)` 内单调增加.
@@ -100,13 +94,11 @@
    (1). 设 :math:`f(x), g(x)` 是偶函数, 那么 :math:`f(-x) = f(x), g(-x) = g(x)`, 记 :math:`h(x) = f(x) + g(x)`, 那么
 
    .. math::
-
       h(-x) = f(-x) + g(-x) = f(x) + g(x) = h(x),
 
    所以 :math:`h(x)` 是偶函数. 若 :math:`f(x), g(x)` 是奇函数, 那么 :math:`f(-x) = -f(x), g(-x) = -g(x)`, 那么
 
    .. math::
-
       h(-x) = f(-x) + g(-x) = -f(x) - g(x) = -(f(x) + g(x)) = -h(x),
 
    所以 :math:`h(x)` 是奇函数.
@@ -114,19 +106,16 @@
    (2). 设 :math:`f(x), g(x)` 是偶函数, 那么 :math:`f(-x) = f(x), g(-x) = g(x)`, 记 :math:`h(x) = f(x) \cdot g(x)`, 那么
 
    .. math::
-
       h(-x) = f(-x) \cdot g(-x) = f(x) \cdot g(x) = h(x),
 
    所以 :math:`h(x)` 是偶函数. 若 :math:`f(x), g(x)` 是奇函数, 那么 :math:`f(-x) = -f(x), g(-x) = -g(x)`, 那么
 
    .. math::
-
       h(-x) = f(-x) \cdot g(-x) = -f(x) \cdot (-g(x)) = f(x) \cdot g(x) = h(x),
 
    所以 :math:`h(x)` 是偶函数. 若 :math:`f(x)` 是偶函数, :math:`g(x)` 是奇函数, 那么 :math:`f(-x) = f(x), g(-x) = -g(x)`, 那么
 
    .. math::
-
       h(-x) = f(-x) \cdot g(-x) = f(x) \cdot (-g(x)) = -(f(x) \cdot g(x)) = -h(x),
 
    所以 :math:`h(x)` 是奇函数.
@@ -143,7 +132,6 @@
    :math:`\max \{ \lvert m \rvert, \lvert M \rvert \}`.
 
    .. note::
-
       这题要注意的就是函数“有界”, “有上界”和“有下界”的确切定义, 以及他们之间的细微差别.
 
 §1.2 函数的极限
@@ -158,7 +146,6 @@
    :math:`\lvert u_n - a \rvert < \varepsilon`. 那么对于 :math:`\forall n > N` 有
 
    .. math::
-
       \lvert \lvert u_n \rvert - \lvert a \rvert \rvert \leqslant \lvert u_n - a \rvert < \varepsilon
 
    所以 :math:`\lim\limits_{n \to \infty} \lvert u_n \rvert = \lvert a \rvert`.
@@ -176,7 +163,6 @@
    (1). 对任意给定的 :math:`\varepsilon > 0`, 取 :math:`\delta = \dfrac{\varepsilon}{2}`, 那么对于 :math:`\forall x \in \mathbb{R}`, 有
 
    .. math::
-
       \lvert x - 2 \rvert < \delta \Rightarrow \lvert (2x + 5) - 9 \rvert = \lvert 2(x - 2) \rvert = 2 \lvert x - 2 \rvert < 2 \delta = \varepsilon
 
    所以 :math:`\lim\limits_{x \to 2} (2x + 5) = 9`.
@@ -184,7 +170,6 @@
    (2). 对任意给定的 :math:`\varepsilon > 0`, 取 :math:`X = \dfrac{1}{\sqrt[3]{\varepsilon}}`, 那么对于 :math:`\forall x > X`, 有
 
    .. math::
-
       \left\lvert \dfrac{1 + x^3}{2x^3} - \dfrac{1}{2} \right\rvert = \dfrac{1}{2} \left\lvert \dfrac{1}{1 + x^3} \right\rvert
       < \dfrac{1}{2} \cdot \dfrac{1}{x^3} < \dfrac{1}{2} \cdot \dfrac{1}{X^3} = \varepsilon
 
@@ -197,7 +182,6 @@
    对任意给定的 :math:`\varepsilon > 0`, 取 :math:`\delta = \varepsilon`, 那么对于 :math:`\forall x \in \mathbb{R}`, 有
 
    .. math::
-
       \lvert x - 0 \rvert < \delta \Rightarrow \lvert \lvert x \rvert - 0 \rvert = \lvert x \rvert < \delta = \varepsilon
 
    所以 :math:`\lim\limits_{x \to 0} \lvert x \rvert = 0`.
@@ -235,7 +219,6 @@
 1. 求下列极限:
 
    .. math::
-
       \lim\limits_{n \to \infty} \left( \dfrac{1}{\sqrt{n^2 + 1}} + \dfrac{1}{\sqrt{n^2 + 2}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}} \right)
 
 .. proof:solution::
@@ -243,7 +226,6 @@
    有如下不等式恒成立:
 
    .. math::
-
       \begin{multline*}
       \dfrac{1}{\sqrt{n^2 + n}} + \dfrac{1}{\sqrt{n^2 + n}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}}
       < \dfrac{1}{\sqrt{n^2 + 1}} + \dfrac{1}{\sqrt{n^2 + 2}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}} \\
@@ -253,7 +235,6 @@
    又有
 
    .. math::
-
       & \lim\limits_{n \to \infty} \dfrac{1}{\sqrt{n^2 + n}} + \dfrac{1}{\sqrt{n^2 + n}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}}
       = \lim\limits_{n \to \infty} \dfrac{n}{\sqrt{n^2 + n}} = 1, \\
       & \lim\limits_{n \to \infty} \dfrac{1}{\sqrt{n^2 + 1}} + \dfrac{1}{\sqrt{n^2 + 1}} + \cdots + \dfrac{1}{\sqrt{n^2 + 1}}
@@ -262,7 +243,6 @@
    由夹逼准则知
 
    .. math::
-
       \lim\limits_{n \to \infty} \left( \dfrac{1}{\sqrt{n^2 + 1}} + \dfrac{1}{\sqrt{n^2 + 2}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}} \right) = 1.
 
 2. 利用两个重要极限计算下列极限:
@@ -276,7 +256,6 @@
    (1).
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{\tan x - \sin x}{\sin^3 x}
       & = \lim\limits_{x \to 0} \dfrac{\sin x - \cos x \sin x}{\cos x \sin^3 x} = \lim\limits_{x \to 0} \dfrac{1 - \cos x}{\cos x \sin^2 x}
         = \lim\limits_{x \to 0} \dfrac{2 \sin^2 \dfrac{x}{2}}{\cos x \left(2 \sin \dfrac{x}{2} \cos \dfrac{x}{2}\right)^2} \\
@@ -285,7 +264,6 @@
    (2). 令 :math:`t = 1 - x`, 那么有
 
    .. math::
-
       \lim\limits_{x \to 1} (1 - x) \tan \dfrac{\pi x}{2}
       & = \lim\limits_{t \to 0} t \tan \dfrac{\pi (1 - t)}{2} = \lim\limits_{t \to 0} t \cot \dfrac{\pi t}{2}
         = \lim\limits_{t \to 0} \dfrac{t}{\tan \dfrac{\pi t}{2}} \\
@@ -295,18 +273,15 @@
    (3).
 
    .. math::
-
       \lim\limits_{n \to \infty} 2^n \sin \dfrac{\pi}{2^n} = \pi \lim\limits_{n \to \infty} \dfrac{\sin \dfrac{\pi}{2^n}}{\dfrac{\pi}{2^n}} = \pi
 
    .. note::
-
       这里用到了如下的结论, 即若 :math:`\lim\limits_{x \to x_0} f(x) = A`, 同时又有数列 :math:`\{x_n\}` 满足 :math:`\lim\limits_{n \to \infty} x_n = x_0`,
       那么 :math:`\lim\limits_{n \to \infty} f(x_n) = A`. 应用到这题, 就是 :math:`f(x) = \sin x, x_0 = 0, x_n = \dfrac{\pi}{2^n}`.
 
    (4).
 
    .. math::
-
       \lim\limits_{x \to \infty} \left( 1 - \dfrac{2}{x} \right)^{3x}
       & = \lim\limits_{x \to \infty} \left( 1 + \dfrac{-2}{x} \right)^{3x}
         = \lim\limits_{x \to \infty} \left( 1 + \dfrac{-2}{x} \right)^{\dfrac{x}{-2} \cdot (-6)} \\
@@ -332,7 +307,6 @@
    (2).
 
    .. math::
-
       \lim\limits_{x \to 0} \dfrac{\tan x - \sin x}{x \sin^2 x}
       & = \lim\limits_{x \to 0} \dfrac{\sin x - \cos x \sin x}{x \cos x \sin^2 x} = \lim\limits_{x \to 0} \dfrac{1 - \cos x}{x \cos x \sin x} \\
       & = \dfrac{1}{2} \lim\limits_{x \to 0} \dfrac{2 \sin^2 \dfrac{x}{2}}{\dfrac{x}{2} \cos x \left(2 \sin \dfrac{x}{2} \cos \dfrac{x}{2}\right)}
@@ -342,7 +316,6 @@
    (3). 令 :math:`t = \dfrac{1}{x}`, 那么有
 
    .. math::
-
       \lim\limits_{x \to \infty} \dfrac{3x^2 + 8}{5x + 1} \sin \dfrac{1}{x}
       & = \lim\limits_{t \to 0} \dfrac{3 + 8t^2}{5t + t^2} \sin t = \lim\limits_{t \to 0} \dfrac{3 + 8t^2}{5t + t^2} \cdot t
         = \lim\limits_{t \to 0} \dfrac{3 + 8t^2}{5 + t} \\
@@ -351,7 +324,6 @@
    (4). 令 :math:`t = \dfrac{1}{x}`, 那么有
 
    .. math::
-
       \lim\limits_{x \to \infty} x \sin \dfrac{2x}{x^2 + 1}
       & = \lim\limits_{t \to 0} \dfrac{\sin \dfrac{2t}{t^2 + 1}}{t} = \lim\limits_{t \to 0} \dfrac{\dfrac{2t}{t^2 + 1}}{t}
         = \lim\limits_{t \to 0} \dfrac{2}{t^2 + 1} = 2
@@ -369,7 +341,6 @@
    那么必须有左右极限相等且等于该点处的函数值, 即
 
    .. math::
-
       1 = b = a
 
 2. 求 :math:`f(x) = \dfrac{x}{\tan x}` 的间断点, 并指出间断点的类型.
@@ -393,13 +364,11 @@
    在 :math:`x = 2` 附近, 有
 
    .. math::
-
       \lim\limits_{x \to 2} f(x) = \lim\limits_{x \to 2} \dfrac{x + 1}{x^2 - x - 2} = \infty
 
    所以 :math:`f(x)` 在 :math:`x = 2` 处间断点为第二类无穷间断点. 在 :math:`x = -1` 附近, 有
 
    .. math::
-
       \lim\limits_{x \to -1} f(x) = \lim\limits_{x \to -1} \dfrac{x + 1}{x^2 - x - 2}
       = \lim\limits_{x \to -1} \dfrac{x + 1}{(x - 2)(x + 1)} = \lim\limits_{x \to -1} \dfrac{1}{x - 2} = -\dfrac{1}{3},
 
@@ -415,7 +384,6 @@
    考虑函数 :math:`f(x) = x - a \sin x - b`, 那么
 
    .. math::
-
       f(0) & = -b < 0, \\
       f(a + b) & = a + b - a \sin (a + b) - b = a \bigl(1 - \sin (a + b)\bigr) \geqslant 0.
 
@@ -429,7 +397,6 @@
    考虑函数 :math:`f(x) = x - 2 \sin x`, 那么
 
    .. math::
-
       f\left( \dfrac{\pi}{2} \right) & = \dfrac{\pi}{2} - 2 < 0, \\
       f(\pi) & = \pi - 2 \sin \pi = \pi > 0.
 
@@ -437,6 +404,5 @@
    即方程 :math:`x - 2 \sin x = 0` 在 :math:`\left( \dfrac{\pi}{2}, \pi \right)` 内至少有一个根.
 
    .. note::
-
       由于 :math:`\sin x` 在 :math:`\left[ \dfrac{\pi}{2}, \pi \right]` 上是单调递减的, 所以 :math:`f(x) = x - 2 \sin x` 在 :math:`\left[ \dfrac{\pi}{2}, \pi \right]`
       上是单调递增的, 那么 :math:`f(x)` 在 :math:`\left( \dfrac{\pi}{2}, \pi \right)` 内的零点就是唯一的.

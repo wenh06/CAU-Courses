@@ -11,7 +11,6 @@
    只要证明 :math:`E` 的外测度为零即可. 根据外测度的性质, 有
 
    .. math::
-
       m^* E \leqslant \sum_{n=1}^\infty m^* E_n = 0
 
    所以 :math:`m^* E = 0`, 即 :math:`E` 是零测度集.
@@ -34,7 +33,6 @@
    取开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})`, 则 :math:`G = \bigcup\limits_{n=1}^\infty G_n` 是开集, 且有
 
    .. math::
-
       m G \leqslant \sum_{n=1}^\infty m G_n = \sum_{n=1}^\infty \frac{\varepsilon}{2^n} = \varepsilon
 
    但是 :math:`\overline{G} = [0, 1]`, 所以 :math:`m \overline{G} = 1`. 此时必有 :math:`m \overline{G} \neq m G`.
@@ -50,7 +48,6 @@
    假设我们定义有界集 :math:`E` 的外测度为包含 :math:`E` 的闭集的测度的下确界, 即
 
    .. math::
-
       m^* E = \inf \{ m F ~ : ~ F \supset E, F \text{ 为闭集} \},
 
    因为闭集的闭包仍然是闭集, 以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例, 对于任何一个包含 :math:`G` 的闭集 :math:`F` 来说,
@@ -61,13 +58,11 @@
    这样一来, 外测度的半可加性
 
    .. math::
-
       m^* G \leqslant \sum_{n=1}^\infty m^* G_n
 
    就不成立了.
 
    .. note::
-
       事实上, 对于 :ref:`上题 <ex-2-4>` 中的 :math:`G`, 由于 :math:`\overline{G}` 是包含 :math:`G` 的闭集, 所以又有 :math:`m^* G \leqslant m \overline{G} = m [0, 1] = 1`,
       结合本题假设下我们已经得到的 :math:`1 \leqslant m^* G` 的结论, 可以得到 :math:`m^* G = 1`, 我们具体求得了集合 :math:`G` 的外测度 (虽然不是良定义的).
 
@@ -76,7 +71,6 @@
 6. 设 :math:`A_1, A_2, \cdots, A_n` 是 :math:`n` 个互不相交的可测集, 且 :math:`E_k \subset A_k, k = 1, 2, \cdots, n`. 试证
 
 .. math::
-
    m^* \left( \bigcup_{k=1}^n E_k \right) = \sum_{k=1}^n m^* E_k
 
 .. proof:proof::
@@ -84,13 +78,11 @@
    记 :math:`E = \bigcup\limits_{k=1}^n E_k`. 由于 :math:`E_k \subset A_k, k = 1, 2, \cdots, n`, 且 :math:`A_k` 互不相交, 所以
 
    .. math::
-
       E \cap A_k = E_k, \quad E \cap \mathscr{C} A_k = \bigcup\limits_{j \neq k} E_j, \quad k = 1, 2, \cdots, n
 
    由于 :math:`A_1, A_2, \cdots, A_n` 是可测集, 根据可测集的 Carahtéodory 条件, 有
 
    .. math::
-
       m^* E & = m^* (E \cap A_1) + m^* (E \cap \mathscr{C} A_1) \\
       & = m^* E_1 + m^* \left( \bigcup\limits_{k=2}^n E_k \right) \\
       & = m^* E_1 + m^* E_2 + m^* \left( \bigcup\limits_{k=3}^n E_k \right) \\

@@ -13,19 +13,16 @@
    则 :math:`A` 为一个 :math:`G_{\delta}`-集, 且 :math:`E \subset A`. 由 (外) 测度的单调性, 有
 
    .. math::
-
       m^* E \leqslant m^* A \leqslant m A \leqslant m G_n \leqslant m^* E + \frac{1}{n}.
 
    令 :math:`n \to \infty`, 则有 :math:`m^* E = m^* A = m A`.
 
    .. note::
-
       勒贝格外测度的正则性有一系列重要的推论, 这里列举几个:
 
       (1). 设 :math:`\{E_n\}_{n=1}^{\infty}` 为 :math:`\mathbb{R}^d` 中的一列点集, 那么
 
       .. math::
-
          \DeclareMathOperator*\lowlim{\underline{lim}}
          \DeclareMathOperator*\uplim{\overline{lim}}
 
@@ -34,7 +31,6 @@
       (2). 设 :math:`\{E_n\}_{n=1}^{\infty}` 为 :math:`\mathbb{R}^d` 中的渐张集列, 那么
 
       .. math::
-
             \lim_{n \to \infty} m^* E_n = m^* \left( \lim_{n \to \infty} E_n \right).
 
 .. _sigma_ring:
@@ -42,7 +38,6 @@
 2. 设 :math:`\mathscr{E}` 为基本集 :math:`X` 的子集族, 那么它生成的环 :math:`\mathscr{R}(\mathscr{E})` 包含于
 
    .. math::
-
       \mathscr{R} :=
       \left\{ E \subset X ~ : ~ E \subset \bigcup\limits_{k=1}^{n} E_k, ~ n \in \mathbb{N}, E_1, \dots, E_n \in \mathscr{E} \right\}.
 
@@ -50,7 +45,6 @@
    :math:`F \subset \bigcup\limits_{j=1}^{m} F_j \in \mathscr{R}`, 有
 
    .. math::
-
       E \setminus F \subset E \subset \bigcup\limits_{k=1}^{n} E_k,
 
    从而知 :math:`E \setminus F \in \mathscr{R}`.

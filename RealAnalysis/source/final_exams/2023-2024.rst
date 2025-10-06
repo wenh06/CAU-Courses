@@ -18,7 +18,6 @@
     可以直接通过集合的运算律证明:
 
     .. math::
-
         (A \triangle B) \cap C & = ((A \setminus B) \cup (B \setminus A)) \cap C = ((A \setminus B) \cap C) \cup ((B \setminus A) \cap C) \\
         & = ((A \cap C) \setminus (B \cap C)) \cup ((B \cap C) \setminus (A \cap C)) = (A \cap C) \triangle (B \cap C).
 
@@ -31,7 +30,6 @@
     设 :math:`E_1, E_2, \cdots` 是可列多个零测集, 令 :math:`E = \bigcup\limits_{n=1}^{\infty} E_n`, 对任意 :math:`\varepsilon > 0`, 由 :math:`E_n` 是零测集, 存在开集 :math:`G_n \supset E_n`, 使得 :math:`m G_n < \dfrac{\varepsilon}{2^n}`. 于是由外测度的单调性以及次可加性, 有
 
     .. math::
-
         m^* E = m^* \left( \bigcup\limits_{n=1}^{\infty} E_n \right) \leqslant m^* \left( \bigcup\limits_{n=1}^{\infty} G_n \right) \leqslant \sum\limits_{n=1}^{\infty} m^* G_n = \sum\limits_{n=1}^{\infty} m G_n < \varepsilon.
 
     由 :math:`\varepsilon` 的任意性, 知 :math:`E` 是零测集.
@@ -39,13 +37,11 @@
     或者直接由外测度的次可加性得到结论:
 
     .. math::
-
         m^* E \leqslant \sum\limits_{n=1}^{\infty} m^* E_n = 0.
 
     或者先由每个 :math:`E_n` 是零测集 (是可测集) 得到 :math:`E` 是可测集, 然后由测度的次可加性得到结论:
 
     .. math::
-
         m E \leqslant \sum\limits_{n=1}^{\infty} m E_n = 0.
 
 二、简答题（第1题15分, 第2题10分, 共25分）
@@ -59,7 +55,6 @@
         设 :math:`E \subset \mathbb{R}`, 则 :math:`E` 可测的充分必要条件是: 对任意 :math:`A \subset \mathbb{R}`, 有
 
         .. math::
-
             m^* A = m^*(A \cap E) + m^*(A \cap \mathscr{C} E).
 
     证明如下: （充分性, 必要性各4分）
@@ -67,7 +62,6 @@
         充分性: 取 :math:`A = (a, b)`, 那么由卡拉泰奥多里条件有
 
         .. math::
-
             b - a = m^* E + m^* \mathscr{C} E.
 
         另一方面, 对一般的有界集 :math:`E`, 有 :math:`m_* E + m^* \mathscr{C} E = b - a`, 于是 :math:`m^* E = m_* E`, 即 :math:`E` 可测.
@@ -82,19 +76,16 @@
         另一方面, 由外测度定义, 对任意 :math:`\varepsilon > 0`, 存在开集 :math:`G \supset A`, 使得 :math:`m^* G < m^* A + \varepsilon`. 此时有
 
         .. math::
-
             G \cap E \supset A \cap E, ~ G \cap \mathscr{C} E \supset A \cap \mathscr{C} E,
 
         于是由外测度的单调性, 有
 
         .. math::
-
             m^* (A \cap E) \leqslant m^* (G \cap E), ~ m^* (A \cap \mathscr{C} E) \leqslant m^* (G \cap \mathscr{C} E),
 
         进而有
 
         .. math::
-
             m^* (A \cap E) + m^* (A \cap \mathscr{C} E) \leqslant m^* (G \cap E) + m^* (G \cap \mathscr{C} E) = m^* G < m^* A + \varepsilon,
 
         上式中的等号是由于开集的可测性. 由 :math:`\varepsilon` 的任意性, 有
@@ -116,7 +107,6 @@
         总存在 :math:`\mathscr{M}` 中的区间列 :math:`\{d_n\}`, 使得
 
         .. math::
-
             x \in d_n, ~ \lim\limits_{n\to\infty} m d_n = 0,
 
         则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖.
@@ -127,7 +117,6 @@
         总存在 :math:`\mathscr{M}` 中的区间 :math:`d`, 使得
 
         .. math::
-
             x \in d, ~ m d < \varepsilon,
 
         则称 :math:`\mathscr{M}` 是 :math:`E` 的一个 Vitali 覆盖.
@@ -138,7 +127,6 @@
         则可从 :math:`\mathscr{M}` 中选出至多可列个区间 :math:`\{d_n\}_{n \in I}`, 其中 :math:`I` 是某个至多可列的指标集合, 使得
 
         .. math::
-
             m \left( E \setminus \bigcup\limits_{n \in I} d_n \right) = 0, ~ d_n \cap d_{n'} = \emptyset, ~ n \neq n'.
 
     :math:`E` 有界时的 Vitali 覆盖引理也可叙述为:
@@ -147,7 +135,6 @@
         可从 :math:`\mathscr{M}` 中选出有限个区间 :math:`d_1, d_2, \cdots, d_n`, 使得
 
         .. math::
-
             m \left( E \setminus \bigcup\limits_{i=1}^n d_i \right) < \varepsilon, ~ d_i \cap d_j = \emptyset, ~ i \neq j.
 
 三、解答题（每题10分, 共40分）
@@ -180,19 +167,16 @@
     也可以直接由 :math:`F_1 \cap F_2 = \emptyset` 得 :math:`x \neq y`, 从而 :math:`\lvert x - y \rvert > 0`. 再由 :eq:`eq:cau-real-analysis-exam2024-3-1` 和 :eq:`eq:cau-real-analysis-exam2024-3-2` 得
 
     .. math::
-
         0 < \lvert x - y \rvert = \lim\limits_{k\to\infty} \lvert x_{n_k} - y_{n_k} \rvert = \rho(F_1, F_2).
 
     (2). 由 (1) 知 :math:`\rho(F_1, F_2) > 0`, 于是取 :math:`r = \dfrac{\rho(F_1, F_2)}{3}`, 并令
 
     .. math::
-
         G_1 = \bigcup\limits_{x\in F_1} B(x, r), ~ G_2 = \bigcup\limits_{x\in F_2} B(x, r),
 
     其中 :math:`B(x, r)` 表示以 :math:`x` 为中心, :math:`r` 为半径的开球（开区间）. 以上都是开集的并, 所以 :math:`G_1, G_2` 都是开集, 并且满足
 
     .. math::
-
         G_1 \cap G_2 = \emptyset, ~ F_1 \subset G_1, ~ F_2 \subset G_2.
 
 2. 设 :math:`f` 是可测集 :math:`E` 上的函数, :math:`D` 是 :math:`\mathbb{R}` 的稠密子集, 若对任意 :math:`\alpha\in D,` :math:`E(f > \alpha)` 都是可测集, 请问 :math:`f` 是否必然是可测函数? 若是, 请给出证明; 若否, 请给出反例.
@@ -206,7 +190,6 @@
         且 :math:`\displaystyle \lim_{k \to \infty} \alpha_k = r`. 那么可以断言有（断言3分, 断言的证明2分）
 
         .. math::
-
             E(f > r) = \bigcup_{k \in \mathbb{N}} E(f > \alpha_k).
 
         首先, 由于 :math:`\alpha_k > r`, 所以 :math:`E(f > r) \supset E(f > \alpha_k)`, 从而知上式左边包含右边.
@@ -225,7 +208,6 @@
         若对任意 :math:`\varepsilon > 0`, 总有
 
         .. math::
-
             \lim\limits_{n\to\infty} m E (\lvert f_n - f \rvert \geqslant \varepsilon) = \lim\limits_{n\to\infty} m \{ x \in E \colon \lvert f_n(x) - f(x) \rvert \geqslant \varepsilon \} = 0,
 
         则称 :math:`\{f_n\}` 依测度收敛到 :math:`f`.
@@ -236,7 +218,6 @@
     于是可以定义 :math:`[0, 1]` 区间上的函数 :math:`f_n` 如下:
 
     .. math::
-
         f_n(x) = \chi_{\left[ \dfrac{i}{2^k}, \dfrac{i+1}{2^k} \right]}(x) = \begin{cases}
             1, & x \in \left[ \dfrac{i}{2^k}, \dfrac{i+1}{2^k} \right], \\
             0, & x \notin \left[ \dfrac{i}{2^k}, \dfrac{i+1}{2^k} \right].
@@ -257,7 +238,6 @@
     则 :math:`f_n` 的积分为 :math:`- \infty`, 但是 :math:`f_n` 逐点收敛于 :math:`f = 0`, :math:`f` 的积分为 :math:`0`, 此时
 
     .. math::
-
         \int_E f ~ \mathrm{d} m = 0 \neq - \infty = \lim_{n \to \infty} \int_E f_n ~ \mathrm{d} m.
 
     可以添加的条件: （只要一条就可以, 2分）
@@ -282,7 +262,6 @@
     设 :math:`f, g \in L^p`, :math:`a, b \in \mathbb{R}`, 那么
 
     .. math::
-
         \int_E \lvert af + bg \rvert^p ~ \mathrm{d} m & \leqslant \int_E \left( 2 \cdot \dfrac{\lvert af \rvert + \lvert bg \rvert}{2} \right)^p ~ \mathrm{d} m \\
         & \leqslant 2^p \int_E \left( \dfrac{\lvert af \rvert^p + \lvert bg \rvert^p}{2} \right) ~ \mathrm{d} m < \infty,
 
@@ -294,13 +273,11 @@
     设 :math:`f, g \in L^\infty`, :math:`a, b \in \mathbb{R}`, 那么存在 :math:`M_1, M_2 \geqslant 0` 使得
 
     .. math::
-
         \lvert f(x) \rvert \leqslant M_1, ~ \lvert g(x) \rvert \leqslant M_2, ~ a.e. x \in E,
 
     那么有
 
     .. math::
-
         \lvert af(x) + bg(x) \rvert \leqslant \lvert a \rvert \lvert f(x) \rvert + \lvert b \rvert \lvert g(x) \rvert \leqslant \lvert a \rvert M_1 + \lvert b \rvert M_2, ~ a.e. x \in E,
 
     这说明 :math:`\lvert a \rvert M_1 + \lvert b \rvert M_2` 是函数 :math:`af + bg` 的一个本性上界, 所以 :math:`af + bg \in L^\infty`, 这说明 :math:`L^\infty` 是线性空间.
@@ -310,7 +287,6 @@
     设 :math:`f \in L^{p_2}`, 令 :math:`A = E(\lvert f \rvert \geqslant 1)`, 那么
 
     .. math::
-
         \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m & = \int_A \lvert f \rvert^{p_1} ~ \mathrm{d} m + \int_{E \setminus A} \lvert f \rvert^{p_1} ~ \mathrm{d} m \\
         & \leqslant \int_A \lvert f \rvert^{p_2} ~ \mathrm{d} m + \int_{E \setminus A} ~ \mathrm{d} m \leqslant \int_E \lvert f \rvert^{p_2} ~ \mathrm{d} m + m E < \infty,
 
@@ -322,7 +298,6 @@
     令 :math:`Z = E(\lvert f \rvert \geqslant M)`, 那么 :math:`Z` 是零测集, 且
 
     .. math::
-
         \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m & = \int_Z \lvert f \rvert^{p_1} ~ \mathrm{d} m + \int_{E \setminus Z} \lvert f \rvert^{p_1} ~ \mathrm{d} m \\
         & \leqslant 0 + \int_E \lvert f \rvert^{p_1} ~ \mathrm{d} m \leqslant \int_E M^{p_1} ~ \mathrm{d} m = M^{p_1} m E < \infty,
 
@@ -335,13 +310,11 @@
 (2). 已知 :math:`P_0` 中的元素可以唯一地表示为 :math:`\displaystyle \sum\limits_{n=1}^{\infty} \dfrac{2a_n}{3^n}, a_n \in \{0, 1\}`, 定义函数
 
 .. math::
-
     \phi: ~ P_0 \rightarrow [0, 1], ~ \sum\limits_{n=1}^{\infty} \dfrac{2a_n}{3^n} \mapsto \sum\limits_{n=1}^{\infty} \dfrac{a_n}{2^n},
 
 以及 Cantor 函数
 
 .. math::
-
     \Phi: ~ [0, 1] \rightarrow [0, 1], ~ x \mapsto \sup\limits_{P_0 \ni y \leqslant x} \phi(y).
 
 证明 Cantor 函数 :math:`\Phi` 连续, 有几乎处处为0的导数, 但不是绝对连续函数.
@@ -353,7 +326,6 @@
     记第 :math:`k` 步得到的闭区间为 :math:`F_{k, 1}, F_{k, 2}, \cdots, F_{k, 2^k}`, 去掉的开区间为 :math:`G_{k, 1}, G_{k, 2}, \cdots, G_{k, 2^{k-1}}`, 那么有
 
     .. math::
-
         P_0 & = \bigcap\limits_{k=1}^{\infty} \bigcup\limits_{i=1}^{2^k} F_{k, i} = [0, 1] \setminus G_0, \\
         G_0 & = \bigcup\limits_{k=1}^{\infty} \bigcup\limits_{i=1}^{2^{k-1}} G_{k, i}.
 
@@ -370,7 +342,6 @@
     很容易计算 :math:`G_0` 的测度:
 
     .. math::
-
         m G_0 = m \left( \bigcup\limits_{k=1}^{\infty} \bigcup\limits_{i=1}^{2^{k-1}} G_{k, i} \right) \leqslant \sum\limits_{k=1}^{\infty} \sum\limits_{i=1}^{2^{k-1}} m G_{k, i} = \sum\limits_{k=1}^{\infty} 2^{k-1} \cdot \dfrac{1}{3^k} = \dfrac{1}{3} \sum\limits_{k=1}^{\infty} \left( \dfrac{2}{3} \right)^{k-1} = 1,
 
     所以 :math:`P_0` 的测度为 :math:`m P_0 = m ([0, 1]) - m G_0 = 1 - 1 = 0`.
@@ -381,7 +352,6 @@
     有集合的相等关系:
 
     .. math::
-
         \{y \in P_0 ~ \colon y \leqslant x_1\} = \{y \in P_0 ~ \colon y \leqslant x_2\}
 
     从而 :math:`\Phi` 在开集 :math:`G_0` 上连续.
@@ -390,7 +360,6 @@
     那么存在 :math:`N_0 \in \mathbb{N}` 使得 :math:`a_{N_0}(1) = 0, a_{N_0}(2) = 1`, 并且对任意的 :math:`n < N_0`, 有 :math:`a_n(1) = a_n(2)`. 于是
 
     .. math::
-
         \phi(x_2) - \phi(x_1) & = \sum\limits_{n=1}^{\infty} \dfrac{a_n(2)}{2^n} - \sum\limits_{n=1}^{\infty} \dfrac{a_n(1)}{2^n} \\
         & = \sum\limits_{n=N_0}^{\infty} \dfrac{a_n(2)}{2^n} - \sum\limits_{n=N_0}^{\infty} \dfrac{a_n(1)}{2^n} > 0,
 
@@ -401,19 +370,16 @@
     并取 :math:`\delta = \dfrac{1}{3^{N+1}}`, 那么
 
     .. math::
-
         \sup_{y \in B(x, \delta)} \lvert \Phi(x) - \Phi(y) \rvert \leqslant \sup_{y \in B(x, 2\delta) \cap P_0} \lvert \Phi(x) - \Phi(y) \rvert = \sup_{y \in B(x, 2\delta) \cap P_0} \lvert \phi(x) - \phi(y) \rvert.
 
     对于任意 :math:`\displaystyle y = \sum\limits_{n=1}^{\infty} \dfrac{2a_n(y)}{3^n} \in B(x, 2\delta) \cap P_0`, 有
 
     .. math::
-
         a_n(y) = a_n(x), ~ n = 1, 2, \cdots, N,
 
     于是
 
     .. math::
-
         \lvert \phi(x) - \phi(y) \rvert & = \left\lvert \sum\limits_{n=1}^{\infty} \dfrac{a_n(x)}{2^n} - \sum\limits_{n=1}^{\infty} \dfrac{a_n(y)}{2^n} \right\rvert = \left\lvert \sum\limits_{n=N+1}^{\infty} \dfrac{a_n(x)}{2^n} - \sum\limits_{n=N+1}^{\infty} \dfrac{a_n(y)}{2^n} \right\rvert \\
         & \leqslant \sum\limits_{n=N+1}^{\infty} \dfrac{1}{2^n} = \dfrac{1}{2^{N}} < \varepsilon.
 
@@ -426,7 +392,6 @@
     最后, 我们证明 :math:`\Phi` 不是绝对连续函数. 假设 :math:`\Phi` 是绝对连续函数, 那么由于它有几乎处处为0的导数, 所以它必须是常值函数. 但是
 
     .. math::
-
         \Phi(0) = \phi(0) = 0, ~ \Phi(1) = \phi(1) = 1,
 
     这与 :math:`\Phi` 是常值函数矛盾, 所以 :math:`\Phi` 不是绝对连续函数.
@@ -435,13 +400,11 @@
     那么对于任意的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`, 使得对于任意有限多个互不相交的开区间 :math:`(a_i, b_i), i = 1, \dots, n`, 只要
 
     .. math::
-
         \sum\limits_{i=1}^{n} (b_i - a_i) < \delta,
 
     就有
 
     .. math::
-
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \sum\limits_{i=1}^{n} \lvert \Phi(b_i) - \Phi(a_i) \rvert < \varepsilon.
 
     不妨把 :math:`\Phi` 延拓到 :math:`\mathbb{R}` 上, 其中 :math:`\Phi(x) = 0` 当 :math:`x < 0`, :math:`\Phi(x) = 1` 当 :math:`x > 1`.
@@ -451,7 +414,6 @@
     使得 :math:`P_0 \subset \bigcup\limits_{i=1}^{n} I_i`. 那么有
 
     .. math::
-
         \sum\limits_{i=1}^{n} (b_i - a_i) \leqslant m(G) < \delta,
 
     从而有
@@ -464,7 +426,6 @@
     另一方面, 每一个闭区间 :math:`[b_i, a_{i+1}], i = 1, \dots, n-1`, 都包含于 :math:`G_0` 的某个构成区间中, 而 Cantor 函数在这些构成区间上是常值函数, 于是
 
     .. math::
-
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) & = -\Phi(a_1) + (\Phi(b_1) - \Phi(a_2)) + \cdots + (\Phi(b_{n-1}) - \Phi(a_n)) + \Phi(b_n) \\
         & = \Phi(b_n) - \Phi(a_1)
 
@@ -472,7 +433,6 @@
     因此 :math:`a_1 < 0, b_n > 1`, 从而有 :math:`\Phi(a_1) = 0, \Phi(b_n) = 1`. 于是有
 
     .. math::
-
         \sum\limits_{i=1}^{n} (\Phi(b_i) - \Phi(a_i)) = \Phi(b_n) - \Phi(a_1) = 1.
 
     这与式 :eq:`eq:cau-real-analysis-exam2024-4-2-1` 矛盾, 因此 :math:`\Phi` 不是绝对连续的.
