@@ -1,0 +1,32 @@
+name: 新的证明/解答
+description: 提交新的证明/解答
+title: "[新的证明/解答]: "
+labels: ["new", "answer"]
+assignees:
+  - wenh06
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交新的证明/解答！
+  - type: input
+    id: name
+    attributes:
+      label: 姓名
+      description: 提供姓名，方便记录
+    validations:
+      required: false
+  - type: textarea
+    id: what-error
+    attributes:
+      label: 新的证明/解答
+      description: 详细指出哪道题目的可以有新的证明/解答，并提供完整的证明/解答
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 其他信息
+      description: 如果有其他相关信息，请在此提供
+    validations:
+      required: false

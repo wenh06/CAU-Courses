@@ -1,0 +1,39 @@
+name: 错误修复
+description: 报告证明/解答中的错误，并提供正确的证明/解答
+title: "[错误修复]: "
+labels: ["error", "fix"]
+assignees:
+  - wenh06
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢检查并指出错误！
+  - type: input
+    id: name
+    attributes:
+      label: 姓名
+      description: 提供姓名，方便记录
+    validations:
+      required: false
+  - type: textarea
+    id: what-error
+    attributes:
+      label: 证明/解答错误之处
+      description: 详细指出哪道题目的证明/解答有错误，并指出错误在哪里
+    validations:
+      required: true
+  - type: textarea
+    id: correct-answer
+    attributes:
+      label: 正确的证明/解答
+      description: 请提供正确的证明/解答
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 其他信息
+      description: 如果有其他相关信息，请在此提供
+    validations:
+      required: false
