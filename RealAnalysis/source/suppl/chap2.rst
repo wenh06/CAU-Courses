@@ -3,7 +3,9 @@
 
 .. _reg-outer-measure:
 
-1. 勒贝格外测度的正则性. 对任意集合 :math:`E \subset \mathbb{R}^d`, 存在 :math:`G_{\delta}`-集 :math:`A`,
+1. 勒贝格外测度的正则性.
+
+   对任意集合 :math:`E \subset \mathbb{R}^d`, 存在 :math:`G_{\delta}`-集 :math:`A`,
    称为 :math:`E` 的等测包, 使得 :math:`E \subset A` 且 :math:`m A = m^* E`.
 
 .. proof:proof::
@@ -39,25 +41,54 @@
 
    .. math::
       \mathscr{R} :=
-      \left\{ E \subset X ~ : ~ E \subset \bigcup\limits_{k=1}^{n} E_k, ~ n \in \mathbb{N}, E_1, \dots, E_n \in \mathscr{E} \right\}.
+      \left\{ E \subset X ~ : ~ E \subset \bigcup\limits_{k=1}^{n} E_k,
+      ~ n \in \mathbb{N}, E_1, \dots, E_n \in \mathscr{E} \right\}.
 
-   首先, 验证 :math:`\mathscr{R}` 是一个环. 它关于有限并运算的封闭性显然, 只需验证它关于差运算的封闭性. 对任意 :math:`E \subset \bigcup\limits_{k=1}^{n} E_k`,
-   :math:`F \subset \bigcup\limits_{j=1}^{m} F_j \in \mathscr{R}`, 有
+   首先, 验证 :math:`\mathscr{R}` 是一个环. 它关于有限并运算的封闭性显然, 只需验证它关于差运算的封闭性.
+   对任意 :math:`E \subset \bigcup\limits_{k=1}^{n} E_k`, :math:`F \subset \bigcup\limits_{j=1}^{m} F_j \in \mathscr{R}`, 有
 
    .. math::
       E \setminus F \subset E \subset \bigcup\limits_{k=1}^{n} E_k,
 
    从而知 :math:`E \setminus F \in \mathscr{R}`.
 
-   其次, 由于 :math:`\mathscr{R}(\mathscr{E})` 是包含 :math:`\mathscr{E}` 的最小环, 所以 :math:`\mathscr{R}(\mathscr{E}) \subset \mathscr{R}`.
+   其次, 由于 :math:`\mathscr{R}(\mathscr{E})` 是包含 :math:`\mathscr{E}` 的最小环,
+   所以 :math:`\mathscr{R}(\mathscr{E}) \subset \mathscr{R}`.
+
+.. _inner-measure-subaddivity-strict-inequality:
+
+3. 内测度的次可加性不等式严格成立的例子.
+
+   设 :math:`X = [0, 1]` 区间, 任取其中一个不可测集 :math:`A`
+   (这样集合的存在性见 :ref:`本章第 28 题 <ex-2-28>`), 令 :math:`B = X \setminus A` 为 :math:`A`
+   在 :math:`X` 中的补集. 首先, 由内、外测度的关系, 有
+
+   .. math::
+      \begin{cases}
+         m^* A + m_* B = 1, \\
+         m^* B + m_* A = 1.
+      \end{cases}
+
+   其次, 由于 :math:`A, B` 都不可测, 故有
+
+   .. math::
+      \begin{cases}
+         m^* A > m_* A, \\
+         m^* B > m_* B.
+      \end{cases}
+
+   于是, 联立以上四个式子, 可得
+
+   .. math::
+      m_* A + m_* B < 1 = m_* X = m_* (A \cup B).
 
 .. _measure-extension:
 
-3. 测度扩张
+4. 测度扩张
 
    .. tikz::
       :align: center
-      :xscale: 100
+      :xscale: 80
       :libs: arrows.meta,positioning,calc
       :packages: mathrsfs
 
