@@ -262,8 +262,11 @@ def html_page_context(
     context["metatags"] += """<script src="https://tikzjax.com/v1/tikzjax.js"></script>"""
 
 
+html_js_files = ["js/proof.js"]
+
+
 def setup(app):
     app.add_css_file("css/custom.css")
-    # app.add_css_file("css/proof.css")
+    app.add_css_file("css/proof.css")
     app.add_role("pdfembed", pdfembed_role)
     app.connect("html-page-context", html_page_context)
