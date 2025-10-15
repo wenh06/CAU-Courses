@@ -20,7 +20,7 @@ body:
     id: what-error
     attributes:
       label: 新的证明/解答
-      description: 详细指出哪道题目的可以有新的证明/解答，并提供完整的证明/解答
+      description: 详细指出哪道题目的可以有新的证明/解答，并提供完整的证明/解答（最好是 rst 格式的）
     validations:
       required: true
   - type: textarea

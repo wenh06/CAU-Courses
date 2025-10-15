@@ -61,3 +61,9 @@
    legacy/chap1
    legacy/chap2
    legacy/chap3
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 杂项
+
+   erratum

@@ -27,7 +27,7 @@ body:
     id: correct-answer
     attributes:
       label: 正确的证明/解答
-      description: 请提供正确的证明/解答
+      description: 请提供正确的证明/解答（最好是 rst 格式的）
     validations:
       required: true
   - type: textarea
