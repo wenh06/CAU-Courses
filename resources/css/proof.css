@@ -42,7 +42,7 @@
 
 /* 展开状态 */
 .proof-content.expanded {
-  max-height: 1000px; /* 足够大容纳内容 */
+  /* max-height: 1000px; 足够大容纳内容 */
   padding-top: 1em;
   padding-bottom: 1em;
 }

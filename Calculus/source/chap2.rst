@@ -145,6 +145,105 @@
 §2.4 极限存在准则与重要极限
 --------------------------------
 
+4. 设 :math:`a > 0`, 数列 :math:`\{ x_n \}` 满足 :math:`x_1 = \sqrt{a}`, :math:`x_2 = \sqrt{a + x_1}`,
+   ..., :math:`x_n = \sqrt{a + x_{n-1}}`, ..., 证明数列 :math:`\{ x_n \}` 收敛, 并求其极限.
+
+.. proof:proof::
+
+   首先, 很容易观察到 :math:`x_n = \sqrt{a + x_{n-1}} \geqslant \sqrt{a}`. 接下来, 检查数列的单调性.
+   由于 :math:`x_1 = \sqrt{a}`, :math:`x_2 = \sqrt{a + \sqrt{a}} > \sqrt{a} = x_1`.
+   假设 :math:`x_n > x_{n-1}` 成立, 那么
+
+   .. math::
+      x_{n+1} = \sqrt{a + x_n} > \sqrt{a + x_{n-1}} = x_n.
+
+   由数学归纳法可知数列 :math:`\{ x_n \}` 是单调递增的.
+
+   .. note::
+      到这里, 还不能用单调有界准则来说明数列收敛, 因为只证明了单调递增数列 :math:`\{ x_n \}` 有下界 :math:`\sqrt{a}`,
+      还需要证明的是 :math:`\{ x_n \}` 有上界.
+
+   下面来证明数列 :math:`\{ x_n \}` 有上界. 由于 :math:`x_n = \sqrt{a + x_{n-1}} < \sqrt{a + x_n}`,
+   那么 :math:`x_n^2 - x_n - a < 0`, 即
+
+   .. math::
+      \left( x_n - \dfrac{1 + \sqrt{1 + 4a}}{2} \right) \left( x_n - \dfrac{1 - \sqrt{1 + 4a}}{2} \right) < 0.
+
+   由于 :math:`x_n > 0`, 那么 :math:`x_n < \dfrac{1 + \sqrt{1 + 4a}}{2}`. 这样就证明了数列 :math:`\{ x_n \}` 有上界.
+   由单调有界准则可知数列 :math:`\{ x_n \}` 收敛.
+
+   设 :math:`\lim\limits_{n \to \infty} x_n = A`, 那么对数列的递推关系式取极限, 有
+
+   .. math::
+      A = \sqrt{a + A},
+
+   解得 :math:`A = \dfrac{1 + \sqrt{1 + 4a}}{2}` (舍去负根).
+
+7. 斐波那契数列 :math:`\{ x_n \}` 如下定义:
+
+   .. math::
+      x_1 = 1, x_2 = 1, \dots, x_{n+1} = x_n + x_{n-1},
+
+   记 :math:`y = \dfrac{x_{n+1}}{x_n}`.
+
+   (1). 证明 :math:`\{ y_n \}` 收敛;
+
+   (2). 求 :math:`\lim\limits_{n\to\infty} y_n`.
+
+.. proof:proof::
+
+   从斐波那契数列 :math:`\{ x_n \}` 的定义式出发, 有
+
+   .. math::
+      y_1 = 1, \dots, y_{n} = 1 + \dfrac{1}{y_{n-1}}.
+
+   由此可见 :math:`y_n \geqslant 1`, 即 1 是它的一个下界. 另一方面, 由 :math:`y_n \geqslant 1` 可推出
+
+   .. math::
+      y_{n} = 1 + \dfrac{1}{y_{n-1}} \leqslant 1 + \dfrac{1}{1} = 2,
+
+   即数列 :math:`\{ y_n \}` 满足 :math:`1 \leqslant y_n \leqslant 2`.
+
+   接下来, 检查数列 :math:`\{ y_n \}` 的单调性. 但是经过检查发现, 数列 :math:`\{ y_n \}` 没有单调性:
+
+   .. math::
+      \text{假设} ~ y_n > y_{n-1} ~ \implies ~ y_{n+1} = 1 + \dfrac{1}{y_n} < 1 + \dfrac{1}{y_{n-1}} = y_n; \\
+      \text{假设} ~ y_n < y_{n-1} ~ \implies ~ y_{n+1} = 1 + \dfrac{1}{y_n} > 1 + \dfrac{1}{y_{n-1}} = y_n.
+
+   但是可以考察 :math:`y_n` 的偶数项与奇数项, 可以发现它们分别是单调的:
+
+   .. math::
+      y_{n} = 1 + \dfrac{1}{y_{n-1}} = 1 + \dfrac{1}{1 + \dfrac{1}{y_{n-2}}} = \dfrac{2 y_{n-2} + 1}{y_{n-2} + 1},
+
+   那么有
+
+   .. math::
+      y_{n} - y_{n-2} & = \dfrac{2 y_{n-2} + 1}{y_{n-2} + 1} - y_{n-2} = \dfrac{1 + y_{n-2} - y_{n-2}^2}{y_{n-2} + 1} \\
+      & = - \dfrac{(y_{n-2} - \frac{1 + \sqrt{5}}{2})(y_{n-2} - \frac{1 - \sqrt{5}}{2})}{y_{n-2} + 1}.
+
+   记 :math:`L = \frac{1 + \sqrt{5}}{2}`, 从上式可以看出
+
+   .. math::
+      \text{若} ~ y_n \geqslant L ~ \implies~ y_n - y_{n-2} \leqslant 0; \\
+      \text{若} ~ y_n \leqslant L ~ \implies~ y_n - y_{n-2} \geqslant 0.
+
+   接下来, 可以用数学归纳法证明 :math:`y_{2n} \geqslant L` 且 :math:`y_{2n-1} \leqslant L`:
+
+   .. math::
+      y_1 = 1 \leqslant L, \dots, y_{2n+1} = 1 + \dfrac{1}{y_{2n}} \leqslant 1 + \dfrac{1}{L} = L; \\
+      y_2 = 2 \geqslant L, \dots, y_{2n+2} = 1 + \dfrac{1}{y_{2n+1}} \geqslant 1 + \dfrac{1}{L} = L.
+
+   由此可知数列 :math:`\{ y_{2n} \}` 是单调递减且有下界的, 因此它收敛; 数列 :math:`\{ y_{2n-1} \}` 是单调递增且有上界的, 因此它也收敛.
+   设 :math:`\lim\limits_{n \to \infty} y_{2n} = A`, :math:`\lim\limits_{n \to \infty} y_{2n-1} = B`, 那么由递推关系式有
+
+   .. math::
+      A = 1 + \dfrac{1}{B}, \quad B = 1 + \dfrac{1}{A}.
+
+   解得 :math:`A = B = L`. 由于数列 :math:`\{ y_n \}` 的偶数项与奇数项的极限相等, 因此数列 :math:`\{ y_n \}` 收敛, 且
+
+   .. math::
+      \lim_{n \to \infty} y_n = L = \dfrac{1 + \sqrt{5}}{2}.
+
 §2.5 无穷大量与无穷小量
 --------------------------------
 
