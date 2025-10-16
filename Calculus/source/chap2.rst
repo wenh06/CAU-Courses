@@ -179,12 +179,28 @@
 
    解得 :math:`A = \dfrac{1 + \sqrt{1 + 4a}}{2}` (舍去负根).
 
+5. 设 :math:`a_1, a_2, \dots, a_k` 是 :math:`k` 个正数, 求极限
+   :math:`\lim\limits_{n \to \infty} \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n}`.
+
+.. proof:solution::
+
+   记 :math:`M = \max \{ a_1, a_2, \dots, a_k \}`. 那么有
+
+   .. math::
+      M = \sqrt[n]{M^n} \leqslant \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n}
+      \leqslant \sqrt[n]{k M^n} = \sqrt[n]{k} \cdot M.
+
+   由于 :math:`\lim\limits_{n \to \infty} \sqrt[n]{k} = 1`, 由夹逼准则可知
+
+   .. math::
+      \lim_{n \to \infty} \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n} = M = \max \{ a_1, a_2, \dots, a_k \}.
+
 7. 斐波那契数列 :math:`\{ x_n \}` 如下定义:
 
    .. math::
       x_1 = 1, x_2 = 1, \dots, x_{n+1} = x_n + x_{n-1},
 
-   记 :math:`y = \dfrac{x_{n+1}}{x_n}`.
+   记 :math:`y_n = \dfrac{x_{n+1}}{x_n}`.
 
    (1). 证明 :math:`\{ y_n \}` 收敛;
 
