@@ -22,6 +22,22 @@
 补充内容
 ====================================
 
+§3.1 导数的概念
+------------------------------------
+
+处处连续, 但处处不可导的函数: Generalized Van der Waerden-Takagi 函数.
+
+该函数定义如下
+
+.. math::
+   & \varphi(x) = d(x, \mathbb{Z}) = \min_{n \in \mathbb{Z}} |x - n|, \quad x \in \mathbb{R}, \\
+   & f(x) = \sum_{n=0}^{\infty} a^n \varphi(b^n x).
+
+当 :math:`0 < a < 1`, :math:`b \in \mathbb{N}_{\geqslant 2}`, 且 :math:`ab \geqslant 1` 时,
+:math:`f(x)` 是一个在 :math:`\mathbb{R}` 上处处不可导的连续函数.
+
+那么, 处处可导, 但导函数处处不连续的函数是否存在呢? 答案是不存在.
+
 §3.3 高阶导数
 --------------------------------
 
