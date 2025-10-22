@@ -35,7 +35,8 @@
    .. math::
       m G \leqslant \sum_{n=1}^\infty m G_n = \sum_{n=1}^\infty \frac{\varepsilon}{2^n} = \varepsilon
 
-   但是 :math:`\overline{G} = [0, 1]`, 所以 :math:`m \overline{G} = 1`. 此时必有 :math:`m \overline{G} \neq m G`.
+   但是 :math:`\overline{G}` 是包含 :math:`[0, 1]` 区间的闭集 (具体大多少与 :math:`A` 的排列有关), 所以 :math:`m \overline{G} \geqslant 1`.
+   此时必有 :math:`m \overline{G} \neq m G`.
 
 .. _ex-2-5:
 
