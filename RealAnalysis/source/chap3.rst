@@ -6,3 +6,4 @@
 
    chapter3/sec1
    chapter3/sec2
+   chapter3/extra

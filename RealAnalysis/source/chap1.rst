@@ -9,3 +9,4 @@
    chapter1/sec3
    chapter1/sec4
    chapter1/sec5
+   chapter1/extra
