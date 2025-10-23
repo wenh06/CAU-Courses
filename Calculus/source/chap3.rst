@@ -4,44 +4,64 @@
 .. contents:: :local:
 
 
+.. _exercises-chap3:
+
 课后习题解答
 ====================================
 
+.. _exercises-chap3-sec1:
+
 §3.1 导数的概念
 ------------------------------------
+
+.. _exercises-chap3-sec2:
 
 §3.2 求导法则
 ------------------------------------
 
+.. _exercises-chap3-sec3:
+
 §3.3 高阶导数
 ------------------------------------
+
+.. _exercises-chap3-sec4:
 
 §3.4 函数的微分
 ------------------------------------
 
+.. _extra-chap3:
+
 补充内容
 ====================================
+
+.. _extra-chap3-sec1:
 
 §3.1 导数的概念
 ------------------------------------
 
-处处连续, 但处处不可导的函数: Generalized Van der Waerden-Takagi 函数.
+.. _extra-chap3-sec1-topic1:
 
-该函数定义如下
+1. 处处连续, 但处处不可导的函数: Generalized Van der Waerden-Takagi 函数.
 
-.. math::
-   & \varphi(x) = d(x, \mathbb{Z}) = \min_{n \in \mathbb{Z}} |x - n|, \quad x \in \mathbb{R}, \\
-   & f(x) = \sum_{n=0}^{\infty} a^n \varphi(b^n x).
+   该函数定义如下
 
-当 :math:`0 < a < 1`, :math:`b \in \mathbb{N}_{\geqslant 2}`, 且 :math:`ab \geqslant 1` 时,
-:math:`f(x)` 是一个在 :math:`\mathbb{R}` 上处处不可导的连续函数.
+   .. math::
+      & \varphi(x) = d(x, \mathbb{Z}) = \min_{n \in \mathbb{Z}} |x - n|, \quad x \in \mathbb{R}, \\
+      & f(x) = \sum_{n=0}^{\infty} a^n \varphi(b^n x).
 
-那么, 处处可导, 但导函数处处不连续的函数是否存在呢? 答案是不存在.
+   当 :math:`0 < a < 1`, :math:`b \in \mathbb{N}_{\geqslant 2}`, 且 :math:`ab \geqslant 1` 时,
+   :math:`f(x)` 是一个在 :math:`\mathbb{R}` 上处处不可导的连续函数.
+
+   那么, 处处可导, 但导函数处处不连续的函数是否存在呢? 答案是不存在.
+
+.. _extra-chap3-sec3:
 
 §3.3 高阶导数
 --------------------------------
 
-莱布尼茨公式 :math:`(uv)^{(n)} = \sum\limits_{k=0}^n C_n^k u^{(k)} v^{(n-k)}` 的证明:
+.. _extra-chap3-sec3-topic1:
+
+1. 莱布尼茨公式 :math:`(uv)^{(n)} = \sum\limits_{k=0}^n C_n^k u^{(k)} v^{(n-k)}` 的证明:
 
 .. proof:proof::
 

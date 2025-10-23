@@ -4,23 +4,37 @@
 .. contents:: :local:
 
 
+.. _exercises-chap5:
+
 课后习题解答
 ====================================
+
+.. _exercises-chap5-sec1:
 
 5.1 不定积分的概念与性质
 ------------------------------------
 
+.. _exercises-chap5-sec2:
+
 §5.2 换元积分法
 ------------------------------------
+
+.. _exercises-chap5-sec3:
 
 §5.3 分部积分法
 ------------------------------------
 
+.. _exercises-chap5-sec4:
+
 §5.4 几种特殊类型函数的不定积分
 ------------------------------------
 
+.. _extra-chap5:
+
 补充内容
 ====================================
+
+.. _extra-chap5-topic1:
 
 1. 求不定积分 :math:`\displaystyle \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x`.
 
@@ -41,6 +55,8 @@
 
    .. math::
       \int \dfrac{\sqrt{1-x} \arctan \sqrt{1-x}}{2 - x} \mathrm{d}x = \arctan^2 \sqrt{1-x} -2 \sqrt{1-x} \arctan \sqrt{1-x} + \ln(2 - x) + C.
+
+.. _extra-chap5-topic2:
 
 2. 求不定积分
 

@@ -4,31 +4,50 @@
 .. contents:: :local:
 
 
+.. _exercises-chap4:
+
 课后习题解答
 ====================================
 
+.. _exercises-chap4_sec1:
+
 §4.1 微分中值定理
 ------------------------------------
+
+.. _exercises-chap4_sec2:
 
 §4.2 洛必达法则
 ------------------------------------
 
+.. _exercises-chap4_sec3:
+
 §4.3 泰勒公式
 ------------------------------------
+
+.. _exercises-chap4_sec4:
 
 §4.4 函数的单调性
 ------------------------------------
 
+.. _exercises-chap4_sec5:
+
 §4.5 函数的极值与最值
 ------------------------------------
+
+.. _extra-chap4:
 
 补充内容
 ====================================
 
+.. _extra-chap4-sec1:
+
 §4.1 微分中值定理
 --------------------------------
 
-设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上二阶可导, 且 :math:`f(0) = f(1)`, 证明存在 :math:`\xi \in (0, 1)` 使得 :math:`f''(\xi) = \dfrac{2f'(\xi)}{1-\xi}`.
+.. _extra-chap4-sec1-topic1:
+
+1. 设函数 :math:`f(x)` 在区间 :math:`[a, b]` 上二阶可导, 且 :math:`f(0) = f(1)`, 证明存在 :math:`\xi \in (0, 1)`
+   使得 :math:`f''(\xi) = \dfrac{2f'(\xi)}{1-\xi}`.
 
 .. proof:proof::
 
@@ -46,49 +65,57 @@
 
    移项得 :math:`f''(\xi) = \dfrac{2f'(\xi)}{1-\xi}`.
 
+.. _extra-chap4-sec2:
+
 §4.2 洛必达法则
 --------------------------------
 
-:math:`\dfrac{\infty}{\infty}` 型未定式的洛必达法则证明:
+.. _extra-chap4-sec2-topic1:
 
-由于有 :math:`\lim\limits_{x \to x_0} = f(x) = \lim\limits_{x \to x_0} = g(x) = \infty`, 所以可以假定在 :math:`x_0` 的某个小的去心邻域
-:math:`\mathring{U}(x_0, \delta)` 内有 :math:`f(x) \neq 0, g(x) \neq 0`. 对于包含于 :math:`\mathring{U}(x_0, \delta)`
-且在 :math:`x_0` 某一边 (不妨设为右边) 的区间 :math:`[x, y]`, 在其上用柯西中值定理有
+1. :math:`\dfrac{\infty}{\infty}` 型未定式的洛必达法则证明:
 
-.. math::
-   & \dfrac{f(x) - f(y)}{g(x) - g(y)} = \dfrac{f'(\xi)}{g'(\xi)}, \quad \xi \in (x, y) \\
-   \Longrightarrow & f(x) g'(\xi) = f(y)g'(\xi) + (g(x) - g(y)) f'(\xi) \\
-   \Longrightarrow & \dfrac{f(x)}{g(x)} = \dfrac{f(y)}{g(x)} + \left( 1 - \dfrac{g(y)}{g(x)} \right) \dfrac{f'(\xi)}{g'(\xi)}.
+   由于有 :math:`\lim\limits_{x \to x_0} = f(x) = \lim\limits_{x \to x_0} = g(x) = \infty`, 所以可以假定在 :math:`x_0` 的某个小的去心邻域
+   :math:`\mathring{U}(x_0, \delta)` 内有 :math:`f(x) \neq 0, g(x) \neq 0`. 对于包含于 :math:`\mathring{U}(x_0, \delta)`
+   且在 :math:`x_0` 某一边 (不妨设为右边) 的区间 :math:`[x, y]`, 在其上用柯西中值定理有
 
-那么由于 :math:`\lim\limits_{x \to x_0} = f(x) = \lim\limits_{x \to x_0} = g(x) = \infty`, 对任意的 :math:`K = \dfrac{1}{\varepsilon} \in \mathbb{R}^+`,
-以及对任意取定的 :math:`y`, 存在相应的 :math:`x \in (x_0, y) \cap \mathring{U}(x_0, \delta)` 使得
+   .. math::
+      & \dfrac{f(x) - f(y)}{g(x) - g(y)} = \dfrac{f'(\xi)}{g'(\xi)}, \quad \xi \in (x, y) \\
+      \Longrightarrow & f(x) g'(\xi) = f(y)g'(\xi) + (g(x) - g(y)) f'(\xi) \\
+      \Longrightarrow & \dfrac{f(x)}{g(x)} = \dfrac{f(y)}{g(x)} + \left( 1 - \dfrac{g(y)}{g(x)} \right) \dfrac{f'(\xi)}{g'(\xi)}.
 
-.. math::
-   \lvert g(x) \rvert > K \cdot f(y), \quad \lvert g(x) \rvert > K \cdot g(y),
+   那么由于 :math:`\lim\limits_{x \to x_0} = f(x) = \lim\limits_{x \to x_0} = g(x) = \infty`, 对任意的 :math:`K = \dfrac{1}{\varepsilon} \in \mathbb{R}^+`,
+   以及对任意取定的 :math:`y`, 存在相应的 :math:`x \in (x_0, y) \cap \mathring{U}(x_0, \delta)` 使得
 
-即有
+   .. math::
+      \lvert g(x) \rvert > K \cdot f(y), \quad \lvert g(x) \rvert > K \cdot g(y),
 
-.. math::
-   \left\lvert \dfrac{f(y)}{g(x)} \right\rvert < \varepsilon, \quad \left\lvert \dfrac{g(y)}{g(x)} \right\rvert < \varepsilon.
+   即有
 
-记以上的极限过程为 :math:`\tau` (即让 :math:`y, x` 都趋于 :math:`x_0`, 但先选好 :math:`y`, 再选 :math:`x`, 使得以上关系成立), 那么有
+   .. math::
+      \left\lvert \dfrac{f(y)}{g(x)} \right\rvert < \varepsilon, \quad \left\lvert \dfrac{g(y)}{g(x)} \right\rvert < \varepsilon.
 
-.. math::
-   \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\tau} \left( \dfrac{f(y)}{g(x)} + \left( 1 - \dfrac{g(y)}{g(x)} \right) \dfrac{f'(\xi)}{g'(\xi)} \right) \\
-   & = 0 + (1 - 0) \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} = \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)}.
+   记以上的极限过程为 :math:`\tau` (即让 :math:`y, x` 都趋于 :math:`x_0`, 但先选好 :math:`y`, 再选 :math:`x`, 使得以上关系成立), 那么有
 
-在极限过程 :math:`\tau` 中, 同样有 :math:`\xi \to x_0`, 所以
+   .. math::
+      \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\tau} \left( \dfrac{f(y)}{g(x)} + \left( 1 - \dfrac{g(y)}{g(x)} \right) \dfrac{f'(\xi)}{g'(\xi)} \right) \\
+      & = 0 + (1 - 0) \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} = \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)}.
 
-.. math::
-   \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)} \\
-   \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)}.
+   在极限过程 :math:`\tau` 中, 同样有 :math:`\xi \to x_0`, 所以
 
-因此 :math:`\lim\limits_{x \to x_0} \dfrac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \dfrac{f'(x)}{g'(x)}` 成立.
+   .. math::
+      \lim_{\tau} \dfrac{f'(\xi)}{g'(\xi)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)} \\
+      \lim_{\tau} \dfrac{f(x)}{g(x)} & = \lim_{\xi \to x_0} \dfrac{f'(\xi)}{g'(\xi)}.
+
+   因此 :math:`\lim\limits_{x \to x_0} \dfrac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \dfrac{f'(x)}{g'(x)}` 成立.
+
+.. _extra-chap4-sec3:
 
 §4.3 泰勒公式
 --------------------------------
 
-泰勒公式拉格朗日型余项 :math:`R_n(x) = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1}` 的证明:
+.. _extra-chap4-sec3-topic1:
+
+1. 泰勒公式拉格朗日型余项 :math:`R_n(x) = \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1}` 的证明:
 
 .. proof:proof::
 
