@@ -6,7 +6,7 @@
 24. 设 :math:`E` 是一维有界集, :math:`I_1, I_2, \dots` 是任意区间集列 (可以相交), 其并覆盖 :math:`E`, 试证
 
     .. math::
-      m^*(E) = \inf\limits_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
+      m^*(E) = \inf\limits_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
 
     对于二维情形如何?
 
@@ -15,7 +15,8 @@
    在一维有界集的情况, :math:`E` 的外测度定义为
 
    .. math::
-      m^* E = \inf_{G \supset E} m G = \inf_{\cup J_k = G \supset E} \sum_k m I_k \geqslant \inf_{\cup I_k \supset E} \sum_k m I_k,
+      m^* E = \inf_{G \supset E} m G = \inf_{\cup J_k = G \supset E} \sum_k m J_k
+         \geqslant \inf_{\cup I_k \supset E} \sum_k m I_k,
 
    其中 :math:`G` 为包含 :math:`E` 的开集, :math:`m G = \sum\limits_{k} m J_k` 为 :math:`G` 的测度,
    :math:`G = \bigcup\limits_k J_k` 为 :math:`G` 的结构表示.
@@ -34,7 +35,7 @@
    综上, 有
 
    .. math::
-      m^* E = \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty l(I_n).
+      m^* E = \inf_{\cup I_k \supset E} \sum\limits_{k=1}^\infty m I_k.
 
    对于二维 (或更高维) 情形, 需要将区间集列改为矩体集列.
 
