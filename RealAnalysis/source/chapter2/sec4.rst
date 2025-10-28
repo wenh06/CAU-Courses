@@ -286,7 +286,7 @@
       m T(I) = (b_1 - a_1) \cdots (b_j - a_j) \cdots (b_i - a_i) \cdots (b_n - a_n) = m I = \lvert \det T \rvert m I.
 
    对于第二类变换, 若 :math:`c > 0`, 则 :math:`T(I) = [a_1, b_1) \times \cdots \times [c a_i, c b_i) \times \cdots \times [a_n, b_n)`,
-   :math:`\det T = c`, 若 :math:`c < 0`, 则 :math:`T(I) = [c b_1, c a_1) \times \cdots \times (c b_i, c a_i] \times \cdots \times [c b_n, c a_n)`,
+   :math:`\det T = c`, 若 :math:`c < 0`, 则 :math:`T(I) = [b_1, a_1) \times \cdots \times [c b_i, c a_i) \times \cdots \times [b_n, a_n)`,
    :math:`\det T = c`. 那么有
 
    .. math::
