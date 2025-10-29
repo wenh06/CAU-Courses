@@ -7,3 +7,15 @@
 
 2. 第 43 页, 习题 4.2 第 4 题, "... :math:`x_2 = \sqrt{ a + \cancel{\sqrt{x_1}} x_1}`, ...,
    :math:`x_{n+1} = \sqrt{ a + \cancel{\sqrt{x_n}} x_n}`, ..."
+
+3. 第 94 页, 最后一行的公式 :
+
+   .. math::
+
+      f'(\xi) = \dfrac{1}{\xi} = \dfrac{f(h) - f(0)}{h - 0} = \dfrac{\ln(1+h)}{h}
+
+   应改为 :
+
+   .. math::
+
+      f'(\xi) = \dfrac{1}{\xi} = \dfrac{f(1+h) - f(1)}{(1+h) - 1} = \dfrac{\ln(1+h)}{h}
