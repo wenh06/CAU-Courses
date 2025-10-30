@@ -8,7 +8,10 @@
 2. 第 43 页, 习题 4.2 第 4 题, "... :math:`x_2 = \sqrt{ a + \cancel{\sqrt{x_1}} x_1}`, ...,
    :math:`x_{n+1} = \sqrt{ a + \cancel{\sqrt{x_n}} x_n}`, ..."
 
-3. 第 94 页, 最后一行的公式 :
+3. 第 51 页, 习题 2.5 第 2 题 第 (5) 小题, :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - x]`
+   应改为 :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - \ln x]`, 见 :ref:`解答 <exercises-chap2-sec5-2>`.
+
+4. 第 94 页, 最后一行的公式 :
 
    .. math::
 

@@ -29,7 +29,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: 课后习题解答及补充材料:
+   :caption: 课后部分习题解答及补充材料:
 
    chap1
    chap2
@@ -37,6 +37,12 @@
    chap4
    chap5
    chap6
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 课本勘误
+
+   erratum
 
 .. toctree::
    :maxdepth: 2
@@ -61,9 +67,3 @@
    legacy/chap1
    legacy/chap2
    legacy/chap3
-
-.. toctree::
-   :maxdepth: 2
-   :caption: 杂项
-
-   erratum

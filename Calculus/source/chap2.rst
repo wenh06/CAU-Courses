@@ -291,6 +291,29 @@
 §2.5 无穷大量与无穷小量
 --------------------------------
 
+.. _exercises-chap2-sec5-2:
+
+2. 计算下列极限:
+
+   (5). :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - x]`;
+
+.. proof:solution::
+
+   由于
+
+   .. math::
+      \lim\limits_{x \to +\infty} [\ln(x + 1) - x] = \lim\limits_{x \to +\infty} \ln \dfrac{x + 1}{e^x} = -\infty,
+
+   因此 :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - x] = -\infty`.
+
+   .. note::
+      这题应该又是一个印刷错误, 正确的题目应该是计算 :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - \ln x]`,
+      那么计算过程如下:
+
+      .. math::
+         \lim_{x \to +\infty} x[\ln(x + 1) - \ln x] = \lim_{x \to +\infty} x \ln \left( 1 + \dfrac{1}{x} \right)
+         \xlongequal{t = \frac{1}{x}} \lim_{t \to 0^+} \dfrac{\ln(1 + t)}{t} = 1.
+
 .. _exercises-chap2-sec6:
 
 §2.6 函数的连续性和间断点

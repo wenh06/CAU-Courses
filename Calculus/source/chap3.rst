@@ -36,6 +36,31 @@
         - \left( f(x_0) - f'(x_0) \cdot \Delta x + o(\Delta x) \right)}{\Delta x} \\
       = & \lim\limits_{\Delta x \to 0} \dfrac{3 f'(x_0) \cdot \Delta x + o(\Delta x)}{\Delta x} = 3 f'(x_0).
 
+.. _exercises-chap3-sec1-14:
+
+14. 已知 :math:`f(x) = \begin{cases} \sin x, & x > 0, \\ e^x, & x \leqslant 0, \end{cases}` 求 :math:`f'(x)`.
+
+.. proof:solution::
+
+   当 :math:`x > 0` 时, :math:`f(x) = \sin x`, 因此 :math:`f'(x) = \cos x`.
+
+   当 :math:`x < 0` 时, :math:`f(x) = e^x`, 因此 :math:`f'(x) = e^x`.
+
+   当 :math:`x = 0` 时, :math:`\lim\limits_{x \to 0^+} f(x) = \lim\limits_{x \to 0^+} \sin x = 0`,
+   :math:`\lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to 0^-} e^x = 1`, 因此 :math:`f(x)`
+   在 :math:`x = 0` 处不连续, 故不可导. 综上所述, 有
+
+   .. math::
+      f'(x) = \begin{cases}
+         \cos x, & x > 0, \\
+         \text{不存在}, & x = 0, \\
+         e^x, & x < 0.
+      \end{cases}
+
+   .. note::
+      这题要注意的地方是, 不要把导函数的单边极限 :math:`\lim\limits_{x \to 0^+} f'(x)`,
+      :math:`\lim\limits_{x \to 0^-} f'(x)`, 和单边导数 :math:`f'_+(0)`, :math:`f'_-(0)` 搞混了.
+
 .. _exercises-chap3-sec2:
 
 §3.2 求导法则
