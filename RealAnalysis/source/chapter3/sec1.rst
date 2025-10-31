@@ -62,13 +62,20 @@
 
 .. proof:proof::
 
-   由于 :math:`\mathbb{R}` 中开集有由互不相交的开区间构成的结构表示, 而有限函数 :math:`h(x)` 可测当且仅当
-   :math:`E(a < h < b)` 对所有的开区间 :math:`(a, b)` 都可测, 因此 :math:`h(x)` 可测当且仅当
-   :math:`E(f \in G)` 对所有的开集 :math:`G \subset \mathbb{R}` 都可测. 由于 :math:`f(x)` 是连续函数,
-   因此 :math:`f^{-1}(G)` 是开集, 那么
+   由于 :math:`\mathbb{R}` 中开集有由互不相交的开区间构成的结构表示 :math:`\displaystyle G = \bigcup_{n=1}^{\infty} I_n`,
+   :math:`I_n = (a_n, b_n)`, 而对于一个一般的有限函数 :math:`h(x)` 来说, 它是可测的当且仅当 :math:`E(a < h < b)` 对所有的
+   开区间 :math:`(a, b)` 都可测, 因此 :math:`h(x)` 可测当且仅当
 
    .. math::
-      E(f \circ g \in G) = E(g \in f^{-1}(G)) = E(g \in f^{-1}(G))
+      E(h \in G) = \bigcup_{n=1}^{\infty} E(a_n < h < b_n)
+
+   对所有的开集 :math:`G \subset \mathbb{R}` 都可测.
+
+   现在考虑复合函数 :math:`f \circ g`, 由于 :math:`f(x)` 是连续函数, 因此对任意开集 :math:`G \subset \mathbb{R}`,
+   :math:`f^{-1}(G)` 是开集. 那么
+
+   .. math::
+      E(f \circ g \in G) = E(g \in f^{-1}(G))
 
    是可测集, 即 :math:`f \circ g` 是可测函数.
 
