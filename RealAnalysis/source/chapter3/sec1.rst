@@ -138,23 +138,23 @@
     .. math::
       f(x) = \begin{cases}
          x + i, & x \in P_i, i = 0, 1, 2, \\
-         x + 3, & x \in [0, 1) \setminus \cup_{i=0}^2 P_i,
+         x + 3, & x \in [0, 1) \setminus \bigcup\limits_{i=0}^2 P_i,
       \end{cases}
 
     并规定 :math:`f(0) = 3, f(1/2) = 7/2`. 问 :math:`f(x)` 是否可测, 是否连续?
 
 .. proof:solution::
 
-   对每一个自然数 :math:`n`, 将 :math:`(0, 1)` 开区间分成 :math:`3^n` 个等长的开区间, 依顺序记为 :math:`I_{n, k} = \left(\dfrac{k}{3^n}, \dfrac{k+1}{3^n}\right)`,
-   :math:`k = 0, 1, \cdots, 3^n - 1`. 那么
+   对每一个自然数 :math:`n`, 将 :math:`(0, 1)` 开区间分成 :math:`3^n` 个等长的开区间, 依顺序记为
+   :math:`I_{n, k} = \left(\dfrac{k}{3^n}, \dfrac{k+1}{3^n}\right)`, :math:`k = 0, 1, \cdots, 3^n - 1`. 那么
 
    .. math::
-      x \in I_{n, k} \Longrightarrow x \text{ 的三进表示中第 } n \text{ 位数字为 } k \mod{3}.
+      x \in I_{n, k} \implies x \text{ 的三进表示中第 } n \text{ 位数字为 } k \bmod{3}.
 
    同时, 除 :math:`0, 1` 以外, 这些区间的端点为 :math:`1/3^n, 2/3^n, \cdots, (3^n - 1)/3^n`, 相应的无限三进表示分别为
 
    .. math::
-      0.\cdots 0 2 2 \cdots, 0.\cdots 1 2 2 \cdots, 0.\cdots 2 2 2 \cdots, \cdots
+      0.0 \cdots 0 0 2 2 \cdots, ~~ 0.0 \cdots 0 1 2 2 \cdots, ~~ \dots, ~~ 0.2 \cdots 2 1 2 2 \cdots
 
    因此有 (不交并表示)
 
@@ -164,17 +164,18 @@
    其中
 
    .. math::
-      P_i^{(0)} = \bigcap_{n=1}^{\infty} \left( \bigcup_{k \not\equiv i \mod{3}} I_{n, k} \right),
+      P_i^{(0)} = \bigcap_{n=1}^{\infty} \left( \bigcup\limits_{k \not\equiv i \bmod{3}} I_{n, k} \right),
 
-   :math:`Z_i \subset C` 是 Cantor 三分集 :math:`C` 的子集, 为零测集. 因此 :math:`P_i` 都是可测集. 我们还可以将 :math:`P_i` 表示为
+   :math:`Z_i` 为 :math:`\{ I_{n, k} \}_{n,k \in \mathbb{N}}` 的端点中三进表示不含数字 :math:`i` 的端点,
+   由于端点可列, 故是零测集. 因此 :math:`P_i` 都是可测集. 我们还可以将 :math:`P_i` 表示为
 
    .. math::
-      P_i = \left( \bigcap_{n=1}^{\infty} \left( \bigcup_{k \not\equiv i \mod{3}} I_{n, k}^{(i)} \right) \right) \setminus E_i,
+      P_i = \left( \bigcap_{n=1}^{\infty} \left( \bigcup\limits_{k \not\equiv i \bmod{3}} I_{n, k}^{(i)} \right) \right) \setminus E_i,
 
    其中
 
    .. math::
-      & I_{n, k}^{(2)} = I_{n, k}, \quad E_i = \emptyset, \\
+      & I_{n, k}^{(2)} = I_{n, k}, \quad E_2 = \emptyset, \\
       & I_{n, k}^{(1)} = I_{n, k} \cup \left\{ \dfrac{k+1}{3^n} \right\} = \left( \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right], \quad E_1 = \left\{ 1 \right\}, \\
       & I_{n, k}^{(0)} = I_{n, k} \cup \left\{ \dfrac{k}{3^n} \right\} = \left[ \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right), \quad E_0 = \left\{ 0 \right\}.
 
@@ -190,15 +191,15 @@
    .. math::
       f(P_0) \subset [0, 1], f(P_1) \subset [1, 2], f(P_2) \subset [2, 3], f \left( [0, 1) \setminus \bigcup_{i=0}^2 P_i \right) \subset [3, 4].
 
-   于是有
+   记 :math:`W = [0, 1) \setminus \bigcup\limits_{i=0}^2 P_i`, 于是有
 
    .. math::
       E(f > \alpha) = \begin{cases}
          \emptyset, & \alpha > 4, \\
-         (\alpha - 3, +\infty) \cap ([0, 1) \setminus \cup_{i=0}^2 P_i), & 3 < \alpha \leqslant 4, \\
-         (\alpha - 2, +\infty) \cap P_2, & 2 < \alpha \leqslant 3, \\
-         P_2 \cup ((\alpha - 1, +\infty) \cap P_1), & 1 < \alpha \leqslant 2, \\
-         P_2 \cup P_1 \cup ((\alpha, +\infty) \cap P_0), & 0 < \alpha \leqslant 1, \\
+         (\alpha - 3, +\infty) \cap ([0, 1) \setminus \bigcup\limits_{i=0}^2 P_i), & 3 < \alpha \leqslant 4, \\
+         W \cup ((\alpha - 2, +\infty) \cap P_2), & 2 < \alpha \leqslant 3, \\
+         W \cup P_2 \cup ((\alpha - 1, +\infty) \cap P_1), & 1 < \alpha \leqslant 2, \\
+         W \cup P_2 \cup P_1 \cup ((\alpha, +\infty) \cap P_0), & 0 < \alpha \leqslant 1, \\
          [0, 1), & \alpha \leqslant 0.
       \end{cases}
 

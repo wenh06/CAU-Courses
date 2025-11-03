@@ -208,7 +208,7 @@
    从而有 :math:`m^* E > 0`, 否则它就是零测集, 从而可测. 令
 
    .. math::
-      E_n = E + r_n \mod 1 = \{ x + r_n \mod 1 : x \in E \},
+      E_n = E + r_n \bmod 1 = \{ x + r_n \bmod 1 : x \in E \},
 
    :math:`n \in \mathbb{N}, \mathbb{Q} = \{r_n\}_{n \in \mathbb{N}}`, 那么 :math:`E_n` 互不相交,
    且 :math:`\bigcup\limits_{n=1}^\infty E_n = [0, 1)`, 从而有

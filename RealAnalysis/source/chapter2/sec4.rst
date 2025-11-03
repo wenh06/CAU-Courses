@@ -150,12 +150,12 @@
    可以找到 :math:`E_{n, k_0}` 中的正测度的可测子集
 
    .. math::
-      (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 = \{ x + k_0 ~ : ~ x \in A_{n_0, k_0} - k_0 + r_n \mod 1 \},
+      (A_{n_0, k_0} - k_0 + r_n \bmod 1) + k_0 = \{ x + k_0 ~ : ~ x \in A_{n_0, k_0} - k_0 + r_n \bmod 1 \},
 
    其中 :math:`\mathbb{Q} = \{ r_n \}_{n \in \mathbb{N}}` 是有理数集. 这些集合两两互不相交, 那么由测度的 :math:`\sigma`-可加性知
 
    .. math::
-      1 = m [k, k + 1) \geqslant \sum_{n \in \mathbb{N}} m \left( (A_{n_0, k_0} - k_0 + r_n \mod 1) + k_0 \right)
+      1 = m [k, k + 1) \geqslant \sum_{n \in \mathbb{N}} m \left( (A_{n_0, k_0} - k_0 + r_n \bmod 1) + k_0 \right)
       = \sum_{n \in \mathbb{N}} m A_{n_0, k_0} = \infty,
 
    矛盾. 所以至少存在一个 :math:`n_0, k_0 \in \mathbb{N}`, 使得 :math:`A_{n_0, k_0}` 不可测.
