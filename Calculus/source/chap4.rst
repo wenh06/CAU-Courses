@@ -235,7 +235,8 @@
       & R_n'(x_0) = R_n''(x_0) = \cdots = R_n^{(n)}(x_0) = 0, \\
       & R_n^{(n+1)}(x) = f^{(n+1)}(x).
 
-   由 Cauchy 中值定理知, 存在 :math:`x_0` 与 :math:`x` 之间的某个数 :math:`\xi_1` 使得
+   对函数 :math:`R_n(x)` 和 :math:`g(x) = (x - x_0)^{n + 1}` 应用 Cauchy 中值定理知, 存在 :math:`x_0` 与 :math:`x`
+   之间的某个数 :math:`\xi_1` 使得
 
    .. math::
       \dfrac{R_n(x)}{(x - x_0)^{n + 1}} = \dfrac{R_n(x) - R_n(x_0)}{(x - x_0)^{n + 1} - (x_0 - x_0)^{n + 1}}
