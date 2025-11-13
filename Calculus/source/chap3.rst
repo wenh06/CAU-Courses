@@ -76,11 +76,6 @@
 6. 证明: 函数
 
    .. math::
-      y = \dfrac{e^x}{\cos x}
-
-   的第 :math:`n` 阶导数为
-
-   .. math::
       f(x) = \begin{cases}
          e^{-\frac{1}{x^2}}, & x \neq 0, \\
          0, & x = 0,
@@ -121,24 +116,24 @@
    .. math::
       f^{(k)}(x) = P_k\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}},
 
-   其中 :math:`P_k(t)` 是关于 :math:`t` 的多项式. 因此
+   其中 :math:`P_k(t)` 是关于 :math:`t` 的多项式. 验证
+   :math:`f^{(k+1)}(x) = P_{k+1}\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}}`:
+
+   .. math::
+      f^{(k+1)}(x)
+      & = \dfrac{\mathrm{d}}{\mathrm{d} x} \left( P_k\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}} \right) \\
+      & = P_k'\left( \dfrac{1}{x} \right) \cdot \left( -\dfrac{1}{x^2} \right) e^{-\frac{1}{x^2}}
+      + P_k\left( \dfrac{1}{x} \right) \cdot \dfrac{2}{x^3} e^{-\frac{1}{x^2}} \\
+      & = \left( -\dfrac{1}{x^2} P_k'\left( \dfrac{1}{x} \right)
+         + \dfrac{2}{x^3} P_k\left( \dfrac{1}{x} \right) \right) e^{-\frac{1}{x^2}} \\
+      & = P_{k+1}\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}}.
+
+   这里, :math:`P_{k+1}(t) = -t^2 P_k'(t) + 2t^3 P_k(t)`. 因此
 
    .. math::
       f^{(k+1)}(0) & = \lim\limits_{x \to 0} \dfrac{P_k\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}}}{x}
          \xlongequal{t = \frac{1}{x}} \lim\limits_{t \to \infty} t P_k(t) e^{-t^2} \\
       & = \lim\limits_{t \to \infty} \dfrac{t P_k(t)}{e^{t^2}} = 0.
-
-   .. note::
-      验证 :math:`f^{(k+1)}(x) = P_{k+1}\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}}`:
-
-      .. math::
-         f^{(k+1)}(x)
-         & = \dfrac{\mathrm{d}}{\mathrm{d} x} \left( P_k\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}} \right) \\
-         & = P_k'\left( \dfrac{1}{x} \right) \cdot \left( -\dfrac{1}{x^2} \right) e^{-\frac{1}{x^2}}
-         + P_k\left( \dfrac{1}{x} \right) \cdot \dfrac{2}{x^3} e^{-\frac{1}{x^2}} \\
-         & = \left( -\dfrac{1}{x^2} P_k'\left( \dfrac{1}{x} \right)
-            + \dfrac{2}{x^3} P_k\left( \dfrac{1}{x} \right) \right) e^{-\frac{1}{x^2}} \\
-         & = P_{k+1}\left( \dfrac{1}{x} \right) e^{-\frac{1}{x^2}}.
 
 .. _exercises-chap3-sec4:
 
