@@ -1040,9 +1040,14 @@
       :align: center
       :xscale: 50
 
-      \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
-      \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$y$};
-      \draw[domain=-1.5:1.5, smooth, variable=\x, blue] plot ({\x}, {\x*\x*\x - \x});
+      \begin{axis}[
+         width=10cm, height=8cm, axis lines=middle,
+         xlabel=$x$, ylabel=$y$, minor tick num=4,
+         xmin=-2, xmax=2, ymin=-2.5, ymax=2.5,
+         samples=100, smooth,domain=-1.5:1.5
+      ]
+      \addplot[thick, cyan] {\x^3 - \x};
+      \end{axis}
 
    (2). 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的导函数为 :math:`y' = -\dfrac{1}{\sqrt{2\pi}} x e^{-\frac{x^2}{2}}`,
    令 :math:`y' = 0` 解得 :math:`x = 0`. 函数 :math:`y = \dfrac{1}{\sqrt{2\pi}} e^{-\frac{x^2}{2}}` 的二阶导函数为
@@ -1060,9 +1065,14 @@
       :align: center
       :xscale: 50
 
-      \draw[->] (-2.3, 0) -- (2.3, 0) node[right] {$x$};
-      \draw[->] (0, -0.5) -- (0, 0.8) node[above] {$y$};
-      \draw[domain=-2:2, smooth, variable=\x, blue] plot ({\x}, {1/sqrt(2*pi) * exp(-\x*\x/2)});
+      \begin{axis}[
+         width=10cm, height=8cm, axis lines=middle,
+         xlabel=$x$, ylabel=$y$, minor tick num=4,
+         xmin=-2.3, xmax=2.3, ymin=-0.5, ymax=0.8,
+         smooth, samples=200, domain=-2:2
+      ]
+      \addplot[thick, cyan, smooth] {1/sqrt(2*pi) * exp(-\x*\x/2)};
+      \end{axis}
 
    (3). 函数 :math:`y = x e^x` 的导函数为 :math:`y' = (x + 1) e^x`, 令 :math:`y' = 0` 解得 :math:`x = -1`.
    函数 :math:`y = x e^x` 的二阶导函数为 :math:`y'' = (x + 2) e^x`. 当 :math:`x = -1` 时, :math:`y'' = e^{-1} > 0`,
@@ -1078,6 +1088,11 @@
       :align: center
       :xscale: 50
 
-      \draw[->] (-3.3, 0) -- (1, 0) node[right] {$x$};
-      \draw[->] (0, -1) -- (0, 2) node[above] {$y$};
-      \draw[domain=-3:0.7, smooth, variable=\x, blue] plot ({\x}, {\x * exp(\x)});
+      \begin{axis}[
+         width=10cm, height=8cm, axis lines=middle,
+         xlabel=$x$, ylabel=$y$, minor tick num=4,
+         xmin=-3.3, xmax=1, ymin=-1, ymax=2,
+         smooth, samples=100, domain=-3:0.7
+      ]
+      \addplot[thick, cyan, smooth] {\x * exp(\x)};
+      \end{axis}

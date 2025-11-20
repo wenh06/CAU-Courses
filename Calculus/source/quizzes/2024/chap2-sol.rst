@@ -127,6 +127,10 @@
       :align: center
       :xscale: 50
 
-      \begin{axis}[samples=500, domain = -10:10, smooth, variable = \x, axis lines=middle, restrict y to domain = -1:21]
-      \addplot[very thick, blue] plot ({\x}, {abs(\x + 2) * exp(-1/\x)});
+      \begin{axis}[
+         samples=500, smooth, domain = -10:10,
+         variable = \x, axis lines=middle,
+         restrict y to domain = -1:21, minor tick num=4
+      ]
+      \addplot[thick, cyan] plot ({\x}, {abs(\x + 2) * exp(-1/\x)});
       \end{axis}

@@ -14,7 +14,7 @@
 §3.1 导数的概念
 ------------------------------------
 
-.. _exercises-chap3-sec1-3:
+.. _exercises-chap3-sec1-ex3:
 
 3. 设 :math:`f(x)` 在 :math:`x_0` 处可导, 求下列极限值.
 
@@ -36,7 +36,7 @@
         - \left( f(x_0) - f'(x_0) \cdot \Delta x + o(\Delta x) \right)}{\Delta x} \\
       = & \lim\limits_{\Delta x \to 0} \dfrac{3 f'(x_0) \cdot \Delta x + o(\Delta x)}{\Delta x} = 3 f'(x_0).
 
-.. _exercises-chap3-sec1-14:
+.. _exercises-chap3-sec1-ex14:
 
 14. 已知 :math:`f(x) = \begin{cases} \sin x, & x > 0, \\ e^x, & x \leqslant 0, \end{cases}` 求 :math:`f'(x)`.
 
@@ -71,7 +71,7 @@
 §3.3 高阶导数
 ------------------------------------
 
-.. _exercises-chap3-sec3-6:
+.. _exercises-chap3-sec3-ex6:
 
 6. 证明: 函数
 

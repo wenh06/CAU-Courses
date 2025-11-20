@@ -14,7 +14,7 @@
 §4.1 微分中值定理
 ------------------------------------
 
-.. _exercises-chap4_sec1-3:
+.. _exercises-chap4_sec1-ex3:
 
 3. 设 :math:`f(x)` 在 :math:`[0, 1]` 上连续, 在 :math:`(0, 1)` 内可导, 且 :math:`f(1) = 0`, 试证明: 至少存在一点
    :math:`\xi \in (0, 1)` 使得 :math:`\displaystyle f'(\xi) = -\dfrac{2 f(\xi)}{\xi}`.
@@ -32,7 +32,7 @@
    .. math::
       g'(\xi) = 0 \implies f'(\xi) = -\dfrac{2f(\xi)}{\xi}.
 
-.. _exercises-chap4_sec1-4:
+.. _exercises-chap4_sec1-ex4:
 
 4. 设 :math:`0 < a < b`, 证明不等式 :math:`\displaystyle \dfrac{b-a}{b} < \ln \dfrac{b}{a} < \dfrac{b-a}{a}`.
 
@@ -63,7 +63,7 @@
 §4.3 泰勒公式
 ------------------------------------
 
-.. _exercises-chap4_sec3-8:
+.. _exercises-chap4_sec3-ex8:
 
 8. 证明当 :math:`x \to 0` 时, 有:
 
@@ -94,7 +94,7 @@
         - \left({\color{red}\frac{1}{720}} - {\color{cyan}\frac{1}{48}} + {\color{green}\frac{1}{24}}\right) x^6 + o(x^6) \\
       = & -\frac{1}{2}x^2 - \frac{1}{12}x^4 - \frac{1}{45}x^6 + o(x^6).
 
-.. _exercises-chap4_sec3-9:
+.. _exercises-chap4_sec3-ex9:
 
 9. 用泰勒公式计算极限:
 
@@ -103,13 +103,13 @@
 
 .. proof:solution::
 
-   可以利用 :ref:`上一题 <exercises-chap4_sec3-8>` 的结果, 先对分子进行等价无穷小替换
+   可以利用 :ref:`上一题 <exercises-chap4_sec3-ex8>` 的结果, 先对分子进行等价无穷小替换
 
    .. math::
       \ln(\cos x) \sim -\frac{1}{2}x^2.
 
    .. note::
-      假设我们不知道 :ref:`上一题 <exercises-chap4_sec3-8>` 的结果, 我们同样可以做等价无穷小替换
+      假设我们不知道 :ref:`上一题 <exercises-chap4_sec3-ex8>` 的结果, 我们同样可以做等价无穷小替换
 
       .. math::
          \ln(\cos x) = \ln(1 + (\cos x - 1)) \sim \cos x - 1 \sim -\frac{1}{2}x^2.
@@ -138,6 +138,44 @@
 
 §4.5 函数的极值与最值
 ------------------------------------
+
+.. _exercises-chap4_sec5-ex5:
+
+5. 绘制函数 :math:`\displaystyle f(x) = \dfrac{x^2+1}{x-1}` 的图像, 并讨论其渐近行为. 如果存在的话, 找出函数的垂直渐近线,
+   水平渐近线和斜渐近线.
+
+.. proof:solution::
+
+   :math:`x = 1` 为奇点, 由于
+
+   .. math::
+      \lim_{x \to 1^-} f(x) = -\infty, \quad \lim_{x \to 1^+} f(x) = +\infty,
+
+   故 :math:`x = 1` 为垂直渐近线.
+
+   计算水平渐近线、斜渐近线 :math:`y = kx + b`:
+
+   .. math::
+      k & = \lim_{x \to \infty} \dfrac{f(x)}{x} = \lim_{x \to \infty} \dfrac{x^2+1}{x(x-1)} = 1, \\
+      b & = \lim_{x \to \infty} \left( f(x) - kx \right) = \lim_{x \to \infty} \left( \dfrac{x^2+1}{x-1} - x \right) = \lim_{x \to \infty} \dfrac{x+1}{x-1} = 1,
+
+   故有斜渐近线 :math:`y = x + 1`.
+
+   .. tikz:: 函数 :math:`\displaystyle f(x) = \dfrac{x^2+1}{x-1}` 的图像
+      :align: center
+      :xscale: 70
+
+      \begin{axis}[
+         width=8cm, height=10cm, axis lines=middle,
+         xlabel=$x$, ylabel=$y$,
+         smooth, samples=200, minor tick num=4,
+         xmin=-5, xmax=7, ymin=-30, ymax=30,
+      ]
+      \addplot[thick, cyan, domain=-5:0.99] {(\x^2+1)/(\x-1)};
+      \addplot[thick, cyan, domain=1.01:7] {(\x^2+1)/(\x-1)};
+      \addplot[dashed, red, domain=-5:7] {\x + 1};
+      \addplot[dashed, red, domain=-30:30, variable=\y] ({1}, {\y});
+      \end{axis}
 
 .. _extra-chap4:
 

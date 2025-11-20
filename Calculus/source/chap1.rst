@@ -15,7 +15,7 @@
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec1-3:
+.. _exercises-chap1-sec1-ex3:
 
 3. 判断函数奇偶性:
 
@@ -32,7 +32,7 @@
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec2-3:
+.. _exercises-chap1-sec2-ex3:
 
 3. 设 :math:`f(x-2) = e^{x^2}`, 求 :math:`f(x)`.
 
@@ -60,7 +60,7 @@
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec3-2:
+.. _exercises-chap1-sec3-ex2:
 
 2. 设 :math:`f\left( x - \dfrac{1}{x} \right) = x^2 + \dfrac{1}{x^2}`, 求 :math:`f(x)`.
 

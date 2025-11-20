@@ -148,6 +148,12 @@
             :align: center
             :xscale: 60
 
-            \draw[->] (-0.3, 0) -- (5, 0) node[right] {$x$};
-            \draw[->] (0, -0.3) -- (0, 2) node[above] {$y$};
-            \draw[domain=0.01:4.7, smooth, variable=\x, blue] plot ({\x}, {exp(ln(\x)/\x)});
+            \begin{axis}[
+                width=10cm, height=8cm, axis lines=middle,
+                xlabel=$x$, ylabel=$y$,
+                xmin=-0.3, xmax=5, ymin=-0.3, ymax=2,
+                smooth, samples=200,
+                domain=0.01:4.7, minor tick num=4
+            ]
+            \addplot[thick, cyan, smooth] {exp(ln(\x)/\x)};
+            \end{axis}

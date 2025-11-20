@@ -109,8 +109,8 @@
 
    令 :math:`f''(x) = 0`，得 :math:`x = 2`
 
-   - 当 :math:`x < 2` 时，:math:`f''(x) < 0`，函数凸 (下凸)
-   - 当 :math:`x > 2` 时，:math:`f''(x) > 0`，函数凹 (上凸)
+   - 当 :math:`x < 2` 时，:math:`f''(x) < 0`，函数凹 (上凸)
+   - 当 :math:`x > 2` 时，:math:`f''(x) > 0`，函数凸 (下凸)
    - :math:`x = 2` 是拐点，拐点坐标为 :math:`(2, 2e^{-2})`
 
    **渐近线：**
@@ -118,3 +118,16 @@
    - 水平渐近线：:math:`\lim\limits_{x \to +\infty} x e^{-x} = 0`，故有水平渐近线 :math:`y = 0`
    - 垂直渐近线：无
    - 斜渐近线：无
+
+   .. tikz:: 函数 :math:`f(x) = x e^{-x}` 的图像
+      :align: center
+      :xscale: 50
+
+      \begin{axis}[
+         samples=500, smooth,
+         variable = \x, domain = -0.8:4,
+         axis lines=middle, minor tick num=4,
+         restrict y to domain = -0.5:0.55
+      ]
+      \addplot[thick, cyan] plot ({\x}, {\x * exp(-\x)});
+      \end{axis}
