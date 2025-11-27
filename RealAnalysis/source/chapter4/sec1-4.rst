@@ -512,7 +512,7 @@
     :math:`a` 是一确定的实数, 令
 
     .. math::
-         F(x) = \dfrac{1}{2x} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t, \quad x \in \mathbb{R}.
+         F(x) = \dfrac{1}{2x} \int_{a - x}^{a + x} f(t) ~ \mathrm{d} t, \quad x \in \mathbb{R}.
 
     试证 :math:`F(x) \not\in L(\mathbb{R})`.
 
@@ -521,22 +521,22 @@
    由于
 
    .. math::
-      \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t = \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t,
+      \int_{a - x}^{a + x} f(t) ~ \mathrm{d} t = \int_{-\infty}^{\infty} f(t) \chi_{[a - x, a + x]}(t) ~ \mathrm{d} t,
 
    所以由控制收敛定理有
 
    .. math::
-      \lim_{x \to \infty} \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t
-      & = \lim_{x \to \infty} \int_{-\infty}^{\infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
-      & = \int_{-\infty}^{\infty} \lim_{x \to \infty} f(t) \chi_{[x - a, x + a]}(t) ~ \mathrm{d} t \\
+      \lim_{x \to \infty} \int_{a - x}^{a + x} f(t) ~ \mathrm{d} t
+      & = \lim_{x \to \infty} \int_{-\infty}^{\infty} f(t) \chi_{[a - x, a + x]}(t) ~ \mathrm{d} t \\
+      & = \int_{-\infty}^{\infty} \lim_{x \to \infty} f(t) \chi_{[a - x, a + x]}(t) ~ \mathrm{d} t \\
       & = \int_{-\infty}^{\infty} f(t) ~ \mathrm{d} t.
 
    记 :math:`\displaystyle A = \int_{-\infty}^{\infty} f(t) ~ \mathrm{d} t`, 不妨设 :math:`A > 0`, 否则考虑 :math:`-F` 即可.
    那么对任意 :math:`A/2 > \varepsilon > 0`, 存在 :math:`M > 0`, 使得对任意 :math:`x > M` 有
-   :math:`\displaystyle \left\lvert \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t - A \right\rvert < \varepsilon`, 即
+   :math:`\displaystyle \left\lvert \int_{a - x}^{a + x} f(t) ~ \mathrm{d} t - A \right\rvert < \varepsilon`, 即
 
    .. math::
-      A - \varepsilon < \int_{x - a}^{x + a} f(t) ~ \mathrm{d} t < A + \varepsilon.
+      A - \varepsilon < \int_{a - x}^{a + x} f(t) ~ \mathrm{d} t < A + \varepsilon.
 
    那么在 :math:`(M, +\infty)` 上有 :math:`\displaystyle F(x) > \dfrac{A}{4x}`, 后者在 :math:`(M, +\infty)` 不是勒贝格可积的,
    从而知 :math:`F(x) \not\in L(\mathbb{R})`.
