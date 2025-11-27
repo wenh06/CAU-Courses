@@ -486,6 +486,15 @@
 
    综合 :math:`1^{\circ}, 2^{\circ}, 3^{\circ}`, 有 :math:`\{B : f^{-1} (B) \in \mathscr{A} \}` 为 :math:`Y` 中的 :math:`\sigma` 代数.
 
+   .. note::
+      也记
+
+      .. math::
+         f^{-1} (\mathscr{B}) ~ (\text{或者 } f^{*} (\mathscr{B})) = \{ f^{-1} (B) : B \in \mathscr{B} \}, \quad
+         f_* (\mathscr{A}) = \{B : f^{-1} (B) \in \mathscr{A} \},
+
+      分别称为 inverse image (或者 pull back) 与 direct image (或者 push forward).
+
 .. _ex-2-36:
 
 36. 设 :math:`\mathscr{A}` 为由 :math:`\mathbb{R}` 中的一切这样的可测集 :math:`E` 构成:
@@ -540,30 +549,45 @@
 
 .. proof:proof::
 
+   沿用 :ref:`本章第 35 题 <ex-2-35>` 的记号.
+
    由于 :math:`\mathscr{S} \subset \sigma (\mathscr{S})`, 那么有 :math:`f^{-1} (\mathscr{S}) \subset f^{-1} (\sigma (\mathscr{S}))`.
    由于 :math:`\sigma (f^{-1} (\mathscr{S}))` 为包含 :math:`f^{-1} (\mathscr{S})` 的最小的 :math:`\sigma` 代数,
    并且由 :ref:`本章第 35 题 <ex-2-35>` 知 :math:`f^{-1} (\sigma (\mathscr{S}))` 为 :math:`Y` 中的 :math:`\sigma` 代数,
    故 :math:`\sigma (f^{-1} (\mathscr{S})) \subset f^{-1} (\sigma (\mathscr{S}))`.
 
-   另一方面, 我们需要注意到这样一个事实:
-
-      对于任意一个 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 有 :math:`f^{-1}(f(A)) = A`.
-
-   对于 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 有 :math:`f(A) \in \sigma (\mathscr{S})`, 从而存在 :math:`E_1, E_2, \dots \in \mathscr{S}`,
-   使得
+   另一方面, 依定义显然有包含关系
 
    .. math::
-      f(A) \subset \bigcup\limits_{n=1}^{\infty} E_n \subset \bigcup\limits_{n=1}^{\infty} f(f^{-1} (E_n)).
+      \mathscr{S} \subset f_* (\sigma (f^{-1} (\mathscr{S}))) = \{B : f^{-1} (B) \in \sigma (f^{-1} (\mathscr{S})) \}.
 
-   记 :math:`\widetilde{E}_n = f(f^{-1} (E_n)), E = \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A)`, 有
+   事实上, 对任意 :math:`S \in \mathscr{S}`, 由于 :math:`f^{-1} (S) \in f^{-1} (\mathscr{S}) \subset \sigma (f^{-1} (\mathscr{S}))`,
+   故 :math:`S \in f_* (\sigma (f^{-1} (\mathscr{S})))`.
+   同样由 :ref:`本章第 35 题 <ex-2-35>` 知 :math:`f_* (\sigma (f^{-1} (\mathscr{S})))` 为 :math:`X` 中的 :math:`\sigma` 代数,
+   故 :math:`\sigma (\mathscr{S}) \subset f_* (\sigma (f^{-1} (\mathscr{S})))`. 由此可得
 
    .. math::
-      f^{-1} (E) = f^{-1} \left( \left( \bigcup\limits_{n=1}^{\infty} \widetilde{E}_n \right) \setminus f(A) \right)
-      = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (\widetilde{E}_n) \right) \setminus A
-      = \left( \bigcup\limits_{n=1}^{\infty} f^{-1} (E_n) \right) \setminus A.
+      f^{-1} (\sigma (\mathscr{S})) \subset f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S})))).
 
-   由于 :math:`\bigcup\limits_{n=1}^{\infty} f^{-1} (E_n) \in \sigma (f^{-1} (\mathscr{S})) \subset f^{-1} (\sigma (\mathscr{S}))`,
-   并且 :math:`A \in f^{-1} (\sigma (\mathscr{S}))`, 那么有 :math:`f^{-1} (E) \in f^{-1} (\sigma (\mathscr{S}))`,
-   即 :math:`E \in \sigma (\mathscr{S})`.
+   于是只要证明
 
-   未完。。。。
+   .. math::
+      :label: ex-2-37-eq-1
+
+      f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S})))) \subset \sigma (f^{-1} (\mathscr{S}))
+
+   即可.
+
+   .. admonition:: :eq:`ex-2-37-eq-1` 的证明
+      :class: note
+
+      任取 :math:`A \in f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S}))))`, 那么存在
+      :math:`B \in f_* (\sigma (f^{-1} (\mathscr{S})))`, 使得 :math:`A = f^{-1} (B)`.
+      由 :math:`B \in f_* (\sigma (f^{-1} (\mathscr{S})))` 可知 :math:`f^{-1} (B) \in \sigma (f^{-1} (\mathscr{S}))`,
+      即 :math:`A \in \sigma (f^{-1} (\mathscr{S}))`. 综上所述, 有
+      :math:`f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S})))) \subset \sigma (f^{-1} (\mathscr{S}))`.
+
+      事实上, 很容易看出, :eq:`ex-2-37-eq-1` 中的包含关系实际上是等号关系, 即有
+
+      .. math::
+         f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S})))) = \sigma (f^{-1} (\mathscr{S})).
