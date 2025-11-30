@@ -3,19 +3,19 @@
 
 .. contents:: :local:
 
-.. _exercises-chap1:
+.. _ex-chap1:
 
 课后习题解答
 ================================
 
-.. _exercises-chap1-sec1:
+.. _ex-chap1-sec1:
 
 §1.1 函数的概念与性质
 --------------------------------
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec1-ex3:
+.. _ex-chap1-sec1-ex3:
 
 3. 判断函数奇偶性:
 
@@ -25,14 +25,14 @@
 
    计算 :math:`f(-x) = \ln(\sqrt{1+(-x)^2}-(-x)) = \ln(\sqrt{1+x^2}+x) = \ln\frac{1}{\sqrt{1+x^2}-x} = -\ln(\sqrt{1+x^2}-x) = -f(x)`, 故为奇函数.
 
-.. _exercises-chap1-sec2:
+.. _ex-chap1-sec2:
 
 §1.2 反函数与复合函数
 --------------------------------
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec2-ex3:
+.. _ex-chap1-sec2-ex3:
 
 3. 设 :math:`f(x-2) = e^{x^2}`, 求 :math:`f(x)`.
 
@@ -53,14 +53,14 @@
 
    这里关键是定义域要计算清楚.
 
-.. _exercises-chap1-sec3:
+.. _ex-chap1-sec3:
 
 §1.3 基本初等函数、初等函数
 --------------------------------
 
 这节题目大部分比较简单, 容易错的主要是以下几题:
 
-.. _exercises-chap1-sec3-ex2:
+.. _ex-chap1-sec3-ex2:
 
 2. 设 :math:`f\left( x - \dfrac{1}{x} \right) = x^2 + \dfrac{1}{x^2}`, 求 :math:`f(x)`.
 
@@ -74,7 +74,7 @@
 
    所以 :math:`f(x) = x^2 + 2`.
 
-.. _exercises-chap1-sec4:
+.. _ex-chap1-sec4:
 
 §1.4 函数的极坐标方程与参数方程
 --------------------------------

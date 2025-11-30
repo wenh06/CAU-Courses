@@ -4,17 +4,17 @@
 .. contents:: :local:
 
 
-.. _exercises-chap3:
+.. _ex-chap3:
 
 课后习题解答
 ====================================
 
-.. _exercises-chap3-sec1:
+.. _ex-chap3-sec1:
 
 §3.1 导数的概念
 ------------------------------------
 
-.. _exercises-chap3-sec1-ex3:
+.. _ex-chap3-sec1-ex3:
 
 3. 设 :math:`f(x)` 在 :math:`x_0` 处可导, 求下列极限值.
 
@@ -36,7 +36,7 @@
         - \left( f(x_0) - f'(x_0) \cdot \Delta x + o(\Delta x) \right)}{\Delta x} \\
       = & \lim\limits_{\Delta x \to 0} \dfrac{3 f'(x_0) \cdot \Delta x + o(\Delta x)}{\Delta x} = 3 f'(x_0).
 
-.. _exercises-chap3-sec1-ex14:
+.. _ex-chap3-sec1-ex14:
 
 14. 已知 :math:`f(x) = \begin{cases} \sin x, & x > 0, \\ e^x, & x \leqslant 0, \end{cases}` 求 :math:`f'(x)`.
 
@@ -61,17 +61,17 @@
       这题要注意的地方是, 不要把导函数的单边极限 :math:`\lim\limits_{x \to 0^+} f'(x)`,
       :math:`\lim\limits_{x \to 0^-} f'(x)`, 和单边导数 :math:`f'_+(0)`, :math:`f'_-(0)` 搞混了.
 
-.. _exercises-chap3-sec2:
+.. _ex-chap3-sec2:
 
 §3.2 求导法则
 ------------------------------------
 
-.. _exercises-chap3-sec3:
+.. _ex-chap3-sec3:
 
 §3.3 高阶导数
 ------------------------------------
 
-.. _exercises-chap3-sec3-ex6:
+.. _ex-chap3-sec3-ex6:
 
 6. 证明: 函数
 
@@ -135,7 +135,7 @@
          \xlongequal{t = \frac{1}{x}} \lim\limits_{t \to \infty} t P_k(t) e^{-t^2} \\
       & = \lim\limits_{t \to \infty} \dfrac{t P_k(t)}{e^{t^2}} = 0.
 
-.. _exercises-chap3-sec4:
+.. _ex-chap3-sec4:
 
 §3.4 函数的微分
 ------------------------------------

@@ -4,27 +4,48 @@
 .. contents:: :local:
 
 
-.. _exercises-chap5:
+.. _ex-chap5:
 
 课后习题解答
 ====================================
 
-.. _exercises-chap5-sec1:
+.. _ex-chap5-sec1:
 
 5.1 不定积分的概念与性质
 ------------------------------------
 
-.. _exercises-chap5-sec2:
+.. _ex-chap5-sec1-ex3:
+
+3. 设 :math:`f'(x) = \sin x`, 求 :math:`f(x)` 的全体原函数.
+
+.. proof:solution::
+
+   由不定积分的定义, 有
+
+   .. math::
+      f(x) = \int \sin x ~ \mathrm{d}x = -\cos x + C.
+
+   那么, :math:`f(x)` 的全体原函数, 即它的不定积分为
+
+   .. math::
+      \int f(x) ~ \mathrm{d}x = \int \left( -\cos x + C \right) ~ \mathrm{d}x = -\sin x + Cx + D,
+
+   其中 :math:`C, D` 为任意常数.
+
+   .. note::
+      这题是已知函数的导函数, 求它的原函数, 不是求该函数本身, 注意文字上的细微差别.
+
+.. _ex-chap5-sec2:
 
 §5.2 换元积分法
 ------------------------------------
 
-.. _exercises-chap5-sec3:
+.. _ex-chap5-sec3:
 
 §5.3 分部积分法
 ------------------------------------
 
-.. _exercises-chap5-sec4:
+.. _ex-chap5-sec4:
 
 §5.4 几种特殊类型函数的不定积分
 ------------------------------------

@@ -4,17 +4,17 @@
 .. contents:: :local:
 
 
-.. _exercises-chap2:
+.. _ex-chap2:
 
 课后习题解答
 ================================
 
-.. _exercises-chap2-sec1:
+.. _ex-chap2-sec1:
 
 §2.1 数列的极限
 --------------------------------
 
-.. _exercises-chap2-sec1-ex1:
+.. _ex-chap2-sec1-ex1:
 
 1. 依据 :math:`\varepsilon - N` 定义证明:
 
@@ -38,7 +38,7 @@
    这里 :math:`[ x ]` 表示 :math:`x` 的整数部分. 这里让 :math:`N` 至少为 2,
    是为了保证二项式展开式 :eq:`binomial-expansion` 中的 :math:`\dfrac{n(n-1)}{2} \varepsilon^2` 项存在.
 
-.. _exercises-chap2-sec1-ex4:
+.. _ex-chap2-sec1-ex4:
 
 4. 设 :math:`x_n = \begin{cases} \dfrac{n-1}{n}, & n ~ \text{为偶数}, \\ \dfrac{\sqrt{n^2+1}}{n}, & n ~ \text{为奇数}, \end{cases}`
    证明 :math:`\lim\limits_{n \to \infty} x_n = 1`.
@@ -56,7 +56,7 @@
 
    因此只需取 :math:`N = \left[ \dfrac{1}{\varepsilon} \right] + 1` 即可.
 
-.. _exercises-chap2-sec1-ex7:
+.. _ex-chap2-sec1-ex7:
 
 7. 设 :math:`\lim\limits_{n \to \infty} x_n = 0`, :math:`y_n` 是一个有界数列, 即存在常数 :math:`M > 0`,
    使得 :math:`|y_n| < M (n = 1, 2, \dots)`. 证明 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
@@ -73,12 +73,12 @@
 
    这就证明了 :math:`\lim\limits_{n \to \infty} x_n y_n = 0`.
 
-.. _exercises-chap2-sec2:
+.. _ex-chap2-sec2:
 
 §2.2 函数的极限
 --------------------------------
 
-.. _exercises-chap2-sec2-ex6:
+.. _ex-chap2-sec2-ex6:
 
 6. 证明: 若 :math:`\lim\limits_{x\to\infty} f(x) = a > 0`, 则存在 :math:`X > 0`,
    使得当 :math:`|x| > X` 时, :math:`f(x) > 0`.
@@ -92,12 +92,12 @@
    .. math::
       0 < \dfrac{a}{2} < f(x) < \dfrac{3a}{2}.
 
-.. _exercises-chap2-sec3:
+.. _ex-chap2-sec3:
 
 §2.3 极限运算法则
 --------------------------------
 
-.. _exercises-chap2-sec3-ex5:
+.. _ex-chap2-sec3-ex5:
 
 5. 设 :math:`f(x)` 是一个函数, 若直线 :math:`y = kx + b` 满足
 
@@ -160,12 +160,12 @@
 
    于是, 截距 :math:`b = 2`. 这样就算得 :math:`f(x)` 还有斜渐近线 :math:`y = x + 2`.
 
-.. _exercises-chap2-sec4:
+.. _ex-chap2-sec4:
 
 §2.4 极限存在准则与重要极限
 --------------------------------
 
-.. _exercises-chap2-sec4-ex4:
+.. _ex-chap2-sec4-ex4:
 
 4. 设 :math:`a > 0`, 数列 :math:`\{ x_n \}` 满足 :math:`x_1 = \sqrt{a}`, :math:`x_2 = \sqrt{a + x_1}`,
    ..., :math:`x_n = \sqrt{a + x_{n-1}}`, ..., 证明数列 :math:`\{ x_n \}` 收敛, 并求其极限.
@@ -201,7 +201,7 @@
 
    解得 :math:`A = \dfrac{1 + \sqrt{1 + 4a}}{2}` (舍去负根).
 
-.. _exercises-chap2-sec4-ex5:
+.. _ex-chap2-sec4-ex5:
 
 5. 设 :math:`a_1, a_2, \dots, a_k` 是 :math:`k` 个正数, 求极限
    :math:`\lim\limits_{n \to \infty} \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n}`.
@@ -219,7 +219,7 @@
    .. math::
       \lim_{n \to \infty} \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n} = M = \max \{ a_1, a_2, \dots, a_k \}.
 
-.. _exercises-chap2-sec4-ex7:
+.. _ex-chap2-sec4-ex7:
 
 7. 斐波那契数列 :math:`\{ x_n \}` 如下定义:
 
@@ -286,12 +286,12 @@
    .. math::
       \lim_{n \to \infty} y_n = L = \dfrac{1 + \sqrt{5}}{2}.
 
-.. _exercises-chap2-sec5:
+.. _ex-chap2-sec5:
 
 §2.5 无穷大量与无穷小量
 --------------------------------
 
-.. _exercises-chap2-sec5-ex2:
+.. _ex-chap2-sec5-ex2:
 
 2. 计算下列极限:
 
@@ -314,12 +314,12 @@
          \lim_{x \to +\infty} x[\ln(x + 1) - \ln x] = \lim_{x \to +\infty} x \ln \left( 1 + \dfrac{1}{x} \right)
          \xlongequal{t = \frac{1}{x}} \lim_{t \to 0^+} \dfrac{\ln(1 + t)}{t} = 1.
 
-.. _exercises-chap2-sec6:
+.. _ex-chap2-sec6:
 
 §2.6 函数的连续性和间断点
 --------------------------------
 
-.. _exercises-chap2-sec7:
+.. _ex-chap2-sec7:
 
 §2.7 闭区间上连续函数的性质
 --------------------------------

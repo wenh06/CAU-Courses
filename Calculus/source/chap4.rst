@@ -4,17 +4,17 @@
 .. contents:: :local:
 
 
-.. _exercises-chap4:
+.. _ex-chap4:
 
 课后习题解答
 ====================================
 
-.. _exercises-chap4_sec1:
+.. _ex-chap4_sec1:
 
 §4.1 微分中值定理
 ------------------------------------
 
-.. _exercises-chap4_sec1-ex3:
+.. _ex-chap4_sec1-ex3:
 
 3. 设 :math:`f(x)` 在 :math:`[0, 1]` 上连续, 在 :math:`(0, 1)` 内可导, 且 :math:`f(1) = 0`, 试证明: 至少存在一点
    :math:`\xi \in (0, 1)` 使得 :math:`\displaystyle f'(\xi) = -\dfrac{2 f(\xi)}{\xi}`.
@@ -32,7 +32,7 @@
    .. math::
       g'(\xi) = 0 \implies f'(\xi) = -\dfrac{2f(\xi)}{\xi}.
 
-.. _exercises-chap4_sec1-ex4:
+.. _ex-chap4_sec1-ex4:
 
 4. 设 :math:`0 < a < b`, 证明不等式 :math:`\displaystyle \dfrac{b-a}{b} < \ln \dfrac{b}{a} < \dfrac{b-a}{a}`.
 
@@ -53,17 +53,17 @@
    这些不等式的证明, 都是通过构造某个 (辅助) 函数, 再利用微分中值定理来完成的.
    关键在于, 通过要证明的不等式, 找到 (反推) 合适的辅助函数.
 
-.. _exercises-chap4_sec2:
+.. _ex-chap4_sec2:
 
 §4.2 洛必达法则
 ------------------------------------
 
-.. _exercises-chap4_sec3:
+.. _ex-chap4_sec3:
 
 §4.3 泰勒公式
 ------------------------------------
 
-.. _exercises-chap4_sec3-ex8:
+.. _ex-chap4_sec3-ex8:
 
 8. 证明当 :math:`x \to 0` 时, 有:
 
@@ -94,7 +94,7 @@
         - \left({\color{red}\frac{1}{720}} - {\color{cyan}\frac{1}{48}} + {\color{green}\frac{1}{24}}\right) x^6 + o(x^6) \\
       = & -\frac{1}{2}x^2 - \frac{1}{12}x^4 - \frac{1}{45}x^6 + o(x^6).
 
-.. _exercises-chap4_sec3-ex9:
+.. _ex-chap4_sec3-ex9:
 
 9. 用泰勒公式计算极限:
 
@@ -103,13 +103,13 @@
 
 .. proof:solution::
 
-   可以利用 :ref:`上一题 <exercises-chap4_sec3-ex8>` 的结果, 先对分子进行等价无穷小替换
+   可以利用 :ref:`上一题 <ex-chap4_sec3-ex8>` 的结果, 先对分子进行等价无穷小替换
 
    .. math::
       \ln(\cos x) \sim -\frac{1}{2}x^2.
 
    .. note::
-      假设我们不知道 :ref:`上一题 <exercises-chap4_sec3-ex8>` 的结果, 我们同样可以做等价无穷小替换
+      假设我们不知道 :ref:`上一题 <ex-chap4_sec3-ex8>` 的结果, 我们同样可以做等价无穷小替换
 
       .. math::
          \ln(\cos x) = \ln(1 + (\cos x - 1)) \sim \cos x - 1 \sim -\frac{1}{2}x^2.
@@ -129,17 +129,17 @@
       = & \lim_{x \to 0} \dfrac{-\frac{1}{2}x^2}{\frac{1}{2}x^2 + o(x^2)} \\
       = & -1.
 
-.. _exercises-chap4_sec4:
+.. _ex-chap4_sec4:
 
 §4.4 函数的单调性
 ------------------------------------
 
-.. _exercises-chap4_sec5:
+.. _ex-chap4_sec5:
 
 §4.5 函数的极值与最值
 ------------------------------------
 
-.. _exercises-chap4_sec5-ex5:
+.. _ex-chap4_sec5-ex5:
 
 5. 绘制函数 :math:`\displaystyle f(x) = \dfrac{x^2+1}{x-1}` 的图像, 并讨论其渐近行为. 如果存在的话, 找出函数的垂直渐近线,
    水平渐近线和斜渐近线.
