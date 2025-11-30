@@ -50,6 +50,20 @@
 §5.4 几种特殊类型函数的不定积分
 ------------------------------------
 
+.. _ex-chap5-sec4-ex2:
+
+2. 试不用万用转换公式计算 :math:`\displaystyle \int \dfrac{1}{\sin^4 x} ~ \mathrm{d}x`.
+
+.. proof:solution::
+
+   注意到 :math:`\dfrac{1}{\sin^4 x} = \csc^4 x`, 因此有
+
+   .. math::
+      \int \dfrac{1}{\sin^4 x} ~ \mathrm{d}x
+      & = \int \csc^4 x ~ \mathrm{d}x = \int \csc^2 x \cdot \csc^2 x ~ \mathrm{d}x \\
+      & = - \int (1 + \cot^2 x) ~ \mathrm{d} (\cot x) \\
+      & = - \cot x - \dfrac{1}{3} \cot^3 x + C.
+
 .. _extra-chap5:
 
 补充内容
