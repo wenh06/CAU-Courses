@@ -1038,7 +1038,7 @@
       & = \sum_{n=1}^\infty n \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = \sum_{n=1}^\infty m E (n - 1 \leqslant \lvert f \rvert < n) + \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = m E + \sum_{n=1}^\infty n \cdot m E (n \leqslant \lvert f \rvert < n + 1) \\
-      & = m E + \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n) \\
+      & = m E + \sum_{n=1}^\infty m E (\lvert f \rvert \geqslant n) \\
       & < \infty.
 
    这说明 :math:`\lvert f \rvert` 在 :math:`E` 上可积, 从而知 :math:`f` 在 :math:`E` 上可积.
@@ -1053,7 +1053,7 @@
       & = \sum_{n=1}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = \sum_{n=2}^\infty (n - 1) \cdot m E (n - 1 \leqslant \lvert f \rvert < n) \\
       & = \sum_{n=1}^\infty n \cdot m E (n \leqslant \lvert f \rvert < n + 1) \\
-      & = \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n).
+      & = \sum_{n=1}^\infty m E (\lvert f \rvert \geqslant n).
 
    这说明 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛.
 
@@ -1061,8 +1061,8 @@
       实际上, 本题使用了如下的不等式:
 
       .. math::
-         \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n) \leqslant \int_E \lvert f \rvert ~ \mathrm{d} m
-         \leqslant m E + \sum_{n=1}^\infty E (\lvert f \rvert \geqslant n).
+         \sum_{n=1}^\infty m E (\lvert f \rvert \geqslant n) \leqslant \int_E \lvert f \rvert ~ \mathrm{d} m
+         \leqslant m E + \sum_{n=1}^\infty m E (\lvert f \rvert \geqslant n).
 
    从上面的证明可以看出, 当 :math:`m E = \infty` 时, 级数 :math:`\displaystyle \sum_{n=1}^\infty m E ( \lvert f \rvert \geqslant n)` 收敛是
    :math:`f` 在 :math:`E` 上可积的必要条件, 但不是充分条件. 相关的反例: 令 :math:`f = \dfrac{1}{2}` 为常值函数,
