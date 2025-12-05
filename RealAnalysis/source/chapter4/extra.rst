@@ -41,3 +41,9 @@
       \varphi_n(x) = \frac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x+u) D_n(u) ~ \mathrm{d} u
                    = \frac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x+u)
                      \dfrac{\sin \left( n + \frac{1}{2} \right) u}{\sin \frac{u}{2}} ~ \mathrm{d} u.
+
+.. _ex-4-extra-3:
+
+3. 设 :math:`(X, \mathscr{R}), (Y, \mathscr{S})` 是两个可测空间, :math:`E \subset X \times Y`
+   是 :math:`X \times Y` 的一个可测集, :math:`f : E \to \mathbb{R}` 是 :math:`E` 上的可测函数.
+   证明 :math:`f` 的每个截口都是可测函数.

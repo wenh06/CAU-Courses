@@ -9,7 +9,7 @@
       :align: center
       :xscale: 100
       :libs: arrows.meta, positioning, calc, cd
-      :packages: amsfonts, [slantfont,boldfont]xeCJK, pifont, relsize
+      :packages: amsfonts, [slantfont,boldfont]xeCJK, pifont, relsize, cancel
 
       \node (uniform) at (-12, -4) {$\text{({\color{cyan}近})一致收敛}$};
       \node (ae) at (-7,0) {$\text{({\color{magenta}子列})几乎处处收敛}$};
@@ -21,7 +21,7 @@
       \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={xshift=-0.5em}] (ae) -- (uniform) node[sloped, anchor=center, midway, above] {{\color{red}$\boldsymbol{\times}$}, ~~ {\color{cyan} Egorov ($m E < \infty$)}};
 
       \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={yshift=0.3em}] (ae) -- (measure) node[sloped, anchor=center, midway, above] {{\color{red}$\boldsymbol{\times}$}, ~~ $m E < \infty$};
-      \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={yshift=-0.3em}] (measure) -- (ae) node[sloped, anchor=center, midway, below] {{\color{red}$\boldsymbol{\times}$}, ~~ {\color{magenta} Riesz ($m E < \infty$)}};
+      \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={yshift=-0.3em}] (measure) -- (ae) node[sloped, anchor=center, midway, below] {{\color{red}$\boldsymbol{\times}$}, ~~ {\color{magenta} Riesz ($\xcancel{m E < \infty}$)}};
 
       \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={xshift=0.5em}] (norm) -- (ae) node[sloped, anchor=center, midway, above] {\color{red}$\boldsymbol{\times}$};
       \draw[arrows={-{Stealth[length=3mm, width=2mm]}}, transform canvas={xshift=-0.5em}] (ae) -- (norm) node[sloped, anchor=center, midway, below] {{\color{red}$\boldsymbol{\times}$}, ~ $\lVert f_n \rVert_p \to \lVert f \rVert_p$};
