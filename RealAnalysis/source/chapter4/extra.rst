@@ -38,8 +38,8 @@
    :math:`D_n(u) = \frac{\sin \left( n + \frac{1}{2} \right) u}{\sin \frac{u}{2}}` 表示为
 
    .. math::
-      \varphi_n(x) = \frac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x+u) D_n(u) ~ \mathrm{d} u
-                   = \frac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x+u)
+      \varphi_n(x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} \varphi(x+u) D_n(u) ~ \mathrm{d} u
+                   = \frac{1}{2\pi} \int_{-\pi}^{\pi} \varphi(x+u)
                      \dfrac{\sin \left( n + \frac{1}{2} \right) u}{\sin \frac{u}{2}} ~ \mathrm{d} u.
 
 .. _ex-4-extra-3:
