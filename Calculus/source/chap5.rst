@@ -45,6 +45,24 @@
 §5.3 分部积分法
 ------------------------------------
 
+.. _ex-chap5-sec3-ex2:
+
+2. 已知 :math:`f(x) = \frac{e^x}{x}`, 求 :math:`\displaystyle \int x f''(x) ~ \mathrm{d}x`.
+
+.. proof:solution::
+
+   利用分部积分法, 有
+
+   .. math::
+      \int x f''(x) ~ \mathrm{d}x & = \int x ~ \mathrm{d} f'(x) = x f'(x) - \int f'(x) ~ \mathrm{d}x \\
+      & = x f'(x) - f(x) + C.
+
+   将 :math:`f(x) = \frac{e^x}{x}` 代入上式, 得
+
+   .. math::
+      \int x f''(x) ~ \mathrm{d}x = x \left( \frac{e^x}{x} \right)' - \frac{e^x}{x} + C
+      = x \cdot \frac{(x - 1) e^x}{x^2} - \frac{e^x}{x} + C = \frac{(x - 2) e^x}{x} + C.
+
 .. _ex-chap5-sec4:
 
 §5.4 几种特殊类型函数的不定积分

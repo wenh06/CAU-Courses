@@ -19,6 +19,36 @@
 §6.2 定积分的性质
 ------------------------------------
 
+.. _ex-chap6-sec2-ex7:
+
+7. 已知函数 :math:`f(x)` 在区间 :math:`[0,1]` 上具有 2 阶导数, 且 :math:`f(0) = 0`, :math:`f(1) = 1`,
+   :math:`\displaystyle \int_0^1 f(x) ~ \mathrm{d}x = 1`, 试证明:
+   (1) 存在 :math:`\xi \in (0, 1)`, 使得 :math:`f'(\xi) = 0`;
+   (2) 存在 :math:`\eta \in (0, 1)`, 使得 :math:`f''(\eta) < -2`.
+
+.. proof:solution::
+
+   (1) 由积分中值定理, 存在 :math:`x_0 \in (0, 1)`, 使得
+
+   .. math::
+      1 = \int_0^1 f(x) ~ \mathrm{d}x = f(x_0) (1 - 0) = f(x_0).
+
+   又由于 :math:`f(1) = 1`, 由罗尔定理, 存在 :math:`\xi \in (x_0, 1) \subset (0, 1)`, 使得 :math:`f'(\xi) = 0`.
+
+   (2) 令 :math:`g(x) = f(x) + x^2`, 希望证明 :math:`g''(x) = f''(x) + 2 < 0` 在某点成立.
+
+   若能证明存在 :math:`x_1 < x_2 \in (0, 1)`, 使得 :math:`g'(x_1) > g'(x_2)`, 则由拉格朗日中值定理,
+   存在 :math:`\eta \in (x_1, x_2) \subset (0, 1)`, 使得 :math:`g''(\eta) < 0`, 即 :math:`f''(\eta) < -2`.
+
+   下证存在这样的 :math:`x_1, x_2`. 对 (1) 中的 :math:`x_0`, 在区间 :math:`[0, x_0]` 以及 :math:`[x_0, 1]` 上分别应用拉格朗日中值定理,
+   则存在 :math:`x_1 \in (0, x_0)`, :math:`x_2 \in (x_0, 1)`, 使得
+
+   .. math::
+      g'(x_1) & = \frac{g(x_0) - g(0)}{x_0 - 0} = \frac{f(x_0) + x_0^2}{x_0} = \frac{1}{x_0} + x_0, \\
+      g'(x_2) & = \frac{g(1) - g(x_0)}{1 - x_0} = \frac{2 - (f(x_0) + x_0^2)}{1 - x_0} = \frac{1 - x_0^2}{1 - x_0} = 1 + x_0.
+
+   因为 :math:`0 < x_0 < 1`, 所以 :math:`\dfrac{1}{x_0} + x_0 > 1 + x_0`, 即 :math:`g'(x_1) > g'(x_2)`, 证毕.
+
 .. _ex-chap6-sec3:
 
 §6.3 微积分基本定理
