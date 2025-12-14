@@ -187,6 +187,7 @@ tikz_tikzlibraries = "calc, cd, positioning, shapes, arrows.meta"
 
 # -------------------------------------------------
 
+
 def pdfembed_html(pdfembed_specs):
     src = pdfembed_specs.get("src", "")
     width = pdfembed_specs.get("width", "100%")
@@ -195,7 +196,7 @@ def pdfembed_html(pdfembed_specs):
 
     if height.isdigit():
         height += "px"
-    
+
     pdf_path = src
     if "_static/" in src:
         path_after_static = src.split("_static/")[1]
@@ -204,28 +205,28 @@ def pdfembed_html(pdfembed_specs):
     iframe_src = f"{viewer_url}?file={pdf_path}"
 
     html_code = f"""
-    <iframe 
-        src="{iframe_src}" 
-        style="width: {width}; height: {height}; border: 1px solid #ccc; margin: 0 auto; display: block;" 
-        frameborder="0" 
+    <iframe
+        src="{iframe_src}"
+        style="width: {width}; height: {height}; border: 1px solid #ccc; margin: 0 auto; display: block;"
+        frameborder="0"
         allowfullscreen>
     </iframe>
     """
-    
+
     if align:
         html_code = f'<div style="text-align: {align};">{html_code}</div>'
-        
+
     return html_code
 
+
 def pdfembed_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
-    from docutils import nodes
     text = text.replace(" ", "")
     pdfembed_specs = {}
     for component in text.split(","):
         parts = component.split(":", 1)
         if len(parts) == 2:
             pdfembed_specs[parts[0]] = parts[1]
-            
+
     node = nodes.raw("", pdfembed_html(pdfembed_specs), format="html")
     return [node], []
 
