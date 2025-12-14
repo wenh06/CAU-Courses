@@ -4,12 +4,12 @@
 试卷
 --------
 
-:pdfembed:`src:../_static/final_exams/2024秋微积分1试卷.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/2024秋微积分1试卷.pdf, height:800px, width:100%, align:middle`
 
 解答
 --------
 
-:pdfembed:`src:../_static/final_exams/2024秋微积分1试卷及解答.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/2024秋微积分1试卷及解答.pdf, height:800px, width:100%, align:middle`
 
 Source Code
 ------------

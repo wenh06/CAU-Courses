@@ -1,4 +1,4 @@
 实变函数 2021-2022 学年秋季学期期末考试试卷
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:pdfembed:`src:../_static/final_exams/实变函数2021-2022学年秋季学期（马晓栋-CAU-数学19).pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/实变函数2021-2022学年秋季学期（马晓栋-CAU-数学19).pdf, height:800px, width:100%, align:middle`

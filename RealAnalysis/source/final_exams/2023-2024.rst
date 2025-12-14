@@ -4,7 +4,7 @@
 试卷
 ---------
 
-:pdfembed:`src:../_static/final_exams/实变函数2023-2024学年秋季学期（文豪-CAU-数学21).pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/实变函数2023-2024学年秋季学期（文豪-CAU-数学21).pdf, height:800px, width:100%, align:middle`
 
 解答
 ---------

@@ -183,41 +183,46 @@ tikz_tikzlibraries = "calc, cd, positioning,shapes, arrows.meta, decorations.pat
 
 
 # -------------------------------------------------
-# Code from https://github.com/SuperKogito/sphinxcontrib-pdfembed/blob/master/sphinxcontrib/pdfembed.py
-# -------------------------------------------------
-
 
 def pdfembed_html(pdfembed_specs):
-    """
-    Build the iframe code for the pdf file,
-    """
-    html_base_code = """
-                        <iframe
-                                id="ID"
-                                style="border:1px solid #666CCC"
-                                title="PDF"
-                                src="%s"
-                                frameborder="1"
-                                scrolling="auto"
-                                height="%s"
-                                width="%s"
-                                align="%s">
-                        </iframe>
-                     """
-    return html_base_code % (pdfembed_specs["src"], pdfembed_specs["height"], pdfembed_specs["width"], pdfembed_specs["align"])
+    src = pdfembed_specs.get("src", "")
+    width = pdfembed_specs.get("width", "100%")
+    height = pdfembed_specs.get("height", "800px")
+    align = pdfembed_specs.get("align", "center")
 
+    if height.isdigit():
+        height += "px"
+    
+    pdf_path = src
+    if "_static/" in src:
+        path_after_static = src.split("_static/")[1]
+        pdf_path = f"../../{path_after_static}"
+    viewer_url = "../_static/pdfjs/web/viewer.html"
+    iframe_src = f"{viewer_url}?file={pdf_path}"
+
+    html_code = f"""
+    <iframe 
+        src="{iframe_src}" 
+        style="width: {width}; height: {height}; border: 1px solid #ccc; margin: 0 auto; display: block;" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
+    """
+    
+    if align:
+        html_code = f'<div style="text-align: {align};">{html_code}</div>'
+        
+    return html_code
 
 def pdfembed_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
-    """
-    Get iframe specifications and generate the associate HTML code for the pdf iframe.
-    """
-    # parse and init variables
+    from docutils import nodes
     text = text.replace(" ", "")
     pdfembed_specs = {}
-    # read specs
     for component in text.split(","):
-        pdfembed_specs[component.split(":")[0]] = component.split(":")[1]
-    # build node from pdf iframe html code
+        parts = component.split(":", 1)
+        if len(parts) == 2:
+            pdfembed_specs[parts[0]] = parts[1]
+            
     node = nodes.raw("", pdfembed_html(pdfembed_specs), format="html")
     return [node], []
 

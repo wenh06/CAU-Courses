@@ -4,12 +4,12 @@
 试卷
 --------
 
-:pdfembed:`src:../_static/final_exams/2020秋高等数学C试卷.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/2020秋高等数学C试卷.pdf, height:800px, width:100%, align:middle`
 
 解答
 --------
 
-:pdfembed:`src:../_static/final_exams/2020秋高等数学C试卷及解答.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/final_exams/2020秋高等数学C试卷及解答.pdf, height:800px, width:100%, align:middle`
 
 勘误
 --------

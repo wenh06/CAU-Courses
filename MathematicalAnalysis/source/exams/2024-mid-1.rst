@@ -4,12 +4,12 @@
 试卷
 --------
 
-:pdfembed:`src:../_static/exams/2024春数学分析II第一次期中考试试题.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/exams/2024春数学分析II第一次期中考试试题.pdf, height:800px, width:100%, align:middle`
 
 解答
 --------
 
-:pdfembed:`src:../_static/exams/2024春数学分析II第一次期中考试试题及答案.pdf, height:800, width:100%, align:middle`
+:pdfembed:`src:../_static/exams/2024春数学分析II第一次期中考试试题及答案.pdf, height:800px, width:100%, align:middle`
 
 Source Code
 ------------
