@@ -94,7 +94,40 @@
 
 .. _extra-chap6-topic2:
 
-2. 极坐标下曲线 :math:`r = r(\theta)` 求曲线长公式推导.
+2. 计算定积分 :math:`\displaystyle I = \int_0^2 \dfrac{(x-1)^2 + 1}{(x-1)^2 + x^2(x-2)^2} \mathrm{d}x`.
+
+.. proof:solution::
+
+   做变量替换 :math:`t = x - 1`, 则原积分变为
+
+   .. math::
+      :label: eq-extra-chap6-topic2-1
+
+      I & = \int_{-1}^1 \dfrac{t^2 + 1}{t^2 + (t+1)^2 (t-1)^2} \mathrm{d}t
+          = \int_{-1}^1 \dfrac{t^2 + 1}{t^2 + (t^2-1)^2} \mathrm{d}t \\
+        & = \int_{-1}^1 \dfrac{1 + 1/t^2}{1 + (t - 1/t)^2} \mathrm{d}t
+          = \int_{-1}^1 \dfrac{\mathrm{d} \left( t - 1/t \right)}{1 + (t - 1/t)^2}.
+
+   令 :math:`u = t - 1/t`. 注意, 此时区间 :math:`t \in [-1, 1]` 应分为 :math:`[-1, 0)` 和 :math:`(0, 1]` 两部分,
+   这样才是光滑 (处处可导) 的变换. 这两个区间分别对应 :math:`u \in [0, +\infty)` 和 :math:`u \in (-\infty, 0]`.
+   因此, 原积分可写为
+
+   .. math::
+      I & = \int_{0}^{+\infty} \dfrac{\mathrm{d}u}{1 + u^2} + \int_{-\infty}^{0} \dfrac{\mathrm{d}u}{1 + u^2} \\
+        & = \int_{0}^{+\infty} \dfrac{\mathrm{d}u}{1 + u^2} + \int_{0}^{+\infty} \dfrac{\mathrm{d}v}{1 + v^2} \\
+        & = 2 \int_{0}^{+\infty} \dfrac{\mathrm{d}u}{1 + u^2} = 2 \left. \arctan u \right|_0^{+\infty} \\
+        & = 2 \cdot \dfrac{\pi}{2} = \pi.
+
+   .. note::
+      注意在变换过程中, 由于 :math:`t = 0` 时, 被积函数无定义, 因此需要分开积分, 也就是说,
+      这题 **不能** 直接从 :eq:`eq-extra-chap6-topic2-1` 得
+
+      .. math::
+         I = \left. \arctan \left( t - \dfrac{1}{t} \right) \right|_{-1}^1 = \arctan 0 - \arctan 0 = 0.
+
+.. _extra-chap6-topic3:
+
+3. 极坐标下曲线 :math:`r = r(\theta)` 求曲线长公式推导.
 
 .. proof:solution::
 
