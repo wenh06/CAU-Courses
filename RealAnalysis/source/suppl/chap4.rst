@@ -119,16 +119,16 @@
       L_{[a, b]} & = [a, b] \text{ 区间上的 Lebesgue 可积函数}, \\
       L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
       C([a, b]) & = [a, b] \text{ 区间上的连续函数}, \\
-      AB([a, b]) & = [a, b] \text{ 区间上几乎处处有限的函数}, \\
       BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
       AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
 
-   以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的（线性) 映射展开的, 可以用下面的图表来表示:
+   以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的 (线性) 映射展开的, 可以用下面的图表来表示:
 
    .. tikz::
       :align: center
       :xscale: 100
       :libs: arrows.meta,positioning,calc,cd
+      :packages: circledsteps
 
       \node (L0) at (0, 0) {$L_0$};
       \node (L) at (2, 0) {$L_{[a, b]}$};
@@ -139,33 +139,36 @@
 
       \node (BV) at (7, -2) {$BV([a, b]) \cap C([a, b])$};
       \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=0.5ex] BV.north) arc (180:360:0.5ex) -- (B);
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- (BV) node[midway,above] {$\int_{[a, x]}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- (BV) node[midway,above] {$\int_{[a, x]}$} node[pos=0.9,above] {\Circled{1}};
 
       \node (BV2) at (11, -2) {$BV([a, b])$};
       \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=0.5ex,yshift=1ex] BV.east) arc (90:270:0.5ex) -- (BV2);
 
       \node (AC) at (7, -4) {$AC([a, b])$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=0.5ex] AC.north) arc (180:360:0.5ex) -- (BV);
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,left] {$\int_{[a, x]}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=0.5ex] AC.north) arc (180:360:0.5ex) -- (BV) node[midway,right] {\Circled{2}};
+      \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,left] {$\int_{[a, x]}$}  node[pos=0.9,above] {\Circled{3}};
 
       \node (p1) at (2, -4) {$L_{[a, b]} / L_0$};
       \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L) -- (p1) node[midway,left] {$\operatorname{pr}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int_{[a, x]}$};
 
-      \node (AB) at (14, -2) {$AB([a, b])$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV2) -- (AB) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
-
-      \node (L_again) at (14, -4) {$L_{[a, b]}$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=-1ex,yshift=0.5ex] L_again.north) arc (180:360:0.5ex) -- (AB);
+      \node (L_again) at (11, -4) {$L_{[a, b]}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (BV2) -- (L_again) node[midway,left] {$\widetilde{~ \mathrm{d}}$} node[midway,right] {\Circled{4}};
 
-      \node (p2) at (17, -4) {$L_{[a, b]} / L_0$};
+      \node (p2) at (14, -4) {$L_{[a, b]} / L_0$};
       \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right = 15] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{~ \mathrm{d}}~\circ~\int_{[a, x]} = \operatorname{id}$} (p2);
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right = 15] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{~ \mathrm{d}}~\circ~\int_{[a, x]} = \operatorname{id}$} node[midway,above] {\Circled{5}} (p2);
 
    以上的 :math:`\int_{[a, x]}` 表示变上限勒贝格积分, :math:`\widetilde{~ \mathrm{d}}` 表示微分 (几乎处处有定义, 没有定义的集合是零测集,
    约定微分取值为 :math:`0`), :math:`\hookrightarrow` 表示自然的嵌入 (包含) 映射, :math:`\operatorname{pr}` 表示商映射.
-   虚线的箭头就是相关的定理.
+   虚线的箭头就是相关的定理, 箭头旁边的圈内数字对应如下定理:
+
+   - ①: 定义在 :math:`[a, b]` 上的函数是有界变差的, 当且仅当它可以表示为两个单调递增函数之差.
+   - ②: 绝对连续函数必然是有界变差函数. 反之, 有界变差函数不一定是绝对连续函数, 例如 Cantor 函数.
+   - ③, ⑤: :math:`f \in AC([a, b]) \iff \exists ~ g \in L_{[a, b]}`, 使得 :math:`f(x) = f(a) + \int_a^x g(t) ~ \mathrm{d}t`, 且此时有
+     :math:`f'(x) = g(x)` 几乎处处成立.
+   - ④: 定义在 :math:`[a, b]` 上的单调函数几乎处处可导, 且其导函数是勒贝格可积的.
 
 .. _thm-tonelli:
 
