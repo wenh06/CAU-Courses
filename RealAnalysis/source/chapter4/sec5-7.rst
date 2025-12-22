@@ -36,8 +36,9 @@
 
 .. _ex-4-28:
 
-28. 设 :math:`(X, \mathscr{R}, \mu), (Y, \mathscr{S}, \nu)` 为对应于勒贝格测度的单位区间这样的测度空间, :math:`E` 是 :math:`X \times Y` 中是和下述条件的集:
-    对每个 :math:`x` 与每个  :math:`y`, :math:`E_x` 与 :math:`X \setminus E^y` 均为可列集. 证明 :math:`E` 是不可测的.
+28. 设 :math:`(X, \mathscr{R}, \mu), (Y, \mathscr{S}, \nu)` 为对应于勒贝格测度的单位区间这样的测度空间,
+    :math:`E` 是 :math:`X \times Y` 中是和下述条件的集: 对每个 :math:`x` 与每个  :math:`y`, :math:`E_x`
+    与 :math:`X \setminus E^y` 均为可列集. 证明 :math:`E` 是不可测的.
 
 .. proof:proof::
 
@@ -74,7 +75,8 @@
 
 .. proof:proof::
 
-   任意复值函数 :math:`\varphi(x)` 可以写成 :math:`\varphi(x) = \rho(x) e^{i \theta(x)}`, 其中 :math:`\rho(x), \theta(x)` 为实值函数.
+   任意复值函数 :math:`\varphi(x)` 可以写成 :math:`\varphi(x) = \rho(x) e^{i \theta(x)}`,
+   其中 :math:`\rho(x), \theta(x)` 为实值函数.
    由题设条件 :math:`\rho(x) = \lvert \varphi(x) \rvert = 1` 知 :math:`\varphi(x) = e^{i \theta(x)}`.
    又由题设条件 :math:`\varphi(x + y) = \varphi(x) \varphi(y)`, 有
 
@@ -87,7 +89,8 @@
       \theta(x + y) = \theta(x) + \theta(y).
 
    这里不写 :math:`+ 2 \pi k` 是因为 :math:`e^{2 \pi i k} = 1`. 令 :math:`\lambda = \theta(1)`.
-   首先有 :math:`\theta(0) = \theta(0 + 0) = \theta(0) + \theta(0)`, 从而 :math:`\theta(0) = 0`. 对于 :math:`n \in \mathbb{N}`, 有
+   首先有 :math:`\theta(0) = \theta(0 + 0) = \theta(0) + \theta(0)`, 从而 :math:`\theta(0) = 0`.
+   对于 :math:`n \in \mathbb{N}`, 有
 
    .. math::
       \theta(n) = \theta(\underbrace{1 + \cdots + 1}_{n ~ \text{个}}) = n \theta(1) = n \lambda.
@@ -96,14 +99,20 @@
    有 :math:`\theta(n) = n \lambda`. 对于有理数 :math:`r = \dfrac{m}{n}`, :math:`m, n \in \mathbb{Z}^*`, 有
 
    .. math::
-      \theta(r) & = \theta \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{m ~ \text{个}} \bigg) = m \theta \left( \dfrac{1}{n} \right), \\
-      \lambda = \theta(1) & = \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{n ~ \text{个}} \bigg) = n \theta \left( \dfrac{1}{n} \right),
+      \theta(r)
+      & = \theta \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{m ~ \text{个}} \bigg)
+        = m \theta \left( \dfrac{1}{n} \right), \\
+      \lambda = \theta(1)
+      & = \bigg( \underbrace{\dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{n ~ \text{个}} \bigg)
+        = n \theta \left( \dfrac{1}{n} \right),
 
-   从而 :math:`\theta(r) = \dfrac{m}{n} \lambda = r \lambda`. 对于实数 :math:`x`, 由于有理数集在实数集中稠密, 所以存在有理数列 :math:`\{ r_n \}`,
-   使得 :math:`r_n \to x ~ (n \to \infty)`, 从而由 :math:`\theta` 的连续性 (可由 :math:`\varphi` 的连续性推得) 知
+   从而 :math:`\theta(r) = \dfrac{m}{n} \lambda = r \lambda`. 对于实数 :math:`x`, 由于有理数集在实数集中稠密,
+   所以存在有理数列 :math:`\{ r_n \}`, 使得 :math:`r_n \to x ~ (n \to \infty)`, 从而由 :math:`\theta` 的连续性
+   (可由 :math:`\varphi` 的连续性推得) 知
 
    .. math::
-      \theta(x) = \theta \left( \lim_{n \to \infty} r_n \right) = \lim_{n \to \infty} \theta(r_n) = \lim_{n \to \infty} r_n \lambda = x \lambda.
+      \theta(x) = \theta \left( \lim_{n \to \infty} r_n \right)
+      = \lim_{n \to \infty} \theta(r_n) = \lim_{n \to \infty} r_n \lambda = x \lambda.
 
    于是 :math:`\varphi(x) = e^{i \theta(x)} = e^{i \lambda x}`.
 
@@ -113,7 +122,8 @@
       .. math::
          \lvert \varphi(x + h) - \varphi(x) \rvert
          & = \lvert \varphi(x) \varphi(h) - \varphi(x) \rvert = \lvert \varphi(x) \rvert \lvert \varphi(h) - 1 \rvert \\
-         & = \rvert \lvert \varphi(h) - 1 \rvert = \lvert e^{i \theta(h)} - 1 \rvert = \lvert \cos \theta(h) + i \sin \theta(h) - 1 \rvert \\
+         & = \rvert \lvert \varphi(h) - 1 \rvert = \lvert e^{i \theta(h)} - 1 \rvert
+           = \lvert \cos \theta(h) + i \sin \theta(h) - 1 \rvert \\
          & = \sqrt{(\cos \theta(h) - 1)^2 + \sin^2 \theta(h)} = \sqrt{2 - 2 \cos \theta(h)} \\
          & = 2 \left\lvert \sin \dfrac{\theta(h)}{2} \right\rvert.
 
@@ -127,8 +137,8 @@
 
 .. _ex-4-30:
 
-30. 设 :math:`\theta(x)` 为区间 :math:`[0, 1]` 上的 Cantor 函数, 令 :math:`f(x) = \theta(x) + x`, :math:`0 \leqslant x \leqslant 1`;
-    :math:`g = f^{-1}`. 试证:
+30. 设 :math:`\theta(x)` 为区间 :math:`[0, 1]` 上的 Cantor 函数, 令 :math:`f(x) = \theta(x) + x`,
+    :math:`0 \leqslant x \leqslant 1`; :math:`g = f^{-1}`. 试证:
 
     (1). 存在可测集 :math:`B` 使 :math:`g^{-1}(B)` 不可测；
 
@@ -157,7 +167,54 @@
    于是可以从正测度集 :math:`f (P_0)` 中取出不可测集 :math:`B_0`, 并令 :math:`B = g (B_0) = f^{-1} (B_0) \subset P_0`.
    由于 :math:`P_0` 是零测集, 所以它的子集 :math:`B` 也是零测集, 从而是可测集. 而 :math:`g^{-1} (B) = B_0` 不可测.
 
-   (2). 任取 :math:`[0, 1]` 区间内的不可测集 :math:`E`, 假设 :math:`g^{-1} (E) = f (E)` 可测. 未写完. . . .
+   (2). 任取 :math:`[0, 1]` 区间内的不可测集 :math:`E`, 假设 :math:`A := g^{-1} (E) = f (E)` 可测. 由于 Cantor 函数 :math:`\theta`
+   在 :math:`[0, 1]` 上为增函数, 所以对于任意 :math:`x_1 < x_2 \in [0, 1]`, 有
+
+   .. math::
+      f(x_2) - f(x_1) = \theta(x_2) - \theta(x_1) + x_2 - x_1 \geqslant x_2 - x_1 > 0.
+
+   令 :math:`[0, 2] \ni y_i = f(x_i), i = 1, 2`, 则 :math:`x_i = g(y_i) = f^{-1}(y_i)`, 因此上式可写为
+
+   .. math::
+      :label: ex-4-30-eq-1
+
+      g(y_2) - g(y_1) \leqslant y_2 - y_1.
+
+   由上式 :eq:`ex-4-30-eq-1` 我们来证明 :math:`g` 将零测集映为零测集. 任取 :math:`[0, 2]` 上的零测集 :math:`M`,
+   则对任意 :math:`\varepsilon > 0`, 存在开区间列 :math:`\{ I_n \}` 覆盖 :math:`M`, 且有
+   :math:`\displaystyle \sum_{n = 1}^\infty m (I_n) < \varepsilon`. 由上式 :eq:`ex-4-30-eq-1` 知,
+   对任意区间 :math:`I_n`, 有 :math:`m (g(I_n)) \leqslant m (I_n)`. 于是有
+
+   .. math::
+      m (g(M)) \leqslant m \left( \bigcup_{n = 1}^\infty g(I_n) \right) \leqslant \sum_{n = 1}^\infty m (g(I_n))
+      \leqslant \sum_{n = 1}^\infty m (I_n) < \varepsilon.
+
+   由于 :math:`\varepsilon` 的任意性, 所以 :math:`m (g(M)) = 0`, 即 :math:`g` 将零测集映为零测集.
+
+   由假设 :math:`A = g^{-1} (E) = f (E)` 可测, 取 :math:`K \subset A` 为 :math:`A` 的等测核,
+   即 :math:`K` 为一个 :math:`F_{\sigma}` 集, 且满足 :math:`m A = m K`. 记
+
+   .. math::
+      A = K \cup Z, ~~ \text{其中} ~ Z = A \setminus K ~ \text{为零测集}.
+
+   :math:`A` 在 :math:`g` 下的像满足
+
+   .. math::
+      E = g(A) = g(K \cup Z) = g(K) \cup g(Z).
+
+   由于 :math:`f` 为连续映射, 而且 :math:`K` 为 Borel 集 (:math:`F_{\sigma}` 集), 于是 :math:`g(K) = f^{-1}(K)` 也是 Borel 集,
+   从而可测. 又由于 :math:`Z` 为零测集, 所以由上面已经证明的结论知 :math:`g(Z)` 也是零测集, 因此 :math:`E` 可测,
+   这与 :math:`E` 为不可测集的假设矛盾. 综上所述, :math:`g^{-1}` 映不可测集为不可测集.
+
+   .. note::
+      第 (2) 问中用到的关键结论是, 一个满足 Lipschitz 条件的连续映射会将零测集映为零测集. 这里, 一个函数 :math:`g` 满足 Lipschitz 条件,
+      是指存在常数 :math:`L > 0`, 使得对任意 :math:`x_1, x_2` 都有
+
+      .. math::
+         \lvert g(x_2) - g(x_1) \rvert \leqslant L \lvert x_2 - x_1 \rvert.
+
+      :math:`L` 称为 Lipschitz 常数. 在本题中, 由不等式 :eq:`ex-4-30-eq-1` 可知, :math:`g` 满足 Lipschitz 条件,
+      且 Lipschitz 常数 :math:`L = 1`.
 
 .. _ex-4-34:
 
@@ -245,7 +302,7 @@
    假设已经选取了 :math:`d_1, d_2, \cdots, d_k`, 若 :math:`\displaystyle E \subset \bigcup_{i = 1}^k d_i`, 则停止选取; 否则令
 
    .. math::
-      :label: ex-4-38-1
+      :label: ex-4-38-eq-1
 
       \mathscr{S}_k = \{ d \in \mathscr{M} ~:~ d \cap \bigcup_{i = 1}^k d_i = \emptyset \},
 
@@ -254,28 +311,29 @@
    使得 :math:`x \in d`, 且 :math:`\displaystyle d \cap \bigcup_{i = 1}^k d_i = \emptyset`. 令
 
    .. math::
-      :label: ex-4-38-2
+      :label: ex-4-38-eq-2
 
       \delta_k = \sup \{ m (d) ~:~ d \in \mathscr{S}_k \},
 
-   那么 :math:`0 < \delta_k \leqslant m (G) < \infty`. 由上确界的定义, 可以从 :math:`\mathscr{S}_k` 中选取一个闭区间 :math:`d_{k + 1}`, 使得
+   那么 :math:`0 < \delta_k \leqslant m (G) < \infty`. 由上确界的定义, 可以从 :math:`\mathscr{S}_k`
+   中选取一个闭区间 :math:`d_{k + 1}`, 使得
 
    .. math::
-      :label: ex-4-38-3
+      :label: ex-4-38-eq-3
 
       m (d_{k + 1}) > \dfrac{\delta_k}{2}, \quad d_{k + 1} \cap \bigcup_{i = 1}^k d_i = \emptyset.
 
    由此可得到互不相交的区间序列 :math:`\{ d_k \}`. 由于每一个 :math:`d_k` 都包含于 :math:`G` 中, 由测度的可列可加性以及单调性, 有
 
    .. math::
-      :label: ex-4-38-4
+      :label: ex-4-38-eq-4
 
       \sum_{k = 1}^\infty m (d_k) = m \left( \bigcup_{k = 1}^\infty d_k \right) \leqslant m (G) < \infty.
 
    于是由级数的 Cauchy 收敛准则知 :math:`\forall ~ \varepsilon > 0`, 存在正整数 :math:`n`, 使得
 
    .. math::
-      :label: ex-4-38-5
+      :label: ex-4-38-eq-5
 
       \sum_{k = n + 1}^\infty m (d_k) < \dfrac{\varepsilon}{5}.
 
@@ -283,11 +341,11 @@
    由于 :math:`\displaystyle \bigcup_{k = 1}^n d_k \not\ni x` 为闭集, 所以存在 :math:`\delta > 0`,
    使得 :math:`\displaystyle (x - \delta, x + \delta) \cap \bigcup_{k = 1}^n d_k = \emptyset`.
    又由于 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖, 所以存在闭区间 :math:`d(x) \in \mathscr{M}`,
-   使得 :math:`x \in d(x) \subset (x - \delta, x + \delta)`. 那么有 :math:`\displaystyle d(x) \cap \bigcup_{k = 1}^n d_k = \emptyset`,
-   即 :math:`d(x) \in \mathscr{S}_n`, 从而有
+   使得 :math:`x \in d(x) \subset (x - \delta, x + \delta)`. 那么有
+   :math:`\displaystyle d(x) \cap \bigcup_{k = 1}^n d_k = \emptyset`, 即 :math:`d(x) \in \mathscr{S}_n`, 从而有
 
    .. math::
-      :label: ex-4-38-6
+      :label: ex-4-38-eq-6
 
       m (d(x)) \leqslant \delta_n < 2 m (d_{n + 1}).
 
@@ -295,23 +353,25 @@
    都有 :math:`\mathbb{N} \ni d(x) \in \mathscr{S}_k`, 即有
 
    .. math::
-      :label: ex-4-38-7
+      :label: ex-4-38-eq-7
 
-      m (d_{k + 1}) > \dfrac{\delta_k}{2} = \dfrac{1}{2} \sup \{ m (d) ~:~ d \in \mathscr{S}_k \} \geqslant \dfrac{1}{2} m (d(x)),
+      m (d_{k + 1}) > \dfrac{\delta_k}{2}
+      = \dfrac{1}{2} \sup \{ m (d) ~:~ d \in \mathscr{S}_k \} \geqslant \dfrac{1}{2} m (d(x)),
 
-   这与级数 :eq:`ex-4-38-4` 的收敛性矛盾. 那么由于 :math:`d(x) \not \in \mathscr{S}_{n_0 (x)}`, 所以存在 :math:`n_1(x) \in \mathbb{N}`,
-   使得 :math:`n < n_1(x) \leqslant n_0 (x)`, 且有 :math:`d(x) \cap d_{n_1(x)} \neq \emptyset`, 以及
+   这与级数 :eq:`ex-4-38-eq-4` 的收敛性矛盾. 那么由于 :math:`d(x) \not \in \mathscr{S}_{n_0 (x)}`,
+   所以存在 :math:`n_1(x) \in \mathbb{N}`, 使得 :math:`n < n_1(x) \leqslant n_0 (x)`, 且有
+   :math:`d(x) \cap d_{n_1(x)} \neq \emptyset`, 以及
 
    .. math::
-      :label: ex-4-38-8
+      :label: ex-4-38-eq-8
 
       d(x) \cap d_{k} = \emptyset, k = 1, 2, \cdots, n_1(x) - 1.
 
-   由上式 :eq:`ex-4-38-7`, 以及 :math:`\mathscr{S}_k` 的定义式 :eq:`ex-4-38-1`, :math:`\delta_k` 的定义式 :eq:`ex-4-38-2`,
-   :math:`d_{k + 1}` 的取法 :eq:`ex-4-38-3`, 有
+   由上式 :eq:`ex-4-38-eq-7`, 以及 :math:`\mathscr{S}_k` 的定义式 :eq:`ex-4-38-eq-1`, :math:`\delta_k`
+   的定义式 :eq:`ex-4-38-eq-2`, :math:`d_{k + 1}` 的取法 :eq:`ex-4-38-eq-3`, 有
 
    .. math::
-      :label: ex-4-38-9
+      :label: ex-4-38-eq-9
 
       m (d(x)) \leqslant \delta_{n_1(x) - 1} < 2 m (d_{n_1(x)}).
 
@@ -319,19 +379,19 @@
    便得到一个闭区间 :math:`d_{n_1(x)}'`, 使得 :math:`x \in d(x) \subset d_{n_1(x)}'`, 且有区间长度关系
 
    .. math::
-      :label: ex-4-38-10
+      :label: ex-4-38-eq-10
 
       m (d_{n_1(x)}') = 5 m (d_{n_1(x)}).
 
-   结合式 :eq:`ex-4-38-5`, 有
+   结合式 :eq:`ex-4-38-eq-5`, 有
 
    .. math::
-      :label: ex-4-38-11
+      :label: ex-4-38-eq-11
 
       m B \leqslant m \left( \bigcup_{x \in B} d_{n_1(x)}' \right) \leqslant m \left( \bigcup_{k = n + 1}^\infty d_k' \right)
       \leqslant \sum_{k = n + 1}^\infty m (d_k') = 5 \sum_{k = n + 1}^\infty m (d_k) < \varepsilon.
 
-   上式 :eq:`ex-4-38-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-10` 的方法将闭区间 :math:`d_k` 分别往左右两边延伸 :math:`2 m (d_k)`,
+   上式 :eq:`ex-4-38-eq-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-eq-10` 的方法将闭区间 :math:`d_k` 分别往左右两边延伸 :math:`2 m (d_k)`,
    得到的长度为 :math:`5 m (d_k)` 的闭区间；第一个不等式成立是由集合的包含关系 :math:`\displaystyle B \subset \bigcup_{x \in B} d_{n_1(x)}'`;
    第二个不等式成立是因为集合 :math:`\{ n_1(x) ~:~ x \in B \}` 显然是集合 :math:`\{ k \in \mathbb{N} ~:~ k = n + 1, n + 2, \cdots \}` 的子集.
 
@@ -396,7 +456,7 @@
    由非负可测函数列的逐项积分定理, 有
 
    .. math::
-      :label: ex-4-42-1
+      :label: ex-4-42-eq-1
 
       \int_{\mathbb{R}} g ~ \mathrm{d} m = \sum_{n = 1}^\infty 2^{-n} \int_{\mathbb{R}} f(x - r_n) ~ \mathrm{d} m
       = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m.
@@ -406,15 +466,16 @@
    并且积分值相等, 即
 
    .. math::
-      :label: ex-4-42-2
+      :label: ex-4-42-eq-2
 
       \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m = \int_{r_n}^{r_n + 1} f_n(x) ~ \mathrm{d} x
       = 2 \sqrt{x - r_n} \bigg|_{r_n}^{r_n + 1} = 2.
 
-   将式 :eq:`ex-4-42-2` 代入式 :eq:`ex-4-42-1`, 有
+   将式 :eq:`ex-4-42-eq-2` 代入式 :eq:`ex-4-42-eq-1`, 有
 
    .. math::
-      \int_{\mathbb{R}} g ~ \mathrm{d} m = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m
+      \int_{\mathbb{R}} g ~ \mathrm{d} m
+      = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m
       = \sum_{n = 1}^\infty 2^{-n} \cdot 2 = 1 < \infty,
 
    于是 :math:`g \in L(\mathbb{R})`. 由于勒贝格可积函数几乎处处有限, 所以 :math:`g` 几乎处处有限, 即正项级数

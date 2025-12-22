@@ -420,9 +420,10 @@
       E = I(f \neq 0) = I(f > 0) \cup I(f < 0) = E_+ \cup E_-
 
    有正测度, 即 :math:`0 < m E = m E_+ + m E_-`. 因此, :math:`E_+` 或者 :math:`E_-` 至少有一个有正测度, 不妨设 :math:`m E_+ > 0`,
-   否则考虑 :math:`-f` 即可. 考虑 :math:`E_+` 的等测核 :math:`\displaystyle B = \bigcup_{n = 1}^\infty F_n \subset E_+`, 其中 :math:`F_n` 是闭集,
-   且 :math:`m B = m E_+ > 0`. 令 :math:`\displaystyle B_n = \bigcup_{k = 1}^n F_k` 为闭集, 那么 :math:`\{ B_n \}` 是渐升可测集列,
-   且 :math:`\displaystyle \bigcup_{n = 1}^\infty B_n = B`. 注意到 :math:`f` 在集合 :math:`B \subset E_+` 上恒正, 所以由 Levi 定理知
+   否则考虑 :math:`-f` 即可. 考虑 :math:`E_+` 的等测核 :math:`\displaystyle B = \bigcup_{n = 1}^\infty F_n \subset E_+`,
+   其中 :math:`F_n` 是闭集, 且 :math:`m B = m E_+ > 0`. 令 :math:`\displaystyle B_n = \bigcup_{k = 1}^n F_k` 为闭集,
+   那么 :math:`\{ B_n \}` 是渐升可测集列, 且 :math:`\displaystyle \bigcup_{n = 1}^\infty B_n = B`. 注意到 :math:`f` 在集合
+   :math:`B \subset E_+` 上恒正, 所以由 Levi 定理知
 
    .. math::
       \int_B f ~ \mathrm{d} m = \int_B \left( \lim_{n \to \infty} f \cdot \chi_{B_n} \right) ~ \mathrm{d} m
