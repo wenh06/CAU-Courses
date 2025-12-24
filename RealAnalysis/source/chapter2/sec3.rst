@@ -10,7 +10,8 @@
 
 .. proof:proof::
 
-   因为 :math:`E_1, E_2` 均为有界可测集, 所以 :math:`E_1 \cup E_2, E_1 \setminus E_2, E_2 \setminus E_1, E_1 \cap E_2` 均为有界可测集, 且
+   因为 :math:`E_1, E_2` 均为有界可测集, 所以 :math:`E_1 \cup E_2, E_1 \setminus E_2, E_2 \setminus E_1, E_1 \cap E_2`
+   均为有界可测集, 且
 
    .. math::
       E_1 \cup E_2 = (E_1 \setminus E_2) \cup (E_2 \setminus E_1) \cup (E_1 \cap E_2)
@@ -122,16 +123,18 @@
 
 .. _ex-2-12:
 
-12. 设 :math:`E` 为可测集, 问二式 :math:`m \overline{E} = m E, m E^{\circ} = m E` 是否成立?这里 :math:`\overline{E}` 是 :math:`E` 的闭包,
-    :math:`E^{\circ}` 是由 :math:`E` 的一切内点所成的集 (即 :math:`E` 的内部).
+12. 设 :math:`E` 为可测集, 问二式 :math:`m \overline{E} = m E, m E^{\circ} = m E` 是否成立? 这里 :math:`\overline{E}`
+    是 :math:`E` 的闭包, :math:`E^{\circ}` 是由 :math:`E` 的一切内点所成的集 (即 :math:`E` 的内部).
 
 .. proof:solution::
 
    不一定. 反例如下:
 
-   令 :math:`E = \mathbb{Q} \cap [0, 1]`, 那么有 :math:`m E = 0`, 但是 :math:`\overline{E} = [0, 1]`, 从而有 :math:`m \overline{E} = 1`.
+   令 :math:`E = \mathbb{Q} \cap [0, 1]`, 那么有 :math:`m E = 0`, 但是 :math:`\overline{E} = [0, 1]`,
+   从而有 :math:`m \overline{E} = 1`.
 
-   设 :math:`E` 为一个胖 Cantor 集 (具体构造见 :ref:`本节第 20 题 <ex-2-20>`), 那么有 :math:`m E > 0`, 但是 :math:`E^{\circ} = \emptyset`, 从而有 :math:`m E^{\circ} = 0`.
+   设 :math:`E` 为一个胖 Cantor 集 (具体构造见 :ref:`本节第 20 题 <ex-2-20>`), 那么有 :math:`m E > 0`, 但是
+   :math:`E^{\circ} = \emptyset`, 从而有 :math:`m E^{\circ} = 0`.
 
 .. _ex-2-13:
 
@@ -146,8 +149,9 @@
       \mathring{U} (x) \cap G \neq \emptyset \\
       \mathring{U} (x) \cap (G \setminus E) = \emptyset.
 
-   由于 :math:`G` 是开集, 所以 :math:`\mathring{U} (x) \cap G` 也是开集. 任取 :math:`\mathring{U} (x) \cap G` 的一个构成区间 :math:`(a, b)`,
-   那么有 :math:`(a, b) \subset E`, 这与 :math:`E` 是零测度集矛盾, 所以 :math:`\overline{G} = \overline{G \setminus E}`.
+   由于 :math:`G` 是开集, 所以 :math:`\mathring{U} (x) \cap G` 也是开集. 任取 :math:`\mathring{U} (x) \cap G`
+   的一个构成区间 :math:`(a, b)`, 那么有 :math:`(a, b) \subset E`, 这与 :math:`E` 是零测度集矛盾,
+   所以 :math:`\overline{G} = \overline{G \setminus E}`.
 
 .. _ex-2-14:
 
@@ -166,8 +170,8 @@
    .. math::
       \lim\limits_{n \to \infty} m^* E_n \leqslant m^* S = m^* \left( \bigcup\limits_{n=1}^\infty E_n \right).
 
-   另一方面, 由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 即对于任意 :math:`E_n`, 存在 :math:`G_{\delta}`-集 :math:`A_n \supset E_n`,
-   使得 :math:`m A_n = m^* E_n`, 令
+   另一方面, 由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 即对于任意 :math:`E_n`, 存在 :math:`G_{\delta}`-集
+   :math:`A_n \supset E_n`, 使得 :math:`m A_n = m^* E_n`, 令
 
    .. math::
       C_n = \bigcap\limits_{k=n}^{\infty} A_k, \quad n \in \mathbb{N}.
@@ -231,7 +235,8 @@
    .. math::
       m^* \left( \bigcap_{n=1}^\infty E_n \right) = m^* \emptyset = 0.
 
-   另一方面, 对任意 :math:`n \in \mathbb{N}`, 有 :math:`\displaystyle E_n = [0, 1) \setminus \bigcup_{k=1}^n F_k \supset F_{n+1}`, 从而有
+   另一方面, 对任意 :math:`n \in \mathbb{N}`, 有
+   :math:`\displaystyle E_n = [0, 1) \setminus \bigcup_{k=1}^n F_k \supset F_{n+1}`, 从而有
 
    .. math::
       m^* E_n \geqslant m^* F_{n+1} = m^* E,
@@ -245,8 +250,8 @@
 
 .. _ex-2-17:
 
-17. 试举例说明, 存在可测集列 :math:`\{E_n \subset (a, b)\}_{n \in \mathbb{N}}`, 使极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在,
-    但 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
+17. 试举例说明, 存在可测集列 :math:`\{E_n \subset (a, b)\}_{n \in \mathbb{N}}`, 使极限
+    :math:`\lim\limits_{n \to \infty} m E_n` 存在, 但 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
 
 .. proof:solution::
 
@@ -255,7 +260,8 @@
    .. math::
       E_n = \left\{ m / n : m \in \mathbb{Z} \right\} \cap (a, b), n \in \mathbb{N},
 
-   那么每个 :math:`E_n` 都是有限集, 从而 :math:`m E_n = 0`, 于是极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在, 值为 :math:`0`, 但是
+   那么每个 :math:`E_n` 都是有限集, 从而 :math:`m E_n = 0`, 于是极限 :math:`\lim\limits_{n \to \infty} m E_n` 存在,
+   值为 :math:`0`, 但是
 
    .. math::
       \varliminf\limits_{n} E_n & = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \mathbb{Z} \cap (a, b), \\
@@ -265,7 +271,8 @@
 
 .. _ex-2-18:
 
-18. 设 :math:`A_1, A_2, \cdots, A_n` 是 :math:`[0, 1]` 中 :math:`n` 个可测集, 且满足 :math:`\sum\limits_{k=1}^n m A_k > n - 1`, 试证
+18. 设 :math:`A_1, A_2, \cdots, A_n` 是 :math:`[0, 1]` 中 :math:`n` 个可测集, 且满足
+    :math:`\sum\limits_{k=1}^n m A_k > n - 1`, 试证
 
     .. math::
       m \left( \bigcap_{k=1}^n A_k \right) > 0.
@@ -278,7 +285,8 @@
       1 & = m \left( [0, 1] \setminus A \right) = m \left( [0, 1] \cap \mathscr{C} A \right) \\
       & = m \left( [0, 1] \cap \mathscr{C} \left( \bigcap\limits_{k=1}^n A_k \right) \right)
       = m \left( [0, 1] \cap \left( \bigcup\limits_{k=1}^n \mathscr{C} A_k \right) \right) \\
-      & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathscr{C} A_k \right) \right) = m \left( \bigcup\limits_{k=1}^n \mathscr{C} A_k \right) \\
+      & = m \left( \bigcup\limits_{k=1}^n \left( [0, 1] \cap \mathscr{C} A_k \right) \right)
+        = m \left( \bigcup\limits_{k=1}^n \mathscr{C} A_k \right) \\
       & \leqslant \sum \limits_{k=1}^n m \mathscr{C} A_k = \sum \limits_{k=1}^n \left( 1 - m A_k \right) \\
       & = n - \sum \limits_{k=1}^n m A_k < 1,
 
@@ -323,9 +331,9 @@
 
 .. proof:solution::
 
-   按如下方法修改 Cantor 三分集的构造: 第一次去掉中间的开区间, 长度为 :math:`0 < a \leqslant 1/3`; 第二次从剩下的两个闭区间中去掉中间的开区间,
-   长度为 :math:`a^2`; 依此构造, 第 :math:`n` 次去掉剩下 :math:`2^{n-1}` 个闭区间中间的开区间, 长度为 :math:`a^n`.
-   这样, 被去掉的开区间的总长度为
+   按如下方法修改 Cantor 三分集的构造: 第一次去掉中间的开区间, 长度为 :math:`0 < a \leqslant 1/3`;
+   第二次从剩下的两个闭区间中去掉中间的开区间, 长度为 :math:`a^2`; 依此构造, 第 :math:`n` 次去掉剩下
+   :math:`2^{n-1}` 个闭区间中间的开区间, 长度为 :math:`a^n`. 这样, 被去掉的开区间的总长度为
 
    .. math::
       \sum\limits_{n=1}^\infty 2^{n-1} a^n = \dfrac{a}{1 - 2a}.
@@ -335,8 +343,8 @@
    .. math::
       1 - \dfrac{a}{1 - 2a} = \dfrac{1 - 3a}{1 - 2a},
 
-   且不含任何开区间. 当 :math:`a = 1/4` 时, 闭集的测度为 :math:`1/2`. 这样的集合被称为胖 Cantor 集, 或者称为 Smith-Volterra-Cantor 集,
-   或者 :math:`\varepsilon`-Cantor 集.
+   且不含任何开区间. 当 :math:`a = 1/4` 时, 闭集的测度为 :math:`1/2`. 这样的集合被称为胖 Cantor 集,
+   或者称为 Smith-Volterra-Cantor 集, 或者 :math:`\varepsilon`-Cantor 集.
 
 .. _ex-2-21:
 
@@ -355,23 +363,25 @@
 
 .. proof:proof::
 
-   由于 :math:`\displaystyle \sum\limits_{n=1}^\infty m E_n < \infty`, 所以对任意 :math:`\varepsilon > 0`, 存在 :math:`N \in \mathbb{N}`,
-   使得 :math:`\displaystyle \sum\limits_{n=N}^\infty m E_n < \varepsilon`. 那么有
+   由于 :math:`\displaystyle \sum\limits_{n=1}^\infty m E_n < \infty`, 所以对任意 :math:`\varepsilon > 0`,
+   存在 :math:`N \in \mathbb{N}`, 使得 :math:`\displaystyle \sum\limits_{n=N}^\infty m E_n < \varepsilon`. 那么有
 
    .. math::
-      m \left( \varlimsup\limits_{n} E_n \right) & = m \left( \bigcap\limits_{n=1}^{\infty} \bigcup\limits_{k=n}^{\infty} E_k \right) \\
+      m \left( \varlimsup\limits_{n} E_n \right)
+      & = m \left( \bigcap\limits_{n=1}^{\infty} \bigcup\limits_{k=n}^{\infty} E_k \right) \\
       & \leqslant m \left( \bigcup\limits_{k=N}^{\infty} E_k \right) \leqslant \sum\limits_{k=N}^{\infty} m E_k < \varepsilon.
 
    由于 :math:`\varepsilon` 是任意的, 所以有 :math:`m \left( \varlimsup\limits_{n} E_n \right) = 0`.
 
 .. _ex-2-23:
 
-23. 试证: 若存在可测集 :math:`X \supset E`, 满足 :math:`m X < \infty` 与 :math:`m X = m^* E + m^* (X \setminus E)`, 则 :math:`E` 是可测的.
+23. 试证: 若存在可测集 :math:`X \supset E`, 满足 :math:`m X < \infty` 与 :math:`m X = m^* E + m^* (X \setminus E)`,
+    则 :math:`E` 是可测的.
 
 .. proof:proof::
 
-   由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 对于集合 :math:`E, X \setminus E`, 存在 :math:`G_{\delta}`-集 :math:`A_1 \supset E`,
-   :math:`A_2 \supset X \setminus E`, 使得
+   由 :ref:`勒贝格外测度的正则性 <reg-outer-measure>`, 对于集合 :math:`E, X \setminus E`, 存在 :math:`G_{\delta}`-集
+   :math:`A_1 \supset E`, :math:`A_2 \supset X \setminus E`, 使得
 
    .. math::
       m A_1 & = m^* E \leqslant m X < \infty, \\
@@ -387,9 +397,10 @@
    .. math::
       m X = m (A_1 \cup A_2) = m A_1 + m A_2.
 
-   由 :math:`m (A_1 \cup A_2) = m A_1 + m A_2`, 以及他们测度都有限知 :math:`m (A_1 \cap A_2) = 0`, 即 :math:`A_1 \cap A_2` 是零测度集.
-   (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 又由 :math:`m X = m (A_1 \cup A_2)` 以及 :math:`X \subset A_1 \cup A_2`
-   有 :math:`A_1 \cup A_2 = X \cup F`, 其中 :math:`F = (A_1 \cup A_2) \setminus X` 为零测度集. 于是
+   由 :math:`m (A_1 \cup A_2) = m A_1 + m A_2`, 以及他们测度都有限知 :math:`m (A_1 \cap A_2) = 0`, 即
+   :math:`A_1 \cap A_2` 是零测度集. (见 :ref:`本章第 10 题 <ex-2-10>` 及其注) 又由 :math:`m X = m (A_1 \cup A_2)`
+   以及 :math:`X \subset A_1 \cup A_2` 有 :math:`A_1 \cup A_2 = X \cup F`, 其中 :math:`F = (A_1 \cup A_2) \setminus X`
+   为零测度集. 于是
 
    .. math::
       A_1 \setminus E \subset ((A_1 \cup A_2) \setminus X) \cup (A_1 \cap A_2)

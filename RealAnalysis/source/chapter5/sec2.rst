@@ -3,8 +3,9 @@
 
 .. _ex-5-22:
 
-22. 设 :math:`\{ f_n \}` 是 :math:`L^2` 中的序列, :math:`\{ f_n \}` 依测度收敛于 :math:`f` 且 :math:`\lVert f_n \rVert_2 \leqslant K`,
-    :math:`K` 为常数, 证明 :math:`f_n \xrightarrow{\text{弱}} f` (:math:`n \to \infty`).
+22. 设 :math:`\{ f_n \}` 是 :math:`L^2` 中的序列, :math:`\{ f_n \}` 依测度收敛于 :math:`f` 且
+    :math:`\lVert f_n \rVert_2 \leqslant K`, :math:`K` 为常数, 证明
+    :math:`f_n \xrightarrow{\text{弱}} f` (:math:`n \to \infty`).
 
 .. proof:proof::
 
@@ -20,7 +21,8 @@
    .. math::
       :label: ex-5-22-eq-1
 
-      \int_E | f_n g | ~ \mathrm{d} m & = \int_{E_n} | f_n g | ~ \mathrm{d} m + \int_{E \setminus E_n} | f_n g | ~ \mathrm{d} m \\
+      \int_E | f_n g | ~ \mathrm{d} m
+      & = \int_{E_n} | f_n g | ~ \mathrm{d} m + \int_{E \setminus E_n} | f_n g | ~ \mathrm{d} m \\
       & \leqslant \left( \int_{E_n} |f_n|^2 ~ \mathrm{d} m \right)^{1/2} \left( \int_{E_n} |g|^2 ~ \mathrm{d} m \right)^{1/2}
                   + \varepsilon \int_{E \setminus E_n} | g | ~ \mathrm{d} m \\
       & \leqslant K \left( \int_{E_n} |g|^2 ~ \mathrm{d} m \right)^{1/2} + \varepsilon \lVert g \rVert_1.
@@ -285,8 +287,8 @@
    .. math::
       \lim_{n \to \infty} \int_X g_n ~ \mathrm{d} \mu = \int_X f ~ \mathrm{d} \mu.
 
-   对于 :math:`\displaystyle g_n = \sum_{k = 1}^{N_n} a_{nk} \chi_{E_{nk}}`, :math:`\displaystyle X = \bigcup_{k = 1}^{N_n} E_{nk}`,
-   且 :math:`E_{nk}` 两两不交, 有
+   对于 :math:`\displaystyle g_n = \sum_{k = 1}^{N_n} a_{nk} \chi_{E_{nk}}`,
+   :math:`\displaystyle X = \bigcup_{k = 1}^{N_n} E_{nk}`, 且 :math:`E_{nk}` 两两不交, 有
 
    .. math::
       \varphi \left( \dfrac{1}{\mu X} \int_X g_n ~ \mathrm{d} \mu \right)
@@ -302,7 +304,8 @@
 
 .. _ex-5-38:
 
-38. 设 :math:`E \subset \mathbb{R}` 且 :math:`m E < \infty`. 试求极限 :math:`\displaystyle \lim_{k \to \infty} \int_E (2 - \sin kx)^{-1} ~ \mathrm{d} x` 的值.
+38. 设 :math:`E \subset \mathbb{R}` 且 :math:`m E < \infty`. 试求极限
+    :math:`\displaystyle \lim_{k \to \infty} \int_E (2 - \sin kx)^{-1} ~ \mathrm{d} x` 的值.
 
 .. proof:solution::
 
@@ -314,17 +317,19 @@
    从而有
 
    .. math::
-      \int \dfrac{1}{2 - \sin kx} ~ \mathrm{d} x & = \int \dfrac{1}{2 - \dfrac{2t}{1 + t^2}} \dfrac{2}{k} \dfrac{\mathrm{d} t}{1 + t^2} \\
+      \int \dfrac{1}{2 - \sin kx} ~ \mathrm{d} x
+      & = \int \dfrac{1}{2 - \dfrac{2t}{1 + t^2}} \dfrac{2}{k} \dfrac{\mathrm{d} t}{1 + t^2} \\
       & = \dfrac{1}{k} \int \dfrac{1}{(1 + t^2) - t} ~ \mathrm{d} t \\
       & = \dfrac{1}{k} \int \dfrac{1}{(t - 1/2)^2 + 3/4} ~ \mathrm{d} (t - 1/2) \\
       & = \dfrac{2}{\sqrt{3} k} \arctan \dfrac{2t - 1}{\sqrt{3}} + C \\
       & = \dfrac{2}{\sqrt{3} k} \arctan \dfrac{2 \tan \dfrac{kx}{2} - 1}{\sqrt{3}} + C.
 
-   注意, 由于 :math:`\tan \dfrac{kx}{2}` 的周期性, 实际上在不同的周期内, 常数 :math:`C` 的值是不同的. 在 :math:`f_k(x)` 的每个最小正周期 :math:`T_k = \dfrac{2\pi}{k}` 内,
+   注意, 由于 :math:`\tan \dfrac{kx}{2}` 的周期性, 实际上在不同的周期内, 常数 :math:`C` 的值是不同的. 在 :math:`f_k(x)`
+   的每个最小正周期 :math:`T_k = \dfrac{2\pi}{k}` 内,
    其积分值 :math:`I_{k, 0} = \displaystyle \int_{-\pi/k}^{\pi/k} f_k(x) ~ \mathrm{d} x = \dfrac{2\pi}{\sqrt{3} k}`.
 
-   由于 :math:`1/3 \leqslant |f_k| \leqslant 1`, 且 :math:`m E < \infty`, 那么对任意 :math:`\varepsilon > 0`, 可选取开集 :math:`G \supset E` 使得
-   :math:`m G < m E + \varepsilon/4`, 从而有
+   由于 :math:`1/3 \leqslant |f_k| \leqslant 1`, 且 :math:`m E < \infty`, 那么对任意 :math:`\varepsilon > 0`,
+   可选取开集 :math:`G \supset E` 使得 :math:`m G < m E + \varepsilon/4`, 从而有
 
    .. math::
       :label: ex-5-38-eq-1
@@ -335,8 +340,8 @@
 
    设开集 :math:`G` 的结构表示为 :math:`\displaystyle G = \bigcup_{s = 1}^{\infty} (a_s, b_s)`.
 
-   对于一个一般的固定的区间 :math:`(a, b)`, 记 :math:`N_{a, b} = \left[\dfrac{(b-a)k}{2\pi} \right]`, 其中 :math:`[ x ]` 表示 :math:`x` 的整数部分.
-   注意到 :math:`|f_k| \leqslant 1`, 有
+   对于一个一般的固定的区间 :math:`(a, b)`, 记 :math:`N_{a, b} = \left[\dfrac{(b-a)k}{2\pi} \right]`, 其中 :math:`[ x ]`
+   表示 :math:`x` 的整数部分. 注意到 :math:`|f_k| \leqslant 1`, 有
 
    .. math::
       \int_{(a, b)} f_k(x) ~ \mathrm{d} x
@@ -346,7 +351,8 @@
    从而有
 
    .. math::
-      & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert \\
+      & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x
+        - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert \\
       \leqslant & \int_{(a + N_{a, b}T_k, b)} 1 ~ \mathrm{d} x = b - a - N_{a, b}T_k
       = \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k},
 
@@ -356,19 +362,23 @@
       :label: ex-5-38-eq-2
 
       & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \dfrac{(b-a)}{\sqrt{3}} \right\rvert \\
-      \leqslant & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert
-         + \left\lvert \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k} - \dfrac{(b-a)}{\sqrt{3}} \right\rvert \\
+      \leqslant & \left\lvert \int_{(a, b)} f_k(x) ~ \mathrm{d} x - \left[\dfrac{(b-a)k}{2\pi} \right]
+        \cdot \dfrac{2\pi}{\sqrt{3} k} \right\rvert
+        + \left\lvert \left[\dfrac{(b-a)k}{2\pi} \right] \cdot \dfrac{2\pi}{\sqrt{3} k}
+        - \dfrac{(b-a)}{\sqrt{3}} \right\rvert \\
       \leqslant & \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{k}
-         + \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{\sqrt{3} k} \\
+        + \left\{ \dfrac{(b-a)k}{2\pi} \right\} \cdot \dfrac{2\pi}{\sqrt{3} k} \\
       \leqslant & \dfrac{4\pi}{k}.
 
-   对于取好的 :math:`\varepsilon`, 可取足够大的 :math:`N` 使得 :math:`\displaystyle \sum_{s = N + 1}^{\infty} (b_s - a_s) < \varepsilon/4`.
+   对于取好的 :math:`\varepsilon`, 可取足够大的 :math:`N` 使得
+   :math:`\displaystyle \sum_{s = N + 1}^{\infty} (b_s - a_s) < \varepsilon/4`.
    记 :math:`\displaystyle G_{\varepsilon} = \bigcup_{s = 1}^{N} (a_s, b_s)`, 则有
 
    .. math::
       :label: ex-5-38-eq-3
 
-      \left\lvert \int_G f_k(x) ~ \mathrm{d} x - \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x \right\rvert \leqslant \varepsilon/4.
+      \left\lvert \int_G f_k(x) ~ \mathrm{d} x - \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x \right\rvert
+      \leqslant \varepsilon/4.
 
    另一方面, 取足够大的 :math:`k` 使得 :math:`4N\pi/k < \varepsilon/4`, 由 :eq:`ex-5-38-eq-2` 知
 
@@ -376,7 +386,8 @@
       :label: ex-5-38-eq-4
 
       \left\lvert \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x - \dfrac{1}{\sqrt{3}} \sum_{s = 1}^{N} (b_s-a_s) \right\rvert
-      & \leqslant \sum_{s = 1}^{N} \left\lvert \int_{(a_s, b_s)} f_k(x) ~ \mathrm{d} x - \dfrac{(b_s-a_s)}{\sqrt{3}} \right\rvert \\
+      & \leqslant \sum_{s = 1}^{N} \left\lvert \int_{(a_s, b_s)} f_k(x) ~ \mathrm{d} x
+        - \dfrac{(b_s-a_s)}{\sqrt{3}} \right\rvert \\
       & \leqslant \sum_{s = 1}^{N} \dfrac{4\pi}{k} < \varepsilon/4.
 
    综合 :eq:`ex-5-38-eq-1`, :eq:`ex-5-38-eq-3`, :eq:`ex-5-38-eq-4` 三式, 可知对充分大的 :math:`k` 有
@@ -385,7 +396,8 @@
       & \left\lvert \int_E f_k(x) ~ \mathrm{d} x - m E / \sqrt{3} \right\rvert \\
       \leqslant & \left\lvert \int_E f_k(x) ~ \mathrm{d} x - \int_{G} f_k(x) ~ \mathrm{d} x \right\rvert
         + \left\lvert \int_G f_k(x) ~ \mathrm{d} x - \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x \right\rvert \\
-      & + \left\lvert \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x - \dfrac{1}{\sqrt{3}} \sum_{s = 1}^{N} (b_s-a_s) \right\rvert
+      & + \left\lvert \int_{G_{\varepsilon}} f_k(x) ~ \mathrm{d} x
+        - \dfrac{1}{\sqrt{3}} \sum_{s = 1}^{N} (b_s-a_s) \right\rvert
         + \left\lvert \dfrac{1}{\sqrt{3}} \sum_{s = 1}^{N} (b_s-a_s) - m E / \sqrt{3} \right\rvert \\
       < & \dfrac{\varepsilon}{4} + \dfrac{\varepsilon}{4} + \dfrac{\varepsilon}{4} + \dfrac{\varepsilon}{4\sqrt{3}} \\
       < & \varepsilon,

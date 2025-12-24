@@ -7,8 +7,8 @@
 
 .. proof:proof::
 
-   设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`, 其中 :math:`E_n` 是零测度集. 由于 :math:`0 \leqslant m_* E \leqslant m^* E`, 所以要证明 :math:`E` 是零测度集,
-   只要证明 :math:`E` 的外测度为零即可. 根据外测度的性质, 有
+   设 :math:`E=\bigcup\limits_{n=1}^\infty E_n`, 其中 :math:`E_n` 是零测度集. 由于 :math:`0 \leqslant m_* E \leqslant m^* E`,
+   所以要证明 :math:`E` 是零测度集, 只要证明 :math:`E` 的外测度为零即可. 根据外测度的性质, 有
 
    .. math::
       m^* E \leqslant \sum_{n=1}^\infty m^* E_n = 0
@@ -21,7 +21,8 @@
 
 .. proof:solution::
 
-   不一定. 例如 :math:`G_1 = (0, 1) \cup (1, 2), G_2 = (0, 2)`, 则 :math:`G_1` 是 :math:`G_2` 的真子集, 但是 :math:`m G_1 = m G_2 = 2`.
+   不一定. 例如 :math:`G_1 = (0, 1) \cup (1, 2), G_2 = (0, 2)`, 则 :math:`G_1` 是 :math:`G_2` 的真子集,
+   但是 :math:`m G_1 = m G_2 = 2`.
 
 .. _ex-2-4:
 
@@ -29,14 +30,15 @@
 
 .. proof:solution::
 
-   不一定. 例如, 令 :math:`0 < \varepsilon < 1`, 取 :math:`A = (0, 1) \cap \mathbb{Q} = \{ a_1, a_2, \cdots \}`, 对每个有理数 :math:`a_n \in A`,
-   取开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})`, 则 :math:`G = \bigcup\limits_{n=1}^\infty G_n` 是开集, 且有
+   不一定. 例如, 令 :math:`0 < \varepsilon < 1`, 取 :math:`A = (0, 1) \cap \mathbb{Q} = \{ a_1, a_2, \cdots \}`, 对每个有理数
+   :math:`a_n \in A`, 取开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})`, 则
+   :math:`G = \bigcup\limits_{n=1}^\infty G_n` 是开集, 且有
 
    .. math::
       m G \leqslant \sum_{n=1}^\infty m G_n = \sum_{n=1}^\infty \frac{\varepsilon}{2^n} = \varepsilon
 
-   但是 :math:`\overline{G}` 是包含 :math:`[0, 1]` 区间的闭集 (具体大多少与 :math:`A` 的排列有关), 所以 :math:`m \overline{G} \geqslant 1`.
-   此时必有 :math:`m \overline{G} \neq m G`.
+   但是 :math:`\overline{G}` 是包含 :math:`[0, 1]` 区间的闭集 (具体大多少与 :math:`A` 的排列有关), 所以
+   :math:`m \overline{G} \geqslant 1`. 此时必有 :math:`m \overline{G} \neq m G`.
 
 .. _ex-2-5:
 
@@ -52,11 +54,12 @@
       m^* E = \inf \{ m F ~ : ~ F \supset E, F \text{ 为闭集} \},
 
    因为闭集的闭包仍然是闭集, 以 :ref:`上题 <ex-2-4>` 中的 :math:`G` 为例, 对于任何一个包含 :math:`G` 的闭集 :math:`F` 来说,
-   都有 :math:`\overline{G} \subset \overline{F} = F`, 所以 :math:`1 = m \overline{G} \leqslant m F`, 取下确界, 得到 :math:`1 \leqslant m^* G`.
+   都有 :math:`\overline{G} \subset \overline{F} = F`, 所以 :math:`1 = m \overline{G} \leqslant m F`, 取下确界,
+   得到 :math:`1 \leqslant m^* G`.
    而对每一个开区间 :math:`G_n = (a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}})` 来说, 包含它的最小闭集为
    :math:`\overline{G_n} = [a_n - \frac{\varepsilon}{2^{n+1}}, a_n + \frac{\varepsilon}{2^{n+1}}]`,
-   所以这样定义的 :math:`G_n` 的外测度 :math:`m^* G_n = \dfrac{\varepsilon}{2^n}`. 那么 :math:`\sum\limits_{n=1}^\infty m^* G_n = \varepsilon`.
-   这样一来, 外测度的半可加性
+   所以这样定义的 :math:`G_n` 的外测度 :math:`m^* G_n = \dfrac{\varepsilon}{2^n}`. 那么
+   :math:`\sum\limits_{n=1}^\infty m^* G_n = \varepsilon`. 这样一来, 外测度的半可加性
 
    .. math::
       m^* G \leqslant \sum_{n=1}^\infty m^* G_n
@@ -64,8 +67,9 @@
    就不成立了.
 
    .. note::
-      事实上, 对于 :ref:`上题 <ex-2-4>` 中的 :math:`G`, 由于 :math:`\overline{G}` 是包含 :math:`G` 的闭集, 所以又有 :math:`m^* G \leqslant m \overline{G} = m [0, 1] = 1`,
-      结合本题假设下我们已经得到的 :math:`1 \leqslant m^* G` 的结论, 可以得到 :math:`m^* G = 1`, 我们具体求得了集合 :math:`G` 的外测度 (虽然不是良定义的).
+      事实上, 对于 :ref:`上题 <ex-2-4>` 中的 :math:`G`, 由于 :math:`\overline{G}` 是包含 :math:`G` 的闭集, 所以又有
+      :math:`m^* G \leqslant m \overline{G} = m [0, 1] = 1`, 结合本题假设下我们已经得到的 :math:`1 \leqslant m^* G` 的结论,
+      可以得到 :math:`m^* G = 1`, 我们具体求得了集合 :math:`G` 的外测度 (虽然不是良定义的).
 
 .. _ex-2-6:
 

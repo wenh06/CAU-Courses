@@ -140,7 +140,7 @@
 30. 设 :math:`\theta(x)` 为区间 :math:`[0, 1]` 上的 Cantor 函数, 令 :math:`f(x) = \theta(x) + x`,
     :math:`0 \leqslant x \leqslant 1`; :math:`g = f^{-1}`. 试证:
 
-    (1). 存在可测集 :math:`B` 使 :math:`g^{-1}(B)` 不可测；
+    (1). 存在可测集 :math:`B` 使 :math:`g^{-1}(B)` 不可测;
 
     (2). :math:`g^{-1}` 映不可测集为不可测集.
 
@@ -207,8 +207,8 @@
    这与 :math:`E` 为不可测集的假设矛盾. 综上所述, :math:`g^{-1}` 映不可测集为不可测集.
 
    .. note::
-      第 (2) 问中用到的关键结论是, 一个满足 Lipschitz 条件的连续映射会将零测集映为零测集. 这里, 一个函数 :math:`g` 满足 Lipschitz 条件,
-      是指存在常数 :math:`L > 0`, 使得对任意 :math:`x_1, x_2` 都有
+      第 (2) 问中用到的关键结论是, 一个满足 Lipschitz 条件的连续映射会将零测集映为零测集. 这里, 一个函数 :math:`g`
+      满足 Lipschitz 条件, 是指存在常数 :math:`L > 0`, 使得对任意 :math:`x_1, x_2` 都有
 
       .. math::
          \lvert g(x_2) - g(x_1) \rvert \leqslant L \lvert x_2 - x_1 \rvert.
@@ -219,7 +219,8 @@
 .. _ex-4-34:
 
 34. 设 :math:`\{ f_n \}` 为 :math:`[a, b]` 上有界变差函数列, :math:`f_n` 收敛于一有限函数 :math:`f` (当 :math:`n \to \infty`),
-    且有 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`, :math:`K` 为常数 (:math:`n \in \mathbb{N}`). 证明 :math:`f` 也是有界变差函数.
+    且有 :math:`\displaystyle \bigvee_a^b (f_n) \leqslant K`, :math:`K` 为常数 (:math:`n \in \mathbb{N}`). 证明 :math:`f`
+    也是有界变差函数.
 
 .. proof:proof::
 
@@ -250,8 +251,10 @@
 
    .. math::
       \sum_{i = 1}^k \lvert f(x_i) - f(x_{i - 1}) \rvert
-      & \leqslant \sum_{i = 1}^k \left( \lvert f(x_i) - f_n(x_i) \rvert + \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert + \lvert f_n(x_{i - 1}) - f(x_{i - 1}) \rvert \right) \\
-      & \leqslant \sum_{i = 1}^k \dfrac{\varepsilon}{2k} + \sum_{i = 1}^k \left( \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \right) + \sum_{i = 1}^k \dfrac{\varepsilon}{2k} \\
+      & \leqslant \sum_{i = 1}^k \left( \lvert f(x_i) - f_n(x_i) \rvert
+        + \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert + \lvert f_n(x_{i - 1}) - f(x_{i - 1}) \rvert \right) \\
+      & \leqslant \sum_{i = 1}^k \dfrac{\varepsilon}{2k}
+        + \sum_{i = 1}^k \left( \lvert f_n(x_i) - f_n(x_{i - 1}) \rvert \right) + \sum_{i = 1}^k \dfrac{\varepsilon}{2k} \\
       & \leqslant \varepsilon + K,
 
    其中 :math:`n` 是任意大于 :math:`N(\varepsilon, \mathscr{P})` 的正整数. 由于 :math:`\varepsilon` 的任意性, 所以有
@@ -272,8 +275,9 @@
    .. math::
       f(x) = f(a) + \int_{[a, x]} g ~ \mathrm{d} m, \quad x \in [a, b],
 
-   并且 :math:`f'(x) = g(x)` 几乎处处成立. 由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数, 即 :math:`g(x)` 几乎处处非负,
-   所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有 :math:`\displaystyle \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0`, 从而知
+   并且 :math:`f'(x) = g(x)` 几乎处处成立. 由于函数 :math:`f` 在 :math:`[a, b]` 上几乎处处存在非负导数, 即 :math:`g(x)`
+   几乎处处非负, 所以对任意 :math:`x_1 < x_2 \in [a, b]`, 有
+   :math:`\displaystyle \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0`, 从而知
 
    .. math::
       f(x_2) - f(x_1) = \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0,
@@ -291,11 +295,12 @@
    要证明 :math:`\forall ~ \varepsilon > 0`, 存在有限个互不相交的区间 :math:`d_1, d_2, \cdots, d_n \in \mathscr{M}`,
    使得 :math:`m (E \setminus \bigcup_{i = 1}^n d_i) < \varepsilon`.
 
-   取开集 :math:`G` 使得 :math:`E \subset G`, 且 :math:`m G < \infty`. 可以不妨设 :math:`\mathscr{M}` 中的区间都包含于 :math:`G` 中.
-   这是因为 :math:`\forall ~ x \in E \subset G`, :math:`x` 必然属于开集 :math:`G` 的某个构成区间 :math:`(a, b)`,
-   而 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖, 对于所有的 :math:`x \in E`, 都存在闭区间列 :math:`\{ d_k \} \subset \mathscr{M}`,
-   使得 :math:`x \in d_k`, 且 :math:`\displaystyle \lim_{k \to \infty} m (d_k) = 0`. 于是从某一项开始, :math:`d_k \subset (a, b) \subset G`.
-   令 :math:`\mathscr{M}'` 为 :math:`\mathscr{M}` 中所有包含于 :math:`G` 的闭区间构成的子族, 那么 :math:`\mathscr{M}'` 也是 :math:`E` 的 Vitali 覆盖.
+   取开集 :math:`G` 使得 :math:`E \subset G`, 且 :math:`m G < \infty`. 可以不妨设 :math:`\mathscr{M}` 中的区间都包含于
+   :math:`G` 中. 这是因为 :math:`\forall ~ x \in E \subset G`, :math:`x` 必然属于开集 :math:`G` 的某个构成区间
+   :math:`(a, b)`, 而 :math:`\mathscr{M}` 为 :math:`E` 的 Vitali 覆盖, 对于所有的 :math:`x \in E`, 都存在闭区间列
+   :math:`\{ d_k \} \subset \mathscr{M}`, 使得 :math:`x \in d_k`, 且 :math:`\displaystyle \lim_{k \to \infty} m (d_k) = 0`.
+   于是从某一项开始, :math:`d_k \subset (a, b) \subset G`. 令 :math:`\mathscr{M}'` 为 :math:`\mathscr{M}` 中所有包含于
+   :math:`G` 的闭区间构成的子族, 那么 :math:`\mathscr{M}'` 也是 :math:`E` 的 Vitali 覆盖.
    对 :math:`\mathscr{M}'` 证明题设结论, 则该结论对 :math:`\mathscr{M}` 也成立.
 
    从 :math:`\mathscr{M}` 中任选一个区间 :math:`d_1`, 由数学归纳法依照如下步骤选取区间 :math:`d_2, d_3, \cdots, d_n`:
@@ -391,10 +396,10 @@
       m B \leqslant m \left( \bigcup_{x \in B} d_{n_1(x)}' \right) \leqslant m \left( \bigcup_{k = n + 1}^\infty d_k' \right)
       \leqslant \sum_{k = n + 1}^\infty m (d_k') = 5 \sum_{k = n + 1}^\infty m (d_k) < \varepsilon.
 
-   上式 :eq:`ex-4-38-eq-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-eq-10` 的方法将闭区间 :math:`d_k` 分别往左右两边延伸 :math:`2 m (d_k)`,
-   得到的长度为 :math:`5 m (d_k)` 的闭区间；第一个不等式成立是由集合的包含关系 :math:`\displaystyle B \subset \bigcup_{x \in B} d_{n_1(x)}'`;
-   第二个不等式成立是因为集合 :math:`\{ n_1(x) ~:~ x \in B \}` 显然是集合 :math:`\{ k \in \mathbb{N} ~:~ k = n + 1, n + 2, \cdots \}` 的子集.
-
+   上式 :eq:`ex-4-38-eq-11` 中 :math:`d_k'` 指的是依照类似于 :eq:`ex-4-38-eq-10` 的方法将闭区间 :math:`d_k`
+   分别往左右两边延伸 :math:`2 m (d_k)`, 得到的长度为 :math:`5 m (d_k)` 的闭区间; 第一个不等式成立是由集合的包含关系
+   :math:`\displaystyle B \subset \bigcup_{x \in B} d_{n_1(x)}'`; 第二个不等式成立是因为集合 :math:`\{ n_1(x) ~:~ x \in B \}`
+   显然是集合 :math:`\{ k \in \mathbb{N} ~:~ k = n + 1, n + 2, \cdots \}` 的子集.
 
 .. _ex-4-39:
 
@@ -412,7 +417,8 @@
    对任意两个实数 :math:`x_1 < x_2`, 存在有理数 :math:`r_k` 使得 :math:`x_1 < r_k < x_2`, 从而有
 
    .. math::
-      f(x_2) - f(x_1) = \sum_{r_n < x_2} 2^{-n} - \sum_{r_n < x_1} 2^{-n} = \sum_{x_1 \leqslant r_n < x_2} 2^{-n} \geqslant 2^{-k} > 0.
+      f(x_2) - f(x_1) = \sum_{r_n < x_2} 2^{-n} - \sum_{r_n < x_1} 2^{-n}
+      = \sum_{x_1 \leqslant r_n < x_2} 2^{-n} \geqslant 2^{-k} > 0.
 
    于是 :math:`f(x)` 是增函数.
 
@@ -462,8 +468,8 @@
       = \sum_{n = 1}^\infty 2^{-n} \int_{(r_n, r_n + 1)} \dfrac{1}{\sqrt{x - r_n}} ~ \mathrm{d} m.
 
    对于定义在 :math:`(r_n, r_n + 1)` 上的非负可测函数 :math:`f_n(x) = \dfrac{1}{\sqrt{x - r_n}}`,
-   若反常积分 :math:`\displaystyle \int_{r_n}^{r_n + 1} f_n(x) ~ \mathrm{d} x` 收敛, 则 :math:`f_n` 在 :math:`(r_n, r_n + 1)` 上勒贝格可积,
-   并且积分值相等, 即
+   若反常积分 :math:`\displaystyle \int_{r_n}^{r_n + 1} f_n(x) ~ \mathrm{d} x` 收敛, 则 :math:`f_n`
+   在 :math:`(r_n, r_n + 1)` 上勒贝格可积, 并且积分值相等, 即
 
    .. math::
       :label: ex-4-42-eq-2
@@ -493,19 +499,23 @@
    .. math::
       \lim_{m \to \infty} g(x_m) = \lim_{m \to \infty} 2^{-k} (x_m - r_k)^{-1/2} = \infty,
 
-   即 :math:`g(x)` 在区间 :math:`(\alpha, \beta)` 上无界. 由此也可见, 若 :math:`g(x) < \infty`, 则 :math:`g` 在点 :math:`x` 处不连续.
+   即 :math:`g(x)` 在区间 :math:`(\alpha, \beta)` 上无界. 由此也可见, 若 :math:`g(x) < \infty`,
+   则 :math:`g` 在点 :math:`x` 处不连续.
 
    考虑 :math:`g^2` 在任意非平凡开区间 :math:`(\alpha, \beta)` 上的勒贝格积分, 有
 
    .. math::
-      \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m & = \int_{(\alpha, \beta)} \left( \sum_{n = 1}^\infty 2^{-n} f(x - r_n) \right)^2 ~ \mathrm{d} m \\
+      \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m
+      & = \int_{(\alpha, \beta)} \left( \sum_{n = 1}^\infty 2^{-n} f(x - r_n) \right)^2 ~ \mathrm{d} m \\
       & \geqslant \int_{(\alpha, \beta)} \sum_{n = 1}^\infty 4^{-n} f^2(x - r_n) ~ \mathrm{d} m \\
       & \geqslant 4^{-k} \int_{(\alpha, \beta)} f^2(x - r_k) ~ \mathrm{d} m \\
       & = 4^{-k} \int_{(r_k, \beta_0)} \dfrac{1}{x - r_k} ~ \mathrm{d} m,
 
-   其中 :math:`\beta_0 = \min\{r_k + 1, \beta\}`. 由于 :math:`(r_k, \beta_0)` 上的非负可测函数 :math:`\displaystyle \dfrac{1}{x - r_k}` 的反常积分发散:
+   其中 :math:`\beta_0 = \min\{r_k + 1, \beta\}`. 由于 :math:`(r_k, \beta_0)` 上的非负可测函数
+   :math:`\displaystyle \dfrac{1}{x - r_k}` 的反常积分发散:
 
    .. math::
       \int_{r_k}^{\beta_0} \dfrac{1}{x - r_k} ~ \mathrm{d} x = \ln (x - r_k) \bigg|_{r_k}^{\beta_0} = \infty,
 
-   所以 :math:`\displaystyle \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m = \infty`, 即 :math:`g^2` 在区间 :math:`(\alpha, \beta)` 上不可积.
+   所以 :math:`\displaystyle \int_{(\alpha, \beta)} g^2 ~ \mathrm{d} m = \infty`, 即 :math:`g^2` 在区间
+   :math:`(\alpha, \beta)` 上不可积.

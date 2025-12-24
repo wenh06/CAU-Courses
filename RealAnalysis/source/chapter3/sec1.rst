@@ -7,7 +7,8 @@
 
 .. proof:proof::
 
-   由于 :math:`f(x), g(x)` 都是可测函数, 那么 :math:`f - g` 也是可测函数, 于是由可测函数定义知 :math:`E(f > g) = E(f - g > 0)` 是可测集.
+   由于 :math:`f(x), g(x)` 都是可测函数, 那么 :math:`f - g` 也是可测函数, 于是由可测函数定义知 :math:`E(f > g) = E(f - g > 0)`
+   是可测集.
 
    .. note::
       也可以像证明 :math:`f - g` 是可测函数那样, 将 :math:`E(f > g)` 具体写出来:
@@ -43,7 +44,8 @@
    设开集 :math:`G \subset \mathbb{R}` 有结构表示 :math:`\displaystyle G = \bigcup_{n=1}^{\infty} (a_n, b_n)`, 则
 
    .. math::
-      E(f \in G) = f^{-1}(G) = f^{-1} \left(\bigcup_{n=1}^{\infty} (a_n, b_n)\right) = \bigcup_{n=1}^{\infty} f^{-1}((a_n, b_n))
+      E(f \in G) = f^{-1}(G) = f^{-1} \left(\bigcup_{n=1}^{\infty} (a_n, b_n)\right)
+      = \bigcup_{n=1}^{\infty} f^{-1}((a_n, b_n))
       = \bigcup_{n=1}^{\infty} E(f > a_n) \cap E(f < b_n)
 
    因此 :math:`E(f \in G)` 是可测集.
@@ -51,7 +53,8 @@
    对于闭集 :math:`F \subset \mathbb{R}`, 有 :math:`\mathbb{R} \setminus F` 是开集, 于是
 
    .. math::
-      E(f \in F) = E(f \in \mathbb{R} \setminus (\mathbb{R} \setminus F)) = E \setminus E(f \in \mathbb{R} \setminus F)
+      E(f \in F) = E(f \in \mathbb{R} \setminus (\mathbb{R} \setminus F))
+                 = E \setminus E(f \in \mathbb{R} \setminus F)
 
    是可测集.
 
@@ -81,8 +84,8 @@
 
 .. _ex-3-8:
 
-8. 设 :math:`f(x)` 是可测集 :math:`E` 上的可测函数, :math:`B` 是 :math:`\mathbb{R}` 中的 Borel 集. 试证 :math:`f^{-1}(B)` 是可测集.
-   又当 :math:`B` 是任意可测集时, :math:`f^{-1}(B)` 是否可测?
+8. 设 :math:`f(x)` 是可测集 :math:`E` 上的可测函数, :math:`B` 是 :math:`\mathbb{R}` 中的 Borel 集. 试证 :math:`f^{-1}(B)`
+   是可测集. 又当 :math:`B` 是任意可测集时, :math:`f^{-1}(B)` 是否可测?
 
 .. proof:proof::
 
@@ -105,7 +108,8 @@
    因此对于 :math:`B \in \mathscr{B}`, 有 :math:`f^{-1}(B) \in \mathscr{M}`, 是可测集.
 
    当 :math:`B` 是任意可测集时, :math:`f^{-1}(B)` 不一定是可测集. 反例如下: 设 :math:`E = [0, 1]`,
-   令 :math:`\Phi` 为 Cantor 函数 (见 :ref:`第一章补充材料 <cantor-function>`), 并令 :math:`\displaystyle \Psi(x) = \dfrac{1}{2} (\Phi(x) + x)`,
+   令 :math:`\Phi` 为 Cantor 函数 (见 :ref:`第一章补充材料 <cantor-function>`), 并令
+   :math:`\displaystyle \Psi(x) = \dfrac{1}{2} (\Phi(x) + x)`,
    那么 :math:`\Psi(x)` 是 :math:`E \to E` 的连续, 严格递增的双射, 从而有逆映射 :math:`f = \Psi^{-1}`.
    :math:`f` 也是 是 :math:`E \to E` 的连续, 严格递增的函数, 从而是可测的.
 
@@ -170,14 +174,17 @@
    由于端点可列, 故是零测集. 因此 :math:`P_i` 都是可测集. 我们还可以将 :math:`P_i` 表示为
 
    .. math::
-      P_i = \left( \bigcap_{n=1}^{\infty} \left( \bigcup\limits_{k \not\equiv i \bmod{3}} I_{n, k}^{(i)} \right) \right) \setminus E_i,
+      P_i = \left( \bigcap_{n=1}^{\infty} \left( \bigcup\limits_{k \not\equiv i \bmod{3}} I_{n, k}^{(i)} \right) \right)
+      \setminus E_i,
 
    其中
 
    .. math::
       & I_{n, k}^{(2)} = I_{n, k}, \quad E_2 = \emptyset, \\
-      & I_{n, k}^{(1)} = I_{n, k} \cup \left\{ \dfrac{k+1}{3^n} \right\} = \left( \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right], \quad E_1 = \left\{ 1 \right\}, \\
-      & I_{n, k}^{(0)} = I_{n, k} \cup \left\{ \dfrac{k}{3^n} \right\} = \left[ \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right), \quad E_0 = \left\{ 0 \right\}.
+      & I_{n, k}^{(1)} = I_{n, k} \cup \left\{ \dfrac{k+1}{3^n} \right\}
+        = \left( \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right], \quad E_1 = \left\{ 1 \right\}, \\
+      & I_{n, k}^{(0)} = I_{n, k} \cup \left\{ \dfrac{k}{3^n} \right\}
+        = \left[ \dfrac{k}{3^n}, \dfrac{k+1}{3^n} \right), \quad E_0 = \left\{ 0 \right\}.
 
    注意到 :math:`P_i` 的交可能非空, 事实上有
 
@@ -189,7 +196,8 @@
    因此需要如题干中所述对 :math:`f(x)` 进行特殊定义. 同时, 易知
 
    .. math::
-      f(P_0) \subset [0, 1], f(P_1) \subset [1, 2], f(P_2) \subset [2, 3], f \left( [0, 1) \setminus \bigcup_{i=0}^2 P_i \right) \subset [3, 4].
+      f(P_0) \subset [0, 1], f(P_1) \subset [1, 2], f(P_2) \subset [2, 3],
+      f \left( [0, 1) \setminus \bigcup_{i=0}^2 P_i \right) \subset [3, 4].
 
    记 :math:`W = [0, 1) \setminus \bigcup\limits_{i=0}^2 P_i`, 于是有
 
@@ -207,11 +215,12 @@
 
    函数 :math:`f(x)` 在 :math:`[0, 1)` 上不连续. 事实上, 任取 :math:`\displaystyle x \in \left( \bigcup_{i=0}^2 P_i \right) \setminus \left\{ 0, \dfrac{1}{2} \right\}`.
    对任意 :math:`0 < \varepsilon < \dfrac{1}{2}`, 取 :math:`n \in \mathbb{N}` 使得 :math:`3^{-n} < \varepsilon`,
-   将 :math:`x` 的三进表示中第 :math:`n + 1` 至 :math:`n + 3` 位数字改为 :math:`012`, 记得到的数为 :math:`x'`, 则 :math:`x' \not \in \bigcup_{i=0}^2 P_i`,
-   且 :math:`\lvert x - x' \rvert < 3^{-n} < \varepsilon`, 但同时有
+   将 :math:`x` 的三进表示中第 :math:`n + 1` 至 :math:`n + 3` 位数字改为 :math:`012`, 记得到的数为 :math:`x'`,
+   则 :math:`x' \not \in \bigcup_{i=0}^2 P_i`, 且 :math:`\lvert x - x' \rvert < 3^{-n} < \varepsilon`, 但同时有
 
    .. math::
-      \lvert f(x') - f(x) \rvert = \lvert x' + 3 - x - i \rvert \geqslant 3 - i - \lvert x' - x \rvert \geqslant \dfrac{5}{2} - i > \dfrac{1}{2} > \varepsilon.
+      \lvert f(x') - f(x) \rvert = \lvert x' + 3 - x - i \rvert \geqslant 3 - i - \lvert x' - x \rvert
+      \geqslant \dfrac{5}{2} - i > \dfrac{1}{2} > \varepsilon.
 
    上式中 :math:`i \in \{0, 1, 2\}` 为 :math:`x` 所属集合 :math:`P_i` 的下标. 因此 :math:`f(x)` 在 :math:`[0, 1)` 上不连续.
 
@@ -232,15 +241,18 @@
    首先, 证明每个 :math:`f_n(x, y)` 都是可测函数: :math:`\forall ~ \alpha \in \mathbb{R}`, 有
 
    .. math::
-      E(f_n > \alpha) & = \left\{ (x, y) \in \mathbb{R}^2 : f_n(x, y) > \alpha \right\} = \left\{ (x, y) \in \mathbb{R}^2: f \left( \dfrac{[nx]}{n}, y \right) > \alpha \right\} \\
+      E(f_n > \alpha)
+      & = \left\{ (x, y) \in \mathbb{R}^2 : f_n(x, y) > \alpha \right\}
+        = \left\{ (x, y) \in \mathbb{R}^2: f \left( \dfrac{[nx]}{n}, y \right) > \alpha \right\} \\
       & = \bigcup_{k \in \mathbb{Z}} \left[ \dfrac{k}{n}, \dfrac{k+1}{n} \right) \times \left\{ y \in \mathbb{R}: f \left( \dfrac{k}{n}, y \right) > \alpha \right\},
 
    由于 :math:`f(x, y)` 对每个固定的 :math:`x` 关于 :math:`y` 连续, 那么集合
-   :math:`\left\{ y \in \mathbb{R}: f \left( \dfrac{k}{n}, y \right) > \alpha \right\}` 是开集, 因此 :math:`E(f_n > \alpha)` 是可测集,
-   于是 :math:`f_n(x, y)` 是可测函数.
+   :math:`\left\{ y \in \mathbb{R}: f \left( \dfrac{k}{n}, y \right) > \alpha \right\}` 是开集,
+   因此 :math:`E(f_n > \alpha)` 是可测集, 于是 :math:`f_n(x, y)` 是可测函数.
 
-   其次, 证明 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)`. 事实上, 由于 :math:`f(x, y)` 对每个固定的 :math:`y` 关于 :math:`x` 连续,
-   因此 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`\delta > 0`, 使得 :math:`\forall ~ x' \in \mathbb{R}`, 当 :math:`\lvert x' - x \rvert < \delta` 时,
+   其次, 证明 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)`. 事实上, 由于 :math:`f(x, y)`
+   对每个固定的 :math:`y` 关于 :math:`x` 连续, 因此 :math:`\forall ~ \varepsilon > 0`, 存在 :math:`\delta > 0`,
+   使得 :math:`\forall ~ x' \in \mathbb{R}`, 当 :math:`\lvert x' - x \rvert < \delta` 时,
    有 :math:`\lvert f(x', y) - f(x, y) \rvert < \varepsilon`. 又由于
 
    .. math::
@@ -250,7 +262,8 @@
    :math:`\forall ~ n > N`, 有 :math:`\left\lvert \dfrac{[nx]}{n} - x \right\rvert < \delta`. 于是有
 
    .. math::
-      \lvert f_n(x, y) - f(x, y) \rvert = \left\lvert f \left( \dfrac{[nx]}{n}, y \right) - f(x, y) \right\rvert < \varepsilon, \forall ~ n > N.
+      \lvert f_n(x, y) - f(x, y) \rvert
+      = \left\lvert f \left( \dfrac{[nx]}{n}, y \right) - f(x, y) \right\rvert < \varepsilon, \forall ~ n > N.
 
    这就证明了 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)` 对所有的 :math:`(x, y) \in \mathbb{R}^2` 成立.
    根据可测函数列的性质, :math:`\displaystyle f = \lim_n f_n` 也是可测函数.

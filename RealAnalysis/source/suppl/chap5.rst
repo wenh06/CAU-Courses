@@ -69,7 +69,8 @@
      .. math::
          :label: modes-of-convergence-eg-2
 
-         f_n(x) = 2^k \chi_{\left[ \frac{i}{2^k}, \frac{i + 1}{2^k} \right]}(x), \quad n = 2^k + i, \quad 0 \leqslant i < 2^k.
+         f_n(x) = 2^k \chi_{\left[ \frac{i}{2^k}, \frac{i + 1}{2^k} \right]}(x),
+         \quad n = 2^k + i, \quad 0 \leqslant i < 2^k.
 
      可以验证 :math:`f_n(x)` 依测度收敛到 :math:`0` 但不强收敛到 :math:`0`.
 
@@ -83,12 +84,14 @@
 
          f_n(x) = \dfrac{1}{n} \chi_{[1, e^n]}(x),
 
-     容易验证 :math:`f_n(x)` 一致收敛到 :math:`0`. 设 :math:`p, q > 1` 满足 :math:`\displaystyle \dfrac{1}{p} + \dfrac{1}{q} = 1`,
-     则 :math:`f_n \in L^p(\mathbb{R})`. 取 :math:`\displaystyle g(x) = \dfrac{\chi_{[1, +\infty)}(x)}{x}`, 则 :math:`g \in L^q(\mathbb{R})`,
-     但是
+     容易验证 :math:`f_n(x)` 一致收敛到 :math:`0`. 设 :math:`p, q > 1` 满足
+     :math:`\displaystyle \dfrac{1}{p} + \dfrac{1}{q} = 1`, 则 :math:`f_n \in L^p(\mathbb{R})`.
+     取 :math:`\displaystyle g(x) = \dfrac{\chi_{[1, +\infty)}(x)}{x}`, 则
+     :math:`g \in L^q(\mathbb{R})`, 但是
 
      .. math::
-         \int_{\mathbb{R}} f_n(x) g(x) ~ \mathrm{d} x = \dfrac{1}{n} \int_{1}^{e^n} \dfrac{1}{x} ~ \mathrm{d} x = 1.
+         \int_{\mathbb{R}} f_n(x) g(x) ~ \mathrm{d} x
+         = \dfrac{1}{n} \int_{1}^{e^n} \dfrac{1}{x} ~ \mathrm{d} x = 1.
 
      因此, :math:`f_n` 不弱收敛到 :math:`0`, 因此也不强收敛到 :math:`0`.
 
@@ -100,7 +103,8 @@
      容易验证 :math:`f_n(x) \in L^p(E)` 且由控制收敛定理知, 对任意 :math:`g \in L^q(E) \subset L^1(E)`, 都有
 
      .. math::
-         \lim_{n \to \infty} \int_{E} f_n(x) g(x) ~ \mathrm{d} m = \int_{E} \lim_{n \to \infty} f_n(x) g(x) ~ \mathrm{d} m = 0.
+         \lim_{n \to \infty} \int_{E} f_n(x) g(x) ~ \mathrm{d} m
+         = \int_{E} \lim_{n \to \infty} f_n(x) g(x) ~ \mathrm{d} m = 0.
 
      故 :math:`f_n(x)` 弱收敛到 :math:`0`, 但不一致收敛到 :math:`0`.
 
@@ -109,8 +113,9 @@
      .. math::
          f_n(x) = \sin(nx), \quad n \in \mathbb{N}.
 
-     容易验证 :math:`f_n(x) \in L^2(E)`. 由 :ref:`Riemann-Lebesgue 引理 <ex-4-24>`, 对任意可积函数 (特别地, :math:`L^2(E)` 中的函数) :math:`g(x)`,
-     都有 :math:`\displaystyle \int_{0}^{\pi} f_n(x) g(x) ~ \mathrm{d} x \to 0`, 因此 :math:`f_n(x)` 弱收敛到 :math:`0`. 但是
+     容易验证 :math:`f_n(x) \in L^2(E)`. 由 :ref:`Riemann-Lebesgue 引理 <ex-4-24>`, 对任意可积函数 (特别地, :math:`L^2(E)`
+     中的函数) :math:`g(x)`, 都有 :math:`\displaystyle \int_{0}^{\pi} f_n(x) g(x) ~ \mathrm{d} x \to 0`, 因此
+     :math:`f_n(x)` 弱收敛到 :math:`0`. 但是
 
      .. math::
          \lVert f_n \rVert_2^2 = \int_{0}^{\pi} \sin^2(nx) ~ \mathrm{d} x = \dfrac{\pi}{2},

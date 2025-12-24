@@ -6,7 +6,9 @@
 1. 令 :math:`\varphi = \chi_{(\alpha, \beta)}`, 其中 :math:`(\alpha, \beta) \subset E = [-\pi, \pi]`, 那么
 
    .. math::
-      \varphi_n (x) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u) \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} ~ \mathrm{d}u
+      \varphi_n (x)
+      = \dfrac{1}{\pi} \int_{-\pi}^{\pi} \varphi(x + u)
+        \dfrac{\sin(n + \frac{1}{2})u}{2 \sin \frac{1}{2}u} ~ \mathrm{d}u
       = \dfrac{1}{\pi} \int_{(\alpha-x))/2}^{(\beta-x)/2} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v
 
    一致有界, 即存在常数 :math:`C` 使得 :math:`\|\varphi_n\|_{\infty} \leq C` 对所有 :math:`n` 成立.
@@ -14,8 +16,8 @@
 .. proof:proof::
 
    由对称性, 只需要考虑 :math:`0 \leqslant \alpha - x \leqslant \beta - x \leqslant \pi` 的情况. 此时,
-   被积函数 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 的分母在被积区间 :math:`\left(\dfrac{\alpha-x}{2}, \dfrac{\beta-x}{2}\right)` 上非负,
-   且单调递增. 有一个重要的观察是, 令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`,
+   被积函数 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 的分母在被积区间 :math:`\left(\dfrac{\alpha-x}{2}, \dfrac{\beta-x}{2}\right)`
+   上非负, 且单调递增. 有一个重要的观察是, 令区间 :math:`I_k = \left[ \dfrac{k-1}{2n+1}\pi, \dfrac{k}{2n+1}\pi \right]`,
    那么在相邻的区间 :math:`I_k` 和 :math:`I_{k+1}` 上有
 
    .. math::
@@ -36,30 +38,34 @@
 
    .. math::
       \varphi_n(x)
-      & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right)
-         + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
-      & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)} + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right)
-         \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v,
+      & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)}
+        + \left( \int_{I_{k_{\alpha, 1}}} + \int_{I_{k_{\alpha, 1} + 1}} \right)
+        + \cdots + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+      & \geqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 1}/(2n+1)}
+        + \int_{\pi k_{\beta, 1}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v,
 
    同时
 
    .. math::
       \varphi_n(x)
-      & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right)
-         + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
-      & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)} + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right)
-         \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
+      & = \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)}
+        + \left( \int_{I_{k_{\alpha, 0}}} + \int_{I_{k_{\alpha, 0} + 1}} \right)
+        + \cdots + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
+      & \leqslant \dfrac{1}{\pi} \left( \int_{(\alpha-x)/2}^{\pi k_{\alpha, 0}/(2n+1)}
+        + \int_{\pi k_{\beta, 0}/(2n+1)}^{(\beta-x)/2} \right) \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
    总之, 有
 
    .. math::
       \lvert \varphi_n (x) \rvert
-      & \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k} \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v \\
+      & \leqslant 2 \cdot \dfrac{1}{\pi} \cdot \max\limits_k \int_{I_k}
+        \left\lvert \dfrac{\sin(2n+1)v}{\sin v} \right\rvert ~ \mathrm{d}v \\
       & = \dfrac{2}{\pi} \cdot \int_{I_1} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v \\
       & = \dfrac{2}{\pi} \cdot \int_0^{\frac{\pi}{2n+1}} \dfrac{\sin(2n+1)v}{\sin v} ~ \mathrm{d}v.
 
-   我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为 :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`,
-   在 :math:`[0, \pi/(2n+1)]` 恒负, 因此 :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
+   我们知道 :math:`\dfrac{\sin(2n+1)v}{\sin v} = 1 + 2 \sum\limits_{k=1}^n \cos(2kv)`, 其导数为
+   :math:`-2 \sum\limits_{k=1}^n 2k \sin(2kv)`, 在 :math:`[0, \pi/(2n+1)]` 恒负, 因此
+   :math:`\dfrac{\sin(2n+1)v}{\sin v}` 在 :math:`[0, \pi/(2n+1)]` 上单调递减, 于是有
 
    .. math::
       \lvert \varphi_n (x) \rvert
@@ -81,31 +87,37 @@
 .. _thm-differentiation-under-integral-sign:
 
 2. 积分号下求导定理: 设 :math:`f(x, t)` 定义在 :math:`E \times (\alpha, \beta)` 上,
-   且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有 :math:`f(x, t)` 关于 :math:`t` 处处可微.
-   若存在 :math:`F(x) \in L_E` 使得
+   且对任意 :math:`t \in (\alpha, \beta)` 有 :math:`f(x, t) \in L_E`; 对任意 :math:`x \in E` 有
+   :math:`f(x, t)` 关于 :math:`t` 处处可微. 若存在 :math:`F(x) \in L_E` 使得
 
    .. math::
-      \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert \leqslant F(x), \quad \forall ~ (x, t) \in E \times (\alpha, \beta),
+      \left\lvert \dfrac{\partial f(x, t)}{\partial t} \right\rvert
+      \leqslant F(x), \quad \forall ~ (x, t) \in E \times (\alpha, \beta),
 
    那么
 
    .. math::
-      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x = \int_E \dfrac{\partial f(x, t)}{\partial t} ~ \mathrm{d}x.
+      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x
+      = \int_E \dfrac{\partial f(x, t)}{\partial t} ~ \mathrm{d}x.
 
 .. proof:proof::
 
    由微分中值定理, 有
 
    .. math::
-      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) ~ \mathrm{d}x \\
-      & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h ~ \mathrm{d}x \\
-      & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x, \quad \theta(h) \in (0, 1).
+      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x
+      & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E \left( f(x, t+h) - f(x, t) \right) ~ \mathrm{d}x \\
+      & = \lim\limits_{h \to 0} \dfrac{1}{h} \int_E
+        \left( \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right) \cdot h ~ \mathrm{d}x \\
+      & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x,
+        \quad \theta(h) \in (0, 1).
 
    那么 :math:`\left\{ g_h(x) := \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) \right\}_{h \in (0, 1)}` 构成一个可测函数族,
    且满足 :math:`g_h(x) \leqslant F(x) \in L_E`, :math:`0` 为指标集 :math:`(0, 1)` 的聚点, 由 Lebesgue 控制收敛定理, 有
 
    .. math::
-      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
+      \dfrac{~ \mathrm{d}}{~ \mathrm{d}t} \int_E f(x, t) ~ \mathrm{d}x
+      & = \lim\limits_{h \to 0} \int_E \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
       & = \int_E \lim\limits_{h \to 0} \dfrac{\partial}{\partial t} f(x, t + \theta(h) h) ~ \mathrm{d}x \\
       & = \int_E \dfrac{\partial}{\partial t} f(x, t) ~ \mathrm{d}x.
 
@@ -120,7 +132,7 @@
       L_0 & = \{ f \in L_{[a, b]} ~:~ f \sim 0\}, \\
       C([a, b]) & = [a, b] \text{ 区间上的连续函数}, \\
       BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
-      AC([a, b]) & = [a, b] \text{ 区间上绝对连续函数}.
+      AC_0([a, b]) & = [a, b] \text{ 区间上绝对连续函数且满足 } f(a) = 0.
 
    以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的 (线性) 映射展开的, 可以用下面的图表来表示:
 
@@ -144,13 +156,13 @@
       \node (BV2) at (11, -2) {$BV([a, b])$};
       \draw[arrows={- Classical TikZ Rightarrow[]}] ([xshift=0.5ex,yshift=1ex] BV.east) arc (90:270:0.5ex) -- (BV2);
 
-      \node (AC) at (7, -4) {$AC([a, b])$};
+      \node (AC) at (7, -4) {$AC_0([a, b])$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] ([xshift=-1ex,yshift=0.5ex] AC.north) arc (180:360:0.5ex) -- (BV) node[midway,right] {\Circled{2}};
       \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}, dashed] (L) -- ([xshift=-4ex] AC.north) node[midway,left] {$\int_{[a, x]}$}  node[pos=0.9,above] {\Circled{3}};
 
       \node (p1) at (2, -4) {$L_{[a, b]} / L_0$};
       \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L) -- (p1) node[midway,left] {$\operatorname{pr}$};
-      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int_{[a, x]}$};
+      \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (p1) -- (AC) node[midway,above] {$\int_{[a, x]}$} node[midway,below] {$\sim$};
 
       \node (L_again) at (11, -4) {$L_{[a, b]}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed] (AC) -- (L_again) node[midway,above] {$\widetilde{~ \mathrm{d}}$};
@@ -160,14 +172,14 @@
       \draw[arrows={- Classical TikZ Rightarrow[sep] Classical TikZ Rightarrow[]}] (L_again) -- (p2) node[midway,above] {$\operatorname{pr}$};
       \draw[arrows={- Classical TikZ Rightarrow[]}, dashed, bend right = 15] (p1) to node[midway,below] {$\operatorname{pr}~\circ~\widetilde{~ \mathrm{d}}~\circ~\int_{[a, x]} = \operatorname{id}$} node[midway,above] {\Circled{5}} (p2);
 
-   以上的 :math:`\int_{[a, x]}` 表示变上限勒贝格积分, :math:`\widetilde{~ \mathrm{d}}` 表示微分 (几乎处处有定义, 没有定义的集合是零测集,
-   约定微分取值为 :math:`0`), :math:`\hookrightarrow` 表示自然的嵌入 (包含) 映射, :math:`\operatorname{pr}` 表示商映射.
-   虚线的箭头就是相关的定理, 箭头旁边的圈内数字对应如下定理:
+   以上的 :math:`\int_{[a, x]}` 表示变上限勒贝格积分, :math:`\widetilde{~ \mathrm{d}}` 表示微分 (几乎处处有定义,
+   没有定义的集合是零测集, 约定微分取值为 :math:`0`), :math:`\hookrightarrow` 表示自然的嵌入 (包含) 映射,
+   :math:`\operatorname{pr}` 表示商映射. 虚线的箭头就是相关的定理, 箭头旁边的圈内数字对应如下定理:
 
    - ①: 定义在 :math:`[a, b]` 上的函数是有界变差的, 当且仅当它可以表示为两个单调递增函数之差.
    - ②: 绝对连续函数必然是有界变差函数. 反之, 有界变差函数不一定是绝对连续函数, 例如 Cantor 函数.
-   - ③, ⑤: :math:`f \in AC([a, b]) \iff \exists ~ g \in L_{[a, b]}`, 使得 :math:`f(x) = f(a) + \int_a^x g(t) ~ \mathrm{d}t`, 且此时有
-     :math:`f'(x) = g(x)` 几乎处处成立.
+   - ③, ⑤: :math:`f \in AC([a, b]) \iff \exists ~ g \in L_{[a, b]}`, 使得 :math:`f(x) = f(a) + \int_a^x g(t) ~ \mathrm{d}t`,
+     且此时有 :math:`f'(x) = g(x)` 几乎处处成立.
    - ④: 定义在 :math:`[a, b]` 上的单调函数几乎处处可导, 且其导函数是勒贝格可积的.
 
 .. _thm-tonelli:
@@ -197,7 +209,8 @@
 
       .. math::
          \int_{E \times F} f(x, y) ~ \mathrm{d} x \times ~ \mathrm{d} y
-         = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
+         = \int_E \left( \int_F f(x, y) ~ \mathrm{d}y \right) ~ \mathrm{d}x
+         = \int_F \left( \int_E f(x, y) ~ \mathrm{d}x \right) ~ \mathrm{d}y.
 
 .. _improper-integral-and-lebesgue-integral:
 
@@ -215,7 +228,8 @@
 
    .. math::
       \int_{[a, c)} f ~ \mathrm{d} m
-      & = \int_{[a, c)} \lim_{b \to c^-} f \cdot \chi_{[a, b]} ~ \mathrm{d} m = \lim_{b \to c^-} \int_{[a, b]} f ~ \mathrm{d} m \\
+      & = \int_{[a, c)} \lim_{b \to c^-} f \cdot \chi_{[a, b]} ~ \mathrm{d} m
+        = \lim_{b \to c^-} \int_{[a, b]} f ~ \mathrm{d} m \\
       & = \lim_{b \to c-} (R) \int_a^b f(x) ~ \mathrm{d} x = \int_a^c f(x) ~ \mathrm{d}x.
 
    也就是说, 对于定义在 :math:`[a, c)` 上的非负可测函数, 当广义积分收敛时, 它也是勒贝格可积的, 且两者的值相等.
