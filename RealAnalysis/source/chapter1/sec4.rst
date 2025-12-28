@@ -3,7 +3,7 @@
 
 .. _ex-1-22:
 
-22. 设 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的非空闭集, 且 :math:`F_1 \cap F_2 = \emptyset`. 试证存在两个开集 :math:`G_1, G_2`,
+22. 设 :math:`F_1, F_2` 是 :math:`\mathbb{R}^n` 中的闭集, 且 :math:`F_1 \cap F_2 = \emptyset`. 试证存在两个开集 :math:`G_1, G_2`,
     使 :math:`G_1 \cap G_2 = \emptyset`, 而 :math:`G_1 \supset F_1, G_2 \supset F_2`.
 
 .. proof:proof::
@@ -51,7 +51,7 @@
 
 .. _ex-1-23:
 
-23. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}^n` 中的闭集, 其中之一有界, 试证存在两点 :math:`a_1 \in F_1, a_2 \in F_2`
+23. 设 :math:`F_1, F_2` 为 :math:`\mathbb{R}^n` 中的非空闭集, 其中之一有界, 试证存在两点 :math:`a_1 \in F_1, a_2 \in F_2`
     使 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
 
 .. proof:proof::
@@ -82,7 +82,11 @@
       所以它在有界闭集 :math:`\overline{B} \cap F` 上 取到最小值, 即存在 :math:`x_0 \in \overline{B} \cap F`,
       使得 :math:`\rho(a, x_0) = \rho(a, \overline{B} \cap F) = \rho(a, F)`.
 
-   有了以上两个结论, 我们就可以证明题设结论. 不妨设 :math:`F_1` 有界, 考虑函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F_2)`.
+   有了以上两个结论, 我们就可以证明题设结论. 不妨设 :math:`F_1` 有界, 考虑函数
+
+   .. math::
+      \mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F_2).
+
    由之前第一点的结论, 它是一致连续的, 从而在有界闭集 :math:`F_1` 上取到最小值, 即存在 :math:`a_1 \in F_1`,
    使得 :math:`\rho(a_1, F_2) = \rho(F_1, F_2)`. 又由于 :math:`F_2` 是非空闭集, 根据第二点结论, 存在 :math:`a_2 \in F_2`,
    使得 :math:`\rho(a_1, F_2) = \rho(a_1, a_2)`. 于是有 :math:`\rho(a_1, a_2) = \rho(F_1, F_2)`.
