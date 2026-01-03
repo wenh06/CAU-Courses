@@ -134,9 +134,9 @@
       BV([a, b]) & = [a, b] \text{ 区间上有界变差函数}, \\
       AC_0([a, b]) & = [a, b] \text{ 区间上绝对连续函数且满足 } f(a) = 0, \\
       \ker \left( {\textstyle\int}_{[a,x]}~\circ~\operatorname{pr}~\circ~\widetilde{\mathrm{d}} \right)
-         & = [a, b] \text{ 区间上奇异函数与常数函数所张成的空间}, \\
+         & = [a, b] \text{ 区间上奇异函数、跳跃函数、常数函数所张成的空间}, \\
       \ker \left( {\textstyle\int}_{[a,x]}~\circ~\operatorname{pr}~\circ~\widetilde{\mathrm{d}}~\circ~\iota \right)
-         & = [a, b]\text{ 区间上连续奇异函数与常数函数所张成的空间}.
+         & = [a, b]\text{ 区间上奇异函数、常数函数所张成的空间}.
 
    以上都是线性空间. 勒贝格积分与微分的结论主要是围绕上述空间的关系以及它们之间的 (线性) 映射展开的, 可以用下面的图表来表示:
 
