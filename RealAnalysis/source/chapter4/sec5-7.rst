@@ -422,17 +422,25 @@
 
    于是 :math:`f(x)` 是增函数.
 
-   任取有理数 :math:`a = r_{n(a)} \in \mathbb{Q}`, 对任意实数 :math:`x < a`, 有
+   任取有理数 :math:`a = r_{n(a)} \in \mathbb{Q}`, 对任意实数 :math:`x > a`, 有
 
    .. math::
-      f(a) - f(x) = \sum_{r_n < a} 2^{-n} - \sum_{r_n < x} 2^{-n} = \sum_{x \leqslant r_n < a} 2^{-n} \geqslant 2^{-n(a)},
+      f(x) - f(a) = \sum_{r_n < x} 2^{-n} - \sum_{r_n < a} 2^{-n} = \sum_{a \leqslant r_n < x} 2^{-n} \geqslant 2^{-n(a)},
 
    于是有
 
    .. math::
-      \lim_{x \to a^-} \left( f(a) - f(x) \right) \geqslant 2^{-n(a)} > 0.
+      \lim_{x \to a^+} \left( f(x) - f(a) \right) \geqslant 2^{-n(a)} > 0.
 
-   由此可知 :math:`f(x)` 在 :math:`a` 处不 (左) 连续. 由于有理数集是稠密的, 所以 :math:`f(x)` 的不连续点处处稠密.
+   由此可知 :math:`f(x)` 在 :math:`a` 处不 (右) 连续. 由于有理数集是稠密的, 所以 :math:`f(x)` 的不连续点处处稠密.
+
+   .. note::
+      如果将 :math:`f(x)` 的定义稍作修改, 令
+
+      .. math::
+         f(x) = \sum_{r_n \leqslant x} 2^{-n},
+
+      则 :math:`f(x)` 在每个有理数处都不左连续.
 
 .. _ex-4-40:
 

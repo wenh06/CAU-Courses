@@ -9,51 +9,87 @@
 
 .. proof:proof::
 
-   由可积函数空间关于依测度收敛的完备性, 可知 :math:`f \in L^2`. 又由 Minkowski 不等式
+   由可积函数空间关于依测度收敛的完备性, 可知 :math:`f \in L^2`，所以可以用函数列 :math:`f_n - f` 代替 :math:`f_n` 证明相关结论.
+   以下假设 :math:`f = 0`.
+   
+   任取 :math:`g \in L^2`, 需要证明 :math:`\displaystyle \lim_{n \to \infty} \int_E | f_n g | ~ \mathrm{d} m = 0`.
+   由于 :math:`g \in L^2`, 考虑集合 :math:`E_t = E \cap [-t, t]`, :math:`t \in \mathbb{N}`, 则由 Levi 定理知
 
    .. math::
-      \lVert f_n - f \rVert_2 \leqslant \lVert f_n \rVert_2 + \lVert f \rVert_2,
+      \lim_{t \to \infty} \int_{E_t} |g|^2 ~ \mathrm{d} m
+      = \lim_{t \to \infty} \int_{E} |g|^2 \chi_{E_t} ~ \mathrm{d} m
+      = \int_{E} \lim_{t \to \infty} |g|^2 \chi_{E_t} ~ \mathrm{d} m
+      = \int_{E} |g|^2 ~ \mathrm{d} m
+      = \lVert g \rVert_2^2 < \infty,
 
-   可以用函数列 :math:`f_n - f` 代替 :math:`f_n` 证明相关结论. 以下假设 :math:`f = 0`.
+   因此存在 :math:`N > 0`, 使得对任意 :math:`t > N` 有
 
-   由 Hölder 不等式, 对任意 :math:`g \in L^2` 有
+   .. math::
+      \int_{E \setminus E_t} |g|^2 ~ \mathrm{d} m < \varepsilon^2.
+
+   记 :math:`A = E_N`. 注意, 集合 :math:`A` 的测度是有限的, 从而有 :math:`L^2(A) \subset L^1(A)`.
+   由 Hölder 不等式, 对于任意的 :math:`n \in \mathbb{N}`, 有
 
    .. math::
       :label: ex-5-22-eq-1
 
-      \int_E | f_n g | ~ \mathrm{d} m
-      & = \int_{E_n} | f_n g | ~ \mathrm{d} m + \int_{E \setminus E_n} | f_n g | ~ \mathrm{d} m \\
-      & \leqslant \left( \int_{E_n} |f_n|^2 ~ \mathrm{d} m \right)^{1/2} \left( \int_{E_n} |g|^2 ~ \mathrm{d} m \right)^{1/2}
-                  + \varepsilon \int_{E \setminus E_n} | g | ~ \mathrm{d} m \\
-      & \leqslant K \left( \int_{E_n} |g|^2 ~ \mathrm{d} m \right)^{1/2} + \varepsilon \lVert g \rVert_1.
+      \int_A | f_n g | ~ \mathrm{d} m
+      & = \int_{A_n} | f_n g | ~ \mathrm{d} m + \int_{A \setminus A_n} | f_n g | ~ \mathrm{d} m \\
+      & \leqslant \left( \int_{A_n} |f_n|^2 ~ \mathrm{d} m \right)^{1/2}
+                  \left( \int_{A_n} |g|^2 ~ \mathrm{d} m \right)^{1/2}
+                  + \varepsilon \int_{A \setminus A_n} | g | ~ \mathrm{d} m \\
+      & \leqslant K \left( \int_{A_n} |g|^2 ~ \mathrm{d} m \right)^{1/2}
+                  + \varepsilon \lVert g \rVert_{1,A},
 
-   由勒贝格积分的绝对连续性, 对任意的 :math:`\varepsilon`, 存在 :math:`\delta > 0`,
-   使得对任意满足 :math:`m A < \delta` 的 :math:`A \subset E` 有
+   其中 :math:`A_n = A \cap E \left( |f_n| \geqslant \varepsilon \right)`,
+   :math:`\lVert g \rVert_{1,A} = \int_A |g| ~ \mathrm{d} m` 表示 :math:`g` 在集合 :math:`A` 上的 :math:`L^1` 范数.
+   由勒贝格积分的绝对连续性, 对任意的 :math:`\varepsilon > 0`, 存在 :math:`\delta > 0`,
+   使得对任意满足 :math:`m B < \delta` 的 :math:`B \subset A` 有
 
    .. math::
       :label: ex-5-22-eq-2
 
-      \int_A |g|^2 ~ \mathrm{d} m \leqslant \varepsilon^2.
+      \int_B |g|^2 ~ \mathrm{d} m \leqslant \varepsilon^2.
 
    由 :math:`\{ f_n \}` 依测度收敛于 :math:`f = 0` 知, 对取好的 :math:`\varepsilon > 0` 有
 
    .. math::
-      \lim_{n \to \infty} m E_n := \lim_{n \to \infty} m E(|f_n| > \varepsilon) = 0,
+      \lim_{n \to \infty} m A_n = \lim_{n \to \infty} m (A \cap E(|f_n| \geqslant \varepsilon)) = 0.
 
-   也就是说, 对已经取好的 :math:`\delta > 0`, 可以选取 :math:`N > 0`, 使得对任意 :math:`n > N` 有
+   也就是说, 对已经取好的 :math:`\delta > 0`, 可以选取 :math:`M > 0`, 使得对任意 :math:`n > M` 有
 
    .. math::
-      m E_n < \delta.
+      m A_n < \delta.
 
    于是由 :eq:`ex-5-22-eq-2` 知
 
    .. math::
-      \int_{E_n} |g|^2 ~ \mathrm{d} m \leqslant \varepsilon^2,
+      \int_{A_n} |g|^2 ~ \mathrm{d} m \leqslant \varepsilon^2.
 
    代入 :eq:`ex-5-22-eq-1` 中有
 
    .. math::
-      \int_E | f_n g | ~ \mathrm{d} m \leqslant (K + \lVert g \rVert_1) \cdot \varepsilon.
+      :label: ex-5-22-eq-3
+
+      \int_A | f_n g | ~ \mathrm{d} m \leqslant (K + \lVert g \rVert_{1,A}) \varepsilon.
+
+   另一方面, 对于 :math:`E \setminus A`, 由 Hölder 不等式有
+
+   .. math::
+      :label: ex-5-22-eq-4
+
+      \int_{E \setminus A} | f_n g | ~ \mathrm{d} m
+      & \leqslant \left( \int_{E \setminus A} |f_n|^2 ~ \mathrm{d} m \right)^{1/2}
+        \left( \int_{E \setminus A} |g|^2 ~ \mathrm{d} m \right)^{1/2} \\
+      & \leqslant K \left( \int_{E \setminus A} |g|^2 ~ \mathrm{d} m \right)^{1/2}
+      < K \varepsilon.
+
+   综合 :eq:`ex-5-22-eq-3`, :eq:`ex-5-22-eq-4` 两式, 可知对任意 :math:`n > M` 有
+
+   .. math::
+      \int_E | f_n g | ~ \mathrm{d} m
+      = \int_A | f_n g | ~ \mathrm{d} m + \int_{E \setminus A} | f_n g | ~ \mathrm{d} m
+      < (2K + \lVert g \rVert_{1,A}) \varepsilon.
 
    以上表明了 :math:`\displaystyle \lim_{n \to \infty} \int_E | f_n g | ~ \mathrm{d} m = 0`,
    从而有 :math:`f_n \xrightarrow{\text{弱}} f` (:math:`n \to \infty`).
