@@ -54,6 +54,7 @@
    :maxdepth: 2
    :caption: 历年期末考题:
 
+   final_exams/2025-2026
    final_exams/2024-2025
    final_exams/2023-2024
    final_exams/2022-2023

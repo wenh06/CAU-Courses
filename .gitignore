@@ -183,6 +183,8 @@ MathematicalAnalysis/data/*
 !MathematicalAnalysis/data/.keep
 RealAnalysis/data/*
 !RealAnalysis/data/.keep
+webpages/data/*
+!webpages/data/.keep
 
 
 *ipynb
