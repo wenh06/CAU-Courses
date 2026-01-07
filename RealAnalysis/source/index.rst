@@ -59,13 +59,14 @@
    :maxdepth: 2
    :caption: 历年期末考题:
 
-   final_exams/2020-2021
-   final_exams/2021-2022
-   final_exams/2022-2023
-   final_exams/2023-2024
+   final_exams/2025-2026
    final_exams/2024-2025
+   final_exams/2023-2024
+   final_exams/2022-2023
+   final_exams/2021-2022
+   final_exams/2020-2021
 
 修正错误, 提出新解法入口: `gitee <https://gitee.com/wenh06/CAU-Courses/issues>`__
 
 鸣谢: 感谢数学211班邱思铭、苏永丰同学; 数学221班龚时主、黄复晨同学; 数学222班刘硕、周舒甜、胡锦东、李龙飞同学;
-数学232班闫宇涵、姜乃文、孙晗智同学; 数学233班吕心成、贾静初、胡意成同学检查并指出了本文档中的一些错误.
+数学232班闫宇涵、姜乃文、孙晗智、曾萱同学; 数学233班吕心成、贾静初、胡意成同学检查并指出了本文档中的一些错误.
