@@ -177,14 +177,16 @@
    由 Fatou 引理知
 
    .. math::
-      \int_E \lim_{n \to \infty} g_n ~ \mathrm{d} m \leqslant \varliminf_{n \to \infty} \int_E g_n ~ \mathrm{d} m,
+      \int_E \lim_{n \to \infty} g_n ~ \mathrm{d} m = \int_E \varliminf_{n \to \infty} g_n ~ \mathrm{d} m
+      \leqslant \varliminf_{n \to \infty} \int_E g_n ~ \mathrm{d} m,
 
    即有
 
    .. math::
       \int_E 2^p |f|^p ~ \mathrm{d} m
-      & \leqslant \varliminf_{n \to \infty} \int_E 2^{p - 1} \left( |f_n|^p + |f|^p - | f_n - f |^p \right) ~ \mathrm{d} m \\
-      & = \int_E 2^{p - 1} |f|^p ~ \mathrm{d} m + \lim_{n \to \infty} 2^{p - 1} \int_E |f_n|^p ~ \mathrm{d} m
+      & \leqslant \varliminf_{n \to \infty} \int_E
+          \left( 2^{p - 1} \left( |f_n|^p + |f|^p \right) - | f_n - f |^p \right) ~ \mathrm{d} m \\
+      & = \int_E 2^{p - 1} |f|^p ~ \mathrm{d} m + \varliminf_{n \to \infty} 2^{p - 1} \int_E |f_n|^p ~ \mathrm{d} m
           - \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m \\
       & = \int_E 2^p |f|^p ~ \mathrm{d} m - \varlimsup_{n \to \infty} \int_E | f_n - f |^p ~ \mathrm{d} m.
 
@@ -312,14 +314,14 @@
    使得对任意满足 :math:`m E_h < \delta` (即满足 :math:`|h| < \delta`) 的区间 :math:`E_h` 有
 
    .. math::
-      \left( \int_{E_h} |f|^p ~ \mathrm{d} m \right)^{1/p} < \varepsilon,
+      \int_{E_h} |f|^p ~ \mathrm{d} m < \varepsilon^p,
 
    代入 :eq:`ex-5-10-eq-1` 即得
 
    .. math::
       :label: ex-5-10-eq-2
 
-      \lvert F(x + h) - F(x) \rvert < \varepsilon^{1/p} \cdot |h|^{1 - 1/p},
+      \lvert F(x + h) - F(x) \rvert < \varepsilon \cdot |h|^{1 - 1/p},
 
    即 :math:`F(x + h) - F(x) = O(h^{1 - 1/p})`.
 
@@ -445,7 +447,7 @@
 
 .. _ex-5-15:
 
-15. 设 :math:`p, q, r` 为满足 :math:`1/p + 1/q = 1 + 1/r` 的三个正数, 证明对任何可测函数 :math:`f, g, h` 有
+15. 设 :math:`p, q, r` 为满足 :math:`1/p + 1/q + 1/r = 1` 的三个正数, 证明对任何可测函数 :math:`f, g, h` 有
 
     .. math::
       \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
@@ -473,7 +475,8 @@
    将 :eq:`ex-5-15-eq-2` 代入 :eq:`ex-5-15-eq-1` 即得
 
    .. math::
-      \int_E |fgh| ~ \mathrm{d} m \leqslant \lVert f \rVert_p^s \lVert g \rVert_q^s \lVert h \rVert_r
+      \int_E |fgh| ~ \mathrm{d} m
+      \leqslant \left( \lVert f \rVert_p^s \lVert g \rVert_q^s \right)^{1/s} \lVert h \rVert_r
       = \lVert f \rVert_p \lVert g \rVert_q \lVert h \rVert_r.
 
 .. _ex-5-16:
