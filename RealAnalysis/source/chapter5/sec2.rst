@@ -11,7 +11,7 @@
 
    由可积函数空间关于依测度收敛的完备性, 可知 :math:`f \in L^2`，所以可以用函数列 :math:`f_n - f` 代替 :math:`f_n` 证明相关结论.
    以下假设 :math:`f = 0`.
-   
+
    任取 :math:`g \in L^2`, 需要证明 :math:`\displaystyle \lim_{n \to \infty} \int_E | f_n g | ~ \mathrm{d} m = 0`.
    由于 :math:`g \in L^2`, 考虑集合 :math:`E_t = E \cap [-t, t]`, :math:`t \in \mathbb{N}`, 则由 Levi 定理知
 
