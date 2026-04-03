@@ -121,7 +121,7 @@
 
 即 :math:`\displaystyle \lim_{p \to \infty} \lVert f \rVert_p = M`.
 
-4. 定积分连续性 :math:`\displaystyle \lim_{h \to 0} \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x = 0` 的证明：
+4. 定积分连续性 :math:`\displaystyle \lim_{h \to 0} \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x = 0` 的证明:
 
 不妨设 :math:`|h| < 1`, 以及 :math:`f(x)` 在 :math:`[a-1, b+1]` 上黎曼可积. 那么由振幅判别法, 对任意 :math:`\varepsilon > 0`,
 总存在 :math:`\delta > 0`, 使得对 :math:`[a-1, b+1]` 区间上任意满足 :math:`\lambda(P) < \delta` 的划分 :math:`P`, 总有
@@ -158,7 +158,7 @@
 所以 :math:`\displaystyle \lim_{h \to 0} \int_a^b |f(x+h) - f(x)| ~ \mathrm{d} x = 0`
 
 .. note::
-   这题可以从更高的层次来看：以后会学到闭区间上黎曼可积的函数都是勒贝格可积的, 那么就可以利用勒贝格积分理论中的有界收敛定理,
+   这题可以从更高的层次来看: 以后会学到闭区间上黎曼可积的函数都是勒贝格可积的, 那么就可以利用勒贝格积分理论中的有界收敛定理,
    即若函数族 :math:`g_h(x)` (勒贝格, 下同) 可积, :math:`h` 是某个指标集 (例如 :math:`\mathbb{N}` 或 :math:`(-1, 1)` 区间等),
    并且存在正的常数 :math:`M`, 使得 :math:`|g_h(x)| \leqslant M` 恒成立, 那么积分和取极限能交换次序, 即
 
@@ -232,3 +232,106 @@ Cotes 系数依定义为
    c_i^{(n)}
    & = \dfrac{1}{n} \int_0^n \left( b_{i0} + b_{i1} t + \cdots + b_{in} t^n \right) ~ \mathrm{d} t \\
    & = \dfrac{1}{n} \sum_{j = 0}^n b_{ij} \dfrac{n^{j+1}}{j+1}.
+
+6. 连续函数与黎曼可积函数复合后不可积的例子
+
+构造定义在闭区间 :math:`[0,1]` 上的函数 :math:`f, g`, 使得:
+
+* :math:`f` 连续;
+* :math:`g` 在 :math:`[0,1]` 上黎曼可积;
+* 但复合函数 :math:`g(f(x))` 在 :math:`[0,1]` 上黎曼不可积.
+
+首先, 取标准三分 Cantor 集 :math:`C \subset [0,1]`. 该集合具有如下性质:
+
+* :math:`C` 为闭集;
+* :math:`m(C) = 0`;
+* :math:`C` 无内点, 且 :math:`\partial C = C`.
+
+定义函数
+
+.. math::
+   g(x) = \chi_C(x) = \begin{cases}
+   1, & x \in C; \
+   0, & x \notin C.
+   \end{cases}
+
+由于 :math:`g` 的不连续点集合恰为 :math:`C`, 且 :math:`m(C)=0`, 由黎曼可积的勒贝格判别法可知,
+:math:`g` 在 :math:`[0,1]` 上黎曼可积.
+
+接下来构造连续函数 :math:`f`.
+
+设 :math:`\Phi(x)` 为 Cantor 函数, 定义
+
+.. math::
+   \Psi(x) = \frac{x + \Phi(x)}{2}, \quad x \in [0,1].
+
+函数 :math:`\Psi` 具有如下性质:
+
+* :math:`\Psi` 连续;
+* :math:`\Psi` 严格单调递增;
+* :math:`\Psi([0,1]) = [0,1]`;
+
+因此, :math:`\Psi` 是 :math:`[0,1]` 到自身的双射, 且其逆函数 :math:`f = \Psi^{-1}` 连续.
+
+下面分析集合在 :math:`\Psi` 下的像.
+
+注意, Cantor 集的补集 :math:`C^c` 是可数个两两不交开区间的并. 在每个这样的开区间 :math:`I` 上,
+函数 :math:`\Phi` 为常数, 因此
+
+.. math::
+   \Psi(x) = \frac{x + \text{const}}{2}, \quad x \in I,
+
+从而 :math:`\Psi` 在 :math:`I` 上为斜率为 :math:`1/2` 的线性函数. 因此, 长度缩小为原来的一半.
+
+于是有
+
+.. math::
+   m(\Psi(C^c)) = \frac{1}{2} m(C^c) = \frac{1}{2}.
+
+从而
+
+.. math::
+   m(\Psi(C)) = 1 - \frac{1}{2} = \frac{1}{2}.
+
+考虑复合函数
+
+.. math::
+   g(f(x)) = \chi_C(f(x)) = \chi_{\Psi(C)}(x).
+
+即
+
+.. math::
+   g \circ f = \chi_{\Psi(C)}.
+
+由于 :math:`\Psi` 为连续严格单调函数, 集合 :math:`\Psi(C)` 仍为闭集, 且无内点, 因此
+
+.. math::
+   \partial(\Psi(C)) = \Psi(C).
+
+从而函数 :math:`g \circ f` 的不连续点集合为 :math:`\Psi(C)`, 其测度为
+
+.. math::
+   m(\Psi(C)) = \frac{1}{2} > 0.
+
+因此, :math:`g \circ f` 在 :math:`[0,1]` 上的不连续点集合具有正测度, 由黎曼可积判别准则可知,
+该函数在 :math:`[0,1]` 上黎曼不可积.
+
+综上, 构造了连续函数 :math:`f` 与黎曼可积函数 :math:`g`, 使得复合函数 :math:`g \circ f` 黎曼不可积.
+
+.. note::
+   Cantor 三分集的构造方法是: 从闭区间 :math:`[0,1]` 的正中间挖掉开区间 :math:`(1/3, 2/3)`, 得到两个闭区间 :math:`[0, 1/3]`
+   与 :math:`[2/3, 1]`; 接着在每个剩下的闭区间的正中间挖掉长度为 :math:`1/9` 的开区间, 得到 :math:`4` 个闭区间; 以此类推, 在第 :math:`n` 步, 在每个剩下的闭区间的正中间挖掉长度为 :math:`1/3^n` 的开区间, 最终剩下的集合就是 Cantor 三分集. Cantor 三分集
+   的元素在 3 进制下的表示方法是: 只包含 :math:`0` 与 :math:`2` 的数, 即
+
+   .. math::
+      C = \left\{ \sum_{n=1}^{\infty} \dfrac{2 a_n}{3^n} ~ : ~ a_n \in \{0, 1\} \right\}.
+
+   Cantor 函数的定义: 首先在 Cantor 三分集上定义函数 :math:`\phi` 为
+
+   .. math::
+      \phi \left( \sum_{n=1}^{\infty} \dfrac{2 a_n}{3^n} \right) = \sum_{n=1}^{\infty} \dfrac{a_n}{2^{n}}.
+
+   接下来就可以定义 Cantor 函数 :math:`\Phi` 为
+
+   .. math::
+      \Phi(x) = \sup_{t \in C, t \leqslant x} \phi(t).
