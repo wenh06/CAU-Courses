@@ -1,4 +1,4 @@
-数学分析II 2023-2025 学年春季学期期末考试试卷及解答
+数学分析II 2024-2025 学年春季学期期末考试试卷及解答
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 试卷
@@ -9,7 +9,7 @@
 解答
 --------
 
-:pdfembed:`src:../_static/exams/2025春数学分析II期末考试试题及参考答案.pdf, height:800px, width:100%, align:middle`
+:pdfembed:`src:../_static/exams/2025春数学分析II期末考试试题及答案.pdf, height:800px, width:100%, align:middle`
 
 Source Code
 ------------

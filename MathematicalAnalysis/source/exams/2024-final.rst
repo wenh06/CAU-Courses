@@ -9,7 +9,7 @@
 解答
 --------
 
-:pdfembed:`src:../_static/exams/2024春数学分析II期末考试试题及参考答案.pdf, height:800px, width:100%, align:middle`
+:pdfembed:`src:../_static/exams/2024春数学分析II期末考试试题及答案.pdf, height:800px, width:100%, align:middle`
 
 Source Code
 ------------
