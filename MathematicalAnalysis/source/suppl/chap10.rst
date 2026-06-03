@@ -314,3 +314,141 @@ Tauber 型定理 T2 的证明本质上还是利用 Stolz 公式; Tauber 型定�
    = \dfrac{4}{\pi^2},
 
 从而知 :math:`\tan x` 的收敛半径 :math:`\displaystyle R = \dfrac{\pi}{2}`.
+
+.. _special-series:
+
+4. 可以利用 :math:`\sin x` 的无穷乘积展开来求一系列的特殊级数的和. 例如
+
+.. math::
+   \sum_{n=1}^\infty \dfrac{1}{n^2 + 1}, \quad \sum_{n=1}^\infty \dfrac{n^2 + 1}{n^4 + 1}, \quad \dots
+
+事实上, 对 :math:`\sin x` 的无穷乘积展开式
+
+.. math::
+   \frac{\sin \pi x}{\pi x} = \prod_{n=1}^\infty \left( 1 - \frac{x^2}{n^2} \right)
+
+取对数导数 :math:`\frac{1}{\pi} \cdot \frac{\mathrm{d}}{\mathrm{d}x} \ln (\cdot)` 可以得到
+
+.. math::
+   \cot \pi x = \frac{1}{\pi x} + \frac{1}{\pi} \sum_{n=1}^\infty \frac{2x}{x^2 - n^2}
+   = \frac{1}{\pi x} + \frac{1}{\pi} \sum_{n=1}^\infty \left( \frac{1}{x - n} + \frac{1}{x + n} \right)
+   = \frac{1}{\pi} \sum_{n \in \mathbb{Z}} \frac{1}{x + n}.
+
+另一方面, 有
+
+.. math::
+   \cot \pi x = \frac{\cos \pi x}{\sin \pi x}
+   = i \cdot \frac{e^{i \pi x} + e^{-i \pi x}}{e^{i \pi x} - e^{-i \pi x}}
+   = i \cdot \frac{e^{2 i \pi x} + 1}{e^{2 i \pi x} - 1}.
+
+记 :math:`t = t(x) = e^{2 i \pi x}`, 并令 :math:`h_1(t) = \frac{1+t}{2(1-t)},` 则有
+
+.. math::
+   h_1(t) = \frac{1+t}{2(1-t)} = -\frac{1}{2 i \pi} \sum_{n \in \mathbb{Z}} \frac{1}{x + n}
+   = -\frac{1}{2 i \pi} \left( \frac{1}{x} + \sum_{n=1}^\infty \frac{-2x}{n^2 - x^2} \right).
+
+取 :math:`x = i,` 那么 :math:`t = e^{2 i \pi x} = e^{-2 \pi}.` 代入 :math:`h_1(t),` 可得
+
+.. math::
+   \frac{1 + e^{-2 \pi}}{2(1 - e^{-2 \pi})}
+   & = h_1(t) = -\frac{1}{2 i \pi} \left( \frac{1}{x} + \sum_{n=1}^\infty \frac{-2x}{n^2 - x^2} \right) \\
+   & = -\frac{1}{2 i \pi} \left( \frac{1}{i} + \sum_{n=1}^\infty \frac{-2i}{n^2 + 1} \right) \\
+   & = -\frac{1}{2 i \pi} \cdot \frac{1}{i} \left( 1 + 2 \sum_{n=1}^\infty \frac{1}{n^2 + 1} \right) \\
+   & = \frac{1}{2 \pi} \left( 1 + 2 \sum_{n=1}^\infty \frac{1}{n^2 + 1} \right).
+
+从而有
+
+.. math::
+   \sum_{n=1}^\infty \frac{1}{n^2 + 1} = \frac{\pi}{2} \cdot \frac{1 + e^{-2 \pi}}{1 - e^{-2 \pi}} - \frac{1}{2}.
+
+类似地, 由 :math:`n^4 + 1 = (n^2 + i)(n^2 - i)`, 可得
+
+.. math::
+   \frac{n^2 + 1}{n^4 + 1}
+   & = \frac{1}{2} \left( \frac{1}{n^2 + i} + \frac{1}{n^2 - i} \right)
+       - \frac{1}{2i} \left( \frac{1}{n^2 + i} - \frac{1}{n^2 - i} \right) \\
+   & = \frac{1+i}{2} \cdot \frac{1}{n^2 + i} + \frac{1-i}{2} \cdot \frac{1}{n^2 - i}.
+
+取 :math:`x_1 = \sqrt{-i} = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} i`, 以及
+:math:`x_2 = \sqrt{i} = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} i`, 那么有
+
+.. math::
+   \sum_{n=1}^\infty \frac{n^2 + 1}{n^4 + 1}
+   & = \frac{1+i}{2} \sum_{n=1}^\infty \frac{1}{n^2 + i} + \frac{1 - i}{2} \sum_{n=1}^\infty \frac{1}{n^2 - i} \\
+   & = \frac{1+i}{2} \cdot \frac{1}{2 x_1} \left( 2 i \pi h_1(t_1) + \frac{1}{x_1} \right)
+       + \frac{1-i}{2} \cdot \frac{1}{2 x_2} \left( 2 i \pi h_1(t_2) + \frac{1}{x_2} \right) \\
+   & = \frac{1+i}{4 x_1^2} + \frac{1 - i}{4 x_2^2}
+       + \frac{1+i}{4 x_1} \cdot 2 i \pi h_1(t_1) + \frac{1 - i}{4 x_2} \cdot 2 i \pi h_1(t_2) \\
+   & = \frac{1+i}{-4 i} + \frac{1 - i}{4 i}
+       - \frac{\pi}{\sqrt{2}} h_1(t_1) + \frac{\pi}{\sqrt{2}} h_1(t_2) \\
+   & = -\frac{1}{2} - \frac{\pi}{\sqrt{2}} h_1(t_1) + \frac{\pi}{\sqrt{2}} h_1(t_2).
+
+其中
+
+.. math::
+   t_1 & = e^{2 i \pi x_1} = e^{\sqrt{2} \pi} \cdot e^{i \sqrt{2} \pi} = r^{-1} e^{i \theta}, \\
+   t_2 & = e^{2 i \pi x_2} = e^{-\sqrt{2} \pi} \cdot e^{i \sqrt{2} \pi} = r e^{i \theta},
+
+代入 :math:`h_1(t) = \frac{1+t}{2(1-t)}`, 可得
+
+.. math::
+   h_1(t_1) & = \frac{1 + r^{-1} e^{i \theta}}{2(1 - r^{-1} e^{i \theta})}, \\
+   h_1(t_2) & = \frac{1 + r e^{i \theta}}{2(1 - r e^{i \theta})}.
+
+最终可得
+
+.. math::
+   \sum_{n=1}^\infty \frac{n^2 + 1}{n^4 + 1}
+   & = -\frac{1}{2} - \frac{\pi}{\sqrt{2}} \cdot \frac{1 + r^{-1} e^{i \theta}}{2(1 - r^{-1} e^{i \theta})}
+       + \frac{\pi}{\sqrt{2}} \cdot \frac{1 + r e^{i \theta}}{2(1 - r e^{i \theta})} \\
+   & = -\frac{1}{2} + \frac{\pi}{\sqrt{2}} \cdot \frac{1 -r^2}{1 - 2r \cos \theta + r^2} \\
+   & = -\frac{1}{2} + \frac{\pi}{\sqrt{2}} \cdot
+       \frac{1 - e^{-2 \sqrt{2} \pi}}{1 - 2 e^{-\sqrt{2} \pi} \cos (\sqrt{2} \pi) + e^{-2 \sqrt{2} \pi}}.
+
+另一种分解方法是, 取 :math:`x = \omega = e^{i \pi / 4} = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} i` 为 8 次本原单位根, 那么
+
+.. math::
+
+   \frac{n^2 + 1}{n^4 + 1}
+   & = \frac{1}{2} \left( \frac{1}{n^2 + \sqrt{2} n + 1} + \frac{1}{n^2 - \sqrt{2} n + 1} \right) \\
+   & = \frac{1}{2} \left( \frac{1}{(n + \omega)(n + \bar{\omega})}
+       + \frac{1}{(n - \omega)(n - \bar{\omega})} \right) \\
+   & = \frac{1}{2(\bar{\omega} - \omega)}
+       \left( \frac{1}{n + \omega} - \frac{1}{n + \bar{\omega}}
+       - \frac{1}{n - \omega} + \frac{1}{n - \bar{\omega}} \right) \\
+   & = \frac{1}{2(\bar{\omega} - \omega)} \left( \frac{1}{n + \omega} - \frac{1}{n - \omega}\right)
+       - \frac{1}{2(\bar{\omega} - \omega)} \left( \frac{1}{n + \bar{\omega}} - \frac{1}{n - \bar{\omega}}\right) \\
+   & = \frac{1}{2(\bar{\omega} - \omega)} \left( \frac{1}{n + \omega} + \frac{1}{\omega - n}\right)
+       - \frac{1}{2(\bar{\omega} - \omega)} \left( \frac{1}{n + \bar{\omega}} + \frac{1}{\bar{\omega} - n}\right)
+
+因此
+
+.. math::
+   \sum_{n=1}^\infty \frac{n^2 + 1}{n^4 + 1}
+   & = \frac{1}{2(\bar{\omega} - \omega)}
+       \left( \sum_{n \in \mathbb{Z}} \frac{1}{n + \omega} - \frac{1}{\omega} \right)
+       - \frac{1}{2(\bar{\omega} - \omega)}
+       \left( \sum_{n \in \mathbb{Z}} \frac{1}{n + \bar{\omega}} - \frac{1}{\bar{\omega}} \right) \\
+   & = \frac{1}{2(\bar{\omega} - \omega)} \left( -2 i \pi h_1(e^{2 i \pi \omega}) - \frac{1}{\omega} \right)
+       - \frac{1}{2(\bar{\omega} - \omega)} \left( -2 i \pi h_1(e^{2 i \pi \bar{\omega}}) - \frac{1}{\bar{\omega}} \right) \\
+   & = \frac{1}{2(\bar{\omega} - \omega)}
+       \left( -2 i \pi \cdot \frac{1 + e^{2 i \pi \omega}}{2(1 - e^{2 i \pi \omega})} - \frac{1}{\omega} \right)
+       - \frac{1}{2(\bar{\omega} - \omega)}
+       \left( -2 i \pi \cdot \frac{1 + e^{2 i \pi \bar{\omega}}}{2(1 - e^{2 i \pi \bar{\omega}})} - \frac{1}{\bar{\omega}} \right).
+
+记 :math:`q = e^{2 i \pi \omega} = e^{-\sqrt{2} \pi} \cdot e^{i \sqrt{2} \pi} = r e^{i \theta},`
+其中 :math:`r = e^{-\sqrt{2} \pi}, \theta = \sqrt{2} \pi`, 并利用 :math:`\bar{\omega} - \omega = -\sqrt{2} i,` 以及
+
+.. math::
+   \frac{1}{\omega} - \frac{1}{\bar{\omega}} = \frac{\bar{\omega} - \omega}{\omega \bar{\omega}} = -\sqrt{2} i,
+
+上式可以化简为
+
+.. math::
+   \sum_{n=1}^\infty \frac{n^2 + 1}{n^4 + 1}
+   & = -\frac{1}{2 \sqrt{2} i}
+       \left[ -i \pi \left( \frac{1 + q}{1 - q} - \frac{1 + 1/\bar{q}}{1 - 1/\bar{q}} \right) + \sqrt{2} i \right] \\
+   & = -\frac{1}{2} + \frac{\pi}{\sqrt{2}} \cdot \frac{1 - q\bar{q}}{1 - q - \bar{q} + q\bar{q}} \\
+   & = -\frac{1}{2} + \frac{\pi}{\sqrt{2}} \cdot \frac{1 - r^2}{1 - 2r \cos \theta + r^2} \\
+   & = -\frac{1}{2} + \frac{\pi}{\sqrt{2}} \cdot
+       \frac{1 - e^{-2 \sqrt{2} \pi}}{1 - 2 e^{-\sqrt{2} \pi} \cos (\sqrt{2} \pi) + e^{-2 \sqrt{2} \pi}}.
