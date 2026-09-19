@@ -300,8 +300,11 @@
    (切线垂直于半径 :math:`OC`), 交 :math:`x` 轴于点 :math:`Q`. 则切线的
    截距 :math:`|OQ| = a\sec t`, 切线段 :math:`|CQ| = a\tan t`. 这正是下图
    单位圆中 :math:`\sec` 与 :math:`\tan` 的几何定义放大 :math:`a` 倍.
-   双曲线上的点 :math:`P` 位于 :math:`Q` 的正上方, 纵坐标为
-   :math:`\frac{b}{a}|CQ| = b\tan t`. 真实夹角满足
+   双曲线上的点 :math:`P` 位于 :math:`Q` 的正上方: 将横坐标
+   :math:`x = a\sec t` 代入双曲线方程, 解得纵坐标
+   :math:`y = b\sqrt{\sec^2 t - 1} = b\tan t = \frac{b}{a}|CQ|`,
+   即 :math:`P` 的高度恰为切线段 :math:`|CQ|` 沿竖直方向压缩
+   :math:`b/a` 倍. 真实夹角满足
    :math:`\tan\theta = \frac{b}{a}\sin t`: 当 :math:`t \to \pm\frac{\pi}{2}`
    时 :math:`P` 沿渐近线 :math:`y = \pm\frac{b}{a}x` 趋向无穷远,
    :math:`\theta` 始终被夹在 :math:`\pm\arctan\frac{b}{a}` 之间,
