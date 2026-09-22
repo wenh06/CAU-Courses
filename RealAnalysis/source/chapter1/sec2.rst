@@ -234,10 +234,10 @@
 
 .. proof:solution::
 
-   若 :math:`A` 是有限集, 记为 :math:`A = \{ a_0, a_2, \dots, a_{n-1} \}`, :math:`n > 1`,
-   那么 :math:`a_{k} \mapsto a_{k + 1} \bmod n` 就是一个满足条件的置换. 以下我们考虑 :math:`A` 是无限集的情况.
+   若 :math:`A` 是有限集, 记为 :math:`A = \{ a_0, a_1, \dots, a_{n-1} \}`, :math:`n > 1`,
+   那么 :math:`a_{k} \mapsto a_{(k + 1) \bmod n}` 就是一个满足条件的置换. 以下我们考虑 :math:`A` 是无限集的情况.
 
-   由于 :math:`A` 为无限集, 那么 :math`A` 与 :math:`A \times \mathbb{F}_2` 对等, 其中
+   由于 :math:`A` 为无限集, 那么 :math:`A` 与 :math:`A \times \mathbb{F}_2` 对等, 其中
    :math:`\mathbb{F}_2 = \{ \bar{0}, \bar{1} \}` (此结论非平凡), 即有双射 :math:`\varphi: A \to A \times \mathbb{F}_2`. 容易看出
 
    .. math::
