@@ -299,7 +299,7 @@
 .. math::
    \begin{gather*}
    f^{-1} \left( \bigcup_{\alpha \in I} B_{\alpha} \right) = \bigcup_{\alpha \in I} f^{-1} (B_{\alpha}), \quad
-   f^{-1} \left( \bigcap_{\alpha \in I} B_{\alpha} \right) \subset \bigcap_{\alpha \in I} f^{-1} (B_{\alpha}), \\
+   f^{-1} \left( \bigcap_{\alpha \in I} B_{\alpha} \right) = \bigcap_{\alpha \in I} f^{-1} (B_{\alpha}), \\
    f^{-1} (\mathscr{C} B) = \mathscr{C} f^{-1} (B).
    \end{gather*}
 
