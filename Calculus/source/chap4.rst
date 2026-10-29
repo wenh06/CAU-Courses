@@ -14,6 +14,24 @@
 §4.1 微分中值定理
 ------------------------------------
 
+.. _ex-chap4_sec1-ex1:
+
+1. 验证函数 :math:`f(x) = x \sqrt{3 - x}` 在区间 :math:`[0, 3]` 上是否满足罗尔中值定理, 若满足, 求出定理中的
+   :math:`\xi`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec1-ex2:
+
+2. 不用求出函数 :math:`f(x) = (x - 2)(x - 3)(x - 4)(x - 5)` 的导数, 说明方程 :math:`f'(x) = 0` 有几个实根,
+   并指出它们所在的区间.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-chap4_sec1-ex3:
 
 3. 设 :math:`f(x)` 在 :math:`[0, 1]` 上连续, 在 :math:`(0, 1)` 内可导, 且 :math:`f(1) = 0`, 试证明: 至少存在一点
@@ -58,10 +76,109 @@
 §4.2 洛必达法则
 ------------------------------------
 
+.. _ex-chap4_sec2-ex1:
+
+1. 用洛必达法则求下列极限.
+
+   (1) :math:`\lim\limits_{x \to 0} \dfrac{\ln(1 + x)}{x}`; \qquad
+   (2) :math:`\lim\limits_{x \to 0} \dfrac{e^x - e^{-x}}{\sin x}`;
+
+   (3) :math:`\lim\limits_{x \to 0} \dfrac{\tan x - x}{x - \sin x}`; \qquad
+   (4) :math:`\lim\limits_{x \to 0} \dfrac{\sin 3x}{\tan 5x}`;
+
+   (5) :math:`\lim\limits_{x \to a} \dfrac{x^m - a^m}{x^n - a^n}`; \qquad
+   (6) :math:`\lim\limits_{x \to 1} \left( \dfrac{2}{x^2 - 1} - \dfrac{1}{x - 1} \right)`;
+
+   (7) :math:`\lim\limits_{x \to \infty} \left( 1 + \dfrac{a}{x} \right)^x`; \qquad
+   (8) :math:`\lim\limits_{x \to 0} x^{\sin x}`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec2-ex2:
+
+2. 验证极限 :math:`\lim\limits_{x \to \infty} \dfrac{x + \sin x}{x}` 存在, 但不能用洛必达法则得出.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec2-ex3:
+
+3. 验证极限 :math:`\lim\limits_{x \to 0} \dfrac{x^2 \sin \dfrac{1}{x}}{\sin x}` 存在, 但不能用洛必达法则得出.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-chap4_sec3:
 
 §4.3 泰勒公式
 ------------------------------------
+
+.. _ex-chap4_sec3-ex1:
+
+1. 证明函数 :math:`f(x)` 和它的泰勒多项式 :math:`P_n(x)` 在 :math:`x_0` 处的 :math:`0` 阶, :math:`1` 阶,
+   :math:`\cdots`, :math:`n` 阶导数值完全相同.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex2:
+
+2. 计算函数 :math:`f(x) = \sin x + x^2` 在 :math:`x_0 = \pi` 处的 :math:`0` 阶, :math:`1` 阶, :math:`2` 阶,
+   :math:`3` 阶泰勒多项式.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex3:
+
+3. 计算第 2 题中 :math:`3` 阶泰勒多项式在 :math:`x_0 = \pi` 处的 :math:`0` 阶, :math:`1` 阶, :math:`2` 阶,
+   :math:`3` 阶导数, 并将它们与 :math:`f(x)` 在 :math:`x_0 = \pi` 处的 :math:`0` 阶, :math:`1` 阶, :math:`2` 阶,
+   :math:`3` 阶导数进行对比.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex4:
+
+4. 分别计算函数 :math:`f(x) = \sin x` 在 :math:`x_0 = 0` 和 :math:`x_0 = \dfrac{\pi}{2}` 处带有皮亚诺余项的
+   泰勒公式, 其中 :math:`n` 是一个自然数.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex5:
+
+5. 计算函数 :math:`f(x) = x^3 + 6x - 1` 在 :math:`x_0 = 2` 处的带有拉格朗日余项的 :math:`n` 阶泰勒公式, 其中
+   :math:`n \geqslant 3`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex6:
+
+6. 考虑 :math:`a` 为实数和 :math:`n` 为自然数, 计算函数 :math:`f(x) = (1 + x)^a` 带有皮亚诺余项的
+   :math:`n` 阶麦克劳林公式.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec3-ex7:
+
+7. 利用 :math:`e^x` 带有拉格朗日余项的麦克劳林公式计算 :math:`e` 的近似值, 要求误差不超过 :math:`10^{-3}`.
+
+.. proof:solution::
+
+   待写.
 
 .. _ex-chap4_sec3-ex8:
 
@@ -134,15 +251,257 @@
 §4.4 函数的单调性
 ------------------------------------
 
+.. _ex-chap4_sec4-ex1:
+
+1. 证明: 开区间上的可微函数是常数当且仅当它的导数在这个区间上恒为 :math:`0`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec4-ex2:
+
+2. 确定函数 :math:`f(x) = 2x^3 - 9x^2 + 12x - 3` 的单调区间.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec4-ex3:
+
+3. 确定函数 :math:`f(x) = \left( x^2 \right)^{\frac{1}{3}}` 的单调区间.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-chap4_sec5:
 
 §4.5 函数的极值与最值
 ------------------------------------
 
+.. _ex-chap4_sec5-ex1:
+
+1. 求下列函数的极值.
+
+   (1) :math:`y = x^3 - 3x^2 - 9x + 5`; \qquad
+   (2) :math:`y = (x - 1) \sqrt[3]{x^2}`;
+
+   (3) :math:`y = x - 2 \sin x` (:math:`0 \leqslant x \leqslant 2\pi`); \qquad
+   (4) :math:`y = x + \sqrt{1 - x}`;
+
+   (5) :math:`y = x^2 \ln x`; \qquad
+   (6) :math:`y = \dfrac{\ln^2 x}{x}`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex2:
+
+2. 求下列函数在指定区间上的最大值和最小值.
+
+   (1) :math:`y = x^4 - 8x^2 + 6`, :math:`x \in [-1, 3]`; \qquad
+   (2) :math:`y = x + \sqrt{1 - x}`, :math:`x \in [-5, 1]`;
+
+   (3) :math:`y = 2 \tan x - \tan^2 x`, :math:`x \in \left[ 0, \dfrac{\pi}{3} \right]`; \qquad
+   (4) :math:`y = \lvert x^2 + 3x + 2 \rvert`, :math:`x \in [-3, 3]`;
+
+   (5) :math:`y = \sqrt{x} \ln x`, :math:`x \in (0, +\infty)`; \qquad
+   (6) :math:`y = \sin^3 x + \cos^3 x`, :math:`x \in \left[ -\dfrac{\pi}{4}, \dfrac{3\pi}{4} \right]`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex3:
+
+3. 设 :math:`y = 2x^3 + ax + 3` 在 :math:`x = 1` 处取得极小值, 求 :math:`a` 的值.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex4:
+
+4. 问函数 :math:`f(x) = x^2 - \dfrac{54}{x}` (:math:`x < 0`) 在何处取得最小值?
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-chap4_sec5-ex5:
 
-5. 绘制函数 :math:`\displaystyle f(x) = \dfrac{x^2+1}{x-1}` 的图像, 并讨论其渐近行为. 如果存在的话, 找出函数的垂直渐近线,
+5. 问函数 :math:`f(x) = \dfrac{x}{1 + x^2}` (:math:`x \geqslant 0`) 在何处取得最大值?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex6:
+
+6. 讨论二次函数 :math:`f(x) = ax^2 + bx + c` 的最大值与最小值.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex7:
+
+7. 欲做一个底面为长方形的带盖的箱子, 其体积为 :math:`72 \text{ cm}^3`, 其底边宽与长的比为
+   :math:`1 : 2`, 问各边的长为多少时, 才能使表面积最小?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex8:
+
+8. 设有一块边长为 :math:`a` 的正方形铁皮, 从四个角截去相同的小方块, 成为一个无盖的方盒子, 问小方块的边长为多少时
+   才能使盒子容积最大?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex9:
+
+9. 制作一个上、下均有底的圆柱形容器, 要求容积为定值 :math:`V`. 问底半径 :math:`r` 为多大时, 容器的表面积最小?
+   并求此最小面积.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec5-ex10:
+
+10. 某仓储设备的库存费与生产准备费之和 :math:`P(x)` 是每批产量 :math:`x` 的函数, 即
+
+    .. math::
+       P(x) = \dfrac{ab}{x} + \dfrac{c}{2} x \quad \left[ x \in (0, a) \right],
+
+    其中 :math:`a` 为年产量, :math:`b` 为每批批次的生产准备费, :math:`c` 为每件产品的库存费. 问在生产能力足够大的
+    条件下, 每批生产多少件产品时, :math:`P(x)` 最小?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6:
+
+§4.6 函数的凹凸性
+------------------------------------
+
+.. _ex-chap4_sec6-ex1:
+
+1. 证明函数 :math:`f(x) = ax^2 + bx + c` 是凸函数, 其中 :math:`a, b, c` 是实数, 且 :math:`a > 0`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6-ex2:
+
+2. 已知函数 :math:`g(x) = 4x^4 - 3x^3 + 2x^2`, 计算其二阶导数, 并证明 :math:`g(x)` 是凸函数.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6-ex3:
+
+3. 如果 :math:`f(x)` 和 :math:`g(x)` 是两个凸函数, 证明对于任意的 :math:`\alpha, \beta \geqslant 0`, 函数
+   :math:`h(x) = \alpha f(x) + \beta g(x)` 也是凸函数.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6-ex4:
+
+4. 如果 :math:`f(x)` 和 :math:`g(x)` 是两个凸函数, 请问 :math:`f[g(x)]` 是否也是凸函数?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6-ex5:
+
+5. 利用 :math:`\ln(x)` 的凹凸性证明下面的不等式.
+
+   (1) 算术平均-几何平均不等式: :math:`x_1, x_2, \cdots, x_n > 0`, 有
+
+       .. math::
+          \dfrac{x_1 + x_2 + \cdots + x_n}{n} \geqslant \sqrt[n]{x_1 \cdot x_2 \cdots x_n},
+
+       当且仅当所有 :math:`x_i` 相等时等号成立.
+
+   (2) 对数函数的上界: 当 :math:`x > 0` 时有 :math:`\ln(x) \leqslant x - 1`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec6-ex6:
+
+6. 求出下列函数的渐近线.
+
+   (1) :math:`y = \dfrac{x + 1}{x}`; \qquad
+   (2) :math:`y = \dfrac{x^3}{x^2 + 2x - 3}`; \qquad
+   (3) :math:`y = \dfrac{1}{1 + e^x}`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec7:
+
+§4.7 函数作图
+------------------------------------
+
+.. _ex-chap4_sec7-ex1:
+
+1. 绘制函数 :math:`f(x) = x^3 - x^2 - x + 1` 的图像.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec7-ex2:
+
+2. 绘制函数 :math:`f(x) = \dfrac{\cos x}{\cos 2x}` 的图像.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec7-ex3:
+
+3. 绘制椭圆 :math:`x^2 - xy + y^2 = 3` 的图像.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec7-ex4:
+
+4. (探究光合作用与光照强度) 植物的光合作用速率 :math:`R(I)` (单位: 摩尔葡萄糖/:math:`\text{m}^2 \cdot \text{s}`)
+   与光照强度 :math:`I` (单位: 摩尔光子/:math:`\text{m}^2 \cdot \text{s}`) 的关系可以用函数
+   :math:`R(I) = \dfrac{aI}{b + I}` 来描述, 其中 :math:`a` 和 :math:`b` 是正常数. 绘制 :math:`R(I)` 的函数图像,
+   并选择合适的 :math:`a` 值和 :math:`b` 值来模拟实际的光合作用情况. 解释图像的饱和点代表什么, 并计算光照强度达到
+   饱和点一半时光合作用速率. 讨论如何通过图像来估计植物在不同光照强度下的光合作用效率.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4_sec7-ex5:
+
+5. 绘制函数 :math:`g(x) = \dfrac{x^2 + 1}{x - 1}` 的图像, 并讨论其渐近行为. 如果存在的话, 找出函数的垂直渐近线,
    水平渐近线和斜渐近线.
+
+.. note::
+   本题原来误录在 :ref:`§4.5 <ex-chap4_sec5>` 之下, 现按教材归位到本节.
 
 .. proof:solution::
 
@@ -176,6 +535,117 @@
       \addplot[dashed, red, domain=-5:7] {\x + 1};
       \addplot[dashed, red, domain=-30:30, variable=\y] ({1}, {\y});
       \end{axis}
+
+.. _ex-chap4-zong:
+
+总习题 4
+------------------------------------
+
+.. _ex-chap4-zong-ex1:
+
+1. 用洛必达法则求极限.
+
+   (1) :math:`\lim\limits_{x \to 0} \dfrac{e^x - e^{-x}}{\sin x}`; \qquad
+   (2) :math:`\lim\limits_{x \to 0} \dfrac{\tan x - x}{x^3}`; \qquad
+   (3) :math:`\lim\limits_{x \to 0} \dfrac{\ln \cos x}{x^2}`;
+
+   (4) :math:`\lim\limits_{x \to 0} \dfrac{a^x - 1}{3x}` (:math:`a > 0` 且 :math:`a \neq 1`); \qquad
+   (5) :math:`\lim\limits_{x \to \infty} \left[ x^2 \ln \left( 1 + \dfrac{1}{x} \right) - x \right]`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex2:
+
+2. 计算函数 :math:`y = e^x` 在 :math:`x = 0` 点的泰勒公式.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex3:
+
+3. 证明当 :math:`x > 0` 时, :math:`\dfrac{x}{1 + x^2} < \arctan x < x`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex4:
+
+4. 设奇函数 :math:`f(x)` 在 :math:`[0, 1]` 上连续, 在 :math:`(0, 1)` 内可导, 且 :math:`f(1) = 1`, 证明: 存在
+   :math:`\xi \in (0, 1)`, 使得 :math:`f'(\xi) = 1`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex5:
+
+5. 证明: 当 :math:`x > 0` 时, :math:`\ln(1 + x) > \dfrac{\arctan x}{1 + x}`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex6:
+
+6. 求函数 :math:`f(x) = 4x^2 (1 - x)^2` 在 :math:`[0, 1]` 上的最大值与最小值.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex7:
+
+7. 求函数 :math:`y = \dfrac{(\ln x)^2}{x}` 的极值.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex8:
+
+8. 设 :math:`a > 0` 为常数, :math:`f(x) = \ln x - \dfrac{x}{e} + a`, 问方程 :math:`f(x) = 0` 有几个实数根?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex9:
+
+9. 讨论 :math:`y = x^3 - 3x^2 - 1` 的单调性、凸凹性、极值及拐点.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex10:
+
+10. 求函数 :math:`y = \ln(1 + x^2)` 的图形的凹凸区间及拐点.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex11:
+
+11. 确定函数 :math:`y = \dfrac{(x - 2)(3 - x)}{x^2}` 的单调区间, 并求其在区间 :math:`[1, 3]` 上的最值.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-chap4-zong-ex12:
+
+12. 设函数 :math:`f(x)` 和 :math:`g(x)` 在 :math:`[a, b]` 上可导, 且 :math:`f(a) = g(b)`, :math:`f(b) = g(a)`,
+    :math:`g(x) g'(x) \neq 0`, 试证: 在开区间 :math:`(a, b)` 内至少存在一点 :math:`\xi`, 使
+    :math:`\dfrac{f(\xi)}{g(\xi)} = -\dfrac{f'(\xi)}{g'(\xi)}`.
+
+.. proof:solution::
+
+   待写.
 
 .. _extra-chap4:
 
