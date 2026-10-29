@@ -200,3 +200,5 @@ webpages/data/*
 
 !resources/*
 !resources/**/*
+
+.zcodeignore
