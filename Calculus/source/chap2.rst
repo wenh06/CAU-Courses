@@ -18,6 +18,16 @@
 
 1. 依据 :math:`\varepsilon - N` 定义证明:
 
+   (1). :math:`\lim\limits_{n \to \infty} \dfrac{n}{2n+3} = \dfrac{1}{2}`;
+
+   (2). :math:`\lim\limits_{n \to \infty} \dfrac{2n^2-1}{n^2+3} = 2`;
+
+   (3). :math:`\lim\limits_{n \to \infty} \dfrac{\sqrt[3]{n^2} \sin n}{n+1} = 0`;
+
+   (4). :math:`\lim\limits_{n \to \infty} (\ln(n+1) - \ln n) = 0`;
+
+   (5). :math:`\lim\limits_{n \to \infty} \left[ \dfrac{1}{1 \times 2} + \dfrac{1}{2 \times 3} + \cdots + \dfrac{1}{(n-1) \times n} \right] = 1`;
+
    (6). :math:`\lim\limits_{n \to \infty} \sqrt[n]{n} = 1`.
 
 .. proof:proof::
@@ -38,6 +48,18 @@
    这里 :math:`[ x ]` 表示 :math:`x` 的整数部分. 这里让 :math:`N` 至少为 2,
    是为了保证二项式展开式 :eq:`binomial-expansion` 中的 :math:`\dfrac{n(n-1)}{2} \varepsilon^2` 项存在.
 
+2. 用数学语言给出 :math:`\lim\limits_{n \to \infty} x_n \neq l` 的定义, 并证明数列 :math:`\left\{ \dfrac{1}{n} \right\}` 不以 1 为极限.
+
+.. proof:proof::
+
+   待写
+
+3. 设数列 :math:`\{ x_n \}` 满足 :math:`\lim\limits_{n \to \infty} x_{2n} = \lim\limits_{n \to \infty} x_{2n+1} = l`, 证明 :math:`\lim\limits_{n \to \infty} x_n = l`.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-chap2-sec1-ex4:
 
 4. 设 :math:`x_n = \begin{cases} \dfrac{n-1}{n}, & n ~ \text{为偶数}, \\ \dfrac{\sqrt{n^2+1}}{n}, & n ~ \text{为奇数}, \end{cases}`
@@ -55,6 +77,18 @@
       \end{cases}
 
    因此只需取 :math:`N = \left[ \dfrac{1}{\varepsilon} \right] + 1` 即可.
+
+5. 证明: 若 :math:`\lim\limits_{n \to \infty} x_n = l`, 则 :math:`\lim\limits_{n \to \infty} |x_n| = |l|`. 其逆命题是否成立?
+
+.. proof:proof::
+
+   待写
+
+6. 设 :math:`x_n \geqslant 0 ~ (n = 1, 2, \cdots)`, 且 :math:`\lim\limits_{n \to \infty} x_n = l \geqslant 0`, 证明: :math:`\lim\limits_{n \to \infty} \sqrt{x_n} = \sqrt{l}`.
+
+.. proof:proof::
+
+   待写
 
 .. _ex-chap2-sec1-ex7:
 
@@ -78,6 +112,55 @@
 §2.2 函数的极限
 --------------------------------
 
+1. 用定义证明下列极限.
+
+   (1). :math:`\lim\limits_{x \to x_0} x^2 = x_0^2`;
+
+   (2). :math:`\lim\limits_{x \to x_0} \sin x = \sin x_0`;
+
+   (3). :math:`\lim\limits_{x \to \infty} \dfrac{x^2-1}{2x^2+3} = \dfrac{1}{2}`;
+
+   (4). :math:`\lim\limits_{x \to 1} \dfrac{x^4-1}{x-1} = 4`;
+
+   (5). :math:`\lim\limits_{x \to \infty} \dfrac{1}{x+2} = 0`;
+
+   (6). :math:`\lim\limits_{x \to -\infty} e^x = 0`.
+
+.. proof:proof::
+
+   待写
+
+2. 用数学语言给出 :math:`\lim\limits_{x \to x_0} f(x) \neq A` 的定义, 并证明 :math:`\lim\limits_{x \to 1} x^3 \neq 8`.
+
+.. proof:proof::
+
+   待写
+
+3. 证明函数极限的局部有界性, 即若 :math:`\lim\limits_{x \to x_0} f(x)` 存在, 则存在 :math:`x_0` 的某个去心邻域 :math:`(x_0 - \delta, x_0 + \delta) \setminus \{ x_0 \}` 和常数 :math:`M`, 使得当 :math:`0 < |x - x_0| < \delta` 时, 总有
+
+   .. math::
+      |f(x)| \leqslant M.
+
+.. proof:proof::
+
+   待写
+
+4. 证明: 若 :math:`\lim\limits_{x \to x_0} f(x) = A`, 则 :math:`\lim\limits_{x \to x_0} |f(x)| = |A|`, 并考虑其逆命题是否成立.
+
+.. proof:proof::
+
+   待写
+
+5. 讨论下列函数在 :math:`x = 0` 处的左极限、右极限和极限的存在性.
+
+   (1). :math:`f(x) = \dfrac{x}{|x|}`;
+
+   (2). :math:`f(x) = \begin{cases} 3^x, & x > 0, \\ 1, & x = 0, \\ 1 + x^3, & x < 0. \end{cases}`
+
+.. proof:solution::
+
+   待写
+
 .. _ex-chap2-sec2-ex6:
 
 6. 证明: 若 :math:`\lim\limits_{x\to\infty} f(x) = a > 0`, 则存在 :math:`X > 0`,
@@ -96,6 +179,66 @@
 
 §2.3 极限运算法则
 --------------------------------
+
+1. 计算下列数列极限.
+
+   (1). :math:`\lim\limits_{n \to \infty} \dfrac{2n^2+n-2}{n^2+6}`;
+
+   (2). :math:`\lim\limits_{n \to \infty} \dfrac{2^n+3^n}{3^n+4^n}`;
+
+   (3). :math:`\lim\limits_{n \to \infty} (\sqrt{n+\sqrt{n}} - \sqrt{n})`;
+
+   (4). :math:`\lim\limits_{n \to \infty} (\sqrt[n]{1} + \sqrt[n]{2} + \cdots + \sqrt[n]{100})`;
+
+   (5). :math:`\lim\limits_{n \to \infty} (\sqrt{2}\sqrt[4]{2}\cdots\sqrt[2^n]{2})`;
+
+   (6). :math:`\lim\limits_{n \to \infty} \left( \dfrac{1}{n^2} + \dfrac{2}{n^2} + \cdots + \dfrac{n}{n^2} \right)`;
+
+   (7). :math:`\lim\limits_{n \to \infty} \left( 1 - \dfrac{1}{2^2} \right) \left( 1 - \dfrac{1}{3^2} \right) \cdots \left( 1 - \dfrac{1}{n^2} \right)`.
+
+.. proof:solution::
+
+   待写
+
+2. 计算下列函数极限.
+
+   (1). :math:`\lim\limits_{x \to 0} \dfrac{x+1}{x^2-x-2}`;
+
+   (2). :math:`\lim\limits_{x \to 2} \dfrac{x^2-4}{x+1}`;
+
+   (3). :math:`\lim\limits_{x \to 1} \dfrac{x^4-1}{x^3-1}`;
+
+   (4). :math:`\lim\limits_{x \to 1} \dfrac{x^2+x-2}{x^2-4x+3}`;
+
+   (5). :math:`\lim\limits_{h \to 0} \dfrac{(x+h)^3-x^3}{h}`;
+
+   (6). :math:`\lim\limits_{x \to 1} \left( \dfrac{1}{x-1} + \dfrac{3}{1-x^3} \right)`;
+
+   (7). :math:`\lim\limits_{x \to 1} \dfrac{x+x^2+\cdots+x^n-n}{x-1}`;
+
+   (8). :math:`\lim\limits_{x \to x_0} a^x`.
+
+.. proof:solution::
+
+   待写
+
+3. 设
+   :math:`f(x) = \dfrac{a_0 x^m + a_1 x^{m-1} + \cdots + a_{m-1} x + a_m}{b_0 x^n + b_1 x^{n-1} + \cdots + b_{n-1} x + b_n}`
+   (:math:`a_0 b_0 \neq 0, m \leqslant n`), 求 :math:`\lim\limits_{x \to +\infty} f(x)`.
+
+.. proof:solution::
+
+   待写
+
+4. 判断下列命题是否正确? 正确的请给予证明, 不正确的请举例说明.
+
+   (1). 若 :math:`\{ x_n \}` 收敛, :math:`\{ y_n \}` 发散, 则 :math:`\{ x_n + y_n \}` 和 :math:`\{ x_n y_n \}` 均发散;
+
+   (2). 若 :math:`\{ x_n \}` 和 :math:`\{ y_n \}` 均发散, 则 :math:`\{ x_n + y_n \}` 和 :math:`\{ x_n y_n \}` 均发散.
+
+.. proof:proof::
+
+   待写
 
 .. _ex-chap2-sec3-ex5:
 
@@ -165,6 +308,49 @@
 §2.4 极限存在准则与重要极限
 --------------------------------
 
+1. 求下列极限.
+
+   (1). :math:`\lim\limits_{x \to 0} \dfrac{\sin mx}{\sin nx}`;
+
+   (2). :math:`\lim\limits_{x \to 0} \dfrac{1-\cos 3x}{\sin x \tan 2x}`;
+
+   (3). :math:`\lim\limits_{h \to 0} \dfrac{\sin(x+h)-\sin x}{h}`;
+
+   (4). :math:`\lim\limits_{h \to 0} \dfrac{\cos(x+h)-\cos x}{h}`;
+
+   (5). :math:`\lim\limits_{x \to 0} \dfrac{\cos nx-\cos mx}{x^2}`;
+
+   (6). :math:`\lim\limits_{n \to \infty} 3^n \sin \dfrac{x}{3^n}`;
+
+   (7). :math:`\lim\limits_{n \to \infty} \left( 1+\dfrac{4}{n} \right)^{2n}`;
+
+   (8). :math:`\lim\limits_{n \to \infty} \left( 1-\dfrac{1}{n^2} \right)^n`;
+
+   (9). :math:`\lim\limits_{x \to \infty} \left( 1-\dfrac{2}{x} \right)^{5x}`;
+
+   (10). :math:`\lim\limits_{x \to \infty} \left( \dfrac{3-2x}{2-2x} \right)^x`.
+
+.. proof:solution::
+
+   待写
+
+2. 设 :math:`x_n = \dfrac{1}{2} \cdot \dfrac{3}{4} \cdots \dfrac{2n-1}{2n}`, 证明
+   :math:`x_n < \dfrac{1}{\sqrt{2n+1}}`, 并求 :math:`\lim\limits_{n \to \infty} x_n`.
+
+.. proof:proof::
+
+   待写
+
+3. 利用单调有界准则证明下列数列极限存在.
+
+   (1). :math:`x_n = \dfrac{1}{n+1} + \dfrac{1}{n+2} + \cdots + \dfrac{1}{n+n}`;
+
+   (2). :math:`x_n = \dfrac{1}{1^2} + \dfrac{1}{2^2} + \cdots + \dfrac{1}{n^2}`.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-chap2-sec4-ex4:
 
 4. 设 :math:`a > 0`, 数列 :math:`\{ x_n \}` 满足 :math:`x_1 = \sqrt{a}`, :math:`x_2 = \sqrt{a + x_1}`,
@@ -218,6 +404,13 @@
 
    .. math::
       \lim_{n \to \infty} \sqrt[n]{a_1^n + a_2^n + \cdots + a_k^n} = M = \max \{ a_1, a_2, \dots, a_k \}.
+
+6. 设数列 :math:`\{ x_n \}` 满足下列条件 :math:`|x_{n+1}| \leqslant q|x_n|`, 其中 :math:`q`
+   是一个小于 1 的正数, 证明 :math:`\lim\limits_{n \to \infty} x_n = 0`.
+
+.. proof:proof::
+
+   待写
 
 .. _ex-chap2-sec4-ex7:
 
@@ -291,15 +484,35 @@
 §2.5 无穷大量与无穷小量
 --------------------------------
 
+1. 证明: 当 :math:`x \to 0` 时, 有
+
+   (1). :math:`\sec x - 1 \sim \dfrac{x^2}{2}`;
+
+   (2). :math:`\sqrt{\tan x + 1} - \sqrt{\sin x + 1} \sim \dfrac{x^3}{4}`.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-chap2-sec5-ex2:
 
-2. 计算下列极限:
+2. 计算下列极限.
 
-   (5). :math:`\lim\limits_{x \to +\infty} x[\ln(x + 1) - x]`;
+   (1). :math:`\lim\limits_{x \to 0} \dfrac{\sin^2 x}{\sin x}`;
+
+   (2). :math:`\lim\limits_{x \to 0} \dfrac{1-\cos 3x}{x \sin 2x}`;
+
+   (3). :math:`\lim\limits_{x \to 0} \dfrac{e^x - e^{\cos x}}{x \tan x}`;
+
+   (4). :math:`\lim\limits_{x \to 0} \dfrac{\ln(1+x^3)}{\tan x - \sin x}`;
+
+   (5). :math:`\lim\limits_{x \to +\infty} x \left[ \ln(1+x) - x \right]`;
+
+   (6). :math:`\lim\limits_{x \to +\infty} \dfrac{\ln(2+e^{3x})}{\ln(3+e^{2x})}`.
 
 .. proof:solution::
 
-   由于
+   (5). 由于
 
    .. math::
       \lim\limits_{x \to +\infty} [\ln(x + 1) - x] = \lim\limits_{x \to +\infty} \ln \dfrac{x + 1}{e^x} = -\infty,
@@ -314,15 +527,123 @@
          \lim_{x \to +\infty} x[\ln(x + 1) - \ln x] = \lim_{x \to +\infty} x \ln \left( 1 + \dfrac{1}{x} \right)
          \xlongequal{t = \frac{1}{x}} \lim_{t \to 0^+} \dfrac{\ln(1 + t)}{t} = 1.
 
+3. 设 :math:`x \to x_0` 时, :math:`g(x)` 是有界量, :math:`f(x)` 是无穷大, 证明
+   :math:`g(x) \pm f(x)` 是无穷大.
+
+.. proof:proof::
+
+   待写
+
+4. 设 :math:`x \to x_0` 时, :math:`g(x)` 是有界量, :math:`f(x)` 是无穷大, 请问
+   :math:`g(x) \cdot f(x)` 是否为无穷大?
+
+.. proof:solution::
+
+   待写
+
+5. 设当 :math:`x \to x_0` 时, :math:`f(x) \sim g(x)`, 证明:
+   :math:`f(x) - g(x) = o[g(x)]` 或者 :math:`f(x) - g(x) = o[f(x)]`.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-chap2-sec6:
 
 §2.6 函数的连续性和间断点
 --------------------------------
 
+1. 下列函数在 :math:`x = 0` 处是否连续? 为什么?
+
+   (1). :math:`f(x) = \begin{cases} x\sin\dfrac{1}{x}, & x \neq 0, \\ 0, & x = 0; \end{cases}`
+
+   (2). :math:`f(x) = \begin{cases} e^{2x}, & x \leqslant 0, \\ \dfrac{\sin x}{x}, & x > 0. \end{cases}`
+
+.. proof:solution::
+
+   待写
+
+2. 研究下列函数的连续性.
+
+   (1). :math:`f(x) = \dfrac{1}{e^x - 1}`;
+
+   (2). :math:`f(x) = \dfrac{\ln(1-2x)}{x}`;
+
+   (3). :math:`f(x) = \dfrac{x^2 - 2x - 3}{x^2 - 3x - 4}`;
+
+   (4). :math:`f(x) = \sin^2 \dfrac{1}{x}`.
+
+.. proof:solution::
+
+   待写
+
+3. 求下列极限.
+
+   (1). :math:`\lim\limits_{x \to 0} \dfrac{\ln(1+x^2)}{\sin(1+x^2)}`;
+
+   (2). :math:`\lim\limits_{x \to \frac{\pi}{6}} \ln(2\cos 2x)`;
+
+   (3). :math:`\lim\limits_{x \to 0} \sqrt{x^2 - 2x + 5}`;
+
+   (4). :math:`\lim\limits_{x \to 1} \dfrac{\sqrt{1+x} - 1}{x}`.
+
+.. proof:solution::
+
+   待写
+
+4. 设 :math:`f(x) = \begin{cases} a+x, & x < 0, \\ 1, & x = 0, \\ \ln(b+x+x^2), & x > 0, \end{cases}`
+   已知 :math:`f(x)` 在 :math:`x = 0` 处连续, 试确定 :math:`a` 和 :math:`b` 的值.
+
+.. proof:solution::
+
+   待写
+
+5. 求函数 :math:`f(x) = \dfrac{x^3 + 3x^2 - x - 3}{x^2 + x - 6}` 的连续区间, 并求极限
+   :math:`\lim\limits_{x \to 0} f(x)`, :math:`\lim\limits_{x \to 2} f(x)` 和 :math:`\lim\limits_{x \to -3} f(x)`.
+
+.. proof:solution::
+
+   待写
+
+6. 设函数 :math:`g(x)` 在 :math:`x_0` 处连续, 且 :math:`\lim\limits_{x \to x_0} g(x) = 0`,
+   已知 :math:`|f(x)| \leqslant |g(x)|`, 证明 :math:`f(x)` 在 :math:`x_0` 处也连续.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-chap2-sec7:
 
 §2.7 闭区间上连续函数的性质
 --------------------------------
+
+1. 证明方程 :math:`2^x = x^2` 在 :math:`(-1,1)` 内必有实根. (提示: 对 :math:`f(x) = 2^x - x^2`
+   在 :math:`[-1,1]` 上应用零点存在定理进行证明.)
+
+.. proof:proof::
+
+   待写
+
+2. 用零点定理证明介值定理.
+
+.. proof:proof::
+
+   待写
+
+3. 设 :math:`f(x)` 在 :math:`[0,1]` 上连续, 并且当 :math:`x \in [0,1]` 时, :math:`0 < f(x) < 1`.
+   证明存在 :math:`x_0 \in (0,1)`, 使得 :math:`f(x_0) = x_0` 成立.
+
+.. proof:proof::
+
+   待写
+
+4. 设 :math:`f(x)` 在 :math:`(a,b)` 上连续, :math:`x_1, x_2 \in (a,b)`, :math:`x_1 < x_2` 且
+   :math:`f(x_1) < f(x_2)`. 求证: 对任何 :math:`c \in [f(x_1), f(x_2)]`, 存在
+   :math:`x \in (a,b)`, 使得 :math:`f(x) = c` 成立.
+
+.. proof:proof::
+
+   待写
 
 .. _extra-chap2:
 
