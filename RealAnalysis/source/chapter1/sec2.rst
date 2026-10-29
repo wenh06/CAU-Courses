@@ -137,14 +137,16 @@
    于是可以通过如下的排序方式分别给出 :math:`\mathbb{Q}` 以及 :math:`\mathbb{Q}^+` 到 :math:`\mathbb{N}` 的一一对应:
 
    .. math::
-      r_1 & \quad \{ 0 \}, \mathcal{H}_{11}, \mathcal{H}_{12}, \dots, \mathcal{H}_{1k}, \dots \\
-      r_2 & \quad \{ 0 \}, \mathcal{H}_{21}, \mathcal{H}_{22}, \dots, \mathcal{H}_{2k}, \dots
+      \rho_1 & \quad \{ 0 \}, \mathcal{H}_{11}, \mathcal{H}_{12}, \dots, \mathcal{H}_{1k}, \dots \\
+      \rho_2 & \quad \mathcal{H}_{21}, \mathcal{H}_{22}, \dots, \mathcal{H}_{2k}, \dots
 
    对于 :math:`k \in \mathbb{N}`, :math:`\mathcal{H}_{1k}` 表示 :math:`\mathbb{Q}` 中高度为 :math:`k` 的元素全体;
-   :math:`\mathcal{H}_{2k}` 表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体. 在每一个 :math:`\mathcal{H}_{1k}`
+   :math:`\mathcal{H}_{2k}` 表示 :math:`\mathbb{Q}^+` 中高度为 :math:`k` 的元素全体
+   (注意 :math:`\{ 0 \}` 只出现在第一行, 因为 :math:`0 \not\in \mathbb{Q}^+`; 由于高度函数只定义在
+   :math:`\mathbb{Q}^* = \mathbb{Q} \setminus \{ 0 \}` 上, :math:`0` 需单独列出). 在每一个 :math:`\mathcal{H}_{1k}`
    以及 :math:`\mathcal{H}_{2k}` 中, 将元素按其作为有理数的大小排序. 这样, 我们就给出了 :math:`\mathbb{Q} \times \mathbb{Q}^+`
    到 :math:`\mathbb{N} \times \mathbb{N}` 的一一对应
-   :math:`(r_1, r_2) : \mathbb{Q} \times \mathbb{Q}^+ \to \mathbb{N} \times \mathbb{N}`.
+   :math:`(\rho_1, \rho_2) : \mathbb{Q} \times \mathbb{Q}^+ \to \mathbb{N} \times \mathbb{N}`.
 
    类似地, 可以通过如下的排序方式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
 
@@ -155,7 +157,7 @@
    其内部按 :math:`n_1` 的大小进行排序. 于是, 我们就给出了一一对应
 
    .. math::
-      A \cong \mathbb{Q} \times \mathbb{Q}^+ \xrightarrow{(r_1, r_2)} \mathbb{N} \times \mathbb{N} \xrightarrow{s} \mathbb{N}.
+      A \cong \mathbb{Q} \times \mathbb{Q}^+ \xrightarrow{(\rho_1, \rho_2)} \mathbb{N} \times \mathbb{N} \xrightarrow{s} \mathbb{N}.
 
    .. note::
       可以通过显式表达式给出一一对应 :math:`\mathbb{N} \times \mathbb{N} \to \mathbb{N}`:
@@ -168,13 +170,26 @@
 
    (2). 这题是课本 §2 的例1, 做法如下:
 
-   将 :math:`[0, 1]` 中的数写成二进制小数的形式 :math:`x = 0.x_1x_2 \cdots`, 相应的一一对应关系为
+   将 :math:`[0, 1]` 中的数写成二进制小数 :math:`x = 0.x_1x_2 \cdots`: 约定 :math:`1` 写作
+   :math:`0.111 \cdots`, 其余的数不用 :math:`0.\cdots 0111 \cdots` 形式的表示. 在该约定下, 每个
+   :math:`x \in [0, 1]` 的表示唯一. 定义映射
 
    .. math::
-      [0, 1] \times [0, 1] \to [0, 1] : \quad (x, y) \mapsto z = 0.x_1y_1x_2y_2 \cdots
+      \varphi: [0, 1] \times [0, 1] \to [0, 1], \quad (x, y) \mapsto z = 0.x_1y_1x_2y_2 \cdots
 
-   由于约定了二进制小数不用 :math:`0.\cdots 0111\cdots` 的形式表示, 需要检查的就只有通过上述映射得到的 :math:`z` 不具有这种形式,
-   用反证法很容易证明这种情况不会发生.
+   :math:`\varphi` 是单射. 事实上, 设 :math:`\varphi(x, y) = \varphi(x', y')`. 二进制展开的表示歧义仅发生在
+   一端以全 :math:`0` 结尾、另一端以全 :math:`1` 结尾的两种表示之间; 而交错的数字串 :math:`x_1y_1x_2y_2 \cdots`
+   以全 :math:`1` 结尾当且仅当 :math:`x = y = 1` (此时像为 :math:`1`), 以全 :math:`0` 结尾时像严格小于
+   :math:`1`, 故两个不同的交错数字串不可能给出同一个实数. 于是交错的数字串相同, 按奇数位与偶数位拆开即得
+   :math:`x = x'`, :math:`y = y'`. 另一方面, :math:`x \mapsto (x, 0)` 是 :math:`[0, 1]` 到
+   :math:`[0, 1] \times [0, 1]` 的单射. 于是由 Cantor-Bernstein 定理, :math:`[0, 1] \times [0, 1]`
+   与 :math:`[0, 1]` 之间可以构成一一对应.
+
+   .. note::
+      交错映射 :math:`\varphi` 本身一般不是满射: 例如 :math:`\dfrac{1}{6} = 0.00101010 \cdots`,
+      其按奇数位与偶数位拆开的数字串分别为 :math:`(0, 1, 1, 1, \dots)` 与 :math:`(0, 0, 0, \dots)`,
+      前者对应于被约定排除的表示 :math:`0.0111 \cdots = \dfrac{1}{2}`, 因此 :math:`\dfrac{1}{6}`
+      没有原像. 所以不能把 :math:`\varphi` 直接称作一一对应, 需如上借助 Cantor-Bernstein 定理.
 
 .. _ex-1-10:
 
@@ -185,12 +200,13 @@
    对于整系数多项式全体 :math:`\mathbb{Z}[X]` 有分解
 
    .. math::
-      \mathbb{Z}[X] = \bigcup_{n=0}^{\infty} \mathbb{Z}_n[X], \quad \mathbb{Z}_n[X]
+      \mathbb{Z}[X] = \{ 0 \} \cup \bigcup_{n=0}^{\infty} \mathbb{Z}_n[X], \quad \mathbb{Z}_n[X]
       = \{ f \in \mathbb{Z}[X]: \ \deg f = n \} \cong \mathbb{Z}^{n} \times \mathbb{Z}^{\ast},
 
-   其中 :math:`\mathbb{Z}^{\ast} = \mathbb{Z} \setminus \{ 0 \}` (最高次项系数不为 :math:`0`). 由于
+   其中 :math:`\mathbb{Z}^{\ast} = \mathbb{Z} \setminus \{ 0 \}` (最高次项系数不为 :math:`0`; 零多项式没有次数,
+   故单列于并集之外). 由于
    :math:`\mathbb{Z}^{n} \times \mathbb{Z}^{\ast}` 是可列集, 所以 :math:`\mathbb{Z}_n[X]` 是可列集,
-   从而 :math:`\mathbb{Z}[X]` 是可列集.
+   从而 :math:`\mathbb{Z}[X]` 作为可列个可列集与单点集之并仍是可列集.
 
 .. _ex-1-11:
 
@@ -201,15 +217,22 @@
    :math:`[0, 1]` 上常值函数全体与 :math:`\mathbb{R}` 对等, 而且是 :math:`C[0, 1]` 的真子集.
    另一方面, :math:`[0, 1]` 上的任一连续函数 :math:`f` 完全由它在所有有理点上的取值决定, 于是 :math:`C[0, 1]` 与
    :math:`\mathbb{R}^{\mathbb{N}}` 的真子集对等. 这里是真子集是因为需要排除不能对应于连续函数的实数列, 例如设
-   :math:`a_1, a_2, \dots` 是 :math:`[0, 1]` 上的一个收敛到 :math:`\frac{\sqrt{2}}{2}` 的有理数数序列,
+   :math:`a_1, a_2, \dots` 是 :math:`[0, 1]` 上的一个收敛到 :math:`\frac{\sqrt{2}}{2}` 的有理数序列,
    相应的值 :math:`f(a_n) = (-1)^n` 不能对应于任何连续函数. 于是 :math:`C[0, 1]` 与 :math:`\mathbb{R}^{\mathbb{N}}` 的真子集对等.
    由 Cantor-Bernstein 定理, 有 :math:`C[0, 1]` 与 :math:`\mathbb{R}` 对等, 从而它的势为 :math:`\aleph`.
 
-   这里, 我们还需要说明 :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等, 或者等价地, :math:`(0, 1)^{\mathbb{N}}`
-   与 :math:`(0, 1)` 对等:
+   这里, 我们还需要说明 :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等. 常值序列给出单射
+   :math:`\mathbb{R} \to \mathbb{R}^{\mathbb{N}}`; 反过来, 由 :math:`\mathbb{R} \sim (0, 1)`, 只需给出单射
+   :math:`(0, 1)^{\mathbb{N}} \to (0, 1)`. 将每个 :math:`x_n \in (0, 1)` 写成十进制小数
+   :math:`x_n = 0.a_{n1}a_{n2}a_{n3} \cdots` (约定不用以 :math:`9` 循环结尾的表示, 故表示唯一), 并按对角线顺序交错排列:
 
    .. math::
       (0.a_{11}a_{12}a_{13} \cdots, 0.a_{21}a_{22}a_{23} \cdots, \dots) \mapsto 0.a_{11}a_{12}a_{21}a_{13}a_{22}a_{31} \cdots.
+
+   该映射是单射: 交错的数字串不以全 :math:`9` 结尾 (否则每个数列 :math:`\{ a_{nj} \}_j` 都最终全为 :math:`9`,
+   与约定矛盾), 故无表示歧义, 且由交错的数字串按对角线顺序拆开即可还原出全部 :math:`a_{nj}`. 于是有
+   :math:`|\mathbb{R}^{\mathbb{N}}| \leqslant |(0, 1)| = \aleph`, 再由 Cantor-Bernstein 定理即得
+   :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等.
 
 .. _ex-1-12:
 
@@ -218,9 +241,19 @@
 .. proof:solution::
 
    任一单调函数 :math:`f` 至多有可数个间断点, 而且每个间断点都是第一类间断点, 所以单调函数 :math:`f` 可以表示为
-   :math:`f = f_1 + f_2`, 其中 :math:`f_1` 是连续函数, :math:`f_2` 是有至多可数个第一类间断点的阶跃函数.
-   :math:`f_2` 完全由间断点的值以及相应的阶跃的量决定, 所以可视为 :math:`\mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}}`
-   的一个元素, 故其全体具有势 :math:`\aleph`. 再结合 :ref:`上题 <ex-1-11>` 的结论, 有 :math:`M` 的势为 :math:`\aleph`.
+   :math:`f = f_1 + f_2`, 其中 :math:`f_1` 是连续函数, :math:`f_2` 是只有至多可数个第一类间断点的阶跃函数:
+   取 :math:`f_2` 为在各间断点 :math:`x_n` 处有跳跃 :math:`f(x_n + 0) - f(x_n - 0)` 的阶跃函数, 再叠加仅在诸
+   :math:`x_n` 处取值 :math:`f(x_n) - f(x_n + 0)` 的修正项, 则 :math:`f_1 = f - f_2` 连续. 于是 :math:`f` 由
+   连续函数 :math:`f_1` 与数据组
+   :math:`\bigl( \{ x_n \}, \{ f(x_n + 0) - f(x_n - 0) \}, \{ f(x_n) - f(x_n + 0) \} \bigr)` 完全决定.
+
+   连续函数由其在任一可列稠密集 (如 :math:`\mathbb{Q}`) 上的取值完全决定, 故与 :ref:`上题 <ex-1-11>` 同理
+   (常值函数给出单射 :math:`\mathbb{R} \to C(\mathbb{R})`), :math:`C(\mathbb{R})` 的势为 :math:`\aleph`;
+   又由上题, :math:`\mathbb{R}^{\mathbb{N}}` 与 :math:`\mathbb{R}` 对等, 故有限乘积
+   :math:`C(\mathbb{R}) \times \mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}} \times \mathbb{R}^{\mathbb{N}}`
+   的势为 :math:`\aleph`. 上面的对应给出了 :math:`M` 到该乘积的单射, 所以 :math:`|M| \leqslant \aleph`.
+   另一方面, :math:`\{ x \mapsto x + c : c \in \mathbb{R} \}` 与 :math:`\mathbb{R}` 对等, 故
+   :math:`|M| \geqslant \aleph`. 综上所述, :math:`M` 的势为 :math:`\aleph`.
 
 .. _ex-1-13:
 
@@ -244,6 +277,13 @@
       g: A \times \mathbb{F}_2 \rightarrow A \times \mathbb{F}_2, \quad (x, y) \mapsto (x, y + 1 \bmod 2)
 
    是一个没有不动点的置换, 从而复合映射 :math:`f = \varphi^{-1} \circ g \circ \varphi` 就是集 :math:`A` 的一个没有不动点的置换.
+
+   .. note::
+      需要说明的是, 对无限集 :math:`A`, 仅交换某个可列子集 :math:`\{ a_1, a_2, \dots \}` 中的相邻元素、
+      其余点不动的做法是行不通的: 这样的置换在可列子集之外是恒等映射, 而 :math:`A` 未必可列. 无不动点的
+      置换需将 :math:`A` 的所有点都纳入长度大于 :math:`1` 的轮换, 当 :math:`A` 不可列时, 这本质上依赖
+      ":math:`A` 与 :math:`A \times \mathbb{F}_2` 对等" 这一非平凡事实 (即 :math:`A` 可表为两个都与
+      :math:`A` 对等的不交部分之并).
 
    .. note::
       利用选择公理 (或者 Zorn 引理) 的证明方法: 考虑集 :math:`A` 的所有满足如下条件的子集族

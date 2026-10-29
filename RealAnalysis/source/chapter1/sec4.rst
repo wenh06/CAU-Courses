@@ -178,3 +178,101 @@
    :math:`\mathscr{C} P_0 \cap E' = \emptyset`, 从而有 :math:`E' \subset P_0`.
 
    综上所述, 有 :math:`E' = P_0`.
+
+.. _ex-1-27:
+
+27. 设 :math:`P_0` 为 :math:`[0, 1]` 中的 Cantor 三分集, 试证 :math:`P_0 + P_0 = \{ x + y ~ : ~ x, y \in P_0 \} = [0, 2]`,
+    :math:`P_0 - P_0 = \{ x - y ~ : ~ x, y \in P_0 \} = [-1, 1]`.
+    (提示: 利用实数的三进表示并注意到 :math:`P_0 \pm P_0` 均为闭集.)
+
+.. proof:solution::
+
+   沿用 :ref:`第 26 题 <ex-1-26>` 的记号: :math:`P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 其中
+   :math:`F_n = F_{n1} \cup F_{n2} \cup \cdots \cup F_{n2^{n}}` 由 :math:`2^{n}` 个长度为
+   :math:`3^{-n}` 的闭区间构成. 由构造过程, :math:`F_n` 有如下的自相似分解:
+
+   .. math::
+      :label: ex-1-27-eq-1
+
+      F_{n+1} = \varphi_1 ( F_n ) \cup \varphi_2 ( F_n ), \qquad
+      \varphi_1 ( x ) = \frac{x}{3}, \quad \varphi_2 ( x ) = \frac{x + 2}{3},
+
+   即 :math:`\varphi_1, \varphi_2` 分别是把每个闭区间压缩进其左、右两段的压缩映射.
+
+   首先注意, :math:`P_0` 作为 :math:`\mathbb{R}^1` 中的有界闭集是紧集, 而加法运算连续, 所以
+   :math:`P_0 + P_0` 与 :math:`P_0 - P_0` 都是紧集, 从而都是闭集.
+
+   其次利用实数的三进表示. 对 :math:`n \in \mathbb{N}`, 令
+
+   .. math::
+      D_n = \left\{ \sum_{k=1}^{n} \frac{a_k}{3^{k}} \; : \; a_k \in \{ 0, 2 \} \right\}
+
+   为前 :math:`n` 位三进数字只取 :math:`0` 和 :math:`2` 的有限三进小数之集. 这些点都是被挖去的开区间
+   :math:`I_{nk}` 的端点 (或 :math:`0` 与 :math:`1`), 在构造的每一步都未被挖去, 故 :math:`D_n \subset P_0`.
+   逐位相加可见 :math:`D_n + D_n = \left\{ \sum_{k=1}^{n} \frac{d_k}{3^{k}} \; : \; d_k \in \{ 0, 2, 4 \} \right\}`:
+   记 :math:`d_k = 2 e_k`, :math:`e_k \in \{ 0, 1, 2 \}`, 则 :math:`\sum\limits_{k=1}^{n} e_k 3^{-k}` 恰为形如
+   :math:`j \cdot 3^{-n}` (:math:`j = 0, 1, \dots, 3^{n} - 1`) 的数. 于是 :math:`D_n + D_n` 是
+   :math:`[0, 2 - 2 \cdot 3^{-n}]` 中步长为 :math:`2 \cdot 3^{-n}` 的等距网格. 从而对任意 :math:`z \in [0, 2]`,
+   存在 :math:`x_n, y_n \in D_n \subset P_0`, 使得
+
+   .. math::
+      \left| z - ( x_n + y_n ) \right| \leqslant \frac{2}{3^{n}},
+
+   (:math:`z` 或者落在某相邻两格点之间, 此时到较近格点的距离不超过半个步长; 或落在最右格点
+   :math:`2 - 2 \cdot 3^{-n}` 与 :math:`2` 之间, 此时距离不超过一个步长.) 由 Bolzano--Weierstrass 定理,
+   点列 :math:`\{ ( x_n, y_n ) \}` 有收敛子列 :math:`( x_{n_j}, y_{n_j} ) \to ( x_0, y_0 )`;
+   由于 :math:`P_0` 是闭集, 有 :math:`( x_0, y_0 ) \in P_0 \times P_0`, 且由上面的不等式知
+   :math:`x_{n_j} + y_{n_j} \to z`, 故 :math:`x_0 + y_0 = z`. 这就证明了 :math:`[0, 2] \subset P_0 + P_0`;
+   反方向的包含由 :math:`P_0 \subset [0, 1]` 是显然的. 于是 :math:`P_0 + P_0 = [0, 2]`.
+
+   对于差集, 注意康托三分集关于点 :math:`\dfrac{1}{2}` 对称: 由
+   :math:`1 - \varphi_1 ( x ) = \varphi_2 ( 1 - x )` 与式 :eq:`ex-1-27-eq-1` 用归纳法易得
+   :math:`F_n = 1 - F_n` 对一切 :math:`n` 成立, 对 :math:`n` 取交即得 :math:`P_0 = 1 - P_0`
+   (在三进表示下, 对称性就是各位数字 :math:`0 \leftrightarrow 2` 的互换). 于是
+   :math:`- P_0 = P_0 - 1`, 从而
+
+   .. math::
+      P_0 - P_0 = P_0 + ( - P_0 ) = \left( P_0 + P_0 \right) - 1 = [0, 2] - 1 = [-1, 1],
+
+   包含 :math:`P_0 - P_0 \subset [-1, 1]` 同样由 :math:`P_0 \subset [0, 1]` 显然. 综上所述, 有
+   :math:`P_0 + P_0 = [0, 2]`, :math:`P_0 - P_0 = [-1, 1]`.
+
+   .. note::
+      另一种解法逐位拆分, 无需利用闭性. 令
+      :math:`C = \dfrac{1}{2} P_0 = \left\{ \dfrac{x}{2} : x \in P_0 \right\}`, 那么 :math:`x \in C`
+      当且仅当 :math:`x` 有各位数字只取 :math:`0, 1` 的三进表示 :math:`x = \sum\limits_{k=1}^{\infty} b_k 3^{-k}`
+      (此时 :math:`2 x = \sum\limits_{k=1}^{\infty} 2 b_k 3^{-k}` 的各位数字只取 :math:`0, 2`, 故
+      :math:`2x \in P_0`). 任取 :math:`w \in [0, 1]`, 取它的三进表示 :math:`w = \sum\limits_{k=1}^{\infty} c_k 3^{-k}`,
+      :math:`c_k \in \{ 0, 1, 2 \}` (当 :math:`w = 1` 时取 :math:`c_k \equiv 2`). 逐位拆分:
+      当 :math:`c_k \leqslant 1` 时取 :math:`b_k = 0, d_k = c_k`; 当 :math:`c_k = 2` 时取
+      :math:`b_k = d_k = 1`. 那么 :math:`b_k, d_k \in \{ 0, 1 \}` 且 :math:`b_k + d_k = c_k`,
+      于是 :math:`x = \sum b_k 3^{-k} \in C`, :math:`y = \sum d_k 3^{-k} \in C` 满足 :math:`x + y = w`
+      (逐位相加, 无进位). 这就得到 :math:`[0, 1] \subset C + C`; 反向包含由 :math:`C \subset [0, \tfrac{1}{2}]`
+      显然, 故 :math:`[0, 1] = C + C`. 于是
+
+      .. math::
+         P_0 + P_0 = 2 \left( C + C \right) = [0, 2],
+
+      再结合 :math:`P_0 = 1 - P_0` 同样得到 :math:`P_0 - P_0 = [-1, 1]`.
+
+   .. note::
+      也可以不显式使用三进表示, 直接对构造作归纳. 补记 :math:`F_0 = [0, 1]`, 先证
+      :math:`F_n + F_n = [0, 2]` 对一切 :math:`n \geqslant 0` 成立: :math:`n = 0` 时显然; 由
+      :math:`F_{n+1} = \varphi_1 ( F_n ) \cup \varphi_2 ( F_n )` 与归纳假设,
+
+      .. math::
+         F_{n+1} + F_{n+1}
+         = \bigcup_{i, j \in \{ 1, 2 \}} \left( \varphi_i ( F_n ) + \varphi_j ( F_n ) \right)
+         = \left[ 0, \frac{2}{3} \right] \cup \left[ \frac{2}{3}, \frac{4}{3} \right] \cup \left[ \frac{4}{3}, 2 \right]
+         = [0, 2],
+
+      其中 :math:`\varphi_1 ( F_n ) + \varphi_1 ( F_n ) = \dfrac{ F_n + F_n }{3} = \left[ 0, \dfrac{2}{3} \right]`,
+      :math:`\varphi_1 ( F_n ) + \varphi_2 ( F_n ) = \dfrac{ F_n + F_n + 2 }{3} = \left[ \dfrac{2}{3}, \dfrac{4}{3} \right]`,
+      :math:`\varphi_2 ( F_n ) + \varphi_2 ( F_n ) = \dfrac{ F_n + F_n + 4 }{3} = \left[ \dfrac{4}{3}, 2 \right]`.
+      于是对任意 :math:`z \in [0, 2]` 与每个 :math:`n`, 都存在 :math:`x_n, y_n \in F_n` 使得
+      :math:`x_n + y_n = z` 精确成立. 由 Bolzano--Weierstrass 定理, :math:`\{ x_n \}` 有收敛子列
+      :math:`x_{n_j} \to x_0 \in [0, 1]`, 相应地 :math:`y_{n_j} = z - x_{n_j} \to y_0 = z - x_0`.
+      对任意固定的 :math:`m`, 当 :math:`j` 充分大时 :math:`n_j \geqslant m`, 此时
+      :math:`x_{n_j}, y_{n_j} \in F_{n_j} \subset F_m`, 而 :math:`F_m` 是闭集, 取极限得
+      :math:`x_0, y_0 \in F_m`. 由 :math:`m` 的任意性得 :math:`x_0, y_0 \in P_0`, 从而
+      :math:`z = x_0 + y_0 \in P_0 + P_0`.
