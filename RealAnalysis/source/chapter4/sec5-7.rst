@@ -216,6 +216,44 @@
       :math:`L` 称为 Lipschitz 常数. 在本题中, 由不等式 :eq:`ex-4-30-eq-1` 可知, :math:`g` 满足 Lipschitz 条件,
       且 Lipschitz 常数 :math:`L = 1`.
 
+.. _ex-4-31:
+
+31. 设 :math:`0 < a_n < 1`, :math:`n \in \mathbb{N}`, 且 :math:`\displaystyle \sum_{n=1}^{\infty} a_n < \infty`.
+    令 :math:`\displaystyle b_n = \prod_{k=1}^{n} p_k`, :math:`p_k` 全为偶数. 试证: 当
+    :math:`a_n p_n 2^{-n} \to \infty` (:math:`n \to \infty`) 时函数
+
+    .. math::
+       f(x) = \prod_{n=1}^{\infty} \left( 1 + a_n \sin b_n \pi x \right)
+
+    为连续且处处不可微的 (林文).
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-4-32:
+
+32. 讨论函数
+
+    .. math::
+       f(x) = \sum_{n=0}^{\infty} \dfrac{\left\{ 10^n x \right\}}{10^n}
+
+    的可微性, 其中记号 :math:`\{ y \}` 表示数 :math:`y` 与其最近整数间的距离. 例如,
+    :math:`\{ 3.1 \} = 0.1`, :math:`\{ 3.5 \} = 0.5`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-4-33:
+
+33. 设在区间 :math:`[0, 1]` 上定义函数 :math:`f(x) = 1 - x^2`, 对 :math:`x \in (0, 1)`;
+    :math:`f(0) = 0`, :math:`f(1) = 2`. 求 :math:`f` 的全变差 :math:`\displaystyle \bigvee_0^1 (f)`.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-4-34:
 
 34. 设 :math:`\{ f_n \}` 为 :math:`[a, b]` 上有界变差函数列, :math:`f_n` 收敛于一有限函数 :math:`f` (当 :math:`n \to \infty`),
@@ -283,6 +321,24 @@
       f(x_2) - f(x_1) = \int_{[x_1, x_2]} g ~ \mathrm{d} m \geqslant 0,
 
    这就证明了 :math:`f` 是增函数.
+
+.. _ex-4-36:
+
+36. 证明函数 :math:`f(x) = \lvert x \rvert^{1/2} \sin \dfrac{1}{x}`, :math:`f(0) = 0` 在 :math:`x = 0`
+    有任意列导数 :math:`\lambda \in [-\infty, \infty]`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-4-37:
+
+37. 讨论函数 :math:`f(x) = x^{\alpha} \sin \dfrac{1}{x^{\beta}}` (:math:`0 < x \leqslant 1`;
+    :math:`\alpha, \beta > 0`), :math:`f(0) = 0` 的有界变差性与绝对连续性.
+
+.. proof:solution::
+
+   待写.
 
 .. _ex-4-38:
 
@@ -454,6 +510,19 @@
    于是, 需要构造一个不连续点集有正测度的有界可测函数.
 
    未完....
+
+.. _ex-4-41:
+
+41. 设在 :math:`[0, 1]` 上函数 :math:`f` 可表示成处处收敛的级数
+
+    .. math::
+       f(x) = \sum_{n=1}^{\infty} f_n(x),
+
+    其中每个 :math:`f_n` 为非减的奇异函数且 :math:`f(0) \neq f(1)`. 试证 :math:`f` 为奇异函数.
+
+.. proof:solution::
+
+   待写.
 
 .. _ex-4-42:
 

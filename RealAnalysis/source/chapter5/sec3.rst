@@ -158,3 +158,31 @@
       \quad \text{a.e.} ~ x \in \mathbb{R},
 
    也有 :math:`f \sim 0`.
+
+.. _ex-5-42:
+
+42. 设 :math:`f \in L^2(\mathbb{R})`, 令
+    :math:`\displaystyle f_h (x) = \dfrac{1}{2h} \int_{x - h}^{x + h} f(t) ~ \mathrm{d} t`.
+    试证几乎处处有
+
+    .. math::
+       f_h (x) = \int_{-\infty}^{\infty} \hat{f}(t) ~ \dfrac{\sin ht}{ht} e^{itx} ~ \mathrm{d} t.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-43:
+
+43. 设 :math:`f(x)` 是 :math:`\mathbb{R}` 上有界连续函数, 令
+
+    .. math::
+       L_{\sigma} (f; x) = \dfrac{1}{\pi} \int_{-\infty}^{\infty}
+       f \left( x + \dfrac{2t}{\sigma} \right) \dfrac{\sin^2 t}{t^2} ~ \mathrm{d} t.
+
+    试证: 在任何闭区间 :math:`[\alpha, \beta]` 上, :math:`L_{\sigma} (f; x)` 一致收敛于
+    :math:`f(x)`, :math:`\sigma \to \infty`.
+
+.. proof:solution::
+
+   待写.

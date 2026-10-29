@@ -121,6 +121,45 @@
 
    由此可知 :math:`f_n` 不依测度收敛到 :math:`0`.
 
+.. _ex-5-24:
+
+24. 试证 :math:`L^2(0, 1)` 中规范正交系的势不超过 :math:`\aleph_0`.
+
+    提示: 设 :math:`\{ \omega_{\alpha} \}` 为 :math:`L^2(0, 1)` 中任一规范正交系, 则对
+    :math:`\alpha \neq \alpha'` 有 :math:`\lVert \omega_{\alpha} - \omega_{\alpha'} \rVert_2 = \sqrt{2}`.
+    取 :math:`L^2(0, 1)` 的一可数稠密子集 :math:`A = \{ \varphi_n \}` 并作球族
+    :math:`\mathscr{B} = \{ \mathscr{B}(\varphi_n, 1/2) : n \in \mathbb{N} \}`, 则每个
+    :math:`\omega_{\alpha}` 必含于某个球 :math:`\mathscr{B}(\varphi_n, 1/2)` 中且不同的
+    :math:`\omega_{\alpha}, \omega_{\alpha'}` 不可能含于同一个球 :math:`\mathscr{B}(\varphi_n, 1/2)` 中,
+    否则将有 :math:`\sqrt{2} = \lVert \omega_{\alpha} - \omega_{\alpha'} \rVert_2
+    \leqslant \lVert \omega_{\alpha} - \varphi_n \rVert + \lVert \varphi_n - \omega_{\alpha'} \rVert
+    \leqslant 1` (矛盾!). 于是 :math:`\{ \omega_{\alpha} \}` 与 :math:`\mathscr{B}` 的一子集成一一对应,
+    因而至多可数.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-25:
+
+25. 试证: 若一可积函数的傅里叶级数在一正测度集 :math:`E` 上处处收敛, 则它的傅里叶系数趋于零.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-26:
+
+26. 设 :math:`f \in L(0, 2\pi)` 而 :math:`g` 有界且有周期 :math:`2\pi`, 证明
+
+    .. math::
+       \lim_{n \to \infty} \int_{-\pi}^{\pi} f(x) g(nx) ~ \mathrm{d} m
+       = \dfrac{1}{2\pi} \int_{-\pi}^{\pi} f(x) ~ \mathrm{d} m \int_{-\pi}^{\pi} g(x) ~ \mathrm{d} m.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-5-27:
 
 27. 设 :math:`E` 为可测集, :math:`m E < \infty`, :math:`f \in L^{\infty}(E)` 且 :math:`\lVert f \rVert_{\infty} > 0`.
@@ -245,6 +284,48 @@
       对一般的数列 :math:`\{ a_n \}` 来说, :eq:`ex-5-27-eq-7` 是要严格强于 :eq:`ex-5-27-eq-6` 的.
       相关知识可查阅级数的 Cesàro 求和法.
 
+.. _ex-5-28:
+
+28. 试将 :math:`\S 3` 例 2 的结果推广到 :math:`\mathbb{R}^n` 情形.
+
+    提示: 此时 :math:`f(x) = e^{-|x|^2/2}`, :math:`|x|^2 = x_1^2 + x_2^2 + \cdots + x_n^2`, 而
+    :math:`\mathrm{d} x = \mathrm{d} x_1 \mathrm{d} x_2 \cdots \mathrm{d} x_n`,
+    :math:`e^{-i t \cdot x} = e^{-i t_1 x_1} e^{-i t_2 x_2} \cdots e^{-i t_n x_n}`,
+    :math:`x = (x_1, x_2, \cdots, x_n)`, :math:`t = (t_1, t_2, \cdots, t_n)`. 可求出
+    :math:`\hat{f}(t) = (2\pi)^{-n/2} e^{-|t|^2/2}`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-29:
+
+29. 设 :math:`1 < p < \infty`, :math:`f \in L^p(0, \infty)`, 并令
+    :math:`\displaystyle F(x) = x^{-1} \int_0^x f(t) ~ \mathrm{d} m`, :math:`0 < x < \infty`. 试证,
+    映射 :math:`f \to F` 是 :math:`L^p(0, \infty)` 到 :math:`L^p(0, \infty)` 的有界映射, 且满足
+    :math:`\lVert F \rVert_p \leqslant p (p - 1)^{-1} \lVert f \rVert_p`. 又等式成立的充分必要条件是什么?
+
+    提示: 先对连续并具紧支集的函数 :math:`f` 考虑并且限定 :math:`f \geqslant 0`, 然后对 :math:`F(x)`
+    的 :math:`p` 次幂用分部积分公式, 再应用 Hölder 不等式.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-30:
+
+30. 设 :math:`m E = 1`, 试证
+
+    .. math::
+       \lim_{p \to 0} \lVert f \rVert_p = \exp \left\{ \int_E \ln |f(x)| ~ \mathrm{d} m \right\}.
+
+    提示: 可对 :math:`f \geqslant 0` 考察, 注意 :math:`p^{-1} (f^p - 1)` 单调递减趋于
+    :math:`\ln f` (当 :math:`p \to 0`), 再设法应用控制收敛定理.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-5-31:
 
 31. 设 :math:`I` 为实轴上的一区间, :math:`\varphi` 为 :math:`I` 上的实函数. 称 :math:`\varphi` 为 :math:`I` 上凸函数,
@@ -337,6 +418,85 @@
    .. math::
       \varphi \left( \dfrac{1}{\mu X} \int_X f ~ \mathrm{d} \mu \right)
       \leqslant \dfrac{1}{\mu X} \int_X \varphi(f) ~ \mathrm{d} \mu.
+
+.. _ex-5-32:
+
+32. 设 :math:`E` 是一维勒贝格可测集, 对于任意的 :math:`x \in \mathbb{R}`, 令
+
+    .. math::
+       \Delta_h (x) = (2h)^{-1} m \left( E \cap (x - h, x + h) \right), \quad h > 0.
+
+    试证: 几乎对一切 :math:`x \in E` 有 :math:`\displaystyle \lim_{h \to 0} \Delta_h (x) = 1`,
+    而几乎对一切 :math:`x \not\in E` 有 :math:`\displaystyle \lim_{h \to 0} \Delta_h (x) = 0`;
+    试作一集 :math:`E` 使极限 :math:`\displaystyle \lim_{h \to 0} \Delta_h (0)` 不存在.
+    又问当 :math:`E` 是不可测集时结论如何?
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-33:
+
+33. 设 :math:`f` 是 :math:`\mathbb{R}` 上可测函数, 令 :math:`\mu (\alpha) = m \mathbb{R} (|f| > \alpha)`.
+    试证:
+
+    .. math::
+       \int_{\mathbb{R}} |f(x)|^p ~ \mathrm{d} x = - \int_0^{\infty} \alpha^p ~ \mathrm{d} \mu (\alpha),
+       \quad p \geqslant 1;
+
+    .. math::
+       \lVert f \rVert_{\infty} = \inf \{ \alpha : \mu (\alpha) = 0 \}.
+
+    提示: 对 :math:`f \in L^p` 情形, 先对简单函数证明结果, 然后应用极限过程.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-34:
+
+34. 令 :math:`\displaystyle M f(x) = \sup_{r > 0} \dfrac{1}{2r} \int_{x - r}^{x + r} |f(t)| ~ \mathrm{d} t`.
+    试证存在常数 :math:`C`, 使 :math:`m (M f > \alpha) \leqslant C \alpha^{-1} \lVert f \rVert_1`,
+    对任一 :math:`\alpha > 0` 成立.
+
+    提示: 利用习题 33.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-35:
+
+35. 设 :math:`f \in L(0, 1)`, :math:`\alpha \in (0, 1)`. 试证对每个 :math:`e`, :math:`m e = \alpha`,
+    :math:`\int_e f ~ \mathrm{d} m = 0` 蕴含 :math:`f \sim 0`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-36:
+
+36. 设 :math:`f \in L(0, 1)` 满足 :math:`\displaystyle \int_{(0, 1)} t^k f(t) ~ \mathrm{d} t = 0`
+    对每个 :math:`k \in \mathbb{N} \cup \{ 0 \}`, 证明 :math:`f \sim 0`.
+
+    提示: 取 :math:`[0, 1]` 上一致有界的多项式列 :math:`p_n`, 使 :math:`p_n(t) \to \mathrm{sign} f(t)`,
+    a.e. (:math:`n \to \infty`).
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-37:
+
+37. 设 :math:`\alpha \in (0, 1)`. 试作一集 :math:`E \subset [0, 1]`, :math:`m E = \alpha` 使对每个
+    :math:`c \in [0, 1] \setminus E` 有
+
+    .. math::
+       \int_E |x - c|^{-1} ~ \mathrm{d} x = \infty.
+
+.. proof:solution::
+
+   待写.
 
 .. _ex-5-38:
 

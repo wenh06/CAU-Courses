@@ -953,6 +953,24 @@
 
       本质上, 我们原来的证明是在具体地构造分解 :math:`f = f_1 + f_2`.
 
+.. _ex-4-22:
+
+22. 设 :math:`f` 是 :math:`\mathbb{R}` 上可测函数. 试证 :math:`f \in L(\mathbb{R})` 的充分必要条件是,
+    存在简单函数列 :math:`\{ s_n \}_{n \in \mathbb{N}} \subset L(\mathbb{R})`, 满足:
+    :math:`s_n` 依测度收敛于 :math:`f`, 且
+
+    .. math::
+      \lim_{m, n \to \infty} \int_{\mathbb{R}} \lvert s_m - s_n \rvert ~ \mathrm{d} m = 0.
+
+    注: 由此可以得到积分的又一定义:
+
+    .. math::
+      \int_{\mathbb{R}} f ~ \mathrm{d} m = \lim_{n \to \infty} \int_{\mathbb{R}} s_n ~ \mathrm{d} m.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-4-23:
 
 23. 设 :math:`f` 是 :math:`\mathbb{R}` 上的可积函数, 试证

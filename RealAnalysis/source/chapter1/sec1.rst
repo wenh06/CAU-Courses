@@ -79,6 +79,22 @@
    (6). 不成立. 因为集合 :math:`A` 是左边 :math:`A \cup (B \setminus C)` 的一个子集, 但如果 :math:`A \cap C \neq \emptyset` 的话,
    集合 :math:`A` 不是右边 :math:`(A \cup B) \setminus C` 的子集.
 
+.. _ex-1-2:
+
+2. 设 :math:`X` 为基本集, 试证对任意 :math:`A, B \subset X`, 有
+
+   (1). :math:`\mathscr{C}X = \emptyset`, :math:`\mathscr{C}\emptyset = X`.
+
+   (2). :math:`A \cup \mathscr{C}A = X`, :math:`A \cap \mathscr{C}A = \emptyset`.
+
+   (3). :math:`\mathscr{C}(\mathscr{C}A) = A`.
+
+   (4). 若 :math:`A \subset B`, 则 :math:`\mathscr{C}A \supset \mathscr{C}B`.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-1-3:
 
 3. 设给出集 :math:`E` 与任一集族 :math:`A_{\alpha}, \alpha \in I`, 问关系式
@@ -104,6 +120,18 @@
    若 :math:`x \not\in E`, 那么就必须有 :math:`x \in A_{\alpha}, \forall ~ \alpha \in I`, 从而
    :math:`x \in \bigcap\limits_{\alpha \in I} A_{\alpha}`, 这种情况下同样有
    :math:`x \in E \cup \bigcap\limits_{\alpha \in I} A_{\alpha}`.
+
+.. _ex-1-4:
+
+4. 设 :math:`A_0 \subset A`, :math:`B_0 \subset B`, 试证
+
+   (1). :math:`(A \cup B) \setminus (A_0 \cup B_0) = (A \setminus A_0 \setminus B_0) \cup (B \setminus A_0 \setminus B_0)`.
+
+   (2). :math:`(A \cap B) \setminus (A_0 \cap B_0) = (A \cap (B \setminus B_0)) \cup (B \cap (A \setminus A_0))`.
+
+.. proof:solution::
+
+   待写.
 
 .. _ex-1-5:
 
@@ -160,9 +188,9 @@
 
 6. 设 :math:`E_n = \left\{ m / n : m \in \mathbb{Z} \right\}, n \in \mathbb{N}`,
    证明 :math:`\varliminf\limits_{n} E_n = \mathbb{Z}`, :math:`\varlimsup\limits_{n} E_n = \mathbb{Q}`.
-   这里的 **上限集、下限集** 分别定义为
-   :math:`\varliminf\limits_{n} E_n = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`, 以及
-   :math:`\varlimsup\limits_{n} E_n = \bigcap\limits\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n`.
+   这里的 **下限集、上限集** 分别定义为
+   :math:`\varliminf\limits_{n} E_n = \bigcup\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`, 以及
+   :math:`\varlimsup\limits_{n} E_n = \bigcap\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n`.
 
 .. proof:proof::
 
@@ -171,10 +199,10 @@
    从而有 :math:`\mathbb{Z} \subset \bigcap\limits_{n=1}^{\infty} E_n`, 于是有
 
    .. math::
-      \mathbb{Z} \subset \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \varliminf\limits_{n} E_n.
+      \mathbb{Z} \subset \bigcup\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \varliminf\limits_{n} E_n.
 
    另一方面, 任取
-   :math:`x \in \varliminf\limits_{n} E_n = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`,
+   :math:`x \in \varliminf\limits_{n} E_n = \bigcup\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n`,
    那么存在 :math:`k \in \mathbb{N}`, 使得 :math:`x \in \bigcap\limits_{n=k}^{\infty} E_n`. 将 :math:`x = \dfrac{p}{q}, q > 0`
    写为既约分数的形式, 那么 :math:`\forall ~ n \geqslant k, n \in \mathbb{N}`, 都有
    :math:`x = \dfrac{p}{q} \in E_n = \left\{ m / n ~ : ~ m \in \mathbb{Z} \right\}`. 假设 :math:`q \neq 1`,
@@ -187,12 +215,12 @@
    综上所述, 有 :math:`\varliminf\limits_{n} E_n = \mathbb{Z}`.
 
    由于对任意 :math:`n \in \mathbb{N}`, 都有 :math:`E_n \subset \mathbb{Q}`, 于是
-   :math:`\bigcup\limits_{k=n}^{\infty} E_n \subset \mathbb{Q}` 对任意 :math:`k \in \mathbb{N}` 成立, 进而有
+   :math:`\bigcup\limits_{n=k}^{\infty} E_n \subset \mathbb{Q}` 对任意 :math:`k \in \mathbb{N}` 成立, 进而有
    :math:`\varlimsup\limits_{n} E_n = \bigcap\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n \subset \mathbb{Q}`.
 
    反过来, 任取 :math:`x = \dfrac{p}{q} \in \mathbb{Q}, q > 0`, 并设其为既约分数. 令 :math:`n = k \cdot q`, 那么有
    :math:`x = \dfrac{p}{q} = \dfrac{kp}{kq} = \dfrac{kp}{n} \in E_n = \left\{ m / n : m \in \mathbb{Z} \right\}`,
-   这就证明了 :math:`x \in \bigcup\limits_{k=n}^{\infty} E_n` 对任意 :math:`k \in \mathbb{N}` 成立.
+   这就证明了 :math:`x \in \bigcup\limits_{n=k}^{\infty} E_n` 对任意 :math:`k \in \mathbb{N}` 成立.
    那么有 :math:`\mathbb{Q} \subset \varlimsup\limits_{n} E_n`.
 
    综上所述, 有 :math:`\varlimsup\limits_{n} E_n = \mathbb{Q}`.

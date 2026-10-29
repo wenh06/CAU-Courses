@@ -445,6 +445,20 @@
 
    上式中等号成立当且仅当 :math:`f(x) = g(x) = x^{-1/2}`, a.e. :math:`x \in E`.
 
+.. _ex-5-14:
+
+14. 设 :math:`f \in L^p(\mathbb{R})`, 这里 :math:`p \geqslant 1`. 试作函数列 :math:`\{ f_n \}_{n \in \mathbb{N}}`,
+    满足下列条件:
+
+    .. math::
+       \lVert f_n \rVert_q = 1,
+
+    这里 :math:`1/p + 1/q = 1`.
+
+.. proof:solution::
+
+   待写.
+
 .. _ex-5-15:
 
 15. 设 :math:`p, q, r` 为满足 :math:`1/p + 1/q + 1/r = 1` 的三个正数, 证明对任何可测函数 :math:`f, g, h` 有
@@ -507,3 +521,65 @@
       \left( \int_E |f|^p ~ \mathrm{d} m \right)^{1/p} & = \lVert f \rVert_p \\
       & \leqslant \lVert f \chi_e \rVert_p + \lVert f (1 - \chi_e) \rVert_p \\
       & = \left( \int_e |f|^p ~ \mathrm{d} m \right)^{1/p} + \left( \int_{E \setminus e} |f|^p ~ \mathrm{d} m \right)^{1/p}.
+
+.. _ex-5-17:
+
+17. 设 :math:`f \in L^p(a, b)`, :math:`p > 0`, 试证:
+
+    .. math::
+       \lim_{h \to 0} \left( \int_{a + \delta}^{b - \delta} \lvert f(x + h) - f(x) \rvert^p ~ \mathrm{d} m \right)^{1/p} = 0
+       \quad \left( 0 < 2 \delta \leqslant b - a \right).
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-18:
+
+18. 设 :math:`f \in L^p(\mathbb{R})`, :math:`g \in L^q(\mathbb{R})`, :math:`1/p + 1/q = 1`,
+    :math:`p \geqslant 1`. 试证:
+
+    .. math::
+       F(t) = \int_{\mathbb{R}} f(x + t) g(x) ~ \mathrm{d} m
+
+    为 :math:`t` 的连续函数.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-19:
+
+19. 试证: 设 :math:`A, B \subset \mathbb{R}`, 且 :math:`mA, mB > 0`, 则 :math:`A + B` 含有一个开区间.
+
+    提示: 不妨考虑 :math:`mA, mB < \infty` 情形. 利用卷积概念. 令 :math:`f(x) = (\chi_A * \chi_B)(x)`, 则
+    :math:`f` 是连续的. 令 :math:`U = \{ x : \chi_A * \chi_B(x) > 0 \}` 易知 :math:`U` 为非空开集. 任取
+    :math:`x_0 \in U`, 由
+
+    .. math::
+       \int_{\mathbb{R}} (\chi_A * \chi_B)(x) ~ \mathrm{d} m = mA \cdot mB > 0
+
+    知 :math:`\chi_A(x_0 - y) \chi_B(y) \equiv 0` 不成立, 从而有 :math:`y_0` 使
+    :math:`\chi_A(x_0 - y_0) \chi_B(y_0) \neq 0`. 这样 :math:`x_0 - y_0 \in A`, :math:`y_0 \in B` 且
+    :math:`x_0 = x_0 - y_0 + y_0 \in A + B`, 于是 :math:`U \subset A + B`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-20:
+
+20. 设 :math:`f` 是可测集 :math:`E` 上的可测函数, 它使积分 :math:`\displaystyle \int_E f(x) g(x) ~ \mathrm{d} m`
+    对任何 :math:`g \in L^2(E)` 都存在为有限, 证明 :math:`f \in L^2(E)`.
+
+.. proof:solution::
+
+   待写.
+
+.. _ex-5-21:
+
+21. 研究 Hölder 不等式与 Minkowski 不等式中等号成立的条件.
+
+.. proof:solution::
+
+   待写.
