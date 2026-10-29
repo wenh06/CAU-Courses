@@ -34,6 +34,15 @@
    集合 :math:`A \subset E` 是不可测集, 函数 :math:`f(x) = \chi_A(x) + \alpha`, 其中 :math:`\alpha` 为某个无理数,
    那么任取 :math:`r \in \mathbb{Q}`, 有 :math:`E(f = r) = \emptyset`, 是可测集, 但 :math:`f` 不是可测函数.
 
+.. _ex-3-3:
+
+3. 设 :math:`f` 是可测集 :math:`E` 上定义的函数, 证明 :math:`f` 在 :math:`E` 上可测的充分必要条件是
+   :math:`f \chi_E` 在 :math:`\mathbb{R}` 上可测.
+
+.. proof:proof::
+
+   待写
+
 .. _ex-3-4:
 
 4. 设 :math:`f(x)` 是 :math:`E` 上的可测函数, :math:`G, F` 分别为 :math:`\mathbb{R}` 中开集与闭集.
@@ -57,6 +66,28 @@
                  = E \setminus E(f \in \mathbb{R} \setminus F)
 
    是可测集.
+
+.. _ex-3-5:
+
+5. 设 :math:`f(x)` 是 :math:`E` 上可测函数, 证明 :math:`f(x^n)` 与 :math:`(f(x))^n ~ (n \in \mathbb{N})`
+   也是 :math:`E` 上可测函数, 这里约定 :math:`x^n \in E`.
+
+.. proof:proof::
+
+   待写
+
+.. _ex-3-6:
+
+6. 设 :math:`E` 是 :math:`[0, 1]` 中的一个不可测集, 令
+
+   .. math::
+      f(x) = \begin{cases} x, & x \in E, \\ -x, & x \notin E. \end{cases}
+
+   问 :math:`f(x)` 在 :math:`[0, 1]` 上是否可测? :math:`\lvert f(x) \rvert` 是否可测?
+
+.. proof:solution::
+
+   待写
 
 .. _ex-3-7:
 
@@ -267,3 +298,12 @@
 
    这就证明了 :math:`\displaystyle \lim_{n \to \infty} f_n(x, y) = f(x, y)` 对所有的 :math:`(x, y) \in \mathbb{R}^2` 成立.
    根据可测函数列的性质, :math:`\displaystyle f = \lim_n f_n` 也是可测函数.
+
+.. _ex-3-12:
+
+12. 设 :math:`f, g` 均是 :math:`\mathbb{R}` 上一元可测函数, 试证
+    :math:`f(x) g(y - x)` 与 :math:`f(y + x) g(y - x)` 均为 :math:`\mathbb{R}^2` 上的二元可测函数.
+
+.. proof:proof::
+
+   待写

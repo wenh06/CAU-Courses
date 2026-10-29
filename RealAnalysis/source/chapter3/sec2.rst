@@ -605,6 +605,16 @@
 
       在这里不能使用.
 
+.. _ex-3-27:
+
+27. 试作 :math:`E = [0, \infty)` 上的可测函数列 :math:`\{f_n(x)\}_{n \in \mathbb{N}}`, 使它处处收敛于
+    某个几乎处处非零的函数 :math:`f(x)`, 但序列 :math:`\{1/f_n(x)\}_{n \in \mathbb{N}}` 不测度收敛于
+    :math:`1/f(x)`. 又当 :math:`E = [0, 1]` 时如何?
+
+.. proof:solution::
+
+   待写
+
 .. _ex-3-28:
 
 28. 设 :math:`f(x), f_n(x) ~ (n \in \mathbb{N})` 均是可测集 :math:`E` 上的几乎处处有限的可测函数,
@@ -753,6 +763,16 @@
          1 + \dfrac{2}{\varepsilon} \left( x - \dfrac{1 + \varepsilon}{2} \right),
          & 1/2 - \varepsilon/2 \leqslant x < 1/2 + \varepsilon/2.
       \end{cases}
+
+.. _ex-3-31:
+
+31. 设 :math:`f, f_n ~ (n \in \mathbb{N})` 均是 :math:`E` 上几乎处处有限的可测函数, 并且
+    :math:`m E(f_n \neq f) < 1/2^n ~ (n \in \mathbb{N})`, 试证
+    :math:`f_n \xrightarrow{a.e.} f ~ (n \to \infty)`.
+
+.. proof:proof::
+
+   待写
 
 .. _ex-3-32:
 

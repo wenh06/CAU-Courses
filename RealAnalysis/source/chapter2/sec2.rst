@@ -93,3 +93,24 @@
       & = m^* E_1 + m^* E_2 + m^* \left( \bigcup\limits_{k=3}^n E_k \right) \\
       & \quad \vdots \\
       & = \sum_{k=1}^n m^* E_k
+
+.. _ex-2-7:
+
+7. 如果把外测度的定义改为“有界集 :math:`E` 的外测度定义为包含 :math:`E` 的可测集的测度的下确界”,
+   问此定义与原来的外测度定义有何关系?
+
+.. proof:solution::
+
+   待写
+
+.. _ex-2-8:
+
+8. 设 :math:`\{ E_i \}` 为 :math:`\mathbb{R}` 中互不相交的集列, :math:`E = \bigcup\limits_{i=1}^{\infty} E_i`,
+   证明
+
+   .. math::
+      m_* E \geqslant \sum_{k=1}^{\infty} m_* E_k.
+
+.. proof:proof::
+
+   待写

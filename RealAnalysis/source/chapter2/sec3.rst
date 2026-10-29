@@ -294,7 +294,7 @@
 
 .. _ex-2-19:
 
-19. 设 :math:`m^* E = q > 0`, 证明对任何数 :math:`c \in (0, q)`, 有子集 :math:`E_0 \subset E` 使得 :math:`m E_0 = c`.
+19. 设 :math:`m^* E = q > 0`, 证明对任何数 :math:`c \in (0, q)`, 有子集 :math:`E_0 \subset E` 使得 :math:`m^* E_0 = c`.
 
 .. proof:proof::
 

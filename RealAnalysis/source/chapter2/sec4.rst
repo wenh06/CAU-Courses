@@ -66,6 +66,22 @@
    :math:`m \left( \bigcap\limits_{i=1}^\infty E_{n_{k_i}} \right) > 0`.
    所以, 子列 :math:`\{E_{n_{k_i}}\}_{i \in \mathbb{N}}` 即是题目所求.
 
+.. _ex-2-26:
+
+26. 设 :math:`\mathscr{S}` 表示 :math:`\mathbb{R}^2` 中由一切有限个圆的并所成的集类, :math:`Q` 为
+    单位正方形. 若令
+
+    .. math::
+      \mu Q = \inf_{S \supset Q} \{ \lambda S : S \in \mathscr{S} \}, \quad
+      \mu' Q = \sup_{S \subset Q} \{ \lambda S : S \in \mathscr{S} \},
+
+    这里 :math:`\lambda S` 表示 :math:`S` 中那些有限个圆的面积的和. 问 :math:`\mu Q = 1`,
+    :math:`\mu' Q = 1` 二式是否成立?
+
+.. proof:solution::
+
+   待写
+
 .. _ex-2-27:
 
 27. 设 :math:`E` 是 :math:`\mathbb{R}` 中的可测集, 证明 :math:`D(E) = \left\{ (x,y) \in \mathbb{R}^2 : x-y \in E \right\}`
@@ -267,6 +283,16 @@
       m^* \left( \bigcup\limits_{n=1}^{N-1} E_n \right) = m^* A_{N-1} < \sum\limits_{n=1}^{N-1} m^* E_n,
 
    这与 :math:`N` 的最小性矛盾. 所以 :math:`E_N` 是不可测的.
+
+.. _ex-2-31:
+
+31. 设 :math:`m` 表示 :math:`\mathbb{R}` 中外测度限制在博雷尔集上的测度, :math:`a, b` 为实数, 集合
+    :math:`E` 的 :math:`T` 变换定义为 :math:`T(E) = \{ ax + b : x \in E \}`, 试证对每个博雷尔集
+    :math:`E` 有 :math:`m T(E) = | a | m E`.
+
+.. proof:proof::
+
+   待写
 
 .. _ex-2-32:
 
@@ -628,3 +654,18 @@
 
       .. math::
          f^{-1} (f_* (\sigma (f^{-1} (\mathscr{S})))) = \sigma (f^{-1} (\mathscr{S})).
+
+.. _ex-2-38:
+
+38. 设 :math:`\mathscr{B}` 为基本集 :math:`X` 的 :math:`\sigma` 代数, :math:`B \subset X` 但
+    :math:`B \notin \mathscr{B}`. 试证由 :math:`\mathscr{B}` 与 :math:`B` 生成的 :math:`\sigma` 代数
+    :math:`\sigma (\mathscr{B} \cup B)` 由一切形如
+
+    .. math::
+      (A_1 \cap B) \cup (A_2 \cap (X \setminus B)), \quad A_1, A_2 \in \mathscr{B}
+
+    的集所成.
+
+.. proof:proof::
+
+   待写
