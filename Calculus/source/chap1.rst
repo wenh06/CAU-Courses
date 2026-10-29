@@ -13,24 +13,106 @@
 §1.1 函数的概念与性质
 --------------------------------
 
-这节题目大部分比较简单, 容易错的主要是以下几题:
+1. 下列给定的各对函数是否相同.
+
+   (1). :math:`y = \ln x^2` 与 :math:`y = 2\ln x`;
+
+   (2). :math:`y = \sqrt{x(1-x)}` 与 :math:`y = \sqrt{x}\sqrt{1-x}`.
+
+.. proof:solution::
+
+   待写
+
+2. 确定下列函数的定义域.
+
+   (1). :math:`y = \sqrt{4-x^2}`;
+
+   (2). :math:`y = \arcsin\dfrac{x-1}{3}`.
+
+.. proof:solution::
+
+   待写
 
 .. _ex-chap1-sec1-ex3:
 
-3. 判断函数奇偶性:
+3. 判断下列函数的奇偶性.
 
-(3). :math:`y = \ln(\sqrt{1+x^2}-x)`
+   (1). :math:`f(x) = x\sin x`;
+
+   (2). :math:`f(x) = \dfrac{e^x - e^{-x}}{e^x + e^{-x}}`;
+
+   (3). :math:`f(x) = \ln(\sqrt{1+x^2}-x)`;
+
+   (4). :math:`f(x) = 3^x x`.
 
 .. proof:solution::
 
    计算 :math:`f(-x) = \ln(\sqrt{1+(-x)^2}-(-x)) = \ln(\sqrt{1+x^2}+x) = \ln\frac{1}{\sqrt{1+x^2}-x} = -\ln(\sqrt{1+x^2}-x) = -f(x)`, 故为奇函数.
+
+4. 判断下列函数的单调性.
+
+   (1). :math:`y = 3x + 2`;
+
+   (2). :math:`y = 2^x`;
+
+   (3). :math:`y = \log_{\frac{1}{2}} x`;
+
+   (4). :math:`y = x + \ln x`.
+
+.. proof:solution::
+
+   待写
+
+5. 已知 :math:`f(x)` 是周期函数, 判断下列函数是否为周期函数.
+
+   (1). :math:`|f(x)|`;
+
+   (2). :math:`f^2(x)`;
+
+   (3). :math:`f(3x+1)`.
+
+.. proof:solution::
+
+   待写
+
+6. 证明下列函数是有界函数.
+
+   (1). :math:`y = \dfrac{x^2}{x^2+1}`;
+
+   (2). :math:`y = \dfrac{x}{x^2+1}`.
+
+.. proof:solution::
+
+   待写
 
 .. _ex-chap1-sec2:
 
 §1.2 反函数与复合函数
 --------------------------------
 
-这节题目大部分比较简单, 容易错的主要是以下几题:
+1. 求下列函数的反函数.
+
+   (1). :math:`y = \sqrt[3]{x+2}`;
+
+   (2). :math:`y = \dfrac{2-x}{2+x}`;
+
+   (3). :math:`y = 3\sin 2x, ~ x \in \left[-\dfrac{\pi}{4}, \dfrac{\pi}{4}\right]`;
+
+   (4). :math:`y = 2 + \ln(x+1)`.
+
+.. proof:solution::
+
+   待写
+
+2. 下列函数是由哪些较简单的函数复合而成的.
+
+   (1). :math:`y = \cos^4(1+3x)`;
+
+   (2). :math:`y = \ln\left|\sin\sqrt{1-2x}\right|`.
+
+.. proof:solution::
+
+   待写
 
 .. _ex-chap1-sec2-ex3:
 
@@ -58,7 +140,15 @@
 §1.3 基本初等函数、初等函数
 --------------------------------
 
-这节题目大部分比较简单, 容易错的主要是以下几题:
+1. 设函数 :math:`f(x) = \begin{cases} -x, & x \leqslant 0 \\ 0, & x > 0, \end{cases}`
+
+   (1). 证明: :math:`f(x) = \dfrac{|x|-x}{2}`;
+
+   (2). 请问 :math:`f(x)` 是否为初等函数?
+
+.. proof:solution::
+
+   待写
 
 .. _ex-chap1-sec3-ex2:
 
@@ -74,10 +164,89 @@
 
    所以 :math:`f(x) = x^2 + 2`.
 
+3. 证明: 双曲正弦函数 :math:`\sinh x = \dfrac{e^x - e^{-x}}{2}` 的反函数为 :math:`y = \ln(x + \sqrt{x^2+1})`.
+
+.. proof:solution::
+
+   待写
+
 .. _ex-chap1-sec4:
 
 §1.4 函数的极坐标方程与参数方程
 --------------------------------
+
+1. 已知下列点的极坐标, 求它们的直角坐标.
+
+   :math:`A\left(2, \dfrac{\pi}{6}\right)`;
+   :math:`B\left(3, \dfrac{\pi}{2}\right)`;
+   :math:`C\left(1, -\dfrac{\pi}{4}\right)`;
+   :math:`D\left(4, \dfrac{5\pi}{4}\right)`.
+
+.. proof:solution::
+
+   待写
+
+2. 已知下列点的直角坐标, 求它们的极坐标.
+
+   :math:`A(1, \sqrt{3})`;
+   :math:`B(-\sqrt{3}, 1)`;
+   :math:`C(-1, \sqrt{3})`;
+   :math:`D(\sqrt{3}, -1)`.
+
+.. proof:solution::
+
+   待写
+
+3. 将下列直角坐标方程化为极坐标方程 (需要标明 :math:`\theta` 的取值范围).
+
+   (1). :math:`x = 1`;
+
+   (2). :math:`x + y = 1`;
+
+   (3). :math:`(x-1)^2 + y^2 = 1`.
+
+.. proof:solution::
+
+   待写
+
+4. 将下列极坐标方程化为直角坐标方程, 并说明方程所表示的曲线类型.
+
+   (1). :math:`r = 1, ~ \theta \in [0, \pi]`;
+
+   (2). :math:`\theta = \dfrac{3\pi}{4}`.
+
+.. proof:solution::
+
+   待写
+
+5. 将下列参数方程化为直角坐标方程, 并说明方程所表示的曲线类型.
+
+   (1). :math:`\begin{cases} x = t^2 + 1, \\ y = t^2 - 2; \end{cases}`
+
+   (2). :math:`\begin{cases} x = t + t^{-1}, \\ y = t - t^{-1}. \end{cases}`
+
+.. proof:solution::
+
+   待写
+
+.. _ex-chap1-zong:
+
+总习题 1
+--------------------------------
+
+1. 下列函数不相等的是 (   ).
+
+   A. :math:`y = \cos^2(3x+2)`, :math:`u = 1 - \sin^2(3t+2)`;
+
+   B. :math:`f(x) = \dfrac{x^2-4}{x-2}`, :math:`g(x) = x+2`;
+
+   C. :math:`f(x) = \sqrt{x^2}`, :math:`g(x) = |x|`;
+
+   D. :math:`f(x) = \sqrt[3]{x^3}`, :math:`g(x) = x`.
+
+.. proof:solution::
+
+   待写
 
 .. _extra-chap1:
 
