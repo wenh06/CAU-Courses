@@ -61,6 +61,7 @@
    :maxdepth: 2
    :caption: 历年考题:
 
+   exams/2026-final
    exams/2026-mid-2
    exams/2026-mid-1
    exams/2025-final

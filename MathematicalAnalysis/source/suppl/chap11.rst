@@ -139,3 +139,32 @@
    f(F) \subset U_{i_1} \cup U_{i_2} \cup \cdots \cup U_{i_n}.
 
 也就是说, 对 :math:`f(F)` 的任意开覆盖, 都可以从中选取出它的有限开覆盖, 故 :math:`f(F)` 是紧集, 即有界闭集.
+
+4. 闭区间上连续函数空间 :math:`C[a,b]` 以及黎曼可积函数空间 :math:`\mathfrak{R}[a,b]` 在一致度量下的完备性:
+设一致度量 :math:`d(f,g) = \sup_{x \in [a,b]} |f(x)-g(x)|`.
+下面分别证明这两个空间在度量 :math:`d` 下的完备性.
+
+首先证明 :math:`C[a,b]` 是完备的.
+证明如下: 设 :math:`\{f_n\}` 是 :math:`(C[a,b], d)` 中的柯西列.
+由柯西列定义, 对任意 :math:`\varepsilon > 0`, 存在 :math:`N`, 使得当 :math:`n, m \ge N` 时, 有 :math:`d(f_n, f_m) < \varepsilon`.
+这蕴含了对任意固定的 :math:`x \in [a,b]`, 数列 :math:`\{f_n(x)\}` 是实数域中的柯西列, 从而存在极限, 记为 :math:`f(x)`.
+于是我们得到了逐点极限函数 :math:`f`. 在关系式
+
+.. math::
+   |f_n(x) - f_m(x)| \leqslant d(f_n, f_m) < \varepsilon
+
+中令 :math:`m \to \infty`, 得
+
+.. math::
+   |f_n(x) - f(x)| \leqslant \varepsilon, ~ \forall x \in [a,b].
+
+这说明函数列 :math:`\{f_n\}` 一致收敛于 :math:`f`.
+因为 :math:`f_n` 连续, 由一致收敛函数列的分析性质知极限函数 :math:`f` 连续, 即 :math:`f \in C[a,b]`.
+完备性得证.
+
+其次证明 :math:`\mathfrak{R}[a,b]` 是完备的.
+证明如下: 设 :math:`\{g_n\}` 是 :math:`(\mathfrak{R}[a,b], d)` 中的柯西列.
+同理, 我们可以先确定逐点极限函数 :math:`g(x) = \lim_{n \to \infty} g_n(x)`.
+通过与上述完全相同的推导过程, 可知函数列 :math:`\{g_n\}` 一致收敛于 :math:`g`.
+因为 :math:`g_n` 黎曼可积, 由一致收敛函数列的分析性质知极限函数 :math:`g` 也是黎曼可积的, 即 :math:`g \in \mathfrak{R}[a,b]`.
+完备性得证.

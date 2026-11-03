@@ -170,6 +170,10 @@ dmypy.json
 # compiled files
 *.mexa64
 
+.agents
+.claude
+.codex
+
 .data_cache/
 .logs/
 .tmp/
