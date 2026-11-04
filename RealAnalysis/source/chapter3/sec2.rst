@@ -158,7 +158,7 @@
    .. math::
       \widetilde{E} (f > g) = \bigcup_{k=1}^\infty \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right).
 
-   由于 :math:`\left\{ \widetilde{E} \left( f - g > \dfrac{1}{k} \right) \right\}_{k \in \mathbb{N}}` 构成了渐张可测集列,
+   由于 :math:`\left\{ \widetilde{E} \left( f - g \geqslant \dfrac{1}{k} \right) \right\}_{k \in \mathbb{N}}` 构成了渐张可测集列,
    因此
 
    .. math::
@@ -170,19 +170,19 @@
    .. math::
       \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right)
       \subset \widetilde{E} \left( f - f_n \geqslant \dfrac{1}{k} \right)
-      \subset \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right),
+      \subset \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k+1} \right),
 
    从而有
 
    .. math::
       m \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right)
-      \leqslant \inf_{n \in \mathbb{N}} m \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k} \right).
+      \leqslant \inf_{n \in \mathbb{N}} m \widetilde{E} \left( \lvert f - f_n \rvert > \dfrac{1}{k+1} \right).
 
    另一方面, 由于函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`\widetilde{E}` 上依测度收敛于 :math:`f`,
    那么对于任意给定的 :math:`k \in \mathbb{N}` 有
 
    .. math::
-      \lim_{n \to \infty} m \widetilde{E} \left( \lvert f_n - f \rvert > \dfrac{1}{k} \right) = 0,
+      \lim_{n \to \infty} m \widetilde{E} \left( \lvert f_n - f \rvert > \dfrac{1}{k+1} \right) = 0,
 
    因此, :math:`m \widetilde{E} \left( f \geqslant g + \dfrac{1}{k} \right) = 0, \forall ~ k \in \mathbb{N}`, 从而有
 
@@ -198,11 +198,20 @@
 
    .. note::
       这题可以用 Riesz 定理简化证明: 由于 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`,
-      那么存在子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}` 几乎处处收敛于 :math:`f`, 记此集合为 :math:`E_1`,
-      有 :math:`m (E \setminus E_1) = 0`. 又由于几乎处处有 :math:`f_n \leqslant g`, :math:`n \in \mathbb{N}`,
-      记此集合为 :math:`E_2`, 有 :math:`m (E \setminus E_2) = 0`. 于是, 取 :math:`E^* = E_1 \cap E_2`, 有
-      :math:`m (E \setminus E^*) = 0`, 那么在任意 :math:`x \in E^*` 处, 有 :math:`f_{n_k} (x) \to f(x)`,
-      且 :math:`f_{n_k}(x) \leqslant g(x)`, 从而 :math:`f(x) \leqslant g(x)`. 所以, :math:`f \leqslant g` 几乎处处成立.
+      由 Riesz 定理, 存在子列 :math:`\{f_{n_k}\}_{k \in \mathbb{N}}` 与集合 :math:`E_1 \subset E`,
+      :math:`m (E \setminus E_1) = 0`, 使得 :math:`f_{n_k} (x) \to f (x)` 在 :math:`E_1` 上处处成立.
+      又由假设, 对每个 :math:`n` 都有 :math:`m E (f_n > g) = 0`. 令
+      :math:`E_2 = E \setminus \bigcup\limits_{n=1}^{\infty} E (f_n > g)`
+      (即 :math:`E_2 = \{ x \in E : \ f_n (x) \leqslant g (x), \forall ~ n \in \mathbb{N} \}`),
+      则 :math:`E_2` 是"对每个 :math:`n`, :math:`f_n \leqslant g` 都成立"的点所成之集, 且
+
+      .. math::
+         m (E \setminus E_2) = m \left( \bigcup\limits_{n=1}^{\infty} E (f_n > g) \right)
+         \leqslant \sum\limits_{n=1}^{\infty} m E (f_n > g) = 0.
+
+      于是, 取 :math:`E^* = E_1 \cap E_2`, 有 :math:`m (E \setminus E^*) = 0`, 那么在任意
+      :math:`x \in E^*` 处, 有 :math:`f_{n_k} (x) \to f(x)`, 且 :math:`f_{n_k}(x) \leqslant g(x)`,
+      从而 :math:`f(x) \leqslant g(x)`. 所以, :math:`f \leqslant g` 几乎处处成立.
 
 .. _ex-3-18:
 

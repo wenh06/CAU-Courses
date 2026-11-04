@@ -8,7 +8,8 @@
 
 .. proof:proof::
 
-   不妨设 :math:`F_1, F_2` 非空，否则取相应的 :math:`G_i = F_i = \emptyset` 命题显然.
+   不妨设 :math:`F_1, F_2` 非空: 若某个 :math:`F_i = \emptyset`, 则取
+   :math:`G_i = \emptyset`, :math:`G_j = \mathbb{R}^n` (:math:`j \neq i`) 即可.
 
    构造如下集合，下面说明即为题目所求.
 
@@ -56,7 +57,7 @@
 
 .. proof:proof::
 
-   首先证明, 对任意的 :math:`\mathbb{R}^n` 的子集 :math:`F`, 函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F)`
+   首先证明, 对任意的非空 :math:`\mathbb{R}^n` 子集 :math:`F`, 函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, F)`
    是一致连续的:
 
       任取 :math:`a, b \in \mathbb{R}^n`, 由于 :math:`\rho (a, F) := \inf\limits_{x \in F} \rho(a, x)`, 那么
@@ -75,12 +76,19 @@
    其次, 我们证明, 对任意点 :math:`a \in \mathbb{R}^n` 以及任意的非空闭集 :math:`F \subset \mathbb{R}^n`, 总存在
    :math:`x_0 \in F`, 使得 :math:`\rho(a, F) = \rho(a, x_0)`:
 
-      考虑闭球 :math:`\overline{B} := \overline{B}(a, \delta)` 使得 :math:`\overline{B} \cap F \neq \emptyset`,
-      那么 :math:`\overline{B} \cap F` 是 :math:`\mathbb{R}^n` 中有界闭集, 且有
-      :math:`\rho(a, \overline{B} \cap F) = \rho(a, F)`.
-      由于函数 :math:`\mathbb{R}^n \to \mathbb{R}: \ x \mapsto \rho(x, a)` 连续函数 (实际上进一步是初等函数),
-      所以它在有界闭集 :math:`\overline{B} \cap F` 上 取到最小值, 即存在 :math:`x_0 \in \overline{B} \cap F`,
-      使得 :math:`\rho(a, x_0) = \rho(a, \overline{B} \cap F) = \rho(a, F)`.
+      取定 :math:`y \in F`, 令 :math:`\delta = \rho(a, y) + 1`, 考虑闭球
+      :math:`\overline{B} := \overline{B}(a, \delta)`, 则 :math:`\overline{B} \cap F \neq \emptyset`,
+      且 :math:`\overline{B} \cap F` 是 :math:`\mathbb{R}^n` 中非空有界闭集. 先证
+      :math:`\rho(a, \overline{B} \cap F) = \rho(a, F)`: 一方面 :math:`\overline{B} \cap F \subset F`
+      给出 :math:`\rho(a, \overline{B} \cap F) \geqslant \rho(a, F)`; 另一方面, 由下确界定义, 对任意
+      :math:`\varepsilon \in (0, \delta - \rho(a, F)]` 存在 :math:`x_{\varepsilon} \in F` 使得
+      :math:`\rho(a, x_{\varepsilon}) < \rho(a, F) + \varepsilon \leqslant \delta`, 即
+      :math:`x_{\varepsilon} \in \overline{B} \cap F`, 故
+      :math:`\rho(a, \overline{B} \cap F) \leqslant \rho(a, x_{\varepsilon}) < \rho(a, F) + \varepsilon`,
+      由 :math:`\varepsilon` 的任意性即得等式. 由于函数 :math:`x \mapsto \rho(x, a)` 连续
+      (实际上进一步是初等函数), 所以它在非空有界闭集 :math:`\overline{B} \cap F` 上取到最小值,
+      即存在 :math:`x_0 \in \overline{B} \cap F`, 使得
+      :math:`\rho(a, x_0) = \rho(a, \overline{B} \cap F) = \rho(a, F)`.
 
    有了以上两个结论, 我们就可以证明题设结论. 不妨设 :math:`F_1` 有界, 考虑函数
 
@@ -104,8 +112,12 @@
    .. math::
       a_2 = \inf \{ x : \ (x, x_0) \subset G_2 \}, \quad b_2 = \sup \{ x : \ (x_0, x) \subset G_2 \}.
 
-   又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`, 所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`,
-   故有 :math:`a_1 \geqslant a_2`. 同理可证 :math:`b_1 \leqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
+   这里以及下文中的构成区间端点都可能取值 :math:`\pm \infty` (例如 :math:`G_2 = \mathbb{R}` 时
+   :math:`a_2 = -\infty`, :math:`G_1 = (0, +\infty)` 时 :math:`b_1 = +\infty`); 此时上述推导按扩充实数系
+   :math:`\overline{\mathbb{R}}` 理解 (例如 :math:`a_1 = -\infty` 时有 :math:`(-\infty, x_0) \subset G_2`
+   且 :math:`a_2 = -\infty`), 结论不变. 又知道 :math:`(a_1, x_0) \subset I_1 \subset G_1 \subset G_2`,
+   所以 :math:`a_1 \in \{ x : \ (x, x_0) \subset G_2 \}`, 故有 :math:`a_1 \geqslant a_2`.
+   同理可证 :math:`b_1 \leqslant b_2`. 于是有 :math:`I_1 \subset I_2`.
 
 .. _ex-1-25:
 
@@ -151,9 +163,10 @@
       I_n & = I_{n1} \cup I_{n2} \cup \cdots \cup I_{n2^{n-1}}, \\
       & \vdots \\
       G_0 & = \bigcup_{n=1}^{\infty} I_n, \\
-      P_0 & = \mathscr{C} G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}.
+      P_0 & = [0, 1] \setminus G_0 = \bigcap_{n=1}^{\infty} F_n \longleftarrow \text{(康托三分集)}.
 
-   康托三分集的补集即为 :math:`G_0`, 其构成区间为 :math:`I_n`, 集合 :math:`E` 即由这些构成区间的中点所成的集.
+   康托三分集即为 :math:`[0, 1] \setminus G_0`, :math:`G_0` 的构成区间为诸 :math:`I_{nk}`
+   (:math:`I_n` 是它们的并), 集合 :math:`E` 即由这些构成区间的中点所成的集.
 
    任取康托三分集中的点 :math:`x \in P_0 = \bigcap\limits_{n=1}^{\infty} F_n`, 那么
    :math:`x \in F_n, \forall ~ n \in \mathbb{N}` 成立. 对任意 :math:`\varepsilon > 0`, 取 :math:`n \in \mathbb{N}`,
@@ -165,15 +178,17 @@
    :math:`0 < \lvert x - y_0 \rvert < \varepsilon`, 即 :math:`y_0 \in \mathring{U}(x, \varepsilon) \cap E`.
    这就证明了 :math:`x \in P_0` 是 :math:`E` 的聚点. 所以有 :math:`E' \supset P_0`.
 
-   反过来, 任取 :math:`x \not\in P_0`, 即有 :math:`x \in G_0 = \bigcup\limits_{n=1}^{\infty} I_n`,
-   那么存在 :math:`n \in \mathbb{N}`, 使得 :math:`x \in I_n`, 从而存在 :math:`k \in \{ 1, 2, \dots, 2^{n-1} \}`,
+   反过来, 若 :math:`x \not\in [0, 1]`, 则 :math:`x` 与 :math:`E \subset [0, 1]` 有正距离, 显然不是
+   :math:`E` 的聚点. 故设 :math:`x \in [0, 1] \setminus P_0`, 即
+   :math:`x \in G_0 = \bigcup\limits_{n=1}^{\infty} I_n`, 那么存在 :math:`n \in \mathbb{N}`, 使得
+   :math:`x \in I_n`, 从而存在 :math:`k \in \{ 1, 2, \dots, 2^{n-1} \}`,
    使得 :math:`x \in I_{nk}`. 如果 :math:`x` 是 :math:`I_{nk}` 的中点, 那么取 :math:`\varepsilon = \dfrac{1}{3^{n+1}}`,
    即有 :math:`\mathring{U}(x, \varepsilon) \subset I_{nk} \setminus \{ x \}`, 从而
    :math:`\mathring{U}(x, \varepsilon) \cap E = \emptyset`, 这说明了 :math:`x` 不是 :math:`E` 的聚点.
-   如果 :math:`x` 不是 :math:`I_{nk}` 的中点, 令 :math:`y_0` 为 :math:`I_{nk}` 的中点,
-   那么取 :math:`\varepsilon = \min \left\{ \dfrac{1}{3^{n+1}}, \dfrac{1}{2} \lvert x - y_0 \rvert \right\}`,
-   这样, 去心邻域 :math:`\mathring{U}(x, \varepsilon)` 既不包含 :math:`y_0`, 也不会与 :math:`F_n` 中含有的与
-   :math:`I_{nk}` 相邻的任何一个闭区间的中间 :math:`\dfrac{1}{3}` 开区间相交,
+   如果 :math:`x` 不是 :math:`I_{nk} = (a, b)` 的中点, 令 :math:`y_0` 为 :math:`I_{nk}` 的中点,
+   那么取 :math:`\varepsilon = \min \left\{ \dfrac{1}{2} \lvert x - y_0 \rvert,\ x - a,\ b - x \right\} > 0`,
+   这样, 去心邻域 :math:`\mathring{U}(x, \varepsilon) \subset I_{nk}` 且不包含 :math:`y_0`.
+   而由诸构成区间两两不交, :math:`E \cap I_{nk} = \{ y_0 \}` (每个构成区间的中点都在自己内部),
    这样就有 :math:`\mathring{U}(x, \varepsilon) \cap E = \emptyset`, 也说明了 :math:`x` 不是 :math:`E` 的聚点. 于是我们就证明了
    :math:`\mathscr{C} P_0 \cap E' = \emptyset`, 从而有 :math:`E' \subset P_0`.
 

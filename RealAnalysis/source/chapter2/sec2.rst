@@ -85,7 +85,7 @@
    .. math::
       E \cap A_k = E_k, \quad E \cap \mathscr{C} A_k = \bigcup\limits_{j \neq k} E_j, \quad k = 1, 2, \cdots, n
 
-   由于 :math:`A_1, A_2, \cdots, A_n` 是可测集, 根据可测集的 Carahtéodory 条件, 有
+   由于 :math:`A_1, A_2, \cdots, A_n` 是可测集, 根据可测集的 Carathéodory 条件, 有
 
    .. math::
       m^* E & = m^* (E \cap A_1) + m^* (E \cap \mathscr{C} A_1) \\

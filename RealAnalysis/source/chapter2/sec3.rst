@@ -264,8 +264,8 @@
    值为 :math:`0`, 但是
 
    .. math::
-      \varliminf\limits_{n} E_n & = \bigcup\limits\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \mathbb{Z} \cap (a, b), \\
-      \varlimsup\limits_{n} E_n & = \bigcap\limits\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n = \mathbb{Q} \cap (a, b),
+      \varliminf\limits_{n} E_n & = \bigcup\limits_{k=1}^{\infty} \bigcap\limits_{n=k}^{\infty} E_n = \mathbb{Z} \cap (a, b), \\
+      \varlimsup\limits_{n} E_n & = \bigcap\limits_{k=1}^{\infty} \bigcup\limits_{n=k}^{\infty} E_n = \mathbb{Q} \cap (a, b),
 
    两者不相等, 所以 :math:`\lim\limits_{n \to \infty} E_n` 不存在.
 
@@ -313,17 +313,15 @@
    从而知 :math:`\varphi` 是一个连续单调增函数.
 
    我们断言可以取到 :math:`t_1 \in \mathbb{R}_{> 0}` 使得 :math:`\varphi (t_1) > c`.
-   这是因为如果这样的 :math:`t_1` 不存在, 那么必然有 :math:`m^* E \leqslant c`, 这与题设矛盾. 于是由连续函数的介值定理有
+   这是因为如果这样的 :math:`t_1` 不存在, 那么 :math:`\varphi (t) \leqslant c` 对一切 :math:`t \geqslant 0` 成立,
+   而集列 :math:`\{ E \cap [-n, n] \}` 渐张且其并为 :math:`E`, 由本章 :ref:`第 14 题 <ex-2-14>`,
+   :math:`m^* E = \lim\limits_{n \to \infty} \varphi (n) \leqslant c`, 这与题设矛盾. 于是由连续函数的介值定理有
 
    .. math::
       \varphi([0, t_1]) \supset [\varphi(0), \varphi(t_1)] = [0, \varphi(t_1)].
 
-   特别地, 存在 :math:`t_0 \in [0, t_1]` 使得 :math:`\varphi(t_0) = c`. 令 :math:`\widetilde{E_0} = E \cap [-t_0, t_0]`,
-   那么有 :math:`m^* \widetilde{E_0} = \varphi(t_0) = c`.
-
-   接下来是 :math:`E_0` 的构造. 由于 :math:`\widetilde{E_0} = E \cap [-t_0, t_0]` 不一定可测,
-   所以不能直接取 :math:`E_0 = \widetilde{E_0}`. 另一方面, 也不能取 :math:`E_0` 为 :math:`\widetilde{E_0}` 的等测包,
-   因为这样不能保证 :math:`E_0` 是 :math:`E` 的子集.
+   特别地, 存在 :math:`t_0 \in [0, t_1]` 使得 :math:`\varphi(t_0) = c`. 令 :math:`E_0 = E \cap [-t_0, t_0]`,
+   那么 :math:`E_0 \subset E` 且 :math:`m^* E_0 = \varphi(t_0) = c`, 即为所求.
 
 .. _ex-2-20:
 
