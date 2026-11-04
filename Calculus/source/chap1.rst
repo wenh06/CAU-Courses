@@ -21,7 +21,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). 两者定义域不同: :math:`y = \ln x^2` 只要求 :math:`x \neq 0`, 而 :math:`y = 2\ln x` 要求 :math:`x > 0`, 因此不是相同的函数.
+
+   (2). 两者都要求 :math:`0 \leqslant x \leqslant 1`, 定义域相同, 且在共同定义域内 :math:`\sqrt{x}\sqrt{1-x} = \sqrt{x(1-x)}` 处处成立, 因此是相同的函数.
 
 2. 确定下列函数的定义域.
 
@@ -31,7 +33,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). 要求 :math:`4 - x^2 \geqslant 0`, 故定义域为 :math:`[-2, 2]`.
+
+   (2). 要求 :math:`-1 \leqslant \dfrac{x-1}{3} \leqslant 1`, 即 :math:`-2 \leqslant x \leqslant 4`, 故定义域为 :math:`[-2, 4]`.
 
 .. _ex-chap1-sec1-ex3:
 
@@ -47,7 +51,13 @@
 
 .. proof:solution::
 
-   计算 :math:`f(-x) = \ln(\sqrt{1+(-x)^2}-(-x)) = \ln(\sqrt{1+x^2}+x) = \ln\frac{1}{\sqrt{1+x^2}-x} = -\ln(\sqrt{1+x^2}-x) = -f(x)`, 故为奇函数.
+   (1). :math:`f(-x) = (-x)\sin(-x) = x\sin x = f(x)`, 为偶函数.
+
+   (2). :math:`f(-x) = \dfrac{e^{-x} - e^{x}}{e^{-x} + e^{x}} = \dfrac{-(e^{x} - e^{-x})}{e^{x} + e^{-x}} = -f(x)`, 为奇函数.
+
+   (3). 计算 :math:`f(-x) = \ln(\sqrt{1+(-x)^2}-(-x)) = \ln(\sqrt{1+x^2}+x) = \ln\frac{1}{\sqrt{1+x^2}-x} = -\ln(\sqrt{1+x^2}-x) = -f(x)`, 故为奇函数.
+
+   (4). :math:`f(-x) = 3^{-x}\cdot(-x) = -\dfrac{x}{3^{x}}`, 它既不等于 :math:`f(x) = 3^{x}x`, 也不等于 :math:`-f(x)`, 故既非奇函数也非偶函数.
 
 4. 判断下列函数的单调性.
 
@@ -61,7 +71,13 @@
 
 .. proof:solution::
 
-   待写
+   (1). 一次函数斜率 :math:`3 > 0`, 在 :math:`\mathbb{R}` 上单调增加.
+
+   (2). 指数函数底数 :math:`2 > 1`, 在 :math:`\mathbb{R}` 上单调增加.
+
+   (3). 对数函数底数 :math:`0 < \dfrac{1}{2} < 1`, 在 :math:`(0, +\infty)` 上单调减少.
+
+   (4). 设 :math:`0 < x_1 < x_2`, 则 :math:`x_1 < x_2` 且 :math:`\ln x_1 < \ln x_2`, 两式相加得 :math:`x_1 + \ln x_1 < x_2 + \ln x_2`, 故在 :math:`(0, +\infty)` 上单调增加.
 
 5. 已知 :math:`f(x)` 是周期函数, 判断下列函数是否为周期函数.
 
@@ -73,7 +89,13 @@
 
 .. proof:solution::
 
-   待写
+   设 :math:`f(x)` 的一个周期为 :math:`T`, 则:
+
+   (1). :math:`|f(x+T)| = |f(x)|`, 是周期函数.
+
+   (2). :math:`f^2(x+T) = f^2(x)`, 是周期函数.
+
+   (3). :math:`f\left(3\left(x + \dfrac{T}{3}\right) + 1\right) = f(3x + T + 1) = f(3x+1)`, 是周期函数, 且 :math:`\dfrac{T}{3}` 是它的一个周期.
 
 6. 证明下列函数是有界函数.
 
@@ -83,7 +105,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). :math:`y = \dfrac{x^2}{x^2+1} = 1 - \dfrac{1}{x^2+1}`, 由 :math:`0 < \dfrac{1}{x^2+1} \leqslant 1` 得 :math:`0 \leqslant y < 1`, 故在 :math:`\mathbb{R}` 上有界.
+
+   (2). 由 :math:`2|x| \leqslant x^2 + 1` 得 :math:`\left|\dfrac{x}{x^2+1}\right| \leqslant \dfrac{1}{2}`, 故在 :math:`\mathbb{R}` 上有界.
 
 .. _ex-chap1-sec2:
 
@@ -102,7 +126,13 @@
 
 .. proof:solution::
 
-   待写
+   (1). 由 :math:`y = \sqrt[3]{x+2}` 解得 :math:`x = y^3 - 2`, 故反函数为 :math:`y = x^3 - 2`, :math:`x \in \mathbb{R}`.
+
+   (2). 由 :math:`y = \dfrac{2-x}{2+x}` 解得 :math:`x = \dfrac{2-2y}{1+y}`, 故反函数为 :math:`y = \dfrac{2-2x}{1+x}`, :math:`x \neq -1`.
+
+   (3). 由 :math:`y = 3\sin 2x` 解得 :math:`x = \dfrac{1}{2}\arcsin\dfrac{y}{3}`, 故反函数为 :math:`y = \dfrac{1}{2}\arcsin\dfrac{x}{3}`, :math:`x \in [-3, 3]`.
+
+   (4). 由 :math:`y = 2 + \ln(x+1)` 解得 :math:`x = e^{y-2} - 1`, 故反函数为 :math:`y = e^{x-2} - 1`, :math:`x \in \mathbb{R}`.
 
 2. 下列函数是由哪些较简单的函数复合而成的.
 
@@ -112,7 +142,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). 由 :math:`y = u^4`, :math:`u = \cos v`, :math:`v = 1 + 3x` 复合而成.
+
+   (2). 由 :math:`y = \ln u`, :math:`u = |v|`, :math:`v = \sin w`, :math:`w = \sqrt{t}`, :math:`t = 1 - 2x` 复合而成.
 
 .. _ex-chap1-sec2-ex3:
 
@@ -131,7 +163,7 @@
    :math:`u = g(x) = \ln x`, 那么
 
    .. math::
-      f[g(x)] = \begin{cases} 2\ln x, & 1 \leqslant x \leqslant e \\ (\ln x)^2, & e < u \leqslant e^2. \end{cases}
+      f[g(x)] = \begin{cases} 2\ln x, & 1 \leqslant x \leqslant e \\ (\ln x)^2, & e < x \leqslant e^2. \end{cases}
 
    这里关键是定义域要计算清楚.
 
@@ -148,7 +180,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). 当 :math:`x \leqslant 0` 时, :math:`\dfrac{|x|-x}{2} = \dfrac{-x-x}{2} = -x = f(x)`; 当 :math:`x > 0` 时, :math:`\dfrac{|x|-x}{2} = \dfrac{x-x}{2} = 0 = f(x)`. 综上 :math:`f(x) = \dfrac{|x|-x}{2}` 成立.
+
+   (2). 是初等函数. 由 (1), :math:`f(x) = \dfrac{\sqrt{x^2}-x}{2}`, 它由常数函数、幂函数 :math:`u = \sqrt{v}` (:math:`v = x^2`) 与多项式函数经四则运算构成, 因此是初等函数.
 
 .. _ex-chap1-sec3-ex2:
 
@@ -168,7 +202,7 @@
 
 .. proof:solution::
 
-   待写
+   设 :math:`y = \sinh x = \dfrac{e^x - e^{-x}}{2}`, 从中解出 :math:`x`. 令 :math:`u = e^x > 0`, 则 :math:`2y = u - \dfrac{1}{u}`, 即 :math:`u^2 - 2yu - 1 = 0`, 解得 :math:`u = y + \sqrt{y^2+1}` (负根 :math:`y - \sqrt{y^2+1} < 0` 舍去), 于是 :math:`x = \ln\left(y + \sqrt{y^2+1}\right)`. 因此反函数为 :math:`y = \ln\left(x + \sqrt{x^2+1}\right)`, 其定义域为 :math:`\mathbb{R}`.
 
 .. _ex-chap1-sec4:
 
@@ -184,7 +218,9 @@
 
 .. proof:solution::
 
-   待写
+   由 :math:`x = r\cos\theta`, :math:`y = r\sin\theta` 逐点计算:
+
+   :math:`A\left(\sqrt{3}, 1\right)`; :math:`B(0, 3)`; :math:`C\left(\dfrac{\sqrt{2}}{2}, -\dfrac{\sqrt{2}}{2}\right)`; :math:`D\left(-2\sqrt{2}, -2\sqrt{2}\right)`.
 
 2. 已知下列点的直角坐标, 求它们的极坐标.
 
@@ -195,7 +231,9 @@
 
 .. proof:solution::
 
-   待写
+   由 :math:`r = \sqrt{x^2+y^2}`, :math:`\tan\theta = \dfrac{y}{x}` (按点所在象限取 :math:`\theta`) 逐点计算:
+
+   :math:`A\left(2, \dfrac{\pi}{3}\right)`; :math:`B\left(2, \dfrac{5\pi}{6}\right)`; :math:`C\left(2, \dfrac{2\pi}{3}\right)`; :math:`D\left(2, -\dfrac{\pi}{6}\right)`.
 
 3. 将下列直角坐标方程化为极坐标方程 (需要标明 :math:`\theta` 的取值范围).
 
@@ -207,7 +245,13 @@
 
 .. proof:solution::
 
-   待写
+   代入 :math:`x = r\cos\theta`, :math:`y = r\sin\theta`:
+
+   (1). :math:`r\cos\theta = 1`, 即 :math:`r = \dfrac{1}{\cos\theta}`, :math:`\theta \in \left(-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right)`.
+
+   (2). :math:`r(\cos\theta + \sin\theta) = 1`, 即 :math:`r = \dfrac{1}{\cos\theta + \sin\theta}`, :math:`\theta \in \left(-\dfrac{\pi}{4}, \dfrac{3\pi}{4}\right)`.
+
+   (3). 将 :math:`(x-1)^2 + y^2 = 1` 展开得 :math:`x^2 + y^2 = 2x`, 即 :math:`r^2 = 2r\cos\theta`, 故 :math:`r = 2\cos\theta`, :math:`\theta \in \left[-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right]`.
 
 4. 将下列极坐标方程化为直角坐标方程, 并说明方程所表示的曲线类型.
 
@@ -217,7 +261,9 @@
 
 .. proof:solution::
 
-   待写
+   (1). :math:`r = 1` 即 :math:`x^2 + y^2 = 1`; 又 :math:`\theta \in [0, \pi]` 时 :math:`y = r\sin\theta \geqslant 0`, 故曲线为单位圆的上半圆 (含两端点).
+
+   (2). :math:`\theta = \dfrac{3\pi}{4}` 表示从原点出发、极角为 :math:`\dfrac{3\pi}{4}` 的射线, 即 :math:`y = -x` (:math:`x \leqslant 0`).
 
 5. 将下列参数方程化为直角坐标方程, 并说明方程所表示的曲线类型.
 
@@ -227,7 +273,14 @@
 
 .. proof:solution::
 
-   待写
+   (1). 两式相减得 :math:`y = x - 3`; 由 :math:`x = t^2 + 1 \geqslant 1` 知曲线为射线 :math:`y = x - 3` (:math:`x \geqslant 1`).
+
+   (2). 由
+
+   .. math::
+      x^2 - y^2 = \left(t + \dfrac{1}{t}\right)^2 - \left(t - \dfrac{1}{t}\right)^2 = 4
+
+   得 :math:`x^2 - y^2 = 4`, 曲线是等轴双曲线; 又 :math:`|x| = \left|t + \dfrac{1}{t}\right| \geqslant 2`, 故为该双曲线的左、右两支.
 
 .. _ex-chap1-zong:
 
@@ -246,7 +299,7 @@
 
 .. proof:solution::
 
-   待写
+   选 B. A 中两函数仅变量记号不同, 且 :math:`\cos^2(3x+2) = 1 - \sin^2(3x+2)`, 定义域都是 :math:`\mathbb{R}`, 两函数相等; C 中 :math:`\sqrt{x^2} = |x|`, D 中 :math:`\sqrt[3]{x^3} = x`, 定义域与对应法则都相同, 均相等. 而 B 中 :math:`f(x) = \dfrac{x^2-4}{x-2}` 的定义域为 :math:`x \neq 2`, 与 :math:`g(x) = x+2` 的定义域 :math:`\mathbb{R}` 不同, 故两函数不相等.
 
 .. _extra-chap1:
 

@@ -52,13 +52,30 @@
 
 .. proof:proof::
 
-   待写
+   :math:`\lim\limits_{n \to \infty} x_n \neq l` 的定义为: 存在正数 :math:`\varepsilon_0`, 使得对任意正整数 :math:`N`,
+   总存在 :math:`n > N`, 满足 :math:`|x_n - l| \geqslant \varepsilon_0`.
+
+   下面证明数列 :math:`\left\{ \dfrac{1}{n} \right\}` 不以 1 为极限. 取 :math:`\varepsilon_0 = \dfrac{1}{2}`, 对任意正整数 :math:`N`,
+   取 :math:`n > N`, 则 :math:`n \geqslant 2`, 于是
+
+   .. math::
+      \left| \dfrac{1}{n} - 1 \right| = 1 - \dfrac{1}{n} \geqslant \dfrac{1}{2} = \varepsilon_0.
+
+   这就证明了数列 :math:`\left\{ \dfrac{1}{n} \right\}` 不以 1 为极限.
 
 3. 设数列 :math:`\{ x_n \}` 满足 :math:`\lim\limits_{n \to \infty} x_{2n} = \lim\limits_{n \to \infty} x_{2n+1} = l`, 证明 :math:`\lim\limits_{n \to \infty} x_n = l`.
 
 .. proof:proof::
 
-   待写
+   任给 :math:`\varepsilon > 0`. 由 :math:`\lim\limits_{n \to \infty} x_{2n} = l`, 存在正整数 :math:`N_1`, 使得当 :math:`n > N_1` 时,
+   有 :math:`|x_{2n} - l| < \varepsilon`; 由 :math:`\lim\limits_{n \to \infty} x_{2n+1} = l`, 存在正整数 :math:`N_2`, 使得当 :math:`n > N_2` 时,
+   有 :math:`|x_{2n+1} - l| < \varepsilon`. 取 :math:`N = \max \{ 2N_1, 2N_2 + 1 \}`, 则当 :math:`n > N` 时:
+
+   若 :math:`n` 为偶数, 记 :math:`n = 2k`, 则 :math:`k > N_1`, 有 :math:`|x_n - l| = |x_{2k} - l| < \varepsilon`;
+
+   若 :math:`n` 为奇数, 记 :math:`n = 2k+1`, 则 :math:`k > N_2`, 有 :math:`|x_n - l| = |x_{2k+1} - l| < \varepsilon`.
+
+   综上, 对任意 :math:`n > N` 都有 :math:`|x_n - l| < \varepsilon`, 即 :math:`\lim\limits_{n \to \infty} x_n = l`.
 
 .. _ex-chap2-sec1-ex4:
 
@@ -82,13 +99,31 @@
 
 .. proof:proof::
 
-   待写
+   由不等式 :math:`\bigl| |x_n| - |l| \bigr| \leqslant |x_n - l|` 可知, 任给 :math:`\varepsilon > 0`, 由 :math:`\lim\limits_{n \to \infty} x_n = l`,
+   存在正整数 :math:`N`, 使得当 :math:`n > N` 时, 有 :math:`|x_n - l| < \varepsilon`, 从而
+
+   .. math::
+      \bigl| |x_n| - |l| \bigr| \leqslant |x_n - l| < \varepsilon,
+
+   即 :math:`\lim\limits_{n \to \infty} |x_n| = |l|`.
+
+   逆命题不成立. 例如数列 :math:`x_n = (-1)^n` 发散, 但 :math:`|x_n| = 1`, 显然 :math:`\lim\limits_{n \to \infty} |x_n| = 1`.
 
 6. 设 :math:`x_n \geqslant 0 ~ (n = 1, 2, \cdots)`, 且 :math:`\lim\limits_{n \to \infty} x_n = l \geqslant 0`, 证明: :math:`\lim\limits_{n \to \infty} \sqrt{x_n} = \sqrt{l}`.
 
 .. proof:proof::
 
-   待写
+   先设 :math:`l > 0`. 任给 :math:`\varepsilon > 0`, 由 :math:`\lim\limits_{n \to \infty} x_n = l`, 存在正整数 :math:`N`,
+   使得当 :math:`n > N` 时, 有 :math:`|x_n - l| < \sqrt{l}\, \varepsilon`. 于是当 :math:`n > N` 时,
+
+   .. math::
+      \left| \sqrt{x_n} - \sqrt{l} \right|
+      = \dfrac{|x_n - l|}{\sqrt{x_n} + \sqrt{l}} \leqslant \dfrac{|x_n - l|}{\sqrt{l}} < \varepsilon,
+
+   即 :math:`\lim\limits_{n \to \infty} \sqrt{x_n} = \sqrt{l}`.
+
+   再设 :math:`l = 0`. 任给 :math:`\varepsilon > 0`, 存在正整数 :math:`N`, 使得当 :math:`n > N` 时, 有
+   :math:`x_n < \varepsilon^2`, 从而 :math:`\sqrt{x_n} < \varepsilon`, 即 :math:`\lim\limits_{n \to \infty} \sqrt{x_n} = 0 = \sqrt{l}`.
 
 .. _ex-chap2-sec1-ex7:
 
@@ -128,13 +163,62 @@
 
 .. proof:proof::
 
-   待写
+   (1). 任给 :math:`\varepsilon > 0`. 当 :math:`|x - x_0| < 1` 时, :math:`|x + x_0| \leqslant |x - x_0| + 2|x_0| < 1 + 2|x_0|`,
+   于是
+
+   .. math::
+      |x^2 - x_0^2| = |x - x_0| \cdot |x + x_0| < (1 + 2|x_0|) |x - x_0|.
+
+   故取 :math:`\delta = \min \left\{ 1, \dfrac{\varepsilon}{1 + 2|x_0|} \right\}`, 则当 :math:`0 < |x - x_0| < \delta` 时,
+   有 :math:`|x^2 - x_0^2| < \varepsilon`, 即 :math:`\lim\limits_{x \to x_0} x^2 = x_0^2`.
+
+   (2). 利用和差化积公式,
+
+   .. math::
+      |\sin x - \sin x_0| = \left| 2 \cos \dfrac{x + x_0}{2} \sin \dfrac{x - x_0}{2} \right|
+      \leqslant 2 \left| \sin \dfrac{x - x_0}{2} \right| \leqslant |x - x_0|,
+
+   故取 :math:`\delta = \varepsilon`, 则当 :math:`0 < |x - x_0| < \delta` 时, 有 :math:`|\sin x - \sin x_0| < \varepsilon`.
+
+   (3). 当 :math:`x \neq 0` 时,
+
+   .. math::
+      \left| \dfrac{x^2-1}{2x^2+3} - \dfrac{1}{2} \right|
+      = \dfrac{5}{2(2x^2+3)} < \dfrac{5}{4x^2}.
+
+   故对任给 :math:`\varepsilon > 0`, 取 :math:`X = \sqrt{\dfrac{5}{4\varepsilon}}`, 则当 :math:`|x| > X` 时,
+   有 :math:`\left| \dfrac{x^2-1}{2x^2+3} - \dfrac{1}{2} \right| < \varepsilon`.
+
+   (4). :math:`\dfrac{x^4-1}{x-1} = (x+1)(x^2+1)`. 当 :math:`|x - 1| < 1` 即 :math:`0 < x < 2` 时,
+   :math:`|(x+1)(x^2+1)| \leqslant 3 \cdot 5 = 15`. 故对任给 :math:`\varepsilon > 0`,
+   取 :math:`\delta = \min \left\{ 1, \dfrac{\varepsilon}{15} \right\}`, 则当 :math:`0 < |x-1| < \delta` 时,
+
+   .. math::
+      \left| \dfrac{x^4-1}{x-1} - 4 \right| = |(x+1)(x^2+1) - 4| \leqslant |x+1| \cdot |x^2+1| < 15\delta \leqslant \varepsilon.
+
+   (5). 对任给 :math:`\varepsilon > 0`, 由 :math:`\left| \dfrac{1}{x+2} - 0 \right| = \dfrac{1}{|x+2|} < \varepsilon`
+   解得 :math:`|x + 2| > \dfrac{1}{\varepsilon}`. 取 :math:`X = \dfrac{1}{\varepsilon} + 2`, 则当 :math:`|x| > X` 时,
+   有 :math:`|x+2| \geqslant |x| - 2 > X - 2 = \dfrac{1}{\varepsilon}`, 从而 :math:`\left| \dfrac{1}{x+2} \right| < \varepsilon`.
+
+   (6). 对任给 :math:`0 < \varepsilon < 1`, 由 :math:`|e^x - 0| = e^x < \varepsilon` 解得 :math:`x < \ln \varepsilon`.
+   取 :math:`X = -\ln \varepsilon > 0`, 则当 :math:`x < -X` 时, 有 :math:`e^x < e^{-X} = \varepsilon`, 即
+   :math:`\lim\limits_{x \to -\infty} e^x = 0`.
 
 2. 用数学语言给出 :math:`\lim\limits_{x \to x_0} f(x) \neq A` 的定义, 并证明 :math:`\lim\limits_{x \to 1} x^3 \neq 8`.
 
 .. proof:proof::
 
-   待写
+   :math:`\lim\limits_{x \to x_0} f(x) \neq A` 的定义为: 存在正数 :math:`\varepsilon_0`, 使得对任意 :math:`\delta > 0`,
+   总存在 :math:`x` 满足 :math:`0 < |x - x_0| < \delta`, 但 :math:`|f(x) - A| \geqslant \varepsilon_0`.
+
+   下面证明 :math:`\lim\limits_{x \to 1} x^3 \neq 8`. 取 :math:`\varepsilon_0 = 3`, 对任意 :math:`\delta > 0`,
+   取 :math:`x = 1 + \dfrac{1}{2}\min \{ \delta, 1 \}`, 则 :math:`0 < x - 1 < \delta` 且 :math:`1 < x \leqslant \dfrac{3}{2}`,
+   于是 :math:`x^3 \leqslant \dfrac{27}{8}`, 从而
+
+   .. math::
+      |x^3 - 8| = 8 - x^3 \geqslant 8 - \dfrac{27}{8} = \dfrac{37}{8} > 3 = \varepsilon_0.
+
+   这就证明了 :math:`\lim\limits_{x \to 1} x^3 \neq 8`.
 
 3. 证明函数极限的局部有界性, 即若 :math:`\lim\limits_{x \to x_0} f(x)` 存在, 则存在 :math:`x_0` 的某个去心邻域 :math:`(x_0 - \delta, x_0 + \delta) \setminus \{ x_0 \}` 和常数 :math:`M`, 使得当 :math:`0 < |x - x_0| < \delta` 时, 总有
 
@@ -143,13 +227,29 @@
 
 .. proof:proof::
 
-   待写
+   设 :math:`\lim\limits_{x \to x_0} f(x) = A`. 在极限定义中取 :math:`\varepsilon = 1`, 则存在 :math:`\delta > 0`,
+   使得当 :math:`0 < |x - x_0| < \delta` 时, 有 :math:`|f(x) - A| < 1`, 从而
+
+   .. math::
+      |f(x)| = |f(x) - A + A| \leqslant |f(x) - A| + |A| < |A| + 1.
+
+   取 :math:`M = |A| + 1`, 即证得 :math:`f(x)` 在 :math:`x_0` 的去心邻域 :math:`(x_0 - \delta, x_0 + \delta) \setminus \{ x_0 \}` 内有界.
 
 4. 证明: 若 :math:`\lim\limits_{x \to x_0} f(x) = A`, 则 :math:`\lim\limits_{x \to x_0} |f(x)| = |A|`, 并考虑其逆命题是否成立.
 
 .. proof:proof::
 
-   待写
+   由不等式 :math:`\bigl| |f(x)| - |A| \bigr| \leqslant |f(x) - A|` 可知, 任给 :math:`\varepsilon > 0`,
+   存在 :math:`\delta > 0`, 使得当 :math:`0 < |x - x_0| < \delta` 时, 有 :math:`|f(x) - A| < \varepsilon`, 从而
+
+   .. math::
+      \bigl| |f(x)| - |A| \bigr| \leqslant |f(x) - A| < \varepsilon,
+
+   即 :math:`\lim\limits_{x \to x_0} |f(x)| = |A|`.
+
+   逆命题不成立. 例如 :math:`f(x) = \dfrac{|x|}{x}` (:math:`x \neq 0`), 则 :math:`|f(x)| = 1` (:math:`x \neq 0`),
+   故 :math:`\lim\limits_{x \to 0} |f(x)| = 1`; 但 :math:`f(x)` 在 :math:`x = 0` 处左极限为 :math:`-1`, 右极限为 :math:`1`,
+   极限不存在.
 
 5. 讨论下列函数在 :math:`x = 0` 处的左极限、右极限和极限的存在性.
 
@@ -159,7 +259,13 @@
 
 .. proof:solution::
 
-   待写
+   (1). :math:`f(x) = \dfrac{x}{|x|}` 在 :math:`x \neq 0` 时等于 :math:`1` 或 :math:`-1`, 于是左极限
+   :math:`\lim\limits_{x \to 0^-} f(x) = -1`, 右极限 :math:`\lim\limits_{x \to 0^+} f(x) = 1`, 两者都存在但不相等,
+   因此 :math:`\lim\limits_{x \to 0} f(x)` 不存在.
+
+   (2). 左极限 :math:`\lim\limits_{x \to 0^-} f(x) = \lim\limits_{x \to 0^-} (1 + x^3) = 1`,
+   右极限 :math:`\lim\limits_{x \to 0^+} f(x) = \lim\limits_{x \to 0^+} 3^x = 1`, 两者都存在且相等,
+   因此 :math:`\lim\limits_{x \to 0} f(x) = 1` 存在.
 
 .. _ex-chap2-sec2-ex6:
 
@@ -198,7 +304,52 @@
 
 .. proof:solution::
 
-   待写
+   (1). 分子分母同除以 :math:`n^2`, 得
+
+   .. math::
+      \lim_{n \to \infty} \dfrac{2n^2+n-2}{n^2+6}
+      = \lim_{n \to \infty} \dfrac{2 + \frac{1}{n} - \frac{2}{n^2}}{1 + \frac{6}{n^2}} = 2.
+
+   (2). 分子分母同除以 :math:`4^n`, 得
+
+   .. math::
+      \lim_{n \to \infty} \dfrac{2^n+3^n}{3^n+4^n}
+      = \lim_{n \to \infty} \dfrac{\left(\frac{1}{2}\right)^n + \left(\frac{3}{4}\right)^n}{\left(\frac{3}{4}\right)^n + 1} = \dfrac{0}{1} = 0.
+
+   (3). 分子有理化,
+
+   .. math::
+      \lim_{n \to \infty} \left( \sqrt{n+\sqrt{n}} - \sqrt{n} \right)
+      = \lim_{n \to \infty} \dfrac{\sqrt{n}}{\sqrt{n+\sqrt{n}} + \sqrt{n}}
+      = \lim_{n \to \infty} \dfrac{1}{\sqrt{1 + \frac{1}{\sqrt{n}}} + 1} = \dfrac{1}{2}.
+
+   (4). 由 :math:`\lim\limits_{n \to \infty} \sqrt[n]{k} = 1` (:math:`k` 为固定正整数) 及极限的四则运算法则,
+
+   .. math::
+      \lim_{n \to \infty} \left( \sqrt[n]{1} + \sqrt[n]{2} + \cdots + \sqrt[n]{100} \right) = \underbrace{1 + 1 + \cdots + 1}_{100 \text{ 项}} = 100.
+
+   (5). 化为 2 的幂,
+
+   .. math::
+      \sqrt{2}\sqrt[4]{2}\cdots\sqrt[2^n]{2}
+      = 2^{\frac{1}{2} + \frac{1}{4} + \cdots + \frac{1}{2^n}}
+      = 2^{1 - \frac{1}{2^n}}
+      \longrightarrow 2.
+
+   (6). 通分求和,
+
+   .. math::
+      \lim_{n \to \infty} \left( \dfrac{1}{n^2} + \dfrac{2}{n^2} + \cdots + \dfrac{n}{n^2} \right)
+      = \lim_{n \to \infty} \dfrac{n(n+1)}{2n^2} = \dfrac{1}{2}.
+
+   (7). 因式分解后裂项相消,
+
+   .. math::
+      \left( 1 - \dfrac{1}{2^2} \right) \left( 1 - \dfrac{1}{3^2} \right) \cdots \left( 1 - \dfrac{1}{n^2} \right)
+      = \prod_{k=2}^{n} \dfrac{(k-1)(k+1)}{k^2}
+      = \dfrac{1}{n} \cdot \dfrac{n+1}{2}
+      = \dfrac{n+1}{2n}
+      \longrightarrow \dfrac{1}{2}.
 
 2. 计算下列函数极限.
 
@@ -220,7 +371,60 @@
 
 .. proof:solution::
 
-   待写
+   (1). 直接代入 (分母极限不为零),
+
+   .. math::
+      \lim_{x \to 0} \dfrac{x+1}{x^2-x-2} = \dfrac{1}{-2} = -\dfrac{1}{2}.
+
+   (2). 直接代入,
+
+   .. math::
+      \lim_{x \to 2} \dfrac{x^2-4}{x+1} = \dfrac{0}{3} = 0.
+
+   (3). 约去零因子 :math:`x - 1`,
+
+   .. math::
+      \lim_{x \to 1} \dfrac{x^4-1}{x^3-1}
+      = \lim_{x \to 1} \dfrac{(x-1)(x+1)(x^2+1)}{(x-1)(x^2+x+1)}
+      = \lim_{x \to 1} \dfrac{(x+1)(x^2+1)}{x^2+x+1}
+      = \dfrac{2 \times 2}{3} = \dfrac{4}{3}.
+
+   (4). 约去零因子 :math:`x - 1`,
+
+   .. math::
+      \lim_{x \to 1} \dfrac{x^2+x-2}{x^2-4x+3}
+      = \lim_{x \to 1} \dfrac{(x+2)(x-1)}{(x-3)(x-1)}
+      = \lim_{x \to 1} \dfrac{x+2}{x-3}
+      = -\dfrac{3}{2}.
+
+   (5). 展开后约去 :math:`h`,
+
+   .. math::
+      \lim_{h \to 0} \dfrac{(x+h)^3-x^3}{h}
+      = \lim_{h \to 0} \dfrac{3x^2 h + 3xh^2 + h^3}{h}
+      = \lim_{h \to 0} \left( 3x^2 + 3xh + h^2 \right) = 3x^2.
+
+   (6). 通分化简, 注意 :math:`\dfrac{1}{1-x^3} = -\dfrac{1}{(x-1)(x^2+x+1)}`,
+
+   .. math::
+      \lim_{x \to 1} \left( \dfrac{1}{x-1} + \dfrac{3}{1-x^3} \right)
+      = \lim_{x \to 1} \dfrac{x^2 + x + 1 - 3}{(x-1)(x^2+x+1)}
+      = \lim_{x \to 1} \dfrac{(x+2)(x-1)}{(x-1)(x^2+x+1)}
+      = \lim_{x \to 1} \dfrac{x+2}{x^2+x+1} = 1.
+
+   (7). 将分子拆成 :math:`(x^k - 1)` 之和,
+
+   .. math::
+      \lim_{x \to 1} \dfrac{x+x^2+\cdots+x^n-n}{x-1}
+      = \sum_{k=1}^{n} \lim_{x \to 1} \dfrac{x^k - 1}{x-1}
+      = \sum_{k=1}^{n} k = \dfrac{n(n+1)}{2},
+
+   其中用到 :math:`\lim\limits_{x \to 1} \dfrac{x^k-1}{x-1} = \lim\limits_{x \to 1} (x^{k-1} + x^{k-2} + \cdots + 1) = k`.
+
+   (8). 由指数函数 :math:`a^x` 在定义域内连续 (或按 :math:`a^x` 极限的定义), 直接代入得
+
+   .. math::
+      \lim_{x \to x_0} a^x = a^{x_0}.
 
 3. 设
    :math:`f(x) = \dfrac{a_0 x^m + a_1 x^{m-1} + \cdots + a_{m-1} x + a_m}{b_0 x^n + b_1 x^{n-1} + \cdots + b_{n-1} x + b_n}`
@@ -228,7 +432,18 @@
 
 .. proof:solution::
 
-   待写
+   分子分母同除以最高次幂 :math:`x^n`, 得
+
+   .. math::
+      f(x) = \dfrac{a_0 x^{m-n} + a_1 x^{m-n-1} + \cdots + a_{m-1} x^{1-n} + a_m x^{-n}}
+      {b_0 + b_1 x^{-1} + \cdots + b_{n-1} x^{1-n} + b_n x^{-n}},
+
+   当 :math:`x \to +\infty` 时, 分子中各项 :math:`a_i x^{m-n-i} \, (i = 0, 1, \dots, m)` 的次数都不超过零次幂,
+   且分母 :math:`\to b_0 \neq 0`. 于是:
+
+   若 :math:`m < n`, 则 :math:`m - n - i < 0`, 分子各项都趋于 :math:`0`, 故 :math:`\lim\limits_{x \to +\infty} f(x) = 0`;
+
+   若 :math:`m = n`, 则分子除首项外各项都趋于 :math:`0`, 故 :math:`\lim\limits_{x \to +\infty} f(x) = \dfrac{a_0}{b_0}`.
 
 4. 判断下列命题是否正确? 正确的请给予证明, 不正确的请举例说明.
 
@@ -238,7 +453,19 @@
 
 .. proof:proof::
 
-   待写
+   (1). 命题不正确, 其中"和必发散"是对的, 但"积必发散"不对.
+
+   先证 :math:`\{ x_n + y_n \}` 必发散: 若不然, 设 :math:`\{ x_n + y_n \}` 收敛, 则由极限的四则运算法则,
+   :math:`y_n = (x_n + y_n) - x_n` 是两个收敛数列之差, 应当收敛, 与 :math:`\{ y_n \}` 发散矛盾.
+
+   再举反例说明 :math:`\{ x_n y_n \}` 可以收敛: 取 :math:`x_n \equiv 0` (收敛), :math:`y_n = (-1)^n` (发散),
+   则 :math:`x_n y_n \equiv 0` 收敛.
+
+   (2). 命题不正确, "和"与"积"都可以收敛.
+
+   例如 :math:`x_n = (-1)^n`, :math:`y_n = -(-1)^n`, 两者都发散, 但 :math:`x_n + y_n \equiv 0` 收敛.
+
+   又如 :math:`x_n = y_n = (-1)^n`, 两者都发散, 但 :math:`x_n y_n \equiv 1` 收敛.
 
 .. _ex-chap2-sec3-ex5:
 
@@ -332,14 +559,104 @@
 
 .. proof:solution::
 
-   待写
+   (1). 利用重要极限 :math:`\lim\limits_{u \to 0} \dfrac{\sin u}{u} = 1`,
+
+   .. math::
+      \lim_{x \to 0} \dfrac{\sin mx}{\sin nx}
+      = \lim_{x \to 0} \dfrac{\sin mx}{mx} \cdot \dfrac{nx}{\sin nx} \cdot \dfrac{m}{n} = \dfrac{m}{n}.
+
+   (2). 利用等价无穷小 :math:`1 - \cos 3x \sim \dfrac{(3x)^2}{2}`, :math:`\sin x \sim x`, :math:`\tan 2x \sim 2x`,
+
+   .. math::
+      \lim_{x \to 0} \dfrac{1-\cos 3x}{\sin x \tan 2x}
+      = \lim_{x \to 0} \dfrac{\frac{9}{2}x^2}{x \cdot 2x} = \dfrac{9}{4}.
+
+   (3). 和差化积后用重要极限,
+
+   .. math::
+      \lim_{h \to 0} \dfrac{\sin(x+h)-\sin x}{h}
+      = \lim_{h \to 0} \dfrac{2 \cos \left( x + \dfrac{h}{2} \right) \sin \dfrac{h}{2}}{h}
+      = \lim_{h \to 0} \cos \left( x + \dfrac{h}{2} \right) \cdot \dfrac{\sin \frac{h}{2}}{\frac{h}{2}}
+      = \cos x.
+
+   (4). 同理,
+
+   .. math::
+      \lim_{h \to 0} \dfrac{\cos(x+h)-\cos x}{h}
+      = \lim_{h \to 0} \dfrac{-2 \sin \left( x + \dfrac{h}{2} \right) \sin \dfrac{h}{2}}{h}
+      = -\sin x.
+
+   (5). 和差化积,
+
+   .. math::
+      \cos nx - \cos mx = -2 \sin \dfrac{(n+m)x}{2} \sin \dfrac{(n-m)x}{2}
+      \sim -2 \cdot \dfrac{(n+m)x}{2} \cdot \dfrac{(n-m)x}{2}
+      = \dfrac{m^2 - n^2}{2} x^2,
+
+   因此
+
+   .. math::
+      \lim_{x \to 0} \dfrac{\cos nx-\cos mx}{x^2} = \dfrac{m^2 - n^2}{2}.
+
+   (6). 当 :math:`x \neq 0` 时, 由 :math:`\dfrac{x}{3^n} \to 0` 及 :math:`\sin u \sim u`,
+
+   .. math::
+      \lim_{n \to \infty} 3^n \sin \dfrac{x}{3^n}
+      = \lim_{n \to \infty} 3^n \cdot \dfrac{x}{3^n} \cdot \dfrac{\sin \frac{x}{3^n}}{\frac{x}{3^n}} = x;
+
+   当 :math:`x = 0` 时极限显然为 :math:`0`, 上式也成立.
+
+   (7). 利用第二重要极限,
+
+   .. math::
+      \lim_{n \to \infty} \left( 1+\dfrac{4}{n} \right)^{2n}
+      = \lim_{n \to \infty} \left[ \left( 1+\dfrac{4}{n} \right)^{\frac{n}{4}} \right]^{8} = e^8.
+
+   (8). 因式分解 :math:`1 - \dfrac{1}{n^2} = \left( 1 - \dfrac{1}{n} \right) \left( 1 + \dfrac{1}{n} \right)`, 则
+
+   .. math::
+      \lim_{n \to \infty} \left( 1-\dfrac{1}{n^2} \right)^n
+      = \lim_{n \to \infty} \left( 1-\dfrac{1}{n} \right)^n \cdot \left( 1+\dfrac{1}{n} \right)^n
+      = e^{-1} \cdot e = 1.
+
+   (9). 利用第二重要极限,
+
+   .. math::
+      \lim_{x \to \infty} \left( 1-\dfrac{2}{x} \right)^{5x}
+      = \lim_{x \to \infty} \left[ \left( 1-\dfrac{2}{x} \right)^{-\frac{x}{2}} \right]^{-10} = e^{-10}.
+
+   (10). 将底数变形 :math:`\dfrac{3-2x}{2-2x} = \dfrac{2x-3}{2x-2} = 1 - \dfrac{1}{2x-2}`, 于是
+
+   .. math::
+      \lim_{x \to \infty} \left( \dfrac{3-2x}{2-2x} \right)^x
+      = \lim_{x \to \infty} \left( 1 - \dfrac{1}{2x-2} \right)^{x}
+      = \lim_{x \to \infty} \left[ \left( 1 - \dfrac{1}{2x-2} \right)^{-(2x-2)} \right]^{-\frac{x}{2x-2}}
+      = e^{-\frac{1}{2}}.
 
 2. 设 :math:`x_n = \dfrac{1}{2} \cdot \dfrac{3}{4} \cdots \dfrac{2n-1}{2n}`, 证明
    :math:`x_n < \dfrac{1}{\sqrt{2n+1}}`, 并求 :math:`\lim\limits_{n \to \infty} x_n`.
 
 .. proof:proof::
 
-   待写
+   对每个 :math:`k = 1, 2, \dots, n`, 有 :math:`(2k-1)(2k+1) = 4k^2 - 1 < 4k^2`, 即
+
+   .. math::
+      \dfrac{2k-1}{2k} < \dfrac{2k}{2k+1}.
+
+   将 :math:`k = 1, 2, \dots, n` 各式连乘, 得
+
+   .. math::
+      x_n = \dfrac{1}{2} \cdot \dfrac{3}{4} \cdots \dfrac{2n-1}{2n}
+      < \dfrac{2}{3} \cdot \dfrac{4}{5} \cdots \dfrac{2n}{2n+1}
+      = \dfrac{1}{x_n} \cdot \dfrac{1}{2n+1},
+
+   其中最后一步用到了 :math:`x_n \cdot \dfrac{2}{3} \cdot \dfrac{4}{5} \cdots \dfrac{2n}{2n+1} = \dfrac{1 \cdot 2 \cdots 2n}{2 \cdot 3 \cdots (2n+1)} = \dfrac{1}{2n+1}`.
+   两边同乘 :math:`x_n > 0`, 即得 :math:`x_n^2 < \dfrac{1}{2n+1}`, 亦即 :math:`x_n < \dfrac{1}{\sqrt{2n+1}}`.
+
+   又 :math:`x_n > 0`, 且 :math:`\dfrac{1}{\sqrt{2n+1}} \to 0`, 由夹逼准则得
+
+   .. math::
+      \lim_{n \to \infty} x_n = 0.
 
 3. 利用单调有界准则证明下列数列极限存在.
 
@@ -349,7 +666,26 @@
 
 .. proof:proof::
 
-   待写
+   (1). 数列 :math:`\{ x_n \}` 满足 :math:`x_n = \dfrac{1}{n+1} + \cdots + \dfrac{1}{2n}`, 且
+
+   .. math::
+      x_{n+1} - x_n = \dfrac{1}{2n+1} + \dfrac{1}{2n+2} - \dfrac{1}{n+1} = \dfrac{1}{2n+1} - \dfrac{1}{2n+2} > 0,
+
+   故 :math:`\{ x_n \}` 单调递增. 又每一项都小于 :math:`\dfrac{1}{n}`, 所以
+
+   .. math::
+      x_n < n \cdot \dfrac{1}{n} = 1,
+
+   即 :math:`\{ x_n \}` 有上界. 由单调有界准则, 数列 :math:`\{ x_n \}` 的极限存在.
+
+   (2). 数列 :math:`\{ x_n \}` 显然单调递增. 对 :math:`k \geqslant 2`, 有 :math:`\dfrac{1}{k^2} < \dfrac{1}{k(k-1)} = \dfrac{1}{k-1} - \dfrac{1}{k}`,
+   于是
+
+   .. math::
+      x_n = 1 + \sum_{k=2}^{n} \dfrac{1}{k^2} < 1 + \sum_{k=2}^{n} \left( \dfrac{1}{k-1} - \dfrac{1}{k} \right)
+      = 1 + 1 - \dfrac{1}{n} < 2,
+
+   即 :math:`\{ x_n \}` 有上界. 由单调有界准则, 数列 :math:`\{ x_n \}` 的极限存在.
 
 .. _ex-chap2-sec4-ex4:
 
@@ -410,7 +746,13 @@
 
 .. proof:proof::
 
-   待写
+   由条件递推可得
+
+   .. math::
+      |x_n| \leqslant q |x_{n-1}| \leqslant q^2 |x_{n-2}| \leqslant \cdots \leqslant q^{n-1} |x_1|.
+
+   由于 :math:`0 < q < 1`, 有 :math:`\lim\limits_{n \to \infty} q^{n-1} |x_1| = 0`, 又 :math:`|x_n| \geqslant 0`,
+   由夹逼准则得 :math:`\lim\limits_{n \to \infty} |x_n| = 0`, 即 :math:`\lim\limits_{n \to \infty} x_n = 0`.
 
 .. _ex-chap2-sec4-ex7:
 
@@ -492,7 +834,26 @@
 
 .. proof:proof::
 
-   待写
+   (1). 分子有理化并利用 :math:`1 - \cos x \sim \dfrac{x^2}{2}`,
+
+   .. math::
+      \sec x - 1 = \dfrac{1-\cos x}{\cos x} \sim \dfrac{\frac{x^2}{2}}{1} = \dfrac{x^2}{2},
+
+   其中 :math:`x \to 0` 时 :math:`\cos x \to 1`.
+
+   (2). 分子有理化,
+
+   .. math::
+      \sqrt{\tan x + 1} - \sqrt{\sin x + 1}
+      = \dfrac{\tan x - \sin x}{\sqrt{\tan x + 1} + \sqrt{\sin x + 1}}
+      \sim \dfrac{\tan x - \sin x}{2},
+
+   其中 :math:`x \to 0` 时分母 :math:`\to 2`. 又
+
+   .. math::
+      \tan x - \sin x = \tan x (1 - \cos x) \sim x \cdot \dfrac{x^2}{2} = \dfrac{x^3}{2},
+
+   因此 :math:`\sqrt{\tan x + 1} - \sqrt{\sin x + 1} \sim \dfrac{1}{2} \cdot \dfrac{x^3}{2} = \dfrac{x^3}{4}`.
 
 .. _ex-chap2-sec5-ex2:
 
@@ -512,6 +873,31 @@
 
 .. proof:solution::
 
+   (1). 约分后用重要极限,
+
+   .. math::
+      \lim_{x \to 0} \dfrac{\sin^2 x}{\sin x} = \lim_{x \to 0} \sin x = 0.
+
+   (2). 利用等价无穷小 :math:`1 - \cos 3x \sim \dfrac{(3x)^2}{2}`, :math:`\sin 2x \sim 2x`,
+
+   .. math::
+      \lim_{x \to 0} \dfrac{1-\cos 3x}{x \sin 2x} = \lim_{x \to 0} \dfrac{\frac{9}{2}x^2}{x \cdot 2x} = \dfrac{9}{4}.
+
+   (3). 这不是未定式. 分子极限
+
+   .. math::
+      \lim_{x \to 0} \left( e^x - e^{\cos x} \right) = 1 - e \neq 0,
+
+   而分母 :math:`x \tan x > 0` (:math:`x \neq 0` 附近) 且 :math:`x \tan x \to 0^+`, 故
+
+   .. math::
+      \lim_{x \to 0} \dfrac{e^x - e^{\cos x}}{x \tan x} = -\infty.
+
+   (4). 利用等价无穷小 :math:`\ln(1+x^3) \sim x^3`, :math:`\tan x - \sin x = \tan x(1-\cos x) \sim x \cdot \dfrac{x^2}{2} = \dfrac{x^3}{2}`,
+
+   .. math::
+      \lim_{x \to 0} \dfrac{\ln(1+x^3)}{\tan x - \sin x} = \lim_{x \to 0} \dfrac{x^3}{\frac{x^3}{2}} = 2.
+
    (5). 由于
 
    .. math::
@@ -527,26 +913,66 @@
          \lim_{x \to +\infty} x[\ln(x + 1) - \ln x] = \lim_{x \to +\infty} x \ln \left( 1 + \dfrac{1}{x} \right)
          \xlongequal{t = \frac{1}{x}} \lim_{t \to 0^+} \dfrac{\ln(1 + t)}{t} = 1.
 
+   (6). 分子分母各提出主部: 当 :math:`x \to +\infty` 时,
+
+   .. math::
+      \ln(2 + e^{3x}) = 3x + \ln \left( 1 + 2e^{-3x} \right), \quad
+      \ln(3 + e^{2x}) = 2x + \ln \left( 1 + 3e^{-2x} \right),
+
+   其中 :math:`\ln \left( 1 + 2e^{-3x} \right) \to 0`, :math:`\ln \left( 1 + 3e^{-2x} \right) \to 0`. 于是
+
+   .. math::
+      \lim_{x \to +\infty} \dfrac{\ln(2+e^{3x})}{\ln(3+e^{2x})}
+      = \lim_{x \to +\infty} \dfrac{3x + \ln(1 + 2e^{-3x})}{2x + \ln(1 + 3e^{-2x})}
+      = \lim_{x \to +\infty} \dfrac{3 + \frac{1}{x}\ln(1 + 2e^{-3x})}{2 + \frac{1}{x}\ln(1 + 3e^{-2x})}
+      = \dfrac{3}{2}.
+
 3. 设 :math:`x \to x_0` 时, :math:`g(x)` 是有界量, :math:`f(x)` 是无穷大, 证明
    :math:`g(x) \pm f(x)` 是无穷大.
 
 .. proof:proof::
 
-   待写
+   设 :math:`x \to x_0` 时 :math:`|g(x)| \leqslant M` (在 :math:`x_0` 的某去心邻域内). 任给 :math:`G > 0`,
+   由 :math:`f(x)` 是无穷大, 存在 :math:`\delta > 0`, 使得当 :math:`0 < |x - x_0| < \delta` 时,
+   有 :math:`|f(x)| > G + M`. 于是当 :math:`0 < |x - x_0| < \delta` 时,
+
+   .. math::
+      |g(x) \pm f(x)| \geqslant |f(x)| - |g(x)| > (G + M) - M = G,
+
+   即 :math:`g(x) \pm f(x)` 是当 :math:`x \to x_0` 时的无穷大.
 
 4. 设 :math:`x \to x_0` 时, :math:`g(x)` 是有界量, :math:`f(x)` 是无穷大, 请问
    :math:`g(x) \cdot f(x)` 是否为无穷大?
 
 .. proof:solution::
 
-   待写
+   不一定是无穷大, 乘积的类型取决于 :math:`g(x)` 趋于零 (或保持有界) 的快慢. 例如取 :math:`x_0 = 0`,
+   :math:`f(x) = \dfrac{1}{x}` 是当 :math:`x \to 0` 时的无穷大:
+
+   取 :math:`g(x) = x^2`, 它是有界量, 但 :math:`g(x) f(x) = x \to 0`, 乘积是无穷小;
+
+   取 :math:`g(x) = x`, 它是有界量, 但 :math:`g(x) f(x) \equiv 1`, 乘积既非无穷大也非无穷小;
+
+   取 :math:`g(x) = \sqrt{|x|}`, 它是有界量, 此时 :math:`g(x) f(x) = \dfrac{\sqrt{|x|}}{x} \to \infty`, 乘积是无穷大.
 
 5. 设当 :math:`x \to x_0` 时, :math:`f(x) \sim g(x)`, 证明:
    :math:`f(x) - g(x) = o[g(x)]` 或者 :math:`f(x) - g(x) = o[f(x)]`.
 
 .. proof:proof::
 
-   待写
+   由 :math:`f(x) \sim g(x)` 知 :math:`\lim\limits_{x \to x_0} \dfrac{f(x)}{g(x)} = 1`, 于是
+
+   .. math::
+      \lim_{x \to x_0} \dfrac{f(x) - g(x)}{g(x)} = \lim_{x \to x_0} \dfrac{f(x)}{g(x)} - 1 = 0,
+
+   即 :math:`f(x) - g(x) = o[g(x)]`.
+
+   又 :math:`g(x) \sim f(x)` (等价是相互的), 故 :math:`\lim\limits_{x \to x_0} \dfrac{g(x)}{f(x)} = 1`, 同理
+
+   .. math::
+      \lim_{x \to x_0} \dfrac{f(x) - g(x)}{f(x)} = 1 - \lim_{x \to x_0} \dfrac{g(x)}{f(x)} = 0,
+
+   即 :math:`f(x) - g(x) = o[f(x)]`.
 
 .. _ex-chap2-sec6:
 
@@ -561,7 +987,11 @@
 
 .. proof:solution::
 
-   待写
+   (1). 由 :math:`\left| x\sin\dfrac{1}{x} \right| \leqslant |x| \to 0` 得 :math:`\lim\limits_{x \to 0} f(x) = 0 = f(0)`,
+   故 :math:`f(x)` 在 :math:`x = 0` 处连续.
+
+   (2). 左极限 :math:`\lim\limits_{x \to 0^-} e^{2x} = 1`, 右极限 :math:`\lim\limits_{x \to 0^+} \dfrac{\sin x}{x} = 1`,
+   两者相等且等于函数值 :math:`f(0) = e^0 = 1`, 故 :math:`f(x)` 在 :math:`x = 0` 处连续.
 
 2. 研究下列函数的连续性.
 
@@ -575,7 +1005,21 @@
 
 .. proof:solution::
 
-   待写
+   (1). :math:`f(x) = \dfrac{1}{e^x - 1}` 是初等函数, 在定义区间 :math:`(-\infty, 0)` 与 :math:`(0, +\infty)` 内连续.
+   在 :math:`x = 0` 处无定义, 且 :math:`\lim\limits_{x \to 0^+} \dfrac{1}{e^x - 1} = +\infty`,
+   :math:`\lim\limits_{x \to 0^-} \dfrac{1}{e^x - 1} = -\infty`, 故 :math:`x = 0` 是第二类 (无穷) 间断点.
+
+   (2). 定义域为 :math:`x < \dfrac{1}{2}` 且 :math:`x \neq 0`, :math:`f(x)` 在 :math:`(-\infty, 0)` 与 :math:`(0, \tfrac{1}{2})` 内连续.
+   在 :math:`x = 0` 处, :math:`\lim\limits_{x \to 0} \dfrac{\ln(1-2x)}{x} = \lim\limits_{x \to 0} \dfrac{-2x}{x} = -2`,
+   极限存在但函数在 :math:`x=0` 无定义, 故 :math:`x = 0` 是第一类 (可去) 间断点.
+
+   (3). 因式分解 :math:`f(x) = \dfrac{(x-3)(x+1)}{(x-4)(x+1)}`, 定义域为 :math:`x \neq -1, 4`,
+   :math:`f(x)` 在 :math:`(-\infty, -1)`, :math:`(-1, 4)`, :math:`(4, +\infty)` 内连续.
+   在 :math:`x = -1` 处, :math:`\lim\limits_{x \to -1} \dfrac{x-3}{x-4} = \dfrac{4}{5}`, 为第一类 (可去) 间断点;
+   在 :math:`x = 4` 处, :math:`\lim\limits_{x \to 4} \dfrac{x-3}{x-4} = \infty`, 为第二类 (无穷) 间断点.
+
+   (4). :math:`f(x)` 在 :math:`x \neq 0` 处连续. 在 :math:`x = 0` 处无定义, 且 :math:`x \to 0` 时 :math:`\dfrac{1}{x} \to \infty`,
+   :math:`\sin^2 \dfrac{1}{x}` 在 :math:`0` 与 :math:`1` 之间无限振荡, 极限不存在, 故 :math:`x = 0` 是第二类 (振荡) 间断点.
 
 3. 求下列极限.
 
@@ -589,28 +1033,79 @@
 
 .. proof:solution::
 
-   待写
+   这些极限都由连续函数直接代入 (或作简单变形) 求得:
+
+   (1). :math:`x \to 0` 时分子 :math:`\ln(1+x^2) \to \ln 1 = 0`, 分母 :math:`\sin(1+x^2) \to \sin 1 \neq 0`, 故极限为 :math:`0`.
+
+   (2). :math:`\ln(2\cos 2x)` 在 :math:`x = \dfrac{\pi}{6}` 处连续, 直接代入得
+   :math:`\ln\left( 2\cos\dfrac{\pi}{3} \right) = \ln 1 = 0`.
+
+   (3). :math:`\sqrt{x^2 - 2x + 5}` 在 :math:`x = 0` 处连续, 直接代入得 :math:`\sqrt{5}`.
+
+   (4). 分子有理化,
+
+   .. math::
+      \lim_{x \to 1} \dfrac{\sqrt{1+x} - 1}{x}
+      = \lim_{x \to 1} \dfrac{x}{x\left(\sqrt{1+x} + 1\right)}
+      = \lim_{x \to 1} \dfrac{1}{\sqrt{1+x} + 1} = \dfrac{1}{\sqrt{2}+1} = \sqrt{2}-1.
 
 4. 设 :math:`f(x) = \begin{cases} a+x, & x < 0, \\ 1, & x = 0, \\ \ln(b+x+x^2), & x > 0, \end{cases}`
    已知 :math:`f(x)` 在 :math:`x = 0` 处连续, 试确定 :math:`a` 和 :math:`b` 的值.
 
 .. proof:solution::
 
-   待写
+   :math:`f(x)` 在 :math:`x = 0` 处连续等价于左、右极限都存在且等于 :math:`f(0) = 1`. 计算
+
+   .. math::
+      \lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} (a + x) = a, \qquad
+      \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \ln(b + x + x^2) = \ln b,
+
+   故需 :math:`a = \ln b = 1`, 解得
+
+   .. math::
+      a = 1, \qquad b = e.
+
+   此时 :math:`b + x + x^2 = e + x + x^2 > 0` 在 :math:`x = 0` 附近成立, 符合题意.
 
 5. 求函数 :math:`f(x) = \dfrac{x^3 + 3x^2 - x - 3}{x^2 + x - 6}` 的连续区间, 并求极限
    :math:`\lim\limits_{x \to 0} f(x)`, :math:`\lim\limits_{x \to 2} f(x)` 和 :math:`\lim\limits_{x \to -3} f(x)`.
 
 .. proof:solution::
 
-   待写
+   因式分解:
+
+   .. math::
+      f(x) = \dfrac{x^3 + 3x^2 - x - 3}{x^2 + x - 6}
+      = \dfrac{(x+3)(x-1)(x+1)}{(x+3)(x-2)}
+      = \dfrac{(x-1)(x+1)}{x-2} \quad (x \neq -3).
+
+   定义域为 :math:`x \neq -3, 2`, 故连续区间为 :math:`(-\infty, -3)`, :math:`(-3, 2)`, :math:`(2, +\infty)`;
+   其中 :math:`x = -3` 是第一类 (可去) 间断点, :math:`x = 2` 是第二类 (无穷) 间断点.
+
+   由连续性 (或约分后的表达式) 计算各极限:
+
+   .. math::
+      \lim_{x \to 0} f(x) = \dfrac{(0-1)(0+1)}{0-2} = \dfrac{1}{2}; \qquad
+      \lim_{x \to 2} f(x) = \lim_{x \to 2} \dfrac{(x-1)(x+1)}{x-2} = \infty;
+
+   .. math::
+      \lim_{x \to -3} f(x) = \lim_{x \to -3} \dfrac{(x-1)(x+1)}{x-2} = \dfrac{(-4) \times (-2)}{-5} = -\dfrac{8}{5}.
 
 6. 设函数 :math:`g(x)` 在 :math:`x_0` 处连续, 且 :math:`\lim\limits_{x \to x_0} g(x) = 0`,
    已知 :math:`|f(x)| \leqslant |g(x)|`, 证明 :math:`f(x)` 在 :math:`x_0` 处也连续.
 
 .. proof:proof::
 
-   待写
+   在 :math:`x = x_0` 处, 由条件 :math:`|f(x_0)| \leqslant |g(x_0)| = 0`, 得 :math:`f(x_0) = 0`.
+
+   任给 :math:`\varepsilon > 0`. 由 :math:`g(x)` 在 :math:`x_0` 处连续且 :math:`g(x_0) = 0`, 即
+   :math:`\lim\limits_{x \to x_0} g(x) = 0`, 存在 :math:`\delta > 0`, 使得当 :math:`0 < |x - x_0| < \delta` 时,
+   有 :math:`|g(x)| < \varepsilon`. 于是当 :math:`0 < |x - x_0| < \delta` 时,
+
+   .. math::
+      |f(x) - f(x_0)| = |f(x)| \leqslant |g(x)| < \varepsilon.
+
+   这就证明了 :math:`\lim\limits_{x \to x_0} f(x) = 0 = f(x_0)`, 即 :math:`f(x)` 在 :math:`x_0` 处连续.
 
 .. _ex-chap2-sec7:
 
@@ -622,20 +1117,41 @@
 
 .. proof:proof::
 
-   待写
+   按提示, 令 :math:`f(x) = 2^x - x^2`, 它是初等函数, 在闭区间 :math:`[-1, 1]` 上连续. 计算
+
+   .. math::
+      f(-1) = 2^{-1} - (-1)^2 = \dfrac{1}{2} - 1 = -\dfrac{1}{2} < 0, \qquad
+      f(1) = 2 - 1 = 1 > 0.
+
+   由零点存在定理, 存在 :math:`x_0 \in (-1, 1)`, 使得 :math:`f(x_0) = 0`, 即 :math:`2^{x_0} = x_0^2`.
+   故方程 :math:`2^x = x^2` 在 :math:`(-1, 1)` 内必有实根.
 
 2. 用零点定理证明介值定理.
 
 .. proof:proof::
 
-   待写
+   设 :math:`f(x)` 在 :math:`[a, b]` 上连续, :math:`c` 介于 :math:`f(a)` 与 :math:`f(b)` 之间, 不妨设
+   :math:`f(a) < c < f(b)` (若 :math:`c = f(a)` 或 :math:`c = f(b)`, 取 :math:`x = a` 或 :math:`x = b` 即可;
+   若 :math:`f(a) > f(b)`, 对 :math:`-f(x)` 用同样的论证).
+
+   作辅助函数 :math:`F(x) = f(x) - c`, 则 :math:`F(x)` 在 :math:`[a, b]` 上连续, 且
+
+   .. math::
+      F(a) = f(a) - c < 0, \qquad F(b) = f(b) - c > 0.
+
+   由零点存在定理, 存在 :math:`x_0 \in (a, b)`, 使得 :math:`F(x_0) = 0`, 即 :math:`f(x_0) = c`. 介值定理得证.
 
 3. 设 :math:`f(x)` 在 :math:`[0,1]` 上连续, 并且当 :math:`x \in [0,1]` 时, :math:`0 < f(x) < 1`.
    证明存在 :math:`x_0 \in (0,1)`, 使得 :math:`f(x_0) = x_0` 成立.
 
 .. proof:proof::
 
-   待写
+   作辅助函数 :math:`F(x) = f(x) - x`, 则 :math:`F(x)` 在 :math:`[0, 1]` 上连续, 且
+
+   .. math::
+      F(0) = f(0) - 0 = f(0) > 0, \qquad F(1) = f(1) - 1 < 0.
+
+   由零点存在定理, 存在 :math:`x_0 \in (0, 1)`, 使得 :math:`F(x_0) = 0`, 即 :math:`f(x_0) = x_0`.
 
 4. 设 :math:`f(x)` 在 :math:`(a,b)` 上连续, :math:`x_1, x_2 \in (a,b)`, :math:`x_1 < x_2` 且
    :math:`f(x_1) < f(x_2)`. 求证: 对任何 :math:`c \in [f(x_1), f(x_2)]`, 存在
@@ -643,7 +1159,12 @@
 
 .. proof:proof::
 
-   待写
+   由于 :math:`[x_1, x_2] \subset (a, b)`, :math:`f(x)` 在闭区间 :math:`[x_1, x_2]` 上连续.
+
+   若 :math:`c = f(x_1)`, 取 :math:`x = x_1`; 若 :math:`c = f(x_2)`, 取 :math:`x = x_2`, 结论成立.
+
+   若 :math:`f(x_1) < c < f(x_2)`, 由介值定理 (在 :math:`[x_1, x_2]` 上应用), 存在
+   :math:`x \in (x_1, x_2) \subset (a, b)`, 使得 :math:`f(x) = c`. 综上, 结论成立.
 
 .. _extra-chap2:
 
