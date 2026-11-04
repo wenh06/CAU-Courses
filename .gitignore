@@ -173,6 +173,7 @@ dmypy.json
 .agents
 .claude
 .codex
+.zcode/
 
 .data_cache/
 .logs/
