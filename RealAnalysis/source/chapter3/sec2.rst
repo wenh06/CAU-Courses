@@ -213,6 +213,18 @@
       :math:`x \in E^*` 处, 有 :math:`f_{n_k} (x) \to f(x)`, 且 :math:`f_{n_k}(x) \leqslant g(x)`,
       从而 :math:`f(x) \leqslant g(x)`. 所以, :math:`f \leqslant g` 几乎处处成立.
 
+      最后需要说明: 题目并未假设 :math:`mE < \infty`, 而我们在这里仅使用了 Riesz 定理中
+      "由依测度收敛推存在几乎处处收敛子列"的结论, 这部分并不需要 :math:`mE < \infty`:
+      事实上只需选取子列使 :math:`m E (|f_{n_k} - f| \geqslant 1/k) < 2^{-k}`, 记
+      :math:`A_k = E (|f_{n_k} - f| \geqslant 1/k)`, 则对每个 :math:`N` 有
+      :math:`m (\varlimsup\limits_{k} A_k) \leqslant m \left( \bigcup\limits_{k \geqslant N} A_k \right)
+      \leqslant \sum\limits_{k \geqslant N} 2^{-k} = 2^{-N+1} \to 0`,
+      证明中仅用到测度的单调性与次可加性, 并未用到需要 :math:`mE < \infty` 的测度上连续性.
+      作为对照, 反方向 (由几乎处处收敛推依测度收敛的勒贝格定理) 与 Egorov 定理则确实需要
+      :math:`mE < \infty`. 各种收敛概念之间的蕴含关系及相应定理对 :math:`mE < \infty` 的需求,
+      参见 :ref:`第五章补充材料中的收敛关系图 <modes-of-convergence>`;
+      关于 Riesz 定理条件的同类说明亦见本章 :ref:`第 18 题 <ex-3-18>` 的注.
+
 .. _ex-3-18:
 
 18. 设函数列 :math:`\{f_n\}_{n \in \mathbb{N}}` 在 :math:`E` 上依测度收敛于 :math:`f`, 且几乎处处有 :math:`f_n \leqslant f_{n+1}`,

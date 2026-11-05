@@ -50,6 +50,7 @@ MEDALS = {1: "🥇 ", 2: "🥈 ", 3: "🥉 "}
 # ── 平时成绩构成（按课程政策在此调整）────────────────────────────────
 FULL_SCORE_OPTIONS = [30, 40]  # 平时成绩满分可选项（分）
 BONUS_PER_ANSWER = 1  # 每次回答问题加的分（平时成绩尺度上的绝对加分）
+BONUS_ABSOLUTE = True  # 回答问题加分是否为绝对分值（直接累加）而非折算（100分）占比
 HOMEWORK_RATIO = 0.7  # 作业（10 分制）折算占平时成绩的比例
 MIDTERM_RATIO = 0.3  # 期中（百分制）折算占平时成绩的比例，与作业占比之和应为 1
 
@@ -118,7 +119,7 @@ mtime_date = datetime.fromtimestamp(records_mtime).date() if records_mtime else 
 semester_active = semester is not None and mtime_date is not None and semester[0] <= mtime_date < semester[1]
 
 # ── 页面 ─────────────────────────────────────────────────────────────
-st.title(f"{sem_year}秋微积分 · 上课回答问题加分名单")
+st.markdown(f"# {sem_year}秋微积分\n\n## 上课回答问题加分名单")
 
 if not semester_active:
     if semester is None:
@@ -177,7 +178,8 @@ with tab_calc:
         if row.empty:
             st.caption("未匹配到该学号的加分记录，按 +0 分测算")
         else:
-            st.caption(f"已匹配：{row['姓名'].iloc[0]}，本学期回答 {bonus // BONUS_PER_ANSWER} 次，加分 +{bonus:g} 分")
+            note = "" if BONUS_ABSOLUTE else "（按占比折算进满分）"
+            st.caption(f"已匹配：{row['姓名'].iloc[0]}，本学期回答 {bonus // BONUS_PER_ANSWER} 次，加分 +{bonus:g} 分{note}")
 
         midterm_done = st.toggle("已考完期中考试", value=False, help="开启后输入期中卷面分，直接预估平时成绩")
 
@@ -188,6 +190,9 @@ with tab_calc:
         )
         name = row["姓名"].iloc[0] if not row.empty else ""
         who = f"{name}同学" if name else "你"
+
+        if not BONUS_ABSOLUTE:
+            bonus = bonus / 100 * full_score  # 折算为满分尺度上的加分
 
         if midterm_done:
             # ── 考后模式：由期中卷面分预估平时成绩 ──
