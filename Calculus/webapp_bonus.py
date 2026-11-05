@@ -1,27 +1,49 @@
 #!/usr/bin/env python3
-"""webapp_bonus.py — 2026秋微积分 上课回答问题加分名单
+"""webapp_bonus.py — 秋季学期微积分 上课回答问题加分名单
 
 数据文件: data/2026秋回答问题加分记录.csv (UTF-8 或 GBK 均可)
 格式: 日期,学号,姓名 —— 一行 = 一次回答, 同一学生可重复出现; 日期可留空
 
-页面下方「平时成绩测算」：联动上方查询的学号，按作业/期中占比与目标分
-实时折算达到目标所需的最低期中卷面分（回答问题加分为平时成绩上的绝对加分）。
+页面第二个 tab「平时成绩测算」：输入学号（纯数字，位数与 CSV 记录一致；
+匹配不到按 +0 分），按作业/期中占比与目标分实时折算达到目标所需的最低期中卷面分
+（回答问题加分为平时成绩上的绝对加分）。作业平均成绩预设 9.5 分。
+「已考完期中考试」开关：开启后改为输入期中卷面分（0~100，默认空），
+实时预估平时成绩总分（四舍五入取整，封顶所选满分）。
 
-用法：
-  streamlit run webapp_bonus.py --server.port 8503
+学期窗口由系统日期动态推断（每年 9 月 1 日至次年 2 月 1 日）；加分记录文件的
+last modified 不在窗口内视为本学期尚无记录，不计算、不展示。
+
+用法（经 apache2 反代到 /app/calculus-bonus/，见
+/etc/apache2/conf-enabled/calculus-bonus.conf）：
+  streamlit run webapp_bonus.py --server.port 8503 --server.address 127.0.0.1 \
+      --server.headless true --server.baseUrlPath /app/calculus-bonus
 """
 
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="2026秋微积分上课回答问题加分名单", page_icon="🏅", layout="centered")
+DATA_FILE = Path(__file__).parent.joinpath("data/2026秋回答问题加分记录.csv")
+
+
+def semester_window(today: date) -> tuple[date, date, int] | None:
+    """根据系统日期返回当前学期窗口 (起始 9月1日, 结束 次年2月1日, 年份标签)；不在学期内返回 None。"""
+    if today >= date(today.year, 9, 1):
+        return date(today.year, 9, 1), date(today.year + 1, 2, 1), today.year
+    if today < date(today.year, 2, 1):
+        return date(today.year - 1, 9, 1), date(today.year, 2, 1), today.year - 1
+    return None
+
+
+today = datetime.now().date()
+semester = semester_window(today)
+sem_year = semester[2] if semester else today.year
+
+st.set_page_config(page_title=f"{sem_year}秋微积分上课回答问题加分名单", page_icon="🏅", layout="centered")
 
 Path(__file__).parent.joinpath(".logs").mkdir(exist_ok=True)
-
-DATA_FILE = Path(__file__).parent.joinpath("data/2026秋回答问题加分记录.csv")
 
 MEDALS = {1: "🥇 ", 2: "🥈 ", 3: "🥉 "}
 
@@ -91,8 +113,23 @@ records_mtime = DATA_FILE.stat().st_mtime if DATA_FILE.exists() else 0
 records = load_records(records_mtime)
 leaderboard = load_leaderboard(records_mtime)
 
+# ── 学期门控：记录文件 mtime 不在当前学期窗口内 → 不计算、不展示 ──────
+mtime_date = datetime.fromtimestamp(records_mtime).date() if records_mtime else None
+semester_active = semester is not None and mtime_date is not None and semester[0] <= mtime_date < semester[1]
+
 # ── 页面 ─────────────────────────────────────────────────────────────
-st.title("2026秋微积分 · 上课回答问题加分名单")
+st.title(f"{sem_year}秋微积分 · 上课回答问题加分名单")
+
+if not semester_active:
+    if semester is None:
+        st.info("当前不在学期内（学期窗口为每年 9 月 1 日至次年 2 月 1 日），暂不展示。")
+    else:
+        last = fmt_ts(records_mtime) if records_mtime else "文件不存在"
+        st.info(
+            f"暂无本学期（{sem_year} 年 9 月 1 日 — {semester[1].year} 年 2 月 1 日）加分记录："
+            f"记录文件最后更新于 {last}，不在本学期窗口内，暂不展示。"
+        )
+    st.stop()
 
 if records_mtime:
     st.markdown(f"> 🕗 **数据最后更新：{fmt_ts(records_mtime)}**")
@@ -107,7 +144,7 @@ col1.metric("🧑‍🎓 参与人数", len(leaderboard))
 col2.metric("🙋 加分总人次", len(records))
 col3.metric("📈 人均回答次数", f"{len(records) / len(leaderboard):.1f}")
 
-tab_board, tab_query = st.tabs(["🏅 加分榜", "🔍 个人查询"])
+tab_board, tab_calc = st.tabs(["🏅 加分榜", "🧮 平时成绩测算"])
 
 with tab_board:
     board = leaderboard.copy()
@@ -126,69 +163,60 @@ with tab_board:
         },
     )
 
-with tab_query:
-    student_id = st.text_input("学号", placeholder="例如 2026310030313", help="输入学号查询自己的回答记录", key="student_id")
+with tab_calc:
+    # 学号位数以 CSV 记录为准
+    id_len = int(records["学号"].str.len().mode().iloc[0])
+    student_id = st.text_input("学号", placeholder="2026" + "0" * (id_len - 4), help=f"纯数字，{id_len} 位")
 
-    if student_id:
-        sid = student_id.strip()
-        if not sid.isdigit():
-            st.error("学号必须是数字")
+    sid = student_id.strip()
+    if student_id and (not sid.isdigit() or len(sid) != id_len):
+        st.error(f"学号必须是 {id_len} 位数字")
+    elif student_id:
+        row = leaderboard.loc[leaderboard["学号"] == sid]
+        bonus = int(row["次数"].iloc[0]) * BONUS_PER_ANSWER if not row.empty else 0
+        if row.empty:
+            st.caption("未匹配到该学号的加分记录，按 +0 分测算")
         else:
-            row = leaderboard.loc[leaderboard["学号"] == sid]
-            if row.empty:
-                st.warning("该学号暂无加分记录")
-            else:
-                name = row["姓名"].iloc[0]
-                count = int(row["次数"].iloc[0])
-                st.success(
-                    f"✨ {name} 同学本学期上课回答问题 **{count}** 次，" f"可加平时成绩 **{count * BONUS_PER_ANSWER:g}** 分"
-                )
-                dates = records.loc[records["学号"] == sid, "日期"].tolist()
-                if any(dates):
-                    with st.expander("查看明细"):
-                        for i, d in enumerate(dates, 1):
-                            st.write(f"- 第 {i} 次：{d if d else '日期未记录'}")
+            st.caption(f"已匹配：{row['姓名'].iloc[0]}，本学期回答 {bonus // BONUS_PER_ANSWER} 次，加分 +{bonus:g} 分")
 
-# ── 平时成绩测算（复用上方「个人查询」输入的学号）────────────────────
-st.divider()
-st.subheader("🧮 平时成绩测算")
-st.caption(
-    f"作业（10 分制）按 {HOMEWORK_RATIO:.0%}、期中（百分制）按 {MIDTERM_RATIO:.0%} 折算进平时成绩；"
-    f"回答问题加分为平时成绩分值上的绝对加分（每次 +{BONUS_PER_ANSWER:g} 分）。"
-)
+        midterm_done = st.toggle("已考完期中考试", value=False, help="开启后输入期中卷面分，直接预估平时成绩")
 
-sid_calc = st.session_state.get("student_id", "").strip()
-calc_hit = leaderboard.loc[leaderboard["学号"] == sid_calc] if sid_calc.isdigit() else leaderboard.iloc[0:0]
-if not sid_calc.isdigit():
-    bonus = None  # 未查询或学号非法 → 不测算
-else:
-    # 学号合法但无记录时按 0 分加分，正常测算
-    bonus = (int(calc_hit["次数"].iloc[0]) if not calc_hit.empty else 0) * BONUS_PER_ANSWER
-
-c_full, c_hw, c_target = st.columns(3)
-full_score = c_full.selectbox("平时成绩满分（分）", FULL_SCORE_OPTIONS, index=0)
-homework = c_hw.number_input(
-    "作业平均成绩（0~10 分，自行计算）", min_value=0.0, max_value=10.0, value=0.0, step=0.1, format="%.2f"
-)
-target = c_target.number_input("目标平时成绩（分）", min_value=0, max_value=full_score, value=full_score, step=1)
-
-if bonus is None:
-    st.info("请先在上方「🔍 个人查询」输入学号，查得回答问题加分后再测算")
-else:
-    needed = midterm_needed(full_score, homework, target, bonus)
-    name = calc_hit["姓名"].iloc[0] if not calc_hit.empty else ""
-    who = f"{name}同学" if name else "你"
-    if needed <= 0:
-        st.success(f"🎉 {who}即使期中 0 分也能达到目标平时成绩（折合期中富余 {-needed:.1f} 分，已计入加分 +{bonus:g} 分）")
-    elif needed > 100:
-        best = homework / 10 * full_score * HOMEWORK_RATIO + full_score * MIDTERM_RATIO + bonus
-        st.warning(
-            f"{who}即使期中满分（100 分）也达不到目标：平时成绩最高 **{best:.1f}** 分，"
-            f"还差 {target - best:.1f} 分（已计入加分 +{bonus:g} 分）"
+        c_full, c_hw, c_io = st.columns(3)
+        full_score = c_full.selectbox("平时成绩满分（分）", FULL_SCORE_OPTIONS, index=0)
+        homework = c_hw.number_input(
+            "作业平均成绩（0~10 分，自行计算）", min_value=0.0, max_value=10.0, value=9.5, step=0.1, format="%.2f"
         )
-    else:
-        st.success(f"🎯 {who}期中考试需要得 **{needed:.1f}** 分（百分制卷面，已计入加分 +{bonus:g} 分）")
+        name = row["姓名"].iloc[0] if not row.empty else ""
+        who = f"{name}同学" if name else "你"
+
+        if midterm_done:
+            # ── 考后模式：由期中卷面分预估平时成绩 ──
+            midterm = c_io.number_input(
+                "期中考试分数（0~100）", min_value=0.0, max_value=100.0, value=None, step=0.5, format="%.1f"
+            )
+            if midterm is None:
+                st.info("输入期中考试分数后自动计算")
+            else:
+                total = homework / 10 * full_score * HOMEWORK_RATIO + midterm / 100 * full_score * MIDTERM_RATIO + bonus
+                total = min(int(round(total, 2) + 0.5), full_score)  # 先按2位小数归整再四舍五入取整, 封顶满分
+                st.success(f"🧾 {who}预估平时成绩 **{total}** 分（满分 {full_score} 分，已计入加分 +{bonus:g} 分）")
+        else:
+            # ── 考前模式：求达到目标平时成绩所需的最低期中卷面分 ──
+            target = c_io.number_input("目标平时成绩（分）", min_value=0, max_value=full_score, value=full_score, step=1)
+            needed = midterm_needed(full_score, homework, target, bonus)
+            if needed <= 0:
+                st.success(
+                    f"🎉 {who}即使期中 0 分也能达到目标平时成绩（折合期中富余 {-needed:.1f} 分，已计入加分 +{bonus:g} 分）"
+                )
+            elif needed > 100:
+                best = homework / 10 * full_score * HOMEWORK_RATIO + full_score * MIDTERM_RATIO + bonus
+                st.warning(
+                    f"{who}即使期中满分（100 分）也达不到目标：平时成绩最高 **{best:.1f}** 分，"
+                    f"还差 {target - best:.1f} 分（已计入加分 +{bonus:g} 分）"
+                )
+            else:
+                st.success(f"🎯 {who}期中考试需要得 **{needed:.1f}** 分（百分制卷面，已计入加分 +{bonus:g} 分）")
 
 
 # command to run:
-# nohup streamlit run webapp_bonus.py --server.port 8503 > .logs/webapp_bonus.log 2>&1 & echo $! > .logs/webapp_bonus.pid
+# nohup streamlit run webapp_bonus.py --server.port 8503 --server.address 127.0.0.1 --server.headless true --server.baseUrlPath /app/calculus-bonus > .logs/webapp_bonus.log 2>&1 & echo $! > .logs/webapp_bonus.pid
