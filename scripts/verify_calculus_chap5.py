@@ -72,6 +72,7 @@ chk_true("1.1-4", sp.simplify(sp.diff(sp.log(x) + 1, x) - 1 / x) == 0)
 
 # ---- 5.1 题5: s = t^3 ----
 chk_true("1.1-5", sp.simplify(sp.diff(t**3, t) - 3 * t**2) == 0)
+chk_true("1.1-5(2) 360^(1/3)≈7.11", abs(7.11 - float(sp.Integer(360) ** (sp.Rational(1, 3)))) < 5e-3)
 
 # ---- 5.2 题1: 16 个凑微分系数 (c * d(phi) 求导后应还原原式左端 lhs) ----
 coeffs = {

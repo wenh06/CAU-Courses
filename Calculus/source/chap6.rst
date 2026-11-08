@@ -271,7 +271,7 @@
 
    因此 :math:`I_3` 的被积函数恒大于 :math:`I_2` 的被积函数, 即 :math:`I_3 > I_2`.
 
-   综上 :math:`I_1 < I_2 < I_3`. (数值印证: :math:`I_1 \approx 0.143`, :math:`I_2 \approx 0.219`, :math:`I_3 \approx 0.632`.)
+   综上 :math:`I_1 < I_2 < I_3`. (数值印证: :math:`I_1 \approx 0.143`, :math:`I_2 \approx 0.219`, :math:`I_3 \approx 0.634`.)
 
 .. _ex-chap6-sec2-ex6:
 

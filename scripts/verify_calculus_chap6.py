@@ -72,6 +72,12 @@ I1 = I(x / (2 * (1 + sp.cos(x))), (x, 0, 1))
 I2 = I(sp.log(1 + x) / (1 + sp.cos(x)), (x, 0, 1))
 I3 = I(2 * x / (1 + sp.sin(x)), (x, 0, 1))
 chk_true("6.2-5 排序", float(I1.evalf(6)) < float(I2.evalf(6)) < float(I3.evalf(6)))
+chk_true(
+    "6.2-5 数值印证",
+    abs(float(I1.evalf(8)) - 0.143) < 5e-4
+    and abs(float(I2.evalf(8)) - 0.219) < 5e-4
+    and abs(float(I3.evalf(8)) - 0.634) < 5e-4,
+)
 chk("6.2-6(1)", I(sp.sqrt(1 - x**2), (x, 0, 1)), pi / 4)
 chk("6.2-6(2)", I(x**2, (x, 1, 5)) / 4, sp.Rational(31, 3))
 

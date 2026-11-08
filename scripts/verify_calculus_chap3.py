@@ -117,6 +117,12 @@ chk("3.3-5(3)", sp.diff(dydx, t) / sp.cos(t), -1 / sp.cos(t) ** 3)
 f34 = sp.diff(sp.asin(sp.sqrt(1 - x)), x) + 1 / (2 * sp.sqrt(x * (1 - x)))
 chk_true("3.4-1(2)", all(abs(float(f34.subs(x, v))) < 1e-9 for v in [0.13, 0.5, 0.87]))
 
+# ---- 3.4 题3: 近似计算 (微分近似公式的数值断言; 10' = (1/6)° = pi/1080, 曾经错写成 pi/540=20') ----
+chk_true("3.4-3 换算 10'=pi/1080", sp.simplify(sp.Rational(10, 60) * sp.pi / 180 - sp.pi / 1080) == 0)
+chk_true("3.4-3(1) sqrt(1.02)≈1.01", abs(1.01 - float(sp.sqrt(sp.Rational(102, 100)))) < 5e-4)
+chk_true("3.4-3(2) ln2.7≈0.993", abs(0.993 - float(sp.log(sp.Rational(27, 10)))) < 5e-4)
+chk_true("3.4-3(3) 终值≈1.006", abs(1.006 - float(sp.tan(sp.pi / 4 + sp.pi / 1080))) < 5e-4)
+
 # ---- 总习题2: 左右导数均为 1 ----
 chk("总2 左导数", sp.limit((x + sp.sin(x**2)) / x, x, 0, dir="-"), 1)
 chk("总2 右导数", sp.limit(sp.log(1 + x) / x, x, 0, dir="+"), 1)

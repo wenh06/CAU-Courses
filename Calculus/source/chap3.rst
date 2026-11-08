@@ -840,9 +840,9 @@
    (2). 取 :math:`f(x) = \ln x`, :math:`x_0 = e \approx 2.718`, :math:`\Delta x = 2.7 - e \approx -0.018`:
    :math:`\ln 2.7 \approx 1 + \dfrac{1}{e}(2.7 - e) \approx 1 - 0.0066 = 0.993`.
 
-   (3). :math:`45^\circ 10' = \dfrac{\pi}{4} + \dfrac{10}{60} \cdot \dfrac{\pi}{180} = \dfrac{\pi}{4} + \dfrac{\pi}{540}`.
-   取 :math:`f(x) = \tan x`, :math:`x_0 = \dfrac{\pi}{4}`, :math:`\Delta x = \dfrac{\pi}{540} \approx 0.00582`:
-   :math:`\tan 45^\circ 10' \approx \tan\dfrac{\pi}{4} + \sec^2\dfrac{\pi}{4} \cdot \dfrac{\pi}{540} = 1 + 2 \times 0.00582 \approx 1.012`.
+   (3). :math:`45^\circ 10' = \dfrac{\pi}{4} + \dfrac{10}{60} \cdot \dfrac{\pi}{180} = \dfrac{\pi}{4} + \dfrac{\pi}{1080}`.
+   取 :math:`f(x) = \tan x`, :math:`x_0 = \dfrac{\pi}{4}`, :math:`\Delta x = \dfrac{\pi}{1080} \approx 0.00291`:
+   :math:`\tan 45^\circ 10' \approx \tan\dfrac{\pi}{4} + \sec^2\dfrac{\pi}{4} \cdot \dfrac{\pi}{1080} = 1 + 2 \times 0.00291 \approx 1.006`.
 
 .. _ex-chap3-zong:
 
